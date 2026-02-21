@@ -1,0 +1,25 @@
+id: FANO-001
+title: "Fano plane incidence and multiplication structure"
+statement: |
+  The Fano plane PG(2,2) with the Furey convention (rfc/CONVENTIONS.md §2)
+  satisfies:
+    (a) 7 points, 7 lines, 3 points per line, 3 lines per point.
+    (b) Any 2 distinct points determine exactly 1 line.
+    (c) Any 2 distinct lines meet in exactly 1 point.
+    (d) The directed cyclic triples generate a sign tensor ε_{ijk}
+        that produces an alternative (but non-associative) algebra.
+status: stub
+lean_file: CausalGraphTheory/Fano.lean
+lean_theorems:
+  - each_line_has_three_points
+  - each_point_on_three_lines
+  - two_points_determine_line
+  - two_lines_meet_in_one_point
+python_test: calc/test_fano.py::test_fano_incidence
+depends_on: []
+literature:
+  - "Baez BH2 §4"
+  - "Furey F1 §2"
+  - "rfc/CONVENTIONS.md §2"
+notes: ""
+blocked_reason: ""

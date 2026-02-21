@@ -1,0 +1,6 @@
+/.lake
+/.claude/
+.mcp.json
+__pycache__/
+*.pyc
+*.pyo

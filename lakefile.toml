@@ -1,0 +1,15 @@
+name = "CausalGraphTheory"
+version = "0.1.0"
+defaultTargets = ["causalgraphtheory"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+version = "git#master"
+
+[[lean_lib]]
+name = "CausalGraphTheory"
+
+[[lean_exe]]
+name = "causalgraphtheory"
+root = "Main"

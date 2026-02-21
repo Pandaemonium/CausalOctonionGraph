@@ -1,0 +1,53 @@
+name: Lean Action CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  lint-imports:
+    name: "Guard: No Continuum Imports"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Check for forbidden Mathlib imports
+        run: |
+          echo "Scanning .lean files for forbidden continuum imports..."
+          FORBIDDEN_PATTERNS=(
+            "import Mathlib.Analysis"
+            "import Mathlib.Topology"
+            "import Mathlib.MeasureTheory"
+            "import Mathlib.Geometry.Manifold"
+            "import Mathlib.Data.Real"
+            "import Mathlib.Data.Complex.Basic"
+          )
+          FAILED=0
+          for pattern in "${FORBIDDEN_PATTERNS[@]}"; do
+            MATCHES=$(grep -rn "$pattern" --include="*.lean" . || true)
+            if [ -n "$MATCHES" ]; then
+              echo "FORBIDDEN IMPORT DETECTED: $pattern"
+              echo "$MATCHES"
+              FAILED=1
+            fi
+          done
+          if [ "$FAILED" -eq 1 ]; then
+            echo ""
+            echo "========================================"
+            echo "BUILD BLOCKED: Continuum imports found."
+            echo "The Prime Directive forbids ℝ, topology,"
+            echo "measure theory, and smooth manifolds."
+            echo "See CLAUDE.md §3 for allowed imports."
+            echo "========================================"
+            exit 1
+          fi
+          echo "All imports are clean."
+
+  build:
+    name: "Build Lean Project"
+    needs: lint-imports
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: leanprover/lean-action@v1
