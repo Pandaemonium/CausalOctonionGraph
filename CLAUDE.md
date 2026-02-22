@@ -62,6 +62,22 @@ You must respect the architectural separation of concerns. Do not mix narrative 
     * All numeric claims must be backed by a passing `pytest` suite.
 * `manuscript/` **(Pedagogical Output):** This contains the LaTeX source for the textbook. You may only write to this directory to explain claims that have a status of `cited` or `proved`. The narrative must translate the discrete graph combinatorics into accessible, intuitive concepts.
 
+## 3b. Editing Markdown Files with LaTeX
+
+When editing `.md` files in `rfc/` or `sources/`, AI-generated text has a known failure mode: LaTeX escape sequences get corrupted into control characters.
+
+**Known corruptions (written by an AI, stored as literal control chars):**
+
+| Intended LaTeX | What got written | Symptom in Read output |
+|---|---|---|
+| `\to` | TAB + `o` | `	o` (tab before `o`) |
+| `\tau` | TAB + `au` | `	au` |
+| `\nu` | LF + `u` | line break before `u` |
+| `\nu_R` | LF + `u_R` | heading split across two lines |
+| `\times` | TAB + `imes` | `	imes` |
+
+**The fix is always the same:** Use the `Edit` tool directly. Read the file, see the corruption, and replace the broken span with the correct LaTeX string. **Do not write Python scripts to manipulate bytes.** The `Read` tool normalizes line endings, and the `Edit` tool matches the normalized content exactly — this is sufficient to fix any control-character corruption.
+
 ## 4. The Workflow Loop
 When assigned a task, execute the following loop:
 1.  **Read the Claim:** Understand the specific algebraic or combinatorial mechanism proposed in the `claims/` YAML file.

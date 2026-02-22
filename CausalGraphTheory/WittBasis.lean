@@ -63,12 +63,14 @@ def wittLowerDoubled (j : Fin 3) : ComplexOctonion R :=
     else if k == ⟨b.val + 1, by omega⟩ then ⟨0, 1⟩
     else ⟨0, 0⟩⟩
 
-/-- Doubled raising operator: 2·αⱼ† = e_{aⱼ} - i·e_{bⱼ} as a complex octonion over R. -/
+/-- Doubled raising operator: 2·αⱼ† = -(e_{aⱼ} - i·e_{bⱼ}) = -e_{aⱼ} + i·e_{bⱼ}.
+    This definition ensures {αⱼ, αⱼ†} = 1.
+    Note: CONVENTIONS.md previously listed +(e_{aⱼ} - i·e_{bⱼ}) which leads to {α, α†} = -1. -/
 def wittRaiseDoubled (j : Fin 3) : ComplexOctonion R :=
   let (a, b) := wittPair j
   ⟨fun k =>
-    if k == ⟨a.val + 1, by omega⟩ then ⟨1, 0⟩
-    else if k == ⟨b.val + 1, by omega⟩ then ⟨0, -1⟩
+    if k == ⟨a.val + 1, by omega⟩ then ⟨-1, 0⟩       -- -e_a coefficient
+    else if k == ⟨b.val + 1, by omega⟩ then ⟨0, 1⟩   -- +i*e_b coefficient
     else ⟨0, 0⟩⟩
 
 -- ============================================================

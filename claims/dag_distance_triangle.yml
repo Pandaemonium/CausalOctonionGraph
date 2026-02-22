@@ -1,0 +1,22 @@
+id: DIST-001
+title: "DAG distance satisfies triangle inequality"
+statement: |
+  For any nodes a, b, c in a causal graph G, if directed paths exist
+  a->b, b->c, and a->c, then dist(a,c) <= dist(a,b) + dist(b,c).
+status: blocked
+lean_file: CausalGraphTheory/Distance.lean
+lean_theorems:
+  - dist_triangle
+python_test: calc/test_graph.py::test_distance_triangle
+depends_on: []
+literature: []
+notes: |
+  The current dist function uses fuel-based BFS (Nat.rec on a bound).
+  Proving dist_triangle requires extracting a Path type from the BFS result
+  and reasoning about path concatenation, which needs a non-trivial
+  structural induction. The sorry remains in Distance.lean pending a
+  proper Path-indexed distance reformulation.
+blocked_reason: |
+  dist_triangle proof requires Path type + fuel induction.
+  The BFS-based dist definition does not expose path structure needed
+  for concatenation reasoning. Needs reformulation before proof can proceed.

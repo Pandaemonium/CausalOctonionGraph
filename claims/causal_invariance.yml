@@ -1,0 +1,21 @@
+id: REL-001
+title: "Causal Invariance Implies Lorentz Covariance"
+statement: |
+  If the graph update rule is confluent (order-independent for spacelike
+  separated events), then the resulting causal set converges to a Lorentz-
+  covariant manifold in the large-N limit.
+status: stub
+lean_file: CausalGraphTheory/RaceCondition.lean
+lean_theorems:
+  - update_is_confluent
+  - spacelike_separation_commutes
+python_test: calc/test_confluence.py
+depends_on:
+  - UPD-001
+literature:
+  - "Wolfram (2020): Technical Introduction §3"
+  - "Rideout & Sorkin (1999): Classical sequential growth dynamics"
+notes: |
+  Confluence is the 'Gold Standard' proof for background independence in
+  rewriting systems.
+blocked_reason: ""

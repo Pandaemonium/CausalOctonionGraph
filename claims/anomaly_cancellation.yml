@@ -1,0 +1,20 @@
+id: ANOM-001
+title: "Automatic Anomaly Cancellation"
+statement: |
+  The algebraic structure of the 16-dimensional representation C x O
+  automatically satisfies the condition sum(Q_i) = 0 and sum(Q_i^3) = 0
+  for all gauge generators, cancelling the chiral anomalies.
+status: stub
+lean_file: CausalGraphTheory/Anomaly.lean
+lean_theorems:
+  - anomaly_cancellation_condition
+python_test: calc/test_anomaly.py
+depends_on:
+  - GAUGE-001
+literature:
+  - "Todorov (2019): Exceptional quantum algebra..."
+  - "Furey (2018): Generational structure..."
+notes: |
+  Standard Model anomaly cancellation usually requires careful balancing of
+  hypercharges. Here it should be a geometric identity.
+blocked_reason: ""

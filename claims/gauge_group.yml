@@ -1,0 +1,34 @@
+id: GAUGE-001
+title: "Fano automorphism group (discrete GL(3,2) / vacuum SU(3))"
+statement: |
+  The automorphism group of the Fano plane PG(2,2) has order 168,
+  isomorphic to GL(3,2) ≅ PSL(2,7). The stabilizer of the vacuum
+  axis e₇ (Fano point 6) has order 24, isomorphic to SL(2,3) ≅ 2.A₄.
+  Exactly 3 Fano lines pass through e₇; these are the Witt basis lines.
+status: proved
+lean_file: CausalGraphTheory/GaugeGroup.lean
+lean_theorems:
+  - GaugeGroup.fano_aut_count
+  - GaugeGroup.vacuum_stabilizer_count
+  - GaugeGroup.vacuum_lines_count
+  - GaugeGroup.orbit_stabilizer_check
+python_check: calc/gauge_check.py
+python_test: calc/test_gauge.py
+depends_on:
+  - FANO-001
+literature:
+  - "Conway & Sloane, SPLAG §4.5 (Mathieu groups / Fano automorphisms)"
+  - "Furey (2018): Standard Model symmetries from octonions, arXiv:1603.04078"
+  - "Manogue & Schray (1993): Octonionic representations of Clifford algebras"
+  - "RFC-001 §4.1"
+notes: |
+  168 = 2³ × 3 × 7 = |GL(3,2)| = |PSL(2,7)|.
+  Vacuum stabilizer order 24 = |SL(2,3)| = |2.A₄|.
+  Orbit-stabilizer: |GL(3,2)| = 7 × 24 = 168. ✓
+  The 3 vacuum lines are the Witt basis pairs from CONVENTIONS.md §3:
+    Line 2: {e₁, e₇, e₆}  (pair e₆, e₁)
+    Line 4: {e₂, e₅, e₇}  (pair e₂, e₅)
+    Line 5: {e₃, e₄, e₇}  (pair e₃, e₄)
+  The 24-element vacuum stabilizer is the discrete SU(3) acting on the
+  color-charged sector; the 7-element orbit recovers the 7 color phases.
+blocked_reason: ""

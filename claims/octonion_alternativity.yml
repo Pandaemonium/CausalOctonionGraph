@@ -1,0 +1,19 @@
+id: ALG-001
+title: "Octonions are alternative but non-associative"
+statement: |
+  The octonion algebra O is alternative: x(xy) = (xx)y and (yx)x = y(xx).
+  It is not associative: there exist x, y, z such that (xy)z != x(yz).
+status: proved
+lean_file: CausalGraphTheory/OctonionAlt.lean
+lean_theorems:
+  - left_alternative
+  - right_alternative
+  - flexible
+  - non_associative_witness
+python_test: calc/test_octonion.py::test_alternativity
+depends_on:
+  - FANO-001
+literature:
+  - "Baez BH2 §4"
+notes: "Proved for general CommRing R by lifting from basis checks."
+blocked_reason: ""

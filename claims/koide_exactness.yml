@@ -1,0 +1,20 @@
+id: KOIDE-001
+title: "Koide Formula from Integer Constraints"
+statement: |
+  The Koide ratio Q = (sum m_i) / (sum sqrt(m_i))^2 equals exactly 2/3
+  because the allowed tick frequencies (m_i) are constrained by the
+  diophantine equations governing the Fano plane's cycle structure.
+status: stub
+lean_file: CausalGraphTheory/Koide.lean
+lean_theorems:
+  - koide_ratio_is_two_thirds
+python_test: calc/koide.py
+depends_on:
+  - MASS-001
+literature:
+  - "Koide (1982): A new formula for the masses of charged leptons"
+  - "Brannen: Discrete Fourier Transform and the Koide Formula"
+notes: |
+  This is the 'Hail Mary' claim. If the simulation naturally produces masses
+  satisfying this, the theory is correct. If not, it's a falsification.
+blocked_reason: ""

@@ -13,3 +13,7 @@ name = "CausalGraphTheory"
 [[lean_exe]]
 name = "causalgraphtheory"
 root = "Main"
+
+[[lean_exe]]
+name = "export_oracle"
+root = "CausalGraphTheory.ExportOracle"

@@ -1,0 +1,19 @@
+id: VAC-001
+title: "Stability of the Sterile Vacuum"
+statement: |
+  The sterile vacuum state omega = 1/2(1 + i e_7) is a fixed point of the
+  graph update rule under vacuum fluctuations. It does not spontaneously
+  decay into charged matter without external energy input.
+status: stub
+lean_file: CausalGraphTheory/Vacuum.lean
+lean_theorems:
+  - vacuum_is_stable
+  - vacuum_annihilates_operators
+python_test: calc/test_vacuum.py
+depends_on:
+  - GAUGE-001
+literature:
+  - "Finster (2016): Causal Fermion Systems"
+notes: |
+  If the vacuum is unstable, the universe would explode instantly.
+blocked_reason: ""

@@ -1,0 +1,25 @@
+id: GAUGE-001
+title: "Emergence of Standard Model Gauge Group G_SM"
+statement: |
+  The subgroup of automorphisms of the octonion algebra O that fixes a specific
+  imaginary unit (the vacuum axis e_7) is isomorphic to SU(3).
+  The subgroup of automorphisms of the complex octonions C x O that preserves
+  the Witt basis structure is G_SM = SU(3) x SU(2) x U(1) / Z_6.
+status: stub
+lean_file: CausalGraphTheory/GaugeGroup.lean
+lean_theorems:
+  - stabilizer_of_imaginary_unit_is_su3
+  - witt_basis_automorphisms_is_gsm
+python_test: calc/gauge_check.py
+depends_on:
+  - FANO-001
+  - OCT-001
+literature:
+  - "Gunaydin & Gursey (1973): Quark structure and octonions"
+  - "Furey (2016): Standard model physics from an algebra?"
+  - "Todorov (2019): Exceptional quantum algebra for the standard model"
+notes: |
+  The derivation must be purely algebraic. The U(1) factor comes from the
+  complex phase symmetry of the ladder operators. The SU(2) comes from the
+  quaternion subalgebra of the weak sector.
+blocked_reason: ""

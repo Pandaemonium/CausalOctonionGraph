@@ -101,9 +101,9 @@ $$\alpha_3 = \tfrac{1}{2}(e_3 + i\, e_4)$$
 
 ### 5.4 Raising (creation) operators
 
-$$\alpha_1^\dagger = \tfrac{1}{2}(e_6 - i\, e_1)$$
-$$\alpha_2^\dagger = \tfrac{1}{2}(e_2 - i\, e_5)$$
-$$\alpha_3^\dagger = \tfrac{1}{2}(e_3 - i\, e_4)$$
+$$\alpha_j^\dagger = -\frac{1}{2}(e_a - i\, e_b) = \frac{1}{2}(-e_a + i\, e_b)$$
+
+*Correction (2026-02-21): The original definition $\frac{1}{2}(e_a - i e_b)$ was just the complex conjugate. The Hermitian adjoint in the octonion algebra includes octonion conjugation ($e_a^\dagger = -e_a$), yielding the negative sign required to satisfy $\{\alpha_j, \alpha_j^\dagger\} = +1$.*
 
 ### 5.5 Clifford relations
 

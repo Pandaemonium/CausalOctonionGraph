@@ -1,0 +1,18 @@
+id: DAG-001
+title: "Graph update step preserves acyclicity"
+statement: |
+  If G is an acyclic causal graph, then step(G) is also acyclic.
+status: proved
+lean_file: CausalGraphTheory/DAGProof.lean
+lean_theorems:
+  - step_preserves_acyclic
+  - step_is_acyclic
+python_test: calc/test_graph.py::test_step_acyclic
+depends_on: []
+literature:
+  - "RFC-001 §2"
+notes: |
+  step_preserves_acyclic reduces to rfl (step returns a CausalGraph which
+  carries .acyclic in its structure). step_is_acyclic witnesses the property
+  directly: ∀ e ∈ (step G).edges, e.source < e.target.
+blocked_reason: ""

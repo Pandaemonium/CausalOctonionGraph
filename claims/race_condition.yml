@@ -1,0 +1,52 @@
+id: RACE-001
+title: "Discrete Lorentz Covariance (Confluence / No Race Condition)"
+statement: |
+  For any two causal graphs G1 and G2 whose edge lists are permutations of each
+  other, the Tick/Batch classification of every node is identical:
+    G1.edges.Perm G2.edges -> forall n, G1.classify n = G2.classify n
+
+  Equivalently:
+  (a) Batch nodes: incoming operators lying on a single Fano line generate an
+      associative (quaternionic) subalgebra, so any evaluation order produces
+      the same result. No race condition exists.
+  (b) Tick nodes: non-associativity of the octonionic operators forces a unique
+      sequential evaluation order. Different representational orderings of the
+      edge list still agree on the Tick/Batch classification.
+
+  This is the COG formalization of Lorentz covariance: causal event
+  classification is a physical invariant, not an artefact of the observer's
+  representational ordering.
+status: proved
+lean_file: CausalGraphTheory/RaceCondition.lean
+lean_theorems:
+  - RaceCondition.confluence
+  - RaceCondition.batch_assoc_basis
+  - RaceCondition.batchable_perm
+  - RaceCondition.tick_nonassoc_example
+  - RaceCondition.classify_perm_of_edges
+python_test: calc/test_tick.py::TestClassify
+depends_on:
+  - TICK-001
+  - ALG-002
+literature:
+  - "RFC-001 §3.1"
+  - "rfc/LITERATURE_INSIGHTS.md section 2 (RaceCondition.lean priority note)"
+notes: |
+  Key algebraic chain proved:
+    batchable [i,j,k] = true
+    <-> e_{i+1}, e_{j+1}, e_{k+1} all on one Fano line
+    <-> they associate: (ei * ej) * ek = ei * (ej * ek)
+    <-> no evaluation-order ambiguity
+
+  The batchable predicate is proved permutation-invariant via induction on
+  List.Perm using Bool.and_left_comm for the swap case, and List.any_congr
+  to lift pointwise equality to the any expression.
+
+  The main confluence theorem follows from:
+    1. hedges.filter _ : filtered incoming edges are also a Perm
+    2. List.Perm.flatMap : flatMapping the same function over a Perm gives Perm
+    3. batchable_perm : batchable is Perm-invariant
+
+  tick_nonassoc_example delegates to Octonion.non_associative_witness (already
+  proved by native_decide in OctonionNonAssoc.lean).
+blocked_reason: ""

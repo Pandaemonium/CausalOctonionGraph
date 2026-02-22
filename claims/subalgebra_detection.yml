@@ -1,0 +1,19 @@
+id: ALG-002
+title: "Associative subalgebra detection"
+statement: |
+  A subset of imaginary basis units generates an associative subalgebra iff
+  all elements lie on a single Fano line.
+  The predicate 'batchable' implements this check.
+status: proved
+lean_file: CausalGraphTheory/SubalgebraDetect.lean
+lean_theorems:
+  - batchable_fano_line
+  - not_batchable_example
+  - batchable_triple_count
+python_test: calc/test_subalgebra.py  # To be implemented
+depends_on:
+  - FANO-001
+literature:
+  - "RFC-001 §3"
+notes: "Exactly 7 unordered triples are associative (the lines)."
+blocked_reason: ""
