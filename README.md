@@ -1,49 +1,83 @@
 # Causal Octonion Graph (COG)
 
-A Lean 4 formalization of octonionic algebra and the Witt basis construction
-for the complex octonions C ⊗ O, aimed at deriving Standard Model structure
-from discrete, non-associative algebra over causal graphs.
+> **Deterministic Physics at the Planck Scale.** 
+> 
+> 
+> 
+> 
+> What if the universe is not an infinitely divisible continuum of spacetime, but a discrete, self-computing algorithm driven by the pure symmetries of the normed division algebras?
 
-## What's here
+The **Causal Octonion Graph (COG)** project is a rigorous, machine-verified framework aimed at deriving the structure of the Standard Model directly from discrete, non-associative algebra over causal graphs.
 
-**Lean 4 library** (`CausalGraphTheory/`) — sorry-free, fully verified:
+By abandoning continuous real numbers () and probabilistic wave functions, we replace quantum field theory with a computable engine where fundamental particles are algebraic state vectors in , and "time" emerges strictly from the forced sequential ticking of non-associative octonionic operations.
 
-| File | Content |
-|------|---------|
-| `Fano.lean` | Fano plane PG(2,2): 7 points, 7 lines, incidence axioms |
-| `FanoMul.lean` | Octonion basis multiplication from Fano sign table |
-| `Algebra.lean` | Mathlib imports (CommRing, tactics) |
-| `Octonion.lean` | Octonion algebra over any CommRing, explicit Fano-driven multiplication |
-| `OctonionAlt.lean` | Left/right alternativity and flexibility (proved for general elements) |
-| `OctonionNonAssoc.lean` | Non-associativity witness |
-| `ComplexOctonion.lean` | FormalComplex R (avoids Mathlib's R-dependent Complex), C ⊗ O |
-| `WittBasis.lean` | Witt ladder operators, vacuum idempotent, annihilation proof |
+---
 
-**Key results proved:**
-- Fano plane axioms (each line has 3 points, each point on 3 lines, two points determine a line, two lines meet in one point)
-- Octonion alternativity: `x * (x * y) = (x * x) * y` over any CommRing
-- Octonion non-associativity: explicit witness `(e1 * e2) * e4 != e1 * (e2 * e4)`
-- Vacuum idempotent: `(2w)^2 = 2*(2w)` where `w = 1/2(1 + i*e7)`
-- Vacuum annihilation: `alpha_j * w = 0` for all three lowering operators
+## The Core Hypothesis
 
-## Building
+Our work builds heavily on the algebraic constructions of Cohl Furey and others, restricting physics purely to the division algebras acting on themselves. There are no arbitrary matrices or column vectors here. We are proving that gauge symmetries, particle generations, and even mass (as algorithmic computational drag) fall out inevitably from the discrete combinatorics of the Fano plane.
+
+## Current State: The Lean 4 Kernel
+
+We are currently building the foundational mathematical kernel. Our `CausalGraphTheory/` library is **completely sorry-free and fully verified** in Lean 4.
+
+### Key Verified Theorems 
+
+We have successfully formalized the following physical and mathematical foundations:
+
+* **The Fano Plane Axioms:** Verified  geometry (7 points, 7 lines, precise incidence axioms).
+* **Octonion Alternativity:** Proved  over any commutative ring.
+* **Octonion Non-Associativity:** Explicit witness formalized showing . *(The engine of emergent time).*
+* **The Sterile Vacuum:** Verified the idempotent vacuum state  where .
+* **Vacuum Annihilation:** Proved that all three Witt lowering operators annihilate the vacuum: .
+
+### Repository Structure
+
+| Module | Core Function |
+| --- | --- |
+| `Fano.lean` | Fano plane geometry and strict incidence axioms. |
+| `FanoMul.lean` | Octonion basis multiplication derived directly from the Fano sign table. |
+| `Octonion.lean` | Octonion algebra formalized over any CommRing. |
+| `OctonionAlt.lean` | Left/right alternativity and flexibility proofs. |
+| `ComplexOctonion.lean` | Formalization of the  sector (avoiding `Mathlib`'s continuous Reals). |
+| `WittBasis.lean` | Witt ladder operators, the vacuum idempotent, and annihilation proofs. |
+
+---
+
+## Getting Started
+
+We use `lake` to build the project and `elan` for toolchain management.
 
 ```bash
-# Install elan (Lean version manager) if you haven't
+# 1. Install elan (Lean version manager)
 curl https://elan-init.org/ -sSf | sh
 
-# Get Mathlib cache (avoids hours of compilation)
+# 2. Clone the repository
+git clone https://github.com/YOUR-USERNAME/CausalGraphTheory.git
+cd CausalGraphTheory
+
+# 3. Fetch the Mathlib cache (Saves hours of local compilation!)
 lake exe cache get
 
-# Build
+# 4. Build the formalizations
 lake build
+
 ```
 
-## Convention source of truth
+---
 
-All sign conventions, directed Fano triples, Witt pairings, and vacuum axis
-are locked in [`rfc/CONVENTIONS.md`](rfc/CONVENTIONS.md).
+## Call for Contributors
 
-## License
+We are actively looking for collaborators to help expand the graph! Whether you are a Lean 4 tactician, a Python simulation hacker, or a theoretical physicist, there are massive open problems to tackle:
 
-MIT
+* **Lean 4 Formalizers:** We need help formalizing the  Triality automorphism mapping and proving that the subgroup stabilizing the vacuum axis has exactly order 24 (the discrete analog of  color symmetry).
+* **Python/NumPy Developers:** We are building adjacent causal graph simulators in Python to calculate the exact algorithmic drag (mass ratios) of the Muon and Tau generation translations.
+* **Physicists:** Help us construct the algebraic proofs for charge quantization and anomaly cancellation using strictly discrete topology.
+
+**Read before contributing:** All sign conventions, directed Fano triples, Witt pairings, and the chosen vacuum axis are strictly locked in our source of truth document: [`rfc/CONVENTIONS.md`](https://www.google.com/search?q=rfc/CONVENTIONS.md).
+
+---
+
+*License: MIT*
+
+---

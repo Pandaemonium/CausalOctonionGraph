@@ -115,6 +115,22 @@ theorem massFrac_le_iff_tickMass_le {G : CausalGraph} (n₁ n₂ : Nat)
   · intro h; exact Nat.mul_le_mul_right _ h
 
 -- ============================================================
+-- IV-helper. Infrastructure for step properties (Phase 6)
+-- ============================================================
+
+/-- Appending a fresh node (with ID = nextNodeId G) does not change `findNode`
+    results for any ID strictly below `nextNodeId G`. -/
+private lemma findNode_step_of_lt {G : CausalGraph} {lastNode : Node}
+    (h : G.nodes.getLast? = some lastNode) (id : Nat)
+    (hlt : id < nextNodeId G) :
+    findNode (step G) id = G.findNode id := by
+  -- Expand find? over the appended list; types are known from the goal context
+  simp only [findNode, step_nodes_of_some h, List.find?_append, List.find?_cons,
+             List.find?_nil]
+  -- The new node has id = nextNodeId G ≠ id, so the singleton contributes none
+  simp [show nextNodeId G ≠ id from Nat.ne_of_gt hlt, Option.or_none]
+
+-- ============================================================
 -- IV. Step function and mass accumulation
 -- ============================================================
 
@@ -129,13 +145,18 @@ theorem step_new_node_tickCount (G : CausalGraph) :
       ∃ newNode ∈ (step G).nodes,
         newNode.id        = nextNodeId G ∧
         newNode.tickCount = lastNode.tickCount + 1 := by
-  rcases _ : G.nodes.getLast? with _ | lastNode
+  rcases hlast : G.nodes.getLast? with _ | lastNode
   · trivial
-  · -- step creates { id := nextNodeId G, tickCount := lastNode.tickCount + 1 }
-    -- and appends it to G.nodes.  The formal proof requires reducing
-    -- `match h : G.nodes.getLast? with` inside step's body, which produces
-    -- ill-typed acyclic proof terms under naive substitution (Phase 6 target).
-    sorry
+  · -- The new node appended by step has the required ID and tickCount
+    let newNode : Node := {
+      id        := nextNodeId G
+      label     := .vacuum
+      state     := ⟨fun _ => 0⟩
+      tickCount := lastNode.tickCount + 1
+    }
+    refine ⟨newNode, ?_, rfl, rfl⟩
+    rw [step_nodes_of_some hlast]
+    exact List.mem_append.mpr (Or.inr (List.mem_singleton.mpr rfl))
 
 /--
   Each `step` strictly increases the tick count of the graph's frontier node.
@@ -152,13 +173,17 @@ theorem step_tickMass_nondecreasing (G : CausalGraph) :
     | none => True
     | some lastNode =>
       tickMass G lastNode.id ≤ tickMass (step G) lastNode.id + 1 := by
+  -- `split` evaluates the match in the goal (rcases only substitutes the discriminant)
   split
   · trivial
-  · rename_i lastNode _
-    -- tickMass (step G) lastNode.id = tickMass G lastNode.id because step only
-    -- *appends* a new node with a fresh ID; formal proof deferred to Phase 6
-    -- (requires List.find?_append + uniqueness of node IDs).
-    sorry
+  · rename_i lastNode hlast
+    -- lastNode.id < nextNodeId G because lastNode is in G.nodes
+    have hlt : lastNode.id < nextNodeId G :=
+      mem_id_lt_nextNodeId (getLast?_mem hlast)
+    -- step only appends a fresh node, so old findNode lookups are unchanged
+    have heq : tickMass (step G) lastNode.id = tickMass G lastNode.id := by
+      simp only [tickMass, findNode_step_of_lt hlast lastNode.id hlt]
+    omega
 
 -- ============================================================
 -- V. Koide formula connection (quantitative target)

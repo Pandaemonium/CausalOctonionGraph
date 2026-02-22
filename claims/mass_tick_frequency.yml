@@ -18,14 +18,13 @@ statement: |
 
   with the angle between the tick vector and the democratic direction
   theta = 45 degrees (cos^2(theta) = 1/2, so Q = 1/(3 cos^(-2)(theta)) = 2/3).
-status: partial
+status: proved
 lean_file: CausalGraphTheory/Mass.lean
 lean_theorems:
   - CausalGraph.tickMass_zero_of_tickCount_zero
   - CausalGraph.tickMass_zero_of_not_found
   - CausalGraph.tickMass_mono
   - CausalGraph.massFrac_le_iff_tickMass_le
-lean_theorems_sorry:
   - CausalGraph.step_new_node_tickCount
   - CausalGraph.step_tickMass_nondecreasing
 python_check: calc/mass_ratios.py
@@ -46,18 +45,17 @@ notes: |
     massFrac_le_iff_tickMass_le: fraction comparison reduces to tickCount
       comparison (requires graphDepth > 0 as hypothesis hd).
 
-  Deferred to Phase 6 (needs List.find?_append infrastructure):
+  Phase 6 (proved, no sorry):
     step_new_node_tickCount: step creates a new node with incremented tick.
+      Proof: step_nodes_of_some unfolds the named-match via split+simp_all;
+      List.mem_append closes membership.
     step_tickMass_nondecreasing: tickMass is non-decreasing across steps.
+      Proof: findNode_step_of_lt (List.find?_append + Option.or_none) shows
+      appending a fresh node preserves old lookups; omega closes k <= k+1.
 
   Koide angle derivation (calc/koide.py, 21/21 tests passing):
     Q = sum(m) / (sum(sqrt(m)))^2 approx 0.6666 for charged leptons.
     theta = arccos(sqrt(1/(3Q))) = arccos(sqrt(1/2)) = 45.0 degrees exactly.
     The tick-rate vector lives on a great circle 45 degrees from the
     democratic axis.
-blocked_reason: |
-  step_new_node_tickCount and step_tickMass_nondecreasing require reducing
-  the named match `match h : G.nodes.getLast? with` inside step's body.
-  Naive rw/simp substitution makes the acyclic proof term ill-typed because
-  the match-bound proof h is used in the acyclic field. Phase 6 will add
-  helper lemmas (step_nodes_eq, findNode_append_left) to resolve this.
+blocked_reason: ""

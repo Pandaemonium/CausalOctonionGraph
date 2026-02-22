@@ -44,7 +44,7 @@ private lemma max?_ne_nil {l : List Nat} (hne : l ≠ []) : ∃ m, l.max? = some
   | none   => exact absurd (List.max?_eq_none_iff.mp hmax) hne
 
 /-- Any existing node's ID is strictly less than `nextNodeId`. -/
-private lemma mem_id_lt_nextNodeId {G : CausalGraph} {n : Node}
+lemma mem_id_lt_nextNodeId {G : CausalGraph} {n : Node}
     (hmem : n ∈ G.nodes) : n.id < nextNodeId G := by
   unfold nextNodeId
   have hmap : n.id ∈ G.nodes.map (·.id) := List.mem_map_of_mem hmem
@@ -55,7 +55,7 @@ private lemma mem_id_lt_nextNodeId {G : CausalGraph} {n : Node}
   exact Nat.lt_succ_of_le (le_max?_val hmap hm)
 
 /-- The last element of a non-empty list is a member of that list. -/
-private lemma getLast?_mem {α : Type*} {l : List α} {x : α}
+lemma getLast?_mem {α : Type*} {l : List α} {x : α}
     (h : l.getLast? = some x) : x ∈ l := by
   have hne : l ≠ [] := by intro heq; simp [heq] at h
   have hlast : l.getLast? = some (l.getLast hne) := List.getLast?_eq_some_getLast hne
@@ -134,5 +134,19 @@ def step (G : CausalGraph) : CausalGraph :=
       acyclic      := by simp
       valid_source := by simp
       valid_target := by simp }
+
+/-- When G is non-empty, `step` appends exactly one new node with the next ID. -/
+lemma step_nodes_of_some {G : CausalGraph} {lastNode : Node}
+    (h : G.nodes.getLast? = some lastNode) :
+    (step G).nodes = G.nodes ++ [{
+      id        := nextNodeId G
+      label     := .vacuum
+      state     := ⟨fun _ => 0⟩
+      tickCount := lastNode.tickCount + 1
+    }] := by
+  unfold step
+  split
+  · simp_all  -- none branch: contradicts h
+  · simp_all  -- some branch: lastNode' = lastNode, goal closes by rfl
 
 end CausalGraph

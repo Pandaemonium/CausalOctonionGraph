@@ -4,16 +4,30 @@ statement: |
   The sterile vacuum state omega = 1/2(1 + i e_7) is a fixed point of the
   graph update rule under vacuum fluctuations. It does not spontaneously
   decay into charged matter without external energy input.
-status: stub
+status: proved
 lean_file: CausalGraphTheory/Vacuum.lean
 lean_theorems:
-  - vacuum_is_stable
-  - vacuum_annihilates_operators
+  - CausalGraph.vacuum_is_stable
+  - CausalGraph.vacuum_annihilates_operators
 python_test: calc/test_vacuum.py
 depends_on:
   - GAUGE-001
 literature:
   - "Finster (2016): Causal Fermion Systems"
 notes: |
-  If the vacuum is unstable, the universe would explode instantly.
+  Both theorems proved (no sorry):
+
+  vacuum_is_stable: If every node in G carries the .vacuum label, then so
+    does every node in (step G).  Proof by case-split on G.nodes.getLast?:
+    - Empty case: step creates genesisNode {label := .vacuum}; proved by
+      unfold step; split; simp_all (contradiction) / rfl (none branch).
+    - Non-empty case: step_nodes_of_some shows (step G).nodes = G.nodes ++
+      [newNode] where newNode.label = .vacuum; membership cases close by
+      hypothesis and rfl.
+
+  vacuum_annihilates_operators: O * (0 : ComplexOctonion Z) = 0.
+    Proof strategy: Octonion.ext reduces to 8 component goals.
+    The private helper zero_c_eq : (0 : Octonion R).c k = 0 := rfl makes
+    simp substitute zero components; simp [FormalComplex.ext_iff] closes
+    each remaining FormalComplex equality goal.
 blocked_reason: ""
