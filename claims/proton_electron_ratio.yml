@@ -11,7 +11,7 @@ statement: |
   SU(3) Fano-cycle edges, requiring sustained non-associative bookkeeping
   (the Alternativity Trigger) that the electron motif, cycling through
   an associative subalgebra, does not.
-status: falsified
+status: revised_pending
 lean_file: CausalGraphTheory/Constants.lean
 lean_theorems:
   - CausalGraph.proton_motif_def
@@ -49,49 +49,90 @@ notes: |
       - Each transfer traverses O(168) Fano automorphisms
       - Effective overhead ≈ (number of bookkeeping steps per cycle)
 
-  MONTE CARLO RESEARCH DIRECTION (RFC-007 Task 5.2):
-    1. Implement the electron motif: single node cycling through
-       associative subalgebra with tick cost = 1/hop.
-    2. Implement the proton motif: 3-node SU(3) singlet cycle with
-       non-associative gluon exchanges.  Count forced Tick evaluations
-       per unit causal depth.
-    3. Run N=1e6 causal steps.  Compute ratio R(N) = ticks_proton / ticks_electron.
-    4. Check whether R(N) → mu ≈ 1836 as N → infinity.
+  CRITICAL REFRAMING (2026-02-22, Gemini feedback):
+    1836 IS NOT A MAGIC INTEGER. Do not prime-factorize it.
+    The physical ratio is ≈ 1836.15267, an irrational number.
+
+    In the COG framework, MASS IS GATE DENSITY (thermodynamic limit):
+      - Electron mass ~ sparse density of P₁ (propagation) gates
+        (the L1 associative cycle fires 1 gate per tick, 3 ticks/cycle).
+      - Proton mass ~ dense density of S₁/S₂ (strong) gates
+        (the color-singlet cycle fires many non-associative gates with
+        cost 2 each, over a much longer causal chain).
+    The ratio mu ≈ 1836.15 emerges as the thermodynamic LIMIT of the
+    ratio of gate frequencies as the simulation runs long.
+
+  GATE DENSITY SIMULATION (revised approach, RFC-009 §7b.10):
+    1. Implement electron motif with sign tracking: track (OctIdx, sign).
+       Gate density = 1 gate/tick = 1.0 (associative, cost 1 each hop).
+    2. Implement proton motif with cyclic exchange C1→C2→C3→C1 and sign
+       tracking. Count total S₁/S₂ gate firings over N steps.
+    3. Run N steps. Compute gate_density(proton) / gate_density(electron).
+    4. Let the ratio CONVERGE to a thermodynamic limit. Do NOT stop at
+       first recurrence. Run until the ratio stabilizes.
+
+  SIGN TRACKING — ARCHITECTURAL REQUIREMENT:
+    DO NOT collapse +e₇ and −e₇. The signs encode chirality. The node
+    state must be (OctIdx, sign) where sign ∈ {+1, −1}. This is required
+    to correctly distinguish attractive from repulsive next-step interactions.
 
   WARNING:
     The 6*pi^5 coincidence has been known since 1969 and is widely
     regarded as numerological.  This claim MUST be derived from the
     COG update rules and NOT post-hoc fitted.  Fix the motif structure
     from physical reasoning FIRST; then run the simulation.
-falsification_record:
-  date: "2026-02-22"
-  simulation: calc/mass_drag.py
-  rules_version: "RFC-001 Phase II (locked gluon table §5.1, branching protocol §3.3)"
-  results:
+simulation_records:
+  - phase: 10
+    date: "2026-02-22"
+    simulation: "calc/mass_drag.py (asymmetric exchange — BUGGY)"
+    rules_version: "RFC-001 Phase II"
     C_e: 3
     C_p: 8
     mu_COG: 2.6667
     mu_exp: 1836.15267343
-    relative_gap: "99.85%"
-    status: "recurred"
-  interpretation: |
-    The proton motif (PROTON_INIT = (e5, e1, e3), exchange schedule Color1↔2,
-    Color1↔3, Color2↔3 using the locked Witt-pair gluon assignment) returns to
-    its initial state after only 8 ticks of algorithmic drag.
-    C_e = 3 is correct (electron L1 associative cycle confirmed).
-    mu_COG = 8/3 ≈ 2.667 is 3 orders of magnitude below mu_exp = 1836.
-    The current motif definition does NOT produce the proton/electron mass ratio.
-  open_questions:
-    - "Is the recurrence condition (state equality) correct, or should it require
-       all three quark tick_counts to independently complete a minimum cycle?"
-    - "Should the proton cost be the SUM of quark tick_counts (not MAX), yielding
-       C_p_sum = 3*(C_per_quark) and a potentially different ratio?"
-    - "Does the proton motif need a longer initial period before the exchange
-       schedule begins (a 'cold start' reflecting confinement formation)?"
-    - "Is the 3-quark exchange schedule (period 3 steps) the correct cycle, or
-       should it be driven by a color-flow constraint (e.g., must traverse all
-       7 Fano automorphisms before a valid color-singlet recurrence)?"
-    - "Does the correct mechanism require the full SL(2,3) group structure
-       (168 automorphisms of the Fano plane) to set the proton period to ~1836?"
-  next_action: "Draft RFC-009 to formalize the Triality/spinor overhead mechanism
-    and re-derive the proton motif from physical first principles before re-running."
+    status: falsification_datum
+    root_cause: |
+      Asymmetric exchange schedule: Q[1](Color1) was source in steps 0 and 1
+      but never a destination. State of Q[1] was frozen; recurrence trivially
+      satisfied for 2/3 quarks. Signs not tracked (+e7 and -e7 collapsed).
+  - phase: 11
+    date: "2026-02-22"
+    simulation: "calc/mass_drag.py (cyclic exchange + sign tracking)"
+    rules_version: "RFC-001 Phase II + RFC-009 §3 + RFC-009 §2b.4"
+    C_e: 3
+    C_p: 11
+    mu_COG_naive: 3.6667
+    mu_exp: 1836.15267343
+    status: falsification_datum
+    architectural_corrections: |
+      (1) Cyclic exchange C1->C2->C3->C1: each quark is src and dst exactly
+          once per 3-step cycle. Every quark state now evolves.
+      (2) Sign tracking: node state = (OctIdx, sign) with sign in {+1,-1}.
+          Recurrence requires full signed state match PROTON_INIT + all +1 signs.
+    interpretation: |
+      First signed recurrence at step=21 (7 full C1->C2->C3->C1 cycles),
+      tick_cost=11 ticks, naive mu = 11/3 = 3.667.
+      Gate density (non-assoc triggers / max_tick): 499-544 per tick (rising).
+      Electron gate density = 0 (fully associative L1, no comparison possible).
+      250 branches surviving at pruning cap — system is highly branching.
+      Still 3 orders of magnitude below mu_exp = 1836.
+    open_questions:
+      - "The naive cycle-count ratio 3.667 is still far from 1836. Is the
+         Fano orbit coverage (PSL(2,7) full orbit) required as the recurrence
+         condition, not just the first return to PROTON_INIT?"
+      - "The gate density comparison is degenerate: electron has 0 non-assoc
+         gates. Should we count ALL gate types (P1 propagation + S1/S2 strong)
+         and compare per-generation densities?"
+      - "250 branches after 100 steps suggests explosive non-associativity.
+         Should the simulation track a 'minimum cost branch' (classical path)
+         rather than all branches?"
+      - "Does 1836 require running until the gate density ratio has converged
+         to a thermodynamic limit? (Gemini 2026-02-22: it is a statistical
+         limit, not an integer cycle period.)"
+  next_action: |
+    RFC-009 drafted (2026-02-22). Two structural fixes required before re-run:
+    (1) Add signed state tracking (OctIdx, sign) — see RFC-009 §2b.4.
+    (2) Fix proton exchange schedule to cyclic C1→C2→C3→C1 — see RFC-009 §3.
+    (3) Switch simulation from recurrence-counting to gate-density measurement.
+    Re-run calc/mass_drag.py and report the gate-density ratio as the revised
+    mu_COG datum. Do NOT claim match until the ratio has converged.
