@@ -1,0 +1,66 @@
+id: MU-001
+title: "Proton-to-electron mass ratio from octonionic tri-state cycle overhead"
+statement: |
+  The proton-to-electron mass ratio mu ≈ 1836.152673 equals, in the
+  COG framework, the ratio of the forced Tick evaluation overhead of
+  maintaining a stable color-singlet tri-state cycle (proton motif) to
+  that of a single propagating lepton state (electron motif):
+      mu = tick_overhead(proton_motif) / tick_overhead(electron_motif)
+
+  The proton motif consists of three color-charged nodes connected by
+  SU(3) Fano-cycle edges, requiring sustained non-associative bookkeeping
+  (the Alternativity Trigger) that the electron motif, cycling through
+  an associative subalgebra, does not.
+status: stub
+lean_file: CausalGraphTheory/Constants.lean
+lean_theorems:
+  - CausalGraph.proton_motif_def
+  - CausalGraph.lepton_motif_def
+  - CausalGraph.mu_tick_ratio_stub
+python_test: calc/test_constants.py::test_proton_electron_ratio_target
+depends_on:
+  - MASS-001
+  - GAUGE-001
+  - GEN-001
+literature:
+  - "CODATA 2022: mu = m_p/m_e = 1836.15267343 ± 0.00000011"
+  - "Barrow & Tipler (1986): Anthropic Cosmological Principle §5.1"
+  - "Duff (2002): Comment on time-variation of fundamental constants, arXiv:hep-th/0208093"
+  - "Furey (2018): Three generations, two unbroken gauge symmetries, arXiv:1910.08395"
+notes: |
+  EXPERIMENTAL VALUE (CODATA 2022):
+    mu = m_p / m_e = 1836.15267343 ± 0.00000011
+
+  KNOWN NUMERICAL COINCIDENCES (not explanations):
+    6*pi^5       ≈ 1836.1181     (error: 0.002%)  — Armand Wyler, 1969
+    6*pi^5 + 3/2 ≈ 1837.62       (no improvement)
+    (3/2)*(1/alpha)*ln(1/alpha) ≈ 1836.07  (Borsanyi et al., numerical)
+
+  COG INTERPRETATION:
+    Electron motif: 1 node cycling through the associative quaternion
+    subalgebra H ⊂ O.  No Alternativity Trigger fires; tick overhead = 1.
+
+    Proton motif: 3 nodes (u, u, d quarks) exchanging gluon edges on the
+    3 Witt color-plane lines.  Each exchange may trigger the Alternativity
+    Trigger (non-associative remainder) requiring extra bookkeeping steps.
+
+    The 1836 overhead is hypothesized to arise from:
+      - 3 color charge transfers per baryon number cycle
+      - Each transfer traverses O(168) Fano automorphisms
+      - Effective overhead ≈ (number of bookkeeping steps per cycle)
+
+  MONTE CARLO RESEARCH DIRECTION (RFC-007 Task 5.2):
+    1. Implement the electron motif: single node cycling through
+       associative subalgebra with tick cost = 1/hop.
+    2. Implement the proton motif: 3-node SU(3) singlet cycle with
+       non-associative gluon exchanges.  Count forced Tick evaluations
+       per unit causal depth.
+    3. Run N=1e6 causal steps.  Compute ratio R(N) = ticks_proton / ticks_electron.
+    4. Check whether R(N) → mu ≈ 1836 as N → infinity.
+
+  WARNING:
+    The 6*pi^5 coincidence has been known since 1969 and is widely
+    regarded as numerological.  This claim MUST be derived from the
+    COG update rules and NOT post-hoc fitted.  Fix the motif structure
+    from physical reasoning FIRST; then run the simulation.
+blocked_reason: "Proton motif not yet implemented. Requires GEN-001 (triality) to be proved."

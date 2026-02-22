@@ -1,0 +1,64 @@
+id: WEINBERG-001
+title: "Weinberg angle from C⊗O subalgebra projection ratio"
+statement: |
+  The Weinberg angle theta_W satisfies:
+      sin^2(theta_W) = dim_eff(U(1) sector) / dim_eff(SU(2) x U(1) sector)
+  where dim_eff denotes the effective dimension of the corresponding
+  subalgebra projected onto the C⊗O Witt basis.
+
+  Specifically: in the C⊗O decomposition relevant to electroweak symmetry,
+  the U(1) generator occupies exactly 1 complex dimension while the full
+  SU(2)xU(1) weak-hypercharge sector occupies a total of dim_eff dimensions
+  determined by the Witt basis structure.  The ratio of these dimensions
+  equals sin^2(theta_W) ≈ 0.2312.
+status: stub
+lean_file: CausalGraphTheory/Constants.lean
+lean_theorems:
+  - CausalGraph.weinberg_candidate_def
+  - CausalGraph.witt_projection_ratio
+python_test: calc/test_constants.py::test_weinberg_candidate
+depends_on:
+  - GAUGE-001
+  - FANO-001
+literature:
+  - "CODATA 2022 / PDG 2023: sin^2(theta_W) = 0.23122 ± 0.00003 (at Z pole, MSbar)"
+  - "Glashow, Salam, Weinberg (1967-68): Electroweak unification"
+  - "Furey (2016): Standard model physics from an algebra? arXiv:1603.04078 §5"
+  - "Todorov (2019): Exceptional quantum algebra for SM, arXiv:1911.13124"
+notes: |
+  EXPERIMENTAL VALUE (PDG 2023):
+    sin^2(theta_W) = 0.23122 ± 0.00003   (MS-bar, at M_Z)
+    theta_W ≈ 28.74°
+
+  C⊗O ALGEBRA DIMENSIONS:
+    C⊗O has real dimension 16 (C has dim 2, O has dim 8).
+    The weak-isospin SU(2) subalgebra corresponds to the quaternion
+    sector H ⊂ C⊗O:  dim_R(H) = 4.
+    The hypercharge U(1) corresponds to the complex scalar sector:  dim_R(C) = 2.
+    Naive ratio (Georgi-Glashow inspired): dim_R(C)/dim_R(H) = 2/4 = 1/2 = 0.5
+    This does NOT match 0.2312.
+
+  WITT BASIS APPROACH:
+    The 3 Witt pairs each span a 2-complex-dimensional color plane.
+    SU(2)_weak acts on a specific quaternionic subspace (isospin doublet).
+    The electroweak mixing angle is determined by the ratio of the
+    hypercharge generator norm to the total electroweak generator norm
+    in the chosen Witt basis inner product.
+
+  CANDIDATE FORMULAS (none yet confirmed):
+    3/(3+dim(SU(3))) = 3/12 = 1/4 = 0.25      (close but ~8% off)
+    |Witt pairs| / (|Witt pairs| + |orbit|) = 3/10 = 0.30   (off)
+    tan^2(theta_W) = g'^2/g^2 in SO(10) GUT embedding → 3/8 at GUT scale
+
+  NOTE ON RUNNING:
+    sin^2(theta_W) runs from 3/8 at the GUT scale (~10^16 GeV) to
+    0.2312 at M_Z.  The COG framework must either derive the GUT-scale
+    value (simpler: 3/8 = 0.375 from SU(5) embedding) and then predict
+    the running, OR directly give the low-energy value from the causal
+    graph structure at nuclear energy densities.
+
+  RESEARCH DIRECTION:
+    Define the electroweak projector P_EW on the Witt basis exactly.
+    Compute Tr(P_U1) / Tr(P_EW) as a ratio of discrete traces over the
+    24-element vacuum stabilizer representation.
+blocked_reason: "No formula yet identified matching 0.2312. Defer until GAUGE-001 mechanism is fully formalized."

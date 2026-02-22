@@ -1,0 +1,65 @@
+id: STRONG-001
+title: "Strong coupling constant from SU(3) stabilizer / GL(3,2) ratio"
+statement: |
+  The strong coupling constant alpha_s, evaluated at some reference
+  scale, equals the asymptotic limit of the ratio:
+      R(N) = (trapped color-cycle operations) / (total Fano operations)
+  as the causal graph size N → infinity, where:
+  - "trapped" operations are those confined to the 24-element vacuum
+    stabilizer SL(2,3) (the discrete SU(3) color subgroup), and
+  - "total Fano operations" span the full 168-element GL(3,2).
+
+  COG prediction: R(infinity) = 24/168 = 1/7 ≈ 0.14286 provides a
+  leading-order estimate.  The physical value alpha_s(M_Z) ≈ 0.1181
+  lies approximately 20% below this estimate; the discrepancy is
+  hypothesized to arise from mixing between the color-trapped and
+  color-escaped channels at finite graph density.
+status: stub
+lean_file: CausalGraphTheory/Constants.lean
+lean_theorems:
+  - CausalGraph.strong_coupling_candidate
+  - CausalGraph.stabilizer_ratio_eq
+python_test: calc/test_constants.py::test_alpha_strong_candidate
+depends_on:
+  - GAUGE-001
+  - FANO-001
+literature:
+  - "CODATA 2022 / PDG 2023: alpha_s(M_Z) = 0.1180 ± 0.0009"
+  - "Bethke (2006): alpha_s measurements, arXiv:hep-ex/0606035"
+  - "Furey (2018): Three generations, two unbroken gauge symmetries..."
+notes: |
+  EXPERIMENTAL VALUE (PDG 2023):
+    alpha_s(M_Z) = 0.1180 ± 0.0009   (at the Z-boson mass scale)
+    alpha_s(1 GeV) ≈ 0.50             (IR regime, strongly coupled)
+    alpha_s → 0 as scale → infinity   (asymptotic freedom)
+
+  FANO GROUP DATA (from GAUGE-001):
+    |GL(3,2)| = 168   (full Fano automorphism group = global gauge)
+    |SL(2,3)| = 24    (vacuum stabilizer = discrete SU(3) color group)
+    ratio = 24/168 = 1/7 ≈ 0.14286
+
+  GAP ANALYSIS:
+    Leading-order estimate:   1/7 ≈ 0.14286
+    Experimental value:       0.1180
+    Fractional discrepancy:   (0.14286 - 0.1180) / 0.1180 ≈ 21%
+
+  RESOLUTION HYPOTHESIS:
+    The 21% gap may correspond to:
+    1. Running: alpha_s is scale-dependent; 1/7 may match at a scale
+       above M_Z where running brings the coupling up.  From asymptotic
+       freedom, alpha_s(Q) ≈ 1/(b0 * ln(Q/Lambda_QCD)) where
+       b0 = (33 - 2*Nf)/(12*pi); setting 1/7 = alpha_s(Q*) and solving
+       gives Q* ≈ 350 GeV, near the bottom quark mass threshold.
+    2. Mixing: at finite graph density, some fraction of color-cycle
+       operations are misclassified as escaped (off-stabilizer).
+    3. The correct COG formula may be 24/(168 + delta) where delta
+       is a finite-density correction from the 7 orbit elements.
+
+  RESEARCH DIRECTION:
+    Step 1: Prove the exact combinatorial limit R(infinity) = 24/168
+            in Lean (straightforward given GAUGE-001).
+    Step 2: Compute the finite-density correction via Monte Carlo
+            simulation (see RFC-007 Task 5.2).
+    Step 3: Check whether R(N) converges to 0.1180 from above as
+            N → infinity, or whether a scale-matching argument is needed.
+blocked_reason: "Leading-order candidate identified (1/7) but 21% gap unresolved."

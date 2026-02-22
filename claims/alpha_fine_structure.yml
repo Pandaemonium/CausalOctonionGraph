@@ -1,0 +1,59 @@
+id: ALPHA-001
+title: "Fine-structure constant from C⊗O topological phase penalty"
+statement: |
+  There exists a purely combinatorial formula F(C⊗O) built from the
+  group-theoretic data of the C⊗O algebra (the Fano automorphism group
+  GL(3,2) of order 168, its vacuum stabilizer SL(2,3) of order 24, and
+  the U(1) causal cycle structure) such that:
+      F(C⊗O) = alpha ≈ 1/137.035999
+  where alpha is the fine-structure constant (electromagnetic coupling
+  at zero momentum transfer).
+
+  The COG interpretation: alpha is the topological phase-shift penalty
+  incurred when a causal edge routes through the U(1) sector of the
+  C⊗O algebra.  It is not a free parameter but a fixed geometric ratio
+  of the discrete shadow of the gauge group within the causal graph.
+status: stub
+lean_file: CausalGraphTheory/Constants.lean
+lean_theorems:
+  - CausalGraph.alpha_candidate_def
+  - CausalGraph.alpha_fano_bound
+python_test: calc/test_constants.py::test_alpha_target
+depends_on:
+  - GAUGE-001
+  - FANO-001
+literature:
+  - "CODATA 2022: alpha = 7.2973525693e-3 (1/137.035999084)"
+  - "Eddington (1929): warned against naive numerology from group orders"
+  - "Wyler (1969): alpha from volume of SO(5)/SU(2) — later discredited"
+  - "Furey (2016): Standard model physics from an algebra? arXiv:1603.04078"
+  - "Todorov & Dubois-Violette (2018): Deducing the SM algebra, arXiv:1806.09450"
+notes: |
+  EXPERIMENTAL VALUE (CODATA 2022):
+    alpha = 7.2973525693e-3
+    1/alpha = 137.035999084
+
+  FANO GROUP DATA (from GAUGE-001):
+    |GL(3,2)| = |Aut(PG(2,2))| = 168
+    |Stab(e7)| = |SL(2,3)| = 24
+    orbit size = 7  (transitive on 7 Fano points)
+
+  SIMPLE CANDIDATES (none match to better than 1%):
+    24/168       = 1/7  ≈ 0.14286    (alpha_s candidate, not alpha)
+    1/168        ≈ 0.00595            (too small by factor ~1.2)
+    7/(168*pi^2) ≈ 0.00423            (too small)
+    7/168        = 1/24 ≈ 0.04167    (too large by factor ~5.7)
+
+  RESEARCH DIRECTION:
+    The correct formula is expected to involve the volume or phase-space
+    measure of the U(1) causal loop in C⊗O, not a simple integer ratio.
+    Candidate: alpha = Im(det(C⊗O projector onto U(1) sector)) / (4*pi)
+    where the determinant is computed over the discrete Witt basis.
+
+  WARNING:
+    The history of "deriving" alpha from group orders is littered with
+    numerological coincidences (Eddington, Wyler, etc.).  The claim must
+    be derived, not fitted.  Fix the combinatorial formula from first
+    principles and THEN check whether it matches 1/137; do not
+    reverse-engineer a formula from the answer.
+blocked_reason: "No candidate formula yet identified. Mark as research target."
