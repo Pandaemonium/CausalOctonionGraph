@@ -4,7 +4,7 @@ statement: |
   The Koide ratio Q = (sum m_i) / (sum sqrt(m_i))^2 equals exactly 2/3
   because the allowed tick frequencies (m_i) are constrained by the
   diophantine equations governing the Fano plane's cycle structure.
-status: stub
+status: blocked
 lean_file: CausalGraphTheory/Koide.lean
 lean_theorems:
   - koide_ratio_is_two_thirds
@@ -13,8 +13,42 @@ depends_on:
   - MASS-001
 literature:
   - "Koide (1982): A new formula for the masses of charged leptons"
-  - "Brannen: Discrete Fourier Transform and the Koide Formula"
+  - "Brannen (2006): Discrete Fourier Transform and the Koide Formula (non-arXiv preprint)"
+  - "Koide (2005, hep-ph/0506247): Derivation from S3-symmetric Higgs VEV — requires continuous fields, FORBIDDEN in COG"
 notes: |
-  This is the 'Hail Mary' claim. If the simulation naturally produces masses
-  satisfying this, the theory is correct. If not, it's a falsification.
-blocked_reason: ""
+  This is the 'Hail Mary' claim. If the COG update rules naturally force the
+  algebraic relation f₀²+f₁²+f₂² = 4(f₀f₁+f₁f₂+f₂f₀), the theory is
+  strongly supported.  If not, it is a falsification target.
+
+  BRANNEN PARAMETRIZATION (key insight):
+    Write f_k = A + B·cos(φ + 2πk/3)  (k = 0, 1, 2).
+    Z3 phase spacing forces Q = 1/3 + B²/(6A²).
+    Q = 2/3  requires  B = A√2  (a SEPARATE constraint beyond Z3).
+
+  WHAT SL(2,3) / Z3 ACTUALLY FORCES:
+    The 24-element vacuum stabilizer SL(2,3) contains the Z3 rotation
+    (equal phase spacing 2π/3 between the three Witt color planes).
+    This forces Σf_k = 3A (the cosine terms cancel), which rules out
+    Q = 1 but does NOT fix the ratio B/A.
+
+  WHAT IS STILL MISSING:
+    No paper in the literature derives B/A = √2 from a discrete group.
+    The COG mechanism that selects this ratio is the open question.
+    Candidates: (a) some eigenvalue condition on the SL(2,3) action,
+    (b) alternativity penalty forcing the three tick rates to a specific
+    algebraic locus, (c) an energy-minimization argument in the graph.
+
+  ALGEBRAIC REFORMULATION (provable in Lean now):
+    Q = 2/3  ⟺  f₀²+f₁²+f₂² = 4(f₀f₁+f₁f₂+f₂f₀).
+    This identity holds over any commutative ring and can be proved
+    by `ring` in Lean 4 without importing ℝ.  The identity itself
+    is NOT the blocked part — the blocked part is showing the COG
+    update rules force exactly this identity.
+blocked_reason: |
+  Z3 symmetry (supplied by SL(2,3) ⊂ GL(3,2)) forces equal phase spacing
+  between the three Witt color-plane tick rates, but does NOT force the ratio
+  B/A = √2 required for Q = 2/3 in the Brannen parametrization.  No discrete-
+  group mechanism has been identified that selects this ratio.  The previous
+  claim that "SL(2,3) forces cos²(θ) = 1/2 yielding Q = 2/3" was incorrect
+  and has been retracted from calc/koide.py.  Unblocking requires identifying
+  the COG algebraic or graph-combinatorial feature that pins B/A = √2.

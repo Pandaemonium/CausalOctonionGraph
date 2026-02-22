@@ -17,13 +17,27 @@ making exactly 45° with the democratic axis d̂ = (1,1,1)/√3
 (since cos²(θ) = 1/(3Q) = 1/2 ⟹ θ = arccos(1/√2) = 45°).
 
 In the COG framework, each f_j is the tick rate of one of the three
-Witt color planes (CONVENTIONS.md §5.2).  The 24-element vacuum
-stabilizer SL(2,3) acts on the three planes by unit-norm rotations;
-its fixed-point structure forces cos²(θ) = 1/2 yielding Q = 2/3
-as a group-theoretic consequence rather than an empirical coincidence.
+Witt color planes (CONVENTIONS.md §5.2).
 
-Claim: The quantitative derivation of this link (vacuum projector
-       eigenvalues → Koide) is a Phase 5 Lean target.
+Brannen parametrization (arXiv:0706.2534-adjacent):
+    Write f_k = A + B·cos(φ + 2πk/3)  (k = 0, 1, 2).
+    Z3-symmetry (equal phase spacing 2π/3) forces Σf_k = 3A
+    and Σf_j·f_k (j≠k) = 3A² − (3/4)B².
+    The Koide ratio becomes:
+        Q = (3A² + (3/2)B²) / (3A)² = 1/3 + B²/(6A²)
+    Q = 2/3  requires  B²/(6A²) = 1/3  ⟺  B = A√2.
+
+OPEN QUESTION (KOIDE-001):
+    Z3 symmetry (which SL(2,3) does supply) forces equal phase
+    spacing, but does NOT force B/A = √2.  No paper in the
+    literature derives the B/A = √2 constraint from a discrete group.
+    The COG mechanism that selects this ratio is unknown.
+
+    The purely algebraic identity is:
+        Q = 2/3  ⟺  f₀²+f₁²+f₂² = 4(f₀f₁+f₁f₂+f₂f₀)
+    This can be proved in Lean by `ring` without any real analysis.
+    The open task is to show the COG update rules force exactly this
+    algebraic relation — see claims/koide_exactness.yml.
 """
 
 import math
@@ -117,9 +131,11 @@ def summary() -> None:
     print(f"  θ (predicted) = {KOIDE_ANGLE_EXACT:.6f}°  [arccos(1/√2), from Q=2/3]")
     print(f"  |Δθ|          = {abs(θ - KOIDE_ANGLE_EXACT):.4f}°")
     print()
-    print("COG interpretation:")
-    print("  Q = 2/3 follows from the 24-element vacuum stabilizer SL(2,3)")
-    print("  constraining the three Witt color-plane tick rates.")
+    print("COG status (KOIDE-001):")
+    print("  Q = 2/3 is equivalent to f₀²+f₁²+f₂² = 4(f₀f₁+f₁f₂+f₂f₀).")
+    print("  Z3 symmetry forces equal phase spacing (2π/3) but NOT B/A = √2.")
+    print("  The COG mechanism that selects B/A = √2 is an open research question.")
+    print("  See claims/koide_exactness.yml.")
 
 
 if __name__ == "__main__":
