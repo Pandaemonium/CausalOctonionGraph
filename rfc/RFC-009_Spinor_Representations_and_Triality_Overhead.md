@@ -75,6 +75,80 @@ other two quarks, which is short (order 4–8 over the 7 Witt elements).
 
 ---
 
+## 2b. The Color-Singlet Sector — An Algebraic Fact (Verified)
+
+Before addressing the exchange schedule, there is a deeper structural result
+that clarifies what the "proton sector" actually is.
+
+### 2b.1 The 4/4 Split of One-Per-Witt-Pair States
+
+There are exactly 8 ways to choose one element from each Witt pair (2³ = 8).
+A direct enumeration via `three_body(w0, w1, w2)` reveals a **perfect 4/4
+structural split** (verified computationally in Phase 10, 2026-02-22):
+
+| Configuration | Fano line? | Triple product | Interpretation |
+|--------------|-----------|---------------|---------------|
+| (e₆, e₂, e₄) | **L4** {2,4,6} | −1 (real, blocked) | Quark "annihilation" |
+| (e₆, e₅, e₃) | **L7** {3,5,6} | −1 (real, blocked) | Quark "annihilation" |
+| (e₁, e₂, e₃) | **L1** {1,2,3} | −1 (real, blocked) | Quark "annihilation" |
+| (e₁, e₅, e₄) | **L2** {1,4,5} | −1 (real, blocked) | Quark "annihilation" |
+| (e₆, e₂, e₃) | not Fano | ±e₇ (non-assoc) | Active proton state |
+| (e₆, e₅, e₄) | not Fano | ±e₇ (non-assoc) | Active proton state |
+| (e₁, e₂, e₄) | not Fano | ±e₇ (non-assoc) | Active proton state |
+| **(e₁, e₅, e₃)** | not Fano | ±e₇ (non-assoc) | **PROTON_INIT** |
+
+**The pattern is exact:**
+- The 4 **blocked** configurations are exactly the one-per-Witt-pair triples that
+  lie on one of the **4 non-vacuum Fano lines** (L1, L2, L4, L7 — the lines that
+  do not pass through e₇). The triple product hits a squared element → −1 (real).
+- The 4 **active** configurations are exactly the one-per-Witt-pair triples that
+  span three different Fano lines (no three of them collinear). Both bracketings
+  land on **e₇**, with opposite signs (s_L = −e₇, s_R = +e₇ or vice versa),
+  confirming the Alternativity Trigger fires.
+
+### 2b.2 Physical Interpretation (Correcting the "Bug" Reading)
+
+The result s_L = −e₇ and s_R = +e₇ for PROTON_INIT is **not a bug**.
+The vacuum axis e₇ is the electromagnetic/photon direction (the U(1) axis).
+The fact that the proton's 3-quark product always lands on ±e₇ means:
+
+> **The proton IS the color-singlet state that continuously projects onto the
+> photon sector.** This is the discrete-algebraic analog of the proton having
+> an electromagnetic charge distribution (charge radius, magnetic moment).
+
+The 4 blocked configurations (real result −1) are *not* proton states —
+their triple product annihilates to the scalar. These may correspond to
+meson-like or vacuum-like configurations.
+
+### 2b.3 Implication: Revised Recurrence Condition
+
+The recurrence condition `states == PROTON_INIT` used in Phase 10 is too
+restrictive. The physically correct condition is:
+
+**Color-singlet recurrence:** The quark tuple (q₀, q₁, q₂) returns to **any
+of the 4 active configurations**, not necessarily the exact initial assignment.
+
+Under the revised condition, the proton "lifetime" (C_p) is the tick count
+for the quark tuple to complete an orbit through the 4-state active sector
+back to PROTON_INIT. Since the sector has exactly 4 states, and the exchange
+schedule must visit all of them (by symmetry), the orbit length is set by
+the exchange group action on these 4 states — not merely on one fixed tuple.
+
+### 2b.4 The ±e₇ Sign Ambiguity
+
+Both bracketings land on e₇ with **opposite signs**. The simulation
+currently does not track the sign of a node state — it tracks only the
+OctIdx ∈ {0..6}. This means +e₇ and −e₇ are indistinguishable in the
+current model.
+
+This is a structural limitation: the two successor nodes from a
+non-associative interaction both have `state = 6` (e₇, VACUUM_AXIS),
+so they are degenerate in the simulation. For the proton sector, tracking
+the sign (±1 factor on the state) may be necessary to distinguish the
+two physical "helicity" branches. This is an **open modeling question**.
+
+---
+
 ## 3. Correction 1 — Cyclic Directed Exchange (Revised Proton Motif)
 
 ### 3.1 The Correct Exchange Schedule
@@ -396,6 +470,9 @@ and prove that τ has order 3 (τ³ = id) using `decide` or `fin_cases`.
 | 7.4 | Does the proton motif require Fano orbit coverage (PSL(2,7))? | MU-001 extended |
 | 7.5 | Can the electron C_e = 3 and B/A = √2 simultaneously fix all 3 lepton masses? | KOIDE-001 |
 | 7.6 | Is 1836 = (proton exchange period) × (Triality factor)? | MU-001 composite |
+| 7.7 | Should the recurrence condition be "any active 4-state config" vs exact PROTON_INIT? | MU-001 re-run |
+| 7.8 | Must the simulation track ±1 signs on node states to distinguish +e₇ from −e₇? | Architecture |
+| 7.9 | What is the orbit of the 4 active states under the cyclic exchange schedule? | MU-001 analysis |
 
 ---
 
