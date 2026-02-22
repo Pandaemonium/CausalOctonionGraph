@@ -80,5 +80,29 @@ These constants are human artifacts based on arbitrary macroscopic units (meters
 * **Attack Vector 2:** Prove that the derived $\mu \approx 1836$ is mathematically robust and not just a numerical coincidence mined by over-parameterizing the Python simulation's graph update rules.
 
 ---
+
+## 6. Structural Anchors from Literature
+
+The following results from the algebraic literature provide independent confirmation that the COG approach (octonion algebra $\to$ SM gauge structure) is geometrically well-founded, without requiring any of the forbidden continuum machinery.
+
+### 6.1 The $F_4 \supset$ SM Chain (Todorov & Drenska, 2018)
+
+Todorov & Drenska (arXiv:1805.06739) prove that the automorphism group of the Albert algebra $J_3(\mathbb{O})$ (the 27-dimensional exceptional Jordan algebra) is $F_4$. This group contains the Standard Model gauge group as a maximal subgroup via:
+
+$$F_4 \supset Spin(9) \supset Spin(6) \times Spin(3) \supset SU(3)_C \times SU(2)_L \times U(1)_Y$$
+
+**Relevance to COG:** The Witt basis we use (CONVENTIONS.md §5) selects the vacuum axis $e_7$, which breaks the octonionic automorphism group $G_2$ down toward the SM subgroup. The $F_4$ result tells us that the SM gauge group is the *natural symmetry residue* of the octonionic algebra — it is not inserted by hand. This supports the derivation goals of §2 without requiring $E_8$ unification (which is ruled out by the Distler-Garibaldi theorem; see RFC-003 §6).
+
+### 6.2 The Fano 1:3:6 Force Decomposition
+
+The 7 imaginary octonionic basis elements partition under the vacuum axis $e_7$ as:
+
+| Subspace | Elements | Count | Force sector |
+|----------|----------|-------|-------------|
+| Vacuum axis | $\{e_7\}$ | 1 | $U(1)_{EM}$ |
+| Witt-pair elements (lines through $e_7$) | $\{e_1, e_2, e_3, e_4, e_5, e_6\}$ — 3 pairs | 6 | $SU(3)_C$ (color triplets) |
+
+The three Fano lines through $e_7$ are exactly the three Witt pair lines (L3, L5, L6 in CONVENTIONS.md §2). This 1:6 split (vacuum axis vs. color planes) is the geometric shadow of the $U(1)/SU(3)$ decomposition. The $SU(2)_L$ weak sector acts on one Witt pair at a time (3 elements including $e_7$), giving the 1:3:6 projection ratios discussed in RFC-007 §2.3. These are structural ratios from Fano geometry alone — no free parameters required.
+
 **Author Notes / Scratchpad:**
 *(Energy scale in a causal graph is just inverse topological distance/graph density. High energy = short graph paths. The constants shouldn't fundamentally "run" in the continuum sense—rather, the discrete granular effects of the Fano cycles become visible at short distances, breaking the macroscopic continuum approximation.)*

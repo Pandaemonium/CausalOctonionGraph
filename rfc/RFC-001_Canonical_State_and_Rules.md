@@ -319,27 +319,35 @@ in RFC-007 and `claims/proton_electron_ratio.yml` as a falsification datum.
 
 ## 5. Open Questions (Must Be Resolved Before Simulation)
 
-### 5.1 Gluon Assignment Table (BLOCKING — highest priority)
+### 5.1 Gluon Assignment Table (LOCKED — `calc/gluon_assignment.py`)
 
-**Question:** What imaginary unit $e_g$ is the gluon operator for each of
-the three inter-color exchanges?
+**Result (forced by Fano geometry, zero free parameters):**
 
-This is the critical missing piece. From the SU(3) Fano structure
-(GAUGE-001, RFC-007), each color exchange corresponds to a rotation in
-a Witt cross-plane. The candidates for each exchange are the imaginary
-units that are NOT in either Witt pair being exchanged:
+| Exchange | Gluon pair | Structural note |
+|----------|------------|----------------|
+| Color 1 ↔ 2 | $\{e_3, e_4\}$ | = Witt pair 3 (the "third" color) |
+| Color 1 ↔ 3 | $\{e_2, e_5\}$ | = Witt pair 2 |
+| Color 2 ↔ 3 | $\{e_1, e_6\}$ | = Witt pair 1 |
 
-| Exchange | Witt pair 1 | Witt pair 2 | Candidate gluons (complement) |
-|----------|-------------|-------------|-------------------------------|
-| Color 1 ↔ 2 | $\{e_6, e_1\}$ | $\{e_2, e_5\}$ | $\{e_3, e_4, e_7\}$ |
-| Color 1 ↔ 3 | $\{e_6, e_1\}$ | $\{e_3, e_4\}$ | $\{e_2, e_5, e_7\}$ |
-| Color 2 ↔ 3 | $\{e_2, e_5\}$ | $\{e_3, e_4\}$ | $\{e_1, e_6, e_7\}$ |
+**The triality rule:** The gluons mediating exchange of Colors $i$ and $j$
+are exactly the two elements of Witt pair $k$, where $\{i, j, k\} = \{1, 2, 3\}$.
+This is the discrete color-permutation triality, enforced by the Fano plane
+alone — no free parameters.
 
-**Pre-simulation action:** For each of the 9 candidate gluons (3 per
-exchange), run the 3-body associativity check `triggers(s_src, g, s_dst)`
-for all 4 possible (src state, dst state) combinations. The correct gluon
-assignment is the one consistent with the SU(3) symmetry argument in
-GAUGE-001. Record the result in RFC-007 §3.2.
+**Verification (`calc/gluon_assignment.py`):**
+- Both elements of each gluon pair correctly route the source Witt-pair
+  state into the destination Witt pair under left-multiplication. ✓
+- Each gluon in a pair triggers non-associativity for exactly 2 of the 4
+  $(e_\text{src}, e_\text{dst})$ combinations. The two gluons in the pair
+  are complementary: together they cover all 4 combinations, with each
+  combination triggered by exactly one gluon. ✓
+- $e_7$ (vacuum axis) triggers all 4 combinations but routes to the wrong
+  Witt pair — it is the $U(1)$/photon direction, not an SU(3) gluon. ✓
+
+**Simulation consequence:** The proton routing step (§4.3) must allow
+both gluons of each pair. For any given $(e_\text{src}, e_\text{dst})$
+state, the simulation picks the gluon that routes correctly and evaluates
+the 3-body product under the branching protocol (§3.3).
 
 ### 5.2 Branch Merging Rule
 
@@ -412,16 +420,50 @@ the irreducible operations; the cost counts only those.
 - [x] `is_fano_collinear` / `triggers` function (uses `FANO_CYCLES` from `conftest.py`)
 - [x] Node and Edge data structures (defined in §2 above)
 - [x] `update_step` algorithm (defined in §3.3 above)
-- [ ] **Gluon assignment table** — lock $g_{12}, g_{23}, g_{31}$ in RFC-007 §3.2
-- [ ] **Electron cycle length** $C_e$ — compute before calculating the ratio
-- [ ] **Branch merging rule** — confirm minimum-cost rule (§5.2)
+- [x] **Gluon assignment table** — locked: g(i↔j) = Witt pair k; see §5.1 and `calc/gluon_assignment.py`
+- [x] **Electron cycle length** $C_e = 3$ — confirmed by `calc/mass_drag.py` (directed L1 cycle, 1 tick/hop)
+- [x] **Branch merging rule** — minimum-cost rule (§5.2) implemented; simulation ran cleanly
 
 ---
 
-*Author scratchpad: The gluon assignment (§5.1) is the next concrete task.
-It requires ~30 lines of Python to enumerate all candidate gluons and check
-the 3-body associativity for each (src_state, g_candidate, dst_state)
-combination. The result will determine whether the proton routing step
-triggers non-associativity at all 3 hops, 2 of 3, 1 of 3, or 0 of 3.
-This single calculation will either validate or immediately falsify the
-COG mass mechanism.*
+**SIMULATION RESULT (2026-02-22, `calc/mass_drag.py`):**
+
+```
+C_e = 3  (electron L1 cycle, confirmed correct)
+C_p = 8  (proton motif first recurrence, status: recurred)
+mu_COG = 8/3 ≈ 2.667  (vs mu_exp = 1836.153)
+relative gap = 99.85%
+```
+
+**FALSIFICATION DATUM recorded in `claims/proton_electron_ratio.yml`.**
+
+The proton motif as defined in §4.3 (PROTON\_INIT = (e5, e1, e3), exchange
+schedule Color1↔2 → Color1↔3 → Color2↔3, locked Witt-pair gluons) returns to
+its initial state after only 8 ticks. The ratio C\_p/C\_e = 8/3 ≈ 2.667 is three
+orders of magnitude below the target.
+
+The electron baseline (C\_e = 3) is correct. The simulation ran without errors
+or branching failures. The falsification is in the **proton motif definition**,
+not the Fano algebra or update rule.
+
+**Open questions driving RFC-009 (Spinor/Triality mechanism):**
+
+1. Must the proton period cycle through all 7 Fano automorphism orbits (requiring
+   the PSL(2,7) ≅ GL(3,2) group of order 168) before a singlet recurrence?
+   If the proton period is set by |PSL(2,7)| = 168 and the electron by 3, then
+   mu\_COG = 168*?/3 — still not 1836 without the correct multiplier.
+
+2. Should the proton cost use the SUM of quark tick\_counts rather than the MAX,
+   giving C\_p = 3 * (cost\_per\_quark\_exchange) and a different effective ratio?
+
+3. Is the recurrence condition too loose? Physical color confinement suggests
+   all three quarks must independently complete a Witt-pair cycle, not merely
+   return to the same state tuple.
+
+4. Does the mechanism require the Triality rotation V → S+ → S- → V (RFC-009)
+   as additional overhead on top of the exchange schedule? The Triality rotation
+   through three spinor representations would add a factor of 3 per full proton
+   cycle — still insufficient alone but structurally motivated.
+
+**Next step:** Draft RFC-009 to formalize the correct proton motif from the
+Triality overhead mechanism before re-running the simulation.

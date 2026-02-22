@@ -11,13 +11,13 @@ statement: |
   SU(3) Fano-cycle edges, requiring sustained non-associative bookkeeping
   (the Alternativity Trigger) that the electron motif, cycling through
   an associative subalgebra, does not.
-status: stub
+status: falsified
 lean_file: CausalGraphTheory/Constants.lean
 lean_theorems:
   - CausalGraph.proton_motif_def
   - CausalGraph.lepton_motif_def
   - CausalGraph.mu_tick_ratio_stub
-python_test: calc/test_constants.py::test_proton_electron_ratio_target
+python_test: calc/mass_drag.py
 depends_on:
   - MASS-001
   - GAUGE-001
@@ -63,4 +63,35 @@ notes: |
     regarded as numerological.  This claim MUST be derived from the
     COG update rules and NOT post-hoc fitted.  Fix the motif structure
     from physical reasoning FIRST; then run the simulation.
-blocked_reason: "Proton motif not yet implemented. Requires GEN-001 (triality) to be proved."
+falsification_record:
+  date: "2026-02-22"
+  simulation: calc/mass_drag.py
+  rules_version: "RFC-001 Phase II (locked gluon table §5.1, branching protocol §3.3)"
+  results:
+    C_e: 3
+    C_p: 8
+    mu_COG: 2.6667
+    mu_exp: 1836.15267343
+    relative_gap: "99.85%"
+    status: "recurred"
+  interpretation: |
+    The proton motif (PROTON_INIT = (e5, e1, e3), exchange schedule Color1↔2,
+    Color1↔3, Color2↔3 using the locked Witt-pair gluon assignment) returns to
+    its initial state after only 8 ticks of algorithmic drag.
+    C_e = 3 is correct (electron L1 associative cycle confirmed).
+    mu_COG = 8/3 ≈ 2.667 is 3 orders of magnitude below mu_exp = 1836.
+    The current motif definition does NOT produce the proton/electron mass ratio.
+  open_questions:
+    - "Is the recurrence condition (state equality) correct, or should it require
+       all three quark tick_counts to independently complete a minimum cycle?"
+    - "Should the proton cost be the SUM of quark tick_counts (not MAX), yielding
+       C_p_sum = 3*(C_per_quark) and a potentially different ratio?"
+    - "Does the proton motif need a longer initial period before the exchange
+       schedule begins (a 'cold start' reflecting confinement formation)?"
+    - "Is the 3-quark exchange schedule (period 3 steps) the correct cycle, or
+       should it be driven by a color-flow constraint (e.g., must traverse all
+       7 Fano automorphisms before a valid color-singlet recurrence)?"
+    - "Does the correct mechanism require the full SL(2,3) group structure
+       (168 automorphisms of the Fano plane) to set the proton period to ~1836?"
+  next_action: "Draft RFC-009 to formalize the Triality/spinor overhead mechanism
+    and re-derive the proton motif from physical first principles before re-running."
