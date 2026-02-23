@@ -9,7 +9,7 @@
 
 The **Causal Octonion Graph (COG)** project is a rigorous, machine-verified framework aimed at deriving the structure of the Standard Model directly from discrete, non-associative algebra over causal graphs.
 
-By abandoning continuous real numbers () and probabilistic wave functions, we replace quantum field theory with a computable engine where fundamental particles are algebraic state vectors in , and "time" emerges strictly from the forced sequential ticking of non-associative octonionic operations.
+By abandoning continuous real numbers (ℝ) and probabilistic wave functions, we replace quantum field theory with a computable engine where fundamental particles are algebraic state vectors in ℂ⊗𝕆, and "time" emerges strictly from the forced sequential ticking of non-associative octonionic operations.
 
 ---
 
@@ -25,11 +25,11 @@ We are currently building the foundational mathematical kernel. Our `CausalGraph
 
 We have successfully formalized the following physical and mathematical foundations:
 
-* **The Fano Plane Axioms:** Verified  geometry (7 points, 7 lines, precise incidence axioms).
-* **Octonion Alternativity:** Proved  over any commutative ring.
-* **Octonion Non-Associativity:** Explicit witness formalized showing . *(The engine of emergent time).*
-* **The Sterile Vacuum:** Verified the idempotent vacuum state  where .
-* **Vacuum Annihilation:** Proved that all three Witt lowering operators annihilate the vacuum: .
+* **The Fano Plane Axioms:** Verified projective geometry (7 points, 7 lines, precise incidence axioms).
+* **Octonion Alternativity:** Proved left/right alternativity and flexibility over any commutative ring.
+* **Octonion Non-Associativity:** Explicit witness formalized showing (e₁e₂)e₄ ≠ e₁(e₂e₄). *(The engine of emergent time).*
+* **The Sterile Vacuum:** Verified the idempotent vacuum state ω = ½(1+ie₇) where ω² = ω.
+* **Vacuum Annihilation:** Proved that all three Witt lowering operators annihilate the vacuum: αⱼ·ω = 0 for j = 0, 1, 2.
 
 ### Repository Structure
 
@@ -39,7 +39,7 @@ We have successfully formalized the following physical and mathematical foundati
 | `FanoMul.lean` | Octonion basis multiplication derived directly from the Fano sign table. |
 | `Octonion.lean` | Octonion algebra formalized over any CommRing. |
 | `OctonionAlt.lean` | Left/right alternativity and flexibility proofs. |
-| `ComplexOctonion.lean` | Formalization of the  sector (avoiding `Mathlib`'s continuous Reals). |
+| `ComplexOctonion.lean` | Formalization of the ℂ⊗𝕆 sector (avoiding `Mathlib`'s continuous Reals). |
 | `WittBasis.lean` | Witt ladder operators, the vacuum idempotent, and annihilation proofs. |
 
 ---
@@ -70,11 +70,11 @@ lake build
 
 We are actively looking for collaborators to help expand the graph! Whether you are a Lean 4 tactician, a Python simulation hacker, or a theoretical physicist, there are massive open problems to tackle:
 
-* **Lean 4 Formalizers:** We need help formalizing the  Triality automorphism mapping and proving that the subgroup stabilizing the vacuum axis has exactly order 24 (the discrete analog of  color symmetry).
+* **Lean 4 Formalizers:** We need help formalizing the SO(8) Triality automorphism mapping and proving that the subgroup stabilizing the vacuum axis has exactly order 24 (the SL(2,3) generation symmetry group).
 * **Python/NumPy Developers:** We are building adjacent causal graph simulators in Python to calculate the exact algorithmic drag (mass ratios) of the Muon and Tau generation translations.
 * **Physicists:** Help us construct the algebraic proofs for charge quantization and anomaly cancellation using strictly discrete topology.
 
-**Read before contributing:** All sign conventions, directed Fano triples, Witt pairings, and the chosen vacuum axis are strictly locked in our source of truth document: [`rfc/CONVENTIONS.md`](https://www.google.com/search?q=rfc/CONVENTIONS.md).
+**Read before contributing:** All sign conventions, directed Fano triples, Witt pairings, and the chosen vacuum axis are strictly locked in our source of truth document: [`rfc/CONVENTIONS.md`](rfc/CONVENTIONS.md).
 
 ---
 
