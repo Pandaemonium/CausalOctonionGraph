@@ -59,9 +59,17 @@ state index = VACUUM_AXIS + 1 = 7.
 """
 
 ELECTRON_STATE: int = 6
-"""Representative electron state: e_6 (state index 6).
-e_6 is the first Witt nil-element alpha_1^dag * omega in the Furey convention.
-Witt pair (e_6, e_1) -- conftest.py WITT_PAIRS[0] = (5, 0) [0-indexed Fano pts].
+"""Representative electron state used in THIS FILE: e_6 (state index 6).
+
+DEPRECATION WARNING (2026-02-23): e_6 is the Witt nil-element (Furey color-sector
+excited state), NOT the correct electron rest state.  The electron lives in the L1
+associative triad {e_1, e_2, e_3}.  See calc/qed_calibration.py for the corrected
+model (L1_ELECTRON_STATE = 1).
+
+This constant is kept here ONLY because the vertex-cost-ratio calculations in this
+file (V rep = 1 tick, S+ rep = 15 ticks) do not depend on which specific state index
+is used -- only on the V/S+ rep type.  The 81 tests for qed_scatter.py remain valid
+for that limited purpose.  Do NOT import ELECTRON_STATE from this module for new work.
 """
 
 MUON_STATE: int = 5

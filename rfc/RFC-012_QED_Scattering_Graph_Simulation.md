@@ -1,8 +1,10 @@
 # RFC-012: Two-Particle QED Vertex Simulation
 
-**Status:** Draft — awaiting Python prototype in `calc/qed_scatter.py`
+**Status:** Active — Goal A (calibration) complete; Goal B (muon orbit) pending
 **Created:** 2026-02-22
-**Module:** `calc/qed_scatter.py` (new), `CausalGraphTheory/Spinors.lean` (existing stubs)
+**Module:** `calc/qed_calibration.py` (Goal A — L1 electron calibration, 50 tests passing),
+  `calc/qed_scatter.py` (vertex cost ratio, 81 tests passing — **do not use ELECTRON_STATE=6**),
+  `CausalGraphTheory/Spinors.lean` (existing stubs)
 **Dependencies:**
   - `rfc/CONVENTIONS.md` (locked Fano convention)
   - `rfc/RFC-001_Canonical_State_and_Rules.md` (node/edge/tick rules)
@@ -68,9 +70,16 @@ leading order. In the COG graph:
 
 | Symbol | Rep | Initial state | COG role |
 |--------|-----|---------------|----------|
-| `V`    | Vector | Witt nil-element $\alpha_j^\dagger \omega$ | Electron (generation 1) |
+| `V`    | Vector | **L1 associative triad** $\{e_1, e_2, e_3\}$ | Electron (generation 1) |
 | `Sp`   | Spinor+ | Fano non-assoc state $\psi_\mu$ | Muon (generation 2) |
 | `Vac`  | — | $\omega = \frac{1}{2}(1 + ie_7)$ | Vacuum lattice |
+
+**Correction (2026-02-23):** Earlier drafts placed the electron at the Witt nil-element
+$\alpha_1^\dagger \omega \propto e_6$. This is wrong. The electron node initializes in the
+**L1 associative triad** $\{e_1, e_2, e_3\}$ — the quaternionic subalgebra of
+$\mathbb{C} \otimes \mathbb{O}$ identified with the electron/neutrino sector by Furey
+(arXiv:1910.08395). The Witt nil-element $e_6$ is the *excited* (color-sector) state reached
+after the first photon kick, not the electron rest state. See §3.3 and §5.1.
 
 Each node carries:
 
@@ -92,20 +101,38 @@ Node : {
 
 An edge is a record `(src_id, dst_id, op: OctIdx)`.
 
-### 3.3 Photon Operator Identity
+### 3.3 Photon Operator Identity and the Kick Mechanism
 
 The U(1)_EM generator in the Furey $\mathbb{C} \otimes \mathbb{O}$
-decomposition is the **vacuum axis $e_7$**. Left-multiplication by $e_7$
-on the octonion basis gives:
+decomposition is the **vacuum axis $e_7$**. The photon acts by **right-multiplication**
+on the particle state:
 
-$$e_7 \cdot e_k = \epsilon_{7,k,m} \, e_m \quad (k \neq 0, 7)$$
+$$v_e \cdot e_7 = \epsilon_{v_e, 7, m} \, e_m$$
 
-where $\epsilon$ is the Furey sign tensor from `rfc/CONVENTIONS.md`. The
-non-zero entries are determined by the three Fano lines through $e_7$:
-$(e_7, e_1, e_6)$, $(e_7, e_2, e_5)$, $(e_7, e_3, e_4)$ — the three
-Witt pairs. The XOR rule gives $e_7 \cdot e_k = \pm e_{7 \oplus k}$.
+where $\epsilon$ is the Furey sign tensor from `rfc/CONVENTIONS.md`.
 
-In hardware, this is a single XOR + sign lookup: **1 tick**.
+**The kick mechanism** (verified against locked Fano convention, 2026-02-23):
+
+| Step | Operation | Result | In L1? |
+|------|-----------|--------|--------|
+| 0 | initial state | $+e_1$ | yes |
+| 1 | $+e_1 \times e_7$ | $+e_6$ | no (Witt partner) |
+| 2 | $+e_6 \times e_7$ | $-e_1$ | yes (phase flip) |
+| 3 | $-e_1 \times e_7$ | $-e_6$ | no |
+| 4 | $-e_6 \times e_7$ | $+e_1$ | yes (exact return) |
+
+The orbit has **period 4** with sign tracking (period 2 for unsigned L1 membership).
+This is verified by `calc/qed_calibration.py` against `FANO_CYCLES` in `calc/conftest.py`.
+
+**Witt pair interconversion:** The photon $e_7$ interconverts all three Witt pairs:
+
+| Witt pair | Forward kick | Reverse kick |
+|-----------|-------------|-------------|
+| $(e_1, e_6)$ | $e_1 \times e_7 = +e_6$ | $e_6 \times e_7 = -e_1$ |
+| $(e_2, e_5)$ | $e_2 \times e_7 = -e_5$ | $e_5 \times e_7 = +e_2$ |
+| $(e_3, e_4)$ | $e_3 \times e_7 = -e_4$ | $e_4 \times e_7 = +e_3$ |
+
+In hardware, each kick is a single XOR + sign lookup: **1 tick**.
 
 ### 3.4 Vacuum Lattice Initialization and Photon Routing
 
@@ -240,13 +267,18 @@ until $p$'s state vector returns to its exact initial baseline:
 
 $$C_p = \text{(vertex entry ticks)} + \text{(recovery propagation ticks)}$$
 
-**Electron ($C_e$):**
-1. Absorbs photon $e_7 \cdot v_e$: state changes to $v_e' \neq v_e$ (1 tick).
-2. Propagates through vacuum nodes: each 1-tick XOR returns a new state.
-3. The electron lives in the associative L1 subalgebra $\{e_1, e_2, e_3\}$.
-   Products stay within L1, and the orbit is short (period = 3 from the
-   associative group structure of L1).
-4. $C_e$ is small — dominated by the 3-element associative orbit.
+**Electron ($C_e$) — Goal A calibration result (2026-02-23):**
+1. Absorbs photon via right-multiplication $v_e \times e_7$: state flips to Witt partner (1 tick).
+2. A second kick restores L1 membership (with sign flip): $v_e \to v_e' \to -v_e$.
+3. Four kicks give exact signed return: $+e_1 \to +e_6 \to -e_1 \to -e_6 \to +e_1$.
+4. **$C_e^{\text{exact}} = 4$** symmetric exchange cycles (exact signed return).
+5. **$C_e^{L1} = 2$** symmetric exchange cycles (L1 membership return).
+6. Both are **vacuum-independent**: adding $n_\text{vacuum}$ intermediate hops
+   scales the tick cost as $4(n+1)$ but does not change $C_e$ (exchange count).
+
+The result is proved in `calc/qed_calibration.py` and verified by 50 pytest tests
+(`calc/test_qed_calibration.py`). The computation uses the locked Fano convention
+(`FANO_CYCLES`, `FANO_SIGN` from `calc/conftest.py`).
 
 **Muon ($C_\mu$):**
 1. Absorbs photon via H-matrix translation: state changes to
@@ -296,9 +328,18 @@ traversal through $G_2$ state space and is the target observable.
 
 ## 6. Python Implementation Spec
 
-### 6.1 File
+### 6.1 Files
 
-`calc/qed_scatter.py`
+| File | Purpose | Status |
+|------|---------|--------|
+| `calc/qed_calibration.py` | Goal A: L1 electron orbit, signed state, symmetric exchange, $C_e$ calibration | **50 tests passing** |
+| `calc/qed_scatter.py` | Vertex cost ratio (ee vs eμ), V/S+ node types, triality overhead | **81 tests passing** |
+
+**Note:** `qed_scatter.py` uses `ELECTRON_STATE = 6` (Witt nil-element). This constant is
+algebraically incorrect for the electron rest state but the vertex-cost-ratio calculations
+(15 vs 1 ticks) remain valid because they do not depend on which specific L1/non-L1 state
+is used — only on the V vs S+ rep type distinction. Do not import `ELECTRON_STATE` from
+`qed_scatter.py` for new work; use `L1_ELECTRON_STATE = 1` from `qed_calibration.py`.
 
 ### 6.2 Data Structures
 
@@ -425,9 +466,12 @@ is the target observable.
 
 | Question | Status |
 |----------|--------|
-| Does the orbit return-time ratio $C_\mu / C_e$ converge to 206.768? | **Open** (LEPTON-001) |
-| What is the correct orbit definition for the muon motif? | **Resolved** — §5.1: total ticks from absorption until state returns to exact initial baseline |
-| Does the vacuum lattice size $n$ affect the ratio? | **Open** — expect $C_\mu / C_e$ to be independent of $n$ (vacuum hops cancel in ratio) |
+| Does the orbit return-time ratio $C_\mu / C_e$ converge to 206.768? | **Open** (LEPTON-001, Goal B) |
+| What is $C_e^{\text{exact}}$ for the L1 electron? | **Resolved** — $C_e = 4$ symmetric exchange cycles; see §5.1 and `calc/qed_calibration.py` |
+| What is the correct electron initial state? | **Resolved** — L1 triad $\{e_1,e_2,e_3\}$, NOT Witt nil-element $e_6$; see §3.1 correction |
+| Is $C_e$ vacuum-independent? | **Resolved** — Yes: $C_e = 4$ for all $n_\text{vacuum} \in \{0,1,2,4,8,16\}$; tick cost scales as $4(n+1)$ |
+| Does the photon right-multiply or left-multiply? | **Resolved** — Right-multiplication: $v_e \times e_7$ (see §3.3 kick table) |
+| What is the correct orbit definition for the muon motif? | **Resolved** — §5.1: total exchange cycles until state returns to exact signed initial baseline |
 | Should the photon propagate through vacuum nodes (incurring per-node costs)? | **Resolved** — Yes: 1 tick/hop, defining $c$; see §3.4 and §4.3 |
 | How does the conflict resolver handle simultaneous photon + propagation? | Specified (photon first) |
 | Does the triality translation $\tau(e_7)$ preserve the U(1)_EM charge? | **Open** (needs Lean proof in Spinors.lean) |
