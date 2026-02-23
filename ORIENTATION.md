@@ -94,6 +94,12 @@ From these 7 directed triples, every other product follows by cyclicity and
 antisymmetry. There are C(7,3) = 35 unordered triples of imaginary units.
 Exactly 7 are collinear (associative). The remaining **28 are non-associative**.
 
+### The XOR Basis and Hamming (7,4) Code
+The locked Fano cycles perfectly match the bitwise XOR of their 3-bit binary indices (e.g., $e_3 \cdot e_5 = \pm e_6$ because `011` XOR `101` = `110`). 
+* **The Hardware:** The universe computes index multiplication natively using XOR logic.
+* **Error Correction:** This XOR structure is identical to the Hamming (7,4) parity check. A single octonion product is a single quantum error-correction step.
+* **Cost:** This establishes the Vector (V) representation as the native machine code, costing exactly 1 tick per interaction.
+
 ### 3.3 Code Indexing Convention
 
 **CRITICAL:** In all code (Lean and Python), imaginary units are **0-indexed**:
@@ -225,11 +231,10 @@ vanishes whenever any two of a, g, b are equal (alternativity property). So:
 - **Fano collinear** ({a,g,b} is a Fano line): `triggers(a,g,b) = False`
 - **Otherwise** (all distinct, off-line): `triggers(a,g,b) = True`
 
-**Branching Protocol:**
-- `triggers = False` (associative): s_L = s_R, cost **1 tick**, produce **1 successor**
-  - If s_L is real (idx = -1): **blocked interaction**, no successor
-- `triggers = True` (non-associative): s_L ≠ s_R, cost **2 ticks each**, produce **up to 2 successors**
-  - One successor for s_L, one for s_R (if each has idx ≥ 0)
+
+**Branching Protocol (Superdetermined):**
+- `triggers = False` (associative): $s_L = s_R$, cost **1 tick**, produce **1 successor**.
+- `triggers = True` (non-associative): $s_L \neq s_R$. The graph engine does NOT exponentially branch into many-worlds. The Conflict Resolver determines a strict, single causal ordering based on edge arrival. The non-associativity simply forces the subgraph to route through a longer, more expensive combinatorial path (costing extra ticks) before returning to its motif.
 
 **Code:** `calc/mass_drag.py` functions `triggers()`, `three_body()`, `update_step()`
 

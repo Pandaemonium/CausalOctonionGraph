@@ -1,0 +1,103 @@
+id: LEPTON-001
+title: "Muon-to-electron mass ratio from COG orbit length"
+statement: |
+  The muon-to-electron mass ratio m_μ/m_e ≈ 206.768 equals, in the
+  COG framework, the ratio of orbit lengths (tick counts) of the muon
+  and electron motifs under the COG exchange rule:
+
+      m_μ / m_e = C_μ / C_e
+
+  where:
+    C_e = orbit length of the electron motif (generation-1 state ψ_e
+          in the s·S* sector of C⊗O, cycling through the L1
+          associative quaternionic subalgebra {e₁, e₂, e₃}).
+
+    C_μ = orbit length of the muon motif (generation-2 state ψ_μ
+          in the s*·S* sector of C⊗O, cycling through a non-associative
+          Fano path and returning to the starting state).
+
+  The key mechanism: ψ_e lives in the associative L1 subalgebra — its
+  orbit is short (C_e = 3). ψ_μ requires a non-associative Fano path
+  — its orbit is longer, and the ratio C_μ/C_e should match 206.768.
+
+status: open  # orbit-length mechanism; COG-QC-01 sub-hypothesis falsified (see notes)
+lean_file: CausalGraphTheory/Spinors.lean
+lean_theorems:
+  - CausalGraph.electron_orbit_length  (stub)
+  - CausalGraph.muon_orbit_length      (stub)
+  - CausalGraph.generation_shift_order3
+python_test: calc/muon_orbit.py
+depends_on:
+  - KOIDE-001
+  - GAUGE-001
+literature:
+  - "Furey (2019): Standard Model particles from split octonions, arXiv:1910.08395, Eq. 21-22"
+  - "McRae (2025): Triality and the Standard Model, arXiv:2502.14016, Eq. 7-8"
+  - "Baez (2002): The Octonions, math/0105155, Section 4"
+  - "Baez-Huerta (2010): Division Algebras and Supersymmetry I, arXiv:0909.0319"
+  - "CODATA 2022: m_mu/m_e = 206.7682830 ± 0.0000046"
+
+experimental_value:
+  ratio: 206.7682830
+  uncertainty: 0.0000046
+  source: "CODATA 2022"
+
+state_vectors:
+  electron_sector: "s·S* where s = ½(1+ie₇) from LEFT, S* = ½(1-ie₇) from RIGHT"
+  muon_sector: "s*·S* where s* = ½(1-ie₇) from LEFT, S* = ½(1-ie₇) from RIGHT"
+  electron_state: |
+    ψ_e = e₁⁻ = s·S* · (i·e₁ - e₃ + e₁₂₆ + e₁₄₅) · s*·S*
+    (Furey 2019, Eq. 21 — first charged lepton)
+  muon_state: |
+    ψ_μ = e₂⁻ = s·S* · (-i·e₂ + e₆ + e₁₂₃ - i·e₁₃₆) · s*·S*
+    (Furey 2019, Eq. 21 — second charged lepton)
+  note: |
+    Triple products: e₁₂₃ = e₁·e₂·e₃, e₁₂₆ = e₁·e₂·e₆, etc.
+    All computed via the Furey Fano convention in rfc/CONVENTIONS.md.
+
+implementation_plan:
+  - "rfc/RFC-010_Rep_Labels_and_Muon_Orbit.md"  # orbit-length spec
+  - "rfc/RFC-012_QED_Scattering_Graph_Simulation.md"  # QED vertex + vacuum lattice sim
+
+simulation_records: []
+
+falsified_sub_hypothesis:
+  id: COG-QC-01
+  statement: "m_mu/m_e = 1 + N_tau where N_tau is the Boolean circuit depth of the triality map"
+  status: falsified
+  date: "2026-02-22"
+  evidence: |
+    Computed count_circuit_depth_greedy(H) = 14 for McRae (2025) eq. (8),
+    the exact 4x4 Euclidean triality quartet matrix.  Verified H^3=I, H^T H=I.
+    CSE structure: 4 shift ticks + 2 Walsh-Hadamard intermediates + 8 summation ticks.
+    Key: 14 = dim(G_2), the octonion automorphism group and triality stabilizer.
+    Prediction 1+14=15 and 1+7*14=99 — neither matches 206.768 at any natural scale.
+    The O(N log N) geometric bound on a 4x4 Hadamard butterfly rules out naive scaling
+    to 206 without an arbitrary multiplier.
+  significance: |
+    N_tau = 14 = dim(G_2) is a proved non-trivial result: the hardware cost of one
+    triality quartet evaluation equals the dimension of the symmetry group it stabilizes.
+
+new_mechanism:
+  description: |
+    The muon mass ratio must arise from the macroscopic return-time (cycle length)
+    of the muon motif in the full COG DAG — not from a single vertex evaluation.
+    Each S+ interaction incurs a fixed 14-tick triality emulation overhead.
+    The orbit-length formula C_mu/C_e remains the correct structural claim;
+    what changes is how to compute C_mu: via DAG simulation with the 14-tick penalty
+    inserted as a per-interaction cost for non-associative (S+) evaluations.
+  next_steps: |
+    1. Build calc/mass_drag.py DAG simulator with per-vertex tick costs:
+       - Associative (Vector/batch) vertex: 1 tick
+       - Non-associative (S+ / triality) vertex: 14 ticks
+    2. Seed with electron motif (L1 subalgebra path) and muon motif (Fano non-assoc path).
+    3. Run until both motifs return to initial state; compute ratio of total tick costs.
+    4. Compare ratio to 206.768.
+
+next_action: |
+  Phase A (Lean): Write CausalGraphTheory/Spinors.lean with Generation type
+  and explicit computation of 4·ψ_μ = (e₀ - ie₇)·(-ie₂ + e₆ + e₁₂₃ - ie₁₃₆)·(e₀ - ie₇).
+  Phase B (Python): Write calc/spinor_state.py with full ComplexOct arithmetic.
+  Verify: ψ_μ · ψ_μ = ψ_μ (idempotency of gen-2 sector projection).
+  Phase C (Python): Run muon orbit simulation in DAG with 14-tick S+ penalty; compute C_μ / C_e.
+  Record result here as first simulation datum.

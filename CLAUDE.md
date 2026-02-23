@@ -20,6 +20,16 @@ When modifying files, you must adhere to the following protocols:
 2.  **Preserve Context:** Before altering a Lean proof or Python script, read the existing imports and helper functions. Do not orphan existing code.
 3.  **One Concept Per File:** Keep Lean files and test scripts extremely short. If a file is growing too large, split the lemmas or tests into smaller, modular files.
 4.  **Halt on Confusion:** If a Lean tactic fails or a mathematical derivation reaches a paradox, do not endlessly guess or rewrite the file. Stop, document the failure in the `notes` section of the corresponding YAML claim, and flag it as `blocked` for human review.
+5.  **UTF-8 Encoding for Lean Files — MANDATORY:** The `Write` tool on Windows defaults to `cp1252`, which corrupts multi-byte UTF-8 sequences (`→`, `ℤ`, `⟨`, `⟩`). **NEVER** substitute ASCII equivalents (`->`, `Int`, `{re :=}`) to work around this. Instead, write a one-time Python helper script with `\u` escape sequences in the Lean source string and explicit `encoding='utf-8'`:
+
+    ```python
+    # write_myfile.py  (ASCII-safe Python source)
+    LEAN_CODE = "def f : Nat \u2192 Nat\n  | 0 => 1\n  | n+1 => n\n"
+    with open('CausalGraphTheory/MyFile.lean', 'w', encoding='utf-8') as f:
+        f.write(LEAN_CODE)
+    ```
+
+    Run via Bash, verify with `lake build`, then delete the helper script. See `LESSONS_AND_TIPS.md` for the full `\u` escape reference table and diagnosis.
 
 ## 2b. Algebraic Convention Lock
 All Lean and Python code MUST use the Furey convention as defined in `rfc/CONVENTIONS.md`. This document is **locked** — do not modify its directed triples, sign tensor, Witt basis pairings, or vacuum axis without explicit human approval.

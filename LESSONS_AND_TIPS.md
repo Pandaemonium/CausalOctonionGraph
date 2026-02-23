@@ -160,6 +160,72 @@ with `exact` or `apply` — use `simp only [Bool.and_eq_true]` instead.
 
 ## Lean LSP / Tooling Issues
 
+### `Write` Tool on Windows Corrupts Unicode in Lean Files (cp1252 vs UTF-8)
+
+**Symptom:** A Lean file written by the AI `Write` tool compiles fine in existing
+files (e.g. `WittBasis.lean`) but the newly written file produces errors like:
+- `expected token` at column positions of `→`, `ℤ`, `⟨`, or `⟩`
+- `Function expected at Generation but applied to â`
+- `failed to synthesize CommRing â`
+
+Hover info shows `generationShift : sorry` instead of `Generation → Generation`.
+
+**Root cause:** On Windows, Python's default file encoding is `cp1252` (Windows
+code page). The AI `Write` tool writes files without specifying `encoding='utf-8'`.
+Multi-byte UTF-8 sequences for `→` (E2 86 92), `ℤ` (E2 84 A4), `⟨` (E2 9F A8),
+and `⟩` (E2 9F A9) all start with byte 0xE2, which is the Latin-1 character `â`.
+The cp1252 decoder corrupts the remaining bytes, producing garbage that Lean's
+tokenizer rejects.
+
+Importantly: the **existing** `.lean` files in the repo work fine because they
+were created before this encoding issue was introduced. The corruption only
+affects files created by the `Write` tool in the affected session.
+
+**Do NOT work around by using ASCII substitutes** (`->` for `→`, `Int` for `ℤ`,
+`{re :=}` for `⟨⟩`). Lean 4 is designed around Unicode; stripping it out makes
+the math kernel unreadable and non-idiomatic.
+
+**Correct fix:** Write a short Python script that uses `\u` escape sequences
+(pure ASCII) to build the Lean source string, then writes it with `encoding='utf-8'`:
+
+```python
+# write_spinors.py  (ASCII-safe Python source; Unicode only in the string)
+import pathlib
+
+LEAN_CODE = """\
+def generationShift : Generation \u2192 Generation
+  ...
+def leftVacConjDoubled : ComplexOctonion \u2124 :=
+  \u27e8fun k => if k == 0 then \u27e81, 0\u27e9 else \u27e80, 0\u27e9\u27e9
+"""
+with open('CausalGraphTheory/Spinors.lean', 'w', encoding='utf-8') as f:
+    f.write(LEAN_CODE)
+```
+
+Run it via Bash, then verify with `lake build`:
+
+```bash
+cd /c/Projects/CausalGraphTheory
+python write_spinors.py
+lake build CausalGraphTheory.Spinors 2>&1 | tail -20
+```
+
+**Key characters and their `\u` escapes:**
+
+| Character | U+ code | Python escape | Meaning |
+|-----------|---------|--------------|---------|
+| `→` | U+2192 | `\u2192` | Lean type arrow |
+| `ℤ` | U+2124 | `\u2124` | Integer type |
+| `⟨` | U+27E8 | `\u27e8` | Anonymous constructor open |
+| `⟩` | U+27E9 | `\u27e9` | Anonymous constructor close |
+| `·` | U+00B7 | `\u00b7` | Middle dot (in comments) |
+| `⊗` | U+2297 | `\u2297` | Tensor product (in comments) |
+
+**After verifying with `lake build`:** delete the helper script (it is a
+one-time fix, not a project artifact).
+
+---
+
 ### `lean_diagnostic_messages` Tool Gives `charmap` Codec Errors
 
 **Symptom:** The `lean_diagnostic_messages` MCP tool fails with

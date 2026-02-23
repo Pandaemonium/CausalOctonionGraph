@@ -58,6 +58,44 @@ If you are simulating generation masses or the Koide limit:
 
 ---
 
+## File Encoding: UTF-8 is Mandatory
+
+Lean 4 is a Unicode-first language. All `.lean` files in this project use
+Unicode characters (`→`, `ℤ`, `⟨`, `⟩`, `·`, `⊗`, etc.) for readability
+and mathematical accuracy. **Do not replace these with ASCII substitutes.**
+
+### Rules
+
+1. **All `.lean` and `.py` files must be encoded as UTF-8.** Never rely on
+   system defaults (Windows defaults to `cp1252`, which corrupts 3-byte UTF-8
+   sequences starting with 0xE2).
+
+2. **AI agents writing `.lean` files must use explicit `encoding='utf-8'`.**
+   The recommended pattern is a one-time helper script:
+
+   ```python
+   # Build the Lean string with \u escapes to keep the Python source ASCII-safe,
+   # then write it explicitly as UTF-8.
+   LEAN_CODE = "def f : Nat \u2192 Nat\n  | 0 => 1\n  | n+1 => n\n"
+   with open('CausalGraphTheory/MyFile.lean', 'w', encoding='utf-8') as f:
+       f.write(LEAN_CODE)
+   ```
+
+3. **If you see `â`, `â†'`, or `âŸ` in error messages**, it means a UTF-8
+   multi-byte sequence was decoded as cp1252. Fix the encoding; do not
+   rewrite the Lean code.
+
+4. **Verify after writing** with `lake build`:
+
+   ```bash
+   lake build CausalGraphTheory.MyModule 2>&1 | tail -20
+   ```
+
+See `LESSONS_AND_TIPS.md §Lean LSP / Tooling Issues` for the full diagnosis
+and key `\u` escape reference table.
+
+---
+
 ## Pull Request Workflow
 
 1. **Fork the repository** and create your branch from `main`.

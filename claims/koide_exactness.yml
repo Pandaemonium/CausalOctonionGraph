@@ -4,10 +4,14 @@ statement: |
   The Koide ratio Q = (sum m_i) / (sum sqrt(m_i))^2 equals exactly 2/3
   because the allowed tick frequencies (m_i) are constrained by the
   diophantine equations governing the Fano plane's cycle structure.
-status: candidate
+status: partial  # brannen_b_squared proved 2026-02-22; Z3 ansatz from COG still blocked
 lean_file: CausalGraphTheory/Koide.lean
 lean_theorems:
-  - koide_ratio_is_two_thirds
+  - koide_algebraic_iff             # proved
+  - koide_ratio_is_two_thirds_of_sos  # proved
+  - sos_of_koide_ratio_is_two_thirds  # proved
+  - brannen_b_squared               # proved 2026-02-22 (B^2=2 from Koide+Z3 ansatz)
+  - koide_lepton_sos_stub           # stub — COG derivation of Z3 ansatz still blocked
 python_test: calc/koide.py
 depends_on:
   - MASS-001
@@ -87,6 +91,21 @@ candidate_mechanism: |
     overhead for each generation is exactly equal in magnitude (but with
     120° phase spacing), which is the COG statement that generates the
     circulant matrix.  This is the task of calc/lepton_generations.py.
+
+proved_results:
+  - id: brannen_b_squared
+    date: "2026-02-22"
+    statement: |
+      Given the Brannen ansatz f_k = A*(1+B*c_k) with Z3 trig sums
+      c0+c1+c2=0 and c0*c1+c1*c2+c2*c0=-3/4, and the Koide condition
+      3*(f0^2+f1^2+f2^2) = 2*(f0+f1+f2)^2, we have B^2 = 2.
+      Proved purely over Q: linear_combination (4 steps) + linarith.
+      Axioms: propext, Classical.choice, Quot.sound only (no sorry).
+    significance: |
+      Closes the B/A = sqrt(2) blocker algebraically. Given any valid
+      Brannen parametrization (Z3 ansatz), Koide Q=2/3 forces B^2=2
+      as a pure ring identity. The remaining open question is whether
+      COG update rules produce the Z3 ansatz structure.
 
 previously_blocked_reason: |
   Z3 symmetry (supplied by SL(2,3) ⊂ GL(3,2)) forces equal phase spacing
