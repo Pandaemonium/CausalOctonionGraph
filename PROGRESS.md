@@ -1,6 +1,6 @@
 # PROGRESS.md — COG: Proved Results
 
-**Updated:** 2026-02-22 | **Lean:** 0 sorries | **Python:** 359 tests passing
+**Updated:** 2026-02-23 | **Lean:** 0 sorries | **Python:** 409 tests passing
 
 Novel results first. Previously-known results verified in the COG framework are in §5.
 
@@ -59,6 +59,32 @@ The ring identity Q = 2/3 ⟺ B² = 2 is proved with **no reals, no analysis, no
 
 **Falsified:** COG-QC-01 (m_μ/m_e = 1 + N_τ). N_τ = 14 gives 15 ≠ 207; O(N log N) bound rules out naive scaling without an arbitrary multiplier.
 
+**⚠ Literature note (2026-02-23):** McRae's own Section 5 flags "one obstruction to making this [triality → three generations] work in the obvious way: finding outer automorphisms which act at the level of the representation, and not merely on the algebra." The N_τ = 14 = dim(G₂) result stands as proved; the generation-identification step remains an open COG-original claim.
+
+---
+
+## 4b. L1 Electron Calibration — C_e = 4  *(Python — novel)*
+
+**Files:** [calc/qed_calibration.py](calc/qed_calibration.py), [calc/test_qed_calibration.py](calc/test_qed_calibration.py)
+
+**Kick mechanism** (right-mult by e₇, verified against locked Fano convention):
+
+| Step | Op | State | In L1? |
+|------|----|-------|--------|
+| 0 | — | +e₁ | yes |
+| 1 | ×e₇ | +e₆ | no |
+| 2 | ×e₇ | −e₁ | yes |
+| 3 | ×e₇ | −e₆ | no |
+| 4 | ×e₇ | +e₁ | yes ✓ |
+
+**Results (50 tests, all passing):**
+- C_e_exact = **4** symmetric exchange cycles (exact signed return)
+- C_e_L1 = **2** (L1 membership return)
+- Both **vacuum-independent** (n_vacuum cancels in exchange count)
+- Witt pair interconversion: e₇ maps e₁↔e₆, e₂↔e₅, e₃↔e₄
+
+**⚠ COG-local caveat:** The Furey literature places the electron at the composite state α₁α₂α₃ω†ω (all three Witt pairs simultaneously), not at a single basis element e₁. The C_e = 4 result is proved for the e₁ component orbit. Whether the full Furey state has the same period is an open question (see claims/muon_mass.yml `gap_1_electron_state`).
+
 ---
 
 ## 5. Previously Known Results, Verified in COG Framework
@@ -84,4 +110,8 @@ The ring identity Q = 2/3 ⟺ B² = 2 is proved with **no reals, no analysis, no
 | Claim | Status | Note |
 |-------|--------|------|
 | Koide: COG update rules force Z₃ ansatz | **Blocked** | Need SL(2,3) graph symmetry → ∑c_k=0, ∑c_jc_k=−3/4 |
-| m_μ/m_e from DAG orbit length | **Partial** | Vertex ratio 15 confirmed; full Fano orbit topology not yet simulated |
+| m_μ/m_e from DAG orbit length | **Partial** | C_e = 4 confirmed; C_μ and muon orbit not yet simulated |
+| C_e for the full Furey electron state α₁α₂α₃ω†ω | **Open** | C_e = 4 proved for e₁ component; full Furey state involves all 3 Witt pairs simultaneously (see muon_mass.yml gap_1) |
+| e₇ right-mult = photon absorption | **COG-original** | Algebraically consistent; no direct Furey or arXiv precedent found (search 2026-02-23) |
+| McRae triality → three generations | **Open (obstacles noted)** | McRae §5 explicitly flags representation-level obstruction; N_τ = 14 operator-translation result unaffected |
+| Dixon X-product orbit periods ≈ 206 | **Unverified** | Full text of hep-th/9410202 not read; abstract makes no mass-ratio claims; connection unsupported |

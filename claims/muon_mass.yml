@@ -16,9 +16,12 @@ statement: |
           in the s*·S* sector of C⊗O, cycling through a non-associative
           Fano path and returning to the starting state).
 
-  The key mechanism: ψ_e lives in the associative L1 subalgebra — its
-  orbit is short (C_e = 3). ψ_μ requires a non-associative Fano path
-  — its orbit is longer, and the ratio C_μ/C_e should match 206.768.
+  The key mechanism: ψ_e absorbs photons (e₇ right-mult) and returns to
+  its initial signed state in C_e = 4 symmetric exchange cycles (exact
+  signed return). Earlier drafts stated C_e = 3; the 2026-02-23 calibration
+  (qed_calibration.py, 50 tests) gives C_e = 4 from the signed kick orbit.
+  ψ_μ requires a non-associative Fano path — its orbit is longer, and the
+  ratio C_μ/C_e should match 206.768.
 
 status: open  # orbit-length mechanism; COG-QC-01 sub-hypothesis falsified (see notes)
 lean_file: CausalGraphTheory/Spinors.lean
@@ -60,7 +63,29 @@ implementation_plan:
   - "rfc/RFC-010_Rep_Labels_and_Muon_Orbit.md"  # orbit-length spec
   - "rfc/RFC-012_QED_Scattering_Graph_Simulation.md"  # QED vertex + vacuum lattice sim
 
-simulation_records: []
+simulation_records:
+  - date: "2026-02-23"
+    tool: "calc/qed_calibration.py (RFC-012 Goal A)"
+    description: "L1 electron calibration — C_e exact signed orbit"
+    L1_ELECTRON_STATE: 1  # e1 (corrected from e6)
+    photon_op: 7           # e7, right-multiplication
+    orbit_period_exact: 4
+    orbit_period_l1: 2
+    Ce_exact: 4
+    Ce_L1: 2
+    vacuum_independent: true
+    tests_passing: 50
+    witt_pair_interconversion:
+      - "e1 x e7 = +e6  (forward kick)"
+      - "e6 x e7 = -e1  (reverse kick, phase flip)"
+      - "e2 x e7 = -e5,  e5 x e7 = +e2"
+      - "e3 x e7 = -e4,  e4 x e7 = +e3"
+    note: |
+      ELECTRON STATE CORRECTION: Prior simulation_record_2026_02_22 used
+      ELECTRON_STATE=6 (Witt nil-element) with LEFT-multiplication, giving
+      orbit_period=2 (unsigned). Corrected to ELECTRON_STATE=1 (L1 triad)
+      with RIGHT-multiplication, period=4 (signed). See qed_scatter.py
+      ELECTRON_STATE deprecation warning.
 
 falsified_sub_hypothesis:
   id: COG-QC-01
@@ -114,9 +139,54 @@ simulation_record_2026_02_22:
     topology in the COG DAG with N_τ=14 per S+ vertex and measure when the
     muon motif returns to its initial state.
 
+literature_gaps_found_2026_02_23:
+  search_agent: afd2f71
+  source: "arXiv search: Furey 1603.04078, 1611.09182, 1910.08395; McRae 2502.14016; Dixon hep-th/9410202"
+  findings:
+    - id: gap_1_electron_state
+      severity: important
+      finding: |
+        Furey's electron is NOT simply e1 or the L1 quaternionic subalgebra.
+        In Furey (1603.04078 eq. 20, 1611.09182 ch. 6), the electron is
+        α₁α₂α₃ω†ω — the fully lowered state in the S^d minimal left ideal,
+        a composite of all three Witt pairs simultaneously. The "L1 = electron"
+        label is a COG-local simplification.
+      cog_position: |
+        The COG qed_calibration.py models a SINGLE BASIS ELEMENT e1 kicked by
+        the e7 operator, obtaining C_e = 4. This is a valid reduced model
+        (tracking one component of the full state) but is not equivalent to
+        simulating the full Furey electron state α₁α₂α₃ω†ω. The relationship
+        between C_e(e1 component) and C_e(full Furey state) is OPEN.
+    - id: gap_2_e7_photon
+      severity: moderate
+      finding: |
+        No Furey paper explicitly identifies e7 right-multiplication as the
+        photon absorption operator. Furey identifies e7 as the vacuum axis
+        (held fixed by SU(3)_c) and U(1)_EM with the number operator N/3.
+        The "photon = e7 right-mult kick" is COG-original with no arXiv precedent.
+    - id: gap_3_dixon_orbits
+      severity: important
+      finding: |
+        Dixon (1994 hep-th/9410202) X-product orbits are algebraic orbits under
+        a PERMUTED multiplication table, not physical orbits under repeated
+        application of a fixed operator. Full text not yet read; abstract makes
+        no lepton mass ratio claims. The connection of Dixon periods to ~206 is
+        unsupported by evidence reviewed.
+    - id: gap_4_mcrae_three_generations
+      severity: moderate
+      finding: |
+        McRae (2502.14016) Section 5 explicitly states: "One obstruction to
+        making this work in the 'obvious' way is finding outer automorphisms
+        which act at the level of the representation, and not merely on the
+        algebra." McRae identifies this as an OPEN PROBLEM, not a solution.
+        The COG use of the 4×4 H matrix for operator translation (N_τ = 14)
+        remains valid; the generation-identification use is challenged.
+
 next_action: |
-  Next blocker (KOIDE-001): Derive the Z₃ phase spacing from the SL(2,3) stabilizer
-  character table. SL(2,3) = binary tetrahedral group has exactly three 1D reps
-  mapping to e^{2πi/3} — if the three lepton generations transform under these,
-  the Z₃ phases in Brannen's parameterization are algebraically forced.
-  See claims/koide_exactness.yml and calc/koide_sl23.py (pending).
+  Two open questions (both require simulation):
+  1. LEPTON-001 (Goal B): Simulate the muon motif orbit and compute C_μ/C_e.
+     Requires defining the muon S+ rep state and applying the triality emulation
+     (N_τ = 14 per vertex) to compute the return time.
+  2. ELECTRON STATE GAP: Determine whether C_e for the full Furey state
+     α₁α₂α₃ω†ω matches C_e = 4 for the e1 component, or differs.
+     See literature_gaps_found_2026_02_23 gap_1_electron_state.
