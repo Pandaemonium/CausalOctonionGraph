@@ -70,8 +70,7 @@ OMEGA = np.array([0.5, 0, 0, 0, 0, 0, 0, 0.5j], dtype=complex)
 | Vacuum product | ω·ω† | primitive idempotent (Witt decomposition basis) |
 
 **Physical meaning:** ω is the algebraic vacuum — the state that is annihilated by all
-matter creation operators. It is *not* the sterile neutrino (that is a specific left-ideal
-state αⱼω†ω); it is the *generator* from which the Witt decomposition is built.
+matter creation operators. It is the *generator* from which the Witt decomposition is built.
 Furey (arXiv:1603.04078 §2, arXiv:1611.09182 ch. 4) uses ω explicitly in this role.
 
 ### 2.3 The Axiom of Identity

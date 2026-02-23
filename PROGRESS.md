@@ -1,6 +1,6 @@
 # PROGRESS.md — COG: Proved Results
 
-**Updated:** 2026-02-23 | **Lean:** 0 sorries | **Python:** 409 tests passing
+**Updated:** 2026-02-23 | **Lean:** 0 sorries | **Python:** 548 tests passing
 
 Novel results first. Previously-known results verified in the COG framework are in §5.
 
@@ -84,6 +84,86 @@ The ring identity Q = 2/3 ⟺ B² = 2 is proved with **no reals, no analysis, no
 - Witt pair interconversion: e₇ maps e₁↔e₆, e₂↔e₅, e₃↔e₄
 
 **⚠ COG-local caveat:** The Furey literature places the electron at the composite state α₁α₂α₃ω†ω (all three Witt pairs simultaneously), not at a single basis element e₁. The C_e = 4 result is proved for the e₁ component orbit. Whether the full Furey state has the same period is an open question (see claims/muon_mass.yml `gap_1_electron_state`).
+
+---
+
+## 4c. E-E Dynamic Graph Simulation — Goal C Phase 1  *(Python — novel)*
+
+**Files:** [calc/qed_ee_sim.py](calc/qed_ee_sim.py), [calc/test_qed_ee_sim.py](calc/test_qed_ee_sim.py)
+
+Implements RFC-013 (Algebraic Vacuum, ℂ⊗O State, Dynamic Causal Spawning) for a 1D
+electron-electron scattering chain.  Two electrons separated by D vacuum nodes;
+both emit simultaneously; photons relay at 1 tick/hop.
+
+**Three locked architecture decisions verified (RFC-013):**
+
+| Decision | Implementation | Verified |
+|----------|---------------|---------|
+| Full ℂ⊗O state | 8-component complex numpy array | `oct_mul_full` unit tests |
+| Left-multiplication | `state_next = oct_mul_full(E7, state)` | 61 tests passing |
+| Vacuum relay | `e7·ω = −iω` (RFC-013 §5.1) | `test_vacuum_relay_identity` |
+
+**Key results (61 tests, all passing):**
+
+- **C_e = 4 with left-multiplication:** Verified for D = 0, 1, 2, 3, 4, 8 vacuum nodes.
+  Consistent with Goal A (right-multiplication).  Convention-invariant as proved in RFC-013 §4.3.
+- **Vacuum phase accumulation:** After cycle 1 (D=1), V[0] = −ω (2 photon hits).
+  Vacuum returns to ω at cycle 2 (4 hits total).  Period = 2 exchange cycles.
+- **System return period = 4:** Electrons (period 4) and vacuum lattice (period 2) have LCM = 4.
+  Full system returns to initial state at Ce_exact = 4.
+- **Tick formula:** total_ticks = C_e × (D+1) = 4(D+1).  Vacuum-independent orbit count.
+- **Axiom of Identity:** `state_is_vacuum_orbit(state)` performs algebraic check only
+  (no metadata); all 4 orbit elements {ω, −iω, −ω, +iω} correctly detected.
+
+**COG-original observations:**
+- Vacuum period (2 cycles) divides electron period (4 cycles): LCM determines return time.
+- Vacuum accumulates phase (−i)^n per n photon hits, then resets every 4 hits.
+- Both period-4 results (electron orbit and vacuum orbit) follow from L_{e₇}⁴ = id
+  acting on all of ℂ⊗O.
+
+---
+
+## 4d. E-E Dynamic Graph Simulation — Goal C Phase 2 / Architecture A  *(Python — novel)*
+
+**Files:** [calc/qed_dag_sim.py](calc/qed_dag_sim.py), [calc/test_qed_dag_sim.py](calc/test_qed_dag_sim.py)
+
+Implements RFC-013 Architecture A (locked decision §8.1): **fully immutable-node causal DAG**.
+Each photon-absorption event creates a new `Node`; no in-place mutation; full audit trail retained.
+Vacuum nodes are instantiated on-demand via the SPAWN protocol (RFC-013 §6).
+
+**Architecture A invariants verified (78 tests, all passing):**
+
+| Invariant | D=0 | D=1 | D=2 | General |
+|-----------|-----|-----|-----|---------|
+| Ce_exact | 4 | 4 | 4 | 4 (all D) |
+| total_ticks | 4 | 8 | 12 | 4(D+1) |
+| node_count | 10 | 14 | 26 | — |
+| edge_count | 8 | 16 | 24 | 8(D+1) = 2·total_ticks |
+| spawn_count | 0 | 1 | 2 | D |
+
+**SPAWN protocol confirmed:** `spawn_count == D` for all D = 0..4.
+Each vacuum position fires SPAWN exactly once (first photon arrival).  Subsequent nodes at
+that position are created by absorption, not SPAWN.
+
+**Vacuum trajectory (D=1, pos=1):**
+- Tick 1 (SPAWN, 2 simultaneous hits): state = −ω,  proper_time = 2
+- Tick 3 (2 hits): state = +ω,  proper_time = 4   ← first return to OMEGA (vacuum_period_tick = 4)
+- Tick 5 (2 hits): state = −ω,  proper_time = 6
+- Tick 7 (2 hits): state = +ω,  proper_time = 8
+
+**Electron trajectory (D=0, pos=0) — full immutable audit trail:**
+- Tick 0 (root): +e₁, pt=0
+- Tick 1: −e₆, pt=1
+- Tick 2: −e₁, pt=2
+- Tick 3: +e₆, pt=3
+- Tick 4: +e₁, pt=4  ← exact return → Ce_exact = 4
+
+**Simultaneous-arrival grouping confirmed:** When n photons arrive at the same position in the
+same tick, ONE new node is created with L_{e₇} applied n times (by octonion alternativity,
+sequential order irrelevant for e₇·e₇ = −1).
+
+**Invariant:** `edge_count == 2 × total_ticks` holds for all D tested (0..3): exactly 2 photons
+in flight at all times (one from each electron, relayed end-to-end).
 
 ---
 
