@@ -26,6 +26,7 @@ lean_theorems:
   - CausalGraph.electron_orbit_length  (stub)
   - CausalGraph.muon_orbit_length      (stub)
   - CausalGraph.generation_shift_order3
+  - CausalGraph.gen2State_proportional_idempotent  (proved 2026-02-22, rfl after fin_cases)
 python_test: calc/muon_orbit.py
 depends_on:
   - KOIDE-001
@@ -78,26 +79,44 @@ falsified_sub_hypothesis:
     N_tau = 14 = dim(G_2) is a proved non-trivial result: the hardware cost of one
     triality quartet evaluation equals the dimension of the symmetry group it stabilizes.
 
-new_mechanism:
-  description: |
-    The muon mass ratio must arise from the macroscopic return-time (cycle length)
-    of the muon motif in the full COG DAG — not from a single vertex evaluation.
-    Each S+ interaction incurs a fixed 14-tick triality emulation overhead.
-    The orbit-length formula C_mu/C_e remains the correct structural claim;
-    what changes is how to compute C_mu: via DAG simulation with the 14-tick penalty
-    inserted as a per-interaction cost for non-associative (S+) evaluations.
-  next_steps: |
-    1. Build calc/mass_drag.py DAG simulator with per-vertex tick costs:
-       - Associative (Vector/batch) vertex: 1 tick
-       - Non-associative (S+ / triality) vertex: 14 ticks
-    2. Seed with electron motif (L1 subalgebra path) and muon motif (Fano non-assoc path).
-    3. Run until both motifs return to initial state; compute ratio of total tick costs.
-    4. Compare ratio to 206.768.
+schur_lemma_block:
+  date: "2026-02-22"
+  statement: |
+    The 8×8 SO(8) outer triality intertwiner T satisfying
+      T · V_ij · T^{-1} = L_{H(ij)}
+    for all 28 generator pairs does NOT exist as a single 8×8 matrix.
+    Reason: Schur's Lemma — V-rep and S+-rep have different eigenvalue spectra
+    (±i vs ±i/2), so there is no intertwiner between them.
+  consequence: |
+    The COG mechanism does NOT translate the 8D fermion state vector.
+    Instead, the OPERATOR (photon, e₇) is translated via the 4×4 McRae H matrix,
+    incurring N_τ = 14 ticks per S+ vertex (the triality emulation overhead).
+    The state-space orbit is determined by the DAG graph topology, not by the
+    representation-theoretic intertwiner.
+
+simulation_record_2026_02_22:
+  date: "2026-02-22"
+  tool: "calc/qed_scatter.py (RFC-012)"
+  N_tau: 14
+  vertex_tick_cost_ee: 1
+  vertex_tick_cost_emu: 15
+  orbit_return_time_Ce: 2
+  orbit_return_time_Cmu_placeholder: 30
+  ratio_vertex: 15.0
+  ratio_orbit_placeholder: 15.0
+  target_ratio: 206.7682830
+  gap_factor: "~13.8x — orbit topology not yet fully simulated"
+  note: |
+    The vertex cost ratio (15) and placeholder orbit ratio (15) are both LOWER BOUNDS.
+    The true C_μ/C_e emerges from the macroscopic return-time in the full Fano DAG,
+    not from a single photon vertex. The 8×8 intertwiner approach is ruled out by
+    Schur's Lemma (see schur_lemma_block above). Next step: simulate the full orbit
+    topology in the COG DAG with N_τ=14 per S+ vertex and measure when the
+    muon motif returns to its initial state.
 
 next_action: |
-  Phase A (Lean): Write CausalGraphTheory/Spinors.lean with Generation type
-  and explicit computation of 4·ψ_μ = (e₀ - ie₇)·(-ie₂ + e₆ + e₁₂₃ - ie₁₃₆)·(e₀ - ie₇).
-  Phase B (Python): Write calc/spinor_state.py with full ComplexOct arithmetic.
-  Verify: ψ_μ · ψ_μ = ψ_μ (idempotency of gen-2 sector projection).
-  Phase C (Python): Run muon orbit simulation in DAG with 14-tick S+ penalty; compute C_μ / C_e.
-  Record result here as first simulation datum.
+  Next blocker (KOIDE-001): Derive the Z₃ phase spacing from the SL(2,3) stabilizer
+  character table. SL(2,3) = binary tetrahedral group has exactly three 1D reps
+  mapping to e^{2πi/3} — if the three lepton generations transform under these,
+  the Z₃ phases in Brannen's parameterization are algebraically forced.
+  See claims/koide_exactness.yml and calc/koide_sl23.py (pending).

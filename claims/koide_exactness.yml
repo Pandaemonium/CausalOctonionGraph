@@ -107,6 +107,29 @@ proved_results:
       as a pure ring identity. The remaining open question is whether
       COG update rules produce the Z3 ansatz structure.
 
+  - id: positivity_band
+    date: "2026-02-22"
+    statement: |
+      For B = A*sqrt(2), the three Brannen amplitudes f_k = A + B*cos(phi + 2*pi*k/3)
+      are ALL positive iff min_k cos(phi + 2*pi*k/3) > -1/sqrt(2) ~= -0.7071.
+
+      The physical charged-lepton phase phi ~= 2/9 rad gives:
+          min cosine ~= -0.6795 > -0.7071  (margin ~= 0.028)
+
+      Therefore the empirical Q = 2/3 for (e, mu, tau) uses ALL POSITIVE square
+      roots: Q = sum(sqrt(m_k)^2) / (sum(sqrt(m_k)))^2 ~= 0.666661 ~= 2/3.
+      (Error ~6e-6 from experimental mass uncertainty in m_tau.)
+
+      About 75% of phi in [0, 2*pi] falls outside the band (one f_k negative);
+      the algebraic identity Q = 2/3 holds in both regimes as a ring identity.
+    significance: |
+      Corrects a hallucination (2026-02-22) that claimed B = A*sqrt(2) universally
+      forces one f_k < 0 ("electron negative amplitude"). That claim confused the
+      charged-lepton formula with a neutrino Koide extension. The physical phase
+      sits in a narrow allowed band 0.028 units above the negativity threshold.
+      brannen_b_squared remains valid in both regimes.
+    python_test: calc/test_koide_sl23.py::TestPositivityBand
+
 previously_blocked_reason: |
   Z3 symmetry (supplied by SL(2,3) ⊂ GL(3,2)) forces equal phase spacing
   between the three Witt color-plane tick rates, but does NOT force the ratio
