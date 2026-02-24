@@ -5,9 +5,8 @@ statement: |
   automatically satisfies the condition sum(Q_i) = 0 and sum(Q_i^3) = 0
   for all gauge generators, cancelling the chiral anomalies.
 status: stub
-lean_file: CausalGraphTheory/Anomaly.lean
-lean_theorems:
-  - anomaly_cancellation_condition
+lean_file: ""
+lean_theorems: []
 python_test: calc/test_anomaly.py
 depends_on:
   - GAUGE-001
@@ -17,4 +16,5 @@ literature:
 notes: |
   Standard Model anomaly cancellation usually requires careful balancing of
   hypercharges. Here it should be a geometric identity.
+  Lean formalization file/theorems are not implemented yet.
 blocked_reason: ""

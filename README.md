@@ -62,6 +62,10 @@ lake exe cache get
 # 4. Build the formalizations
 lake build
 
+# 5. Run Python checks (recommended)
+python -m pip install -e .[dev]
+python -m pytest -q
+
 ```
 
 ---

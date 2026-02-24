@@ -8,7 +8,7 @@ lean_file: CausalGraphTheory/Tick.lean
 lean_theorems:
   - classify
   - batchable_decidable
-python_test: calc/test_tick.py::test_classification
+python_test: calc/test_tick.py::TestClassify
 depends_on:
   - ALG-002
 literature:

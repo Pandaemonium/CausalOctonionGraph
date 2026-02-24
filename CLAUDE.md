@@ -31,6 +31,8 @@ When modifying files, you must adhere to the following protocols:
 
     Run via Bash, verify with `lake build`, then delete the helper script. See `LESSONS_AND_TIPS.md` for the full `\u` escape reference table and diagnosis.
 
+6.  **Consult `LESSONS_AND_TIPS.md` Before Fighting a Known Problem:** Before spending time on a tooling, encoding, or Lean tactic problem, search `LESSONS_AND_TIPS.md` for a documented solution. Known issues include: Windows charmap codec errors, LaTeX tab corruption in markdown, `python3` not found on Windows, and cascading LSP errors from Unicode. **After solving any new annoyance, document it in `LESSONS_AND_TIPS.md` immediately** — add it at the top of the relevant section so future sessions find it first.
+
 ## 2b. Algebraic Convention Lock
 All Lean and Python code MUST use the Furey convention as defined in `rfc/CONVENTIONS.md`. This document is **locked** — do not modify its directed triples, sign tensor, Witt basis pairings, or vacuum axis without explicit human approval.
 
@@ -86,7 +88,9 @@ When editing `.md` files in `rfc/` or `sources/`, AI-generated text has a known 
 | `\nu_R` | LF + `u_R` | heading split across two lines |
 | `\times` | TAB + `imes` | `	imes` |
 
-**The fix is always the same:** Use the `Edit` tool directly. Read the file, see the corruption, and replace the broken span with the correct LaTeX string. **Do not write Python scripts to manipulate bytes.** The `Read` tool normalizes line endings, and the `Edit` tool matches the normalized content exactly — this is sufficient to fix any control-character corruption.
+**Fix strategy (tiered by severity):**
+- **1–3 corruptions:** Use the `Edit` tool directly. Read the file, find the corrupted span, replace with the correct LaTeX string. The `Read` tool normalizes line endings and `Edit` matches them exactly.
+- **4+ corruptions in a file:** Write a Python fix script to disk (using the `Write` tool with `TAB = chr(9)`), run it, verify the tab count reaches zero, then delete the script. **Do NOT** use a `python -c "..."` bash one-liner — bash escaping of `\t` in replacement strings silently fails. See `LESSONS_AND_TIPS.md` §Markdown for the exact script template.
 
 ## 4. The Workflow Loop
 When assigned a task, execute the following loop:

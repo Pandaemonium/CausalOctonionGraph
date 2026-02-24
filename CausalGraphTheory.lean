@@ -12,3 +12,4 @@ import CausalGraphTheory.OctonionNonAssoc
 import CausalGraphTheory.ComplexOctonion
 import CausalGraphTheory.WittBasis
 import CausalGraphTheory.SubalgebraDetect
+import CausalGraphTheory.Spinors

@@ -26,11 +26,15 @@ statement: |
 status: open  # orbit-length mechanism; COG-QC-01 sub-hypothesis falsified (see notes)
 lean_file: CausalGraphTheory/Spinors.lean
 lean_theorems:
-  - CausalGraph.electron_orbit_length  (stub)
-  - CausalGraph.muon_orbit_length      (stub)
-  - CausalGraph.generation_shift_order3
+  - CausalGraph.generationShift_order3
+  - CausalGraph.e7LeftOp_square_eq_neg_one
+  - CausalGraph.e7_left_twice_neg
+  - CausalGraph.e7_left_four_id
+  - CausalGraph.universal_Ce_period_four
+  - CausalGraph.e7_left_period_one_impossible
+  - CausalGraph.e7_left_period_two_impossible
   - CausalGraph.gen2State_proportional_idempotent  (proved 2026-02-22, rfl after fin_cases)
-python_test: calc/muon_orbit.py
+python_test: calc/test_spinor_state.py
 depends_on:
   - KOIDE-001
   - GAUGE-001
@@ -40,6 +44,9 @@ literature:
   - "Baez (2002): The Octonions, math/0105155, Section 4"
   - "Baez-Huerta (2010): Division Algebras and Supersymmetry I, arXiv:0909.0319"
   - "CODATA 2022: m_mu/m_e = 206.7682830 ± 0.0000046"
+  - "Gresnigt, Gourlay, Varma (2023): Three fermion generations with two unbroken gauge symmetries from the sedenions, arXiv:2306.13098 — S3 sedenion automorphism generates 3 generations; COG relevance: S3 ⊄ Aut(O) so three-generation mechanism is structurally above the octonionic layer"
+  - "Finster (2022): Causal Fermion Systems and the Discrete Dirac Sphere, arXiv:2201.06382 — shows CFS action minimizers for m spacetime points converge to equally-spaced configurations; S ~ m^2 scaling gives effective m^2 model for mass ratios"
+  - "Finster (2025): Action-driven flows for causal variational principles, arXiv:2503.00526 — gradient-flow formulation of CFS action; non-convexity requires penalization; COG 4-cycle is consistent with natural-cycle attractor behavior"
 
 experimental_value:
   ratio: 206.7682830
@@ -157,6 +164,32 @@ literature_gaps_found_2026_02_23:
         (tracking one component of the full state) but is not equivalent to
         simulating the full Furey electron state α₁α₂α₃ω†ω. The relationship
         between C_e(e1 component) and C_e(full Furey state) is OPEN.
+      resolution_2026_02_23: |
+        CLOSED by calc/furey_electron_orbit.py (26 tests, all passing).
+
+        UNIVERSAL C_e THEOREM (proved algebraically, verified numerically):
+        By the left-alternative law of C(x)O:
+            e7 * (e7 * x) = (e7 * e7) * x = -x   for ALL non-zero x.
+        Therefore L_{e7}^4 = id and the orbit period of ANY non-zero state
+        is exactly 4. Period 1 and 2 are impossible for non-zero states
+        (they would require -x = x, hence x = 0).
+
+        COMPUTED RESULT:
+        The full Furey electron state (CONVENTIONS.md §6):
+            psi_e = alpha1_dag * (alpha2_dag * (alpha3_dag * omega)) = -i * omega_dag
+        Algebraic derivation confirms:
+            alpha3_dag * omega = alpha3_dag        (omega is right identity on S)
+            alpha2_dag * alpha3_dag = 0.5*(e1 - i*e6)
+            alpha1_dag * 0.5*(e1-i*e6) = -i * omega_dag
+        Orbit: {-i*omega_dag, omega_dag, i*omega_dag, -omega_dag}, period 4.
+
+        C_e(e1 component) = C_e(full Furey state) = 4. The simplification
+        is not an artifact. The gap is RESOLVED.
+
+        CONSEQUENCE: Since C_e = C_mu = 4 universally, the mass ratio
+        m_mu/m_e = 206.768 CANNOT arise from state-orbit period under L_{e7}
+        alone. The mechanism must come from triality overhead (N_tau=14 per
+        S+ vertex) or DAG topology.
     - id: gap_2_e7_photon
       severity: moderate
       finding: |
@@ -182,11 +215,62 @@ literature_gaps_found_2026_02_23:
         The COG use of the 4×4 H matrix for operator translation (N_τ = 14)
         remains valid; the generation-identification use is challenged.
 
+simulation_record_2026_02_23_goal_b:
+  date: "2026-02-23"
+  tool: "calc/emu_dag_sim.py (RFC-012 Goal B)"
+  description: "E-mu DAG timing simulation with 15-tick muon vertex (queued-photon model)"
+  N_tau: 14
+  vertex_cost_electron: 1
+  vertex_cost_muon: 15
+  topology_D0:
+    e_abs_ticks: [1, 17, 32, 47]
+    mu_abs_ticks: [1, 16, 31, 46]
+    e_orbit_time: 47
+    mu_orbit_time: 46
+    max_orbit_time: 47
+    ee_baseline_ticks: 4
+    timing_ratio_e: 11.75
+    timing_ratio_mu: 11.5
+    timing_ratio_max: 11.75
+  topology_D1:
+    e_abs_ticks: [2, 19, 34, 49]
+    mu_abs_ticks: [2, 17, 32, 47]
+  vertex_cost_ratio: 15.0
+  gap_to_experimental: 13.78
+  tests_passing: 30
+  algebraic_orbit_period_both: 4
+  note: |
+    QUEUED-PHOTON MODEL: when a photon arrives at the muon while it is
+    processing (V_mu = 15 ticks), it is buffered and absorbed as soon as
+    the muon becomes free. Timing ratio_max = 11.75 for D=0 vs the
+    vertex_cost_ratio = 15. The timing ratio decreases as D increases
+    (approaching 1 as D -> inf), so the vertex cost mechanism alone cannot
+    produce 206.768.
+
+    ALGEBRAIC CLOSURE CONFIRMED: both particles return to initial state after
+    exactly 4 absorptions (Universal C_e Theorem). The algebraic period is 4
+    regardless of vertex cost.
+
+    GAP QUANTIFIED:
+      vertex_cost_ratio (lower bound) = 15
+      gap_factor = 206.768 / 15 approximately 13.78x
+      The remaining mechanism is open (LEPTON-001 status: open).
+
 next_action: |
-  Two open questions (both require simulation):
-  1. LEPTON-001 (Goal B): Simulate the muon motif orbit and compute C_μ/C_e.
-     Requires defining the muon S+ rep state and applying the triality emulation
-     (N_τ = 14 per vertex) to compute the return time.
-  2. ELECTRON STATE GAP: Determine whether C_e for the full Furey state
-     α₁α₂α₃ω†ω matches C_e = 4 for the e1 component, or differs.
-     See literature_gaps_found_2026_02_23 gap_1_electron_state.
+  Electron state gap (gap_1_electron_state) is RESOLVED: C_e = 4 universally
+  (calc/furey_electron_orbit.py, 26 tests, 2026-02-23).
+
+  Goal B partial result: 15-tick muon vertex confirmed as lower bound
+  (calc/emu_dag_sim.py, 30 tests, 2026-02-23). Full mechanism open.
+
+  Remaining open questions:
+  1. LEPTON-001 (Goal B -- partial): vertex_cost_ratio = 15, gap_factor ~13.78x.
+     The full mechanism bridging to 206.768 requires DAG topology beyond
+     single-vertex timing: either (a) a non-trivial multi-hop Fano path for
+     the muon that extends its orbit beyond the algebraic period of 4, or
+     (b) a generation structure (e.g., triality repetition count) that
+     multiplies the base period.
+  2. GENERATION STRUCTURE: McRae (gap_4_mcrae_three_generations) identifies
+     three-generation orbit topology as an open problem. A COG-specific
+     mechanism using Fano non-associativity to distinguish muon from electron
+     path lengths has not yet been found in the literature.

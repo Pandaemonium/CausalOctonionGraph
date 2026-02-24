@@ -50,10 +50,10 @@ Mirror the Lean definitions with a runnable simulator for rapid experimentation.
 |---|-------------|------|-------------|
 | 3.1 | Fano arithmetic module | `calc/fano.py` | NumPy multiplication table for `𝕆`. Functions: `multiply(a, b)`, `is_associative_triple(i, j, k)`. |
 | 3.2 | Graph simulator | `calc/graph_sim.py` | NetworkX DAG. Nodes carry `CO` state vectors; edges carry operator labels. `update_step()` implements the Batch/Tick logic from 2.3. |
-| 3.3 | Tick counter validation | `calc/test_tick.py` | pytest suite. Construct the same 5-node scenario as the Lean unit test. Assert tick counts match. |
+| 3.3 | Tick counter validation | `calc/test_tick.py` | `python -m pytest` suite. Construct the same 5-node scenario as the Lean unit test. Assert tick counts match. |
 | 3.4 | Fano penalty explorer | `calc/fano_penalty.py` | Sweep over all 480 valid `𝕆` multiplication sign conventions. For each, compute the number of non-associative triples encountered in a fixed graph topology. Output a histogram. |
 
-**Exit criterion:** `pytest calc/` passes. Tick counts from Python agree with Lean definitions.
+**Exit criterion:** `python -m pytest -q` passes. Tick counts from Python agree with Lean definitions.
 
 ---
 

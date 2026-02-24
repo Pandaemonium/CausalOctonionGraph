@@ -20,6 +20,7 @@
   Implementation plan: rfc/RFC-010_Rep_Labels_and_Muon_Orbit.md
 -/
 
+import CausalGraphTheory.OctonionAlt
 import CausalGraphTheory.WittBasis
 
 namespace CausalGraph
@@ -54,6 +55,113 @@ def generationShift : Generation → Generation
 theorem generationShift_order3 (g : Generation) :
     generationShift (generationShift (generationShift g)) = g := by
   cases g <;> rfl
+
+-- ============================================================
+-- Universal C_e = 4 theorem (LEPTON-001 support)
+-- ============================================================
+
+abbrev CO := ComplexOctonion Int
+
+/-- Left-action photon operator used in COG: multiply by e7 from the left. -/
+def e7LeftOp : CO := Octonion.basis (R := FormalComplex Int) 7
+
+private theorem neg_neg_octonion {R : Type} [CommRing R] (x : Octonion R) :
+    -(-x) = x := by
+  apply Octonion.ext
+  intro i
+  exact neg_neg (x.c i)
+
+private theorem neg_one_mul_octonion {R : Type} [CommRing R] (x : Octonion R) :
+    (-(1 : Octonion R)) * x = -x := by
+  apply Octonion.ext
+  intro i
+  fin_cases i
+  <;> dsimp only [HMul.hMul, Mul.mul, OfNat.ofNat, One.one, Neg.neg]
+  <;> norm_num [Fin.ofNat, Fin.mk.injEq]
+  <;> simp only [Octonion.fold_mul]
+  <;> ring
+
+private theorem basis7_square_neg_one {R : Type} [CommRing R] :
+    (Octonion.basis (R := R) 7) * (Octonion.basis (R := R) 7) = -(1 : Octonion R) := by
+  apply Octonion.ext
+  intro i
+  fin_cases i
+  <;> dsimp only [HMul.hMul, Mul.mul, OfNat.ofNat, One.one, Neg.neg, Octonion.basis]
+  <;> norm_num [Fin.ofNat, Fin.mk.injEq]
+  <;> simp only [Octonion.fold_mul]
+  <;> ring
+
+/-- e7^2 = -1 for the left-action operator in C x O over Z. -/
+theorem e7LeftOp_square_eq_neg_one :
+    e7LeftOp * e7LeftOp = -(1 : CO) := by
+  simpa [e7LeftOp] using (basis7_square_neg_one (R := FormalComplex Int))
+
+/-- Two left e7 actions give a sign flip for every state. -/
+theorem e7_left_twice_neg (x : CO) :
+    e7LeftOp * (e7LeftOp * x) = -x := by
+  calc
+    e7LeftOp * (e7LeftOp * x) = (e7LeftOp * e7LeftOp) * x := by
+      simpa using Octonion.left_alternative e7LeftOp x
+    _ = (-(1 : CO)) * x := by
+      rw [e7LeftOp_square_eq_neg_one]
+    _ = -x := by
+      simpa using neg_one_mul_octonion x
+
+/-- Four left e7 actions return any state exactly. -/
+theorem e7_left_four_id (x : CO) :
+    e7LeftOp * (e7LeftOp * (e7LeftOp * (e7LeftOp * x))) = x := by
+  calc
+    e7LeftOp * (e7LeftOp * (e7LeftOp * (e7LeftOp * x))) = -(e7LeftOp * (e7LeftOp * x)) := by
+      simpa using e7_left_twice_neg (x := e7LeftOp * (e7LeftOp * x))
+    _ = -(-x) := by
+      rw [e7_left_twice_neg]
+    _ = x := by
+      simpa using neg_neg_octonion x
+
+private theorem neg_eq_self_implies_zero (x : CO) (h : -x = x) : x = 0 := by
+  apply Octonion.ext
+  intro i
+  have hi : -(x.c i) = x.c i := by
+    exact congrArg (fun y => y.c i) h
+  exact FormalComplex.ext
+    (by
+      have hire : -((x.c i).re) = (x.c i).re := by
+        exact congrArg FormalComplex.re hi
+      have hre0 : (x.c i).re = 0 := by omega
+      simpa using hre0)
+    (by
+      have hiim : -((x.c i).im) = (x.c i).im := by
+        exact congrArg FormalComplex.im hi
+      have him0 : (x.c i).im = 0 := by omega
+      simpa using him0)
+
+/-- No non-zero state has period 2 under repeated left e7 action. -/
+theorem e7_left_period_two_impossible {x : CO} (hx : Ne x 0) :
+    Ne (e7LeftOp * (e7LeftOp * x)) x := by
+  intro h2
+  have hneg : -x = x := by
+    simpa [e7_left_twice_neg (x := x)] using h2
+  exact hx (neg_eq_self_implies_zero x hneg)
+
+/-- No non-zero state is fixed by a single left e7 action. -/
+theorem e7_left_period_one_impossible {x : CO} (hx : Ne x 0) :
+    Ne (e7LeftOp * x) x := by
+  intro h1
+  have h2 : e7LeftOp * (e7LeftOp * x) = x := by
+    calc
+      e7LeftOp * (e7LeftOp * x) = e7LeftOp * x := by
+        simp [h1]
+      _ = x := h1
+  exact e7_left_period_two_impossible (x := x) hx h2
+
+/-- Universal C_e theorem: every non-zero state has exact period 4 under left e7 action. -/
+theorem universal_Ce_period_four (x : CO) (hx : Ne x 0) :
+    e7LeftOp * (e7LeftOp * (e7LeftOp * (e7LeftOp * x))) = x /\
+    Ne (e7LeftOp * x) x /\
+    Ne (e7LeftOp * (e7LeftOp * x)) x := by
+  exact And.intro (e7_left_four_id x)
+    (And.intro (e7_left_period_one_impossible (x := x) hx)
+      (e7_left_period_two_impossible (x := x) hx))
 
 -- ============================================================
 -- Projector elements (working at doubled scale to avoid 1/2)

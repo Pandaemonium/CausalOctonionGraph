@@ -53,7 +53,7 @@ If you are contributing to the verified math kernel:
 
 If you are simulating generation masses or the Koide limit:
 
-* **Test-Driven Derivations:** Every numerical derivation must be backed by a `pytest` suite in `calc/` (test files are named `calc/test_*.py`).
+* **Test-Driven Derivations:** Every numerical derivation must be backed by a pytest suite in `calc/` (test files are named `calc/test_*.py`). Run tests with `python -m pytest` to avoid environment/PATH mismatches.
 * **Algorithmic Honesty:** You may not hardcode arbitrary constants to make the math fit empirical data. All operations must represent literal execution steps of the graph (e.g., shifting across independent complex color planes).
 
 ---
@@ -102,7 +102,7 @@ and key `\u` escape reference table.
 2. **Sync the cache:** Always run `lake exe cache get` before building to avoid recompiling Mathlib.
 3. **Run the test suites:**
 * Lean: Ensure `lake build` passes with zero errors or `sorry` states in your modified files.
-* Python: Ensure `pytest calc/` passes.
+* Python: Ensure `python -m pytest -q` passes.
 
 
 4. **Targeted Diffs:** Ensure your PR is surgically focused. Do not include random formatting changes in unrelated files.

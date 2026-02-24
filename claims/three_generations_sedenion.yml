@@ -1,0 +1,83 @@
+id: GEN-002
+title: "Three Generations from Sedenion S3 Automorphism"
+statement: |
+  The Cayley-Dickson algebra of sedenions S (16-dimensional) admits a finite
+  group S3 (order 6) of automorphisms that are automorphisms of S but NOT of
+  O (octonions). Applying the S3 automorphism of order 3 to a single-generation
+  fermion representation (constructed from C@O subalgebras of S) generates
+  exactly three generations, all transforming under a single copy of SU(3)_C.
+
+  Formally: S = S0 + S1 + S2 + S3 (four octonion subalgebras).
+  One generation from C@O1; S3-automorphism sigma generates C@O2, C@O3.
+  Result: exactly 3 generations, no duplication of gauge bosons.
+status: stub
+python_test: ""
+lean_file: ""
+lean_theorems: []
+depends_on:
+  - GEN-001
+  - GAUGE-001
+literature:
+  - "Gresnigt, Gourlay, Varma (2023): Three generations from S3 sedenion automorphisms, arXiv:2306.13098"
+  - "Gillard, Gresnigt (2019): Three fermion generations from complex sedenions, arXiv:1904.03186"
+  - "Furey (2019): Three generations from C@O, arXiv:1910.08395"
+notes: |
+  KEY FINDING (search 2026-02-23):
+    S3 IS an automorphism of the Cayley-Dickson sedenions S.
+    S3 is NOT an automorphism of the octonions O.
+    This is the algebraic discriminant between 1 and 3 generations.
+
+    The Gresnigt construction (2306.13098):
+    1. Represent ONE generation using two minimal left ideals of Cl(6),
+       generated from a subset of left actions of C@S on itself.
+    2. The single-generation construction uses all three O subalgebras of S
+       to build one generation (generalizing Furey's use of three H in O).
+    3. The S3 automorphism of order 3 maps (O1, O2, O3) -> (O2, O3, O1),
+       generating two additional generations.
+    4. All three generations transform under ONE copy of SU(3)_C
+       (no three copies of gluons — a major improvement).
+
+  COG RELEVANCE:
+    COG currently uses C@O only (8-dimensional complex octonionic space).
+    The sedenion extension C@S is 16-dimensional.
+    The three-generation structure requires the S3 automorphism, which
+    lives at the SEDENION level, not the octonionic level.
+
+    This explains why COG's single-octonionic update rule cannot generate
+    three distinct generations in-algebra: the generational discriminant
+    (S3 ⊂ Aut(S) \ Aut(O)) is structurally above the octonionic layer.
+
+  CONNECTION TO KOIDE-001:
+    The S3 group has Z3 as a normal subgroup (S3 = Z3 ⋊ Z2).
+    This Z3 is the symmetry needed for the Brannen parametrization
+    f_k = A + B*cos(phi + 2*pi*k/3) in claims/koide_exactness.yml.
+    If the S3 automorphism acts on the lepton mass eigenvalues as Z3,
+    it forces the equal phase-spacing (sum c_k = 0, sum c_j*c_k = -3/4)
+    that is the COG-side Koide Z3 ansatz.
+
+  OBSTACLES:
+    - COG uses C@O (8D); S3 lives at C@S (16D). Bridge undefined.
+    - The sedenions are neither division algebras nor alternative.
+    - The non-alternativity of S may break COG's Alternativity Theorem
+      (which is the origin of discrete ticking from the non-associativity of O).
+    - McRae §5 obstruction (representation-level automorphisms vs algebra-
+      level automorphisms) may apply here too.
+
+  OPEN QUESTIONS:
+    1. Can S3 act as a TOPOLOGICAL symmetry of the COG DAG without requiring
+       the full sedenion algebra (i.e., S3 on graph topology, not on states)?
+    2. Can the sedenion C@S construction be approximated within C@O by using
+       the three Witt-basis pairs (e6,e1), (e2,e5), (e3,e4) as the "three
+       O subalgebras" that S3 permutes?
+    3. If yes to (2), does the COG DAG edge rule automatically generate an
+       S3 symmetry over the three Witt-pair directions?
+
+  STATUS NOTE (2026-02-23):
+    Created as stub. The Gresnigt mechanism is the strongest algebraic
+    result in the literature for the three-generation origin question.
+    It is not directly implementable in COG without extending to C@S.
+    The Witt-pair question (open question 2) is the COG-native research direction.
+
+blocked_reason: |
+  COG does not use sedenions. S3 ⊄ Aut(O). Cannot directly apply
+  Gresnigt mechanism without leaving the C@O framework.

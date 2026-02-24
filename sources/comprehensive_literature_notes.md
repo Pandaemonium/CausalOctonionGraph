@@ -13,7 +13,7 @@
 *   **Complementarity:** CFS provides the "spacetime" container (causal action principle, dynamics), while octonions provide the "matter" content (algebraic microstructure). This mirrors the COG architecture exactly:
     *   *CFS* $\approx$ `CausalGraph` (topology/dynamics)
     *   *Octonions* $\approx$ `NodeLabel` / `EdgeLabel` (local algebra)
-*   **Continuum Limit:** The existence of the "causal action principle" in CFS gives COG a specific target for its continuum limit. As the graph density $N 	o \infty$, the discrete update rule `step(G)` should approximate the minimization of the causal action.
+*   **Continuum Limit:** The existence of the "causal action principle" in CFS gives COG a specific target for its continuum limit. As the graph density $N \to \infty$, the discrete update rule `step(G)` should approximate the minimization of the causal action.
 
 **Reference:** Finster, F., Gresnigt, N., et al. (2024). *Causal Fermion Systems and Octonions*. arXiv:2403.00360.
 
@@ -21,10 +21,10 @@
 
 ## 2. Octonions and the Standard Model
 **Key Researchers:** Murat Günaydin, Feza Gürsey, Cohl Furey.
-**Core Relevance:** Deriving the Standard Model (SM) gauge group $G_{SM} = SU(3) 	imes SU(2) 	imes U(1)$ from first principles.
+**Core Relevance:** Deriving the Standard Model (SM) gauge group $G_{SM} = SU(3) \times SU(2) \times U(1)$ from first principles.
 
 *   **Gunaydin-Gürsey (1973):** Established the foundational link. The automorphism group of the octonions $\mathbb{O}$ is the exceptional Lie group $G_2$. If one imaginary unit (say $e_7$) is fixed/stabilized, the remaining symmetry group is exactly $SU(3)$ (the color group).
-    *   *Implication for COG:* The "vacuum axis" $e_7$ in `WittBasis.lean` is not arbitrary; it is the geometric constraint that breaks $G_2 	o SU(3)$.
+    *   *Implication for COG:* The "vacuum axis" $e_7$ in `WittBasis.lean` is not arbitrary; it is the geometric constraint that breaks $G_2 \to SU(3)$.
 *   **Furey's "Dixon Algebra" Program:** Uses $\mathbb{R} \otimes \mathbb{C} \otimes \mathbb{H} \otimes \mathbb{O}$ (Clifford algebra $\mathbb{C}\ell(6)$) to generate the full SM gauge group.
     *   *Ideals as Particles:* Fermions appear as minimal left ideals of the algebra.
     *   *Generations:* The algebra naturally contains 64 complex dimensions, which breaks down into spinor representations matching a single generation of SM particles (plus sterile neutrino). The origin of the *three* generations remains the hardest open problem, often linked to $Spin(8)$ triality.
@@ -38,7 +38,7 @@
 ## 3. Discrete Physics & Koide Formula
 **Key Concept:** Empirical mass relations from discrete structures.
 
-*   **The Formula:** $Q = \frac{m_e + m_\mu + m_	au}{(\sqrt{m_e} + \sqrt{m_\mu} + \sqrt{m_	au})^2} = \frac{2}{3}$ (exact).
+*   **The Formula:** $Q = \frac{m_e + m_\mu + m_\tau}{(\sqrt{m_e} + \sqrt{m_\mu} + \sqrt{m_\tau})^2} = \frac{2}{3}$ (exact).
 *   **Status:** Highly accurate experimentally (within error bars for pole masses), but lacks a consensus theoretical derivation in QFT.
 *   **Discrete Explanations:**
     *   *Brannen:* Koide's formula relates to the Discrete Fourier Transform of mass roots, suggesting masses arise from eigenvalues of a "circulant matrix" (a discrete operator).

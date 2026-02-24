@@ -10,7 +10,7 @@ lean_theorems:
   - batchable_fano_line
   - not_batchable_example
   - batchable_triple_count
-python_test: calc/test_subalgebra.py  # To be implemented
+python_test: calc/test_subalgebra.py
 depends_on:
   - FANO-001
 literature:

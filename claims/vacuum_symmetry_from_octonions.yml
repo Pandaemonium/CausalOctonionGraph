@@ -1,0 +1,22 @@
+id: CFS-003
+title: "Vacuum symmetry from octonions with causal-action dynamics"
+statement: |
+  The vacuum-axis stabilizer structure from octonionic/Fano automorphisms
+  (GAUGE-001) is preserved under the discrete causal-action dynamics, so
+  vacuum symmetry is algebraically fixed and does not require tunable inputs.
+status: stub
+lean_file: ""
+lean_theorems: []
+python_test: ""
+depends_on:
+  - GAUGE-001
+  - CFS-001
+  - VAC-001
+literature:
+  - "Finster et al. (2024): Causal Fermion Systems and Octonions, arXiv:2403.00360"
+  - "Furey (2016): Charge quantization from a number operator, arXiv:1603.04078"
+  - "Todorov and Dubois-Violette (2018): Exceptional Jordan symmetry route, arXiv:1806.09450"
+notes: |
+  This is the integration claim tying CFS-style dynamics to the existing
+  octonionic vacuum symmetry formalized in the COG kernel.
+blocked_reason: ""

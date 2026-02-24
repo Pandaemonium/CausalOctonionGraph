@@ -7,8 +7,8 @@ statement: |
 status: stub
 lean_file: CausalGraphTheory/RaceCondition.lean
 lean_theorems:
-  - update_is_confluent
-  - spacelike_separation_commutes
+  - RaceCondition.confluence
+  - RaceCondition.classify_perm_of_edges
 python_test: calc/test_confluence.py
 depends_on:
   - UPD-001

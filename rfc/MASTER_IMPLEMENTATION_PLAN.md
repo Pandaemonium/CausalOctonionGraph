@@ -641,7 +641,7 @@ stub â”€â”€â†’ in_progress â”€â”€â†’ proved
 
 - `stub`: Claim defined, no code written.
 - `in_progress`: Lean file and/or Python file created, work underway.
-- `proved`: `lake build` passes, `pytest` passes, all listed theorems type-check.
+- `proved`: `lake build` passes, `python -m pytest -q` passes, all listed theorems type-check.
 - `blocked`: A specific obstacle documented in `blocked_reason`.
 
 ---
@@ -693,10 +693,10 @@ These can proceed simultaneously:
 
 ### 9.2 Python Testing
 
-- **`pytest calc/`** runs all tests.
+- **`python -m pytest -q`** runs all tests.
 - **Property-based tests** (via `hypothesis` if useful): random octonion pairs satisfy alternativity.
 - **Cross-validation:** For every Lean `#eval` that computes a specific value, there is a matching Python `assert`.
-- **CI:** Add a Python test job to the GitHub workflow.
+- **CI:** Python tests run in `.github/workflows/lean_action_ci.yml` via `python -m pytest -q`.
 
 ### 9.3 Lean â†” Python Consistency (Automated Oracle)
 

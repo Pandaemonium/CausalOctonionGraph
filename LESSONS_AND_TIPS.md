@@ -281,29 +281,115 @@ will disappear once the real errors are resolved.
 
 **Symptom:** When reading `.md` files edited by an AI, sequences like `\to` appear
 as a TAB character followed by `o` (shown as `	o` in the Read output). Similarly:
-`\tau` → `	au`, `\nu` → newline + `u`, `\times` → `	imes`.
+`\tau` → TAB+`au`, `\nu` → newline+`u`, `\times` → TAB+`imes`.
 
 **Root cause:** AI text generation sometimes emits the escape character (0x09 for TAB,
 0x0A for newline) instead of the backslash when writing LaTeX commands.
 
-**Fix:** Use the `Edit` tool directly to replace the corrupted span with the correct
-LaTeX string. The `Read` tool normalizes line endings, and `Edit` matches the normalized
-content exactly. Do NOT use Python scripts to manipulate bytes.
+**How to scan for it** (run from repo root):
+
+```python
+import glob
+TAB = chr(9)
+for path in sorted(glob.glob('**/*.md', recursive=True)):
+    with open(path, 'r', encoding='utf-8') as f:
+        content = f.read()
+    hits = [(i, repr(content[max(0,i-12):i+12])) for i, c in enumerate(content) if c == TAB]
+    for pos, ctx in hits:
+        print(f'{path}  byte {pos}: {ctx}')
+```
+
+**Fix — small number of corruptions (1–3):** Use the `Edit` tool directly.
+The `Read` tool normalizes line endings, and `Edit` matches the normalized content
+exactly, so a targeted find-and-replace is fastest:
 
 ```
-Read the file → see the corruption → Edit to replace corrupted span with correct LaTeX
+Read the file → identify the exact corrupted span → Edit to replace with correct LaTeX
 ```
+
+**Fix — bulk corruption (4+ occurrences in a file):** Do NOT try to fix with a
+`python -c "..."` bash one-liner. The bash escaping of TAB characters in the replacement
+strings silently fails and leaves the corruption in place. Instead, **write a Python
+script to disk** using the `Write` tool, then run it:
+
+```python
+# fix_tabs.py  (write this file, then: python fix_tabs.py, then delete it)
+TAB = chr(9)
+with open('sources/comprehensive_literature_notes.md', 'r', encoding='utf-8') as f:
+    content = f.read()
+
+replacements = [
+    (TAB + 'o ', '\\to '),    # \to followed by space
+    (TAB + 'o}', '\\to}'),    # \to followed by }
+    (TAB + 'imes', '\\times'),
+    (TAB + 'au', '\\tau'),
+    ('\nu', '\\nu'),           # newline + u (if present)
+]
+for bad, good in replacements:
+    content = content.replace(bad, good)
+
+with open('sources/comprehensive_literature_notes.md', 'w', encoding='utf-8') as f:
+    f.write(content)
+
+# Verify
+remaining = [i for i, c in enumerate(content) if c == TAB]
+print(f'Remaining tabs: {len(remaining)}')
+```
+
+Run with `python fix_tabs.py`, verify output is `Remaining tabs: 0`, then delete the
+helper script.
+
+**Why `python -c` fails:** When you pass replacement strings containing `\t` through
+`bash -c "python -c '...'"`, the two layers of shell quoting interact unpredictably
+and the backslash is either consumed by bash or Python's string parser before the
+`str.replace()` call sees it. Writing to a file entirely sidesteps this.
 
 ---
 
 ## Python / pytest Issues
 
-*(none yet)*
+### `python3` Not Found on Windows — Use `python`
+
+**Symptom:** `python3 fix_tabs.py` fails with `'python3' is not recognized as an
+internal or external command`.
+
+**Root cause:** On Windows, the Python binary is always `python`, not `python3`.
+The `python3` alias only exists by default on Linux/macOS.
+
+**Fix:** Use `python` (no `3`) for all Bash commands in this repo:
+
+```bash
+python fix_tabs.py       # correct on Windows
+python -m pytest -q      # correct on Windows
+```
+
+---
+
+### Checking Which `pytest` / Package Is Active
+
+**Symptom:** `pytest` command works but picks up a system-level pytest that can't
+find the repo's `calc/` modules (import errors on `from calc.conftest import ...`).
+
+**Fix:** Always run via the module flag to ensure the right environment:
+
+```bash
+python -m pytest -q
+```
+
+This guarantees pytest uses the same `sys.path` as the `python` executable you
+just confirmed is working.
 
 ---
 
 ## General Development Tips
 
+- **Consult this file first**: before spending time fighting a tooling or encoding
+  problem, search `LESSONS_AND_TIPS.md` for a prior solution. If you solve a new
+  annoyance, document it here immediately so the next session benefits.
+- **`lean_verify` is the gold-standard axiom check**: use `lean_verify` (not
+  `lean_diagnostic_messages`) to confirm a theorem is axiom-clean. It returns the
+  exact set `{propext, Classical.choice, Quot.sound}` for `sorry`-free proofs and
+  is not affected by the Windows charmap codec errors.
 - **One concept per file**: keep Lean files short. If a file is growing beyond ~200 lines
   of proof code, consider splitting lemmas into separate files.
 - **Surgical edits only**: never rewrite a whole file to fix a few lines. Use targeted
@@ -314,3 +400,6 @@ Read the file → see the corruption → Edit to replace corrupted span with cor
   the exact signature before writing a proof that depends on it.
 - **Avoid `Mathlib.Data.List.Defs` import**: `Mathlib.Data.List.Basic` covers nearly all
   list lemmas needed. The `Defs` import may be redundant or cause issues.
+- **Delete temporary fix scripts**: after running any one-off Python helper (encoding
+  fix, data migration, etc.), delete it immediately. These files are not project
+  artifacts and will pollute `git status`.

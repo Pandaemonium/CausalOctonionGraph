@@ -1,0 +1,22 @@
+id: CFS-001
+title: "Discrete causal action for finite octonionic causal graphs"
+statement: |
+  There exists a finite, computable causal-action functional S on COG graph
+  microstates (nodes, labeled edges, and octonionic states) such that each
+  deterministic update step is defined by local action comparison with no
+  continuum limit assumptions.
+status: stub
+lean_file: ""
+lean_theorems: []
+python_test: ""
+depends_on:
+  - DAG-001
+  - CAUS-001
+literature:
+  - "Finster et al. (2024): Causal Fermion Systems and Octonions, arXiv:2403.00360"
+  - "Finster et al. (2011): Causal Fermion Systems, arXiv:1102.2585"
+  - "Finster (2018): Discrete Space-Times in CFS, arXiv:1812.00238"
+notes: |
+  This claim is the COG-side analog of the CFS causal action principle, but
+  formulated entirely over finite combinatorial data.
+blocked_reason: ""
