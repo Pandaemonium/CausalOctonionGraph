@@ -10,10 +10,22 @@ lean_theorems:
   - batchable_fano_line
   - not_batchable_example
   - batchable_triple_count
+  # Grassmann / Pauli-exclusion structure of the Witt basis (WittBasis.lean):
+  - WittBasis.wittLower_nilpotent   # (2αⱼ)² = 0 for j = 0,1,2 — lowering is nilpotent
+  - WittBasis.wittRaise_nilpotent   # (2αⱼ†)² = 0 for j = 0,1,2 — raising is nilpotent
+  - WittBasis.wittRaise_right_identity_scaled  # (2αⱼ†)·(2ω) = 2·(2αⱼ†)
 python_test: calc/test_subalgebra.py
 depends_on:
   - FANO-001
 literature:
   - "RFC-001 §3"
-notes: "Exactly 7 unordered triples are associative (the lines)."
+  - "Furey (2019): Standard Model particles from split octonions — Witt basis properties"
+notes: |
+  Exactly 7 unordered triples are associative (the lines).
+
+  Witt operator nilpotency (added 2026-02-24): the doubled raising and lowering
+  operators are nilpotent — (2αⱼ)² = 0 and (2αⱼ†)² = 0 for each j = 0,1,2.
+  These are the Grassmann/Pauli-exclusion identities: you cannot create or
+  annihilate the same color-charge state twice. Proved in WittBasis.lean by
+  fin_cases + norm_num component-by-component over ℤ.
 blocked_reason: ""

@@ -4,9 +4,24 @@ statement: |
   The vacuum-axis stabilizer structure from octonionic/Fano automorphisms
   (GAUGE-001) is preserved under the discrete causal-action dynamics, so
   vacuum symmetry is algebraically fixed and does not require tunable inputs.
-status: stub
-lean_file: ""
-lean_theorems: []
+status: partial
+lean_file: CausalGraphTheory/Spinors.lean
+lean_theorems:
+  # Photon operator eigenvalues on vacuum projectors
+  # (proves particle/antiparticle charge symmetry at the algebraic level)
+  - CausalGraph.e7Left_on_omegaDoubled        # e7·ω  = −i·ω  (vacuum is −i eigenstate)
+  - CausalGraph.e7Right_on_omegaDoubled       # ω·e7  = −i·ω  (left = right: ω is symmetric)
+  - CausalGraph.e7Left_on_leftVacConjDoubled  # e7·ω† = +i·ω† (conjugate vacuum is +i eigenstate)
+  - CausalGraph.e7Right_on_leftVacConjDoubled # ω†·e7 = +i·ω† (left = right: ω† is symmetric)
+  # Projector idempotence
+  - CausalGraph.omegaDoubled_ne_zero
+  - CausalGraph.leftVacConjDoubled_ne_zero
+  - CausalGraph.leftVacConjDoubled_idempotent_scaled  # (2ω†)² = 2·(2ω†)
+  # Vacuum period-4 corollaries (period-4 holds for the projectors themselves)
+  - CausalGraph.vacuum_orbit_exact_period_four
+  - CausalGraph.vacuum_orbit_exact_period_four_right
+  - CausalGraph.leftVacConjDoubled_left_orbit_exact_period_four
+  - CausalGraph.leftVacConjDoubled_right_orbit_exact_period_four
 python_test: ""
 depends_on:
   - GAUGE-001
@@ -17,6 +32,17 @@ literature:
   - "Furey (2016): Charge quantization from a number operator, arXiv:1603.04078"
   - "Todorov and Dubois-Violette (2018): Exceptional Jordan symmetry route, arXiv:1806.09450"
 notes: |
-  This is the integration claim tying CFS-style dynamics to the existing
-  octonionic vacuum symmetry formalized in the COG kernel.
+  The eigenvalue theorems e7Left_on_omegaDoubled and e7Right_on_omegaDoubled prove
+  that the vacuum projector ω is an eigenstate of the photon operator e7 with
+  eigenvalue −i, under BOTH left and right multiplication. The conjugate vacuum ω†
+  has eigenvalue +i. Left/right agreement is nontrivial — it holds because ω and ω†
+  are in an especially symmetric position relative to e7 in the Fano structure.
+
+  Physical interpretation: the vacuum (generation-1 projector) carries −i charge under
+  the photon, the conjugate vacuum carries +i charge. This is the algebraic origin of
+  the particle/antiparticle asymmetry in C⊗O.
+
+  The claim that vacuum symmetry is PRESERVED under CFS-style causal dynamics (the
+  full CFS-003 statement) remains open — the theorems above establish the static
+  algebraic fact, not the dynamical preservation.
 blocked_reason: ""

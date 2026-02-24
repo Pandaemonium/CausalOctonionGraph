@@ -26,14 +26,39 @@ statement: |
 status: open  # orbit-length mechanism; COG-QC-01 sub-hypothesis falsified (see notes)
 lean_file: CausalGraphTheory/Spinors.lean
 lean_theorems:
-  - CausalGraph.generationShift_order3
+  # Universal C_e = 4 stack (core LEPTON-001 result)
   - CausalGraph.e7LeftOp_square_eq_neg_one
   - CausalGraph.e7_left_twice_neg
   - CausalGraph.e7_left_four_id
-  - CausalGraph.universal_Ce_period_four
   - CausalGraph.e7_left_period_one_impossible
   - CausalGraph.e7_left_period_two_impossible
-  - CausalGraph.gen2State_proportional_idempotent  (proved 2026-02-22, rfl after fin_cases)
+  - CausalGraph.universal_Ce_period_four
+  # Right-action symmetry (orientation-independence)
+  - CausalGraph.e7_right_twice_neg
+  - CausalGraph.e7_right_four_id
+  - CausalGraph.e7_right_period_one_impossible
+  - CausalGraph.e7_right_period_two_impossible
+  - CausalGraph.universal_Ce_right_period_four
+  # Generation-1 (electron) state: period-4 corollaries
+  - CausalGraph.fureyElectronStateDoubled_closed_form
+  - CausalGraph.fureyElectronStateDoubled_ne_zero
+  - CausalGraph.fureyElectronState_left_orbit_exact_period_four
+  - CausalGraph.fureyElectronState_right_orbit_exact_period_four
+  # Generation-2 (muon) state: anti-idempotent, period-4 corollaries
+  - CausalGraph.gen2State_proportional_idempotent
+  - CausalGraph.gen2StateQuadruple_ne_zero
+  - CausalGraph.gen2State_left_orbit_exact_period_four
+  - CausalGraph.gen2State_right_orbit_exact_period_four
+  # Dual sector: shows both projector sectors have C_e = 4
+  - CausalGraph.fureyDualElectronStateDoubled_closed_form
+  - CausalGraph.fureyDualElectronStateDoubled_ne_zero
+  - CausalGraph.fureyDualElectronState_left_orbit_exact_period_four
+  - CausalGraph.fureyDualElectronState_right_orbit_exact_period_four
+  # Generation cycle (Spinors.lean)
+  - CausalGraph.generationShift_order3
+  # NOTE: vacuum eigenvalue theorems (e7Left_on_omegaDoubled etc.) are in
+  # claims/vacuum_symmetry_from_octonions.yml (CFS-003).
+  # Witt nilpotency theorems are in claims/subalgebra_detection.yml (ALG-002).
 python_test: calc/test_spinor_state.py
 depends_on:
   - KOIDE-001

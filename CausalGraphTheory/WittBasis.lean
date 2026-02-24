@@ -91,6 +91,61 @@ def vacuumDoubled : ComplexOctonion R :=
 -- Key properties (stubs for now)
 -- ============================================================
 
+/-- Double every component of a complex-octonion state. -/
+def doubleCO (x : ComplexOctonion R) : ComplexOctonion R :=
+  Octonion.mk (fun k =>
+    FormalComplex.mk (((x.c k).re) + ((x.c k).re))
+                     (((x.c k).im) + ((x.c k).im)))
+
+set_option maxHeartbeats 800000
+
+/-- Each doubled lowering operator is nilpotent:
+    (2·αⱼ) * (2·αⱼ) = 0 for j = 0, 1, 2. -/
+theorem wittLower_nilpotent (j : Fin 3) :
+    (wittLowerDoubled (R := R) j) * wittLowerDoubled j = 0 := by
+  fin_cases j
+  <;> (apply Octonion.ext; intro i; fin_cases i
+       <;> apply FormalComplex.ext
+       <;> simp only [HMul.hMul, Mul.mul, OfNat.ofNat, Zero.zero,
+                       wittLowerDoubled, wittPair,
+                       FormalComplex.add_re, FormalComplex.add_im,
+                       FormalComplex.sub_re, FormalComplex.sub_im]
+       <;> norm_num [Fin.ofNat, Fin.mk.injEq]
+       <;> simp only [Octonion.fold_mul]
+       <;> ring)
+
+/-- Each doubled raising operator is nilpotent:
+    (2·αⱼ†) * (2·αⱼ†) = 0 for j = 0, 1, 2. -/
+theorem wittRaise_nilpotent (j : Fin 3) :
+    (wittRaiseDoubled (R := R) j) * wittRaiseDoubled j = 0 := by
+  fin_cases j
+  <;> (apply Octonion.ext; intro i; fin_cases i
+       <;> apply FormalComplex.ext
+       <;> simp only [HMul.hMul, Mul.mul, OfNat.ofNat, Zero.zero,
+                       wittRaiseDoubled, wittPair,
+                       FormalComplex.add_re, FormalComplex.add_im,
+                       FormalComplex.sub_re, FormalComplex.sub_im]
+       <;> norm_num [Fin.ofNat, Fin.mk.injEq]
+       <;> simp only [Octonion.fold_mul]
+       <;> ring)
+
+/-- Right-multiplying a doubled raising operator by doubled vacuum doubles it:
+    (2·αⱼ†) * (2·ω) = 2·(2·αⱼ†). -/
+theorem wittRaise_right_identity_scaled (j : Fin 3) :
+    (wittRaiseDoubled (R := R) j) * vacuumDoubled = doubleCO (wittRaiseDoubled j) := by
+  fin_cases j
+  <;> (apply Octonion.ext; intro i; fin_cases i
+       <;> apply FormalComplex.ext
+       <;> simp only [HMul.hMul, Mul.mul, OfNat.ofNat,
+                       vacuumDoubled, wittRaiseDoubled, wittPair, doubleCO,
+                       FormalComplex.add_re, FormalComplex.add_im,
+                       FormalComplex.sub_re, FormalComplex.sub_im]
+       <;> norm_num [Fin.ofNat, Fin.mk.injEq]
+       <;> simp only [Octonion.fold_mul]
+       <;> ring)
+
+set_option maxHeartbeats 200000
+
 /-- The vacuum is (scaled) idempotent: (2ω)² = 2·(2ω).
     This is equivalent to ω² = ω after dividing by 4.
     Proof: (1 + ie₇)² = 1 + 2ie₇ + i²e₇² = 1 + 2ie₇ - (-1) = 2 + 2ie₇ = 2(1 + ie₇).

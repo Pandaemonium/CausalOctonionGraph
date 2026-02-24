@@ -81,6 +81,16 @@ private theorem neg_one_mul_octonion {R : Type} [CommRing R] (x : Octonion R) :
   <;> simp only [Octonion.fold_mul]
   <;> ring
 
+private theorem mul_neg_one_octonion {R : Type} [CommRing R] (x : Octonion R) :
+    x * (-(1 : Octonion R)) = -x := by
+  apply Octonion.ext
+  intro i
+  fin_cases i
+  <;> dsimp only [HMul.hMul, Mul.mul, OfNat.ofNat, One.one, Neg.neg]
+  <;> norm_num [Fin.ofNat, Fin.mk.injEq]
+  <;> simp only [Octonion.fold_mul]
+  <;> ring
+
 private theorem basis7_square_neg_one {R : Type} [CommRing R] :
     (Octonion.basis (R := R) 7) * (Octonion.basis (R := R) 7) = -(1 : Octonion R) := by
   apply Octonion.ext
@@ -163,6 +173,185 @@ theorem universal_Ce_period_four (x : CO) (hx : Ne x 0) :
     (And.intro (e7_left_period_one_impossible (x := x) hx)
       (e7_left_period_two_impossible (x := x) hx))
 
+/-- Two right e7 actions give a sign flip for every state. -/
+theorem e7_right_twice_neg (x : CO) :
+    (x * e7LeftOp) * e7LeftOp = -x := by
+  calc
+    (x * e7LeftOp) * e7LeftOp = x * (e7LeftOp * e7LeftOp) := by
+      simpa using (Octonion.right_alternative e7LeftOp x)
+    _ = x * (-(1 : CO)) := by
+      rw [e7LeftOp_square_eq_neg_one]
+    _ = -x := by
+      simpa using mul_neg_one_octonion x
+
+/-- Four right e7 actions return any state exactly. -/
+theorem e7_right_four_id (x : CO) :
+    (((x * e7LeftOp) * e7LeftOp) * e7LeftOp) * e7LeftOp = x := by
+  calc
+    (((x * e7LeftOp) * e7LeftOp) * e7LeftOp) * e7LeftOp = -((x * e7LeftOp) * e7LeftOp) := by
+      simpa using e7_right_twice_neg (x := (x * e7LeftOp) * e7LeftOp)
+    _ = -(-x) := by
+      rw [e7_right_twice_neg]
+    _ = x := by
+      simpa using neg_neg_octonion x
+
+/-- No non-zero state has period 2 under repeated right e7 action. -/
+theorem e7_right_period_two_impossible {x : CO} (hx : Ne x 0) :
+    Ne ((x * e7LeftOp) * e7LeftOp) x := by
+  intro h2
+  have hneg : -x = x := by
+    simpa [e7_right_twice_neg (x := x)] using h2
+  exact hx (neg_eq_self_implies_zero x hneg)
+
+/-- No non-zero state is fixed by a single right e7 action. -/
+theorem e7_right_period_one_impossible {x : CO} (hx : Ne x 0) :
+    Ne (x * e7LeftOp) x := by
+  intro h1
+  have h2 : (x * e7LeftOp) * e7LeftOp = x := by
+    calc
+      (x * e7LeftOp) * e7LeftOp = x * e7LeftOp := by
+        simp [h1]
+      _ = x := h1
+  exact e7_right_period_two_impossible (x := x) hx h2
+
+/-- Universal C_e theorem in right-action form: every non-zero state has exact period 4. -/
+theorem universal_Ce_right_period_four (x : CO) (hx : Ne x 0) :
+    (((x * e7LeftOp) * e7LeftOp) * e7LeftOp) * e7LeftOp = x /\
+    Ne (x * e7LeftOp) x /\
+    Ne ((x * e7LeftOp) * e7LeftOp) x := by
+  exact And.intro (e7_right_four_id x)
+    (And.intro (e7_right_period_one_impossible (x := x) hx)
+      (e7_right_period_two_impossible (x := x) hx))
+
+/-- Doubled vacuum state from the Witt construction over Z. -/
+abbrev omegaDoubled : CO := (WittBasis.vacuumDoubled (R := Int))
+
+/-- -i * (2ω) written in components over Z. -/
+def negIOmegaDoubled : CO :=
+  Octonion.mk (fun k =>
+    if k == 0 then FormalComplex.mk 0 (-1)
+    else if k == 7 then FormalComplex.mk 1 0
+    else 0)
+
+set_option maxHeartbeats 800000
+
+/-- Explicit phase action of left e7 on doubled vacuum: e7·(2ω) = -i·(2ω). -/
+theorem e7Left_on_omegaDoubled :
+    e7LeftOp * omegaDoubled = negIOmegaDoubled := by
+  apply Octonion.ext
+  intro i
+  fin_cases i
+  <;> apply FormalComplex.ext
+  <;> simp only [HMul.hMul, Mul.mul, OfNat.ofNat,
+                  e7LeftOp, omegaDoubled, WittBasis.vacuumDoubled,
+                  negIOmegaDoubled, Octonion.basis,
+                  FormalComplex.add_re, FormalComplex.add_im,
+                  FormalComplex.sub_re, FormalComplex.sub_im]
+  <;> norm_num [Fin.ofNat, Fin.mk.injEq]
+
+/-- Explicit phase action of right e7 on doubled vacuum: (2ω)·e7 = -i·(2ω). -/
+theorem e7Right_on_omegaDoubled :
+    omegaDoubled * e7LeftOp = negIOmegaDoubled := by
+  apply Octonion.ext
+  intro i
+  fin_cases i
+  <;> apply FormalComplex.ext
+  <;> simp only [HMul.hMul, Mul.mul, OfNat.ofNat,
+                  e7LeftOp, omegaDoubled, WittBasis.vacuumDoubled,
+                  negIOmegaDoubled, Octonion.basis,
+                  FormalComplex.add_re, FormalComplex.add_im,
+                  FormalComplex.sub_re, FormalComplex.sub_im]
+  <;> norm_num [Fin.ofNat, Fin.mk.injEq]
+
+/-- The doubled vacuum state is non-zero. -/
+theorem omegaDoubled_ne_zero : Ne omegaDoubled 0 := by
+  intro h
+  have h0 : (omegaDoubled.c 0) = (0 : CO).c 0 := by
+    simpa using congrArg (fun z : CO => z.c 0) h
+  have h0re : (omegaDoubled.c 0).re = ((0 : CO).c 0).re := by
+    exact congrArg FormalComplex.re h0
+  have hone : (omegaDoubled.c 0).re = 1 := by
+    simp [omegaDoubled, WittBasis.vacuumDoubled]
+  have : (1 : Int) = 0 := by
+    calc
+      (1 : Int) = (omegaDoubled.c 0).re := by simpa using hone.symm
+      _ = ((0 : CO).c 0).re := h0re
+      _ = 0 := rfl
+  exact Int.one_ne_zero this
+
+/-- The doubled vacuum has exact period 4 under repeated left e7 action. -/
+theorem vacuum_orbit_exact_period_four :
+    e7LeftOp * (e7LeftOp * (e7LeftOp * (e7LeftOp * omegaDoubled))) = omegaDoubled /\
+    Ne (e7LeftOp * omegaDoubled) omegaDoubled /\
+    Ne (e7LeftOp * (e7LeftOp * omegaDoubled)) omegaDoubled := by
+  exact universal_Ce_period_four omegaDoubled omegaDoubled_ne_zero
+
+/-- The doubled vacuum also has exact period 4 under right e7 action. -/
+theorem vacuum_orbit_exact_period_four_right :
+    (((omegaDoubled * e7LeftOp) * e7LeftOp) * e7LeftOp) * e7LeftOp = omegaDoubled /\
+    Ne (omegaDoubled * e7LeftOp) omegaDoubled /\
+    Ne ((omegaDoubled * e7LeftOp) * e7LeftOp) omegaDoubled := by
+  exact universal_Ce_right_period_four omegaDoubled omegaDoubled_ne_zero
+
+/-- Lean-side doubled Furey electron state:
+    (2α₁†)·((2α₂†)·((2α₃†)·(2ω))). -/
+def fureyElectronStateDoubled : CO :=
+  (WittBasis.wittRaiseDoubled (R := Int) 0) *
+    ((WittBasis.wittRaiseDoubled (R := Int) 1) *
+      ((WittBasis.wittRaiseDoubled (R := Int) 2) * omegaDoubled))
+
+/-- -8i * (2ω†) in component form over Z.
+    This is the closed form of the doubled Furey electron state:
+    16·ψ_e = α₁†·(α₂†·(α₃†·ω)) at 16× scale = -8i·e₀ - 8·e₇. -/
+def negEightIOmegaDagDoubled : CO :=
+  Octonion.mk (fun k =>
+    if k == 0 then FormalComplex.mk 0 (-8)
+    else if k == 7 then FormalComplex.mk (-8) 0
+    else 0)
+
+/-- The doubled Furey electron state equals -8i·(2ω†):
+    α₁†·(α₂†·(α₃†·(2ω))) = negEightIOmegaDagDoubled = -8i·e₀ - 8·e₇.
+    Proof: component-by-component norm_num over ℤ. -/
+theorem fureyElectronStateDoubled_closed_form :
+    fureyElectronStateDoubled = negEightIOmegaDagDoubled := by
+  apply Octonion.ext
+  intro i
+  fin_cases i
+  <;> apply FormalComplex.ext
+  <;> simp only [HMul.hMul, Mul.mul, OfNat.ofNat,
+                  fureyElectronStateDoubled, negEightIOmegaDagDoubled,
+                  omegaDoubled, WittBasis.vacuumDoubled,
+                  WittBasis.wittRaiseDoubled, WittBasis.wittPair,
+                  FormalComplex.add_re, FormalComplex.add_im,
+                  FormalComplex.sub_re, FormalComplex.sub_im]
+  <;> norm_num [Fin.ofNat, Fin.mk.injEq]
+
+/-- The doubled Furey electron state is non-zero. -/
+theorem fureyElectronStateDoubled_ne_zero : Ne fureyElectronStateDoubled 0 := by
+  intro h
+  have h0 : (fureyElectronStateDoubled.c 7).re = ((0 : CO).c 7).re := by
+    exact congrArg (fun z : CO => (z.c 7).re) h
+  rw [show (fureyElectronStateDoubled.c 7).re = (-8 : Int) by rfl] at h0
+  have hz : ((0 : CO).c 7).re = (0 : Int) := rfl
+  rw [hz] at h0
+  norm_num at h0
+
+/-- The doubled Furey electron state has exact period 4 under left e7 action. -/
+theorem fureyElectronState_left_orbit_exact_period_four :
+    e7LeftOp * (e7LeftOp * (e7LeftOp * (e7LeftOp * fureyElectronStateDoubled))) =
+      fureyElectronStateDoubled /\
+    Ne (e7LeftOp * fureyElectronStateDoubled) fureyElectronStateDoubled /\
+    Ne (e7LeftOp * (e7LeftOp * fureyElectronStateDoubled)) fureyElectronStateDoubled := by
+  exact universal_Ce_period_four fureyElectronStateDoubled fureyElectronStateDoubled_ne_zero
+
+/-- The doubled Furey electron state has exact period 4 under right e7 action. -/
+theorem fureyElectronState_right_orbit_exact_period_four :
+    (((fureyElectronStateDoubled * e7LeftOp) * e7LeftOp) * e7LeftOp) * e7LeftOp =
+      fureyElectronStateDoubled /\
+    Ne (fureyElectronStateDoubled * e7LeftOp) fureyElectronStateDoubled /\
+    Ne ((fureyElectronStateDoubled * e7LeftOp) * e7LeftOp) fureyElectronStateDoubled := by
+  exact universal_Ce_right_period_four fureyElectronStateDoubled fureyElectronStateDoubled_ne_zero
+
 -- ============================================================
 -- Projector elements (working at doubled scale to avoid 1/2)
 --   WittBasis.vacuumDoubled  = 2s  = e₀ + i·e₇
@@ -182,6 +371,148 @@ def leftVacConjDoubled : ComplexOctonion ℤ :=
 /-- The right conjugate vacuum 2·S* has the same formula as 2·s*.
     Semantically applied from the RIGHT in the s*·(inner)·S* sandwich. -/
 abbrev rightVacConjDoubled : ComplexOctonion ℤ := leftVacConjDoubled
+
+/-- +i * (2ω†) in component form over Z, where 2ω† = e₀ - i·e₇. -/
+def posIOmegaDagDoubled : CO :=
+  Octonion.mk (fun k =>
+    if k == 0 then FormalComplex.mk 0 1
+    else if k == 7 then FormalComplex.mk 1 0
+    else 0)
+
+/-- The doubled conjugate vacuum is non-zero. -/
+theorem leftVacConjDoubled_ne_zero : Ne leftVacConjDoubled 0 := by
+  intro h
+  have h0 : (leftVacConjDoubled.c 0) = ((0 : CO).c 0) := by
+    exact congrArg (fun z : CO => z.c 0) h
+  have h0re : (leftVacConjDoubled.c 0).re = ((0 : CO).c 0).re := by
+    exact congrArg FormalComplex.re h0
+  have hone : (leftVacConjDoubled.c 0).re = 1 := by
+    simp [leftVacConjDoubled]
+  have : (1 : Int) = 0 := by
+    calc
+      (1 : Int) = (leftVacConjDoubled.c 0).re := by simpa using hone.symm
+      _ = ((0 : CO).c 0).re := h0re
+      _ = 0 := rfl
+  exact Int.one_ne_zero this
+
+set_option maxHeartbeats 800000
+
+/-- Explicit phase action of left e7 on doubled conjugate vacuum: e7·(2ω†) = +i·(2ω†). -/
+theorem e7Left_on_leftVacConjDoubled :
+    e7LeftOp * leftVacConjDoubled = posIOmegaDagDoubled := by
+  apply Octonion.ext
+  intro i
+  fin_cases i
+  <;> apply FormalComplex.ext
+  <;> simp only [HMul.hMul, Mul.mul, OfNat.ofNat,
+                  e7LeftOp, leftVacConjDoubled, posIOmegaDagDoubled,
+                  Octonion.basis,
+                  FormalComplex.add_re, FormalComplex.add_im,
+                  FormalComplex.sub_re, FormalComplex.sub_im]
+  <;> norm_num [Fin.ofNat, Fin.mk.injEq]
+
+/-- Explicit phase action of right e7 on doubled conjugate vacuum: (2ω†)·e7 = +i·(2ω†). -/
+theorem e7Right_on_leftVacConjDoubled :
+    leftVacConjDoubled * e7LeftOp = posIOmegaDagDoubled := by
+  apply Octonion.ext
+  intro i
+  fin_cases i
+  <;> apply FormalComplex.ext
+  <;> simp only [HMul.hMul, Mul.mul, OfNat.ofNat,
+                  e7LeftOp, leftVacConjDoubled, posIOmegaDagDoubled,
+                  Octonion.basis,
+                  FormalComplex.add_re, FormalComplex.add_im,
+                  FormalComplex.sub_re, FormalComplex.sub_im]
+  <;> norm_num [Fin.ofNat, Fin.mk.injEq]
+
+/-- Scaled idempotence for doubled conjugate vacuum: (2ω†)² = 2·(2ω†). -/
+theorem leftVacConjDoubled_idempotent_scaled :
+    leftVacConjDoubled * leftVacConjDoubled = WittBasis.doubleCO leftVacConjDoubled := by
+  apply Octonion.ext
+  intro i
+  fin_cases i
+  <;> apply FormalComplex.ext
+  <;> simp only [HMul.hMul, Mul.mul, OfNat.ofNat,
+                  leftVacConjDoubled, WittBasis.doubleCO,
+                  FormalComplex.add_re, FormalComplex.add_im,
+                  FormalComplex.sub_re, FormalComplex.sub_im]
+  <;> norm_num [Fin.ofNat, Fin.mk.injEq]
+
+/-- The doubled conjugate vacuum has exact period 4 under left e7 action. -/
+theorem leftVacConjDoubled_left_orbit_exact_period_four :
+    e7LeftOp * (e7LeftOp * (e7LeftOp * (e7LeftOp * leftVacConjDoubled))) = leftVacConjDoubled /\
+    Ne (e7LeftOp * leftVacConjDoubled) leftVacConjDoubled /\
+    Ne (e7LeftOp * (e7LeftOp * leftVacConjDoubled)) leftVacConjDoubled := by
+  exact universal_Ce_period_four leftVacConjDoubled leftVacConjDoubled_ne_zero
+
+/-- The doubled conjugate vacuum has exact period 4 under right e7 action. -/
+theorem leftVacConjDoubled_right_orbit_exact_period_four :
+    (((leftVacConjDoubled * e7LeftOp) * e7LeftOp) * e7LeftOp) * e7LeftOp = leftVacConjDoubled /\
+    Ne (leftVacConjDoubled * e7LeftOp) leftVacConjDoubled /\
+    Ne ((leftVacConjDoubled * e7LeftOp) * e7LeftOp) leftVacConjDoubled := by
+  exact universal_Ce_right_period_four leftVacConjDoubled leftVacConjDoubled_ne_zero
+
+/-- Lean-side doubled dual Furey electron state:
+    (2α₁)·((2α₂)·((2α₃)·(2ω†))). -/
+def fureyDualElectronStateDoubled : CO :=
+  (WittBasis.wittLowerDoubled (R := Int) 0) *
+    ((WittBasis.wittLowerDoubled (R := Int) 1) *
+      ((WittBasis.wittLowerDoubled (R := Int) 2) * leftVacConjDoubled))
+
+/-- -8i * (2ω) in component form over Z.
+    This is the closed form of the doubled dual Furey electron state:
+    16·ψ_dual = α₁·(α₂·(α₃·ω†)) at 16× scale = -8i·e₀ + 8·e₇.
+    Shows the dual sector (lowering operators from conjugate vacuum) maps to
+    a state proportional to the regular vacuum ω, connecting the two projector sectors. -/
+def negEightIOmegaDoubled : CO :=
+  Octonion.mk (fun k =>
+    if k == 0 then FormalComplex.mk 0 (-8)
+    else if k == 7 then FormalComplex.mk 8 0
+    else 0)
+
+/-- The doubled dual Furey electron state equals -8i·(2ω):
+    α₁·(α₂·(α₃·(2ω†))) = negEightIOmegaDoubled = -8i·e₀ + 8·e₇.
+    Proof: component-by-component norm_num over ℤ. -/
+theorem fureyDualElectronStateDoubled_closed_form :
+    fureyDualElectronStateDoubled = negEightIOmegaDoubled := by
+  apply Octonion.ext
+  intro i
+  fin_cases i
+  <;> apply FormalComplex.ext
+  <;> simp only [HMul.hMul, Mul.mul, OfNat.ofNat,
+                  fureyDualElectronStateDoubled, negEightIOmegaDoubled,
+                  leftVacConjDoubled, WittBasis.wittLowerDoubled, WittBasis.wittPair,
+                  FormalComplex.add_re, FormalComplex.add_im,
+                  FormalComplex.sub_re, FormalComplex.sub_im]
+  <;> norm_num [Fin.ofNat, Fin.mk.injEq]
+
+/-- The doubled dual Furey electron state is non-zero. -/
+theorem fureyDualElectronStateDoubled_ne_zero : Ne fureyDualElectronStateDoubled 0 := by
+  intro h
+  have h0 : (fureyDualElectronStateDoubled.c 7).re = ((0 : CO).c 7).re := by
+    exact congrArg (fun z : CO => (z.c 7).re) h
+  rw [show (fureyDualElectronStateDoubled.c 7).re = (8 : Int) by rfl] at h0
+  have hz : ((0 : CO).c 7).re = (0 : Int) := rfl
+  rw [hz] at h0
+  norm_num at h0
+
+/-- The doubled dual Furey electron state has exact period 4 under left e7 action. -/
+theorem fureyDualElectronState_left_orbit_exact_period_four :
+    e7LeftOp * (e7LeftOp * (e7LeftOp * (e7LeftOp * fureyDualElectronStateDoubled))) =
+      fureyDualElectronStateDoubled /\
+    Ne (e7LeftOp * fureyDualElectronStateDoubled) fureyDualElectronStateDoubled /\
+    Ne (e7LeftOp * (e7LeftOp * fureyDualElectronStateDoubled)) fureyDualElectronStateDoubled := by
+  exact universal_Ce_period_four fureyDualElectronStateDoubled fureyDualElectronStateDoubled_ne_zero
+
+/-- The doubled dual Furey electron state has exact period 4 under right e7 action. -/
+theorem fureyDualElectronState_right_orbit_exact_period_four :
+    (((fureyDualElectronStateDoubled * e7LeftOp) * e7LeftOp) * e7LeftOp) * e7LeftOp =
+      fureyDualElectronStateDoubled /\
+    Ne (fureyDualElectronStateDoubled * e7LeftOp) fureyDualElectronStateDoubled /\
+    Ne ((fureyDualElectronStateDoubled * e7LeftOp) * e7LeftOp) fureyDualElectronStateDoubled := by
+  exact universal_Ce_right_period_four fureyDualElectronStateDoubled fureyDualElectronStateDoubled_ne_zero
+
+set_option maxHeartbeats 200000
 
 -- ============================================================
 -- Muon inner state
@@ -256,5 +587,33 @@ theorem gen2State_proportional_idempotent :
   apply Octonion.ext
   intro k; fin_cases k
   all_goals rfl
+
+/-- The generation-2 state (4·ψ_μ) is non-zero. -/
+theorem gen2StateQuadruple_ne_zero : Ne gen2StateQuadruple 0 := by
+  intro h
+  have h0 : (gen2StateQuadruple.c 0).re = ((0 : CO).c 0).re := by
+    exact congrArg (fun z : CO => (z.c 0).re) h
+  rw [show (gen2StateQuadruple.c 0).re = (-2 : Int) by rfl] at h0
+  have hz : ((0 : CO).c 0).re = (0 : Int) := rfl
+  rw [hz] at h0
+  norm_num at h0
+
+set_option maxHeartbeats 800000
+
+/-- The generation-2 state inherits exact period 4 under left e7 action. -/
+theorem gen2State_left_orbit_exact_period_four :
+    e7LeftOp * (e7LeftOp * (e7LeftOp * (e7LeftOp * gen2StateQuadruple))) = gen2StateQuadruple /\
+    Ne (e7LeftOp * gen2StateQuadruple) gen2StateQuadruple /\
+    Ne (e7LeftOp * (e7LeftOp * gen2StateQuadruple)) gen2StateQuadruple := by
+  exact universal_Ce_period_four gen2StateQuadruple gen2StateQuadruple_ne_zero
+
+/-- The generation-2 state also has exact period 4 under right e7 action. -/
+theorem gen2State_right_orbit_exact_period_four :
+    (((gen2StateQuadruple * e7LeftOp) * e7LeftOp) * e7LeftOp) * e7LeftOp = gen2StateQuadruple /\
+    Ne (gen2StateQuadruple * e7LeftOp) gen2StateQuadruple /\
+    Ne ((gen2StateQuadruple * e7LeftOp) * e7LeftOp) gen2StateQuadruple := by
+  exact universal_Ce_right_period_four gen2StateQuadruple gen2StateQuadruple_ne_zero
+
+set_option maxHeartbeats 200000
 
 end CausalGraph

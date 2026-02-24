@@ -1,6 +1,6 @@
 # PROGRESS.md — COG: Proved Results
 
-**Updated:** 2026-02-23 | **Lean:** 0 sorries | **Python:** 633 tests passing
+**Updated:** 2026-02-24 | **Lean:** 0 sorries | **Python:** 648 tests passing
 
 Novel results first. Previously-known results verified in the COG framework are in §5.
 
@@ -83,7 +83,7 @@ The ring identity Q = 2/3 ⟺ B² = 2 is proved with **no reals, no analysis, no
 - Both **vacuum-independent** (n_vacuum cancels in exchange count)
 - Witt pair interconversion: e₇ maps e₁↔e₆, e₂↔e₅, e₃↔e₄
 
-**⚠ COG-local caveat:** The Furey literature places the electron at the composite state α₁α₂α₃ω†ω (all three Witt pairs simultaneously), not at a single basis element e₁. The C_e = 4 result is proved for the e₁ component orbit. Whether the full Furey state has the same period is an open question (see claims/muon_mass.yml `gap_1_electron_state`).
+**✓ Gap resolved (2026-02-24):** The full Furey state C_e = 4 is now formally proved in Lean 4 (see §4e). The C_e = 4 result holds universally for all non-zero states, including the full composite state α₁†α₂†α₃†ω. The `gap_1_electron_state` caveat in claims/muon_mass.yml is closed.
 
 ---
 
@@ -225,7 +225,12 @@ Therefore L_{e₇}⁴ = id. Period 1 and 2 would require x = 0. Hence **every no
 | `e7_left_four_id` | e7^4(x) = x for all x |
 | `e7_left_period_two_impossible` | e7^2(x) ≠ x for x ≠ 0 |
 | `e7_left_period_one_impossible` | e7(x) ≠ x for x ≠ 0 |
-| **`universal_Ce_period_four`** | **Period is exactly 4 for all x ≠ 0** |
+| **`universal_Ce_period_four`** | **Period is exactly 4 for all x ≠ 0 (left)** |
+| **`universal_Ce_right_period_four`** | **Period is exactly 4 for all x ≠ 0 (right)** |
+| `fureyElectronStateDoubled_closed_form` | α₁†·(α₂†·(α₃†·ω)) = −8i·(2ω†) at 16× scale |
+| `fureyDualElectronStateDoubled_closed_form` | α₁·(α₂·(α₃·ω†)) = −8i·(2ω) at 16× scale |
+| `gen2State_proportional_idempotent` | ψ_μ² = −4ψ_μ (muon is anti-idempotent) |
+| `gen2StateQuadruple_ne_zero` + period corollaries | Muon state inherits exact period 4 |
 
 **Witt basis properties verified (26 tests, all passing):**
 
@@ -302,6 +307,41 @@ $$S(n) = 2\left(1 - \frac{1}{n}\right)$$
 
 ---
 
+## 4h. Photon Eigenvalue Structure and Witt Operator Algebra  *(Lean 4 — novel)*
+
+**File:** [CausalGraphTheory/Spinors.lean](CausalGraphTheory/Spinors.lean), [CausalGraphTheory/WittBasis.lean](CausalGraphTheory/WittBasis.lean)
+
+**Claims:** [claims/vacuum_symmetry_from_octonions.yml](claims/vacuum_symmetry_from_octonions.yml) (CFS-003), [claims/subalgebra_detection.yml](claims/subalgebra_detection.yml) (ALG-002)
+
+### Photon operator eigenvalues
+
+The vacuum projectors ω and ω† are **eigenstates** of the photon operator e7:
+
+| Theorem | Statement | Eigenvalue |
+|---------|-----------|-----------|
+| `e7Left_on_omegaDoubled` | e7 · ω = −i · ω | −i |
+| `e7Right_on_omegaDoubled` | ω · e7 = −i · ω | −i |
+| `e7Left_on_leftVacConjDoubled` | e7 · ω† = +i · ω† | +i |
+| `e7Right_on_leftVacConjDoubled` | ω† · e7 = +i · ω† | +i |
+
+Left and right action agree for both projectors. This is a nontrivial algebraic fact: ω and ω† are in an especially symmetric position relative to e7 in the Fano structure. The ±i eigenvalue split is the algebraic origin of particle/antiparticle charge distinction — the vacuum sector (ω) carries charge −i, the conjugate vacuum (ω†) carries +i.
+
+**Corollaries (period-4 on projectors):** `vacuum_orbit_exact_period_four`, `leftVacConjDoubled_left/right_orbit_exact_period_four` — the projectors themselves have exact period 4 under both left and right e7 action, consistent with the universal theorem.
+
+**Scaled idempotence:** `leftVacConjDoubled_idempotent_scaled` — (2ω†)² = 2·(2ω†), confirming ω† is a projector at the scale used in the Lean definitions.
+
+### Witt operator nilpotency (Grassmann structure)
+
+| Theorem | Statement | Physical meaning |
+|---------|-----------|-----------------|
+| `wittLower_nilpotent` | (2αⱼ)² = 0 for j = 0,1,2 | Cannot annihilate same color-charge twice |
+| `wittRaise_nilpotent` | (2αⱼ†)² = 0 for j = 0,1,2 | Cannot create same color-charge twice |
+| `wittRaise_right_identity_scaled` | (2αⱼ†)·(2ω) = 2·(2αⱼ†) | Raising operator is idempotent on ω |
+
+These are the Grassmann/Pauli-exclusion identities at the algebraic level. All proved by `fin_cases k` + `norm_num` over ℤ (component-by-component).
+
+---
+
 ## 5. Previously Known Results, Verified in COG Framework
 
 *These confirm internal consistency of the algebraic machinery but are not novel claims.*
@@ -313,6 +353,8 @@ $$S(n) = 2\left(1 - \frac{1}{n}\right)$$
 | 7/35 associative imaginary triples | Known | `decide` |
 | Witt basis vacuum idempotent ω² = ω | Furey 2019 | `decide` (integer arith.) |
 | Muon sector anti-idempotent ψ_μ² = −ψ_μ | Furey 2019, Eq. 21 | `rfl` after `fin_cases` on Fin 8 |
+| Witt operators nilpotent: αⱼ² = (αⱼ†)² = 0 | Furey 2019 / Grassmann algebra | `fin_cases` + `norm_num` over ℤ |
+| Vacuum projectors ω, ω† are ±i eigenstates of e7 | COG-original formal proof | `fin_cases` + `norm_num` over ℤ |
 | Z3 character table orthogonality | Representation theory | NumPy (1e-10) |
 | SL(2,3): Q8 ◁ SL(2,3), quotient Z3, irreps [1,1,1,2,2,2,3] | Group theory | Structural |
 | Koide Q=2/3 ⟺ sum-of-squares identity over any ring | Koide 1982 | `ring` + `linarith` |
