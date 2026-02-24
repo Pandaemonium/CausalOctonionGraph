@@ -1,6 +1,6 @@
 # PROGRESS.md — COG: Proved Results
 
-**Updated:** 2026-02-24 | **Lean:** 0 sorries | **Python:** 648 tests passing
+**Updated:** 2026-02-24 | **Lean:** 0 sorries | **Python:** 648 tests passing | **Build:** 1730 jobs
 
 Novel results first. Previously-known results verified in the COG framework are in §5.
 
@@ -342,6 +342,53 @@ These are the Grassmann/Pauli-exclusion identities at the algebraic level. All p
 
 ---
 
+## 4i. Witt-Pair Gate Theorems and Generation Separation  *(Lean 4 - novel)*
+
+**Files:** [CausalGraphTheory/WittPairSymmetry.lean](CausalGraphTheory/WittPairSymmetry.lean), [CausalGraphTheory/GenerationSeparation.lean](CausalGraphTheory/GenerationSeparation.lean)
+
+This batch adds finite gate checks and state-separation lemmas in standalone modules.
+
+| Theorem | Result |
+|---------|--------|
+| `wittPair_cyclic_perm_is_fano_aut` | The orientation-preserving cyclic map of Witt pairs is a Fano automorphism (`true`). |
+| `wittPair_cyclic_perm_flip_not_fano_aut` | A closely-related cycle with one internal pair flip is not a Fano automorphism (`false`). |
+| `wittPair0_supporting_line` | Pair `(e6,e1)` sits on line 2. |
+| `wittPair1_supporting_line` | Pair `(e2,e5)` sits on line 4. |
+| `wittPair2_supporting_line` | Pair `(e3,e4)` sits on line 5. |
+| `wittPairs_on_distinct_lines` | Distinct Witt pairs are supported on distinct Fano lines. |
+| `gen1_ne_gen2` | Full generation-1 (Furey electron) state is not generation-2 (muon) state. |
+| `gen1dual_ne_gen2` | Dual generation-1 state is not generation-2 state. |
+| `gen1_ne_gen1dual` | Primal and dual generation-1 states are distinct. |
+
+Interpretation:
+- The "is it in Aut(Fano)?" question is now split cleanly by map choice: one natural pair-cycle is allowed, a nearby flipped variant is forbidden.
+- The generation-sector states are now formally separated as distinct microstates in Lean.
+
+---
+
+## 4j. Stepwise Furey Chain Proofs and Scalar Bridges  *(Lean 4 - novel)*
+
+**File:** [CausalGraphTheory/FureyChain.lean](CausalGraphTheory/FureyChain.lean)
+
+This batch factors the three-operator Furey constructions into explicit intermediate-state theorems.
+
+| Theorem | Statement |
+|---------|-----------|
+| `alpha3Dag_mul_omega_step` | `(2α₃†)·(2ω)` explicit intermediate state |
+| `alpha2Dag_mul_step1` | `(2α₂†)·(step1)` explicit intermediate state |
+| `alpha1Dag_mul_step2` | `(2α₁†)·(step2) = -8i·(2ω†)` |
+| `fureyElectronStateDoubled_chain` | full primal chain assembled to closed form |
+| `alpha3_mul_omegaDag_step` | `(2α₃)·(2ω†)` explicit intermediate state |
+| `alpha2_mul_dual_step1` | `(2α₂)·(dual step1)` explicit intermediate state |
+| `alpha1_mul_dual_step2` | `(2α₁)·(dual step2) = -8i·(2ω)` |
+| `fureyDualElectronStateDoubled_chain` | full dual chain assembled to closed form |
+
+Two scalar-bridge lemmas were added so the `-8i·(2ω†)` and `-8i·(2ω)` forms are now proved as actual scalar actions, not only by identical component definitions:
+- `negEightIOmegaDagDoubled_scalar_bridge`
+- `negEightIOmegaDoubled_scalar_bridge`
+
+---
+
 ## 5. Previously Known Results, Verified in COG Framework
 
 *These confirm internal consistency of the algebraic machinery but are not novel claims.*
@@ -372,5 +419,5 @@ These are the Grassmann/Pauli-exclusion identities at the algebraic level. All p
 | e₇ right-mult = photon absorption | **COG-original** | Algebraically consistent; no direct Furey or arXiv precedent found (search 2026-02-23) |
 | McRae triality → three generations | **Open (obstacles noted)** | McRae §5 explicitly flags representation-level obstruction; N_τ = 14 operator-translation result unaffected |
 | Dixon X-product orbit periods ≈ 206 | **Unverified** | Full text of hep-th/9410202 not read; abstract makes no mass-ratio claims; connection unsupported |
-| Three generations in COG (GEN-002) | **Blocked** | S₃ ⊄ Aut(O); Gresnigt mechanism (arXiv:2306.13098) requires sedenion C⊗S extension; COG operates at C⊗O only. COG-native research direction: whether S₃ acts topologically on Witt-pair directions of the Fano DAG |
+| Three generations in COG (GEN-002) | **Partial** | Z₃ rotation of Witt pairs IS in Aut(Fano): `wittPair_cyclic_perm_is_fano_aut` (proved by `decide`, WittPairSymmetry.lean). Full S₃ (including pair-swap) is NOT: `wittPair_cyclic_perm_flip_not_fano_aut`. COG has a native Z₃ generation symmetry; full S₃ requires sedenion extension. |
 | CFS Lagrangian → m_μ/m_e | **Partial** | Simple L-ratio bounded by ~2 (ruled out); N_TAU×V_μ=210 is 1.56% above 206.768 (closest integer model, no derivation yet); full spacetime-density mechanism open |

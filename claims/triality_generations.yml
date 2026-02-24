@@ -9,6 +9,12 @@ status: stub
 lean_file: CausalGraphTheory/Spinors.lean
 lean_theorems:
   - CausalGraph.generationShift_order3
+  - CausalGraph.wittPairs_on_distinct_lines
+  - CausalGraph.wittPair_cyclic_perm_is_fano_aut
+  - CausalGraph.wittPair_cyclic_perm_flip_not_fano_aut
+  - CausalGraph.gen1_ne_gen2
+  - CausalGraph.gen1dual_ne_gen2
+  - CausalGraph.gen1_ne_gen1dual
 python_test: calc/test_triality.py
 depends_on:
   - OCT-001
@@ -18,6 +24,16 @@ literature:
 notes: |
   Crucial to show that V, S+, S- are chemically distinct in the graph (e.g.,
   different tick frequencies or connectivity rules) to explain why they aren't
-  just relabelings of the same physics. Current Lean support is the order-3
-  generation cycle; full rep-level mapping remains open.
+  just relabelings of the same physics.
+
+  New finite gate checks (Lean, 2026-02-24):
+  - Distinct Witt pairs lie on distinct Fano lines (`wittPairs_on_distinct_lines`).
+  - The orientation-preserving cyclic map of Witt pairs is a Fano automorphism
+    (`wittPair_cyclic_perm_is_fano_aut`).
+  - A closely related cycle with one internal pair flip is NOT a Fano
+    automorphism (`wittPair_cyclic_perm_flip_not_fano_aut`).
+  - Generation-sector states are pairwise distinct
+    (`gen1_ne_gen2`, `gen1dual_ne_gen2`, `gen1_ne_gen1dual`).
+
+  Full Spin(8)-representation-level mapping remains open.
 blocked_reason: ""

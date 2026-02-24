@@ -11,5 +11,8 @@ import CausalGraphTheory.OctonionAlt
 import CausalGraphTheory.OctonionNonAssoc
 import CausalGraphTheory.ComplexOctonion
 import CausalGraphTheory.WittBasis
+import CausalGraphTheory.WittPairSymmetry
 import CausalGraphTheory.SubalgebraDetect
 import CausalGraphTheory.Spinors
+import CausalGraphTheory.FureyChain
+import CausalGraphTheory.GenerationSeparation

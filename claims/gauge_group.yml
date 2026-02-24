@@ -12,6 +12,7 @@ lean_theorems:
   - GaugeGroup.vacuum_stabilizer_count
   - GaugeGroup.vacuum_lines_count
   - GaugeGroup.orbit_stabilizer_check
+  - GaugeGroup.fano_aut_eq_GL3F2  # cross-check: Lean enumerate = Mathlib GL(3,ZMod2) cardinality
 python_check: calc/gauge_check.py
 python_test: calc/test_gauge.py
 depends_on:

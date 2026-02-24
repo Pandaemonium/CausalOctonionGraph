@@ -41,6 +41,11 @@ lean_theorems:
   - CausalGraph.universal_Ce_right_period_four
   # Generation-1 (electron) state: period-4 corollaries
   - CausalGraph.fureyElectronStateDoubled_closed_form
+  - CausalGraph.alpha3Dag_mul_omega_step
+  - CausalGraph.alpha2Dag_mul_step1
+  - CausalGraph.alpha1Dag_mul_step2
+  - CausalGraph.fureyElectronStateDoubled_chain
+  - CausalGraph.negEightIOmegaDagDoubled_scalar_bridge
   - CausalGraph.fureyElectronStateDoubled_ne_zero
   - CausalGraph.fureyElectronState_left_orbit_exact_period_four
   - CausalGraph.fureyElectronState_right_orbit_exact_period_four
@@ -51,6 +56,11 @@ lean_theorems:
   - CausalGraph.gen2State_right_orbit_exact_period_four
   # Dual sector: shows both projector sectors have C_e = 4
   - CausalGraph.fureyDualElectronStateDoubled_closed_form
+  - CausalGraph.alpha3_mul_omegaDag_step
+  - CausalGraph.alpha2_mul_dual_step1
+  - CausalGraph.alpha1_mul_dual_step2
+  - CausalGraph.fureyDualElectronStateDoubled_chain
+  - CausalGraph.negEightIOmegaDoubled_scalar_bridge
   - CausalGraph.fureyDualElectronStateDoubled_ne_zero
   - CausalGraph.fureyDualElectronState_left_orbit_exact_period_four
   - CausalGraph.fureyDualElectronState_right_orbit_exact_period_four

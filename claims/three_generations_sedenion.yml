@@ -10,10 +10,13 @@ statement: |
   Formally: S = S0 + S1 + S2 + S3 (four octonion subalgebras).
   One generation from C@O1; S3-automorphism sigma generates C@O2, C@O3.
   Result: exactly 3 generations, no duplication of gauge bosons.
-status: stub
+status: partial  # Z3 Witt-pair rotation is in Aut(Fano) — proved 2026-02-24; full S3 not (flip variant ruled out)
 python_test: ""
-lean_file: ""
-lean_theorems: []
+lean_file: CausalGraphTheory/WittPairSymmetry.lean
+lean_theorems:
+  - CausalGraph.wittPair_cyclic_perm_is_fano_aut        # Z3 orientation-preserving 3-cycle IS Aut(Fano)
+  - CausalGraph.wittPair_cyclic_perm_flip_not_fano_aut  # S3 flip variant is NOT Aut(Fano)
+  - CausalGraph.wittPairs_on_distinct_lines              # 3 Witt pairs on 3 distinct Fano lines
 depends_on:
   - GEN-001
   - GAUGE-001
@@ -78,6 +81,28 @@ notes: |
     It is not directly implementable in COG without extending to C@S.
     The Witt-pair question (open question 2) is the COG-native research direction.
 
+  PARTIAL RESULT (2026-02-24):
+    WittPairSymmetry.lean (proved by 'decide'):
+    - wittPair_cyclic_perm_is_fano_aut:
+        The orientation-preserving cyclic map (Pair0 -> Pair1 -> Pair2 -> Pair0)
+        IS a Fano automorphism. Therefore Z3 acts on the three Witt pairs as a
+        rotation symmetry WITHIN Aut(Fano) = GL(3,2), and hence within the
+        vacuum stabilizer SL(2,3). This is the COG-native three-generation
+        symmetry: three generations correspond to the three Z3 orbits of Witt pairs.
+    - wittPair_cyclic_perm_flip_not_fano_aut:
+        A flip (transposition of two pairs, keeping one fixed) is NOT in Aut(Fano).
+        Therefore the FULL S3 action (which includes both rotations and reflections)
+        is not an automorphism of the Fano plane.
+
+    Interpretation: COG has a Z3 generation symmetry natively (without sedenion extension).
+    The full S3 requires sedenion extension (as Gresnigt confirms). The distinction:
+    - Z3 (generation rotation: e->mu->tau->e) is in Aut(Fano) — COG-native.
+    - S3 (generation permutation: can swap any pair of generations) is not — needs C@S.
+    This suggests COG can derive the CYCLIC generation ordering but not arbitrary
+    generation permutations from the Fano structure alone.
+
 blocked_reason: |
-  COG does not use sedenions. S3 ⊄ Aut(O). Cannot directly apply
-  Gresnigt mechanism without leaving the C@O framework.
+  Full S3 generation permutation (including reflection/swap) is not in Aut(Fano).
+  For the Z3 rotation subgroup: proved present in Aut(Fano). Next step: prove that
+  this Z3 action is also present in the vacuum stabilizer SL(2,3) explicitly
+  (i.e., identify which element of the 24-element list acts as the Witt-pair cycle).

@@ -24,6 +24,8 @@
 
 import CausalGraphTheory.Fano
 import Mathlib.Data.List.Perm.Basic
+import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs
+import Mathlib.FieldTheory.Finite.Basic
 
 namespace GaugeGroup
 
@@ -125,5 +127,19 @@ theorem vacuum_lines_count : vacuumLines.length = 3 := by decide
   for the transitive action of GL(3,2) on PG(2,2).
 -/
 theorem orbit_stabilizer_check : 168 = 7 * 24 := by decide
+
+/--
+  **Cross-check: Fano automorphism count equals |GL(3, F₂)|.**
+
+  The number of Fano automorphisms (168) computed by exhaustive enumeration
+  equals the Mathlib-computed cardinality of the general linear group GL(3, ZMod 2).
+  This confirms the classical isomorphism Aut(PG(2,2)) ≅ GL(3, F₂).
+
+  Uses `native_decide` on `Fintype.card (Matrix.GeneralLinearGroup (Fin 3) (ZMod 2))`.
+-/
+theorem fano_aut_eq_GL3F2 :
+    ((List.finRange 7).permutations.filter isFanoAut).length =
+    Fintype.card (Matrix.GeneralLinearGroup (Fin 3) (ZMod 2)) := by
+  native_decide
 
 end GaugeGroup
