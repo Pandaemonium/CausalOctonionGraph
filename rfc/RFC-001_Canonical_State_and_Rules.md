@@ -234,6 +234,31 @@ futures. Discarding either branch would impose an evaluation order that
 the algebra explicitly denies. Both branches are equally valid causal
 continuations of the graph.
 
+**Superdeterminism note (RFC-002).** The "branching" described above is
+the SIMULATOR's bookkeeping technique, not a claim about ontological
+many-worlds splitting. In the superdeterministic framing:
+
+- The **initial microstate** of the universe encodes, for every future
+  interaction event, a canonical evaluation plan (left-bracket or
+  right-bracket). This is specified in RFC-002 §3.2 (`paren_tree_n`).
+- An omniscient observer who knows the full initial microstate — including
+  all evaluation plans — sees a **single, unique causal future** with no
+  branching at all. There is no moment of "choice".
+- Any apparent branching exists only from the perspective of an observer
+  with incomplete knowledge of the initial conditions. As that observer
+  learns more about the initial state, the apparent branches collapse.
+- The simulator spawns both branches as a SEARCH TECHNIQUE: it is
+  exploring the space of possible evaluation plans to find which one
+  leads to the observed physical configuration (e.g., minimum-cost
+  recurrence for the proton motif). The physical system has already
+  "chosen" via its initial conditions.
+
+Formally: `step(G_t) = G_{t+1}` is a total, deterministic function
+of the full graph state including evaluation plans (RFC-002 §6
+Invariant 1). "Both branches spawned" means the simulator tracks all
+plan-branches simultaneously for computational efficiency; nature
+follows exactly one.
+
 ---
 
 ## 4. Tick Counting and Mass

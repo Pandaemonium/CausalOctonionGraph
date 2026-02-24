@@ -58,4 +58,35 @@ notes: |
     theta = arccos(sqrt(1/(3Q))) = arccos(sqrt(1/2)) = 45.0 degrees exactly.
     The tick-rate vector lives on a great circle 45 degrees from the
     democratic axis.
+mass_observable_policy: |
+  PRIMARY OBSERVABLE (for all mass-ratio claims):
+    Gate-density rate = (tick-type gate count) / (total causal depth)
+    in the long-run deterministic-path limit (superdeterministic framing:
+    the simulation follows the single pre-encoded causal branch).
+    Formally: lim_{t -> inf} tickCount(n, t) / graphDepth(G, t)
+    This is compatible with RFC-002 superdeterminism: no branch choice is
+    made at runtime; we measure the rate along the pre-encoded path.
+
+  SECONDARY OBSERVABLES (diagnostic use only — not primary evidence):
+    - First-recurrence time: the step at which a motif returns to its
+      initial state for the first time. Useful for sanity-checking motif
+      construction but NOT the physical mass ratio. Cited as "diagnostic".
+    - Cycle count ratio: C_p / C_e at first recurrence. Historical v1
+      results (C_p/C_e = 8/3 or 11/3) are labeled FALSIFICATION_DATUM
+      in proton_electron_ratio.yml because they used first-recurrence,
+      not the thermodynamic gate-density limit.
+
+  GATE TYPE CLASSIFICATION:
+    P-type gates: propagation gates (associative subalgebra, cost 1 each).
+    S-type gates: strong/non-associative gates (Alternativity Trigger, cost 2 each).
+    The mass ratio m_p/m_e emerges from the long-run S-type gate density
+    of the proton motif relative to the P-type gate density of the electron.
+
+  NOTE ON SUPERDETERMINISTIC COMPATIBILITY:
+    The long-run rate is the natural observable in a superdeterministic
+    universe. "Long-run" here means following the single causal path encoded
+    in the initial evaluation plan (RFC-002 §3.2), not averaging over branches.
+    The simulation explores branches only as a SEARCH technique to identify
+    which plan encodes the observed physics.
+
 blocked_reason: ""

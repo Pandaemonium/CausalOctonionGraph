@@ -1,6 +1,6 @@
 # PROGRESS.md — COG: Proved Results
 
-**Updated:** 2026-02-24 | **Lean:** 0 sorries | **Python:** 648 tests passing | **Build:** 1730 jobs
+**Updated:** 2026-02-24 | **Lean:** 0 sorries | **Python:** 648 tests passing | **Build:** 1824 jobs
 
 Novel results first. Previously-known results verified in the COG framework are in §5.
 
@@ -10,16 +10,16 @@ Novel results first. Previously-known results verified in the COG framework are 
 
 **File:** [CausalGraphTheory/GaugeGroup.lean](CausalGraphTheory/GaugeGroup.lean)
 
-The generation symmetry group SL(2,3) of order 24 is **derived**, not postulated:
+The order-24 vacuum stabilizer is **derived**, not postulated (isomorphism label under review):
 
 | Theorem | What it proves | Method |
 |---------|---------------|--------|
 | `fano_aut_count` | \|Aut(Fano)\| = 168 ≅ GL(3,2) | `decide` |
-| `vacuum_stabilizer_count` | \|Stab(e₇)\| = 24 ≅ SL(2,3) | `decide` |
+| `vacuum_stabilizer_count` | \|Stab(e7)\| = 24 | `decide` |
 | `vacuum_lines_count` | Exactly 3 Fano lines through e₇ | `decide` |
 | `orbit_stabilizer_check` | 168 = 7 × 24 | `decide` |
 
-SL(2,3) = binary tetrahedral group (order 24) emerges from GL(3,2) by the orbit-stabilizer theorem applied to the vacuum axis e₇ — no group theory postulated, purely combinatorial from the locked Furey Fano convention.
+Orbit-stabilizer gives the 24-element vacuum stabilizer directly from the Fano action on the vacuum axis e7. The exact isomorphism label is tracked separately and currently under review in light of the newly formalized order-profile checks.
 
 ---
 
@@ -389,6 +389,99 @@ Two scalar-bridge lemmas were added so the `-8i·(2ω†)` and `-8i·(2ω)` form
 
 ---
 
+## 4k. Vacuum-Stabilizer Action on Witt-Pair Labels  *(Lean 4 - novel)*
+
+**File:** [CausalGraphTheory/VacuumStabilizerAction.lean](CausalGraphTheory/VacuumStabilizerAction.lean)
+
+This batch formalizes the induced action of the 24-element vacuum stabilizer on the
+three Witt-pair color labels.
+
+| Theorem | Result |
+|---------|--------|
+| `vacuumStabilizerList_count` | Reconstructed stabilizer list has size 24. |
+| `wittPair_cyclic_in_vacuumStabilizerList` | The Witt-pair cycle element is explicitly in the stabilizer. |
+| `wittPair_cyclic_inducedColorPerm` | That element induces `[0,1,2] -> [1,2,0]` on color labels. |
+| `inducedColorPerms_count` | Distinct induced color permutations count is 6. |
+| `inducedColorPermFiberSizes_eq` | Uniform fibers: each of the 6 permutations has 4 preimages in the 24-element stabilizer. |
+| `inducedColorPerms_perm_S3` | Induced action equals all permutations of three labels (S3), up to list order. |
+| `color_perm_realized_by_vacuum_stabilizer` | Every S3 label permutation has a stabilizer preimage. |
+
+Interpretation:
+- The previously-open "is Z3 present in the vacuum stabilizer explicitly?" question is now closed.
+- More strongly, the stabilizer induces full S3 on unordered Witt-pair labels.
+- This does not conflict with `wittPair_cyclic_perm_flip_not_fano_aut`: a specific pointwise flip candidate can fail even while full label-level S3 is realized by other stabilizer elements.
+
+---
+
+## 4l. Vacuum-Stabilizer Quotient Checks and Transposition Witness  *(Lean 4 - novel)*
+
+**File:** [CausalGraphTheory/VacuumStabilizerQuotient.lean](CausalGraphTheory/VacuumStabilizerQuotient.lean)
+
+This batch upgrades the stabilizer-action story from raw counts to finite structural checks.
+
+| Theorem | Result |
+|---------|--------|
+| `vacuumStabilizer_closed_comp_bool` | Stabilizer is closed under composition (exhaustive check). |
+| `idPermList_in_vacuumStabilizer` | Identity permutation is in the stabilizer. |
+| `inverseInVacuumStabilizer_spec_bool` | Two-sided inverse witness exists in stabilizer (finite search). |
+| `inducedColorPerm_hom_on_vacuumStabilizer_bool` | Induced color action passes homomorphism check. |
+| `stabilizerKernelList_count` | Kernel of induced action has size 4. |
+| `stabilizerKernel_normal_bool` | Kernel is normal under conjugation (finite check). |
+| `stabilizer_kernel_index_six` | Quotient cardinality is 6. |
+| `wittPair_swap01_in_vacuumStabilizer` | Explicit transposition witness is in the stabilizer. |
+| `wittPair_swap01_inducedColorPerm` | Witness induces `[0,1,2] -> [1,0,2]`. |
+
+Interpretation:
+- The stabilizer-to-color map is now backed by finite closure/inverse/hom/normality checks.
+- A transposition is explicitly realized, not just inferred from cardinality.
+
+---
+
+## 4m. Koide Group-Bridge Lemmas  *(Lean 4 - novel)*
+
+**File:** [CausalGraphTheory/KoideGroupBridge.lean](CausalGraphTheory/KoideGroupBridge.lean)
+
+This batch adds reusable algebraic bridge lemmas for KOIDE-001:
+
+| Theorem | Result |
+|---------|--------|
+| `wittPair_cyclic_color_powers` | Explicit Z3 cycle powers on color labels. |
+| `z3_sumprod_implies_sumsq` | From Z3 constraints: `c0^2 + c1^2 + c2^2 = 3/2`. |
+| `brannen_sos_from_z3_and_b2` | Z3 + `B^2=2` implies Koide SOS condition. |
+| `brannen_koide_from_z3_and_b2` | Pipeline corollary to Koide `Q=2/3` equation. |
+
+Interpretation:
+- The Koide bridge now has explicit reusable lemmas rather than one monolithic argument.
+- Remaining blocker is still deriving the Z3 ansatz from COG dynamics, not algebraic closure once ansatz is supplied.
+
+---
+
+## 4n. Vacuum-Stabilizer S4 Identification via Non-Vacuum Lines  *(Lean 4 - novel)*
+
+**File:** [CausalGraphTheory/VacuumStabilizerS4.lean](CausalGraphTheory/VacuumStabilizerS4.lean)
+
+This batch identifies the stabilizer type through its action on the four Fano lines not incident to e7.
+
+| Theorem | Result |
+|---------|--------|
+| `nonVacuumLines_eq_canonical` | Non-vacuum lines are exactly `[0,1,3,6]`. |
+| `inducedNonVacLinePerms_count` | 24 distinct induced permutations on that 4-line set. |
+| `inducedNonVacLinePerms_perm_S4` | Induced action equals all permutations of 4 labels (S4). |
+| `inducedNonVacLinePerm_hom_on_vacuumStabilizer_bool` | Homomorphism check passes for line-action map. |
+| `inducedNonVacLinePerm_faithful_bool` | Action is faithful (only identity acts trivially). |
+| `liftFromS4Perm_right_inv_bool` | Explicit lift S4 -> stabilizer is right-inverse to induced action. |
+| `liftFromS4Perm_left_inv_bool` | Lift is also left-inverse on stabilizer list (explicit witness). |
+| `vacuumStabilizer_action_on_nonVacLines_S4` | Combined S4-surjective + faithful action summary theorem. |
+| `vacuumStabilizer_explicit_iso_S4_bool` | Combined explicit isomorphism witness summary (two-sided inverse checks). |
+
+Interpretation:
+- In this encoding, the most direct machine-checked identification is: the 24-element vacuum stabilizer acts faithfully as S4 on non-vacuum lines.
+- This explains the order histogram `(1:1, 2:9, 3:8, 4:6)` and the involution count `9`.
+- An explicit lift map from S4 permutations back to stabilizer elements is now formalized and validated by two-sided inverse checks.
+- The prior SL(2,3) label remains under review pending an explicit isomorphism proof in this formalization.
+
+---
+
 ## 5. Previously Known Results, Verified in COG Framework
 
 *These confirm internal consistency of the algebraic machinery but are not novel claims.*
@@ -403,7 +496,7 @@ Two scalar-bridge lemmas were added so the `-8i·(2ω†)` and `-8i·(2ω)` form
 | Witt operators nilpotent: αⱼ² = (αⱼ†)² = 0 | Furey 2019 / Grassmann algebra | `fin_cases` + `norm_num` over ℤ |
 | Vacuum projectors ω, ω† are ±i eigenstates of e7 | COG-original formal proof | `fin_cases` + `norm_num` over ℤ |
 | Z3 character table orthogonality | Representation theory | NumPy (1e-10) |
-| SL(2,3): Q8 ◁ SL(2,3), quotient Z3, irreps [1,1,1,2,2,2,3] | Group theory | Structural |
+| Vacuum stabilizer order profile (24 elements): `(1:1, 2:9, 3:8, 4:6)` | Finite group diagnostics | `native_decide` |
 | Koide Q=2/3 ⟺ sum-of-squares identity over any ring | Koide 1982 | `ring` + `linarith` |
 | Mass monotonicity: more ticks → more mass | COG axiom | Lean structural |
 
@@ -413,11 +506,12 @@ Two scalar-bridge lemmas were added so the `-8i·(2ω†)` and `-8i·(2ω)` form
 
 | Claim | Status | Note |
 |-------|--------|------|
-| Koide: COG update rules force Z₃ ansatz | **Blocked** | Need SL(2,3) graph symmetry → ∑c_k=0, ∑c_jc_k=−3/4 |
+| Koide: COG update rules force Z3 ansatz | **Blocked** | Need COG graph symmetry derivation -> sum c_k = 0, sum c_j*c_k = -3/4 (algebraic bridge lemmas now proved once ansatz is given) |
 | m_μ/m_e from DAG orbit length | **Partial** | vertex_cost_ratio=15 confirmed lower bound; timing_ratio_max=11.75 (D=0); gap ~13.78× to 206.768; full mechanism open |
 | C_e for the full Furey electron state α₁α₂α₃ω†ω | **Resolved** | Universal C_e = 4 theorem: L_{e₇}² = −id by left-alternative law; ALL non-zero states have period 4 (see §4e, muon_mass.yml gap_1_electron_state) |
 | e₇ right-mult = photon absorption | **COG-original** | Algebraically consistent; no direct Furey or arXiv precedent found (search 2026-02-23) |
 | McRae triality → three generations | **Open (obstacles noted)** | McRae §5 explicitly flags representation-level obstruction; N_τ = 14 operator-translation result unaffected |
 | Dixon X-product orbit periods ≈ 206 | **Unverified** | Full text of hep-th/9410202 not read; abstract makes no mass-ratio claims; connection unsupported |
-| Three generations in COG (GEN-002) | **Partial** | Z₃ rotation of Witt pairs IS in Aut(Fano): `wittPair_cyclic_perm_is_fano_aut` (proved by `decide`, WittPairSymmetry.lean). Full S₃ (including pair-swap) is NOT: `wittPair_cyclic_perm_flip_not_fano_aut`. COG has a native Z₃ generation symmetry; full S₃ requires sedenion extension. |
+| Three generations in COG (GEN-002) | **Partial** | Label-level action is stronger now: the vacuum stabilizer induces full S3 on the 3 Witt-pair labels (`inducedColorPerms_perm_S3`) and contains an explicit transposition witness (`wittPair_swap01_inducedColorPerm`). Remaining open issue is a state-level generation operator, not label-level S3 existence. |
+| Vacuum stabilizer isomorphism label | **Under review** | Finite proof shows order profile `(1:1, 2:9, 3:8, 4:6)` and involution count `9` (`vacuumStabilizer_involution_count`). The historical `SL(2,3)` label is not yet machine-verified in this encoding, and `SL(2,3)/Q8 ~= Z3` is therefore not currently formalized. |
 | CFS Lagrangian → m_μ/m_e | **Partial** | Simple L-ratio bounded by ~2 (ruled out); N_TAU×V_μ=210 is 1.56% above 206.768 (closest integer model, no derivation yet); full spacetime-density mechanism open |

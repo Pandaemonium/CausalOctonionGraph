@@ -6,7 +6,8 @@ statement: |
       R(N) = (trapped color-cycle operations) / (total Fano operations)
   as the causal graph size N → infinity, where:
   - "trapped" operations are those confined to the 24-element vacuum
-    stabilizer SL(2,3) (the discrete SU(3) color subgroup), and
+    stabilizer S4 (the discrete color subgroup; order 24, identified as
+    S4 in this encoding — see RFC-017), and
   - "total Fano operations" span the full 168-element GL(3,2).
 
   COG prediction: R(infinity) = 24/168 = 1/7 ≈ 0.14286 provides a
@@ -34,9 +35,12 @@ notes: |
     alpha_s → 0 as scale → infinity   (asymptotic freedom)
 
   FANO GROUP DATA (from GAUGE-001):
-    |GL(3,2)| = 168   (full Fano automorphism group = global gauge)
-    |SL(2,3)| = 24    (vacuum stabilizer = discrete SU(3) color group)
+    |GL(3,2)| = 168      (full Fano automorphism group = global gauge)
+    |stabilizer(e7)| = 24  (vacuum stabilizer; order proved in Lean)
     ratio = 24/168 = 1/7 ≈ 0.14286
+
+  STABILIZER IDENTITY (2026-02-24): S4, not SL(2,3). See RFC-017.
+    The ratio 24/168 = 1/7 is unaffected; only the group label changes.
 
   GAP ANALYSIS:
     Leading-order estimate:   1/7 ≈ 0.14286
@@ -63,3 +67,4 @@ notes: |
     Step 3: Check whether R(N) converges to 0.1180 from above as
             N → infinity, or whether a scale-matching argument is needed.
 blocked_reason: "Leading-order candidate identified (1/7) but 21% gap unresolved."
+

@@ -51,8 +51,16 @@ namespace CausalGraph
 def fanoAutOrder : Nat := 168
 
 /--
-  The order of the vacuum stabilizer SL(2,3) ≅ 2.A₄.
+  The order of the vacuum stabilizer (24-element subgroup of GL(3,2)).
   Proved in GaugeGroup.vacuum_stabilizer_count.
+
+  WARNING (2026-02-24): The group IDENTITY is under review.
+  VacuumStabilizerStructure.lean proves the element-order histogram is
+  (1:1, 2:9, 3:8, 4:6), which matches S4, not SL(2,3) (which has only
+  1 involution). VacuumStabilizerS4.lean provides an explicit iso witness
+  to S4. Any derivation pipeline that relies on SL(2,3) structure
+  (e.g., SL(2,3)/Q8 ≅ Z3) must be treated as UNSTABLE until reconciled.
+  The order-24 count itself is not in dispute.
 -/
 def vacuumStabOrder : Nat := 24
 
@@ -163,8 +171,9 @@ def alphaCandidate : ℚ :=
 
   TODO: Formalize the electroweak projector on the Witt basis.
 -/
+-- TARGET ENCODING STUB: 3/13 is numerically suggestive but NOT derived from the algebra.
+-- Do not cite this as a derivation. The formula must be forced by C⊗O structure first.
 def weinbergCandidate : ℚ :=
-  -- Tentative: 3/13 (see notes above — not yet derived, only numerically suggestive)
   3 / 13
 
 -- ============================================================
@@ -201,17 +210,23 @@ def protonMotifTickOverheadTarget : Nat := 1836
 def leptonMotifTickOverhead : Nat := 1
 
 /--
-  **Proton-to-electron ratio: stub.**
+  **Proton-to-electron ratio: tautological stub — NOT a derivation.**
 
-  States the research target: the ratio of proton to electron tick
-  overhead should equal μ ≈ 1836.  This is not proved; it awaits the
-  formal proton motif definition (MU-001).
+  WARNING: This theorem is trivially satisfied by setting
+  tickOverheadProton = protonMotifTickOverheadTarget = 1836 and
+  tickOverheadElectron = 1. It encodes only the TARGET value, not a
+  derivation of it from COG algebra. It is a research placeholder.
+  Do NOT cite this as evidence that the mass ratio has been derived.
+
+  The actual research goal (MU-001): prove that the COG branching
+  simulation, run from the locked initial conditions in RFC-001 §4.3
+  with the locked update rule, produces C_p/C_e = 1836.
+  Current status: C_p/C_e = 8/3 ≈ 2.667 (FALSIFIED, v1 motif).
 -/
+-- TARGET ENCODING STUB: tautological, not a physical derivation.
 theorem mu_tick_ratio_stub :
     ∃ (tickOverheadProton tickOverheadElectron : Nat),
       tickOverheadElectron ≠ 0 ∧
-      -- The ratio should be approximately 1836.
-      -- The exact equality is the research target.
       tickOverheadProton / tickOverheadElectron = protonMotifTickOverheadTarget :=
   ⟨protonMotifTickOverheadTarget, leptonMotifTickOverhead,
     Nat.one_ne_zero,

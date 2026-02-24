@@ -7,11 +7,15 @@ statement: |
 status: partial  # brannen_b_squared proved 2026-02-22; Z3 ansatz from COG still blocked
 lean_file: CausalGraphTheory/Koide.lean
 lean_theorems:
-  - koide_algebraic_iff             # proved
-  - koide_ratio_is_two_thirds_of_sos  # proved
-  - sos_of_koide_ratio_is_two_thirds  # proved
-  - brannen_b_squared               # proved 2026-02-22 (B^2=2 from Koide+Z3 ansatz)
-  - koide_lepton_sos_stub           # stub — COG derivation of Z3 ansatz still blocked
+  - koide_algebraic_iff
+  - koide_ratio_is_two_thirds_of_sos
+  - sos_of_koide_ratio_is_two_thirds
+  - brannen_b_squared
+  - CausalGraph.z3_sumprod_implies_sumsq
+  - CausalGraph.brannen_sos_from_z3_and_b2
+  - CausalGraph.brannen_koide_from_z3_and_b2
+  - CausalGraph.wittPair_cyclic_color_powers
+  - koide_lepton_sos_stub
 python_test: calc/koide.py
 depends_on:
   - MASS-001
@@ -29,11 +33,21 @@ notes: |
     Z3 phase spacing forces Q = 1/3 + B²/(6A²).
     Q = 2/3  requires  B = A√2  (a SEPARATE constraint beyond Z3).
 
-  WHAT SL(2,3) / Z3 ACTUALLY FORCES:
-    The 24-element vacuum stabilizer SL(2,3) contains the Z3 rotation
-    (equal phase spacing 2π/3 between the three Witt color planes).
-    This forces Σf_k = 3A (the cosine terms cancel), which rules out
+  WHAT S4 / INDUCED Z3 ACTUALLY FORCES:
+    In this encoding, the 24-element vacuum stabilizer is identified as S4.
+    Its induced action on Witt-pair labels contains the Z3 rotation
+    (equal phase spacing 2*pi/3 between the three Witt color planes).
+    This forces sum f_k = 3A (the cosine terms cancel), which rules out
     Q = 1 but does NOT fix the ratio B/A.
+
+    Lean hooks:
+    - `CausalGraph.wittPair_cyclic_in_vacuumStabilizerList`
+    - `CausalGraph.wittPair_cyclic_inducedColorPerm`
+    - `CausalGraph.inducedColorPerms_perm_S3`
+    - `CausalGraph.wittPair_cyclic_color_powers`
+    - `CausalGraph.z3_sumprod_implies_sumsq`
+    - `CausalGraph.brannen_sos_from_z3_and_b2`
+    - `CausalGraph.brannen_koide_from_z3_and_b2`
 
   GEOMETRIC DERIVATION OF B/A = √2 (unblocking candidate, 2026-02-22):
     The constraint B/A = √2 is PURE GEOMETRY of the 3-generation mass space.
@@ -131,10 +145,11 @@ proved_results:
     python_test: calc/test_koide_sl23.py::TestPositivityBand
 
 previously_blocked_reason: |
-  Z3 symmetry (supplied by SL(2,3) ⊂ GL(3,2)) forces equal phase spacing
-  between the three Witt color-plane tick rates, but does NOT force the ratio
-  B/A = √2 required for Q = 2/3 in the Brannen parametrization.  The previous
-  claim that "SL(2,3) forces cos²(θ) = 1/2 yielding Q = 2/3" was incorrect
-  and has been retracted from calc/koide.py.  Unblocked 2026-02-22 by the
+  Z3 symmetry (supplied by the induced label action of the S4 stabilizer)
+  forces equal phase spacing between the three Witt color-plane tick rates,
+  but does NOT force the ratio B/A = sqrt(2) required for Q = 2/3 in the Brannen
+  parametrization. The previous claim that "group symmetry alone forces
+  cos^2(theta) = 1/2 yielding Q = 2/3" was incorrect and has been retracted from
+  calc/koide.py. Unblocked 2026-02-22 by the
   geometric realization that √2 is the normalization of the orthogonal
   complement to the democratic axis, derivable from J₃(𝕆) circulant structure.

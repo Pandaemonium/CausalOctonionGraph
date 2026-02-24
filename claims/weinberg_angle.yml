@@ -61,4 +61,14 @@ notes: |
     Define the electroweak projector P_EW on the Witt basis exactly.
     Compute Tr(P_U1) / Tr(P_EW) as a ratio of discrete traces over the
     24-element vacuum stabilizer representation.
-blocked_reason: "No formula yet identified matching 0.2312. Defer until GAUGE-001 mechanism is fully formalized."
+blocked_reason: |
+  1. No formula yet identified matching 0.2312. Defer until GAUGE-001 mechanism
+     is fully formalized.
+  2. STABILIZER IDENTITY INSTABILITY (2026-02-24): Any candidate formula that
+     uses SL(2,3)-specific structure (e.g., SL(2,3)/Q8 quotients, the unique
+     central involution of SL(2,3)) must be treated as UNSTABLE. Lean evidence
+     proves the vacuum stabilizer is S4, not SL(2,3) (see GAUGE-001, RFC-017).
+     Derivations using only |stabilizer|=24 or Witt-basis dimension counts remain
+     valid. The "3/(3+10)" candidate does not depend on group identity so is
+     unaffected by this instability.
+  See RFC-017 for the reconciliation timeline.

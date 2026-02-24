@@ -3,7 +3,7 @@ title: "Fine-structure constant from C⊗O topological phase penalty"
 statement: |
   There exists a purely combinatorial formula F(C⊗O) built from the
   group-theoretic data of the C⊗O algebra (the Fano automorphism group
-  GL(3,2) of order 168, its vacuum stabilizer SL(2,3) of order 24, and
+  GL(3,2) of order 168, its vacuum stabilizer of e7 (order 24, identified as S4 in this encoding), and
   the U(1) causal cycle structure) such that:
       F(C⊗O) = alpha ≈ 1/137.035999
   where alpha is the fine-structure constant (electromagnetic coupling
@@ -35,8 +35,11 @@ notes: |
 
   FANO GROUP DATA (from GAUGE-001):
     |GL(3,2)| = |Aut(PG(2,2))| = 168
-    |Stab(e7)| = |SL(2,3)| = 24
+    |Stab(e7)| = 24   (order proved in Lean; identified as S4 in this encoding; see RFC-017)
     orbit size = 7  (transitive on 7 Fano points)
+
+  STABILIZER IDENTITY (2026-02-24): S4, not SL(2,3). See RFC-017.
+    No ALPHA-001 candidate formula uses stabilizer structure, so status is unaffected.
 
   SIMPLE CANDIDATES (none match to better than 1%):
     24/168       = 1/7  ≈ 0.14286    (alpha_s candidate, not alpha)
@@ -57,3 +60,4 @@ notes: |
     principles and THEN check whether it matches 1/137; do not
     reverse-engineer a formula from the answer.
 blocked_reason: "No candidate formula yet identified. Mark as research target."
+

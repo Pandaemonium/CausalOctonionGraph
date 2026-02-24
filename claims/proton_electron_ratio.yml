@@ -54,9 +54,9 @@ notes: |
     The physical ratio is ≈ 1836.15267, an irrational number.
 
     In the COG framework, MASS IS GATE DENSITY (thermodynamic limit):
-      - Electron mass ~ sparse density of P₁ (propagation) gates
+      - Electron mass ~ sparse density of P? (propagation) gates
         (the L1 associative cycle fires 1 gate per tick, 3 ticks/cycle).
-      - Proton mass ~ dense density of S₁/S₂ (strong) gates
+      - Proton mass ~ dense density of S?/S₂ (strong) gates
         (the color-singlet cycle fires many non-associative gates with
         cost 2 each, over a much longer causal chain).
     The ratio mu ≈ 1836.15 emerges as the thermodynamic LIMIT of the
@@ -66,7 +66,7 @@ notes: |
     1. Implement electron motif with sign tracking: track (OctIdx, sign).
        Gate density = 1 gate/tick = 1.0 (associative, cost 1 each hop).
     2. Implement proton motif with cyclic exchange C1→C2→C3→C1 and sign
-       tracking. Count total S₁/S₂ gate firings over N steps.
+       tracking. Count total S?/S₂ gate firings over N steps.
     3. Run N steps. Compute gate_density(proton) / gate_density(electron).
     4. Let the ratio CONVERGE to a thermodynamic limit. Do NOT stop at
        first recurrence. Run until the ratio stabilizes.
@@ -129,10 +129,11 @@ simulation_records:
       - "Does 1836 require running until the gate density ratio has converged
          to a thermodynamic limit? (Gemini 2026-02-22: it is a statistical
          limit, not an integer cycle period.)"
-  next_action: |
-    RFC-009 drafted (2026-02-22). Two structural fixes required before re-run:
-    (1) Add signed state tracking (OctIdx, sign) — see RFC-009 §2b.4.
-    (2) Fix proton exchange schedule to cyclic C1→C2→C3→C1 — see RFC-009 §3.
-    (3) Switch simulation from recurrence-counting to gate-density measurement.
-    Re-run calc/mass_drag.py and report the gate-density ratio as the revised
-    mu_COG datum. Do NOT claim match until the ratio has converged.
+next_action: |
+  RFC-009 drafted (2026-02-22). Two structural fixes required before re-run:
+  (1) Add signed state tracking (OctIdx, sign) — see RFC-009 §2b.4.
+  (2) Fix proton exchange schedule to cyclic C1→C2→C3→C1 — see RFC-009 §3.
+  (3) Switch simulation from recurrence-counting to gate-density measurement.
+  Re-run calc/mass_drag.py and report the gate-density ratio as the revised
+  mu_COG datum. Do NOT claim match until the ratio has converged.
+

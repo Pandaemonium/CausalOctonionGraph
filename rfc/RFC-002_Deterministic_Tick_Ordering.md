@@ -1,15 +1,36 @@
 # RFC-002: Deterministic Tick Ordering and Canonical Parenthesization
 
-**Status:** Draft  
-**Module:** `COG.Core.TickOrder` and `COG.Core.Dynamics`  
-**Dependencies:** `rfc/RFC-001_Canonical_State_and_Rules.md`, `rfc/CONVENTIONS.md`  
+**Status:** Active — Architecture Draft (2026-02-24)
+**Module:** `COG.Core.TickOrder` and `COG.Core.Dynamics`
+**Dependencies:** `rfc/RFC-001_Canonical_State_and_Rules.md`, `rfc/CONVENTIONS.md`
 
 ## 1. Executive Summary
-This RFC removes runtime ambiguity from non-associative updates.  
-Every node's evaluation order and parenthesization is fixed by metadata already present in the initial microstate.  
+This RFC removes runtime ambiguity from non-associative updates.
+Every node's evaluation order and parenthesization is fixed by metadata already present in the initial microstate.
 The simulator must not introduce new ordering information while running.
 
 Goal: make `step` a total deterministic function of prior state only.
+
+**Superdeterminism guarantee.** The COG model is superdeterministic:
+given the **complete** initial microstate (node states + edge operators +
+evaluation plans), the entire future causal history is uniquely determined.
+No "choice" is ever made at runtime. Any apparent branching (RFC-001 §3.3)
+is an artifact of a simulator that does not have access to the full
+evaluation plan and must therefore explore all branches. An omniscient
+observer — or equivalently, a simulation with the full initial evaluation
+plan embedded — sees only one future with no branching. Specifically:
+
+- "Branching" = the simulator's search through the space of evaluation
+  plans that are compatible with the given node states and edge operators.
+- "Physical reality" = the specific evaluation plan that was embedded in
+  the initial conditions of this particular causal history.
+- "Canonical future event ordering" = the total ordering on events forced
+  by `ordered_edges_n` and `paren_tree_n` (§3.2 below), which are
+  immutable after initialization.
+
+This framing is consistent with RFC-006 (no free parameters) and the
+Prime Directive (no continuum, no probability amplitudes): the universe
+is an algorithm running on a fixed input, not a probabilistic process.
 
 ---
 

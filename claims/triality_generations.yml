@@ -12,6 +12,23 @@ lean_theorems:
   - CausalGraph.wittPairs_on_distinct_lines
   - CausalGraph.wittPair_cyclic_perm_is_fano_aut
   - CausalGraph.wittPair_cyclic_perm_flip_not_fano_aut
+  - CausalGraph.vacuumStabilizerList_count
+  - CausalGraph.wittPair_cyclic_in_vacuumStabilizerList
+  - CausalGraph.wittPair_cyclic_inducedColorPerm
+  - CausalGraph.inducedColorPerms_count
+  - CausalGraph.inducedColorPermFiberSizes_eq
+  - CausalGraph.inducedColorPerms_perm_S3
+  - CausalGraph.color_perm_realized_by_vacuum_stabilizer
+  - CausalGraph.inducedColorPerm_hom_on_vacuumStabilizer_bool
+  - CausalGraph.stabilizerKernelList_count
+  - CausalGraph.stabilizerKernel_normal_bool
+  - CausalGraph.stabilizer_kernel_index_six
+  - CausalGraph.wittPair_swap01_in_vacuumStabilizer
+  - CausalGraph.wittPair_swap01_inducedColorPerm
+  - CausalGraph.inducedNonVacLinePerms_perm_S4
+  - CausalGraph.inducedNonVacLinePerm_faithful_bool
+  - CausalGraph.vacuumStabilizer_explicit_iso_S4_bool
+  - CausalGraph.wittPair_cyclic_color_powers
   - CausalGraph.gen1_ne_gen2
   - CausalGraph.gen1dual_ne_gen2
   - CausalGraph.gen1_ne_gen1dual
@@ -34,6 +51,22 @@ notes: |
     automorphism (`wittPair_cyclic_perm_flip_not_fano_aut`).
   - Generation-sector states are pairwise distinct
     (`gen1_ne_gen2`, `gen1dual_ne_gen2`, `gen1_ne_gen1dual`).
+  - Vacuum-stabilizer action on Witt-pair labels is explicit and exhaustive:
+    `wittPair_cyclic_in_vacuumStabilizerList`, `wittPair_cyclic_inducedColorPerm`,
+    `inducedColorPerms_count`, `inducedColorPerms_perm_S3`,
+    `color_perm_realized_by_vacuum_stabilizer`.
+  - Structural quotient checks landed:
+    `inducedColorPerm_hom_on_vacuumStabilizer_bool`,
+    `stabilizerKernelList_count`, `stabilizerKernel_normal_bool`,
+    `stabilizer_kernel_index_six`.
+  - A concrete transposition witness exists inside the stabilizer:
+    `wittPair_swap01_in_vacuumStabilizer` and
+    `wittPair_swap01_inducedColorPerm`.
+  - The same stabilizer also acts as full S4 on the 4 non-vacuum Fano lines,
+    with faithful action (`inducedNonVacLinePerms_perm_S4`,
+    `inducedNonVacLinePerm_faithful_bool`).
+  - An explicit list-level S4 isomorphism witness is now present
+    (`vacuumStabilizer_explicit_iso_S4_bool`).
 
   Full Spin(8)-representation-level mapping remains open.
 blocked_reason: ""

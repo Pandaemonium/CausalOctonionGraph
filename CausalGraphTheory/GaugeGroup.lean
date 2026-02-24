@@ -4,8 +4,17 @@
 
   Establishes the gauge symmetry group of the Fano plane:
   - The automorphism group of PG(2,2) has order 168 ≅ GL(3,2) ≅ PSL(2,7)
-  - The stabilizer of the vacuum axis (point 6 = e₇) has order 24 ≅ SL(2,3)
+  - The stabilizer of the vacuum axis (point 6 = e₇) has order 24
   - Exactly 3 lines pass through the vacuum axis (the Witt basis pairs)
+
+  WARNING (2026-02-24): The stabilizer identity "≅ SL(2,3)" in older
+  docs and claims is UNDER REVIEW. VacuumStabilizerStructure.lean (Codex
+  batch, 2026-02-24) proves the element-order histogram of the 24-element
+  stabilizer is (1:1, 2:9, 3:8, 4:6), which matches S4 (symmetric group
+  on 4 elements), NOT SL(2,3) (which has order-histogram (1:1, 2:1, 3:8,
+  4:6, 6:8) — only 1 involution). VacuumStabilizerS4.lean provides an
+  explicit two-sided isomorphism witness. Until a reconciliation RFC is
+  written, treat all SL(2,3)-dependent claims as UNSTABLE.
 
   Physical interpretation:
   - The 168-element group is the discrete analogue of the gauge symmetry

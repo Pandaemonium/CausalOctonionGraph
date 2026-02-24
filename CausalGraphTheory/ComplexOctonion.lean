@@ -113,6 +113,15 @@ instance : CommRing (FormalComplex R) where
 @[simp] lemma mul_re (z w : FormalComplex R) : (z * w).re = z.re * w.re - z.im * w.im := rfl
 @[simp] lemma mul_im (z w : FormalComplex R) : (z * w).im = z.re * w.im + z.im * w.re := rfl
 
+/-- FormalComplex R has decidable equality whenever R does.
+    Required so that `native_decide` can evaluate CO component equalities. -/
+instance instDecidableEq [DecidableEq R] : DecidableEq (FormalComplex R) :=
+  fun a b =>
+    if hre : a.re = b.re then
+      if him : a.im = b.im then isTrue (FormalComplex.ext hre him)
+      else isFalse (fun h => him (congrArg FormalComplex.im h))
+    else isFalse (fun h => hre (congrArg FormalComplex.re h))
+
 end FormalComplex
 
 /--

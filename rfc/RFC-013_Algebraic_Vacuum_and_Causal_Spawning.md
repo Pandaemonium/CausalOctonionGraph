@@ -103,7 +103,7 @@ representation breaks down.
 Every node state is a NumPy complex128 array of length 8:
 
 ```python
-# state[k] = coefficient of eₖ (complex number)
+# state[k] = coefficient of eₖ (complex number) 
 # Basis conventions (1-indexed):
 #   e0 = scalar identity, index 0
 #   e1..e6 = imaginary units, indices 1..6

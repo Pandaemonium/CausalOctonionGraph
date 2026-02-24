@@ -3,9 +3,12 @@ title: "Fano automorphism group (discrete GL(3,2) / vacuum SU(3))"
 statement: |
   The automorphism group of the Fano plane PG(2,2) has order 168,
   isomorphic to GL(3,2) ≅ PSL(2,7). The stabilizer of the vacuum
-  axis e₇ (Fano point 6) has order 24, isomorphic to SL(2,3) ≅ 2.A₄.
-  Exactly 3 Fano lines pass through e₇; these are the Witt basis lines.
-status: proved
+  axis e₇ (Fano point 6) has order 24, isomorphic to S4 in this
+  encoding (Lean-proved via element-order histogram and explicit
+  isomorphism witness; the historical SL(2,3) label is inapplicable
+  in this encoding — see RFC-017). Exactly 3 Fano lines pass through
+  e₇; these are the Witt basis lines.
+status: partial
 lean_file: CausalGraphTheory/GaugeGroup.lean
 lean_theorems:
   - GaugeGroup.fano_aut_count
@@ -13,6 +16,33 @@ lean_theorems:
   - GaugeGroup.vacuum_lines_count
   - GaugeGroup.orbit_stabilizer_check
   - GaugeGroup.fano_aut_eq_GL3F2  # cross-check: Lean enumerate = Mathlib GL(3,ZMod2) cardinality
+  - CausalGraph.vacuumStabilizerList_count
+  - CausalGraph.wittPair_cyclic_in_vacuumStabilizerList
+  - CausalGraph.wittPair_cyclic_inducedColorPerm
+  - CausalGraph.inducedColorPerms_count
+  - CausalGraph.inducedColorPermFiberSizes_eq
+  - CausalGraph.inducedColorPerms_perm_S3
+  - CausalGraph.color_perm_realized_by_vacuum_stabilizer
+  - CausalGraph.inducedColorPerm_hom_on_vacuumStabilizer_bool
+  - CausalGraph.stabilizerKernelList_count
+  - CausalGraph.stabilizerKernel_normal_bool
+  - CausalGraph.stabilizer_kernel_index_six
+  - CausalGraph.wittPair_swap01_in_vacuumStabilizer
+  - CausalGraph.wittPair_swap01_inducedColorPerm
+  - CausalGraph.vacuumStabilizer_order_histogram
+  - CausalGraph.vacuumStabilizer_involution_count
+  - CausalGraph.vacuumStabilizer_not_single_involution
+  - CausalGraph.nonVacuumLines_eq_canonical
+  - CausalGraph.inducedNonVacLinePerms_count
+  - CausalGraph.inducedNonVacLinePerms_perm_S4
+  - CausalGraph.inducedNonVacLinePerm_hom_on_vacuumStabilizer_bool
+  - CausalGraph.inducedNonVacLinePerm_faithful_bool
+  - CausalGraph.inducedNonVacLinePerm_injective_bool
+  - CausalGraph.liftFromS4Perm_mem_vacuumStabilizer_bool
+  - CausalGraph.liftFromS4Perm_right_inv_bool
+  - CausalGraph.liftFromS4Perm_left_inv_bool
+  - CausalGraph.vacuumStabilizer_action_on_nonVacLines_S4
+  - CausalGraph.vacuumStabilizer_explicit_iso_S4_bool
 python_check: calc/gauge_check.py
 python_test: calc/test_gauge.py
 depends_on:
@@ -24,12 +54,46 @@ literature:
   - "RFC-001 §4.1"
 notes: |
   168 = 2³ × 3 × 7 = |GL(3,2)| = |PSL(2,7)|.
-  Vacuum stabilizer order 24 = |SL(2,3)| = |2.A₄|.
+  Vacuum stabilizer order is 24; in this encoding the stabilizer is identified with S4 (see RFC-017).
   Orbit-stabilizer: |GL(3,2)| = 7 × 24 = 168. ✓
-  The 3 vacuum lines are the Witt basis pairs from CONVENTIONS.md §3:
-    Line 2: {e₁, e₇, e₆}  (pair e₆, e₁)
-    Line 4: {e₂, e₅, e₇}  (pair e₂, e₅)
-    Line 5: {e₃, e₄, e₇}  (pair e₃, e₄)
+  The 3 vacuum lines are the Witt basis pairs from CONVENTIONS.md section 5.2:
+    Line 2: {e1, e7, e6}  (pair e6, e1)
+    Line 4: {e2, e5, e7}  (pair e2, e5)
+    Line 5: {e3, e4, e7}  (pair e3, e4)
   The 24-element vacuum stabilizer is the discrete SU(3) acting on the
   color-charged sector; the 7-element orbit recovers the 7 color phases.
-blocked_reason: ""
+
+  Additional finite action checks (VacuumStabilizerAction.lean):
+  - The Witt-pair cycle element is explicitly in the stabilizer list.
+  - The induced action on 3 Witt-pair labels is exactly S3 (all 6 permutations).
+
+  Additional quotient/structure checks (VacuumStabilizerQuotient.lean, VacuumStabilizerStructure.lean):
+  - induced action passes finite homomorphism checks;
+  - kernel size is 4, normality check passes, index is 6;
+  - explicit transposition witness is present in the stabilizer action;
+  - order histogram is [(1,1), (2,9), (4,6), (3,8)] with 9 involutions.
+
+  S4 action identification (VacuumStabilizerS4.lean):
+  - The 4 non-vacuum lines are canonically [0,1,3,6].
+  - The stabilizer induces all 24 permutations on these 4 lines (exact S4 action).
+  - Faithfulness check passes (only identity acts trivially on the 4-line set).
+  - Explicit lift map S4 -> stabilizer is defined and passes left/right inverse checks.
+
+  Status note (2026-02-24):
+  - The stabilizer order-24 result is proved.
+  - The specific isomorphism label issue is resolved in this encoding: S4 is supported by the order profile and explicit list-level action checks; the remaining gap is a direct link theorem between GaugeGroup.lean and VacuumStabilizerS4.lean artifacts.
+blocked_reason: |
+  Statement updated (2026-02-24) to reflect S4 identification (human-approved).
+  Remaining open items:
+
+  1. Link VacuumStabilizerS4.lean explicit witness to GaugeGroup.lean stabilizer
+     in a single Lean proof (currently two separate verified checks).
+
+  2. Audit downstream derivations for SL(2,3)-specific structure:
+     - WEINBERG-001: any SL(2,3)/Q8 quotient pipeline must be rewritten.
+     - ALPHA-001: no formula identified yet; unaffected.
+     - STRONG-001: numerically unaffected (order-24 only).
+
+  See RFC-017 for full reconciliation plan and timeline.
+
+
