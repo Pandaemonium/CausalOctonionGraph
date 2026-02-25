@@ -1,7 +1,12 @@
 /.lake
 /.claude/
 .mcp.json
+.env
 __pycache__/
 *.pyc
 *.pyo
 .pytest_cache/
+/lab/
+Dockerfile
+docker-compose.yml
+tmpclaude-*

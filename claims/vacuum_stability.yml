@@ -1,20 +1,36 @@
 id: VAC-001
 title: "Stability of the Sterile Vacuum"
 statement: |
-  The sterile vacuum state omega = 1/2(1 + i e_7) is a fixed point of the
-  graph update rule under vacuum fluctuations. It does not spontaneously
-  decay into charged matter without external energy input.
-status: proved
+  [SUPERSEDED] Legacy claim from the label-based kernel.
+  This statement modeled vacuum as a fixed-point node label (`.vacuum`) and
+  as the zero state under operator action. The current model treats vacuum as
+  the algebraic projector orbit of omega under e7 action, not as a static
+  metadata label fixed point.
+status: superseded
 lean_file: CausalGraphTheory/Vacuum.lean
 lean_theorems:
   - CausalGraph.vacuum_is_stable
   - CausalGraph.vacuum_annihilates_operators
 python_test: calc/test_vacuum.py
+superseded_by:
+  - CFS-003
+  - PHOTON-001
+superseded_on: "2026-02-25"
 depends_on:
   - GAUGE-001
 literature:
   - "Finster (2016): Causal Fermion Systems"
 notes: |
+  SUPERSESSION RATIONALE (2026-02-25):
+    This claim is incompatible with the current vacuum model in RFC-013,
+    RFC-018, and RFC-019:
+    - vacuum is represented algebraically as omega = 1/2(1 + i e7),
+      with a period-4 phase orbit under L_{e7};
+    - phase-only vacuum steps are tracked via the dual-clock semantics
+      (tau_topo, tau_int), not a static node label.
+
+    Kept only as historical proof artifact for the legacy label-based kernel.
+
   Both theorems proved (no sorry):
 
   vacuum_is_stable: If every node in G carries the .vacuum label, then so
@@ -30,4 +46,8 @@ notes: |
     The private helper zero_c_eq : (0 : Octonion R).c k = 0 := rfl makes
     simp substitute zero components; simp [FormalComplex.ext_iff] closes
     each remaining FormalComplex equality goal.
-blocked_reason: ""
+blocked_reason: |
+  Superseded by algebraic vacuum-orbit semantics:
+  - rfc/RFC-013_Algebraic_Vacuum_and_Causal_Spawning.md
+  - rfc/RFC-018_Time_as_Graph_Depth_and_Interaction_Clock.md
+  - rfc/RFC-019_e7_Temporal_Axis_Vacuum_Photon_Duality.md

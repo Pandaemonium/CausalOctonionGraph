@@ -66,5 +66,8 @@ notes: |
             simulation (see RFC-007 Task 5.2).
     Step 3: Check whether R(N) converges to 0.1180 from above as
             N → infinity, or whether a scale-matching argument is needed.
+
+  EXECUTION TASKLIST:
+    rfc/STRONG-001_Closure_Tasklist.md
 blocked_reason: "Leading-order candidate identified (1/7) but 21% gap unresolved."
 

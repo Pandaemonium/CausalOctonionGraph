@@ -26,7 +26,8 @@ python_test: ""
 depends_on:
   - GAUGE-001
   - CFS-001
-  - VAC-001
+  # VAC-001 was superseded (2026-02-25) because it depended on a legacy
+  # label-based vacuum fixed-point model.
 literature:
   - "Finster et al. (2024): Causal Fermion Systems and Octonions, arXiv:2403.00360"
   - "Furey (2016): Charge quantization from a number operator, arXiv:1603.04078"
