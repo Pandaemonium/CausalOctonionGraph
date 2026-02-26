@@ -58,16 +58,25 @@ one has at least a falsifiable Python test and a Lean stub claim.
 Three frontier models (Claude Sonnet 4.6, Gemini 3 Pro Preview, GPT-5.2-Codex) were each
 given this brief and the full claim registry and asked for independent assessments.
 
-**Unanimous findings (still valid):**
-1. ~~KOIDE-001 Diophantine Search~~ → **DONE** — no exact integer solutions ≤4000; next is circulant matrix approach
+**Unanimous findings:**
+1. ~~KOIDE-001 Diophantine Search~~ → **DONE** — no exact integer solutions ≤4000
 2. ~~GAUGE-001 sub-lemmas~~ → **DONE** — `vacuumStabilizer_iso_S4` proved in Phase 8
 3. The project is "mathematically sound but physically unproven" — the algebra-to-physics
    bridge has not been crossed for any claim (this remains the core existential risk)
 
-**Updated priority order (Phase 8+):** KOIDE-001 circulant → GEN-002 pytest → MU-001 → WEINBERG-001 note
+**Architecture review (2026-02-26, unanimous across all three models):**
+The KOIDE-001 circulant path is premature. The core blocking issue is the
+**Kernel/Spec Drift** identified in RFC-016: Lean proofs reason about `ComplexOctonion`
+algebraic identities while the Python simulator uses `OctIdx` integers — there is no
+formal bridge between them. All mass-ratio simulation results are ungrounded until this
+is resolved. The `Update.lean` `step()` function is a structural placeholder that does not
+implement the Fano-based branching protocol.
 
-**Highest existential risk (unchanged):** Integer tick counts may not reproduce
-physical constants without hidden tuning. The KOIDE-001 circulant matrix test is next.
+**Updated priority order:** KernelUpdate.lean (Gate 1) → MU-001 gate-density (Gate 2) → WEINBERG-001 note (Gate 4) → GEN-002 → Koide (blocked until Gate 1)
+
+**Highest existential risk:** Lean/Python kernel drift — proofs and simulations do not
+refer to the same mathematical object. Close RFC-016 Gate 1 before assigning any new
+physics claims.
 
 ---
 
@@ -88,10 +97,152 @@ physical constants without hidden tuning. The KOIDE-001 circulant matrix test is
 5. **`calc/sedenion_gen.py` EXISTS (Phase 7).** It is 463 lines and constructs sedenion
    algebra over ZMod 2 with S3 orbit counting. Do not recreate it. The next task is
    to add/check `calc/test_sedenion_gen.py`.
+6. **`calc/test_koide_circulant.py` IS DONE (Phase 9).** The file exists and passes.
+   It confirms B/A ≈ √2 empirically. **Do NOT reassign circulant Koide computation.**
+   The remaining Koide work (deriving B/A = √2 from COG dynamics) is **BLOCKED pending
+   Gate 1** (kernel semantics). Do not assign any Koide derivation task until
+   `CausalGraphTheory/KernelUpdate.lean` exists with `SemanticConsistency` proved.
+
+---
+
+## Stage Gates — Foundation-First Policy
+
+The lab operates under a stage-gate model. Tasks in the **Foundation lane** (building
+the kernel, update rule, and invariants) have **no gate requirement** and are always
+assignable. All other tasks require their gate to be cleared first.
+
+### Gate 1 · Kernel Semantics Locked
+**Cleared when:** `CausalGraphTheory/KernelUpdate.lean` exists containing:
+- `fanoProduct : Fin 7 → Fin 7 → (Bool × Fin 7)` — signed Fano multiplication
+- `triggers : Fin 7 → Fin 7 → Fin 7 → Bool` — true when triple is NOT Fano-collinear
+- `updateStep : Fin 7 → Fin 7 → Fin 7 → List (Bool × Fin 7)` — branching protocol
+- `theorem updateStep_unique_when_assoc` — when not triggered, returns exactly one result
+- `theorem updateStep_antipodal_when_nonassoc` — when triggered, returns two sign-flipped results
+- `lake build` passes with no `sorry`
+
+**Why this is P0:** Without this file, Lean proofs and Python simulations are formally
+disconnected (RFC-016 Kernel/Spec Drift). The `Update.lean` `step()` is a structural
+placeholder with state `⟨fun _ => 0⟩` — it does not implement the Fano branching
+protocol. Every mass-ratio simulation result is ungrounded until Gate 1 is closed.
+
+**Blocked by Gate 1:** Any Koide derivation from COG dynamics, LEPTON-001 mass
+mechanism, and all claims that cite tick-count ratios as evidence for physics.
+
+### Gate 2 · Simulation Architecture Verified
+**Cleared when:** `calc/mass_drag.py` (or a clean replacement) runs the MU-001
+simulation with the architecture specified in RFC-009 §7b.10:
+- Cyclic exchange schedule C1→C2→C3→C1 (each quark both emits and receives)
+- Signed state tracking `(OctIdx, sign)` — no collapse of `+eₙ` and `−eₙ`
+- Gate-density measurement (not first-recurrence counting)
+- Ratio `mu_COG = gate_density(proton) / gate_density(electron)` converges over N steps
+- The result (convergence value or non-convergence) is recorded in `claims/proton_electron_ratio.yml`
+
+**Blocked by Gate 2:** Any claim citing a mass ratio as simulation evidence.
+
+### Gate 3 · MU-001 Confirmed or Falsified
+**Cleared when:** The corrected simulation from Gate 2 either (a) converges to
+`mu_COG ≈ 1836.15` (landmark result — update claim to `proved`) or (b) delivers a
+precise falsification with an identified structural gap documented in RFC-009
+(not "the simulation has bugs" — the simulation must be architecturally correct first).
+
+**Blocked by Gate 3:** Hydrogen, electron-electron, and proton-proton system claims.
+
+### Gate 4 · S4 Reconciliation Complete
+**Cleared when:** `claims/weinberg_angle.yml` notes section describes how S4 replaces
+SL(2,3) in the gauge breaking analysis, with a concrete testable next step and a
+reference to how this propagates through the EW symmetry breaking chain.
+
+**Blocked by Gate 4:** Weinberg angle and EW breaking claims.
 
 ---
 
 ## Open Problems — Priority Queue
+
+### P0 · KERNEL-001 · KernelUpdate.lean — Gate 1 Closure — HIGH PRIORITY
+
+**This is the current highest-priority task for the lab.**
+
+**Background:** RFC-016 identifies a critical architectural gap: `Update.lean`'s `step()`
+function is a structural placeholder. It appends a node with state `⟨fun _ => 0⟩` and
+does not implement the Fano-based branching protocol from RFC-001 §3.3. As a result,
+Lean proofs and Python simulations are formally disconnected — there is no theorem
+relating what the Python simulator computes to what the Lean algebra proves.
+
+**Task:** Write `CausalGraphTheory/KernelUpdate.lean` implementing RFC-001 §3.3 using
+`OctIdx := Fin 7` (not `ComplexOctonion`):
+
+```
+-- Signed Fano product: result is (sign, output_index)
+def fanoProduct (a g : Fin 7) : Bool × Fin 7
+
+-- True when {a,g,b} is NOT a Fano collinear triple (Alternativity Trigger)
+def triggers (a g b : Fin 7) : Bool
+
+-- Branching protocol:
+-- * NOT triggers → returns single result (1 tick)
+-- * triggers → returns two sign-flipped results (2 ticks)
+def updateStep (a g b : Fin 7) : List (Bool × Fin 7)
+
+-- Key theorems
+theorem updateStep_unique_when_assoc (a g b : Fin 7) (h : ¬triggers a g b) :
+    (updateStep a g b).length = 1
+
+theorem updateStep_antipodal_when_nonassoc (a g b : Fin 7) (h : triggers a g b) :
+    (updateStep a g b).length = 2 ∧
+    (updateStep a g b)[0].1 ≠ (updateStep a g b)[1].1 ∧
+    (updateStep a g b)[0].2 = (updateStep a g b)[1].2
+```
+
+**Inputs:** `Fano.lean` has `fanoCycles` and `fanoMul` already. Import them.
+Use `calc/conftest.py`'s `FANO_CYCLES`, `FANO_SIGN`, `FANO_THIRD` as the Python
+reference for verifying the Lean implementation produces identical results.
+
+**Files:** `CausalGraphTheory/KernelUpdate.lean` (new), `CausalGraphTheory/Fano.lean` (read)
+
+**Success criterion:** `lake build` passes with no `sorry`; `fanoProduct`, `triggers`,
+and `updateStep` are all defined; both key theorems are proved.
+
+**Tier:** frontier (Claude preferred — complex Lean 4 with `Fin` arithmetic)
+
+---
+
+### P1 · MU-001 · Gate-Density Simulation — Gate 2 Closure — HIGH PRIORITY
+
+**Background:** Two previous simulation runs produced falsification data:
+- Phase 10 (calc/mass_drag.py): mu_COG = 2.667 — root cause: asymmetric exchange (RFC-009 §2.1)
+- Phase 11 (calc/mass_drag.py): mu_COG = 3.667 — root cause: unsigned state, first-recurrence counting
+
+**RFC-009 §7b.10 prescribes the corrected architecture.** No corrected simulation has
+been run yet. This task implements and runs it.
+
+**Task:** Write `calc/mass_drag_v2.py` with the following architecture:
+1. **State:** `(OctIdx, sign)` where `OctIdx ∈ {0..6}` (Fin 7) and `sign ∈ {+1, −1}`
+2. **Exchange schedule:** Strictly cyclic — C1→C2, C2→C3, C3→C1, repeat
+   (each quark is source once and destination once per 3-step cycle)
+3. **Gluon selection:** From `calc/conftest.py`'s Witt-pair triality rule (locked)
+4. **Update rule:** Use `FANO_SIGN` and `FANO_THIRD` from `conftest.py`; apply both
+   bracketings when `triggers()` fires; track minimum-cost branch (classical path)
+5. **Electron baseline:** L1 associative cycle `{e1,e2,e3}` with sign tracking;
+   gate density = 0 non-assoc gates / tick (expected). Count ALL gate types.
+6. **Measurement:** Run N=10000 steps. Report:
+   - `total_nonassoc_triggers_proton / total_steps` (proton gate density)
+   - `total_nonassoc_triggers_electron / total_steps` (electron gate density, expected 0)
+   - `mu_COG = proton_gate_density / electron_gate_density` if nonzero, else note degeneracy
+   - Plot the running ratio to show convergence or divergence
+7. Record result in `claims/proton_electron_ratio.yml` as a new `simulation_records` entry
+
+**Files:** `calc/mass_drag_v2.py` (new), `claims/proton_electron_ratio.yml` (update)
+
+**Success criterion:** Script runs to completion; gate-density ratio is computed and
+recorded; whether it converges toward 1836 or not, the datum is clearly documented.
+
+**Note:** If the electron gate density is zero (fully associative), the ratio is
+degenerate. In that case: document the degeneracy, compare total tick costs instead,
+and file a note that RFC-009 §7b.10's "gate density comparison" needs revision.
+
+**Tier:** frontier
+
+---
 
 ### ✅ GAUGE-001 · Vacuum Stabilizer = S4 — COMPLETED (2026-02-26)
 
@@ -123,31 +274,19 @@ in the COG tick-frequency space. This is a significant constraint: the model mus
 (a) use rational (not integer) frequencies, or (b) the Koide relation emerges from a
 different algebraic mechanism (circulant matrix eigenvalues, not raw tick counts).
 
-**Next step for KOIDE-001:** Write `calc/test_koide_circulant.py` that constructs the
-3×3 circulant Hermitian matrix with equal-weight Triality mixing and computes whether
-its eigenvalue ratios match the lepton mass spectrum. See `claims/koide_exactness.yml`
-notes section (J₃(𝕆) circulant matrix approach) for the mathematical setup.
+**Next step for KOIDE-001 (BLOCKED — awaiting Gate 1):** The circulant computation
+is complete (`calc/test_koide_circulant.py` passes; B/A ≈ √2 confirmed empirically).
+The remaining gap — deriving B/A = √2 from COG graph dynamics — **cannot be addressed
+until `KernelUpdate.lean` (P0) is complete**, because the COG dynamics are currently
+unformalized. Do not assign new Koide work until Gate 1 is cleared.
 
 ---
 
-### P3 · MU-001 · Proton/Electron Ratio (Lean + Python) — MEDIUM
-**Claim:** The proton/electron mass ratio µ ≈ 1836.15 emerges from the tick
-count difference between proton and electron graph motifs.
-
-**Status:** `revised_pending` — the original tick formula was superseded;
-`CausalGraph.proton_motif_def` in `Constants.lean` has a placeholder.
-
-**Task:**
-1. Read `claims/proton_electron_ratio.yml` — specifically the `notes` section
-   describing the revised model
-2. Update `CausalGraph.proton_motif_def` to reflect the revised tick-counting
-   formula in the notes
-3. Add a Python sanity check in `calc/test_proton_ratio.py` that evaluates the
-   formula numerically
-
-**Files:** `CausalGraphTheory/Constants.lean`, `claims/proton_electron_ratio.yml`
-
-**Success criterion:** `lake build` passes; Lean definition matches the notes formula.
+### ⚠️ OLD P3 · MU-001 · Proton/Electron Ratio placeholder — SUPERSEDED
+**This task is replaced by the new P1 task above (gate-density simulation).**
+The `CausalGraph.proton_motif_def` stub in `Constants.lean` can remain as-is until
+after Gate 2 is cleared — updating it to a formula that doesn't yet have simulation
+support would be speculative. Do not assign this old task.
 
 ---
 
@@ -306,14 +445,31 @@ RUN_COMMAND('cd /workspace && git push origin main')
 
 ## Decision Framework
 
-When choosing which task to assign, prefer:
-1. Tasks that prove or falsify a partial/open claim (not stubs)
-2. Tasks with clear success criteria you can verify programmatically
-3. Lean tasks when a Python check already passes (raise the bar to formal proof)
-4. Python tasks when a Lean theorem exists but needs numerical validation
+### 3-Lane Scheduler
 
-Do **not** assign tasks that require human judgment on mathematical conventions
-(those are escalate/appeal cases).
+Allocate task assignments across three lanes. If you have been assigning only
+one type of task for multiple rounds, course-correct.
+
+| Lane | Target share | What qualifies |
+|------|-------------|----------------|
+| **Foundation** | ~60% | Kernel, update rule, invariants, contracts (Gates 1-4). No gate requirement — always assignable. |
+| **Near-complete** | ~30% | Proofs/docs one step from done. Claim is `partial`; a single task would move it to `proved`. |
+| **Exploration** | ~10% | New hypotheses, literature searches, new RFCs. RETROSPECTIVE mode triggers this lane. |
+
+### Task Selection Rules
+
+When choosing which task to assign, prefer:
+1. **Gate 1 (P0) until closed** — if `KernelUpdate.lean` does not exist, assign it before anything else
+2. **Gate 2 (P1) after Gate 1** — if Gate 1 is closed but Gate 2 is not, assign the MU-001 gate-density simulation
+3. Foundation tasks that unblock ≥3 dependent claims have highest priority within their lane
+4. Tasks with clear success criteria you can verify programmatically
+5. Lean tasks when a Python check already passes (raise the bar to formal proof)
+6. Python tasks when a Lean theorem exists but needs numerical validation
+
+Do **not** assign tasks that:
+- Are blocked by an unclosed gate (check the Stage Gates section above)
+- Require human judgment on mathematical conventions (escalate instead)
+- Duplicate a task already in `completed` state (check Anti-Loop Rules)
 
 ---
 
@@ -415,9 +571,12 @@ When the system injects a special mode prompt instead of the default question, r
 in the same format but treat the injected question as your primary directive:
 
 **RETROSPECTIVE mode** (every 10 rounds): Step back and assess the big picture.
+- **First question:** Is `CausalGraphTheory/KernelUpdate.lean` closed? If no, assign P0 immediately.
+- **Second question:** Is the Lean/Python Kernel/Spec Drift (RFC-016) resolved? If no, note it in THOUGHTS and assign a Foundation task.
 - Review all partial/open claims and identify which is most stale
 - Check whether current work is connected to the Target Physical Systems table
 - Ask: is the project making progress toward falsifiable predictions, or circling known results?
+- Check the 3-lane distribution of recent tasks: if >3 consecutive tasks were not Foundation lane, assign a Foundation task now
 - Assign a task that *breaks new ground* (not incremental cleanup)
 
 **DOCUMENTATION AUDIT mode** (every 5 rounds): Check for documentation gaps.
