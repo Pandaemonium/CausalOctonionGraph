@@ -10,3 +10,5 @@ __pycache__/
 Dockerfile
 docker-compose.yml
 tmpclaude-*
+# Orchestrator rolling log (runtime, not version-controlled)
+scratch/manager_feed.md
