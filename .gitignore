@@ -12,3 +12,6 @@ docker-compose.yml
 tmpclaude-*
 # Orchestrator rolling log (runtime, not version-controlled)
 scratch/manager_feed.md
+scratch/search_feed.md
+# Lean safe-write backups (left by _exec_write_lean_safe cleanup on timeout)
+*.pre_rewrite

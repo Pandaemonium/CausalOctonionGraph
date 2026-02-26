@@ -2,7 +2,7 @@
 
 **Status:** Active - Hypothesis and Architecture Draft (2026-02-25)  
 **Module:** `COG.Core.TimeAxis`  
-**Dependencies:** `rfc/CONVENTIONS.md`, `rfc/RFC-013_Algebraic_Vacuum_and_Causal_Spawning.md`, `rfc/RFC-017_Vacuum_Stabilizer_Reconciliation.md`, `rfc/RFC-018_Time_as_Graph_Depth_and_Interaction_Clock.md`
+**Dependencies:** `rfc/CONVENTIONS.md`, `rfc/RFC-013_Algebraic_Vacuum_and_Causal_Spawning.md`, `rfc/RFC-017_Vacuum_Stabilizer_Reconciliation.md`, `rfc/RFC-018_Time_as_Graph_Depth_and_Interaction_Clock.md`, `rfc/RFC-020_Kernel_Representation_Reconciliation.md`
 
 ---
 
@@ -112,7 +112,7 @@ uses that axis as `e7`.
 
 ### P1. Temporal Axis Postulate
 
-`e7` is the unique temporal axis token in Kernel v1 dynamics.
+`e7` is the unique temporal axis token in Kernel v2 dynamics.
 
 ### P2. Dual-role Postulate
 
@@ -249,4 +249,3 @@ literature support and strong internal algebraic alignment.
 - [ ] Axis substitution stress test implemented.
 - [ ] Scheduler equivalence still passes with temporal commit enabled.
 - [ ] Claim docs referencing this postulate mark it as "active hypothesis" until tests pass.
-

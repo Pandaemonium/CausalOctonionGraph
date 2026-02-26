@@ -1,5 +1,10 @@
 # COG Lab — Manager Brief
-*Updated: 2026-02-25 | Source of truth: claims/*.yml + lake build*
+*Updated: 2026-02-25 | Source of truth: claims/*.yml + lake build*
+
+> [!WARNING]
+> This brief is legacy and partially stale.
+> Use `rfc/MANAGER_BRIEF_FRONTIER.md` as the active manager prompt.
+> Kernel representation is CxO-native (RFC-020); RFC-016 Fin7 state is legacy-only.
 
 ---
 

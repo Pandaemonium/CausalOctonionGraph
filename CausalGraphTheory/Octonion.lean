@@ -130,6 +130,16 @@ theorem one_mul (x : Octonion R) : (1 : Octonion R) * x = x := by
   <;> simp only [fold_mul]
   <;> ring
 
+/-- The real unit is a multiplicative identity on the right: x * 1 = x. -/
+theorem mul_one (x : Octonion R) : x * (1 : Octonion R) = x := by
+  apply ext
+  intro i
+  fin_cases i
+  <;> dsimp only [HMul.hMul, Mul.mul, OfNat.ofNat, One.one]
+  <;> norm_num [Fin.ofNat, Fin.mk.injEq]
+  <;> simp only [fold_mul]
+  <;> ring
+
 /-- Conjugation is an involution: conj(conj(x)) = x. -/
 theorem conj_involution (x : Octonion R) : x.conj.conj = x := by
   apply ext

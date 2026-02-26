@@ -1,8 +1,15 @@
 # RFC-016: Kernel v1 Contract â€” Simulation State and Algebraic Semantics
 
-**Status:** Active â€” Architecture Draft (2026-02-24)
-**Module:** `COG.Core.Kernel`
+**Status:** Superseded - Legacy Kernel v1 Contract (2026-02-26)
+**Module:** `COG.Core.Kernel`
+**Superseded by:** `rfc/RFC-020_Kernel_Representation_Reconciliation.md`
 **Dependencies:** `rfc/RFC-001_Canonical_State_and_Rules.md`, `rfc/RFC-002_Deterministic_Tick_Ordering.md`
+
+> [!WARNING]
+> This RFC is retained as historical context for Kernel v1 only.
+> The canonical kernel representation is CxO-native Kernel v2 in RFC-020.
+> Any Fin7/octIdx+sign node-state design in this RFC is legacy and must not be used for new physics derivations.
+
 
 ## 1. Executive Summary
 

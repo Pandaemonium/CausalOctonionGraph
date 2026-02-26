@@ -60,7 +60,17 @@ Energy must come from transition dynamics and conserved accounting, not from ign
 
 ### H6. Composite dynamics can realize periods greater than 4.
 
-**Verdict:** adopt as plausible and high-value to test.
+**Verdict:** confirmed empirically (2026-02-26).
+
+`cycle_spectrum_scan.py` (cross-coupled composite dynamics, Codex upgrade) measured:
+- 2-node composites: periods observed in {3, 6, 8}
+- Larger composites: periods observed in {8, 12}
+
+All exceed the single-node period-4 bound. H6 is no longer merely plausible — the
+period-extension mechanism is active in the current COG computational model.
+
+Next step: characterise which graph topologies and colorLabel assignments produce which
+periods. This is a prerequisite for the UPDATE-RULE-001 composite interaction tests.
 
 ---
 
@@ -144,6 +154,9 @@ Changing observer phase uncertainty alone (without changing microstate dynamics)
 ### Test D: Cycle spectrum broadening
 
 Composite subsystems exhibit periods in a set `S` that can include values larger than 4.
+
+**Status:** passed empirically (2026-02-26). See H6 verdict above.
+Observed periods: {3, 6, 8} (2-node); {8, 12} (larger). Formal Lean proof still open.
 
 ---
 

@@ -1,5 +1,5 @@
 # COG Lab — Research Director Brief (Frontier Model Edition)
-*Updated: 2026-02-25 | Source of truth: claims/*.yml + lake build*
+*Updated: 2026-02-26 | Source of truth: claims/*.yml + lake build*
 
 ---
 
@@ -26,7 +26,7 @@ work outward from simplest to most complex):
 | Priority | System | Key observable | Status |
 |----------|---------|---------------|--------|
 | 1 | Hydrogen (e⁻ + p) | Binding energy, spectrum | stub |
-| 2 | Electron–electron interaction | Coulomb repulsion in graph terms | stub |
+| 2 | Electron–electron interaction | Coulomb repulsion in graph terms | **Phase 5a done** — interaction semantics locked; scattering (kinematics) is next |
 | 3 | Proton (uud quarks) | Internal colour structure, mass | stub |
 | 4 | Electron–muon interaction | μ/e mass ratio → LEPTON-001 | partial |
 | 5 | Proton–proton interaction | Binding onset, exchange symmetry | stub |
@@ -41,8 +41,9 @@ one has at least a falsifiable Python test and a Lean stub claim.
 
 | Metric | Status |
 |--------|--------|
-| Python tests (calc/) | **648 passing, 0 failing** |
-| Lean build | **clean — no `sorry`** |
+| Python tests (calc/) | **648+ passing, 0 failing** (update_rule_ablation.py adds 9 more) |
+| Lean build | **clean — 3145 jobs, no `sorry`** |
+| Lean library modules | **37 modules** all imported in root `CausalGraphTheory.lean` (integration closure 2026-02-26) |
 | Claims proved | **11 proved** (ALG-001–004, CAUS-001, DAG-001, DIST-001, FANO-001, MASS-001, RACE-001, TICK-001) |
 | Claims partial | **7 partial** (GAUGE-001\*, GEN-002\*, KOIDE-001, LEPTON-001, CFS-003, PHOTON-001, **STRONG-001**†) |
 | Claims open/stub | **8 remaining** (WEINBERG-001, GEN-001, ANOM-001, ALPHA-001, REL-001, CFS-001, CFS-002, MU-001) |
@@ -96,9 +97,20 @@ physics claims.
    to add/check `calc/test_sedenion_gen.py`.
 6. **`calc/test_koide_circulant.py` IS DONE (Phase 9).** The file exists and passes.
    It confirms B/A ≈ √2 empirically. **Do NOT reassign circulant Koide computation.**
-   The remaining Koide work (deriving B/A = √2 from COG dynamics) is **BLOCKED pending
-   Gate 1** (kernel semantics). Do not assign any Koide derivation task until
-   `CausalGraphTheory/KernelV2.lean` exists with Kernel v2 semantics (CxO-native `NodeStateV2`).
+   The Koide BLOCK is **lifted** (Gate 1 is now cleared). Next step: derive B/A = √2
+   from COG graph dynamics. Assign as exploration-lane task AFTER Gate 2 is cleared.
+7. **`CausalGraphTheory/KernelV2.lean` IS DONE (2026-02-26).** `NodeStateV2` with
+   `psi : ComplexOctonion ℤ`, `colorLabel : FanoPoint`, `isVacuumOrbit`, `vacuumState`
+   all exist. `lake build` passes. Do NOT recreate or modify the node structure.
+8. **`CausalGraphTheory/UpdateRule.lean` IS DONE — RFC-028 D1-D3 LOCKED (2026-02-26).**
+   `combine` (D1: multiplicative), `interactionFold` (D2: Markov), `isEnergyExchangeLocked`
+   (D3), `nextStateV2`, and 4 gate theorems all proven. Do NOT reassign UPDATE-RULE-001.
+9. **`CausalGraphTheory/TwoNodeSystem.lean` IS DONE — Phase 5a (2026-02-26).**
+   `NodePair`, `twoNodeRound`, `isRepulsiveU1`, `ee_repulsion_predicate` all proved.
+   This covers INTERACTION SEMANTICS only. The next e-e step is spatial/distance geometry.
+10. **Integration closure IS DONE (2026-02-26).** All 37 Lean library modules are
+    imported in `CausalGraphTheory.lean`. Do NOT add `import CausalGraphTheory.ExportOracle`
+    (it defines its own `main` and is built as a standalone executable instead).
 
 ---
 
@@ -125,18 +137,18 @@ assignable. All other tasks require their gate to be cleared first.
 - `CausalGraph.alpha_s_proxy = 1/7 : ℚ` — STRONG-001 leading-order estimate proved
 - `alpha_s_proxy_overestimates` — 20% gap from physical value documented
 
-**Cleared when:** `CausalGraphTheory/KernelV2.lean` exists containing:
-- `NodeStateV2` with canonical state `psi : ComplexOctonion ℤ` (i.e. `C x O`)
-- algebraic predicates `isVacuumOrbit`, `isPhaseOnlyStep`, `isEnergyExchange`
-- deterministic transition semantics on `psi` with immutable eval-plan inputs
-- theorem `omega_representable_in_kernel_v2` (shows `omega = ½(1 + i·e₇)` fits `psi`)
-- `lake build` passes with no `sorry`
+**One open extension (locked 2026-02-26, RFC-022 §4.2 D7):**
+`NodeStateV2` must gain `colorLabel : FanoPoint` as initial data — the source of
+all edge operators. This is a small one-line struct extension; see UPDATE-RULE-001
+below. `vacuumState` default: `colorLabel := ⟨6, by omega⟩` (e7 vacuum axis).
 
-> **Do NOT include a legacy bridge or `omega_not_in_legacy_signed_basis` proof.**
-> That negative result is already documented in RFC-020 §2 and is not worth Lean tokens.
-> Go straight to CxO-native. `Fin 7` continues to serve as the Fano plane index
-> (FanoPoint, FanoLine, multiplication table) — that is correct and must not change.
-> The abandoned design is `octIdx : Fin 7` as node state, which is now history.
+**✅ CLEARED — actual contents of `CausalGraphTheory/KernelV2.lean`:**
+- `NodeStateV2` with `psi : ComplexOctonion ℤ`, `colorLabel : FanoPoint`, `tickCount`, `topoDepth`
+- `isVacuumOrbit`, `vacuumState`, `twoOmega`, `vacuumColorLabel`
+- `omega_representable_in_kernel_v2`, `all_psi_representable`, `colorLabel_representable`
+- `isPhaseOnlyStep` / `isEnergyExchange` stubs **removed** — `UpdateRule.isEnergyExchangeLocked` is the canonical D3 predicate
+- `UpdateRule.lean`: RFC-028 D1–D3 locked (`combine`, `interactionFold`, `nextStateV2`, 4 gate theorems)
+- `lake build`: 3145 jobs, clean, no `sorry`
 
 **Why this is P0:** Without Kernel v2 semantics (RFC-020), Lean proofs and Python simulations can still drift and vacuum/time predicates remain under-specified in runtime code. Every downstream mass-ratio or Koide-style claim remains ungrounded until this gate is closed.
 
@@ -178,47 +190,22 @@ reference to how this propagates through the EW symmetry breaking chain.
 
 ## Open Problems — Priority Queue
 
-### P0 · KERNEL-001 · KernelV2.lean — Gate 1 Closure — HIGH PRIORITY
+### ✅ P0 · KERNEL-001 · KernelV2.lean — Gate 1 — COMPLETED (2026-02-26)
 
-**This is the current highest-priority task for the lab.**
+**`CausalGraphTheory/KernelV2.lean` is fully implemented. DO NOT reassign.**
 
-**Background:** RFC-020 supersedes RFC-016 node representation. The kernel must be CxO-native (`psi : C x O`) so vacuum orbit semantics and phase-only interaction semantics are representable and testable. Until this is implemented, high-level algebra and simulation outputs are not a single coherent contract.
+What was delivered:
+- `NodeStateV2` with `psi : ComplexOctonion ℤ`, `colorLabel : FanoPoint`, `tickCount`, `topoDepth`
+- `isVacuumOrbit`, `vacuumState`, `twoOmega`, `vacuumColorLabel`, `omega_vac`
+- `omega_representable_in_kernel_v2`, `all_psi_representable`, `colorLabel_representable`
+- `isPhaseOnlyStep` / `isEnergyExchange` stubs retired; canonical predicate is
+  `UpdateRule.isEnergyExchangeLocked` (RFC-028 D3)
 
-**Task:** Write `CausalGraphTheory/KernelV2.lean` implementing the Kernel v2 contract.
-Go straight to CxO-native — **no legacy bridge file, no `omega_not_in_legacy_signed_basis`.**
-
-```lean
-import CausalGraphTheory.ComplexOctonion
-
-structure NodeStateV2 where
-  nodeId    : Nat
-  psi       : ComplexOctonion ℤ   -- full C x O state; NOT Fin 7 index
-  tickCount : Nat
-  topoDepth : Nat
-```
-
-Add:
-- `def isVacuumOrbit (psi : ComplexOctonion ℤ) : Bool` — true iff `psi` is in the 4-element
-  orbit `{2ω, i·2ω, -2ω, -i·2ω}` where `ω = ½(1 + i·e₇)`
-- `def isPhaseOnlyStep ...` and `def isEnergyExchange ...` (stub `Bool` functions on pairs)
-- `theorem omega_representable_in_kernel_v2` — exhibits an explicit `NodeStateV2` whose
-  `psi` field equals the doubled vacuum `2ω = 1 + i·e₇` (integer coefficients)
-
-**Important:** `Fin 7` still appears as `FanoPoint`/`FanoLine` in `Fano.lean` and as
-indices in `FanoMul.lean`. That is correct and must not change. The change is that
-*node states* use `ComplexOctonion ℤ`, not `Fin 7`.
-
-**Inputs:** `rfc/RFC-020_Kernel_Representation_Reconciliation.md`, `rfc/RFC-018_Time_as_Graph_Depth_and_Interaction_Clock.md`, `rfc/RFC-019_e7_Temporal_Axis_Vacuum_Photon_Duality.md`, `CausalGraphTheory/ComplexOctonion.lean`, `CausalGraphTheory/PhotonMasslessness.lean` (for `omega` definition pattern).
-
-**Files:** `CausalGraphTheory/KernelV2.lean` (new file only — no bridge file needed)
-
-**Success criterion:** `lake build` passes with no `sorry`; `NodeStateV2`, `isVacuumOrbit`, `isPhaseOnlyStep`, `isEnergyExchange`, and `omega_representable_in_kernel_v2` all exist.
-
-**Tier:** frontier (complex Lean 4 architecture/proof integration)
+**Lean build: 3145 jobs, clean.**
 
 ---
 
-### P1 · MU-001 · Gate-Density Simulation — Gate 2 Closure — HIGH PRIORITY
+### P0 · MU-001 · Gate-Density Simulation — Gate 2 Closure — **CURRENT HIGHEST PRIORITY**
 
 **Background:** Two previous simulation runs produced falsification data:
 - Phase 10 (calc/mass_drag.py): mu_COG = 2.667 — root cause: asymmetric exchange (RFC-009 §2.1)
@@ -286,11 +273,12 @@ in the COG tick-frequency space. This is a significant constraint: the model mus
 (a) use rational (not integer) frequencies, or (b) the Koide relation emerges from a
 different algebraic mechanism (circulant matrix eigenvalues, not raw tick counts).
 
-**Next step for KOIDE-001 (BLOCKED — awaiting Gate 1):** The circulant computation
+**Next step for KOIDE-001 (Gate 1 block LIFTED):** The circulant computation
 is complete (`calc/test_koide_circulant.py` passes; B/A ≈ √2 confirmed empirically).
-The remaining gap — deriving B/A = √2 from COG graph dynamics — **cannot be addressed
-until `KernelV2.lean` (P0) is complete**, because the COG dynamics are currently
-unformalized. Do not assign new Koide work until Gate 1 is cleared.
+The remaining gap — deriving B/A = √2 from COG graph dynamics — is now **unblocked**
+(KernelV2.lean and UpdateRule.lean both exist and build clean). Assign as exploration-lane
+task after Gate 2 (MU-001 simulation) is cleared. The derivation requires reasoning about
+how the iterative e7 left-action on the electron state generates the circulant structure.
 
 ---
 
@@ -299,6 +287,43 @@ unformalized. Do not assign new Koide work until Gate 1 is cleared.
 The `CausalGraph.proton_motif_def` stub in `Constants.lean` can remain as-is until
 after Gate 2 is cleared — updating it to a formula that doesn't yet have simulation
 support would be speculative. Do not assign this old task.
+
+---
+
+### ✅ UPDATE-RULE-001 · Canonical Update Rule — RFC-028 D1–D3 LOCKED (2026-02-26)
+
+**`CausalGraphTheory/UpdateRule.lean` is fully implemented. DO NOT reassign.**
+
+What was delivered (RFC-028 §4.2 D1–D3):
+- **D1 `combine`** — multiplicative: `base * interaction` (left-fold, non-associative order preserved)
+- **D2 `interactionFold`** — Markov: `foldl (*) 1` over ordered boundary messages, no trace
+- **D3 `isEnergyExchangeLocked`** — `k > 0 ∧ interactionFold msgs ≠ 1`
+- **`nextStateV2`** — full deterministic transition: `combine (e7 * psi) (interactionFold msgs)`
+- **`edgeOp`, `edgeOp_unique`, `depthOrdered`** — edge operators from `colorLabel : FanoPoint`
+- **`temporal_first_preserves_phi4`** — e7 maps vacuum orbit to vacuum orbit (`native_decide`)
+- **4 gate theorems** — `interactionFold_empty_eq_one`, `combine_closed_coz`,
+  `nextStateV2_k0_eq_temporalCommit`, `update_deterministic`
+- **Python mirror** — `calc/update_rule_ablation.py` (9 tests, all passing)
+
+D4 (spawn predicate) and D5 (Pi_obs minimal projection) remain open. See new P0 below.
+
+---
+
+### ✅ UPDATE-RULE-002 · TwoNodeSystem / e-e Interaction Semantics — Phase 5a DONE (2026-02-26)
+
+**`CausalGraphTheory/TwoNodeSystem.lean` is fully implemented. DO NOT reassign Phase 5a.**
+
+What was delivered:
+- `CausalGraph.toKCO_re`, `piObs` — ComplexOctonion ℤ → KCO bridge in `WeakMixingObservable.lean`
+- `CausalGraph.u1Charge` — signed U(1) charge observable (real part of e₇ component)
+- `TwoNodeSystem.u1Charge_electron_neg8` — electron carries charge −8 (doubled units)
+- `TwoNodeSystem.NodePair` — two-node system structure
+- `TwoNodeSystem.twoNodeRound` — deterministic one-round update (RFC-028 D2 Markov)
+- `TwoNodeSystem.isRepulsiveU1` — energy exchange AND same-sign U(1) charge
+- `TwoNodeSystem.ee_repulsion_predicate` — two electrons are repulsive (`native_decide`)
+- `TwoNodeSystem.twoNodeRound_deterministic` — pure-function guarantee
+
+**Scope:** interaction SEMANTICS only (no spatial kinematics). Distance layer is next.
 
 ---
 
@@ -468,9 +493,13 @@ one type of task for multiple rounds, course-correct.
 ### Task Selection Rules
 
 When choosing which task to assign, prefer:
-1. **Gate 1 (P0) until closed** — if `KernelV2.lean` does not exist, assign it before anything else
-2. **Gate 2 (P1) after Gate 1** — if Gate 1 is closed but Gate 2 is not, assign the MU-001 gate-density simulation
-3. Foundation tasks that unblock ≥3 dependent claims have highest priority within their lane
+1. **Gate 2 (P0) — MU-001 gate-density simulation** — Gate 1 and UPDATE-RULE-001 are DONE;
+   the highest-priority open item is now `calc/mass_drag_v2.py` (see P0 task below)
+2. **D4/D5 lock** — RFC-028 D4 (spawn predicate) and D5 (Pi_obs projection) are still open
+   architecture decisions; lock them before assigning more physics tasks
+3. **e-e Phase 5b** — spatial/distance layer for electron-electron scattering trajectories
+4. **KOIDE continuation** — Gate 1 block lifted; can now assign B/A = √2 derivation from dynamics
+5. Foundation tasks that unblock ≥3 dependent claims have highest priority within their lane
 4. Tasks with clear success criteria you can verify programmatically
 5. Lean tasks when a Python check already passes (raise the bar to formal proof)
 6. Python tasks when a Lean theorem exists but needs numerical validation

@@ -1,73 +1,49 @@
 id: STRONG-001
-title: "Strong coupling constant from SU(3) stabilizer / GL(3,2) ratio"
+title: "Strong coupling leading-order proxy from vacuum stabilizer ratio"
 statement: |
-  The strong coupling constant alpha_s, evaluated at some reference
-  scale, equals the asymptotic limit of the ratio:
-      R(N) = (trapped color-cycle operations) / (total Fano operations)
-  as the causal graph size N → infinity, where:
-  - "trapped" operations are those confined to the 24-element vacuum
-    stabilizer S4 (the discrete color subgroup; order 24, identified as
-    S4 in this encoding — see RFC-017), and
-  - "total Fano operations" span the full 168-element GL(3,2).
+  The current COG leading-order proxy for the strong coupling is:
+      alpha_s_proxy = |Stab(e7)| / |Aut(Fano)| = 24/168 = 1/7.
 
-  COG prediction: R(infinity) = 24/168 = 1/7 ≈ 0.14286 provides a
-  leading-order estimate.  The physical value alpha_s(M_Z) ≈ 0.1181
-  lies approximately 20% below this estimate; the discrepancy is
-  hypothesized to arise from mixing between the color-trapped and
-  color-escaped channels at finite graph density.
-status: stub
-lean_file: CausalGraphTheory/Constants.lean
+  This is a formally proved baseline, not a complete physical derivation.
+  The measured Z-pole value (~0.118) is lower; the residual gap is tracked
+  explicitly and requires a correction mechanism (for example, finite-density
+  trapped/escaped mixing and/or scale bridge).
+status: partial
+lean_file: CausalGraphTheory/GaugeObservables.lean
 lean_theorems:
-  - CausalGraph.strong_coupling_candidate
-  - CausalGraph.stabilizer_ratio_eq
+  - CausalGraph.alpha_s_proxy_eq
+  - CausalGraph.alpha_s_proxy_bounds
+  - CausalGraph.orbit_stabilizer_ratio
+  - CausalGraph.gauge_group_factored
+  - CausalGraph.alpha_s_proxy_overestimates
+  - CausalGraph.alpha_s_gap_eq
+  - CausalGraph.alpha_s_gap_pos
 python_test: calc/test_constants.py::test_alpha_strong_candidate
 depends_on:
   - GAUGE-001
   - FANO-001
 literature:
-  - "CODATA 2022 / PDG 2023: alpha_s(M_Z) = 0.1180 ± 0.0009"
+  - "PDG 2024: alpha_s(M_Z) around 0.118"
   - "Bethke (2006): alpha_s measurements, arXiv:hep-ex/0606035"
-  - "Furey (2018): Three generations, two unbroken gauge symmetries..."
+  - "Asymptotic freedom and running coupling literature"
 notes: |
-  EXPERIMENTAL VALUE (PDG 2023):
-    alpha_s(M_Z) = 0.1180 ± 0.0009   (at the Z-boson mass scale)
-    alpha_s(1 GeV) ≈ 0.50             (IR regime, strongly coupled)
-    alpha_s → 0 as scale → infinity   (asymptotic freedom)
+  LOCKED LEAN BASELINE:
+    alpha_s_proxy = 1/7 (exact)
+    alpha_s_physical = 1181/10000 (declared comparison value)
+    alpha_s_gap = alpha_s_proxy - alpha_s_physical = 1733/70000 > 0
 
-  FANO GROUP DATA (from GAUGE-001):
-    |GL(3,2)| = 168      (full Fano automorphism group = global gauge)
-    |stabilizer(e7)| = 24  (vacuum stabilizer; order proved in Lean)
-    ratio = 24/168 = 1/7 ≈ 0.14286
+  Interpretation:
+    COG currently overestimates the Z-pole value at leading order.
+    This is documented as an open correction problem, not tuned away.
 
-  STABILIZER IDENTITY (2026-02-24): S4, not SL(2,3). See RFC-017.
-    The ratio 24/168 = 1/7 is unaffected; only the group label changes.
+  Governance:
+    No projector or ratio edits may be made post-hoc to force agreement.
+    Gap-closure work must be via predeclared correction terms and
+    reproducible ablation tests.
 
-  GAP ANALYSIS:
-    Leading-order estimate:   1/7 ≈ 0.14286
-    Experimental value:       0.1180
-    Fractional discrepancy:   (0.14286 - 0.1180) / 0.1180 ≈ 21%
-
-  RESOLUTION HYPOTHESIS:
-    The 21% gap may correspond to:
-    1. Running: alpha_s is scale-dependent; 1/7 may match at a scale
-       above M_Z where running brings the coupling up.  From asymptotic
-       freedom, alpha_s(Q) ≈ 1/(b0 * ln(Q/Lambda_QCD)) where
-       b0 = (33 - 2*Nf)/(12*pi); setting 1/7 = alpha_s(Q*) and solving
-       gives Q* ≈ 350 GeV, near the bottom quark mass threshold.
-    2. Mixing: at finite graph density, some fraction of color-cycle
-       operations are misclassified as escaped (off-stabilizer).
-    3. The correct COG formula may be 24/(168 + delta) where delta
-       is a finite-density correction from the 7 orbit elements.
-
-  RESEARCH DIRECTION:
-    Step 1: Prove the exact combinatorial limit R(infinity) = 24/168
-            in Lean (straightforward given GAUGE-001).
-    Step 2: Compute the finite-density correction via Monte Carlo
-            simulation (see RFC-007 Task 5.2).
-    Step 3: Check whether R(N) converges to 0.1180 from above as
-            N → infinity, or whether a scale-matching argument is needed.
-
-  EXECUTION TASKLIST:
+  Execution tracking:
     rfc/STRONG-001_Closure_Tasklist.md
-blocked_reason: "Leading-order candidate identified (1/7) but 21% gap unresolved."
-
+blocked_reason: |
+  Leading-order proxy is proved, but the correction mechanism for the
+  measured value is still open. Keep status partial until correction
+  model + uncertainty + scale declaration are closed.

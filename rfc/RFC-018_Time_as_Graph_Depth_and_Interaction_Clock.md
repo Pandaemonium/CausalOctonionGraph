@@ -2,7 +2,7 @@
 
 **Status:** Active - Architecture Draft (2026-02-25)  
 **Module:** `COG.Core.Time` and `COG.Core.Scheduler`  
-**Dependencies:** `rfc/RFC-001_Canonical_State_and_Rules.md`, `rfc/RFC-002_Deterministic_Tick_Ordering.md`, `rfc/RFC-016_Kernel_v1_Contract.md`  
+**Dependencies:** `rfc/RFC-001_Canonical_State_and_Rules.md`, `rfc/RFC-002_Deterministic_Tick_Ordering.md`, `rfc/RFC-020_Kernel_Representation_Reconciliation.md`  
 **Literature basis:** `sources/time_as_graph_depth_lit_review.md`
 
 ---
@@ -29,7 +29,7 @@ The RFC also locks:
 ## 2. Motivation
 
 The current program has deterministic update ordering (RFC-002) and a kernel/semantics
-contract (RFC-016), but no unified definition of "time" when updates are sparse.
+contract (RFC-020), but no unified definition of "time" when updates are sparse.
 
 Observed behavior in the model:
 
@@ -91,7 +91,7 @@ k_t(v) = |M_t(v)|
 
 `M_t(v)` must be derived deterministically from:
 
-- kernel state (`KernelState`, RFC-016),
+- kernel state (Kernel v2, RFC-020),
 - immutable evaluation plan (`ordered_edges_n`, `paren_tree_n`, RFC-002),
 - active edge conditions.
 
@@ -276,4 +276,3 @@ It does **not** claim that literature already proves COG's full energy-time mapp
 That mapping remains a project theorem to be derived.
 
 See: `sources/time_as_graph_depth_lit_review.md`.
-

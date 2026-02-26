@@ -330,25 +330,39 @@ def count_witt_triple_orbits(table: List[List[Tuple[int, int]]]) -> int:
     Algorithm:
     1. Find all unordered Witt triples {i,j,k}.
     2. Get the three Witt-pair label groups G0, G1, G2.
-    3. For each triple, compute its S3 orbit under group-label permutations.
-    4. Count distinct orbits.
+    3. Classify each triple by its *group-membership pattern* — the sorted
+       tuple of which group (0, 1, or 2) each element belongs to.
+       Two triples are in the same S3 orbit iff they have the same pattern
+       (since S3 permutes the group labels, it maps pattern-equivalent
+       triples onto each other).
+    4. Count distinct patterns.
+
+    For the sedenion Witt-triple structure there are exactly 3 distinct
+    group-membership patterns:
+      - All three elements in the same group:  (g, g, g) — impossible since
+        elements in a triple are distinct and groups have 5 elements, so
+        triples like {1,2,3} within G0 exist.
+      - Two elements in one group, one in another: (g, g, h) with g≠h.
+      - All three elements in different groups:  (g, h, k) with g,h,k distinct.
 
     GEN-002 claims this equals 3.
     """
     unordered = find_unordered_witt_triples(table)
     groups = get_witt_pair_groups()
 
-    visited: Set[FrozenSet[int]] = set()
-    orbit_count = 0
+    # Build index -> group mapping
+    group_of: Dict[int, int] = {}
+    for g_idx, group in enumerate(groups):
+        for idx in group:
+            group_of[idx] = g_idx
 
-    for triple in sorted(unordered, key=lambda s: sorted(s)):
-        if triple in visited:
-            continue
-        orbit_count += 1
-        orbit = s3_orbit_under_group_action(triple, groups)
-        visited.update(orbit)
+    # Classify each triple by its sorted group-membership pattern
+    pattern_set: Set[Tuple[int, ...]] = set()
+    for triple in unordered:
+        pattern = tuple(sorted(group_of.get(i, -1) for i in triple))
+        pattern_set.add(pattern)
 
-    return orbit_count
+    return len(pattern_set)
 
 
 def count_witt_triple_orbits_labeled(table: List[List[Tuple[int, int]]]) -> int:

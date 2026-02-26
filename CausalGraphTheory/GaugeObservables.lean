@@ -74,4 +74,14 @@ theorem alpha_s_proxy_overestimates :
     alpha_s_physical < alpha_s_proxy := by
   norm_num [alpha_s_proxy, alpha_s_physical]
 
+def alpha_s_gap : ℚ := alpha_s_proxy - alpha_s_physical
+
+theorem alpha_s_gap_eq :
+    alpha_s_gap = 1733 / 70000 := by
+  norm_num [alpha_s_gap, alpha_s_proxy, alpha_s_physical]
+
+theorem alpha_s_gap_pos :
+    0 < alpha_s_gap := by
+  norm_num [alpha_s_gap_eq]
+
 end CausalGraph

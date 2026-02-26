@@ -1,74 +1,88 @@
 id: WEINBERG-001
-title: "Weinberg angle from C⊗O subalgebra projection ratio"
+title: "Weinberg angle from C x O projector observables (baseline locked, mechanism open)"
 statement: |
-  The Weinberg angle theta_W satisfies:
-      sin^2(theta_W) = dim_eff(U(1) sector) / dim_eff(SU(2) x U(1) sector)
-  where dim_eff denotes the effective dimension of the corresponding
-  subalgebra projected onto the C⊗O Witt basis.
+  In the current COG Lean formalization, the locked projector baseline is:
+      sin2ThetaWRaw = maskCard(U1) / maskCard(EW) = 1/2.
 
-  Specifically: in the C⊗O decomposition relevant to electroweak symmetry,
-  the U(1) generator occupies exactly 1 complex dimension while the full
-  SU(2)xU(1) weak-hypercharge sector occupies a total of dim_eff dimensions
-  determined by the Witt basis structure.  The ratio of these dimensions
-  equals sin^2(theta_W) ≈ 0.2312.
-status: stub
-lean_file: CausalGraphTheory/Constants.lean
+  A derived candidate from the same locked masks is the exclusive-U(1) ratio:
+      sin2ThetaWExclusive = (maskCard(U1) - maskCard(U1 intersect Weak)) / maskCard(EW)
+                          = (2 - 1) / 4
+                          = 1/4.
+
+  This baseline is formally proved and intentionally frozen to prevent
+  retrofitting. The physical Z-pole weak-mixing target (~0.23122) is NOT yet
+  derived from COG and remains an open mechanism under RFC-029.
+status: partial
+lean_file: CausalGraphTheory/WeakMixingObservable.lean
 lean_theorems:
-  - CausalGraph.weinberg_candidate_def
-  - CausalGraph.witt_projection_ratio
+  - CausalGraph.sin2ThetaWRaw_eq_one_half
+  - CausalGraph.sin2ThetaWRaw_above_zpole_target
+  - CausalGraph.u1Mask_subset_electroweak
+  - CausalGraph.weakMask_subset_electroweak
+  - CausalGraph.u1Mask_inter_weakMask_card
+  - CausalGraph.u1Projector_idempotent
+  - CausalGraph.weakProjector_idempotent
+  - CausalGraph.electroweakProjector_idempotent
+  - CausalGraph.u1Mask_card
+  - CausalGraph.weakMask_card
+  - CausalGraph.electroweakMask_card
+  - CausalGraph.weightedTrace_overlap_card
+  - CausalGraph.sin2ThetaWObs_baseline_eq_one_half
+  - CausalGraph.sin2ThetaWObs_exclusive_u1_eq_one_four
+  - CausalGraph.sin2ThetaWObsNat_weakBoost_eq_one_third
 python_test: calc/test_constants.py::test_weinberg_candidate
 depends_on:
   - GAUGE-001
   - FANO-001
 literature:
-  - "CODATA 2022 / PDG 2023: sin^2(theta_W) = 0.23122 ± 0.00003 (at Z pole, MSbar)"
+  - "PDG 2024: weak-mixing observables near Z pole around 0.231"
   - "Glashow, Salam, Weinberg (1967-68): Electroweak unification"
-  - "Furey (2016): Standard model physics from an algebra? arXiv:1603.04078 §5"
-  - "Todorov (2019): Exceptional quantum algebra for SM, arXiv:1911.13124"
+  - "Furey (2016): Standard model physics from an algebra? arXiv:1603.04078"
 notes: |
-  EXPERIMENTAL VALUE (PDG 2023):
-    sin^2(theta_W) = 0.23122 ± 0.00003   (MS-bar, at M_Z)
-    theta_W ≈ 28.74°
+  LOCKED BASELINE (Lean, 2026-02-26):
+    u1Mask card = 2
+    weakMask card = 3
+    electroweakMask card = 4
+    sin2ThetaWRaw = 2/4 = 1/2
+    u1Mask subset electroweakMask
+    weakMask subset electroweakMask
+    card(u1Mask intersect weakMask) = 1
+    sin2ThetaWZPoleTarget < sin2ThetaWRaw
 
-  C⊗O ALGEBRA DIMENSIONS:
-    C⊗O has real dimension 16 (C has dim 2, O has dim 8).
-    The weak-isospin SU(2) subalgebra corresponds to the quaternion
-    sector H ⊂ C⊗O:  dim_R(H) = 4.
-    The hypercharge U(1) corresponds to the complex scalar sector:  dim_R(C) = 2.
-    Naive ratio (Georgi-Glashow inspired): dim_R(C)/dim_R(H) = 2/4 = 1/2 = 0.5
-    This does NOT match 0.2312.
+  NEW STRUCTURED CANDIDATE (Lean-derived, 2026-02-26):
+    Define "exclusive U(1)" support by removing the U1/Weak overlap:
+      exclusiveU1Card = card(u1Mask) - card(u1Mask intersect weakMask) = 2 - 1 = 1
+    Then:
+      sin2ThetaWExclusiveCandidate = exclusiveU1Card / card(electroweakMask) = 1/4 = 0.25
+    This candidate is directly grounded in:
+      CausalGraph.u1Mask_card
+      CausalGraph.electroweakMask_card
+      CausalGraph.u1Mask_inter_weakMask_card
+      CausalGraph.sin2ThetaWObs_exclusive_u1_eq_one_four
 
-  WITT BASIS APPROACH:
-    The 3 Witt pairs each span a 2-complex-dimensional color plane.
-    SU(2)_weak acts on a specific quaternionic subspace (isospin doublet).
-    The electroweak mixing angle is determined by the ratio of the
-    hypercharge generator norm to the total electroweak generator norm
-    in the chosen Witt basis inner product.
+    Status note:
+      1/4 is currently the strongest non-retrofitted structured candidate in this file.
+      It remains above the Z-pole target (~0.23122), so WEINBERG-001 is still open.
 
-  CANDIDATE FORMULAS (none yet confirmed):
-    3/(3+dim(SU(3))) = 3/12 = 1/4 = 0.25      (close but ~8% off)
-    |Witt pairs| / (|Witt pairs| + |orbit|) = 3/10 = 0.30   (off)
-    tan^2(theta_W) = g'^2/g^2 in SO(10) GUT embedding → 3/8 at GUT scale
+  FROZEN NON-BINARY WEIGHTED CANDIDATE (Lean-derived, 2026-02-26):
+    weakBoostWeight assigns:
+      weight 2 to the canonical weak-pair coordinates,
+      weight 1 to all other coordinates.
+    Under this frozen policy:
+      sin2ThetaWObsNat(policyWeakBoost) = 1/3.
+    This provides a true non-binary weighting baseline for RFC-029 ablations.
 
-  NOTE ON RUNNING:
-    sin^2(theta_W) runs from 3/8 at the GUT scale (~10^16 GeV) to
-    0.2312 at M_Z.  The COG framework must either derive the GUT-scale
-    value (simpler: 3/8 = 0.375 from SU(5) embedding) and then predict
-    the running, OR directly give the low-energy value from the causal
-    graph structure at nuclear energy densities.
+  Governance:
+    The baseline is intentionally locked to stop denominator drift.
+    Any movement from 1/2 toward physical values must come from a
+    predeclared weighted observable and/or scale bridge, not post-hoc
+    projector edits.
 
-  RESEARCH DIRECTION:
-    Define the electroweak projector P_EW on the Witt basis exactly.
-    Compute Tr(P_U1) / Tr(P_EW) as a ratio of discrete traces over the
-    24-element vacuum stabilizer representation.
+  Current closure track:
+    RFC-029 defines the gap-closure hypotheses and acceptance gates.
 blocked_reason: |
-  1. No formula yet identified matching 0.2312. Defer until GAUGE-001 mechanism
-     is fully formalized.
-  2. STABILIZER IDENTITY INSTABILITY (2026-02-24): Any candidate formula that
-     uses SL(2,3)-specific structure (e.g., SL(2,3)/Q8 quotients, the unique
-     central involution of SL(2,3)) must be treated as UNSTABLE. Lean evidence
-     proves the vacuum stabilizer is S4, not SL(2,3) (see GAUGE-001, RFC-017).
-     Derivations using only |stabilizer|=24 or Witt-basis dimension counts remain
-     valid. The "3/(3+10)" candidate does not depend on group identity so is
-     unaffected by this instability.
-  See RFC-017 for the reconciliation timeline.
+  The physical weak-mixing mechanism is still open:
+  1) weighted projector/coupling observable not fully locked, and/or
+  2) explicit scale-running bridge not yet closed.
+  The exclusive-U(1) 1/4 candidate is promising but not sufficient by itself.
+  Keep status partial until RFC-029 gates pass.

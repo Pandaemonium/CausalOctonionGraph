@@ -1,123 +1,100 @@
 /-
   CausalGraphTheory/KernelV2.lean
 
-  Kernel v2 Runtime Contract — Gate 1
-  ====================================
-  Establishes the `ComplexOctonion ℤ` state representation for causal graph
-  nodes, per RFC-020_Kernel_Representation_Reconciliation.
+  Kernel v2 Runtime Contract -- Gate 1 and Gate 2
+  =================================================
+  Gate 1 (RFC-020): every node stores state in ComplexOctonion Z.
+  Gate 2 (RFC-022 §4.2): every node carries colorLabel : FanoPoint.
 
-  The node state vector lives in `ComplexOctonion ℤ`, represented concretely
-  as `Fin 8 → ℤ` — eight integer coordinates, one per octonion basis element
-  e₀…e₇.  This is a purely algebraic representation over ℤ:
-  no reals, no topology, no analysis.
-
-  Gate 1 requirement (RFC-020): every node stores state in ComplexOctonion ℤ,
-  NOT in the legacy 7-bit signed-basis representation.
+  Purely algebraic over Z: no reals, no topology, no analysis.
 -/
 
-import Mathlib.Tactic
+import CausalGraphTheory.ComplexOctonion
+import CausalGraphTheory.Fano
 
 namespace KernelV2
 
-/-! ## ComplexOctonion type -/
-
-universe u
-
-/-- `ComplexOctonion R` is the type `Fin 8 → R`, representing the
-    8-dimensional complex-octonion algebra over a ring `R` as a free module
-    with basis {e₀, e₁, …, e₇}.
-
-    For Gate 1 we use `R = ℤ`, giving `ComplexOctonion ℤ` — a tuple of 8
-    integers, one coefficient per octonion basis element.
-    No reals, no analysis; purely algebraic over ℤ. -/
-abbrev ComplexOctonion (R : Type u) : Type u := Fin 8 → R
+open FormalComplex
 
 /-! ## Node state structure -/
 
 /-- A node in the Kernel v2 causal graph.
-    • `nodeId`    — globally unique identifier
-    • `psi`       — state vector in `ComplexOctonion ℤ` (RFC-020 Gate 1)
-    • `tickCount` — discrete ticks elapsed at this node
-    • `topoDepth` — topological depth in the causal DAG -/
+    * nodeId     -- globally unique identifier
+    * psi        -- state vector in ComplexOctonion Z (RFC-020 Gate 1)
+    * tickCount  -- discrete ticks elapsed at this node
+    * topoDepth  -- topological depth in the causal DAG
+    * colorLabel -- static charge/direction axis in FanoPlane (RFC-022 Gate 2) -/
 structure NodeStateV2 where
-  nodeId    : Nat
-  psi       : ComplexOctonion ℤ
-  tickCount : Nat
-  topoDepth : Nat
+  nodeId     : Nat
+  psi        : ComplexOctonion ℤ
+  tickCount  : Nat
+  topoDepth  : Nat
+  colorLabel : FanoPoint
 
 /-! ## Vacuum-orbit predicate -/
 
-/-- `isVacuumOrbit psi` returns `true` iff all 8 integer components of `psi`
-    are zero.  This is the RFC-020 Gate 1 vacuum-orbit test. -/
+/-- isVacuumOrbit psi returns true iff psi is one of {2w, i*2w, -2w, -i*2w}
+    where 2w = 1 + i*e7. -/
 def isVacuumOrbit (psi : ComplexOctonion ℤ) : Bool :=
-  psi ⟨0, by omega⟩ == 0 &&
-  psi ⟨1, by omega⟩ == 0 &&
-  psi ⟨2, by omega⟩ == 0 &&
-  psi ⟨3, by omega⟩ == 0 &&
-  psi ⟨4, by omega⟩ == 0 &&
-  psi ⟨5, by omega⟩ == 0 &&
-  psi ⟨6, by omega⟩ == 0 &&
-  psi ⟨7, by omega⟩ == 0
+  (psi.c ⟨1, by omega⟩ == (0 : FormalComplex ℤ)) &&
+  (psi.c ⟨2, by omega⟩ == (0 : FormalComplex ℤ)) &&
+  (psi.c ⟨3, by omega⟩ == (0 : FormalComplex ℤ)) &&
+  (psi.c ⟨4, by omega⟩ == (0 : FormalComplex ℤ)) &&
+  (psi.c ⟨5, by omega⟩ == (0 : FormalComplex ℤ)) &&
+  (psi.c ⟨6, by omega⟩ == (0 : FormalComplex ℤ)) &&
+  let c0 := psi.c ⟨0, by omega⟩
+  let c7 := psi.c ⟨7, by omega⟩
+  (c0 == (⟨1, 0⟩  : FormalComplex ℤ) && c7 == (⟨0, 1⟩   : FormalComplex ℤ)) ||
+  (c0 == (⟨0, 1⟩  : FormalComplex ℤ) && c7 == (⟨-1, 0⟩  : FormalComplex ℤ)) ||
+  (c0 == (⟨-1, 0⟩ : FormalComplex ℤ) && c7 == (⟨0, -1⟩  : FormalComplex ℤ)) ||
+  (c0 == (⟨0, -1⟩ : FormalComplex ℤ) && c7 == (⟨1, 0⟩   : FormalComplex ℤ))
+
+-- isPhaseOnlyStep and isEnergyExchange stubs removed (RFC-028 D3, integration closure).
+-- Canonical predicate: UpdateRule.isEnergyExchangeLocked
+-- Takes List (ComplexOctonion ℤ) msgs, returns true iff k > 0 AND interactionFold msgs ≠ 1.
+
+/-! ## Key elements -/
+
+/-- 2w = 1 + i*e7 in ComplexOctonion Z. -/
+def twoOmega : ComplexOctonion ℤ :=
+  { c := fun i =>
+      if i = (⟨0, by omega⟩ : Fin 8) then (⟨1, 0⟩ : FormalComplex ℤ)
+      else if i = (⟨7, by omega⟩ : Fin 8) then (⟨0, 1⟩ : FormalComplex ℤ)
+      else (⟨0, 0⟩ : FormalComplex ℤ) }
+
+def omega_vac : ComplexOctonion ℤ := twoOmega
+
+/-- The vacuum color label: FanoPoint index 6 (e7 pseudo-vector axis, RFC-022 §4.2). -/
+def vacuumColorLabel : FanoPoint := ⟨6, by omega⟩
 
 /-! ## Vacuum state -/
 
-/-- The vacuum node: all components zero, tick 0, depth 0. -/
-def vacuumState (id : Nat) : NodeStateV2 :=
-  { nodeId    := id
-    psi       := fun _ => 0
-    tickCount := 0
-    topoDepth := 0 }
+/-- The canonical vacuum node state for Kernel v2. -/
+def vacuumState : NodeStateV2 :=
+  { nodeId     := 0
+    psi        := omega_vac
+    tickCount  := 0
+    topoDepth  := 0
+    colorLabel := vacuumColorLabel }
 
-/-! ## Deterministic transition -/
+/-! ## Gate 1 contract theorems -/
 
-/-- Advance the octonion component by the cyclic index shift i ↦ (i+1) mod 8.
-    This models a discrete phase rotation in the 8-dimensional integer space. -/
-def advanceOctonion (o : ComplexOctonion ℤ) : ComplexOctonion ℤ := fun i =>
-  o ⟨(i.val + 1) % 8, Nat.mod_lt _ (by omega)⟩
-
-/-- One-tick transition: advance the octonion component, increment the tick. -/
-def nextState (s : NodeStateV2) : NodeStateV2 :=
-  { nodeId    := s.nodeId
-    psi       := advanceOctonion s.psi
-    tickCount := s.tickCount + 1
-    topoDepth := s.topoDepth }
-
-/-! ## Gate 1 contract theorem -/
-
-/-- **omega_representable_in_kernel_v2** (KERN-V2-1, RFC-020 Gate 1):
-    Every element of `ComplexOctonion ℤ` is representable as the `psi` field
-    of some `NodeStateV2`.
-
-    Proof: for any `o : ComplexOctonion ℤ`, the node `⟨0, o, 0, 0⟩`
-    has `psi = o` by construction (reflexivity). -/
 theorem omega_representable_in_kernel_v2 :
+    ∃ s : NodeStateV2, s.psi = omega_vac :=
+  ⟨{ nodeId := 0, psi := omega_vac, tickCount := 0, topoDepth := 0,
+     colorLabel := vacuumColorLabel }, rfl⟩
+
+theorem all_psi_representable :
     ∀ (o : ComplexOctonion ℤ), ∃ (s : NodeStateV2), s.psi = o := fun o =>
-  ⟨{ nodeId := 0, psi := o, tickCount := 0, topoDepth := 0 }, rfl⟩
+  ⟨{ nodeId := 0, psi := o, tickCount := 0, topoDepth := 0,
+     colorLabel := vacuumColorLabel }, rfl⟩
 
-/-! ## Supporting lemmas -/
+/-! ## Gate 2 contract theorem -/
 
-/-- The vacuum state satisfies `isVacuumOrbit`. -/
-theorem vacuumState_isVacuumOrbit (id : Nat) :
-    isVacuumOrbit (vacuumState id).psi = true := rfl
-
-/-- `nextState` increments the tick by 1. -/
-@[simp]
-theorem nextState_tickCount (s : NodeStateV2) :
-    (nextState s).tickCount = s.tickCount + 1 := rfl
-
-/-- `nextState` preserves the node identity. -/
-@[simp]
-theorem nextState_nodeId (s : NodeStateV2) :
-    (nextState s).nodeId = s.nodeId := rfl
-
-/-- `nextState` preserves topological depth. -/
-@[simp]
-theorem nextState_topoDepth (s : NodeStateV2) :
-    (nextState s).topoDepth = s.topoDepth := rfl
-
-/-- Every `ComplexOctonion ℤ` vector is the `psi` of some node (surjectivity). -/
-theorem psi_surjective :
-    Function.Surjective (fun s : NodeStateV2 => s.psi) := fun o =>
-  ⟨{ nodeId := 0, psi := o, tickCount := 0, topoDepth := 0 }, rfl⟩
+/-- Every FanoPoint can be the colorLabel of some NodeStateV2. -/
+theorem colorLabel_representable (fp : FanoPoint) :
+    ∃ s : NodeStateV2, s.colorLabel = fp :=
+  ⟨{ nodeId := 0, psi := omega_vac, tickCount := 0, topoDepth := 0,
+     colorLabel := fp }, rfl⟩
 
 end KernelV2

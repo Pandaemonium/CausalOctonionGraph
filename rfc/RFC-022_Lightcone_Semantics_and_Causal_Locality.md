@@ -1,8 +1,8 @@
 # RFC-022: Lightcone Semantics and Causal Locality
 
-**Status:** Active - Literature-Reconciled Draft (2026-02-26)
+**Status:** Active - Update Rule Partial Lock (2026-02-26)
 **Module:** `COG.Core.Lightcone`, `COG.Core.CausalLocality`
-**Depends on:** `rfc/RFC-001_Canonical_State_and_Rules.md`, `rfc/RFC-002_Deterministic_Tick_Ordering.md`, `rfc/RFC-018_Time_as_Graph_Depth_and_Interaction_Clock.md`, `rfc/RFC-020_Kernel_Representation_Reconciliation.md`
+**Depends on:** `rfc/RFC-001_Canonical_State_and_Rules.md`, `rfc/RFC-002_Deterministic_Tick_Ordering.md`, `rfc/RFC-018_Time_as_Graph_Depth_and_Interaction_Clock.md`, `rfc/RFC-020_Kernel_Representation_Reconciliation.md`, `rfc/RFC-023_Discrete_Phase_Clocks_and_Relative_Phase_Interactions.md`
 **Lean claims:** `CAUS-001` (reachability partial order), `DAG-001` (step preserves acyclicity)
 **Literature basis:** `sources/lightcone_lit_review.md`
 
@@ -102,6 +102,44 @@ The abstract types above are bound to concrete Lean definitions in the COG kerne
   **DAG-001**, `CausalGraphTheory.DAGProof`, theorem `step_preserves_acyclic`) ensures
   `Past_t(v)` is strictly smaller than `v` in ID order and cannot loop back.
 
+## 4.2 Update Rule Contract (Partially Settled 2026-02-26)
+
+The abstract `U` in §4 is resolved into the following concrete structure.
+Three components are locked as architecture decisions (D7–D9 in §5).
+One component — the `combine` operator — remains open (see §10, Q5).
+
+**Initial data extension.** `NodeStateV2` carries one additional field:
+
+```
+colorLabel : FanoPoint    -- 0-indexed Fano point (0..6), fixed at graph construction
+```
+
+This is the "superdetermined initial condition": color labels are assigned at
+initialization and never change. Together with the DAG topology they fully determine
+every edge operator for all future time.
+
+**Settled update structure.** Let `v` be a node at tick `t` with incoming edges
+`{u₁ → v, ..., uₖ → v}` sorted in increasing `topoDepth(uᵢ)` order, ties broken
+by ascending node ID (RFC-002 deterministic ordering):
+
+```
+base_v(t)         := T(ψ_v(t))                          -- free temporal commit: e7 *_L ψ_v(t)
+msg_i(t)          := L_{e_{colorLabel(uᵢ)}}(ψ_{uᵢ}(t)) -- color-charge message from uᵢ
+interaction_v(t)  := fold_left(D8-order)(msg₁, ..., msgₖ)
+ψ_v(t+1)          := combine(base_v(t), interaction_v(t))
+```
+
+**Zero-interaction case** (`k = 0`): `ψ_v(t+1) = T(ψ_v(t))`, matching the existing
+`nextState` stub in `KernelV2.lean`. The `phi4` phase clock (RFC-023) holds exactly
+in this case since `phi4_period4` is proved for the free-evolution path.
+
+**Edge operator uniqueness.** For `colorLabel(u) ≠ colorLabel(v)`, the theorem
+`two_points_determine_line` (`Fano.lean:57–61`) uniquely determines the Fano line
+through `(colorLabel(u), colorLabel(v))`, giving an unambiguous cyclic rule
+`e_{c_u} * e_{c_v} = e_{c_w}`. The operator `L_{e_{c_u}}` is thus fully determined
+by the source label alone and consistent with the locked Fano convention
+(`rfc/CONVENTIONS.md §2`).
+
 ---
 
 ## 5. Architecture Decisions (Locked)
@@ -152,6 +190,45 @@ The instrumentation threshold `k > 4` (§7) reflects this structure conservative
 This bound is a **model hypothesis** until a formal upper-bound proof is certified in
 Lean. The Fano structure and directed-triple convention are locked in `rfc/CONVENTIONS.md`.
 
+### D7. Edge operator assignment: static, color-label-derived
+
+The operator on directed edge `u → v` is determined entirely by the source node's
+color label, fixed at graph construction:
+
+```
+edgeOp(u → v) := L_{e_{colorLabel(u)}}
+```
+
+`colorLabel(u) : FanoPoint` is immutable initial data on `NodeStateV2`. The
+`edge.operator` field in the `Edge` type stores the precomputed octonion basis
+element `e_{colorLabel(source)}` at construction time.
+
+Rationale: in a causal DAG, edges record past events. Allowing operators to vary
+with current node states would permit the present to rewrite the past, violating
+causal integrity (D2). Static assignment also enables `edgeOp` to be a pure function
+in Lean, making invariance proofs tractable.
+
+### D8. Multi-edge composition order: depth-first left fold
+
+When `k_t(v) > 1`, message contributions are composed in strictly increasing
+`topoDepth` order of their source nodes (left-to-right fold). Ties in `topoDepth`
+are broken by ascending node ID, consistent with RFC-002 deterministic tick ordering.
+
+This decision resolves all non-associative ordering ambiguities: the causal graph
+topology (fixed at initialization) imposes a total order on every set of causal
+ancestors. No additional runtime disambiguation is needed.
+
+### D9. Temporal-first composition
+
+The free temporal tick `T(ψ) := e7 *_L ψ` is applied to `ψ_v(t)` **before**
+interaction contributions are folded in (see §4.2 update structure).
+
+Rationale: this keeps the `phi4` phase clock (RFC-023, `PhaseClock.lean`) invariant
+under interaction — the phase advances by exactly +1 mod 4 per tick regardless of
+how many incoming edges fire. The theorems `phi4_period4` and `phase_uncertainty_not_energy`
+in `PhaseClock.lean` are proved for the free-evolution case and remain valid because
+temporal commit is separated from interaction.
+
 ---
 
 ## 6. Required Invariants
@@ -180,34 +257,62 @@ Each run must log:
 
 ## 8.1 Lean targets
 
-Add module `CausalGraphTheory/Lightcone.lean` (and optionally `CausalLocality.lean`),
-importing from `CausalGraphTheory.State` and `CausalGraphTheory.CausalOrder`.
+### 8.1.1 `CausalGraphTheory/KernelV2.lean` — `colorLabel` extension
 
-Required types are already available:
-- `CausalGraph`, `Node`, `Edge`, `ComplexOctonion` — from `CausalGraphTheory.State`
-- `CausalGraph.reachable` and its order properties — from `CausalGraphTheory.CausalOrder`
+Add `colorLabel : FanoPoint` to `NodeStateV2` (D7 initial data).
+Update `vacuumState` to supply a default label (e.g. `colorLabel := ⟨6, by omega⟩`
+for the e7 vacuum axis).
 
-Definitions to add:
+### 8.1.2 `CausalGraphTheory/UpdateRule.lean` (new)
+
+Imports: `CausalGraphTheory.KernelV2`, `CausalGraphTheory.Fano`, `Mathlib.Tactic`.
+
+Definitions:
 
 ```lean
--- Causal past of node v in graph G (as a Finset of node IDs).
--- Corresponds to {u | CausalGraph.reachable G u v}.
+-- Edge operator: left-multiplication by the source's color-labeled basis element.
+def edgeOp (label : FanoPoint) : ComplexOctonion ℤ → ComplexOctonion ℤ :=
+  fun psi => ComplexOctonion.basisMul (label.val) psi  -- e_{label} *_L psi
+
+-- Sort incoming edges by source topoDepth, breaking ties by source nodeId.
+def depthOrdered (edges : List (NodeStateV2 × NodeStateV2)) :
+    List (NodeStateV2 × NodeStateV2) :=
+  edges.mergeSort (fun a b =>
+    a.1.topoDepth < b.1.topoDepth ∨
+    (a.1.topoDepth = b.1.topoDepth ∧ a.1.nodeId < b.1.nodeId))
+
+-- Free temporal commit (alias for nextState restricted to base tick).
+def temporalCommit (s : NodeStateV2) : NodeStateV2 := nextState s
+```
+
+Theorem targets:
+
+1. `edgeOp_unique` — for `c₁ ≠ c₂ : FanoPoint`, `edgeOp c₁ ≠ edgeOp c₂`
+   (follows from distinctness of Fano basis elements; connects to D7 uniqueness).
+2. `depthOrdered_totalOrder` — `depthOrdered` produces a unique canonical ordering
+   (connects to `ConeDeterminism` and D8).
+3. `temporalCommit_advances_phi4` — `phi4 (temporalCommit s) = phi4 s + 1`
+   (already proved as `phi4_advances` in `PhaseClock.lean`; re-export or alias here).
+4. `temporal_first_preserves_period4` — applying D9 order (temporal commit before fold)
+   keeps the free-evolution period-4 property.
+
+### 8.1.3 `CausalGraphTheory/Lightcone.lean` (original target, unchanged)
+
+Add module importing from `CausalGraphTheory.State` and `CausalGraphTheory.CausalOrder`.
+
+```lean
 def pastCone (G : CausalGraph) (v : Nat) : Finset Nat := ...
 
--- Direct one-hop incoming edges to node v (the strict-cone boundary).
 def incomingBoundary (G : CausalGraph) (v : Nat) : List Edge :=
   G.edges.filter (fun e => e.target == v)
 
--- Locality proposition: update at v is invariant under outside-pastCone perturbations.
 def noConeLeak (G : CausalGraph) (v : Nat) : Prop := ...
 ```
 
 Theorem targets:
 
-1. `incomingBoundary_deterministic` — `incomingBoundary` is a pure function of `G` and `v`
-   (follows from list `filter` determinism; connects to `ConeDeterminism` invariant).
-2. `pastCone_subset_lt` — every node `u` in `pastCone G v` satisfies `u < v` (corollary
-   of CAUS-001 `reachable_implies_lt`; no new proof work needed).
+1. `incomingBoundary_deterministic` — pure function of `G` and `v`.
+2. `pastCone_subset_lt` — corollary of CAUS-001 `reachable_implies_lt`.
 3. `outside_pastCone_perturbation_invariant` — formalizes `NoConeLeak` (D2).
 4. `fixed_event_equiv_at_boundaries` — under RFC-018 assumptions.
 
@@ -240,10 +345,17 @@ Required tests:
 
 ## 10. Open Questions
 
-1. What is the minimal locality radius for each operator family in CxO kernel dynamics?
+1. What is the minimal effective locality radius for each operator family, given the D7 color-label
+   scheme? (D6 bounds `k_t(v) ≤ 3` for Fano-sparse coupling; does D7 tighten this?)
 2. Does measured cone-tail behavior stay negligible for target observables under high-depth runs?
 3. Which observables are most sensitive to rare high-`k` cone intersections?
 4. How should cone-locality be represented in claims metadata (`strict_cone` vs `effective_cone`)?
+5. **What is the `combine` operator?** Options: (a) additive — `ψ_v(t+1) = base + interaction`
+   (natural for a ℤ-module); (b) multiplicative — `ψ_v(t+1) = base * interaction` (octonion
+   product); (c) a projection onto a specific sector. The choice must be constrained by
+   conservation laws (color charge, energy accounting from RFC-015/RFC-018) and must yield
+   a well-typed `ComplexOctonion ℤ`. This is the single remaining open element in the
+   update rule contract. Settle before writing the `combine` step in `UpdateRule.lean`.
 
 ---
 
