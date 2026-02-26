@@ -65,17 +65,12 @@ given this brief and the full claim registry and asked for independent assessmen
    bridge has not been crossed for any claim (this remains the core existential risk)
 
 **Architecture review (2026-02-26, unanimous across all three models):**
-The KOIDE-001 circulant path is premature. The core blocking issue is the
-**Kernel/Spec Drift** identified in RFC-016: Lean proofs reason about `ComplexOctonion`
-algebraic identities while the Python simulator uses `OctIdx` integers — there is no
-formal bridge between them. All mass-ratio simulation results are ungrounded until this
-is resolved. The `Update.lean` `step()` function is a structural placeholder that does not
-implement the Fano-based branching protocol.
+The KOIDE-001 circulant path is premature. The core blocking issue is Kernel/Spec Drift. RFC-016 documented the problem; RFC-020 supersedes the v1 representation and defines the correct Kernel v2 target. Current risk is implementation lag: Lean and Python are not yet fully aligned to the Kernel v2 runtime contract.
 
-**Updated priority order:** KernelUpdate.lean (Gate 1) → MU-001 gate-density (Gate 2) → WEINBERG-001 note (Gate 4) → GEN-002 → Koide (blocked until Gate 1)
+**Updated priority order:** KernelV2.lean (Gate 1) → MU-001 gate-density (Gate 2) → WEINBERG-001 note (Gate 4) → GEN-002 → Koide (blocked until Gate 1)
 
 **Highest existential risk:** Lean/Python kernel drift — proofs and simulations do not
-refer to the same mathematical object. Close RFC-016 Gate 1 before assigning any new
+refer to the same mathematical object. Close RFC-020 Gate 1 before assigning any new
 physics claims.
 
 ---
@@ -101,7 +96,7 @@ physics claims.
    It confirms B/A ≈ √2 empirically. **Do NOT reassign circulant Koide computation.**
    The remaining Koide work (deriving B/A = √2 from COG dynamics) is **BLOCKED pending
    Gate 1** (kernel semantics). Do not assign any Koide derivation task until
-   `CausalGraphTheory/KernelUpdate.lean` exists with `SemanticConsistency` proved.
+   `CausalGraphTheory/KernelV2.lean` exists with Kernel v2 semantics (CxO-native `NodeStateV2`).
 
 ---
 
@@ -111,22 +106,23 @@ The lab operates under a stage-gate model. Tasks in the **Foundation lane** (bui
 the kernel, update rule, and invariants) have **no gate requirement** and are always
 assignable. All other tasks require their gate to be cleared first.
 
-### Gate 1 · Kernel Semantics Locked
-**Cleared when:** `CausalGraphTheory/KernelUpdate.lean` exists containing:
-- `fanoProduct : Fin 7 → Fin 7 → (Bool × Fin 7)` — signed Fano multiplication
-- `triggers : Fin 7 → Fin 7 → Fin 7 → Bool` — true when triple is NOT Fano-collinear
-- `updateStep : Fin 7 → Fin 7 → Fin 7 → List (Bool × Fin 7)` — branching protocol
-- `theorem updateStep_unique_when_assoc` — when not triggered, returns exactly one result
-- `theorem updateStep_antipodal_when_nonassoc` — when triggered, returns two sign-flipped results
+### Gate 1 · Kernel v2 Semantics Locked
+**Cleared when:** `CausalGraphTheory/KernelV2.lean` exists containing:
+- `NodeStateV2` with canonical state `psi : ComplexOctonion ℤ` (i.e. `C x O`)
+- algebraic predicates `isVacuumOrbit`, `isPhaseOnlyStep`, `isEnergyExchange`
+- deterministic transition semantics on `psi` with immutable eval-plan inputs
+- theorem `omega_representable_in_kernel_v2` (shows `omega = ½(1 + i·e₇)` fits `psi`)
 - `lake build` passes with no `sorry`
 
-**Why this is P0:** Without this file, Lean proofs and Python simulations are formally
-disconnected (RFC-016 Kernel/Spec Drift). The `Update.lean` `step()` is a structural
-placeholder with state `⟨fun _ => 0⟩` — it does not implement the Fano branching
-protocol. Every mass-ratio simulation result is ungrounded until Gate 1 is closed.
+> **Do NOT include a legacy bridge or `omega_not_in_legacy_signed_basis` proof.**
+> That negative result is already documented in RFC-020 §2 and is not worth Lean tokens.
+> Go straight to CxO-native. `Fin 7` continues to serve as the Fano plane index
+> (FanoPoint, FanoLine, multiplication table) — that is correct and must not change.
+> The abandoned design is `octIdx : Fin 7` as node state, which is now history.
 
-**Blocked by Gate 1:** Any Koide derivation from COG dynamics, LEPTON-001 mass
-mechanism, and all claims that cite tick-count ratios as evidence for physics.
+**Why this is P0:** Without Kernel v2 semantics (RFC-020), Lean proofs and Python simulations can still drift and vacuum/time predicates remain under-specified in runtime code. Every downstream mass-ratio or Koide-style claim remains ungrounded until this gate is closed.
+
+**Blocked by Gate 1:** Any Koide derivation from COG dynamics, LEPTON-001 mass mechanism, and all claims that cite tick-count ratios as evidence for physics.
 
 ### Gate 2 · Simulation Architecture Verified
 **Cleared when:** `calc/mass_drag.py` (or a clean replacement) runs the MU-001
@@ -136,6 +132,12 @@ simulation with the architecture specified in RFC-009 §7b.10:
 - Gate-density measurement (not first-recurrence counting)
 - Ratio `mu_COG = gate_density(proton) / gate_density(electron)` converges over N steps
 - The result (convergence value or non-convergence) is recorded in `claims/proton_electron_ratio.yml`
+
+> **Note on `(OctIdx, sign)`:** Using a compact `Fin 7` index here is *correct and intentional*.
+> The proton update rule maps imaginary basis elements to imaginary basis elements, so states
+> never leave the 14-element signed-basis set during this simulation. This is not the same as
+> the deprecated Kernel v1 node-state design — it is a valid compressed encoding for dynamics
+> that are provably basis-closed. Do NOT replace it with full CxO arithmetic for Gate 2.
 
 **Blocked by Gate 2:** Any claim citing a mass ratio as simulation evidence.
 
@@ -158,51 +160,43 @@ reference to how this propagates through the EW symmetry breaking chain.
 
 ## Open Problems — Priority Queue
 
-### P0 · KERNEL-001 · KernelUpdate.lean — Gate 1 Closure — HIGH PRIORITY
+### P0 · KERNEL-001 · KernelV2.lean — Gate 1 Closure — HIGH PRIORITY
 
 **This is the current highest-priority task for the lab.**
 
-**Background:** RFC-016 identifies a critical architectural gap: `Update.lean`'s `step()`
-function is a structural placeholder. It appends a node with state `⟨fun _ => 0⟩` and
-does not implement the Fano-based branching protocol from RFC-001 §3.3. As a result,
-Lean proofs and Python simulations are formally disconnected — there is no theorem
-relating what the Python simulator computes to what the Lean algebra proves.
+**Background:** RFC-020 supersedes RFC-016 node representation. The kernel must be CxO-native (`psi : C x O`) so vacuum orbit semantics and phase-only interaction semantics are representable and testable. Until this is implemented, high-level algebra and simulation outputs are not a single coherent contract.
 
-**Task:** Write `CausalGraphTheory/KernelUpdate.lean` implementing RFC-001 §3.3 using
-`OctIdx := Fin 7` (not `ComplexOctonion`):
+**Task:** Write `CausalGraphTheory/KernelV2.lean` implementing the Kernel v2 contract.
+Go straight to CxO-native — **no legacy bridge file, no `omega_not_in_legacy_signed_basis`.**
 
-```
--- Signed Fano product: result is (sign, output_index)
-def fanoProduct (a g : Fin 7) : Bool × Fin 7
+```lean
+import CausalGraphTheory.ComplexOctonion
 
--- True when {a,g,b} is NOT a Fano collinear triple (Alternativity Trigger)
-def triggers (a g b : Fin 7) : Bool
-
--- Branching protocol:
--- * NOT triggers → returns single result (1 tick)
--- * triggers → returns two sign-flipped results (2 ticks)
-def updateStep (a g b : Fin 7) : List (Bool × Fin 7)
-
--- Key theorems
-theorem updateStep_unique_when_assoc (a g b : Fin 7) (h : ¬triggers a g b) :
-    (updateStep a g b).length = 1
-
-theorem updateStep_antipodal_when_nonassoc (a g b : Fin 7) (h : triggers a g b) :
-    (updateStep a g b).length = 2 ∧
-    (updateStep a g b)[0].1 ≠ (updateStep a g b)[1].1 ∧
-    (updateStep a g b)[0].2 = (updateStep a g b)[1].2
+structure NodeStateV2 where
+  nodeId    : Nat
+  psi       : ComplexOctonion ℤ   -- full C x O state; NOT Fin 7 index
+  tickCount : Nat
+  topoDepth : Nat
 ```
 
-**Inputs:** `Fano.lean` has `fanoCycles` and `fanoMul` already. Import them.
-Use `calc/conftest.py`'s `FANO_CYCLES`, `FANO_SIGN`, `FANO_THIRD` as the Python
-reference for verifying the Lean implementation produces identical results.
+Add:
+- `def isVacuumOrbit (psi : ComplexOctonion ℤ) : Bool` — true iff `psi` is in the 4-element
+  orbit `{2ω, i·2ω, -2ω, -i·2ω}` where `ω = ½(1 + i·e₇)`
+- `def isPhaseOnlyStep ...` and `def isEnergyExchange ...` (stub `Bool` functions on pairs)
+- `theorem omega_representable_in_kernel_v2` — exhibits an explicit `NodeStateV2` whose
+  `psi` field equals the doubled vacuum `2ω = 1 + i·e₇` (integer coefficients)
 
-**Files:** `CausalGraphTheory/KernelUpdate.lean` (new), `CausalGraphTheory/Fano.lean` (read)
+**Important:** `Fin 7` still appears as `FanoPoint`/`FanoLine` in `Fano.lean` and as
+indices in `FanoMul.lean`. That is correct and must not change. The change is that
+*node states* use `ComplexOctonion ℤ`, not `Fin 7`.
 
-**Success criterion:** `lake build` passes with no `sorry`; `fanoProduct`, `triggers`,
-and `updateStep` are all defined; both key theorems are proved.
+**Inputs:** `rfc/RFC-020_Kernel_Representation_Reconciliation.md`, `rfc/RFC-018_Time_as_Graph_Depth_and_Interaction_Clock.md`, `rfc/RFC-019_e7_Temporal_Axis_Vacuum_Photon_Duality.md`, `CausalGraphTheory/ComplexOctonion.lean`, `CausalGraphTheory/PhotonMasslessness.lean` (for `omega` definition pattern).
 
-**Tier:** frontier (Claude preferred — complex Lean 4 with `Fin` arithmetic)
+**Files:** `CausalGraphTheory/KernelV2.lean` (new file only — no bridge file needed)
+
+**Success criterion:** `lake build` passes with no `sorry`; `NodeStateV2`, `isVacuumOrbit`, `isPhaseOnlyStep`, `isEnergyExchange`, and `omega_representable_in_kernel_v2` all exist.
+
+**Tier:** frontier (complex Lean 4 architecture/proof integration)
 
 ---
 
@@ -277,7 +271,7 @@ different algebraic mechanism (circulant matrix eigenvalues, not raw tick counts
 **Next step for KOIDE-001 (BLOCKED — awaiting Gate 1):** The circulant computation
 is complete (`calc/test_koide_circulant.py` passes; B/A ≈ √2 confirmed empirically).
 The remaining gap — deriving B/A = √2 from COG graph dynamics — **cannot be addressed
-until `KernelUpdate.lean` (P0) is complete**, because the COG dynamics are currently
+until `KernelV2.lean` (P0) is complete**, because the COG dynamics are currently
 unformalized. Do not assign new Koide work until Gate 1 is cleared.
 
 ---
@@ -419,7 +413,7 @@ proof(GAUGE-001): add stabilizer_to_perm sub-lemma
 test(KOIDE-001): diophantine search — no integer solutions found ≤4000
 rfc(PHOTON-001): document photon masslessness derivation plan
 pedagogy(ALG-001): add octonionic alternativity LaTeX section
-kernel(KERNEL-001): add fanoProduct and triggers to KernelUpdate.lean
+kernel(KERNEL-001): add NodeStateV2 and transition semantics to KernelV2.lean
 sim(MU-001): gate-density simulation v2 — ratio recorded
 ```
 
@@ -456,7 +450,7 @@ one type of task for multiple rounds, course-correct.
 ### Task Selection Rules
 
 When choosing which task to assign, prefer:
-1. **Gate 1 (P0) until closed** — if `KernelUpdate.lean` does not exist, assign it before anything else
+1. **Gate 1 (P0) until closed** — if `KernelV2.lean` does not exist, assign it before anything else
 2. **Gate 2 (P1) after Gate 1** — if Gate 1 is closed but Gate 2 is not, assign the MU-001 gate-density simulation
 3. Foundation tasks that unblock ≥3 dependent claims have highest priority within their lane
 4. Tasks with clear success criteria you can verify programmatically
@@ -568,8 +562,8 @@ When the system injects a special mode prompt instead of the default question, r
 in the same format but treat the injected question as your primary directive:
 
 **RETROSPECTIVE mode** (every 10 rounds): Step back and assess the big picture.
-- **First question:** Is `CausalGraphTheory/KernelUpdate.lean` closed? If no, assign P0 immediately.
-- **Second question:** Is the Lean/Python Kernel/Spec Drift (RFC-016) resolved? If no, note it in THOUGHTS and assign a Foundation task.
+- **First question:** Is `CausalGraphTheory/KernelV2.lean` closed? If no, assign P0 immediately.
+- **Second question:** Is the Lean/Python Kernel/Spec Drift resolved under RFC-020? If no, note it in THOUGHTS and assign a Foundation task.
 - Review all partial/open claims and identify which is most stale
 - Check whether current work is connected to the Target Physical Systems table
 - Ask: is the project making progress toward falsifiable predictions, or circling known results?
