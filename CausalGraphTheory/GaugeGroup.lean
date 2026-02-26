@@ -152,4 +152,11 @@ theorem fano_aut_eq_GL3F2 :
     Fintype.card (Matrix.GeneralLinearGroup (Fin 3) (ZMod 2)) := by
   native_decide
 
+theorem vacuumStabilizer_iso_S4 :
+    CausalGraph.inducedNonVacLinePerms.length = 24 ∧
+    List.Perm CausalGraph.inducedNonVacLinePerms
+              (List.permutations (List.finRange 4)) :=
+  ⟨CausalGraph.inducedNonVacLinePerms_count,
+   CausalGraph.inducedNonVacLinePerms_perm_S4⟩
+
 end GaugeGroup

@@ -83,15 +83,15 @@ notes: |
   - The stabilizer order-24 result is proved.
   - The specific isomorphism label issue is resolved in this encoding: S4 is supported by the order profile and explicit list-level action checks; the remaining gap is a direct link theorem between GaugeGroup.lean and VacuumStabilizerS4.lean artifacts.
 blocked_reason: |
-  Statement updated (2026-02-24) to reflect S4 identification (human-approved).
-  Remaining open items:
+  Remaining open item (2026-02-26):
 
-  1. Link VacuumStabilizerS4.lean explicit witness to GaugeGroup.lean stabilizer
-     in a single Lean proof (currently two separate verified checks).
+  1. RESOLVED (2026-02-26): GaugeGroup.lean now contains vacuumStabilizer_iso_S4,
+     a direct bridge theorem invoking the VacuumStabilizerS4.lean results within
+     the GaugeGroup namespace. Builds clean (lake build, 1872 jobs, exit 0).
 
-  2. Audit downstream derivations for SL(2,3)-specific structure:
-     - WEINBERG-001: any SL(2,3)/Q8 quotient pipeline must be rewritten.
-     - ALPHA-001: no formula identified yet; unaffected.
+  2. Audit downstream derivations for SL(2,3)-specific structure (still pending):
+     - WEINBERG-001: any SL(2,3)/Q8 quotient pipeline must be rewritten with S4.
+     - ALPHA-001: no formula identified yet; numerically unaffected.
      - STRONG-001: numerically unaffected (order-24 only).
 
   See RFC-017 for full reconciliation plan and timeline.

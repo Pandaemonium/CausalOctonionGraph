@@ -1,7 +1,7 @@
 # GEMINI.md: The Causal Octonion Graph (COG) Workspace
 
 ## 1. Project Orientation & The Prime Directive
-Welcome to the COG repository. Our objective is to rigorously derive the Standard Model and the bound state of hydrogen without relying on continuous spacetime, infinite divisibility, or the real number line ($\mathbb{R}$). 
+Welcome to the COG repository. Our objective is to rigorously derive the Standard Model and a family of two-body and few-body bound-state systems — including hydrogen, tritium, electron–electron, electron–muon, proton, and proton–proton interactions — without relying on continuous spacetime, infinite divisibility, or the real number line ($\mathbb{R}$). Work outward from simplest to hardest: hydrogen first, then the others.
 
 **The Prime Directive: The Continuum is an Illusion.**
 In this workspace, you must abandon continuous fields, differential equations, and probabilistic wave functions. You are building a deterministic universe where:
