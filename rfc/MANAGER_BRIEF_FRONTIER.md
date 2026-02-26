@@ -398,16 +398,17 @@ the pedagogical explanation in LaTeX for any proved claim that is undocumented.
 completed work so the repo always reflects current state and collaborators can
 review progress asynchronously.
 
-**Standard commit procedure for workers:**
+**Standard commit-and-push procedure for workers:**
 ```bash
-RUN_COMMAND('cd /workspace && git add -A && git commit -m "task <task_id>: <brief description>"')
+RUN_COMMAND('cd /workspace && git add -A && git commit -m "<type>(<claim-id>): <brief description>" && git push https://x-access-token:${GITHUB_TOKEN}@github.com/Pandaemonium/CausalOctonionGraph.git main')
 ```
 
-**When to push to GitHub (remote):**
-- After completing any Lean proof (lake build must pass first)
-- After any new pytest suite is added and passes
-- After updating a claim to `proved`
-- After writing a new RFC
+**When to push:** After every successful task completion — commit and push in a
+single command as shown above. Do not commit without pushing.
+
+**Prerequisite:** `GITHUB_TOKEN` is injected into the crucible container via
+`docker-compose.yml`. If `echo $GITHUB_TOKEN` returns empty inside the container,
+the push will fail — escalate to the human operator to add `GITHUB_TOKEN=<PAT>` to `.env`.
 
 **Commit message format:**
 ```
@@ -418,12 +419,8 @@ proof(GAUGE-001): add stabilizer_to_perm sub-lemma
 test(KOIDE-001): diophantine search — no integer solutions found ≤4000
 rfc(PHOTON-001): document photon masslessness derivation plan
 pedagogy(ALG-001): add octonionic alternativity LaTeX section
-```
-
-**Merge to main:** Frontier workers are authorized to merge their own branches
-directly to main after lake build passes. Use:
-```bash
-RUN_COMMAND('cd /workspace && git push origin main')
+kernel(KERNEL-001): add fanoProduct and triggers to KernelUpdate.lean
+sim(MU-001): gate-density simulation v2 — ratio recorded
 ```
 
 ---
