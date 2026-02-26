@@ -160,4 +160,13 @@ theorem update_deterministic (s1 s2 : NodeStateV2)
     nextStateV2 s1 msgs1 = nextStateV2 s2 msgs2 := by
   subst hs; subst hm; rfl
 
+/-- nextStateV2 never writes colorLabel: it is a static particle-type axis.
+    The discrete 4-phase is carried by tickCount (phi4 = tickCount mod 4),
+    not by colorLabel.  Spawned nodes start at tickCount = 1 (spawn includes
+    the first tick via SpawnThenUpdateLaw); the 4-cycle continues normally
+    from there.  colorLabel is set once at spawn and remains fixed. -/
+theorem nextStateV2_preserves_colorLabel (s : NodeStateV2)
+    (msgs : List (ComplexOctonion ℤ)) :
+    (nextStateV2 s msgs).colorLabel = s.colorLabel := rfl
+
 end UpdateRule

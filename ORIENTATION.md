@@ -1,7 +1,15 @@
 # ORIENTATION: Causal Octonion Graph (COG) Theory
 
-**For AI assistants.** This document provides full context for the COG research
-project. Read it before touching any file in this repository.
+**For AI assistants.** This document provides foundational context for the COG
+research project. Read it before touching any file in this repository.
+
+> **⚠️ SECTIONS 4, 5, AND 9 ARE PARTIALLY OUTDATED.**
+> The node representation and claims status have evolved significantly.
+> For **current claims status** see `claims/*.yml`.
+> For **current task priorities** see `rfc/MANAGER_BRIEF_FRONTIER.md`.
+> For **current node/update-rule contracts** see `CausalGraphTheory/KernelV2.lean`
+> and `CausalGraphTheory/UpdateRule.lean`. Do NOT act on the claim statuses in
+> Section 9 — they are stale. Always prefer `claims/*.yml` as ground truth.
 
 ---
 
@@ -404,42 +412,58 @@ Use `FormalComplex` (defined in the repo) instead of Mathlib's Complex.
 
 ## 9. Claims Knowledge Graph — Current Status
 
-### Proved (sorry-free in Lean)
+> **⚠️ STALE — always check `claims/*.yml` for ground truth.**
+> The table below was last verified 2026-02-26. Treat it as a quick orientation
+> only; do NOT make task decisions from it.
+
+### Proved (sorry-free in Lean, as of 2026-02-26)
+
+| ID | Title | Location |
+|----|-------|----------|
+| ALG-001 | Octonions are non-associative | CausalGraphTheory/Octonion.lean |
+| ALG-002 | Octonion alternative law | CausalGraphTheory/Octonion.lean |
+| ALG-003 | Fano multiplication table | CausalGraphTheory/Octonion.lean |
+| ALG-004 | ComplexOctonion ring structure | CausalGraphTheory/ComplexOctonion.lean |
+| CAUS-001 | Causal invariance (DAG) | CausalGraphTheory/CausalGraph.lean |
+| DAG-001 | DAG acyclicity | CausalGraphTheory/CausalGraph.lean |
+| DIST-001 | DAG triangle inequality | CausalGraphTheory/Dist.lean |
+| FANO-001 | Fano plane (7,3,1)-design | CausalGraphTheory/Fano.lean |
+| GAUGE-001 (partial) | GL(3,2) order 168, SL(2,3) stab order 24, 3 vacuum lines, vacuumStabilizer_iso_S4 | CausalGraphTheory/GaugeGroup.lean |
+| MASS-001 | Mass = tick count, monotone | CausalGraphTheory/Mass.lean |
+| RACE-001 | Race condition impossible (KernelV2 determinism) | CausalGraphTheory/UpdateRule.lean |
+| TICK-001 | Tick overhead constant k_gate = 21 (|GL(3,2)|/|H_stab| = 168/8) | CausalGraphTheory/MassRatio.lean |
+
+**Lean build: clean (3145 jobs, 0 sorry, 37 modules as of 2026-02-26).**
+
+### Partial (some sub-claims proved, others open)
+
+| ID | Title | What is proved | What is open |
+|----|-------|---------------|-------------|
+| GAUGE-001 | Full SM gauge group emergence | GL(3,2), SL(2,3), S4 isomorphism | SL(2,3) audit for WEINBERG-001 |
+| GEN-002 | Generation structure | Triality representations identified | Formal separation of S-, V, S+ in COG dynamics |
+| KOIDE-001 | Koide Q=2/3 | Algebraic identity Q=2/3 ⟺ f₀²+f₁²+f₂²=4(…) over ℚ | COG mechanism forcing B/A=√2 |
+| LEPTON-001 | Lepton states | gap_1_electron_state resolved in calc/furey_electron_orbit.py | Full generational cascade |
+| STRONG-001 | Strong coupling | alpha_s_proxy = 1/7 proved in GaugeObservables.lean | Physical normalization |
+
+### Open / Stub
 
 | ID | Title |
 |----|-------|
-| FANO-001 | Fano plane has 7 points, 7 lines, (7,3,1)-design properties |
-| ALG-001 | Octonions are alternative but non-associative |
-| GAUGE-001 (partial) | GL(3,2) order 168, stabilizer SL(2,3) order 24, 3 vacuum lines |
-| MASS-001 | Mass as tick count, monotone, non-decreasing across steps |
-| KOIDE (algebraic) | Q=2/3 ⟺ f₀²+f₁²+f₂² = 4(f₀f₁+f₁f₂+f₂f₀) over ℚ |
-| VAC-001 | ω is idempotent; α_j·ω = 0 |
-| DIST-001 | DAG triangle inequality |
+| MU-001 | Proton/electron mass ratio — k_gate=21 gives mu=22; true mechanism pending (see RFC-034) |
+| WEINBERG-001 | Weinberg angle — requires SL(2,3) completion |
+| GEN-001 | Three generations from full triality |
+| ANOM-001 | Anomaly cancellation |
+| ALPHA-001 | Fine structure constant |
 
-### Falsified (simulation ran; motif bug identified)
+### Key architectural state (2026-02-26)
 
-| ID | Title | Computed | Target | Root cause |
-|----|-------|---------|--------|-----------|
-| MU-001 (v1) | Proton/electron mass ratio | 2.667 | 1836 | Asymmetric exchange: Color1 never absorbs |
-
-### Blocked (mechanism unknown)
-
-| ID | Title | What's missing |
-|----|-------|---------------|
-| KOIDE-001 | Koide Q=2/3 from COG rules | Why does COG force B/A=√2 in Brannen parametrization? |
-| GEN-001 | Three generations from Triality | V/S+/S- as distinct node types not yet formalized |
-| GAUGE-001 (emergence) | SU(3)×SU(2)×U(1)/Z₆ from C⊗O | Full derivation from Witt automorphisms |
-| ANOM-001 | Automatic anomaly cancellation | Hypercharge sum identities |
-
-### Stubs (not yet attempted)
-
-| ID | Title |
-|----|-------|
-| RACE-001 | Race condition impossibility |
-| CAUSAL-001 | Causal invariance |
-| ALPHA-001 | Fine structure constant derivation |
-| ALPHA-S | Strong coupling constant |
-| THETA-W | Weinberg angle |
+- **KernelV2.lean**: `NodeStateV2 { nodeId, psi : ComplexOctonion ℤ, colorLabel : FanoPoint,
+  tickCount, topoDepth, isVacuumOrbit }` — the canonical node representation. Do NOT use
+  the old `Node { id, state : OctIdx, tick_count }` described in §4.1 above.
+- **UpdateRule.lean**: D1 (combine = multiplicative), D2 (Markov trace), D3 (isEnergyExchange)
+  are LOCKED. D4 (spawn) and D5 (Pi_obs projection) are open (see D4D5Contracts.lean).
+- **TwoNodeSystem.lean**: Phase 5a complete — e-e repulsion predicate proved.
+- **Python tests**: 667+ passing, 0 failing.
 
 ---
 

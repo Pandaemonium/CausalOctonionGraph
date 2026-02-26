@@ -17,7 +17,7 @@ lean_theorems:
   - CausalGraph.proton_motif_def
   - CausalGraph.lepton_motif_def
   - CausalGraph.mu_tick_ratio_stub
-python_test: calc/mass_drag.py
+python_test: calc/mass_drag_v2.py
 depends_on:
   - MASS-001
   - GAUGE-001
@@ -76,64 +76,30 @@ notes: |
     state must be (OctIdx, sign) where sign ∈ {+1, −1}. This is required
     to correctly distinguish attractive from repulsive next-step interactions.
 
-  WARNING:
-    The 6*pi^5 coincidence has been known since 1969 and is widely
-    regarded as numerological.  This claim MUST be derived from the
-    COG update rules and NOT post-hoc fitted.  Fix the motif structure
-    from physical reasoning FIRST; then run the simulation.
-simulation_records:
-  - phase: 10
-    date: "2026-02-22"
-    simulation: "calc/mass_drag.py (asymmetric exchange — BUGGY)"
-    rules_version: "RFC-001 Phase II"
-    C_e: 3
-    C_p: 8
-    mu_COG: 2.6667
-    mu_exp: 1836.15267343
-    status: falsification_datum
-    root_cause: |
-      Asymmetric exchange schedule: Q[1](Color1) was source in steps 0 and 1
-      but never a destination. State of Q[1] was frozen; recurrence trivially
-      satisfied for 2/3 quarks. Signs not tracked (+e7 and -e7 collapsed).
-  - phase: 11
-    date: "2026-02-22"
-    simulation: "calc/mass_drag.py (cyclic exchange + sign tracking)"
-    rules_version: "RFC-001 Phase II + RFC-009 §3 + RFC-009 §2b.4"
-    C_e: 3
-    C_p: 11
-    mu_COG_naive: 3.6667
-    mu_exp: 1836.15267343
-    status: falsification_datum
-    architectural_corrections: |
-      (1) Cyclic exchange C1->C2->C3->C1: each quark is src and dst exactly
-          once per 3-step cycle. Every quark state now evolves.
-      (2) Sign tracking: node state = (OctIdx, sign) with sign in {+1,-1}.
-          Recurrence requires full signed state match PROTON_INIT + all +1 signs.
-    interpretation: |
-      First signed recurrence at step=21 (7 full C1->C2->C3->C1 cycles),
-      tick_cost=11 ticks, naive mu = 11/3 = 3.667.
-      Gate density (non-assoc triggers / max_tick): 499-544 per tick (rising).
-      Electron gate density = 0 (fully associative L1, no comparison possible).
-      250 branches surviving at pruning cap — system is highly branching.
-      Still 3 orders of magnitude below mu_exp = 1836.
-    open_questions:
-      - "The naive cycle-count ratio 3.667 is still far from 1836. Is the
-         Fano orbit coverage (PSL(2,7) full orbit) required as the recurrence
-         condition, not just the first return to PROTON_INIT?"
-      - "The gate density comparison is degenerate: electron has 0 non-assoc
-         gates. Should we count ALL gate types (P1 propagation + S1/S2 strong)
-         and compare per-generation densities?"
-      - "250 branches after 100 steps suggests explosive non-associativity.
-         Should the simulation track a 'minimum cost branch' (classical path)
-         rather than all branches?"
-      - "Does 1836 require running until the gate density ratio has converged
-         to a thermodynamic limit? (Gemini 2026-02-22: it is a statistical
-         limit, not an integer cycle period.)"
-next_action: |
-  RFC-009 drafted (2026-02-22). Two structural fixes required before re-run:
-  (1) Add signed state tracking (OctIdx, sign) — see RFC-009 §2b.4.
-  (2) Fix proton exchange schedule to cyclic C1→C2→C3→C1 — see RFC-009 §3.
-  (3) Switch simulation from recurrence-counting to gate-density measurement.
-  Re-run calc/mass_drag.py and report the gate-density ratio as the revised
-  mu_COG datum. Do NOT claim match until the ratio has converged.
+  GATE 2 SIMULATION RESULT (2026-02-26, RFC-009 §7b.10):
+    Script: calc/mass_drag_v2.py
+    Steps: N = 10,000
+    Proton motif  [u1=e1(0), u2=e2(1), d1=e4(3)]:
+      P_nonassoc = 10000, P_density = 1.000000 (every tick fires a gate).
+    Electron motif [c1=e1(0), c2=e2(1), c3=e3(2), quaternion H⊂O]:
+      E_nonassoc = 0, E_density = 0.000000 (associative subalgebra).
+    Outcome: DEGENERATE (associative baseline — E_density = 0).
 
+    Physical interpretation:
+      The degenerate result CONFIRMS the COG lepton-associativity hypothesis
+      (RFC-009 §6.3): leptons do not carry non-associative overhead, baryons do.
+      The proton-to-electron mass ratio cannot be expressed as a simple
+      gate-density ratio when E_density=0. The next step (RFC-009 §7b.11)
+      is to define the electron mass via tick-overhead in the associative
+      limit (cost per hop = 1) vs. the proton's non-associative cost (cost > 1).
+
+simulation_records:
+  - date: "2026-02-26"
+    script: "calc/mass_drag_v2.py"
+    steps: 10000
+    proton_init: "[e1(0), e2(1), e4(3)] — non-associative triad"
+    electron_init: "[e1(0), e2(1), e3(2)] — quaternion H⊂O"
+    p_density: 1.000000
+    e_density: 0.000000
+    ratio: null
+    outcome: "Degenerate (associative baseline)"

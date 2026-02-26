@@ -1,6 +1,10 @@
 /-
   CausalGraphTheory/State.lean
   Phase 2.1: Graph State Definitions
+  LEGACY NOTICE:
+  This module is V1 graph scaffolding retained for historical proofs and migration support.
+  Canonical kernel state for active model claims is `KernelV2.NodeStateV2`,
+  per RFC-020 and RFC-028.
 
   Defines the core data structures for the causal graph:
   - NodeLabel: Physical representation (Vector, Spinor, Vacuum)

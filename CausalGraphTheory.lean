@@ -31,7 +31,7 @@ import CausalGraphTheory.GaugeObservables
 import CausalGraphTheory.WeakMixingObservable
 import CausalGraphTheory.Koide
 
--- Phase 2: Graph structure (V1 causal DAG)
+-- Phase 2: Graph structure (V1 causal DAG, legacy path; non-canonical for active physics claims)
 import CausalGraphTheory.State
 import CausalGraphTheory.Tick
 import CausalGraphTheory.Update

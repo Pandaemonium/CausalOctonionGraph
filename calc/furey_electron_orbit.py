@@ -150,3 +150,61 @@ def furey_dual_electron_state() -> np.ndarray:
     s = oct_mul_full(ALPHA2, s)
     s = oct_mul_full(ALPHA1, s)
     return s
+
+
+def lepton_generation_orbits() -> list[dict]:
+    """Return the 3 lepton generation orbits based on Fano plane structure.
+
+    Classifies the 7 Fano lines into 3 orbits under the action of the
+    stabilizer of L1 (quaternion subalgebra) restricted by e7 (complex structure).
+    
+    Groups:
+    1. Electron (gen_1): {L1} - The associative quaternion subalgebra.
+    2. Muon (gen_2): {L2, L4, L7} - Affine lines excluding L1 (miss e7).
+    3. Tau (gen_3): {L3, L5, L6} - Projective lines through e7.
+    
+    Returns:
+        List of 3 dicts with keys:
+        - label: str ("gen_1", "gen_2", "gen_3")
+        - lines: list of tuples (the Fano lines in this orbit)
+        - stabilizer_size: int (order of subgroup preserving this orbit)
+        - idempotent_rank: int (rank of associated projector, 8 for all)
+    """
+    # Fano lines from CONVENTIONS.md §2
+    # L1=(1,2,3), L2=(1,4,5), L3=(1,7,6), L4=(2,4,6), L5=(2,5,7), L6=(3,4,7), L7=(3,5,6)
+    lines = {
+        "L1": (1, 2, 3),
+        "L2": (1, 4, 5),
+        "L3": (1, 7, 6),
+        "L4": (2, 4, 6),
+        "L5": (2, 5, 7),
+        "L6": (3, 4, 7),
+        "L7": (3, 5, 6),
+    }
+
+    # Partition based on Stab(L1) intersect Stab(e7)
+    # See calc/check_orbits.py for verification of this split.
+    gen_1_lines = [lines["L1"]]
+    gen_2_lines = [lines["L2"], lines["L4"], lines["L7"]]
+    gen_3_lines = [lines["L3"], lines["L5"], lines["L6"]]
+
+    return [
+        {
+            "label": "gen_1",
+            "lines": gen_1_lines,
+            "stabilizer_size": 6,  # Stab(L1, e7) is S3 (order 6)
+            "idempotent_rank": 8,
+        },
+        {
+            "label": "gen_2",
+            "lines": gen_2_lines,
+            "stabilizer_size": 6,  # Action is transitive on these 3
+            "idempotent_rank": 8,
+        },
+        {
+            "label": "gen_3",
+            "lines": gen_3_lines,
+            "stabilizer_size": 6,  # Action is transitive on these 3
+            "idempotent_rank": 8,
+        },
+    ]

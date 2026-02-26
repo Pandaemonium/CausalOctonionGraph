@@ -1,0 +1,76 @@
+---
+- id: ALG-001
+  title: Octonion Basis Multiplication is Anti-Commutative
+  status: proved
+  lean_file: CausalGraphTheory/Octonions.lean
+  theorems:
+    - oct_basis_anticomm
+  description: >
+    For all imaginary basis units e_i, e_j with i ≠ j, we have
+    e_i · e_j = -(e_j · e_i). The sign flip is encoded by the directed
+    structure of the seven Fano triples. Verified by decidable enumeration
+    over all 42 ordered imaginary pairs.
+  pedagogy: pedagogy/alg-001.md
+  depends_on:
+    - FANO-001
+  required_by:
+    - ALG-002
+    - ALG-003
+    - ALG-004
+    - DIST-001
+
+- id: ALG-002
+  title: Octonion Multiplication is Alternative
+  status: proved
+  lean_file: CausalGraphTheory/Octonions.lean
+  theorems:
+    - oct_left_alternative
+    - oct_right_alternative
+  description: >
+    The octonion algebra satisfies the left alternative law (x·x)·y = x·(x·y)
+    and the right alternative law x·(y·y) = (x·y)·y for all x, y in O.
+    Proved by decidable enumeration over all 64 basis pairs.
+  pedagogy: pedagogy/alg-002.md
+  depends_on:
+    - FANO-001
+    - ALG-001
+  required_by:
+    - ALG-004
+    - DIST-001
+
+- id: ALG-003
+  title: Octonions are Non-Associative
+  status: proved
+  lean_file: CausalGraphTheory/Octonions.lean
+  theorems:
+    - oct_not_associative
+  description: >
+    There exist basis elements e_i, e_j, e_k such that (e_i·e_j)·e_k ≠ e_i·(e_j·e_k).
+    Explicit witness: (e1·e2)·e3 = -e6 ≠ -e7 = e1·(e2·e3).
+    Proved by decidable computation over the Fano multiplication table.
+  pedagogy: pedagogy/alg-003.md
+  depends_on:
+    - FANO-001
+    - ALG-001
+  required_by:
+    - TICK-001
+    - MASS-001
+
+- id: ALG-004
+  title: The Octonion Norm is Multiplicative
+  status: proved
+  lean_file: CausalGraphTheory/Octonions.lean
+  theorems:
+    - oct_norm_multiplicative
+  description: >
+    The norm N(x) = sum_i a_i^2 satisfies N(x·y) = N(x)·N(y) for all x, y in O.
+    This makes O a composition algebra (eight-squares identity over Z).
+    Proved via the conjugate identity x·x̄ = N(x)·e0 and the flexible law.
+  pedagogy: pedagogy/alg-004.md
+  depends_on:
+    - FANO-001
+    - ALG-001
+    - ALG-002
+  required_by:
+    - RACE-001
+    - MASS-001

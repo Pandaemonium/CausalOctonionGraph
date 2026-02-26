@@ -166,6 +166,16 @@ class TestS3Automorphism:
         )
 
 
+@pytest.mark.xfail(
+    strict=True,
+    reason=(
+        "GEN-002 OPEN CLAIM: S3 action on groups {1..5},{6..10},{11..15} does not "
+        "map sedenion Witt triples to Witt triples — the group partition is not "
+        "algebraically closed. Actual counts: 35 Witt triples, 32 orbits, 7 membership "
+        "patterns. A different group partition, S3 action, or algebra is needed. "
+        "Blocked pending research."
+    ),
+)
 class TestThreeGenerations:
     """GEN-002: exactly 3 orbits of Witt triples under the S3 Witt-pair action."""
 

@@ -1,10 +1,11 @@
 # RFC-028: Canonical Update Rule Closure
 
-Status: Active - Decision Draft (2026-02-26)
+Status: Active - D1-D5 policy locked; D4-D5 implementation/proof wiring in progress (2026-02-26)
 Module:
 - `COG.Core.UpdateRule`
 - `COG.Core.Trace`
 - `COG.Core.Lightcone`
+- `COG.Core.D4D5Contracts`
 Depends on:
 - `rfc/CONVENTIONS.md`
 - `rfc/RFC-002_Deterministic_Tick_Ordering.md`
@@ -26,7 +27,7 @@ Answer:
 1. Yes, lightcone-local boundary inputs are required.
 2. Yes, deterministic ordering/parenthesization must be predeclared in the initial condition.
 3. Trace is optional only if the kernel is strictly Markov; otherwise it must be explicit kernel state.
-4. The final unresolved piece is the `combine` operator and its conservation contract.
+4. Fixed-topology update is now locked; dynamic spawning and projection contracts are the remaining closure items.
 
 This RFC defines what must be settled before promoting higher-level claims.
 
@@ -39,14 +40,188 @@ COG has strong pieces already:
 2. deterministic ordering and parenthesization (RFC-002),
 3. lightcone-local update framing (RFC-022),
 4. phase clock semantics (RFC-023).
+5. explicit contract layer for D4/D5 (`CausalGraphTheory/D4D5Contracts.lean`).
 
-But the full transition law is still incomplete:
-1. no locked `combine` law,
-2. no locked trace-memory contract,
-3. no locked mapping from transition class to `tau_int`,
-4. no locked projection contract for observer-level uncertainty claims.
+Legacy note:
+1. V1 `State/Update` DAG modules are retained for historical invariants and migration only.
+2. They are not the canonical kernel path for active physics claims.
+
+But the full transition program is still incomplete:
+1. D4 contracts are locked but concrete `applySpawn` implementation-level proofs are pending,
+2. D5 contracts are locked with minimal profile canonical, but extended profile activation criteria must be validated empirically,
+3. invariants/replay/leak proofs are not all wired to the new contracts.
 
 Without these, the model is not fully specified.
+
+---
+
+## 2b. Architectural Assumptions
+
+These are locked design choices that are not under active re-evaluation. Each entry states
+the locked choice, why it was made, what was explicitly rejected, and the concrete evidence
+or failure that would prompt reopening it.
+
+### A1. State space: ℂ⊗𝕆 over ℤ
+
+**Locked choice:** Node state `ψ ∈ ℂ⊗𝕆` with integer coefficients (ℤ), not real or rational.
+
+**Justification:** The project's prime directive forbids ℝ. ℂ⊗𝕆 is the minimal normed
+division algebra structure that simultaneously contains U(1) phase (from ℂ) and the
+octonion color-direction space (from 𝕆). Integer coefficients enforce the discrete-first
+constraint and prevent continuous-limit approximations from silently entering Lean proofs.
+
+**Alternatives not taken:** ℚ coefficients (preserve discreteness but add density and
+complicate norm calculations); ℝ (violates prime directive); ℂ⊗ℍ⊗𝕆 full 64-dimensional
+Clifford path (more expressive but requires explaining why three generations arise from a
+single algebra rather than from three copies).
+
+**Revision trigger:** A ratio prediction (e.g., proton-to-electron mass ratio) requires
+intermediate values that are not ℤ-linear combinations of the eight octonionic basis
+vectors, and no algebraic-integer representation exists within the current basis set.
+
+---
+
+### A2. Temporal commit operator: T(ψ) = e₇ · ψ
+
+**Locked choice:** The temporal step is left-multiplication by the e₇ Fano basis element.
+
+**Justification:** e₇ is the vacuum axis — the unique Fano-plane element stabilised by the
+Witt-pair SU(3) action on the six color directions. Left-multiplication by e₇ generates a
+cyclic action on the vacuum orbit (period 4, proved as `phi4_period4`), giving the Z₄ phase
+clock. It is also the simplest generator consistent with the requirement that the vacuum
+state maps to itself under repeated application.
+
+**Alternatives not taken:** A Fano-triple product (e.g., e₁e₂) as time generator;
+right-multiplication by e₇; a modular counter that does not use octonion algebra at all.
+
+**Revision trigger:** `phi4_period4` fails to hold for physically relevant charged states
+outside the vacuum orbit (i.e., e₇⁴ ≠ identity on an electron state); or a published
+algebraic result establishes that a different element is the natural discrete-time
+generator in ℂ⊗𝕆. This is one of the two assumptions most worth verifying with an external
+algebraist (see project notes on Furey correspondence).
+
+---
+
+### A3. Left-multiplication convention
+
+**Locked choice:** All edge operators and T apply as left-multiplications: `op * ψ`, not `ψ * op`.
+
+**Justification:** Left-multiplication means the causally earliest message (lowest topoDepth)
+is the innermost factor in the non-associative product. Causal ordering maps directly to
+algebraic parenthesization depth: `((...(T(ψ) * m₁) * m₂) * ... * mₙ)`. The alternativity
+theorem then makes the forced parenthesization meaningful: switching left to right would
+reverse the causal ordering in the algebra.
+
+**Alternatives not taken:** Right-multiplication throughout; mixed (left for T, right for
+messages); symmetrised product that averages left and right results.
+
+**Revision trigger:** Furey's number-operator charge construction is shown to require
+right-module action to give correct charge eigenvalues on the electron state; or a
+benchmark two-node interaction produces the correct U(1) charge sign only under
+right-multiplication and the wrong sign under the current left-multiplication convention.
+
+---
+
+### A4. U(1) charge defined as Re(ψ₇)
+
+**Locked choice:** `u1Charge(ψ) = Re(ψ.c₇)` — the real part of the e₇ component.
+
+**Justification:** e₇ is the vacuum axis. In the Furey picture, charge is associated with
+the complex phase of the vacuum-direction component. Re(ψ₇) is local (computable from a
+single node), integer-valued on benchmark states (−½ for electron, +½ for positron-like,
+0 for vacuum), and preserved by the Witt-pair symmetry in the six-direction color subspace.
+
+**Alternatives not taken:** Furey's explicit number operator `J = ⅓(e₁₂₃ + e₁₄₆ + e₂₄₇ + ...)`
+which recovers both hypercharge and EM charge from a single operator on a representation;
+the e₀ (scalar/identity) component; the Euclidean norm of the full ψ vector.
+
+**Revision trigger (highest priority):** Furey's number operator J applied to the electron
+state yields a different eigenvalue than Re(ψ₇); hypercharge and EM charge must be
+distinguished in a hydrogen binding energy calculation (requiring two independent charge
+readouts, not one); or charge conservation fails in a multi-round simulation. This is the
+assumption most urgently requiring external validation.
+
+---
+
+### A5. colorLabel is a static structural label
+
+**Locked choice:** Each node's `colorLabel : FanoPoint` is set once at spawn and is never
+modified by `nextStateV2` or any downstream update step. Proved: `nextStateV2_preserves_colorLabel`.
+
+**Justification:** In Furey's algebraic picture, particle type (which Fano line a state
+sits on) is a property of the irreducible representation, not something that changes during
+free propagation. Color exchange in QCD is expected to be modelled by edge-operator
+messages between nodes, not by mutation of the receiving node's own type label.
+
+**Alternatives not taken:** Dynamic colorLabel updated by `nextStateV2` based on message
+content; colorLabel derived deterministically from the live ψ state rather than stored as
+a separate field.
+
+**Revision trigger:** The proton bound-state model requires a quark node to change its
+Fano-line assignment during evolution (e.g., color exchange cannot be expressed as
+edge-operator messages between fixed-colorLabel nodes); or a spawn rule requires
+initialising a new node with a non-vacuum colorLabel, which would require relaxing
+`SpawnColorLabelLaw`.
+
+---
+
+### A6. Single tick per node per round (uniform step size)
+
+**Locked choice:** Every node advances exactly one tick per scheduler round regardless of
+how many incoming messages it receives.
+
+**Justification:** Simplest closure. Uniform step size ensures `phi4` advances by exactly 1
+for every node per round, maintaining global phase coherence. It is the discrete analog of
+a uniform global coordinate time frame and avoids the need to specify a relative-time rule.
+
+**Alternatives not taken:** Event-driven step (nodes tick only when they receive at least
+one message); proper-time step (nodes with greater computational load tick more slowly);
+multi-step (a single round advances some nodes by 2 or more ticks).
+
+**Revision trigger:** A two-node simulation shows that a fast-propagating particle must
+tick more than once per round to maintain causal ordering; or the scheduler-equivalence
+invariant (event-driven vs fixed-step, §6 gate 4) is shown to fail, implying the two are
+not interchangeable and one must be chosen on physical grounds.
+
+---
+
+### A7. Topology changes only between rounds
+
+**Locked choice:** Spawn and edge-creation events can occur only at round boundaries, not
+mid-round.
+
+**Justification:** Prevents causal paradoxes where a mid-round spawn could influence nodes
+that have already been updated in the same round. Between-round topology change is
+consistent with the classical causal-set growth model (Rideout-Sorkin).
+
+**Alternatives not taken:** Mid-round spawning (requires a causal ordering within a round,
+which is currently under-specified); lazy spawn (node materialises only when first targeted
+by a message from an existing node).
+
+**Revision trigger:** The only natural model of virtual pair production requires a node to
+appear mid-round and influence other nodes in the same round without causal ordering
+violation; or lazy spawn is shown to satisfy `SpawnCompleteness` with simpler implementation
+and no correctness gap.
+
+---
+
+### A8. Canonical message ordering: topoDepth ascending, nodeId as tiebreak
+
+**Locked choice:** Multiple incoming boundary messages are folded in ascending source
+`topoDepth` order, with `nodeId` as a deterministic tiebreak for same-depth messages.
+
+**Justification:** topoDepth is the causal-depth index. Messages from causally earlier
+nodes should apply first (innermost factor). NodeId is arbitrary but deterministic,
+satisfying the superdetermination requirement without introducing physical content.
+
+**Alternatives not taken:** Ordering by nodeId only (ignores causal structure); topoDepth
+descending (most recent cause first — physically reversed); ordering by a global clock
+(violates the no-exogenous-clock policy from §4).
+
+**Revision trigger:** A Lorentz-invariance analog requires that no ordering can be preferred
+among spacelike-separated boundary messages; or a benchmark shows that two same-depth
+messages with different nodeId orderings produce different psi outcomes, meaning the
+tiebreak is physically meaningful and must be derived, not merely declared.
 
 ---
 
@@ -87,34 +262,182 @@ No runtime rule may consult wall-clock time, RNG, or nondeterministic container 
 
 ## D1. Choose one `combine` family
 
-Exactly one must be primary:
-1. additive: `U = base + interaction_term`,
-2. multiplicative: `U = base * interaction_term`,
-3. affine/projection form: `U = P(base, interaction, trace)`.
+Status: Locked.
 
-Closure requirement:
-- chosen family must preserve declared invariants and be typed in `C x O`.
+**Decision:** multiplicative — `combine(base, interaction) = base * interaction`.
+
+**Justification:** Octonion multiplication is the natural product in ℂ⊗𝕆. Multiplicative
+combine is the unique choice consistent with the left-module action of the algebra on
+itself. An additive combine `base + interaction` would not respect the algebraic structure
+(states would exit any bounded norm ball) and has no obvious physical interpretation in
+the Furey framework.
+
+**Alternatives not taken:** Additive combine; weighted interpolation; projection-then-multiply.
+
+**Lean artefacts:** `UpdateRule.combine`, closure theorem `UpdateRule.combine_closed_coz`.
+
+**Revision trigger:** A numerical experiment shows that `base * interactionFold(msgs)` does
+not preserve the vacuum orbit across full round sequences for a benchmark initial state,
+while an alternative combine does; or charge conservation fails under multiplicative combine
+in a multi-particle scattering simulation with known output.
+
+---
 
 ## D2. Lock trace semantics
 
-Choose one:
-1. Markov (`H_t(v) = empty`, memoryless),
-2. finite-memory with explicit window `m`,
-3. full-history (allowed only with a bounded representation plan).
+Status: Locked.
+
+**Decision:** Markov — `H_t(v) = empty` (no trace memory).
+
+**Justification:** Simplest closure that closes the update-rule specification. Markov is
+sufficient for free-particle propagation and for interactions fully specified by current
+boundary messages. Adding trace memory (m > 0) introduces a parameter with no evidence
+that it is needed for any current benchmark. See also assumption A6 on uniform step size;
+both reflect the same minimality principle.
+
+**Alternatives not taken:** Finite trace window of depth m > 0; full history (infinite
+memory); external context injection (breaks superdetermination constraint).
+
+**Lean artefacts:** `UpdateRule.interactionFold` with empty list identity,
+closure theorem `UpdateRule.interactionFold_empty_eq_one`.
+
+**Revision trigger:** Any measured interaction outcome that requires the node's history
+to predict correctly — specifically, if a two-node round produces different outcomes
+depending on the ordered sequence of previous rounds, and this difference cannot be
+expressed as a change in the current boundary messages alone.
+
+---
 
 ## D3. Lock energy-exchange predicate
 
-Define deterministic `isEnergyExchange(transition)` used for `tau_int`.
-It must be computable from local transition data only.
+Status: Locked.
+
+**Decision:** Energy exchange occurs iff `msgs ≠ []` AND `interactionFold(msgs) ≠ 1`.
+
+**Justification:** The two conditions are the minimal criteria for a meaningful interaction.
+An empty boundary means no incoming information (trivially no exchange). An identity fold
+means the messages cancel algebraically — the boundary exists but carries no net action on
+the state. Together they define the smallest set of interactions that can physically change
+ψ. This predicate is computable from local transition data only, consistent with the cone-
+locality requirement.
+
+**Alternatives not taken:** Non-empty boundary alone (ignores algebraic cancellation);
+change in ψ above a threshold (non-local in general, requires comparing pre- and post-state);
+non-identity individual messages without requiring their fold to be non-identity.
+
+**Lean artefacts:** `UpdateRule.isEnergyExchangeLocked`.
+
+**Revision trigger:** A calculation shows `interactionFold(msgs) = 1` but the multi-step
+trajectory of ψ differs from the trajectory without those messages — i.e., the identity
+fold is a coincidence at the aggregate level but the individual messages do have physical
+effect. This would require a finer-grained exchange predicate that tests individual
+messages rather than their fold.
 
 ## D4. Lock spawn semantics
 
-Specify exact conditions under which a node/edge is spawned, and how spawned state is initialized.
+Status: Policy locked in contracts; implementation-level theorem closure pending.
+
+**Decision summary:** Spawn is triggered by active (cone-local, non-identity) boundary
+messages to a missing destination. The spawned node initialises with `vacuumColorLabel`
+and `tickCount = 1`. Spawn is a round-boundary operation (see A7).
+
+**Justification for spawn-on-active-input:** The D3 energy-exchange predicate defines when
+an interaction carries physical content. Spawning a new node in response to a null or
+identity message would be unphysical — no information arrived to justify materialisation.
+`activeConeSlice` extends this to multi-message contexts: only messages that are both
+cone-local and non-identity count.
+
+**Justification for `vacuumColorLabel`:** New nodes have no prior particle identity. The
+vacuum axis is the natural unassigned starting point, consistent with the Furey picture
+where particle type is established by the interactions a node subsequently participates in,
+not pre-assigned at creation. All spawn initialisation must go through `SpawnColorLabelLaw`
+to prevent accidental non-vacuum initialisation. See also A5.
+
+**Justification for `tickCount = 1` (spawn-then-update):** A node that exists but has never
+ticked would be in a pre-physical state inconsistent with `phi4_period4` and the phase-clock
+invariants. Spawn is defined to include the first transition tick, so the node enters the
+causal graph already having completed one step. `tickCount = 1` is not mid-cycle: the 4-cycle
+is 1→2→3→0→1→... and position 1 is valid. See assumption A5 for the distinction between
+`colorLabel` (static) and `phi4 = tickCount mod 4` (dynamic).
+
+**Alternatives not taken:** Spawn on any non-empty boundary (ignores algebraic nullity of
+identity messages); spawn with pre-assigned non-vacuum colorLabel (breaks generality);
+spawn with `tickCount = 0` (pre-physical, phase-inconsistent).
+
+**Lean artefacts:** `ShouldSpawn`, `SpawnInitState`, `ApplySpawn`, `SpawnLocalityLaw`,
+`SpawnNoExogenous`, `SpawnCompleteness`, `SpawnThenUpdateLaw`, `SpawnNodeIdLaw`,
+`SpawnColorLabelLaw`, `SpawnActiveInputPrecondition`.
+
+**Revision triggers:**
+- **vacuumColorLabel:** The proton bound-state model requires a quark node to spawn with
+  a pre-assigned non-vacuum Fano axis (e.g., because color-charge routing demands it from
+  the start). This would require relaxing `SpawnColorLabelLaw` and documenting a specific
+  color-initialization rule derived from the parent's sector.
+- **tickCount = 1:** A two-node experiment shows that a spawned node should be in phase
+  with the parent (i.e., `tickCount = parent.tickCount mod 4`) rather than always starting
+  at 1. This would require `SpawnThenUpdateLaw` to reference the parent's phase.
+- **active-input precondition:** Evidence that identity-payload messages should trigger
+  spawn under a relaxed predicate (e.g., non-zero but identity-folding message set).
+
+**Defensive wrapper removal gate:**
+The temporary runtime defensive no-op on empty active input is removed once all three
+hold: (a) all call sites demonstrably pass non-empty `activeConeSlice`, confirmed by
+test coverage; (b) runtime telemetry counter `spawn_defensive_noop_count` reads zero
+across the full regression suite; (c) cone-leak CI tests pass with strict precondition
+mode enabled. Expected milestone: immediately after a concrete `applySpawn` is proved to
+satisfy `SpawnCompleteness`.
+
+**colorLabel vs phase-cycle clarification:**
+`colorLabel` is a static particle-type axis (Fano basis point), not a 4-phase tracker.
+The discrete 4-phase is `phi4 = tickCount mod 4` (`PhaseClock.lean`). These are independent
+fields. `nextStateV2_preserves_colorLabel` (proved in `UpdateRule.lean`) is the formal statement.
 
 ## D5. Lock projection contract
 
-Define observer map `Pi_obs : FullMicrostate -> ObservableState`.
-Uncertainty claims must reference this map, not informal "hidden information" language.
+Status: Policy locked; **dual-track** observer policy.
+
+**Decision summary:** Two observer profiles are implemented. `piObsCanonical := piObsMinimal`
+is locked for base claims. `piObsWithSector` is available for proton and color-sector
+analyses and must be declared explicitly in claim provenance.
+
+**Justification for dual-track (not single canonical):** A claim proved under a more
+expressive observer is weaker — it depends on more projections being stable. Base claims
+(hydrogen charge, phase counting, mass ratios) should not be silently coupled to
+color-sector projection machinery that they do not require. The dual-track makes this
+dependency explicit in each claim's provenance rather than hiding it in the canonical
+choice.
+
+**Justification for `piObsMinimal` as canonical:** Minimal is the strongest possible base:
+it proves claims using the fewest observables. `piObsWithSector` is always available for
+the analyses that need it; the canonical choice only governs what assumptions are implicit
+in claims that do not specify their observer explicitly.
+
+**Justification for `u1Sector = none` in minimal:** Color sector (`u1Sector`) is derived
+from ψ via `CausalGraph.piObs`. Hiding it in the minimal profile is not an approximation —
+the sector still exists in the microstate. It is simply not reported by the minimal
+observer, preserving the claim-strength property described above.
+
+**Alternatives not taken:** Single canonical set to `piObsWithSector` (all claims coupled
+to color-sector stability, weaker governance); single canonical minimal with no extended
+profile (blocks proton analyses); dynamic observer chosen per-round (non-deterministic,
+violates superdetermination).
+
+**Lean artefacts:** `piObsNodeMinimal`, `piObsNodeWithSector`, `piObsMinimal`,
+`piObsWithSector`, `piObsCanonical`, `PiObsNonTrivial`, `PiObsPermutationInvariant`,
+`PiObsNodeIdLaw`, `PiObsChargeLaw`, `PiObsPhaseLaw`.
+
+Uncertainty/entropy claims must reference this contract, not informal "hidden information" language.
+
+**Revision triggers for `piObsCanonical`:**
+- **Promote to `piObsWithSector`:** (a) all locked base benchmarks are shown unaffected
+  by the upgrade; (b) `PiObsPermutationInvariant` is proved for `piObsWithSector`; and
+  (c) at least one proton-track claim requires it and cannot be expressed under `piObsMinimal`.
+- **Add a new profile beyond `piObsWithSector`:** A proton simulation requires exposing
+  ψ components beyond `u1Sector` (e.g., Witt-basis decomposition depth), and this cannot
+  be captured by any combination of the current four minimal fields plus sector.
+- **Collapse to single profile:** Evidence shows the dual-track adds documentation overhead
+  without any case where the minimal and extended tracks give different proof outcomes on
+  any benchmark attempted in the first 12 months.
 
 ---
 
@@ -128,6 +451,7 @@ All must pass before promoting derived-constant claims:
 4. Scheduler equivalence: event-driven and fixed-step agree at interaction boundaries.
 5. Clock consistency: `tau_topo` monotonic on causal edges, `tau_int` increments only on declared energy exchanges.
 6. Trace policy consistency: if `m=0`, transition is provably history-independent.
+7. Structural-label immutability: `nextStateV2` preserves `colorLabel` (`nextStateV2_preserves_colorLabel`).
 
 ---
 
@@ -138,6 +462,7 @@ All must pass before promoting derived-constant claims:
 Add module(s):
 1. `CausalGraphTheory/UpdateRule.lean`
 2. `CausalGraphTheory/TraceSemantics.lean`
+3. `CausalGraphTheory/D4D5Contracts.lean`
 
 Minimum theorem targets:
 1. `incomingBoundary_deterministic`
@@ -146,6 +471,10 @@ Minimum theorem targets:
 4. `no_exogenous_information`
 5. `outsideConeInvariant_strict`
 6. `markov_if_m0`
+7. `spawn_completeness` (implementation-level theorem over chosen `applySpawn`)
+8. `spawn_then_update` (implementation-level theorem over chosen `applySpawn`)
+9. `pi_obs_permutation_invariant` (implementation-level theorem for canonical `Pi_obs`)
+10. `nextStateV2_preserves_colorLabel` (static structural axis invariant; already proved in `UpdateRule.lean`)
 
 ## 7.2 Python deliverables
 
@@ -170,27 +499,28 @@ Adopted:
 3. operational no-signaling audits for correlation claims.
 
 Not adopted as theorem:
-1. any specific `combine` law,
-2. blanket assumption that `k > 4` is negligible,
-3. "superdeterminism implies no-signaling" (must still be tested).
+1. blanket assumption that `k > 4` is negligible,
+2. "superdeterminism implies no-signaling" (must still be tested),
+3. any non-local spawn trigger that bypasses cone-local boundary data.
+4. any spawn trigger that treats identity payload (`payload = 1`) as active interaction.
 
 ---
 
 ## 9. Claim Governance Impact
 
 Until this RFC is closed:
-1. no claim can be upgraded to "model-derived" if it depends on unspecified `combine` behavior,
-2. uncertainty/entropy claims remain provisional unless tied to `Pi_obs`,
+1. no claim can be upgraded to "model-derived" if it depends on unproved implementation-level spawn obligations (`SpawnCompleteness`, `SpawnThenUpdateLaw`) for the chosen `applySpawn`,
+2. uncertainty/entropy claims remain provisional unless tied to canonical `piObsCanonical`,
 3. scheduler-dependent results must be labeled unstable.
 
 ---
 
 ## 10. Recommended Execution Order
 
-1. Lock D1 (`combine`) with one-page decision note and counterexample checks.
-2. Lock D2 (`trace`) and implement `m=0` and one `m>0` baseline.
-3. Lock D3 (`isEnergyExchange`) and wire to `tau_int`.
-4. Implement invariants and replay/leak/equivalence harnesses.
+1. Implement concrete `applySpawn` and prove `SpawnCompleteness` + `SpawnThenUpdateLaw`.
+2. Keep `piObsCanonical := piObsMinimal` for baseline runs and prove implementation-level permutation invariance.
+3. Run benchmark suite to decide whether extended `u1Sector` exposure is required by evidence.
+4. Implement invariants and replay/leak/equivalence harnesses against the locked contracts.
 5. Only then resume deeper constant-derivation pushes.
 
 ---

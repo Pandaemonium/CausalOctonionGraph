@@ -1,6 +1,10 @@
 /-
   CausalGraphTheory/Update.lean
   Phase 2.4: Graph Update Step
+  LEGACY NOTICE:
+  This module is V1 graph-update scaffolding retained for historical DAG invariants.
+  Canonical kernel transition semantics for active model claims are in
+  `KernelV2` + `UpdateRule` (RFC-028).
 
   Defines the single-step evolution of the causal graph.
   For the purpose of Phase 2, this implements a structural update

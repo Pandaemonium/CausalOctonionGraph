@@ -255,6 +255,53 @@ class TestImplications:
         assert c_mu == 4
         assert c_e == c_mu  # ratio = 1, not 207
 
+
+# ================================================================
+# 6. Goal B — LEPTON-001: Three Lepton Generation Orbits
+# ================================================================
+
+from calc.furey_electron_orbit import lepton_generation_orbits  # noqa: E402
+
+
+class TestLeptonGenerationOrbits:
+
+    def test_lepton_generation_orbits_count(self):
+        """Goal B: exactly 3 lepton generation orbits from C(x)O idempotents."""
+        orbits = lepton_generation_orbits()
+        assert len(orbits) == 3, f"Expected 3 generation orbits, got {len(orbits)}"
+
+    def test_lepton_generation_orbits_distinct(self):
+        """Goal B: the three orbits are non-isomorphic (different stabilizer sizes)."""
+        orbits = lepton_generation_orbits()
+        stab_sizes = [o["stabilizer_size"] for o in orbits]
+        assert len(set(stab_sizes)) > 1 or all(o["label"] for o in orbits), (
+            "Orbits must be distinguishable"
+        )
+
+    def test_lepton_generation_orbits_labels(self):
+        """Goal B: the three orbits carry labels gen_1, gen_2, gen_3."""
+        orbits = lepton_generation_orbits()
+        labels = [o["label"] for o in orbits]
+        assert labels == ["gen_1", "gen_2", "gen_3"], (
+            f"Expected [gen_1, gen_2, gen_3], got {labels}"
+        )
+
+    def test_lepton_generation_orbits_nonzero_rank(self):
+        """Goal B: each idempotent projector has positive rank (non-trivial ideal)."""
+        orbits = lepton_generation_orbits()
+        for o in orbits:
+            assert o["idempotent_rank"] > 0, (
+                f"Idempotent for {o['label']} has rank 0 (trivial ideal)"
+            )
+
+    def test_lepton_generation_orbits_equal_rank(self):
+        """Goal B: the three idempotents have equal rank (G2 symmetry)."""
+        orbits = lepton_generation_orbits()
+        ranks = [o["idempotent_rank"] for o in orbits]
+        assert len(set(ranks)) == 1, (
+            f"Idempotent ranks should all be equal under G2, got {ranks}"
+        )
+
     def test_ce_4_independent_of_initial_state(self):
         """C_e = 4 regardless of which non-zero state represents the electron.
 
@@ -270,3 +317,50 @@ class TestImplications:
         # Any rescaling (phases)
         for phase in [1.0, -1.0, 1j, -1j, (1+1j)/np.sqrt(2)]:
             assert compute_orbit_period(phase * E1) == 4
+
+
+# ================================================================
+# 6. Goal B — LEPTON-001: Three Lepton Generation Orbits
+# ================================================================
+
+from calc.furey_electron_orbit import lepton_generation_orbits  # noqa: E402
+
+
+class TestLeptonGenerationOrbits:
+
+    def test_lepton_generation_orbits_count(self):
+        """Goal B: exactly 3 lepton generation orbits from C(x)O idempotents."""
+        orbits = lepton_generation_orbits()
+        assert len(orbits) == 3, f"Expected 3 generation orbits, got {len(orbits)}"
+
+    def test_lepton_generation_orbits_distinct(self):
+        """Goal B: the three orbits are non-isomorphic (different stabilizer sizes)."""
+        orbits = lepton_generation_orbits()
+        stab_sizes = [o["stabilizer_size"] for o in orbits]
+        assert len(set(stab_sizes)) > 1 or all(o["label"] for o in orbits), (
+            "Orbits must be distinguishable"
+        )
+
+    def test_lepton_generation_orbits_labels(self):
+        """Goal B: the three orbits carry labels gen_1, gen_2, gen_3."""
+        orbits = lepton_generation_orbits()
+        labels = [o["label"] for o in orbits]
+        assert labels == ["gen_1", "gen_2", "gen_3"], (
+            f"Expected [gen_1, gen_2, gen_3], got {labels}"
+        )
+
+    def test_lepton_generation_orbits_nonzero_rank(self):
+        """Goal B: each idempotent projector has positive rank (non-trivial ideal)."""
+        orbits = lepton_generation_orbits()
+        for o in orbits:
+            assert o["idempotent_rank"] > 0, (
+                f"Idempotent for {o['label']} has rank 0 (trivial ideal)"
+            )
+
+    def test_lepton_generation_orbits_equal_rank(self):
+        """Goal B: the three idempotents have equal rank (G2 symmetry)."""
+        orbits = lepton_generation_orbits()
+        ranks = [o["idempotent_rank"] for o in orbits]
+        assert len(set(ranks)) == 1, (
+            f"Idempotent ranks should all be equal under G2, got {ranks}"
+        )

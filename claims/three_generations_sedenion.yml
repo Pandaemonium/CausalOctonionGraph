@@ -11,7 +11,7 @@ statement: |
   One generation from C@O1; S3-automorphism sigma generates C@O2, C@O3.
   Result: exactly 3 generations, no duplication of gauge bosons.
 status: partial  # S3 action on unordered Witt-pair labels is proved inside vacuum stabilizer; sedenion-level generation lift still open
-python_test: ""
+python_test: "calc/test_sedenion_gen.py::TestThreeGenerations [xfail — GEN-002 open]"
 lean_file: CausalGraphTheory/WittPairSymmetry.lean
 lean_theorems:
   - CausalGraph.wittPair_cyclic_perm_is_fano_aut        # Z3 orientation-preserving 3-cycle IS Aut(Fano)
@@ -140,3 +140,17 @@ blocked_reason: |
   Remaining blocker: derive a physically meaningful generation operator on full
   fermion state sectors from this discrete action, and connect it (or rule it out)
   against the sedenion-level S3 mechanism in the Gresnigt construction.
+
+  NUMERICAL DIAGNOSIS (2026-02-26, test run in sedenion_gen.py):
+    - The Cayley-Dickson 4-doubling sedenion algebra has exactly 35 unordered
+      Witt triples (i.e. triples {i,j,k} with e_i*e_j = ±e_k, all distinct and >0).
+    - The arithmetic partition G0={1..5}, G1={6..10}, G2={11..15} is NOT algebraically
+      closed: applying S3 permutations on these groups does NOT map Witt triples to
+      Witt triples (cross-products of lower and upper halves break the partition).
+    - Result: 32 singleton orbits (instead of 3), 7 membership patterns (instead of 3),
+      172 labeled orbits.
+    - TestThreeGenerations tests marked xfail with strict=True pending resolution.
+
+  REQUIRED: Either identify the algebraically natural 3-partition of the 15 sedenion
+  imaginaries that is preserved by the Witt-triple structure, or re-define the S3 action
+  in terms of Gresnigt's 4 octonion subalgebras of S rather than arithmetic groups.

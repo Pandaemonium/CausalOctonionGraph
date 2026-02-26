@@ -83,6 +83,40 @@ def build_context() -> str:
 """.strip()
 
 
+def run_charge_sign_regression_smoke() -> dict:
+    """
+    Local kernel regression smoke.
+
+    Validates expected charge-sign interaction polarity outcomes from
+    calc/charge_sign_interaction_matrix.py and records results even when
+    frontier model API calls fail.
+    """
+    try:
+        from calc.charge_sign_interaction_matrix import summarize
+
+        summary = summarize()
+        matrix = summary["matrix"]
+        checks = {
+            "ee_repulsive": matrix["electron"]["electron"] == "repulsive",
+            "e_positron_attractive": matrix["electron"]["positron_like"] == "attractive",
+            "e_vacuum_neutral": matrix["electron"]["vacuum"] == "neutral",
+            "vacuum_vacuum_neutral": matrix["vacuum"]["vacuum"] == "neutral",
+        }
+        return {
+            "ok": all(checks.values()),
+            "checks": checks,
+            "charges": summary["charges"],
+            "error": "",
+        }
+    except Exception as e:
+        return {
+            "ok": False,
+            "checks": {},
+            "charges": {},
+            "error": str(e),
+        }
+
+
 SYSTEM = (
     "You are an expert in discrete mathematics, Lean 4 formal proofs, "
     "theoretical physics, and mathematical physics research methodology. "
@@ -252,6 +286,16 @@ async def main():
         sys.exit(1)
     emit(f"Context length: {len(context):,} chars\n")
 
+    emit("Running local kernel regression smoke...")
+    charge_smoke = run_charge_sign_regression_smoke()
+    if charge_smoke["error"]:
+        emit(f"  [FAIL] charge-sign matrix smoke error: {charge_smoke['error']}")
+    else:
+        emit(f"  [OK={charge_smoke['ok']}] charges={charge_smoke['charges']}")
+        for name, ok in charge_smoke["checks"].items():
+            emit(f"    - {name}: {ok}")
+    emit("")
+
     emit("Calling all three frontier models in parallel...")
     emit("=" * 70)
 
@@ -280,6 +324,16 @@ async def main():
     # Write full results to UTF-8 markdown file
     md_content = "# COG Lab — Frontier Model Smoke Test Results\n\n"
     md_content += f"*Generated: 2026-02-25*\n\n"
+    md_content += "## Local Kernel Regression Smoke\n\n"
+    if charge_smoke["error"]:
+        md_content += f"- status: FAIL\n- error: `{charge_smoke['error']}`\n\n"
+    else:
+        md_content += f"- status: {'PASS' if charge_smoke['ok'] else 'FAIL'}\n"
+        md_content += f"- charges: `{charge_smoke['charges']}`\n"
+        md_content += "- checks:\n"
+        for name, ok in charge_smoke["checks"].items():
+            md_content += f"  - {name}: {ok}\n"
+        md_content += "\n"
     md_content += "\n".join(output_sections)
     out_file.write_text(md_content, encoding="utf-8")
     emit(f"\nFull results written to: {out_file}")
