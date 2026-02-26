@@ -10,11 +10,7 @@
   Claim: claims/fano_plane.yml (FANO-001)
 -/
 
--- No Mathlib imports needed for Phase 1.1.
--- We use bare Lean 4 with Fin, List, and decidability.
-
-/-- A point in the Fano plane is an element of Fin 7, representing
-    the imaginary octonion units e₁ through e₇ (0-indexed: 0 ↦ e₁, ..., 6 ↦ e₇). -/
+/-- A point in the Fano plane is an element of Fin 7. -/
 abbrev FanoPoint := Fin 7
 
 /-- A line in the Fano plane is an element of Fin 7. -/
@@ -22,31 +18,20 @@ abbrev FanoLine := Fin 7
 
 /--
   The 7 directed cyclic triples (SOURCE OF TRUTH).
-
-  These encode the Fano plane lines with the Furey convention.
-  Each triple (a, b, c) means e_{a+1} * e_{b+1} = +e_{c+1} (using 1-indexed physics notation).
-
-  In our 0-indexed Fin 7:
-    Line 0: (0, 1, 2) ↔ physics (1, 2, 3): e₁e₂ = +e₃
-    Line 1: (0, 3, 4) ↔ physics (1, 4, 5): e₁e₄ = +e₅
-    Line 2: (0, 6, 5) ↔ physics (1, 7, 6): e₁e₇ = +e₆
-    Line 3: (1, 3, 5) ↔ physics (2, 4, 6): e₂e₄ = +e₆
-    Line 4: (1, 4, 6) ↔ physics (2, 5, 7): e₂e₅ = +e₇
-    Line 5: (2, 3, 6) ↔ physics (3, 4, 7): e₃e₄ = +e₇
-    Line 6: (2, 5, 4) ↔ physics (3, 6, 5): e₃e₆ = +e₅
-
-  IMPORTANT: The 0-indexed representation maps point p to physics index p+1.
+  Each triple (a, b, c) means e_{a+1} * e_{b+1} = +e_{c+1}.
+  Line 0: (0,1,2)  Line 1: (0,3,4)  Line 2: (0,6,5)
+  Line 3: (1,3,5)  Line 4: (1,4,6)  Line 5: (2,3,6)  Line 6: (2,5,4)
 -/
 def fanoCycles : FanoLine → Fin 3 → FanoPoint
-  | 0, 0 => 0  | 0, 1 => 1  | 0, 2 => 2  -- (1,2,3)
-  | 1, 0 => 0  | 1, 1 => 3  | 1, 2 => 4  -- (1,4,5)
-  | 2, 0 => 0  | 2, 1 => 6  | 2, 2 => 5  -- (1,7,6)
-  | 3, 0 => 1  | 3, 1 => 3  | 3, 2 => 5  -- (2,4,6)
-  | 4, 0 => 1  | 4, 1 => 4  | 4, 2 => 6  -- (2,5,7)
-  | 5, 0 => 2  | 5, 1 => 3  | 5, 2 => 6  -- (3,4,7)
-  | 6, 0 => 2  | 6, 1 => 5  | 6, 2 => 4  -- (3,6,5)
+  | 0, 0 => 0  | 0, 1 => 1  | 0, 2 => 2
+  | 1, 0 => 0  | 1, 1 => 3  | 1, 2 => 4
+  | 2, 0 => 0  | 2, 1 => 6  | 2, 2 => 5
+  | 3, 0 => 1  | 3, 1 => 3  | 3, 2 => 5
+  | 4, 0 => 1  | 4, 1 => 4  | 4, 2 => 6
+  | 5, 0 => 2  | 5, 1 => 3  | 5, 2 => 6
+  | 6, 0 => 2  | 6, 1 => 5  | 6, 2 => 4
 
-/-- The set of points on a given Fano line, as a list. -/
+/-- The set of points on a given Fano line. -/
 def fanoLinePoints (l : FanoLine) : List FanoPoint :=
   [fanoCycles l 0, fanoCycles l 1, fanoCycles l 2]
 
