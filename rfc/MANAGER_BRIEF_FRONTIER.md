@@ -44,26 +44,30 @@ one has at least a falsifiable Python test and a Lean stub claim.
 | Python tests (calc/) | **648 passing, 0 failing** |
 | Lean build | **clean — no `sorry`** |
 | Claims proved | **11 proved** (ALG-001–004, CAUS-001, DAG-001, DIST-001, FANO-001, MASS-001, RACE-001, TICK-001) |
-| Claims partial | **6 partial** (GAUGE-001, GEN-002, KOIDE-001, LEPTON-001, CFS-003, PHOTON-001) |
+| Claims partial | **6 partial** (GAUGE-001\*, GEN-002\*, KOIDE-001, LEPTON-001, CFS-003, PHOTON-001) |
 | Claims open/stub | **9 remaining** (WEINBERG-001, GEN-001, ANOM-001, ALPHA-001, STRONG-001, REL-001, CFS-001, CFS-002, MU-001) |
+
+\* **GAUGE-001** — link theorem `vacuumStabilizer_iso_S4` now exists in `GaugeGroup.lean` and builds clean (2026-02-26). Remaining item: downstream SL(2,3) audit for WEINBERG-001. **Do NOT reassign GAUGE-001 Lean work.**
+
+\* **GEN-002** — `calc/sedenion_gen.py` (463 lines) exists and was committed in Phase 7. The file constructs sedenion algebra over ZMod 2 and counts S3 orbits of Witt triples. **Do NOT recreate this file.** Next step: add a formal pytest that asserts exactly 3 orbits (check if `calc/test_sedenion_gen.py` exists first).
 
 ---
 
-## Frontier Model Consensus (2026-02-25 Smoke Test)
+## Frontier Model Consensus (2026-02-25 Smoke Test, updated 2026-02-26)
 
 Three frontier models (Claude Sonnet 4.6, Gemini 3 Pro Preview, GPT-5.2-Codex) were each
 given this brief and the full claim registry and asked for independent assessments.
 
-**Unanimous findings:**
-1. KOIDE-001 Diophantine Search is the highest-impact, lowest-risk next task
-2. GAUGE-001 must be decomposed into sub-lemmas before reassigning (not monolithic)
+**Unanimous findings (still valid):**
+1. ~~KOIDE-001 Diophantine Search~~ → **DONE** — no exact integer solutions ≤4000; next is circulant matrix approach
+2. ~~GAUGE-001 sub-lemmas~~ → **DONE** — `vacuumStabilizer_iso_S4` proved in Phase 8
 3. The project is "mathematically sound but physically unproven" — the algebra-to-physics
-   bridge has not been crossed for any claim
+   bridge has not been crossed for any claim (this remains the core existential risk)
 
-**Agreed priority order:** P2 (KOIDE-001) → P5 (GEN-002) → P1 (GAUGE-001 decomposed) → P3 (MU-001)
+**Updated priority order (Phase 8+):** KOIDE-001 circulant → GEN-002 pytest → MU-001 → WEINBERG-001 note
 
-**Highest existential risk (all three agreed):** Integer tick counts may not reproduce
-physical constants without hidden tuning. KOIDE-001 is the falsification test for this.
+**Highest existential risk (unchanged):** Integer tick counts may not reproduce
+physical constants without hidden tuning. The KOIDE-001 circulant matrix test is next.
 
 ---
 
@@ -77,50 +81,32 @@ physical constants without hidden tuning. KOIDE-001 is the falsification test fo
    the completed task produced, then decide whether a *different* follow-up is needed.
 3. **`calc/test_koide_diophantine.py` IS DONE.** Do not assign any task whose primary
    output is this file. The search has been run; the result is documented above.
-4. **`vacuumStabilizer_iso_S4` in one shot IS BLOCKED.** Assign only the sub-lemma
-   `stabilizer_to_perm` (Step 1 only). Do not assign the full theorem.
+4. **`vacuumStabilizer_iso_S4` IS DONE (2026-02-26).** The theorem exists in
+   `CausalGraphTheory/GaugeGroup.lean` and `lake build` passes. Do not assign any
+   task that writes or re-proves this theorem. The remaining GAUGE-001 work is the
+   *downstream* SL(2,3) audit that affects WEINBERG-001.
+5. **`calc/sedenion_gen.py` EXISTS (Phase 7).** It is 463 lines and constructs sedenion
+   algebra over ZMod 2 with S3 orbit counting. Do not recreate it. The next task is
+   to add/check `calc/test_sedenion_gen.py`.
 
 ---
 
 ## Open Problems — Priority Queue
 
-### P1 · GAUGE-001 · Link Theorem (Lean) — HIGH IMPACT
+### ✅ GAUGE-001 · Vacuum Stabilizer = S4 — COMPLETED (2026-02-26)
 
-**Claim:** The vacuum stabilizer of the 7-point Fano plane is isomorphic to S4.
+**`theorem vacuumStabilizer_iso_S4` exists in `CausalGraphTheory/GaugeGroup.lean`.
+`lake build` passes (1872 jobs, no sorry). DO NOT reassign this Lean work.**
 
-**Current status (2026-02-26):** Nearly complete. `VacuumStabilizerS4.lean` has all the
-key list-level results. `GaugeGroup.lean` now imports it. One task is active: `fc90cb83`.
+**What is proved:**
+- `VacuumStabilizerS4.lean`: all 24 S4 permutations on 4 non-vacuum Fano lines, both inverses, faithful action
+- `GaugeGroup.lean`: bridge theorem `vacuumStabilizer_iso_S4` linking the above into the GaugeGroup namespace
+- `gauge_group.yml`: updated to `partial` — Lean side done; downstream SL(2,3)→WEINBERG-001 audit pending
 
-**What VacuumStabilizerS4.lean already proves (all compile, no sorry):**
-- `vacuumStabilizer_action_on_nonVacLines_S4` — the stabilizer induces all 24 permutations on the 4 non-vacuum Fano lines [0,1,3,6]
-- `inducedNonVacLinePerm_faithful_bool` — only the identity fixes all 4 lines
-- `liftFromS4Perm_right_inv_bool` — `inducedNonVacLinePerm ∘ liftFromS4Perm = id` (list equality)
-- `liftFromS4Perm_left_inv_bool` — `liftFromS4Perm ∘ inducedNonVacLinePerm = id` (list equality)
-- `vacuumStabilizer_explicit_iso_S4_bool` — bundles both inverse checks
-
-**The remaining gap:** These are all `= true` style bool checks at the list level.
-The link theorem needs to lift them into a typed Lean statement in `GaugeGroup.lean`.
-The most tractable approach is **not** a full `MulEquiv` (requires a `Group` instance
-on the raw list-type, which is hard). Instead, write:
-
-```lean
--- In GaugeGroup.lean (after import CausalGraphTheory.VacuumStabilizerS4)
-theorem vacuumStabilizer_iso_S4 :
-    CausalGraph.inducedNonVacLinePerms.length = 24 ∧
-    List.Perm CausalGraph.inducedNonVacLinePerms
-              (List.permutations (List.finRange 4)) := by
-  exact ⟨CausalGraph.inducedNonVacLinePerms_count,
-         CausalGraph.inducedNonVacLinePerms_perm_S4⟩
-```
-
-This is a minimal typed export of the S4-completeness result that `GaugeGroup.lean`
-can expose without needing a `Group` instance. It closes the formal gap.
-
-**Files to read first:** `CausalGraphTheory/VacuumStabilizerS4.lean` (see theorems at end),
-then `CausalGraphTheory/GaugeGroup.lean` (confirm `import CausalGraphTheory.VacuumStabilizerS4` is present).
-
-**Success criterion:** `lake build` passes with the above theorem in `GaugeGroup.lean`.
-**Next action:** Task `fc90cb83` should attempt this exact theorem.
+**Remaining open item (NOT a GAUGE-001 Lean task):**
+The physical interpretation chain `SL(2,3) → S4 → SU(3)` needs a WEINBERG-001 RFC update
+explaining how S4 replaces SL(2,3) in the gauge breaking analysis. This is a *writing* task,
+not a Lean task. Assign as P4 (WEINBERG-001 research note).
 
 ---
 
@@ -192,19 +178,20 @@ the sedenion algebra S = 𝕆 ⊕ 𝕆.
 **What's proved:**
 - S3 acts on Witt-pair labels (proved in `VacuumStabilizerS4.lean`)
 - S3 is an automorphism of sedenions (not octonions — confirmed 2026-02-23)
+- `calc/sedenion_gen.py` (463 lines, committed Phase 7) — constructs 16-dim sedenion
+  multiplication table over ZMod 2, applies S3 automorphism, counts Witt-triple orbits
 
-**The gap:** No Python code yet constructs the sedenion over ZMod 2 and
-verifies that S3 produces exactly 3 distinct Witt-triple orbits.
+**The gap:** No formal pytest exists to assert exactly 3 orbits.
 
-**Task:** Write `calc/sedenion_gen.py` that:
-1. Constructs the 16-dim sedenion multiplication table over ZMod 2
-2. Applies the S3 automorphism (cyclic permutation of Witt-pair labels)
-3. Counts distinct orbits of Witt triples under S3
-4. Asserts exactly 3 orbits (falsify if not)
+**Task:**
+1. Check whether `calc/test_sedenion_gen.py` already exists (`READ_FILE calc/test_sedenion_gen.py`)
+2. If it exists and passes, mark GEN-002 as `proved` in `claims/gen_002_sedenion.yml`
+3. If it does not exist, write `calc/test_sedenion_gen.py` that calls `sedenion_gen.py`
+   and asserts exactly 3 S3-orbit families; run `pytest calc/test_sedenion_gen.py -v`
 
-**Files:** `calc/sedenion_gen.py` (new), `calc/test_sedenion_gen.py` (new)
+**Files:** `calc/sedenion_gen.py` (exists — **do not recreate**), `calc/test_sedenion_gen.py`
 
-**Success criterion:** `pytest calc/test_sedenion_gen.py -v` passes.
+**Success criterion:** `pytest calc/test_sedenion_gen.py -v` passes; GEN-002 updated to `proved`.
 
 ---
 
@@ -421,3 +408,19 @@ One precise sentence: what to do, which file, what to produce, success criterion
 
 <TIER>clerk|frontier</TIER>
 ```
+
+### Special Modes (injected periodically by the orchestrator)
+
+When the system injects a special mode prompt instead of the default question, respond
+in the same format but treat the injected question as your primary directive:
+
+**RETROSPECTIVE mode** (every 10 rounds): Step back and assess the big picture.
+- Review all partial/open claims and identify which is most stale
+- Check whether current work is connected to the Target Physical Systems table
+- Ask: is the project making progress toward falsifiable predictions, or circling known results?
+- Assign a task that *breaks new ground* (not incremental cleanup)
+
+**DOCUMENTATION AUDIT mode** (every 5 rounds): Check for documentation gaps.
+- Scan for `proved` claims with no corresponding `pedagogy/*.md` file
+- Scan for `proved` claims with no manuscript section
+- Assign a Pedagogy Curator task if any gap is found; otherwise assign a literature search
