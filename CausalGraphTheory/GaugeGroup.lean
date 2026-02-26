@@ -32,6 +32,7 @@
 -/
 
 import CausalGraphTheory.Fano
+import CausalGraphTheory.VacuumStabilizerS4
 import Mathlib.Data.List.Perm.Basic
 import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs
 import Mathlib.FieldTheory.Finite.Basic
