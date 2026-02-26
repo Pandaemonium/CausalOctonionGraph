@@ -44,8 +44,10 @@ one has at least a falsifiable Python test and a Lean stub claim.
 | Python tests (calc/) | **648 passing, 0 failing** |
 | Lean build | **clean — no `sorry`** |
 | Claims proved | **11 proved** (ALG-001–004, CAUS-001, DAG-001, DIST-001, FANO-001, MASS-001, RACE-001, TICK-001) |
-| Claims partial | **6 partial** (GAUGE-001\*, GEN-002\*, KOIDE-001, LEPTON-001, CFS-003, PHOTON-001) |
-| Claims open/stub | **9 remaining** (WEINBERG-001, GEN-001, ANOM-001, ALPHA-001, STRONG-001, REL-001, CFS-001, CFS-002, MU-001) |
+| Claims partial | **7 partial** (GAUGE-001\*, GEN-002\*, KOIDE-001, LEPTON-001, CFS-003, PHOTON-001, **STRONG-001**†) |
+| Claims open/stub | **8 remaining** (WEINBERG-001, GEN-001, ANOM-001, ALPHA-001, REL-001, CFS-001, CFS-002, MU-001) |
+
+† **STRONG-001** promoted stub→partial (2026-02-26): `GaugeObservables.lean` proves `alpha_s_proxy = 1/7` from the S4/GL(3,2) ratio. Physical gap ~20% documented. Mixing-correction model is the next step (RFC-026 §5.1).
 
 \* **GAUGE-001** — link theorem `vacuumStabilizer_iso_S4` now exists in `GaugeGroup.lean` and builds clean (2026-02-26). Remaining item: downstream SL(2,3) audit for WEINBERG-001. **Do NOT reassign GAUGE-001 Lean work.**
 
@@ -106,7 +108,23 @@ The lab operates under a stage-gate model. Tasks in the **Foundation lane** (bui
 the kernel, update rule, and invariants) have **no gate requirement** and are always
 assignable. All other tasks require their gate to be cleared first.
 
-### Gate 1 · Kernel v2 Semantics Locked
+### Gate 1 · Kernel v2 Semantics Locked  ✅ CLEARED (2026-02-26)
+
+`KernelV2.lean` exists and builds clean:
+- `NodeStateV2` with `psi : ComplexOctonion ℤ = Fin 8 → ℤ`
+- `isVacuumOrbit`, `vacuumState`, `advanceOctonion`, `nextState`
+- `omega_representable_in_kernel_v2` (surjectivity), `phi4` (RFC-023) in `PhaseClock.lean`
+- `lake build` passes, no `sorry`
+
+**Available RFC-023 modules (PhaseClock):**
+- `KernelV2.phi4 : NodeStateV2 → ZMod 4` — local phase class from tickCount
+- `phi4_advances`, `phi4_period4`, `phi4_at_tick` — periodicity proved
+- `phase_uncertainty_not_energy` — RFC-023 Test C separation theorem
+
+**Available RFC-026 modules (GaugeObservables):**
+- `CausalGraph.alpha_s_proxy = 1/7 : ℚ` — STRONG-001 leading-order estimate proved
+- `alpha_s_proxy_overestimates` — 20% gap from physical value documented
+
 **Cleared when:** `CausalGraphTheory/KernelV2.lean` exists containing:
 - `NodeStateV2` with canonical state `psi : ComplexOctonion ℤ` (i.e. `C x O`)
 - algebraic predicates `isVacuumOrbit`, `isPhaseOnlyStep`, `isEnergyExchange`
