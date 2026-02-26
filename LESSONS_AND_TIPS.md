@@ -3,6 +3,46 @@
 A running log of tricky issues encountered in this project and how they were resolved.
 Add new entries at the **top** of each section so the most recent fixes are easy to find.
 
+## Quick-Find Index
+
+| Symptom keyword | Section |
+|----------------|---------|
+| `pytest`, `No module named pytest`, test runner | [Python / pytest Issues](#python--pytest-issues) |
+| `crucible`, `docker exec`, container not running | [Docker / Crucible Issues](#docker--crucible-issues) |
+| `charmap`, `cp1252`, Unicode corruption, `→` broken | [UTF-8 / Encoding Issues](#utf-8--encoding-issues) |
+| `\to`, `\tau`, `\nu` corrupted in Markdown | [Markdown / LaTeX Issues](#markdown--latex-issues) |
+| `split_ifs`, `induction` IH wrong shape, `simp` | [Lean 4 Proof Issues](#lean-4-proof-issues) |
+| `lean_diagnostic_messages` codec error | [UTF-8 / Encoding Issues](#utf-8--encoding-issues) |
+| `python3` not found on Windows | [Python / pytest Issues](#python--pytest-issues) |
+
+---
+
+## Docker / Crucible Issues
+
+### `pytest` Not Available in Crucible Container
+
+**Symptom:** `docker exec crucible python3 -m pytest calc/ ...` returns
+`No module named pytest`. Post-task verification in the orchestrator silently
+reports unverified for all Python tasks.
+
+**Root cause:** The crucible container's startup command is `tail -f /dev/null`
+with no pip install step. The `orchestrator` and `dashboard` containers install
+their `requirements.txt` (which includes pytest) at startup, but the crucible
+does not.
+
+**Fix:** `pytest` was added to the Dockerfile's base pip install line (2026-02-26).
+Rebuild the crucible container to pick it up:
+```bash
+docker compose up -d --build crucible
+```
+After rebuilding, `python3 -m pytest calc/ -x --tb=short -q` works inside the
+crucible container as expected.
+
+**Note for agents:** If `python3 -m pytest` fails inside the crucible with
+"No module named pytest", the container has not been rebuilt yet. Log the
+verification result as `unverified` and continue — do NOT try to `pip install`
+at runtime (will fail with "externally-managed-environment" on Ubuntu 24.04).
+
 ---
 
 ## Lean 4 Proof Issues
