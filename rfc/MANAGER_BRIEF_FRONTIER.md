@@ -108,7 +108,7 @@ one has at least a falsifiable Python test and a Lean stub claim.
 | Claims active_hypothesis | **2** (ALPHA-001, MU-001) per ground-truth YAML |
 | Claims open | **1 open** (LEPTON-001) per ground-truth YAML |
 | Claims stub | **3 stub** (ANOM-001, CFS-002, GEN-001) per ground-truth YAML |
-| Claims superseded | **4 superseded** (GAUGE-001-LEGACY, LEPTON-001-LEGACY, STRONG-001-LEGACY, VAC-001) |
+| Claims superseded | **3 superseded** (GAUGE-001-LEGACY, STRONG-001-LEGACY, VAC-001) per ground-truth YAML |
 | Claims supported | **1 supported** (WEINBERG-UV-001) |
 | Claims unknown | **1 unknown** (CLAIM_STATUS_MATRIX) |
 ---
@@ -481,25 +481,13 @@ What was delivered:
 
 ---
 
-### ✅ P0 · ALG-001 · Completed (2026-02-27)
+### ✅ WEINBERG-001 · Gate 4 Python + Gate 5 Lean — COMPLETED (2026-02-27)
 
-**ALG-001 is proved. DO NOT reassign.**
+**`calc/weinberg_s4_decomp.py` and `CausalGraphTheory/WeinbergAngle.lean` are fully implemented. DO NOT reassign.**
 
-**Anti-Loop Rule:** Do NOT re-prove ALG-001; the YAML is final.
-
----
-
-### ✅ P0 · ALG-002 · Completed (2026-02-27)
-
-**ALG-002 is proved. DO NOT reassign.**
-
-**Anti-Loop Rule:** Do NOT re-prove ALG-002; the YAML is final.
-
----
-
-### ✅ P0 · ALG-003 · Completed (2026-02-27)
-
-**ALG-003
+What was delivered (tasks 13709b1e-2bf, 11748290-13a):
+- `calc/weinberg_s4_decomp.py`: S4 and SL(2,3) element-order histograms, subgroup chain, Weinberg angle estimate (sin²θ_W = 4/24).
+- `CausalGraphTheory/
 ## Hard Constraints (enforce strictly)
 
 - **No continuum:** `Mathlib.Analysis.*`, `Mathlib.Topology.*`, `Mathlib.Data.Real.*`
