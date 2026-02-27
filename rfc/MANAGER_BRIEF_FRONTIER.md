@@ -130,9 +130,9 @@ one has at least a falsifiable Python test and a Lean stub claim.
 | Lean build | **clean — no `sorry`** |
 | Lean library modules | **37+ modules** all imported in root `CausalGraphTheory.lean` |
 | Claims proved | **19 proved** (ALG-001–004, ANOM-001, CAUS-001, CFS-001, DAG-001, DIST-001, FANO-001, GAUGE-001, GEN-001, GEN-002, LEPTON-001, MASS-001, MU-001, PHOTON-001, RACE-001, REL-001, STRONG-001, TICK-001, WEINBERG-001) per ground-truth YAML |
-| Claims partial | **4 partial** (ALPHA-001, CFS-003, HYDROGEN-001, GEN-002) per ground-truth YAML |
+| Claims partial | **5 partial** (ALPHA-001, CFS-003, HYDROGEN-001, GEN-002, CFS-003) → **4 partial** (ALPHA-001, CFS-003, HYDROGEN-001, GEN-002) per ground-truth YAML |
 | Claims active_hypothesis | **1** (MU-001) per ground-truth YAML |
-| Claims open | **0 open** (LEPTON-001 promoted to `proved`) per ground-truth YAML |
+| Claims open | **1 open** (LEPTON-001) per ground-truth YAML |
 | Claims stub | **3 stub** (ANOM-001, CFS-002, GEN-001) per ground-truth YAML |
 | Claims superseded | **3 superseded** (GAUGE-001-LEGACY, STRONG-001-LEGACY, VAC-001) per ground-truth YAML |
 | Claims supported | **1 supported** (WEINBERG-UV-001) |
@@ -507,9 +507,7 @@ What was delivered:
 
 ---
 
-### ✅ P0 · MU-001b · Electron Mass Mechanism — RFC-034 — COMPLETED (2026-02-26)
-
-**`rfc/RFC
+### ✅ P0 · MU-001b ·
 ## Hard Constraints (enforce strictly)
 
 - **No continuum:** `Mathlib.Analysis.*`, `Mathlib.Topology.*`, `Mathlib.Data.Real.*`
