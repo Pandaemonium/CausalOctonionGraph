@@ -5,6 +5,14 @@ Does NOT import from alpha_fano.py — all computations are self-contained.
 import math
 import sys
 
+# Snapshot sys.modules at module import time -- before any other test file in the
+# pytest session has a chance to import calc.alpha_fano.  Using the live
+# sys.modules dict inside the test body would cause a false failure whenever
+# another test file (e.g. test_alpha001.py) imports the producer module earlier
+# in the same session, because sys.modules is a global singleton shared across
+# all test files collected in a single pytest run.
+_SKEPTIC_MODULE_IMPORTS = frozenset(sys.modules.keys())
+
 # ---------------------------------------------------------------------------
 # Independent Fano plane definition (PG(2,2) over GF(2))
 # 7 points labelled 1..7, 7 lines each containing exactly 3 points
@@ -72,17 +80,20 @@ def test_alpha_ratio_order_of_magnitude():
     ratio = (1.0 / 3.0) / _ALPHA_PHYSICAL
     assert math.isfinite(ratio), "Ratio is not finite"
     assert ratio > 1.0, f"Ratio {ratio} is not > 1"
-    # Sanity: should be approximately 137.036/3 ≈ 45.68
+    # Sanity: should be approximately 137.036/3 ~= 45.68
     assert 40.0 < ratio < 50.0, f"Ratio {ratio:.4f} outside expected range (40, 50)"
 
 
 def test_no_dependency_on_producer_module():
-    """This module computes independently — no import of alpha_fano."""
-    assert "alpha_fano" not in sys.modules, (
-        "alpha_fano was imported — independence requirement violated"
-    )
-    # Also verify the module name itself doesn't sneak in via a sub-import
-    for mod_name in sys.modules:
+    """This module computes independently -- no import of alpha_fano.
+
+    We check the frozen snapshot of sys.modules captured at import time of this
+    module (stored in _SKEPTIC_MODULE_IMPORTS), NOT the live sys.modules at test
+    execution time.  Using the live dict would cause a false failure when another
+    test file (e.g. the producer's own test suite) imports calc.alpha_fano
+    earlier in the same pytest session, because sys.modules is a global singleton.
+    """
+    for mod_name in _SKEPTIC_MODULE_IMPORTS:
         assert "alpha_fano" not in mod_name, (
-            f"alpha_fano found in sys.modules as '{mod_name}'"
+            f"alpha_fano found in modules loaded by skeptic: '{mod_name}'"
         )
