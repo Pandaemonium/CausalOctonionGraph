@@ -129,8 +129,8 @@ one has at least a falsifiable Python test and a Lean stub claim.
 | Python tests (calc/) | **667+ passing, 0 failing** (incl. `mass_drag_v2` +10, `update_rule_ablation` +9, `test_ee_scattering` +10, `test_cfs001_embedding` +8, `test_hydrogen001_binding` +8) |
 | Lean build | **clean — no `sorry`** |
 | Lean library modules | **37+ modules** all imported in root `CausalGraphTheory.lean` |
-| Claims proved | **19 proved** (ALG-001–004, ANOM-001, CAUS-001, CFS-001, DAG-001, DIST-001, FANO-001, GAUGE-001, GEN-001, GEN-002, LEPTON-001, MASS-001, MU-001, PHOTON-001, RACE-001, REL-001, STRONG-001, TICK-001, WEINBERG-001) per ground-truth YAML |
-| Claims partial | **4 partial** (ALPHA-001, CFS-002, CFS-003, HYDROGEN-001) per ground-truth YAML |
+| Claims proved | **16 proved** (ALG-001–004, CAUS-001, CFS-001, DAG-001, DIST-001, FANO-001, GAUGE-001, MASS-001, MU-001, PHOTON-001, RACE-001, REL-001, STRONG-001, TICK-001) per ground-truth YAML |
+| Claims partial | **7 partial** (ALPHA-001, CFS-002, CFS-003, GEN-002, HYDROGEN-001, WEINBERG-001, CFS-003) per ground-truth YAML |
 | Claims active_hypothesis | **1** (MU-001) per ground-truth YAML |
 | Claims open | **1 open** (LEPTON-001) per ground-truth YAML |
 | Claims stub | **2 stub** (ANOM-001, GEN-001) per ground-truth YAML |
@@ -334,6 +334,28 @@ Next action:
 
 ---
 
+### 🔴 P5 · GEN-002 · `partial` — Advance to `proved`
+
+**Ground-truth status is `partial`.**
+
+Next action:
+- Identify remaining open gates in `claims/GEN-002.yml`.
+- Complete Lean formalization following the GEN-001 pattern.
+- Promote `claims/GEN-002.yml` to `proved`.
+
+---
+
+### 🔴 P6 · WEINBERG-001 · `partial` — Advance to `proved`
+
+**Ground-truth status is `partial`.**
+
+Next action:
+- Identify remaining open gates in `claims/WEINBERG-001.yml`.
+- Complete Lean formalization following the STRONG-001 pattern.
+- Promote `claims/WEINBERG-001.yml` to `proved`.
+
+---
+
 ### ✅ LEPTON-001 · Promote `open` → `proved` — COMPLETED (2026-02-27)
 
 **`claims/LEPTON-001.yml` is promoted to `proved`. DO NOT reassign.**
@@ -500,12 +522,7 @@ What was delivered:
 
 **`calc/mass_drag_v2.py` is fully implemented. DO NOT reassign.**
 
-What was delivered:
-- RFC-009 §7b.10 architecture: cyclic exchange C1→C2→C3, signed `(OctIdx, sign)` state
-- Proton motif `{e1,e2,e4}` — non-collinear Fano triad — P_density = 1.000000
-- Electron motif `{e1,e2,e3}` — quaternion H⊂O — E_density = 0.000000 (associative)
-- Outcome: **DEGENERATE** (ratio undefined; lepton associativity confirmed).
-- 10 pytest tests all passing; result recorded in `claims/proton_electron_ratio.yml`.
+What was delivered
 ## Hard Constraints (enforce strictly)
 
 - **No continuum:** `Mathlib.Analysis.*`, `Mathlib.Topology.*`, `Mathlib.Data.Real.*`
