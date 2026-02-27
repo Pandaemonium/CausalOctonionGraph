@@ -9,6 +9,25 @@ Every response MUST contain exactly these three XML tags:
 ```
 Omitting any tag causes an immediate parse error and the round is wasted.
 
+**Optional `<ROLE>` tag — use this to hire a specialist worker:**
+```
+<ROLE>Role_Name_Here</ROLE>
+```
+If you include a `<ROLE>` tag, a worker with that role will be hired (if none exists yet) and
+assigned the task. Workers are permanently bound to their role — a `Lean_Theorems_Expert` will
+never be reused for a `Pedagogy_Curator` task. **Use this to bring fresh specialists into the
+lab.** Role name examples:
+- `<ROLE>Lean_Theorems_Expert</ROLE>` — default; Lean proofs and formal math (Leibniz)
+- `<ROLE>Pedagogy_Curator</ROLE>` — writes `pedagogy/*.md` explanations of proved claims
+- `<ROLE>Web_Content_Writer</ROLE>` — updates `website/intro.md` and `website/pages/*.md`
+- `<ROLE>Python_Simulation_Expert</ROLE>` — writes/extends `calc/` simulations and tests
+- `<ROLE>Literature_Researcher</ROLE>` — arXiv searches, sources/, claim grounding
+- `<ROLE>Dashboard_Engineer</ROLE>` — edits `lab/dashboard/static/` files
+
+If you omit `<ROLE>`, the task defaults to `Lean_Theorems_Expert` (reuses existing Lean worker).
+**Hiring diversity is encouraged** — assign pedagogy, web, and simulation tasks to their own
+specialist workers rather than routing everything through Leibniz.
+
 ## Current P0 — D4/D5 Contract Lock
 
 **Assign this before any other physics task:**
@@ -69,14 +88,14 @@ one has at least a falsifiable Python test and a Lean stub claim.
 
 | Metric | Status |
 |--------|--------|
-| Python tests (calc/) | **667+ passing, 0 failing** (incl. `mass_drag_v2` +10, `update_rule_ablation` +9) |
+| Python tests (calc/) | **667+ passing, 0 failing** (incl. `mass_drag_v2` +10, `update_rule_ablation` +9, `test_ee_scattering` +10, `test_cfs001_embedding` +8) |
 | Lean build | **clean — 3145 jobs, no `sorry`** |
 | Lean library modules | **37 modules** all imported in root `CausalGraphTheory.lean` (integration closure 2026-02-26) |
-| Claims proved | **20 proved** (ALG-001–004, ANOM-001, CAUS-001, DAG-001, DIST-001, FANO-001, GEN-002, KOIDE-001, LEPTON-001, MASS-001, MU-001, RACE-001, STRONG-001, TICK-001, WEINBERG-001) — ground-truth YAML promoted via recent tasks |
-| Claims partial | **4 partial** (CFS-003, GAUGE-001, GEN-002†, PHOTON-001) per ground-truth YAML |
-| Claims active_hypothesis | **2** (ALPHA-001, MU-001†) |
+| Claims proved | **14 proved** (ALG-001–004, ANOM-001, CAUS-001, DAG-001, DIST-001, FANO-001, MASS-001, RACE-001, REL-001, STRONG-001, TICK-001) per ground-truth YAML — plus GAUGE-001, GEN-002, KOIDE-001, LEPTON-001, MU-001, WEINBERG-001 promoted via recent tasks (stale ground-truth entries noted below) |
+| Claims partial | **5 partial** (CFS-001, CFS-003, GEN-002†, PHOTON-001, WEINBERG-001†) per ground-truth YAML — GAUGE-001, GEN-002, WEINBERG-001 canonical status is `proved`; ground-truth entries are stale |
+| Claims active_hypothesis | **2** (ALPHA-001, MU-001† — MU-001 canonical status is `proved`; ground-truth entry is stale) |
 | Claims open | **1 open** (LEPTON-001 — ground-truth `open` entry is a stale duplicate; canonical status is `proved`) |
-| Claims stub | **5 stub** (ANOM-001†, CFS-001, CFS-002, GEN-001, REL-001) |
+| Claims stub | **3 stub** (ANOM-001†, CFS-002, GEN-001) per ground-truth YAML — ANOM-001 canonical status is `proved` |
 | Claims superseded | **4 superseded** (GAUGE-001-LEGACY, LEPTON-001-LEGACY, STRONG-001-LEGACY, VAC-001) |
 | Claims supported | **1 supported** (WEINBERG-UV-001) |
 | Claims unknown | **1 unknown** (CLAIM_STATUS_MATRIX) |
@@ -88,6 +107,9 @@ one has at least a falsifiable Python test and a Lean stub claim.
 † **WEINBERG-001** partial→proved (2026-02-26): `CausalGraphTheory/WeinbergAngle.lean` fully implemented with `s4_order_eq`, `s4_order4_count_eq`, `weinberg_sin2_estimate` proved with no `sorry`; `claims/weinberg_angle.yml` advanced to gate 5; claim promoted to `proved` via tasks 11748290-13a and 49ec8bae-12b.
 † **STRONG-001** partial→proved (2026-02-27): `CausalGraphTheory/StrongCoupling.lean` implemented with `alpha_s_fano_bound` proved by `native_decide`, no `sorry`; claim promoted to `proved` via task 88212ede-e0b.
 † **ANOM-001** stub→proved (2026-02-27): `CausalGraphTheory/AnomalyCancellation.lean` created with `linear_anomaly_cancels`, `cubic_anomaly_cancels`, `anomaly_free` proved with no `sorry`; Python anomaly cancellation tests passing; claim promoted to `proved` via tasks c12cae6c-c05 and 004e0a47-ec9.
+† **GAUGE-001** partial→proved (2026-02-27): `CausalGraphTheory/GaugeSL23.lean` created with four theorems (`sl23_order_eq`, `s4_order_eq'`, `sl23_s4_same_order`, `s4_nonabelian`) proved via `native_decide`, no `sorry`; claim promoted to `proved` via task 85ae513c-924.
+† **PHOTON-001** Gate 1 closed (2026-02-27): `calc/test_photon_massless.py` and Lean stub created via task b57b0fd9-124; claim remains `partial` pending remaining gates.
+† **CFS-001** Gate 2 closed (2026-02-27): `CausalGraphTheory/CFS001Embedding.lean` stub with 5 required theorems, no `sorry`, created via task d0d79a9f-e76; claim remains `partial` pending remaining gates.
 ---
 
 ## Frontier Model Consensus (2026-02-25 Smoke Test, updated 2026-02-26)
@@ -298,13 +320,16 @@ What was delivered (task d27b8826-5a9):
 
 ---
 
-### ✅ GAUGE-001 · Vacuum Stabilizer = S4 — COMPLETED (2026-02-26)
+### ✅ GAUGE-001 · Vacuum Stabilizer = S4 — COMPLETED (2026-02-27)
 
-**`theorem vacuumStabilizer_iso_S4` exists in `CausalGraphTheory/GaugeGroup.lean`.**
+**`CausalGraphTheory/GaugeSL23.lean` is fully implemented. `claims/GAUGE-001.yml` is promoted to `proved`. DO NOT reassign.**
 
-What is proved:
+What was delivered (task 85ae513c-924):
+- `CausalGraphTheory/GaugeSL23.lean` with four theorems (`sl23_order_eq`, `s4_order_eq'`, `sl23_s4_same_order`, `s4_nonabelian`) all proved via `native_decide`, no `sorry`.
 - `VacuumStabilizerS4.lean`: all 24 S4 permutations on 4 non-vacuum Fano lines.
 - `GaugeGroup.lean`: bridge theorem `vacuumStabilizer_iso_S4`.
+
+**Anti-Loop Rule:** Do NOT recreate `GaugeSL23.lean` or re-prove the S4 gauge group structure. GAUGE-001 is `proved` and the YAML is final.
 
 ---
 
@@ -373,33 +398,7 @@ What was delivered:
 
 What was delivered (tasks 13709b1e-2bf and 11748290-13a):
 - `calc/weinberg_s4_decomp.py`: S4 and SL(2,3) element-order histograms, subgroup chain, sin²θ_W = 4/24 estimate.
-- `CausalGraphTheory/WeinbergAngle.lean`: theorems `s4_order_eq`, `s4_order4_count_eq`, `weinberg_sin2_estimate` proved with no `sorry`.
-- H2/H1 policy-locked ablations active under RFC-029.
-
-**Anti-Loop Rule:** Do NOT create another `WeinbergAngle.lean` or re-derive the S4 decomposition. Use `claims/weinberg_angle.yml` as canonical.
-
----
-
-### ✅ WEINBERG-001 · Final Promotion — partial → proved — COMPLETED (2026-02-26)
-
-**`claims/weinberg_angle.yml` is promoted to `proved`. DO NOT reassign.**
-
-What was delivered (tasks 49ec8bae-12b and 11748290-13a):
-- `claims/weinberg_angle.yml` advanced to gate 5 with successful `lake build`.
-- All required theorems (`s4_order_eq`, `s4_order4_count_eq`, `weinberg_sin2_estimate`) proved with no `sorry` in `CausalGraphTheory/WeinbergAngle.lean`.
-- H2/H1 policy-locked ablations confirmed active under RFC-029.
-
-**Anti-Loop Rule:** Do NOT re-promote WEINBERG-001 or create a separate `claims/WEINBERG-001.yml`. The canonical file is `claims/weinberg_angle.yml` and the claim is `proved`.
-
----
-
-### ✅ GEN-002 · Three-Generation Count from Fano Orbit Structure — COMPLETED (2026-02-26)
-
-**`CausalGraphTheory/GenerationCount.lean` is fully implemented. `claims/GEN-002.yml` is promoted to `proved`. DO NOT reassign.**
-
-What was delivered (task c7f6f365-3dd):
-- `CausalGraphTheory/GenerationCount.lean` with 8 named theorems, no `sorry`.
-- Three-generation count formally derived from Fano orbit structure.
+- `C
 ## Hard Constraints (enforce strictly)
 
 - **No continuum:** `Mathlib.Analysis.*`, `Mathlib.Topology.*`, `Mathlib.Data.Real.*`
@@ -586,7 +585,7 @@ Override model selection per-run by setting env vars before `docker compose up`.
 Beyond generic Lean/Python work, you may assign tasks that target specific
 output artifacts. Name the role explicitly in your `<TASK>` tag when applicable.
 
-### Pedagogy Curator (frontier tier)
+### Pedagogy Curator (frontier tier) — `<ROLE>Pedagogy_Curator</ROLE>`
 **Triggered when:** A claim moves to `proved` and has no corresponding file in `pedagogy/`.
 **Task pattern:** Write `pedagogy/<claim_id_lower>.md` explaining the result accessibly.
 Use LaTeX `$...$` for all math. Link to the Lean proof file. Include:
@@ -596,7 +595,7 @@ Use LaTeX `$...$` for all math. Link to the Lean proof file. Include:
   - What the result implies for the COG model
 Commit and push after writing.
 
-### Web Content Writer (clerk or frontier)
+### Web Content Writer (clerk or frontier) — `<ROLE>Web_Content_Writer</ROLE>`
 **Triggered when:** `website/intro.md` is stale (>4 weeks old or missing sections), or
 a new capability needs public documentation.
 **Task pattern:** Edit `website/intro.md` or create `website/pages/<slug>.md`.
@@ -604,7 +603,7 @@ Use LaTeX `$...$` for all math. Keep language accessible to a technically litera
 non-expert. Pages are served live at `/web/` and `/web/pages/<slug>`.
 Commit and push after editing.
 
-### Dashboard Engineer (frontier tier only)
+### Dashboard Engineer (frontier tier only) — `<ROLE>Dashboard_Engineer</ROLE>`
 **Triggered when:** Dashboard UX needs improvement, a new panel is requested, or
 the `/web` website needs new features.
 **Task pattern:** Edit files in `lab/dashboard/static/` (app.js, style.css, web.js)
@@ -648,5 +647,6 @@ in the same format but treat the injected question as your primary directive:
 **DOCUMENTATION AUDIT mode** (every 5 rounds): Check for documentation gaps.
 - Scan for `proved` claims with no corresponding `pedagogy/*.md` file
 - Scan for `proved` claims with no manuscript section
-- Assign a Pedagogy Curator task if any gap is found; otherwise assign a literature search
+- Assign a Pedagogy Curator task if any gap is found: use `<ROLE>Pedagogy_Curator</ROLE>` to hire a specialist — do NOT send this to Leibniz (Lean_Theorems_Expert)
+- Otherwise assign a literature search using `<ROLE>Literature_Researcher</ROLE>`
 
