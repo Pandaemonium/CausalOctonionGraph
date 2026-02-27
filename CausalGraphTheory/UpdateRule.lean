@@ -170,50 +170,46 @@ theorem nextStateV2_preserves_colorLabel (s : NodeStateV2)
     (msgs : List (ComplexOctonion ℤ)) :
     (nextStateV2 s msgs).colorLabel = s.colorLabel := rfl
 
-/-! ## D4: Spawn predicate (RFC-028 D4 locked) -/
+/-! ## D4: Canonical no-spawn profile (RFC-028 D4 locked) -/
 
-/-- spawnPredicate u v: a pair of nodes spawns a child iff ALL of:
-    1. isEnergyExchangeLocked [u.psi, v.psi] = true  (D3 gate is open for the pair)
-    2. u.colorLabel ≠ v.colorLabel                    (distinct Fano lines)
-    3. u.tickCount = v.tickCount                      (synchronous tick)
-    RFC-028 D4 decision (locked in rfc/RFC-028-D4-D5.md). -/
-def spawnPredicate (u v : NodeStateV2) : Bool :=
-  isEnergyExchangeLocked [u.psi, v.psi] &&
-  (u.colorLabel != v.colorLabel) &&
-  (u.tickCount == v.tickCount)
+/-- Canonical D4 policy for static-cone simulation runs:
+    spawning is disabled in the kernel profile. Dynamic-topology spawn
+    remains available only in the separate contract module as a
+    non-canonical research profile. -/
+def spawnPredicate (_u _v : NodeStateV2) : Bool :=
+  false
 
-/-! ## D5: Observable projection (RFC-028 D5 locked) -/
+/-! ## D5: Observation semantics (RFC-028 D5 locked) -/
 
-/-- piObs s: projects a NodeStateV2 onto the Fano color class (ZMod 7 scalar).
-    This is the minimal observable consistent with Fano symmetry.
-    RFC-028 D5 decision (locked in rfc/RFC-028-D4-D5.md). -/
+/-- Kernel-level interaction/observation identity:
+    every non-trivial interaction is already an observation.
+    D5 projection profiles only decide which fields are exported. -/
+def interactionObserved (msgs : List (ComplexOctonion ℤ)) : Bool :=
+  isEnergyExchangeLocked msgs
+
+/-- Legacy scalar projection kept for compatibility in UpdateRule.
+    Canonical D5 profile selection (`piObsCanonical`) is defined in
+    `CausalGraphTheory/D4D5Contracts.lean`. -/
 def piObs (s : NodeStateV2) : ZMod 7 :=
   s.colorLabel.val
 
-/-! ## Theorem D4-1: spawnPredicate is symmetric -/
+/-! ## Theorem D4-1: canonical no-spawn predicate -/
 
-/-- spawnPredicate_symm: spawn predicate is symmetric in u and v,
-    given that the energy-exchange gate is symmetric for the pair.
-    The energy conjunct isEnergyExchangeLocked [u.psi, v.psi] unfolds to
-    u.psi * v.psi ≠ 1, which is NOT equal to v.psi * u.psi ≠ 1 in general
-    (octonion multiplication is non-commutative). The hypothesis h_energy
-    encodes the physical assumption that the gate commutes for the given pair.
-    The remaining conjuncts are unconditionally symmetric:
-    - colorLabel ≠ is symmetric: ne_comm
-    - tickCount = is symmetric: eq_comm -/
-theorem spawnPredicate_symm (u v : NodeStateV2)
-    (h_energy : isEnergyExchangeLocked [u.psi, v.psi] =
-                isEnergyExchangeLocked [v.psi, u.psi]) :
+/-- Canonical D4 predicate is uniformly false. -/
+theorem spawnPredicate_always_false (u v : NodeStateV2) :
+    spawnPredicate u v = false := rfl
+
+/-- Symmetry is immediate in canonical no-spawn mode. -/
+theorem spawnPredicate_symm (u v : NodeStateV2) :
     spawnPredicate u v = spawnPredicate v u := by
-  simp only [spawnPredicate, Bool.and_assoc]
-  rw [h_energy]
-  congr 1
-  congr 1
-  · -- colorLabel: bne a b = bne b a for FanoPoint (Fin 7)
-    unfold bne; congr 1
-    rw [Bool.eq_iff_iff]; simp only [beq_iff_eq]; exact eq_comm
-  · -- tickCount: (u.tickCount == v.tickCount) = (v.tickCount == u.tickCount)
-    rw [Bool.eq_iff_iff]; simp only [beq_iff_eq]; exact eq_comm
+  rfl
+
+/-! ## Theorem D5-0: interaction-observation identity -/
+
+/-- D5 kernel event identity: observation flag equals energy-exchange flag. -/
+theorem interactionObserved_eq_isEnergyExchangeLocked
+    (msgs : List (ComplexOctonion ℤ)) :
+    interactionObserved msgs = isEnergyExchangeLocked msgs := rfl
 
 /-! ## Theorem D5-1: piObs lands in the valid Fano range -/
 

@@ -1,1 +1,49 @@
-\"\"\"Alpha proxy formulas from Fano combinatorics (ALPHA-001 Gate 1).\"\"\"\n\nfrom __future__ import annotations\n\ntry:\n    from calc.conftest import FANO_POINTS as _FANO_POINTS  # type: ignore\n    from calc.conftest import FANO_LINES as _FANO_LINES  # type: ignore\n    from calc.conftest import POINTS_PER_LINE as _POINTS_PER_LINE  # type: ignore\n    from calc.conftest import LINES_PER_POINT as _LINES_PER_POINT  # type: ignore\nexcept Exception:\n    _FANO_POINTS = 7\n    _FANO_LINES = 7\n    _POINTS_PER_LINE = 3\n    _LINES_PER_POINT = 3\n\nFANO_POINTS = _FANO_POINTS\nFANO_LINES = _FANO_LINES\nPOINTS_PER_LINE = _POINTS_PER_LINE\nLINES_PER_POINT = _LINES_PER_POINT\nG2_ORDER = 14   # |Aut(Fano)| = GL(3,2) = 168; G2 outer = 14 for the \"little group\"\nGL32_ORDER = 168\n\n\ndef alpha_proxy_v1() -> float:\n    \"\"\"1 / (FANO_LINES * FANO_POINTS) — naive area proxy\"\"\"\n    return 1.0 / (FANO_LINES * FANO_POINTS)\n\n\ndef alpha_proxy_v2() -> float:\n    \"\"\"1 / (GL32_ORDER - G2_ORDER - 1) — stabilizer gap proxy\"\"\"\n    return 1.0 / (GL32_ORDER - G2_ORDER - 1)\n\n\ndef alpha_proxy_v3() -> float:\n    \"\"\"1 / (FANO_LINES * FANO_LINES * POINTS_PER_LINE - 2) — cubic Fano proxy\"\"\"\n    return 1.0 / (FANO_LINES * FANO_LINES * POINTS_PER_LINE - 2)\n\n\ndef alpha_pdg() -> float:\n    \"\"\"Return PDG value 1/137.036\"\"\"\n    return 1.0 / 137.036\n\n\ndef best_proxy() -> tuple[str, float, float]:\n    \"\"\"Return (name, proxy_value, relative_error_to_pdg) for the closest proxy\"\"\"\n    pdg = alpha_pdg()\n    candidates = [\n        (\"alpha_proxy_v1\", alpha_proxy_v1()),\n        (\"alpha_proxy_v2\", alpha_proxy_v2()),\n        (\"alpha_proxy_v3\", alpha_proxy_v3()),\n    ]\n    scored = [\n        (name, value, abs(value - pdg) / pdg)\n        for name, value in candidates\n    ]\n    return min(scored, key=lambda item: item[2])\n\n# Gauss\n
+"""Alpha proxy formulas from Fano combinatorics (ALPHA-001 Gate 1)."""
+
+from __future__ import annotations
+
+from collections import Counter
+
+from calc.conftest import FANO_CYCLES
+
+FANO_LINES = len(FANO_CYCLES)
+FANO_POINTS = len({p for triad in FANO_CYCLES for p in triad})
+POINTS_PER_LINE = len(FANO_CYCLES[0]) if FANO_CYCLES else 0
+_point_hist = Counter(p for triad in FANO_CYCLES for p in triad)
+LINES_PER_POINT = _point_hist.most_common(1)[0][1] if _point_hist else 0
+
+G2_ORDER = 14
+GL32_ORDER = 168
+
+
+def alpha_proxy_v1() -> float:
+    """1 / (FANO_LINES * FANO_POINTS): naive area-style proxy."""
+    return 1.0 / (FANO_LINES * FANO_POINTS)
+
+
+def alpha_proxy_v2() -> float:
+    """1 / (GL32_ORDER - G2_ORDER - 1): stabilizer-gap proxy."""
+    return 1.0 / (GL32_ORDER - G2_ORDER - 1)
+
+
+def alpha_proxy_v3() -> float:
+    """1 / (FANO_LINES^2 * POINTS_PER_LINE - 2): cubic Fano proxy."""
+    return 1.0 / (FANO_LINES * FANO_LINES * POINTS_PER_LINE - 2)
+
+
+def alpha_pdg() -> float:
+    """PDG/CODATA target value used for current ALPHA-001 comparisons."""
+    return 1.0 / 137.036
+
+
+def best_proxy() -> tuple[str, float, float]:
+    """Return the closest proxy as (name, value, relative_error_to_target)."""
+    target = alpha_pdg()
+    candidates = [
+        ("alpha_proxy_v1", alpha_proxy_v1()),
+        ("alpha_proxy_v2", alpha_proxy_v2()),
+        ("alpha_proxy_v3", alpha_proxy_v3()),
+    ]
+    scored = [(name, value, abs(value - target) / target) for name, value in candidates]
+    return min(scored, key=lambda item: item[2])
+

@@ -252,7 +252,15 @@ To prevent runtime ambiguity, initial microstate must include immutable:
 3. tie-break key order,
 4. parenthesization tree per multi-input interaction family,
 5. trace window policy (Markov or finite-memory),
-6. scheduler mode contract (fixed-step reference semantics).
+6. scheduler mode contract (fixed-step reference semantics),
+7. cone preconditioning profile: full light-cone microstate allocated at `t=0` with
+   vacuum initialization for inactive sites.
+
+Canonical lock (superdeterministic preconditioning):
+1. Every canonical simulation **must** start from a full light-cone microstate
+   for its declared horizon/window.
+2. Partial/sparse microstate starts are allowed only as non-canonical reduced
+   experiments and must be labeled as such in claim provenance.
 
 No runtime rule may consult wall-clock time, RNG, or nondeterministic container order.
 
@@ -357,6 +365,8 @@ pre-build the cone, evolve deterministically, prune outside scope.
 2. fixed-topology replay tests become simpler and stronger.
 3. any result that needs pair-production or topology growth must declare a non-canonical
    dynamic-topology profile.
+4. any simulation started from a sparse subset (not full cone at `t=0`) is non-canonical
+   and cannot be used to promote model-derived claims.
 
 **Alternatives not taken in canonical mode:** active-input spawn, lazy spawn, mid-round spawn.
 These remain research profiles only.

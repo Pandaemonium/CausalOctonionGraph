@@ -243,16 +243,20 @@ rows:
     - co_witt_basis.yml
   ALPHA-001:
     claim_id: ALPHA-001
-    status: active_hypothesis
+    status: partial
     lean_artifacts:
     - CausalGraphTheory/Constants.lean
     - CausalGraph.alpha_candidate_def
     - CausalGraph.alpha_fano_bound
     python_artifacts:
-    - calc/test_constants.py::TestAlphaFineStructure::test_alpha_target_value
+    - calc/test_alpha001_fano.py
+    - calc/test_alpha_policy_governance.py
+    - calc/estimate_alpha_from_policy.py
     battery_artifacts:
-    - calc/test_constants.py::TestAlphaFineStructure::test_alpha_target_value
-    - CausalGraphTheory/Constants.lean
+    - calc/test_alpha_policy_governance.py
+    - calc/estimate_alpha_from_policy.py
+    - sources/alpha_policy_results.md
+    - calc/test_alpha001_fano.py
     motif_id: u1_phase_penalty_v1
     rule_profile: default_multiplicative_markov
     pi_obs_profile: minimal
@@ -262,7 +266,7 @@ rows:
     evidence_level: mixed:lean_proved+python_verified
     last_verified_at: '2026-02-27T00:24:34.411997Z'
     owner_rfc: rfc/ALPHA-001_Closure_Tasklist.md
-    notes: source=alpha_fine_structure.yml | backfill=priority_v1
+    notes: source=alpha_fine_structure.yml | closure_pack=alpha_policy_v1
     confinement_relevant: false
     confinement_gate_status: not_applicable
     confinement_artifact: ''

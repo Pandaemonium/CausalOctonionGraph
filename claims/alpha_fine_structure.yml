@@ -24,7 +24,7 @@ lean_file: CausalGraphTheory/Constants.lean
 lean_theorems:
   - CausalGraph.alpha_candidate_def
   - CausalGraph.alpha_fano_bound
-python_test: calc/test_alpha001_fano.py
+python_test: calc/test_alpha_policy_governance.py
 depends_on:
   - GAUGE-001
   - FANO-001
@@ -70,7 +70,29 @@ notes: |
     be derived, not fitted.  Fix the combinatorial formula from first
     principles and THEN check whether it matches 1/137; do not
     reverse-engineer a formula from the answer.
-blocked_reason: ""
+  CLOSURE PACK (2026-02-27):
+    Frozen policy bundle:
+      - calc/alpha_policies.json
+    Reproducible estimator:
+      - calc/estimate_alpha_from_policy.py
+      - calc/estimate_alpha_em.py
+    Governance tests:
+      - calc/test_alpha_policy_governance.py
+    Results artifacts:
+      - sources/alpha_policy_results.md
+      - sources/alpha_policy_results.json
+    Deterministic full-cone simulation scan:
+      - calc/alpha_simulation_conditions.json
+      - calc/simulate_alpha_em_scan.py
+      - calc/test_alpha_simulation_scan.py
+      - sources/alpha_simulation_scan.md
+      - sources/alpha_simulation_scan.json
 
-
+  NO-FIT DECLARATION:
+    Policy rows are predeclared and replay-hash locked. No attenuation fitting
+    or output-driven policy selection is used in this closure pack.
+blocked_reason: |
+  ALPHA-001 remains partial: current best frozen policy row is within ~5.5%
+  of CODATA but not derived from a unique model-forced mechanism with
+  cross-scale calibration.
 

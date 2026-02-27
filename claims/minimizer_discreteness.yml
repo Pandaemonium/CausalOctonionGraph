@@ -6,7 +6,7 @@ statement: |
   minimization over a finite candidate set. No exogenous information is
   introduced during evolution.
 
-status: stub
+status: partial
 pi_obs_profile: minimal
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
@@ -14,7 +14,12 @@ profile_contrast_run: ""
 equivalence_mode: none
 lean_file: ""
 lean_theorems: []
-python_test: ""
+python_test: calc/test_cfs002_local_algebra.py
+gate_1:
+  status: closed
+  python_file: calc/test_cfs002_local_algebra.py
+  tests: 8
+  date: 2026-02-27
 depends_on:
   - CFS-001
   - RACE-001
