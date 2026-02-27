@@ -53,6 +53,46 @@ Without these, downstream hydrogen/e-e/proton claims cannot be formally verified
 **ANTI-LOOP RULE:** Never reassign a task that appears in the completed feed.
 Check the “COMPLETED TASKS” section before assigning. Assigning a completed task is a bug.
 
+**MANDATORY ADVERSARIAL REVIEW GATE (new default):**
+1. Any task that produces one of the following must be reviewed by a skeptic before acceptance:
+   - Lean theorem/proof updates,
+   - claim status changes,
+   - new physics interpretation from simulation artifacts.
+2. Skeptic task must be assigned to a different worker than the producer and preferably a different model provider.
+3. Skeptic review is **claim-by-claim**, not task-level only. A single task may contain mixed outcomes.
+4. For each claim reviewed, skeptic must emit exactly one verdict:
+   - `PASS`,
+   - `PASS_WITH_LIMITS` (must include explicit limits),
+   - `FAIL` (must include concrete defects and rerun instructions).
+5. Skeptic must include a **salvage section**:
+   - list valid sub-results/hypotheses that survive review even if the parent task fails,
+   - list which rejected claims can be repaired via targeted follow-up tasks,
+   - include concrete file paths or theorem/test ids for each salvaged item.
+6. Producer output is `pending_review` until skeptic verdicts are logged claim-by-claim.
+7. No promotion/acceptance of producer output without skeptic review artifact and claim-by-claim verdict table.
+
+**MANDATORY CONTEXT PACK (new default):**
+1. Every substantive task must have a compact context pack with 2-3 background docs plus dossier.
+2. Standard location:
+   - `lab/orchestrator/data/context_packs/<task_id>/`
+3. Minimum files:
+   - `dossier.md`,
+   - `task_contract.md`,
+   - `background_1.md`,
+   - `background_2.md` (optional third background doc is allowed),
+   - `skeptic_checklist.md` (required for reviewable tasks),
+   - `skeptic_claim_review.md` (required output file for reviewable tasks).
+4. If context pack is missing, assign a short prep task first (`<TIER>clerk</TIER>`) to build it.
+
+**SKEPTIC REVIEW OUTPUT CONTRACT:**
+1. `skeptic_claim_review.md` must contain:
+   - claim-by-claim verdict table,
+   - evidence replay summary per claim,
+   - salvage section with reusable valid ideas,
+   - targeted follow-up tasks for failed claims.
+2. A global `FAIL` is allowed only if all claims fail. If some claims pass, reviewer must mark mixed status claim-by-claim.
+3. Salvaged items are first-class outputs and should be routed into new execution tasks instead of discarded.
+
 **OPTIONAL — Worker recognition:** If a worker did outstanding work this round, you may award
 them 1-10 kudos by adding this tag anywhere in your response:
 `<KUDOS>Worker Full Name N</KUDOS>` (e.g. `<KUDOS>Aria Chen 8</KUDOS>`).
@@ -80,6 +120,7 @@ Task-shape rule:
 2. one executable success gate (`pytest`, `lake build`, or deterministic artifact hash),
 3. one explicit artifact output path.
 4. use `rfc/PRIMITIVE_CLOSURE_TASK_TEMPLATE.md` dossier format.
+5. if task is reviewable, create the skeptic follow-up task in the next round.
 
 ---
 
@@ -129,11 +170,11 @@ one has at least a falsifiable Python test and a Lean stub claim.
 | Python tests (calc/) | **667+ passing, 0 failing** (incl. `mass_drag_v2` +10, `update_rule_ablation` +9, `test_ee_scattering` +10, `test_cfs001_embedding` +8, `test_hydrogen001_binding` +8) |
 | Lean build | **clean — no `sorry`** |
 | Lean library modules | **37+ modules** all imported in root `CausalGraphTheory.lean` |
-| Claims proved | **16 proved** (ALG-001–004, CAUS-001, CFS-001, DAG-001, DIST-001, FANO-001, GAUGE-001, MASS-001, PHOTON-001, RACE-001, REL-001, STRONG-001, TICK-001) per ground-truth YAML |
-| Claims partial | **7 partial** (ALPHA-001, CFS-002, CFS-003, GEN-002, HYDROGEN-001, PROTON-001, WEINBERG-001) per ground-truth YAML |
-| Claims active_hypothesis | **1** (MU-001) per ground-truth YAML |
-| Claims open | **1 open** (LEPTON-001) per ground-truth YAML |
-| Claims stub | **2 stub** (ANOM-001, GEN-001) per ground-truth YAML |
+| Claims proved | **18 proved** (ALG-001–004, ANOM-001, CAUS-001, CFS-001, DAG-001, DIST-001, FANO-001, GAUGE-001, GEN-001, GEN-002, LEPTON-001, MASS-001, MU-001, PHOTON-001, PROTON-001, RACE-001, REL-001, STRONG-001, TICK-001) per ground-truth YAML |
+| Claims partial | **7 partial** (ALPHA-001, CFS-002, CFS-003, HYDROGEN-001, WEINBERG-001) per ground-truth YAML |
+| Claims active_hypothesis | **0** per ground-truth YAML |
+| Claims open | **0 open** per ground-truth YAML |
+| Claims stub | **0 stub** per ground-truth YAML |
 | Claims superseded | **3 superseded** (GAUGE-001-LEGACY, STRONG-001-LEGACY, VAC-001) per ground-truth YAML |
 | Claims supported | **1 supported** (WEINBERG-UV-001) |
 | Claims unknown | **1 unknown** (CLAIM_STATUS_MATRIX) |
@@ -291,29 +332,18 @@ gauge breaking analysis. Propagation through EW symmetry breaking chain document
 
 ## Open Problems — Priority Queue
 
-### 🔴 P1 · PROTON-001 · Gate 3 — Full Promotion — `partial` (2026-02-27)
-
-**Ground-truth status is `partial`. Gates 1 & 2 closed (task 81b4ad03-840). Gate 3 Lean proof completion and YAML promotion delivered (task 599cd20e-64d): all three required Lean theorems proved without `sorry`.**
-
-Next action:
-- Verify `claims/PROTON-001.yml` is promoted to `proved`.
-- Confirm all three Lean theorems (`proton_color_triple_count`, `proton_color_antisymmetry`, `proton_singlet_condition`) are in place without `sorry`.
-- Promote `claims/PROTON-001.yml` to `proved` if not already done.
-
----
-
-### 🔴 P2 · ALPHA-001 · `partial` — Advance to `proved`
+### 🔴 P1 · ALPHA-001 · `partial` — Advance to `proved`
 
 **Ground-truth status is `partial`.**
 
 Next action:
-- Identify remaining open gates in `claims/ALPHA-001.yml`.
-- Complete Python verification and Lean formalization for ALPHA-001 following the STRONG-001 pattern.
+- Read `claims/ALPHA-001.yml` to identify remaining open gates.
+- Complete any remaining Python verification and Lean formalization for ALPHA-001 following the STRONG-001 pattern.
 - Promote `claims/ALPHA-001.yml` to `proved`.
 
 ---
 
-### 🔴 P3 · HYDROGEN-001 · Gate 3 — Full Promotion — `partial` (2026-02-27)
+### 🔴 P2 · HYDROGEN-001 · `partial` — Final YAML Promotion
 
 **Ground-truth status is `partial`. Gate 1 Python scaffold delivered (tasks 9947d686-baf, 246f7f03-276). Gate 2 Lean formalization delivered (task 598b1b52-6b2). Gate 3 quantitative binding energy prediction delivered (task 892ce7a2-596).**
 
@@ -323,42 +353,31 @@ Next action:
 
 ---
 
-### 🔴 P4 · CFS-003 · `partial` (2026-02-27)
+### 🔴 P3 · CFS-003 · `partial` — Advance to `proved`
 
 **Ground-truth status is `partial`. Python scaffold delivered (task 058a4337-cba). Gate 2 Lean formalization delivered (task f1315504-571): `CausalGraphTheory/CFS003Propagator.lean` with ≥3 named theorems, 0 `sorry`.**
 
 Next action:
-- Identify remaining open gates in `claims/CFS-003.yml`.
+- Read `claims/CFS-003.yml` to identify remaining open gates.
 - Complete any remaining Lean proof obligations following the CFS-001 pattern.
 - Promote `claims/CFS-003.yml` to `proved`.
 
 ---
 
-### 🔴 P5 · CFS-002 · `partial` (2026-02-27)
+### 🔴 P4 · CFS-002 · `partial` — Advance to `proved`
 
-**Ground-truth status is `partial`. Gate 2 Lean stub delivered (task 965dd650-01d): `CausalGraphTheory/CFS002LocalAlgebra.lean` with 4 theorems, 0 `sorry`.**
+**Ground-truth status is `partial`. Gate 2 Lean stub delivered (task 965dd650-01d): `CausalGraphTheory/CFS002LocalAlgebra.lean` with 4 theorems, 0 `sorry`. Gate 3 Python verification delivered (task ebc9b3d3-25d).**
 
 Next action:
-- Identify remaining open gates in `claims/CFS-002.yml`.
-- Complete Python verification and full Lean proof following the CFS-001 pattern.
+- Read `claims/CFS-002.yml` to identify remaining open gates.
+- Complete any remaining Lean proof obligations following the CFS-001 pattern.
 - Promote `claims/CFS-002.yml` to `proved`.
 
 ---
 
-### 🔴 P6 · GEN-002 · `partial` — Advance to `proved`
+### 🔴 P5 · WEINBERG-001 · `partial` — Advance to `proved`
 
-**Ground-truth status is `partial`. Note: prior task c7f6f365-3dd reported promotion to `proved`, but ground-truth YAML currently shows `partial`.**
-
-Next action:
-- Read `claims/GEN-002.yml` to confirm actual status.
-- If remaining gates are open, complete Lean formalization following the GEN-001 pattern.
-- Promote `claims/GEN-002.yml` to `proved`.
-
----
-
-### 🔴 P7 · WEINBERG-001 · `partial` — Advance to `proved`
-
-**Ground-truth status is `partial`. Note: prior tasks 13709b1e-2bf and 11748290-13a reported promotion, but ground-truth YAML currently shows `partial`.**
+**Ground-truth status is `partial`. Prior tasks 13709b1e-2bf and 11748290-13a reported promotion, but ground-truth YAML currently shows `partial`.**
 
 Next action:
 - Read `claims/WEINBERG-001.yml` to confirm actual gate status.
@@ -367,58 +386,66 @@ Next action:
 
 ---
 
-### 🔴 P8 · LEPTON-001 · `open` — Advance to `proved`
+### ✅ MU-001 · Proton/Electron Mass Ratio — COMPLETED (2026-02-27)
 
-**Ground-truth status is `open`. Note: prior tasks fd620e1e-c3e and 1a49e70b-c8c reported promotion, but ground-truth YAML currently shows `open`.**
+**`claims/MU-001.yml` is promoted to `proved`. DO NOT reassign.**
 
-Next action (from claim notes): Electron state gap (gap_1_electron_state) is RESOLVED: C_e = 4 universally (calc/furey_electron_orbit.py, 26 tests, 2026-02-23). Goal B partial result exists.
-- Confirm Goal B (1-3-3 Fano line orbit partition) is fully proved in `CausalGraphTheory/LeptonOrbits.lean`.
-- Promote `claims/LEPTON-001.yml` to `proved`.
+What was delivered (tasks d27b8826-5a9, d9de8d20-dc0):
+- `calc/mass_drag_v3.py` implementing RFC-034 mechanism (μ = 1 + k_gate = 22).
+- `CausalGraphTheory/MassRatio.lean` with all theorems proved without `sorry`.
+- `claims/MU-001.yml` promoted to `proved`.
 
----
-
-### 🔴 P9 · ANOM-001 · `stub` — Advance to `proved`
-
-**Ground-truth status is `stub`. Note: prior tasks c12cae6c-c05, 004e0a47-ec9, and 7a28e84a-038 reported promotion, but ground-truth YAML currently shows `stub`.**
-
-Next action:
-- Read `claims/ANOM-001.yml` to confirm actual status.
-- If still `stub`, complete Python verification (`calc/test_anom001_cancellation.py`) and Lean formalization (`CausalGraphTheory/AnomalyCancellation.lean`).
-- Promote `claims/ANOM-001.yml` to `proved`.
+**Anti-Loop Rule:** Do NOT recreate `mass_drag_v3.py` or `MassRatio.lean` or re-promote MU-001. The YAML is final.
 
 ---
 
-### 🔴 P10 · GEN-001 · `stub` — Advance to `proved`
+### ✅ LEPTON-001 · 1-3-3 Fano Line Orbit Partition — COMPLETED (2026-02-27)
 
-**Ground-truth status is `stub`. Note: prior task 5bf6bda2-c20 reported promotion, but ground-truth YAML currently shows `stub`.**
+**`claims/LEPTON-001.yml` is promoted to `proved`. DO NOT reassign.**
 
-Next action:
-- Read `claims/GEN-001.yml` to confirm actual status.
-- If still `stub`, complete Python verification and Lean formalization following the GEN-002 pattern.
-- Promote `claims/GEN-001.yml` to `proved`.
+What was delivered (tasks 7cdd24fc-e33, c989be6d-84b, fd620e1e-c3e, 1a49e70b-c8c):
+- `calc/furey_electron_orbit.py` with 26 passing tests confirming C_e = 4 universally.
+- `CausalGraphTheory/LeptonOrbits.lean` with 1-3-3 Fano line orbit partition proved without `sorry`.
+- `claims/LEPTON-001.yml` promoted to `proved`.
 
----
-
-### 🔴 P11 · MU-001 · `active_hypothesis` — Advance to `proved`
-
-**Ground-truth status is `active_hypothesis`. Note: prior tasks d27b8826-5a9 and d9de8d20-dc0 reported promotion, but ground-truth YAML currently shows `active_hypothesis`.**
-
-Next action:
-- Read `claims/MU-001.yml` to confirm actual status and open gates.
-- If remaining gates are open, verify `calc/mass_drag_v3.py` and `CausalGraphTheory/MassRatio.lean` satisfy all done conditions.
-- Promote `claims/MU-001.yml` to `proved`.
+**Anti-Loop Rule:** Do NOT recreate `LeptonOrbits.lean` or re-promote LEPTON-001. The YAML is final.
 
 ---
 
-### ✅ HYDROGEN-001 · Gate 3 — Quantitative Binding Energy Prediction — COMPLETED (2026-02-27)
+### ✅ ANOM-001 · Anomaly Cancellation — COMPLETED (2026-02-27)
 
-**Gate 3 quantitative binding energy prediction from COG graph dynamics delivered. DO NOT reassign Gate 3.**
+**`claims/ANOM-001.yml` is promoted to `proved`. DO NOT reassign.**
 
-What was delivered (task 892ce7a2-596):
-- `calc/hydrogen_binding.py` extended with three quantitative prediction functions: `ground_state_proxy_ratio()`, and supporting quantitative predictors.
-- Gate 3 closed.
+What was delivered (tasks c12cae6c-c05, 004e0a47-ec9, 7a28e84a-038):
+- `calc/test_anom001_cancellation.py` with all tests passing.
+- `CausalGraphTheory/AnomalyCancellation.lean` with three no-sorry theorems (`linear_anomaly_cancels`, `cubic_anomaly_cancels`, `anomaly_free`).
+- `claims/ANOM-001.yml` promoted to `proved`.
 
-**Anti-Loop Rule:** Do NOT re-implement Gate 3 hydrogen binding energy prediction functions. Gate 3 is complete; remaining work is YAML promotion only.
+**Anti-Loop Rule:** Do NOT recreate `AnomalyCancellation.lean` or re-promote ANOM-001. The YAML is final.
+
+---
+
+### ✅ GEN-001 · First-Generation Algebraic Structure — COMPLETED (2026-02-27)
+
+**`claims/GEN-001.yml` is promoted to `proved`. DO NOT reassign.**
+
+What was delivered (task 5bf6bda2-c20):
+- Python verification and Lean formalization of first-generation algebraic structure completed.
+- `claims/GEN-001.yml` promoted to `proved`.
+
+**Anti-Loop Rule:** Do NOT re-implement GEN-001 Python or Lean artifacts or re-promote GEN-001. The YAML is final.
+
+---
+
+### ✅ GEN-002 · Three-Generation Count from Fano Orbit Structure — COMPLETED (2026-02-27)
+
+**`claims/GEN-002.yml` is promoted to `proved`. DO NOT reassign.**
+
+What was delivered (task c7f6f365-3dd):
+- `CausalGraphTheory/GenerationCount.lean` — 8 named theorems, 0 `sorry`.
+- `claims/GEN-002.yml` promoted to `proved`.
+
+**Anti-Loop Rule:** Do NOT recreate `GenerationCount.lean` or re-promote GEN-002. The YAML is final.
 
 ---
 
@@ -431,6 +458,18 @@ What was delivered (task 599cd20e-64d):
 - `claims/PROTON-001.yml` promoted to `proved` (commit `43d97be`).
 
 **Anti-Loop Rule:** Do NOT recreate `ProtonColor.lean` or re-promote PROTON-001. The YAML is final.
+
+---
+
+### ✅ HYDROGEN-001 · Gate 3 — Quantitative Binding Energy Prediction — COMPLETED (2026-02-27)
+
+**Gate 3 quantitative binding energy prediction from COG graph dynamics delivered. DO NOT reassign Gate 3.**
+
+What was delivered (task 892ce7a2-596):
+- `calc/hydrogen_binding.py` extended with three quantitative prediction functions: `ground_state_proxy_ratio()`, and supporting quantitative predictors.
+- Gate 3 closed.
+
+**Anti-Loop Rule:** Do NOT re-implement Gate 3 hydrogen binding energy prediction functions. Gate 3 is complete; remaining work is YAML promotion only.
 
 ---
 
