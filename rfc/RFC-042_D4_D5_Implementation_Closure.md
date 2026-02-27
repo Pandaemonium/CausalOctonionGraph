@@ -1,6 +1,6 @@
 # RFC-042: D4/D5 Implementation Closure
 
-Status: Active Draft - Lit-backed closure plan (2026-02-26)
+Status: Active Draft - Dynamic-topology profile closure plan (canonical D4 is no-spawn as of 2026-02-27)
 Module:
 - `COG.Core.Spawn`
 - `COG.Core.PiObs`
@@ -14,7 +14,7 @@ Depends on:
 
 ## 1. Executive Summary
 
-D1-D3 are policy-locked and partially implemented. D4 (spawn) and D5 (projection) are contract-locked but still missing implementation-level closure proofs. This RFC upgrades RFC-042 from stub to an executable closure program:
+D1-D3 are policy-locked and partially implemented. Canonical D4 is now static-cone no-spawn (RFC-028). This RFC defines closure work for the **non-canonical dynamic-topology profile**:
 
 1. concrete `applySpawn` semantics consistent with `activeConeSlice`,
 2. concrete `piObsCanonical` runtime behavior and profile governance,
@@ -23,9 +23,9 @@ D1-D3 are policy-locked and partially implemented. D4 (spawn) and D5 (projection
 
 ---
 
-## 2. What "Closed" Means
+## 2. What "Closed" Means (Dynamic-Topology Profile)
 
-D4/D5 are closed only when all four are true:
+For the dynamic-topology profile, D4/D5 are closed only when all four are true:
 
 1. `ShouldSpawn`, `SpawnInitState`, and `ApplySpawn` have concrete definitions,
 2. implementation-level theorems discharge locked contracts (`SpawnCompleteness`, `SpawnThenUpdateLaw`, permutation invariance, etc.),

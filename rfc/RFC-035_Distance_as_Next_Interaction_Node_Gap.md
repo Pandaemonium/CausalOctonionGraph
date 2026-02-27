@@ -195,3 +195,23 @@ This RFC is considered closed when:
 2. deterministic replay hashes are stable,
 3. distance update policy (DIST-1, DIST-2, DIST-3) is locked in one canonical contract,
 4. at least one Lean scaffold theorem for distance determinism is merged.
+
+---
+
+## 12. Policy Lock (2026-02-27)
+
+The following policy is now locked for the XOR two-body kinematics layer:
+
+1. **Distance semantics**: distance is edge separation count.
+   - Past distance: number of edges that linked the pair in the past step.
+   - Future distance: number of edges that will separate the pair before next interaction.
+2. **Propagation rule**: one hop per tick.
+3. **Impulse rule**: impulse is determined by charge-sign relation at message arrival.
+4. **Topology update cadence**: every tick.
+5. **Boundary condition**: superdeterministic (no stochastic boundary terms).
+6. **Primary observable**:
+   - `distance_delta(t) = future_edge_distance(t) - past_edge_distance(t)`.
+
+Implementation reference:
+1. `calc/xor_two_body_kinematics.py`
+2. `calc/test_xor_two_body_kinematics.py`

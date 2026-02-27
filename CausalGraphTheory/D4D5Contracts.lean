@@ -136,6 +136,26 @@ def applySpawnImpl : ApplySpawn := by
           nodes := spawned2 :: ms.nodes
           nextNodeId := ms.nextNodeId + 1 }
 
+/-! ## D4: canonical no-spawn profile (static-cone runs) -/
+
+/-- Canonical D4 policy for static-cone simulations: spawning is disabled. -/
+def shouldSpawnCanonicalNoSpawn : ShouldSpawn := fun _ _ => false
+
+/-- Canonical D4 transition for static-cone simulations: identity map. -/
+def applySpawnCanonicalNoSpawn : ApplySpawn := fun ms _ _ => ms
+
+/-- Canonical no-spawn trigger is uniformly false. -/
+theorem shouldSpawnCanonicalNoSpawn_always_false :
+    ∀ parent msgs, shouldSpawnCanonicalNoSpawn parent msgs = false := by
+  intro parent msgs
+  rfl
+
+/-- Canonical no-spawn transition is identity on microstate. -/
+theorem applySpawnCanonicalNoSpawn_identity :
+    ∀ ms parent msgs, applySpawnCanonicalNoSpawn ms parent msgs = ms := by
+  intro ms parent msgs
+  rfl
+
 /-- Determinism contract for the spawn transition. -/
 def SpawnDeterministic (applySpawn : ApplySpawn) : Prop :=
   ∀ ms₁ ms₂ parent₁ parent₂ msgs₁ msgs₂,

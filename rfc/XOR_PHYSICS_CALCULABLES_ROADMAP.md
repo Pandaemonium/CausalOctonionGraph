@@ -49,6 +49,11 @@ Status legend:
 | XCALC-017 | Canonical motif registry (vector + spinor seeds) | Ready | `calc/xor_motif_registry.py` | `website/data/xor_motif_registry.json` | RFC-043, RFC-065 |
 | XCALC-018 | Perturbation-to-attractor transition matrix | Ready | `calc/xor_perturbation_attractor_matrix.py` | `website/data/xor_perturbation_attractor_matrix.json` | RFC-049, RFC-063 |
 | XCALC-019 | Event engine MVP (typed state + deterministic scheduler + built-in scenarios) | Ready | `calc/xor_event_engine.py` | `website/data/xor_event_engine_scenarios.json` | RFC-040, RFC-063 |
+| XCALC-020 | YAML scenario loader for clerk-authored event runs | Ready | `calc/xor_scenario_loader.py` | `sources/xor_scenarios_sample.yml` | RFC-062, RFC-063 |
+| XCALC-021 | Ensemble batch runner with aggregate observables | Ready | `calc/xor_ensemble_runner.py` | `website/data/xor_ensemble_results.json` | RFC-049, RFC-063 |
+| XCALC-022 | Shared observables toolkit (entropy/transition/stability) | Ready | `calc/xor_observables.py` | metrics embedded in ensemble artifacts | RFC-055, RFC-063 |
+| XCALC-023 | Report builder for public and research summaries | Ready | `calc/xor_report_builder.py` | `website/data/xor_ensemble_report.json` | RFC-014, RFC-063 |
+| XCALC-024 | Two-body distance kinematics with policy-locked edge-gap dynamics | Ready | `calc/xor_two_body_kinematics.py` | `website/data/xor_two_body_kinematics.json` | RFC-035, RFC-063 |
 
 ---
 

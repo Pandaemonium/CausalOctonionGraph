@@ -1,6 +1,6 @@
 # RFC-028: Canonical Update Rule Closure
 
-Status: Active - D1-D5 policy locked; D4-D5 implementation/proof wiring in progress (2026-02-26)
+Status: Active - D1-D5 policy locked; D4 static-cone no-spawn lock applied (2026-02-27); D5 implementation/proof wiring in progress
 Module:
 - `COG.Core.UpdateRule`
 - `COG.Core.Trace`
@@ -27,7 +27,7 @@ Answer:
 1. Yes, lightcone-local boundary inputs are required.
 2. Yes, deterministic ordering/parenthesization must be predeclared in the initial condition.
 3. Trace is optional only if the kernel is strictly Markov; otherwise it must be explicit kernel state.
-4. Fixed-topology update is now locked; dynamic spawning and projection contracts are the remaining closure items.
+4. Fixed-topology update is now locked; D4 is now static-cone no-spawn; D5 projection closure remains.
 
 This RFC defines what must be settled before promoting higher-level claims.
 
@@ -47,7 +47,7 @@ Legacy note:
 2. They are not the canonical kernel path for active physics claims.
 
 But the full transition program is still incomplete:
-1. D4 contracts are locked but concrete `applySpawn` implementation-level proofs are pending,
+1. D4 is locked to static-cone no-spawn and must be kept disabled in canonical runs,
 2. D5 contracts are locked with minimal profile canonical, but extended profile activation criteria must be validated empirically,
 3. invariants/replay/leak proofs are not all wired to the new contracts.
 
@@ -333,61 +333,44 @@ fold is a coincidence at the aggregate level but the individual messages do have
 effect. This would require a finer-grained exchange predicate that tests individual
 messages rather than their fold.
 
-## D4. Lock spawn semantics
+## D4. Lock topology policy (static cone, no spawn)
 
-Status: Policy locked in contracts; implementation-level theorem closure pending.
+Status: Locked (2026-02-27).
 
-**Decision summary:** Spawn is triggered by active (cone-local, non-identity) boundary
-messages to a missing destination. The spawned node initialises with `vacuumColorLabel`
-and `tickCount = 1`. Spawn is a round-boundary operation (see A7).
+**Decision summary:** Canonical runs use a preallocated full light-cone region at `t=0`
+with vacuum initialization for inactive sites. **No spawning is allowed during evolution.**
+Topology is fixed; nodes outside the active simulation cone are pruned/ignored by boundary
+policy, not materialized dynamically.
 
-**Justification for spawn-on-active-input:** The D3 energy-exchange predicate defines when
-an interaction carries physical content. Spawning a new node in response to a null or
-identity message would be unphysical — no information arrived to justify materialisation.
-`activeConeSlice` extends this to multi-message contexts: only messages that are both
-cone-local and non-identity count.
+Formally for canonical profile:
+1. `shouldSpawn = false` for all inputs.
+2. `applySpawn` is identity on microstate.
+3. all causally relevant sites are present in the initial cone allocation.
+4. out-of-cone sites are removed from active update scope by deterministic pruning.
 
-**Justification for `vacuumColorLabel`:** New nodes have no prior particle identity. The
-vacuum axis is the natural unassigned starting point, consistent with the Furey picture
-where particle type is established by the interactions a node subsequently participates in,
-not pre-assigned at creation. All spawn initialisation must go through `SpawnColorLabelLaw`
-to prevent accidental non-vacuum initialisation. See also A5.
+**Justification:** This removes a major source of ambiguity and proof burden while preserving
+the local update semantics. It is aligned with your declared simulation practice:
+pre-build the cone, evolve deterministically, prune outside scope.
 
-**Justification for `tickCount = 1` (spawn-then-update):** A node that exists but has never
-ticked would be in a pre-physical state inconsistent with `phi4_period4` and the phase-clock
-invariants. Spawn is defined to include the first transition tick, so the node enters the
-causal graph already having completed one step. `tickCount = 1` is not mid-cycle: the 4-cycle
-is 1→2→3→0→1→... and position 1 is valid. See assumption A5 for the distinction between
-`colorLabel` (static) and `phi4 = tickCount mod 4` (dynamic).
+**Operational implications:**
+1. D4 no longer blocks physical simulation campaigns that do not need dynamic node creation.
+2. fixed-topology replay tests become simpler and stronger.
+3. any result that needs pair-production or topology growth must declare a non-canonical
+   dynamic-topology profile.
 
-**Alternatives not taken:** Spawn on any non-empty boundary (ignores algebraic nullity of
-identity messages); spawn with pre-assigned non-vacuum colorLabel (breaks generality);
-spawn with `tickCount = 0` (pre-physical, phase-inconsistent).
+**Alternatives not taken in canonical mode:** active-input spawn, lazy spawn, mid-round spawn.
+These remain research profiles only.
 
-**Lean artefacts:** `ShouldSpawn`, `SpawnInitState`, `ApplySpawn`, `SpawnLocalityLaw`,
-`SpawnNoExogenous`, `SpawnCompleteness`, `SpawnThenUpdateLaw`, `SpawnNodeIdLaw`,
-`SpawnColorLabelLaw`, `SpawnActiveInputPrecondition`.
+**Lean/runtime interpretation:** Existing spawn contracts remain in the codebase as an
+experimental dynamic-topology profile. They are **not** canonical for current model-derived
+claims.
 
-**Revision triggers:**
-- **vacuumColorLabel:** The proton bound-state model requires a quark node to spawn with
-  a pre-assigned non-vacuum Fano axis (e.g., because color-charge routing demands it from
-  the start). This would require relaxing `SpawnColorLabelLaw` and documenting a specific
-  color-initialization rule derived from the parent's sector.
-- **tickCount = 1:** A two-node experiment shows that a spawned node should be in phase
-  with the parent (i.e., `tickCount = parent.tickCount mod 4`) rather than always starting
-  at 1. This would require `SpawnThenUpdateLaw` to reference the parent's phase.
-- **active-input precondition:** Evidence that identity-payload messages should trigger
-  spawn under a relaxed predicate (e.g., non-zero but identity-folding message set).
+**Revision triggers (to re-enable dynamic spawn in canonical mode):**
+1. a required benchmark cannot be represented with preallocated cone + prune-only policy, or
+2. a dynamic-topology claim is promoted with full determinism/locality/permutation proofs and
+   clear superiority over static-cone profile.
 
-**Defensive wrapper removal gate:**
-The temporary runtime defensive no-op on empty active input is removed once all three
-hold: (a) all call sites demonstrably pass non-empty `activeConeSlice`, confirmed by
-test coverage; (b) runtime telemetry counter `spawn_defensive_noop_count` reads zero
-across the full regression suite; (c) cone-leak CI tests pass with strict precondition
-mode enabled. Expected milestone: immediately after a concrete `applySpawn` is proved to
-satisfy `SpawnCompleteness`.
-
-**colorLabel vs phase-cycle clarification:**
+**colorLabel vs phase-cycle clarification (unchanged):**
 `colorLabel` is a static particle-type axis (Fano basis point), not a 4-phase tracker.
 The discrete 4-phase is `phi4 = tickCount mod 4` (`PhaseClock.lean`). These are independent
 fields. `nextStateV2_preserves_colorLabel` (proved in `UpdateRule.lean`) is the formal statement.
@@ -399,6 +382,12 @@ Status: Policy locked; **dual-track** observer policy.
 **Decision summary:** Two observer profiles are implemented. `piObsCanonical := piObsMinimal`
 is locked for base claims. `piObsWithSector` is available for proton and color-sector
 analyses and must be declared explicitly in claim provenance.
+
+**Interaction-observation identity (locked):** Any local interaction update is an
+ontic observation event for the participating nodes. In other words, interaction
+and observation are identical at kernel level. D5 does **not** decide whether an
+interaction was observed; D5 only decides which subset of already-observed kernel
+facts is exported to an external observer/reporting layer.
 
 **Justification for dual-track (not single canonical):** A claim proved under a more
 expressive observer is weaker — it depends on more projections being stable. Base claims
@@ -471,8 +460,8 @@ Minimum theorem targets:
 4. `no_exogenous_information`
 5. `outsideConeInvariant_strict`
 6. `markov_if_m0`
-7. `spawn_completeness` (implementation-level theorem over chosen `applySpawn`)
-8. `spawn_then_update` (implementation-level theorem over chosen `applySpawn`)
+7. `shouldSpawn_canonical_always_false` (canonical profile theorem)
+8. `applySpawn_canonical_identity` (canonical profile theorem)
 9. `pi_obs_permutation_invariant` (implementation-level theorem for canonical `Pi_obs`)
 10. `nextStateV2_preserves_colorLabel` (static structural axis invariant; already proved in `UpdateRule.lean`)
 
@@ -501,15 +490,15 @@ Adopted:
 Not adopted as theorem:
 1. blanket assumption that `k > 4` is negligible,
 2. "superdeterminism implies no-signaling" (must still be tested),
-3. any non-local spawn trigger that bypasses cone-local boundary data.
-4. any spawn trigger that treats identity payload (`payload = 1`) as active interaction.
+3. dynamic spawning as canonical behavior (kept as non-canonical research profile).
+4. any non-local or identity-triggered dynamic spawn predicate in canonical runs.
 
 ---
 
 ## 9. Claim Governance Impact
 
 Until this RFC is closed:
-1. no claim can be upgraded to "model-derived" if it depends on unproved implementation-level spawn obligations (`SpawnCompleteness`, `SpawnThenUpdateLaw`) for the chosen `applySpawn`,
+1. no claim can be upgraded to "model-derived" if it implicitly assumes dynamic topology while using the canonical static-cone profile,
 2. uncertainty/entropy claims remain provisional unless tied to canonical `piObsCanonical`,
 3. scheduler-dependent results must be labeled unstable.
 
@@ -518,10 +507,11 @@ Until this RFC is closed:
 ## 10. Recommended Execution Order
 
 1. Implement concrete `applySpawn` and prove `SpawnCompleteness` + `SpawnThenUpdateLaw`.
-2. Keep `piObsCanonical := piObsMinimal` for baseline runs and prove implementation-level permutation invariance.
-3. Run benchmark suite to decide whether extended `u1Sector` exposure is required by evidence.
-4. Implement invariants and replay/leak/equivalence harnesses against the locked contracts.
-5. Only then resume deeper constant-derivation pushes.
+2. Prove canonical D4 no-spawn theorems (`shouldSpawn=false`, `applySpawn=id`) and enforce profile tagging for any dynamic-topology experiment.
+3. Keep `piObsCanonical := piObsMinimal` for baseline runs and prove implementation-level permutation invariance.
+4. Run benchmark suite to decide whether extended `u1Sector` exposure is required by evidence.
+5. Implement invariants and replay/leak/equivalence harnesses against the locked contracts.
+6. Only then resume deeper constant-derivation pushes.
 
 ---
 

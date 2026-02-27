@@ -1,0 +1,1580 @@
+{
+  "schema_version": "xor_ensemble_runner_v1",
+  "generated_at_utc": "2026-02-27T11:16:30.143168Z",
+  "run_count": 2,
+  "runs": [
+    {
+      "scenario_id": "sample_single_vector",
+      "title": "Sample Single Vector Motif",
+      "description": "One-node baseline using vector electron-favored seed.",
+      "steps": 8,
+      "node_count": 1,
+      "edge_count": 0,
+      "periods": {
+        "0": 4
+      },
+      "initial_pair_kind": null,
+      "pair_kind_counts": {
+        "none": 9
+      },
+      "trace": [
+        {
+          "step_index": 0,
+          "charges_base8": {
+            "0": "0"
+          },
+          "charge_signs": {
+            "0": 0
+          },
+          "supports": {
+            "0": [
+              1,
+              2,
+              3
+            ]
+          },
+          "ticks": {
+            "0": 0
+          },
+          "node_state_exact_base8": {
+            "0": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "1",
+                "0"
+              ],
+              [
+                "1",
+                "0"
+              ],
+              [
+                "1",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ]
+          },
+          "pair_interaction_kind": null
+        },
+        {
+          "step_index": 1,
+          "charges_base8": {
+            "0": "0"
+          },
+          "charge_signs": {
+            "0": 0
+          },
+          "supports": {
+            "0": [
+              4,
+              5,
+              6
+            ]
+          },
+          "ticks": {
+            "0": 1
+          },
+          "node_state_exact_base8": {
+            "0": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "1",
+                "0"
+              ],
+              [
+                "1",
+                "0"
+              ],
+              [
+                "-1",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ]
+          },
+          "pair_interaction_kind": null
+        },
+        {
+          "step_index": 2,
+          "charges_base8": {
+            "0": "0"
+          },
+          "charge_signs": {
+            "0": 0
+          },
+          "supports": {
+            "0": [
+              1,
+              2,
+              3
+            ]
+          },
+          "ticks": {
+            "0": 2
+          },
+          "node_state_exact_base8": {
+            "0": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "-1",
+                "0"
+              ],
+              [
+                "-1",
+                "0"
+              ],
+              [
+                "-1",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ]
+          },
+          "pair_interaction_kind": null
+        },
+        {
+          "step_index": 3,
+          "charges_base8": {
+            "0": "0"
+          },
+          "charge_signs": {
+            "0": 0
+          },
+          "supports": {
+            "0": [
+              4,
+              5,
+              6
+            ]
+          },
+          "ticks": {
+            "0": 3
+          },
+          "node_state_exact_base8": {
+            "0": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "-1",
+                "0"
+              ],
+              [
+                "-1",
+                "0"
+              ],
+              [
+                "1",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ]
+          },
+          "pair_interaction_kind": null
+        },
+        {
+          "step_index": 4,
+          "charges_base8": {
+            "0": "0"
+          },
+          "charge_signs": {
+            "0": 0
+          },
+          "supports": {
+            "0": [
+              1,
+              2,
+              3
+            ]
+          },
+          "ticks": {
+            "0": 4
+          },
+          "node_state_exact_base8": {
+            "0": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "1",
+                "0"
+              ],
+              [
+                "1",
+                "0"
+              ],
+              [
+                "1",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ]
+          },
+          "pair_interaction_kind": null
+        },
+        {
+          "step_index": 5,
+          "charges_base8": {
+            "0": "0"
+          },
+          "charge_signs": {
+            "0": 0
+          },
+          "supports": {
+            "0": [
+              4,
+              5,
+              6
+            ]
+          },
+          "ticks": {
+            "0": 5
+          },
+          "node_state_exact_base8": {
+            "0": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "1",
+                "0"
+              ],
+              [
+                "1",
+                "0"
+              ],
+              [
+                "-1",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ]
+          },
+          "pair_interaction_kind": null
+        },
+        {
+          "step_index": 6,
+          "charges_base8": {
+            "0": "0"
+          },
+          "charge_signs": {
+            "0": 0
+          },
+          "supports": {
+            "0": [
+              1,
+              2,
+              3
+            ]
+          },
+          "ticks": {
+            "0": 6
+          },
+          "node_state_exact_base8": {
+            "0": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "-1",
+                "0"
+              ],
+              [
+                "-1",
+                "0"
+              ],
+              [
+                "-1",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ]
+          },
+          "pair_interaction_kind": null
+        },
+        {
+          "step_index": 7,
+          "charges_base8": {
+            "0": "0"
+          },
+          "charge_signs": {
+            "0": 0
+          },
+          "supports": {
+            "0": [
+              4,
+              5,
+              6
+            ]
+          },
+          "ticks": {
+            "0": 7
+          },
+          "node_state_exact_base8": {
+            "0": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "-1",
+                "0"
+              ],
+              [
+                "-1",
+                "0"
+              ],
+              [
+                "1",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ]
+          },
+          "pair_interaction_kind": null
+        },
+        {
+          "step_index": 8,
+          "charges_base8": {
+            "0": "0"
+          },
+          "charge_signs": {
+            "0": 0
+          },
+          "supports": {
+            "0": [
+              1,
+              2,
+              3
+            ]
+          },
+          "ticks": {
+            "0": 8
+          },
+          "node_state_exact_base8": {
+            "0": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "1",
+                "0"
+              ],
+              [
+                "1",
+                "0"
+              ],
+              [
+                "1",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ]
+          },
+          "pair_interaction_kind": null
+        }
+      ],
+      "final_step": {
+        "step_index": 8,
+        "charges_base8": {
+          "0": "0"
+        },
+        "charge_signs": {
+          "0": 0
+        },
+        "supports": {
+          "0": [
+            1,
+            2,
+            3
+          ]
+        },
+        "ticks": {
+          "0": 8
+        },
+        "node_state_exact_base8": {
+          "0": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "1",
+              "0"
+            ],
+            [
+              "1",
+              "0"
+            ],
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ]
+        },
+        "pair_interaction_kind": null
+      },
+      "observables": {
+        "scenario_id": "sample_single_vector",
+        "steps": 8,
+        "initial_pair_kind": null,
+        "final_pair_kind": null,
+        "pair_kind_counts": {
+          "none": 9
+        },
+        "pair_kind_entropy_bits": 0.0,
+        "pair_kind_transition_count": 0,
+        "node_metrics": {
+          "0": {
+            "charge_sign_flips": 0,
+            "support_variation_count": 2,
+            "period": 4
+          }
+        }
+      }
+    },
+    {
+      "scenario_id": "sample_opposite_pair",
+      "title": "Sample Opposite-Sign Pair",
+      "description": "Two-node exchange with opposite-sign spinor ideals.",
+      "steps": 8,
+      "node_count": 2,
+      "edge_count": 2,
+      "periods": {
+        "0": null,
+        "1": null
+      },
+      "initial_pair_kind": "attractive",
+      "pair_kind_counts": {
+        "attractive": 1,
+        "neutral": 8
+      },
+      "trace": [
+        {
+          "step_index": 0,
+          "charges_base8": {
+            "0": "-10",
+            "1": "10"
+          },
+          "charge_signs": {
+            "0": -1,
+            "1": 1
+          },
+          "supports": {
+            "0": [
+              0,
+              7
+            ],
+            "1": [
+              0,
+              7
+            ]
+          },
+          "ticks": {
+            "0": 0,
+            "1": 0
+          },
+          "node_state_exact_base8": {
+            "0": [
+              [
+                "0",
+                "-10"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "-10",
+                "0"
+              ]
+            ],
+            "1": [
+              [
+                "0",
+                "-10"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "10",
+                "0"
+              ]
+            ]
+          },
+          "pair_interaction_kind": "attractive"
+        },
+        {
+          "step_index": 1,
+          "charges_base8": {
+            "0": "0",
+            "1": "0"
+          },
+          "charge_signs": {
+            "0": 0,
+            "1": 0
+          },
+          "supports": {
+            "0": [],
+            "1": []
+          },
+          "ticks": {
+            "0": 1,
+            "1": 1
+          },
+          "node_state_exact_base8": {
+            "0": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ],
+            "1": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ]
+          },
+          "pair_interaction_kind": "neutral"
+        },
+        {
+          "step_index": 2,
+          "charges_base8": {
+            "0": "0",
+            "1": "0"
+          },
+          "charge_signs": {
+            "0": 0,
+            "1": 0
+          },
+          "supports": {
+            "0": [],
+            "1": []
+          },
+          "ticks": {
+            "0": 2,
+            "1": 2
+          },
+          "node_state_exact_base8": {
+            "0": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ],
+            "1": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ]
+          },
+          "pair_interaction_kind": "neutral"
+        },
+        {
+          "step_index": 3,
+          "charges_base8": {
+            "0": "0",
+            "1": "0"
+          },
+          "charge_signs": {
+            "0": 0,
+            "1": 0
+          },
+          "supports": {
+            "0": [],
+            "1": []
+          },
+          "ticks": {
+            "0": 3,
+            "1": 3
+          },
+          "node_state_exact_base8": {
+            "0": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ],
+            "1": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ]
+          },
+          "pair_interaction_kind": "neutral"
+        },
+        {
+          "step_index": 4,
+          "charges_base8": {
+            "0": "0",
+            "1": "0"
+          },
+          "charge_signs": {
+            "0": 0,
+            "1": 0
+          },
+          "supports": {
+            "0": [],
+            "1": []
+          },
+          "ticks": {
+            "0": 4,
+            "1": 4
+          },
+          "node_state_exact_base8": {
+            "0": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ],
+            "1": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ]
+          },
+          "pair_interaction_kind": "neutral"
+        },
+        {
+          "step_index": 5,
+          "charges_base8": {
+            "0": "0",
+            "1": "0"
+          },
+          "charge_signs": {
+            "0": 0,
+            "1": 0
+          },
+          "supports": {
+            "0": [],
+            "1": []
+          },
+          "ticks": {
+            "0": 5,
+            "1": 5
+          },
+          "node_state_exact_base8": {
+            "0": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ],
+            "1": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ]
+          },
+          "pair_interaction_kind": "neutral"
+        },
+        {
+          "step_index": 6,
+          "charges_base8": {
+            "0": "0",
+            "1": "0"
+          },
+          "charge_signs": {
+            "0": 0,
+            "1": 0
+          },
+          "supports": {
+            "0": [],
+            "1": []
+          },
+          "ticks": {
+            "0": 6,
+            "1": 6
+          },
+          "node_state_exact_base8": {
+            "0": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ],
+            "1": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ]
+          },
+          "pair_interaction_kind": "neutral"
+        },
+        {
+          "step_index": 7,
+          "charges_base8": {
+            "0": "0",
+            "1": "0"
+          },
+          "charge_signs": {
+            "0": 0,
+            "1": 0
+          },
+          "supports": {
+            "0": [],
+            "1": []
+          },
+          "ticks": {
+            "0": 7,
+            "1": 7
+          },
+          "node_state_exact_base8": {
+            "0": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ],
+            "1": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ]
+          },
+          "pair_interaction_kind": "neutral"
+        },
+        {
+          "step_index": 8,
+          "charges_base8": {
+            "0": "0",
+            "1": "0"
+          },
+          "charge_signs": {
+            "0": 0,
+            "1": 0
+          },
+          "supports": {
+            "0": [],
+            "1": []
+          },
+          "ticks": {
+            "0": 8,
+            "1": 8
+          },
+          "node_state_exact_base8": {
+            "0": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ],
+            "1": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "0"
+              ]
+            ]
+          },
+          "pair_interaction_kind": "neutral"
+        }
+      ],
+      "final_step": {
+        "step_index": 8,
+        "charges_base8": {
+          "0": "0",
+          "1": "0"
+        },
+        "charge_signs": {
+          "0": 0,
+          "1": 0
+        },
+        "supports": {
+          "0": [],
+          "1": []
+        },
+        "ticks": {
+          "0": 8,
+          "1": 8
+        },
+        "node_state_exact_base8": {
+          "0": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          "1": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ]
+        },
+        "pair_interaction_kind": "neutral"
+      },
+      "observables": {
+        "scenario_id": "sample_opposite_pair",
+        "steps": 8,
+        "initial_pair_kind": "attractive",
+        "final_pair_kind": "neutral",
+        "pair_kind_counts": {
+          "attractive": 1,
+          "neutral": 8
+        },
+        "pair_kind_entropy_bits": 0.5032583347756457,
+        "pair_kind_transition_count": 1,
+        "node_metrics": {
+          "0": {
+            "charge_sign_flips": 1,
+            "support_variation_count": 2,
+            "period": null
+          },
+          "1": {
+            "charge_sign_flips": 1,
+            "support_variation_count": 2,
+            "period": null
+          }
+        }
+      }
+    }
+  ],
+  "aggregate_observables": {
+    "run_count": 2,
+    "avg_pair_kind_entropy_bits": 0.25162916738782287,
+    "avg_pair_kind_transition_count": 0.5,
+    "pair_kind_counts_total": {
+      "none": 9,
+      "attractive": 1,
+      "neutral": 8
+    },
+    "pair_kind_counts_total_entropy_bits": 1.2516291673878228
+  },
+  "csv_rows": [
+    {
+      "scenario_id": "sample_single_vector",
+      "steps": 8,
+      "initial_pair_kind": null,
+      "final_pair_kind": null,
+      "pair_kind_entropy_bits": 0.0,
+      "pair_kind_transition_count": 0
+    },
+    {
+      "scenario_id": "sample_opposite_pair",
+      "steps": 8,
+      "initial_pair_kind": "attractive",
+      "final_pair_kind": "neutral",
+      "pair_kind_entropy_bits": 0.5032583347756457,
+      "pair_kind_transition_count": 1
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+schema_version: xor_scenario_spec_v1
+scenarios:
+  - scenario_id: sample_single_vector
+    title: Sample Single Vector Motif
+    description: One-node baseline using vector electron-favored seed.
+    steps: 8
+    nodes:
+      - node_id: 0
+        motif_id: vector_electron_favored
+    edges: []
+
+  - scenario_id: sample_opposite_pair
+    title: Sample Opposite-Sign Pair
+    description: Two-node exchange with opposite-sign spinor ideals.
+    steps: 8
+    nodes:
+      - node_id: 0
+        motif_id: left_spinor_electron_ideal
+      - node_id: 1
+        motif_id: right_spinor_electron_ideal
+    edges:
+      - edge_id: 0_to_1
+        src_node_id: 0
+        dst_node_id: 1
+        op_idx: 7
+        hand: left
+        payload_mode: src_state
+        order: 0
+      - edge_id: 1_to_0
+        src_node_id: 1
+        dst_node_id: 0
+        op_idx: 7
+        hand: left
+        payload_mode: src_state
+        order: 1
+

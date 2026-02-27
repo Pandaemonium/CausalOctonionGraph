@@ -1,0 +1,35 @@
+{
+  "schema_version": "xor_ensemble_report_v1",
+  "generated_at_utc": "2026-02-27T11:16:30.147258Z",
+  "headline": {
+    "run_count": 2,
+    "avg_pair_kind_entropy_bits": 0.25162916738782287,
+    "avg_pair_kind_transition_count": 0.5,
+    "pair_kind_totals": {
+      "none": 9,
+      "attractive": 1,
+      "neutral": 8
+    }
+  },
+  "scenario_cards": [
+    {
+      "scenario_id": "sample_opposite_pair",
+      "title": "Sample Opposite-Sign Pair",
+      "steps": 8,
+      "initial_pair_kind": "attractive",
+      "final_pair_kind": "neutral",
+      "pair_kind_entropy_bits": 0.5032583347756457,
+      "pair_kind_transition_count": 1.0
+    },
+    {
+      "scenario_id": "sample_single_vector",
+      "title": "Sample Single Vector Motif",
+      "steps": 8,
+      "initial_pair_kind": null,
+      "final_pair_kind": null,
+      "pair_kind_entropy_bits": 0.0,
+      "pair_kind_transition_count": 0.0
+    }
+  ],
+  "source_dataset_schema": "xor_ensemble_runner_v1"
+}
