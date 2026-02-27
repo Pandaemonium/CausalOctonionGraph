@@ -19,6 +19,11 @@ Without these, downstream hydrogen/e-e/proton claims cannot be formally verified
 **ANTI-LOOP RULE:** Never reassign a task that appears in the completed feed.
 Check the “COMPLETED TASKS” section before assigning. Assigning a completed task is a bug.
 
+**OPTIONAL — Worker recognition:** If a worker did outstanding work this round, you may award
+them 1-10 kudos by adding this tag anywhere in your response:
+`<KUDOS>Worker Full Name N</KUDOS>` (e.g. `<KUDOS>Aria Chen 8</KUDOS>`).
+Use sparingly — reserve for genuinely exceptional contributions.
+
 ---
 
 # COG Lab — Research Director Brief (Frontier Model Edition)
@@ -67,8 +72,8 @@ one has at least a falsifiable Python test and a Lean stub claim.
 | Python tests (calc/) | **667+ passing, 0 failing** (incl. `mass_drag_v2` +10, `update_rule_ablation` +9) |
 | Lean build | **clean — 3145 jobs, no `sorry`** |
 | Lean library modules | **37 modules** all imported in root `CausalGraphTheory.lean` (integration closure 2026-02-26) |
-| Claims proved | **18 proved** (ALG-001–004, CAUS-001, DAG-001, DIST-001, FANO-001, MASS-001, RACE-001, TICK-001, GEN-002, KOIDE-001, LEPTON-001, MU-001, STRONG-001, WEINBERG-001, ANOM-001, STRONG-001) — ground-truth YAML promoted via recent tasks |
-| Claims partial | **4 partial** (CFS-003, GAUGE-001, PHOTON-001, WEINBERG-UV-001†) per ground-truth YAML |
+| Claims proved | **20 proved** (ALG-001–004, ANOM-001, CAUS-001, DAG-001, DIST-001, FANO-001, GEN-002, KOIDE-001, LEPTON-001, MASS-001, MU-001, RACE-001, STRONG-001, TICK-001, WEINBERG-001) — ground-truth YAML promoted via recent tasks |
+| Claims partial | **4 partial** (CFS-003, GAUGE-001, GEN-002†, PHOTON-001) per ground-truth YAML |
 | Claims active_hypothesis | **2** (ALPHA-001, MU-001†) |
 | Claims open | **1 open** (LEPTON-001 — ground-truth `open` entry is a stale duplicate; canonical status is `proved`) |
 | Claims stub | **5 stub** (ANOM-001†, CFS-001, CFS-002, GEN-001, REL-001) |
@@ -390,12 +395,11 @@ What was delivered (tasks 49ec8bae-12b and 11748290-13a):
 
 ### ✅ GEN-002 · Three-Generation Count from Fano Orbit Structure — COMPLETED (2026-02-26)
 
-**`CausalGraphTheory/GenerationCount.lean` is fully implemented. DO NOT reassign.**
+**`CausalGraphTheory/GenerationCount.lean` is fully implemented. `claims/GEN-002.yml` is promoted to `proved`. DO NOT reassign.**
 
 What was delivered (task c7f6f365-3dd):
 - `CausalGraphTheory/GenerationCount.lean` with 8 named theorems, no `sorry`.
 - Three-generation count formally derived from Fano orbit structure.
-- `claims/GEN-002
 ## Hard Constraints (enforce strictly)
 
 - **No continuum:** `Mathlib.Analysis.*`, `Mathlib.Topology.*`, `Mathlib.Data.Real.*`
