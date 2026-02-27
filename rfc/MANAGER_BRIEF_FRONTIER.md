@@ -129,8 +129,8 @@ one has at least a falsifiable Python test and a Lean stub claim.
 | Python tests (calc/) | **667+ passing, 0 failing** (incl. `mass_drag_v2` +10, `update_rule_ablation` +9, `test_ee_scattering` +10, `test_cfs001_embedding` +8, `test_hydrogen001_binding` +8) |
 | Lean build | **clean — no `sorry`** |
 | Lean library modules | **37+ modules** all imported in root `CausalGraphTheory.lean` |
-| Claims proved | **18 proved** (ALG-001–004, ANOM-001, CAUS-001, CFS-001, DAG-001, DIST-001, FANO-001, GAUGE-001, GEN-001, GEN-002, LEPTON-001, MASS-001, MU-001, PHOTON-001, RACE-001, REL-001, STRONG-001, TICK-001, WEINBERG-001) per ground-truth YAML |
-| Claims partial | **6 partial** (ALPHA-001, CFS-002, CFS-003, HYDROGEN-001, PROTON-001, WEINBERG-001) per ground-truth YAML |
+| Claims proved | **16 proved** (ALG-001–004, CAUS-001, CFS-001, DAG-001, DIST-001, FANO-001, GAUGE-001, MASS-001, PHOTON-001, RACE-001, REL-001, STRONG-001, TICK-001) per ground-truth YAML |
+| Claims partial | **7 partial** (ALPHA-001, CFS-002, CFS-003, GEN-002, HYDROGEN-001, PROTON-001, WEINBERG-001) per ground-truth YAML |
 | Claims active_hypothesis | **1** (MU-001) per ground-truth YAML |
 | Claims open | **1 open** (LEPTON-001) per ground-truth YAML |
 | Claims stub | **2 stub** (ANOM-001, GEN-001) per ground-truth YAML |
@@ -345,42 +345,68 @@ Next action:
 
 ---
 
-### ✅ WEINBERG-001 · Final Promotion — `partial` → `proved` — COMPLETED (2026-02-27)
+### 🔴 P6 · GEN-002 · `partial` — Advance to `proved`
 
-**`CausalGraphTheory/WeinbergAngle.lean` is fully implemented. `claims/WEINBERG-001.yml` is promoted to `proved`. DO NOT reassign.**
+**Ground-truth status is `partial`. Note: prior task c7f6f365-3dd reported promotion to `proved`, but ground-truth YAML currently shows `partial`.**
 
-What was delivered (tasks 13709b1e-2bf, 11748290-13a, 49ec8bae-12b):
-- `calc/weinberg_s4_decomp.py`: S4 and SL(2,3) element-order histograms, subgroup chain, Weinberg angle estimate (sin²θ_W = 4/24).
-- `CausalGraphTheory/WeinbergAngle.lean`: all required theorems proved via `native_decide`, no `sorry`.
-- `claims/WEINBERG-001.yml` rewritten with `status: proved`.
-
-**Anti-Loop Rule:** Do NOT recreate `WeinbergAngle.lean` or re-promote WEINBERG-001. The YAML is final.
+Next action:
+- Read `claims/GEN-002.yml` to confirm actual status.
+- If remaining gates are open, complete Lean formalization following the GEN-001 pattern.
+- Promote `claims/GEN-002.yml` to `proved`.
 
 ---
 
-### ✅ GEN-002 · Lean Formalization — `partial` → `proved` — COMPLETED (2026-02-26)
+### 🔴 P7 · WEINBERG-001 · `partial` — Advance to `proved`
 
-**`CausalGraphTheory/GenerationCount.lean` is fully implemented. `claims/GEN-002.yml` is promoted to `proved`. DO NOT reassign.**
+**Ground-truth status is `partial`. Note: prior tasks 13709b1e-2bf and 11748290-13a reported promotion, but ground-truth YAML currently shows `partial`.**
 
-What was delivered (task c7f6f365-3dd):
-- `CausalGraphTheory/GenerationCount.lean` — 8 named theorems, all proved without `sorry`.
-- `claims/GEN-002.yml` rewritten with `status: proved`.
-
-**Anti-Loop Rule:** Do NOT recreate `GenerationCount.lean` or re-promote GEN-002. The YAML is final.
+Next action:
+- Read `claims/WEINBERG-001.yml` to confirm actual gate status.
+- Identify any remaining open gates.
+- Promote `claims/WEINBERG-001.yml` to `proved` if all gates are satisfied.
 
 ---
 
-### ✅ LEPTON-001 · Promote `open` → `proved` — COMPLETED (2026-02-27)
+### 🔴 P8 · LEPTON-001 · `open` — Advance to `proved`
 
-**`claims/LEPTON-001.yml` is promoted to `proved`. DO NOT reassign.**
+**Ground-truth status is `open`. Note: prior tasks fd620e1e-c3e and 1a49e70b-c8c reported promotion, but ground-truth YAML currently shows `open`.**
 
-What was delivered (tasks 7cdd24fc-e33, c989be6d-84b, fd620e1e-c3e, 1a49e70b-c8c):
-- Goal A: C_e = 4 universally confirmed in `calc/furey_electron_orbit.py` (26 tests).
-- Goal B: 1-3-3 Fano line orbit partition confirmed in Python and `CausalGraphTheory/LeptonOrbits.lean`.
-- `claims/LEPTON-001.yml` rewritten with `status: proved`.
-- `pedagogy/lepton-001.md` created.
+Next action (from claim notes): Electron state gap (gap_1_electron_state) is RESOLVED: C_e = 4 universally (calc/furey_electron_orbit.py, 26 tests, 2026-02-23). Goal B partial result exists.
+- Confirm Goal B (1-3-3 Fano line orbit partition) is fully proved in `CausalGraphTheory/LeptonOrbits.lean`.
+- Promote `claims/LEPTON-001.yml` to `proved`.
 
-**Anti-Loop Rule:** Do NOT recreate `LeptonOrbits.lean` or re-promote LEPTON-001. The YAML is final.
+---
+
+### 🔴 P9 · ANOM-001 · `stub` — Advance to `proved`
+
+**Ground-truth status is `stub`. Note: prior tasks c12cae6c-c05, 004e0a47-ec9, and 7a28e84a-038 reported promotion, but ground-truth YAML currently shows `stub`.**
+
+Next action:
+- Read `claims/ANOM-001.yml` to confirm actual status.
+- If still `stub`, complete Python verification (`calc/test_anom001_cancellation.py`) and Lean formalization (`CausalGraphTheory/AnomalyCancellation.lean`).
+- Promote `claims/ANOM-001.yml` to `proved`.
+
+---
+
+### 🔴 P10 · GEN-001 · `stub` — Advance to `proved`
+
+**Ground-truth status is `stub`. Note: prior task 5bf6bda2-c20 reported promotion, but ground-truth YAML currently shows `stub`.**
+
+Next action:
+- Read `claims/GEN-001.yml` to confirm actual status.
+- If still `stub`, complete Python verification and Lean formalization following the GEN-002 pattern.
+- Promote `claims/GEN-001.yml` to `proved`.
+
+---
+
+### 🔴 P11 · MU-001 · `active_hypothesis` — Advance to `proved`
+
+**Ground-truth status is `active_hypothesis`. Note: prior task d27b8826-5a9 reported promotion, but ground-truth YAML currently shows `active_hypothesis`.**
+
+Next action:
+- Read `claims/MU-001.yml` to confirm actual status and open gates.
+- If remaining gates are open, verify `calc/mass_drag_v3.py` and `CausalGraphTheory/MassRatio.lean` satisfy all done conditions.
+- Promote `claims/MU-001.yml` to `proved`.
 
 ---
 
@@ -396,28 +422,16 @@ What was delivered (task 026ff4e6-bec):
 
 ---
 
-### ✅ ANOM-001 · Lean Formalization — COMPLETED (2026-02-27)
+### ✅ PHOTON-001 · Gate 2 — Full Lean Proof of Photon Masslessness — COMPLETED (2026-02-27)
 
-**`CausalGraphTheory/AnomalyCancellation.lean` is fully implemented. `claims/ANOM-001.yml` is promoted to `proved`. DO NOT reassign.**
+**`CausalGraphTheory/PhotonMassless.lean` is fully implemented. `claims/PHOTON-001.yml` is `proved`. DO NOT reassign.**
 
-What was delivered (tasks c12cae6c-c05, 004e0a47-ec9, 7a28e84a-038):
-- `calc/test_anom001_cancellation.py` — Python verification with all tests passing.
-- `CausalGraphTheory/AnomalyCancellation.lean` — three no-sorry theorems (`linear_anomaly_cancels`, `cubic_anomaly_cancels`, `anomaly_free`).
-- `claims/ANOM-001.yml` rewritten with `status: proved`.
+What was delivered (tasks b57b0fd9-124, b97021d0-750, bd57aceb-4d8):
+- `calc/test_photon001_massless.py` — Python verification with all tests passing.
+- `CausalGraphTheory/PhotonMassless.lean` — `photon_gate_density_zero` proved without `sorry`.
+- `claims/PHOTON-001.yml` confirmed `proved`.
 
-**Anti-Loop Rule:** Do NOT recreate `AnomalyCancellation.lean` or re-promote ANOM-001. The YAML is final.
-
----
-
-### ✅ GEN-001 · First-Generation Algebraic Structure — COMPLETED (2026-02-27)
-
-**Python verification and Lean formalization for GEN-001 are fully implemented. `claims/GEN-001.yml` is promoted to `proved`. DO NOT reassign.**
-
-What was delivered (task 5bf6bda2-c20):
-- Python verification and Lean stub for GEN-001 (first-generation algebraic structure) completed following the GEN-002 pattern.
-- `claims/GEN-001.yml` promoted to `proved`.
-
-**Anti-Loop Rule:** Do NOT recreate GEN-001 artifacts or re-promote GEN-001. The YAML is final.
+**Anti-Loop Rule:** Do NOT recreate `PhotonMassless.lean` or re-promote PHOTON-001. The YAML is final.
 
 ---
 
@@ -443,19 +457,6 @@ What was delivered (task 85ae513c-924):
 - `GaugeGroup.lean`: bridge theorem `vacuumStabilizer_iso_S4`.
 
 **Anti-Loop Rule:** Do NOT recreate `GaugeSL23.lean` or re-prove the S4 gauge group structure. GAUGE-001 is `proved` and the YAML is final.
-
----
-
-### ✅ PHOTON-001 · Gate 2 — Full Lean Proof of Photon Masslessness — COMPLETED (2026-02-27)
-
-**`CausalGraphTheory/PhotonMassless.lean` is fully implemented. `claims/PHOTON-001.yml` is `proved`. DO NOT reassign.**
-
-What was delivered (tasks b57b0fd9-124, b97021d0-750, bd57aceb-4d8):
-- `calc/test_photon001_massless.py` — Python verification with all tests passing.
-- `CausalGraphTheory/PhotonMassless.lean` — `photon_gate_density_zero` proved without `sorry`.
-- `claims/PHOTON-001.yml` confirmed `proved`.
-
-**Anti-Loop Rule:** Do NOT recreate `PhotonMassless.lean` or re-promote PHOTON-001. The YAML is final.
 
 ---
 
