@@ -1,21 +1,30 @@
 id: STRONG-001-LEGACY
-title: "Legacy placeholder for STRONG-001"
-statement: |
-  [SUPERSEDED] This file preserved an early summary of the strong-coupling
+title: Legacy placeholder for STRONG-001
+statement: '[SUPERSEDED] This file preserved an early summary of the strong-coupling
+
   baseline before the canonical STRONG-001 record was consolidated in
+
   `claims/STRONG-001.yml`.
 
+  '
 status: superseded
 superseded_by:
-  - STRONG-001
-superseded_on: "2026-02-26"
+- STRONG-001
+superseded_on: '2026-02-26'
 pi_obs_profile: with_sector
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
-profile_contrast_run: ""
+profile_contrast_run: ''
 equivalence_mode: none
-notes: |
-  Keep this file only for migration history and provenance.
+notes: 'Keep this file only for migration history and provenance.
+
   Canonical STRONG-001 source is `claims/STRONG-001.yml`.
-blocked_reason: |
-  Superseded by canonical STRONG-001.
+
+  '
+blocked_reason: 'Superseded by canonical STRONG-001.
+
+  '
+derivation_status: untested
+bridge_assumptions: []
+falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the stated
+  prediction or constraint.

@@ -1,0 +1,35 @@
+name: Oracle Nightly
+
+on:
+  schedule:
+    # Daily at 04:00 UTC
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+
+jobs:
+  oracle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .[dev]
+      - name: Build QN ledger + run oracle + build manager package
+        run: |
+          python -m calc.derive_sm_quantum_numbers
+          python oracle/check_predictions.py
+          python scripts/build_manager_context_package.py
+      - name: Upload oracle artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: oracle-nightly-artifacts
+          path: |
+            sources/oracle_report.json
+            sources/oracle_mismatch_events.json
+            sources/manager_context_package.json
+            sources/qn_claim_ledger.json
+

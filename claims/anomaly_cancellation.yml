@@ -1,28 +1,34 @@
-﻿id: ANOM-001
-title: "Automatic Anomaly Cancellation"
-statement: |
-  The algebraic structure of the 16-dimensional representation C x O
+id: ANOM-001
+title: Automatic Anomaly Cancellation
+statement: 'The algebraic structure of the 16-dimensional representation C x O
+
   automatically satisfies the condition sum(Q_i) = 0 and sum(Q_i^3) = 0
+
   for all gauge generators, cancelling the chiral anomalies.
 
+  '
 status: stub
 pi_obs_profile: with_sector
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
-profile_contrast_run: ""
+profile_contrast_run: ''
 equivalence_mode: none
-lean_file: ""
+lean_file: ''
 lean_theorems: []
 python_test: calc/test_anomaly.py
 depends_on:
-  - GAUGE-001
+- GAUGE-001
 literature:
-  - "Todorov (2019): Exceptional quantum algebra..."
-  - "Furey (2018): Generational structure..."
-notes: |
-  Standard Model anomaly cancellation usually requires careful balancing of
+- 'Todorov (2019): Exceptional quantum algebra...'
+- 'Furey (2018): Generational structure...'
+notes: 'Standard Model anomaly cancellation usually requires careful balancing of
+
   hypercharges. Here it should be a geometric identity.
+
   Lean formalization file/theorems are not implemented yet.
-blocked_reason: ""
 
-
+  '
+blocked_reason: ''
+derivation_status: untested
+bridge_assumptions: []
+falsification_condition: Claim is falsified if deterministic tests contradict the stated claim conditions.

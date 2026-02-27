@@ -66,6 +66,6 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -e .[dev]
       - name: Run claim promotion pipeline
-        run: python scripts/run_claim_promotion_pipeline.py --battery-statuses supported --enforce-clean-matrix
+        run: python scripts/run_claim_promotion_pipeline.py --battery-statuses supported --enforce-clean-matrix --enforce-clean-ledger
       - name: Run pytest
         run: python -m pytest -q

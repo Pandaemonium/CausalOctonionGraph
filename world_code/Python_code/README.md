@@ -1,5 +1,8 @@
 # Python_code
 
+For full worker onboarding and execution workflow, read:
+1. `world_code/WORKER_ZERO_TO_EXPERT_SIMULATION_RUNBOOK.md`
+
 `minimal_world_kernel.py` is the smallest executable kernel in this repo for:
 
 1. loading a full predetermined lightcone microstate,
@@ -13,6 +16,11 @@ See `lightcone_example.json`. Required keys:
 1. `node_ids`: list of node ids,
 2. `parents`: map `node_id -> list[parent_node_id]`,
 3. `init_state`: map `node_id -> 8 coefficients`, each coefficient `[re, im]`.
+
+Canonical numeric rule:
+
+1. `init_state` coefficients must be JSON integer literals (`1`, `0`, `-3`), not floats (`1.0`).
+2. This keeps CxO microstates unambiguously integer-valued.
 
 ## Run
 

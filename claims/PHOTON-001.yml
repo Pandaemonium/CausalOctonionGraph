@@ -1,54 +1,48 @@
 claim_id: PHOTON-001
-title: "Photon Masslessness from Zero Gate Density"
+title: Photon Masslessness from Zero Gate Density
 status: proved
-description: >
-  A photon state whose motif lies on a single Fano line (the {e0, e7} subspace)
-  has zero non-associative gate cost, hence zero mass in the COG model.
-  U(1)_EM commutes with SU(3)_c; the photon carries no color charge and
-  creates no G2 triality evaluation overhead. V_photon = 0.
+description: 'A photon state whose motif lies on a single Fano line (the {e0, e7} subspace) has zero non-associative gate
+  cost, hence zero mass in the COG model. U(1)_EM commutes with SU(3)_c; the photon carries no color charge and creates no
+  G2 triality evaluation overhead. V_photon = 0.
+
+  '
 lean_theorem: photon_gate_density_zero
 lean_file: CausalGraphTheory/PhotonMassless.lean
 python_test: calc/test_photon001_massless.py
 gates:
-  gate_1: true   # Python scaffold (test_photon001_massless.py)
-  gate_2: true   # Lean full proof (PhotonMassless.lean, photon_gate_density_zero)
+  gate_1: true
+  gate_2: true
 evidence:
-  - "photon_gate_density_zero proved by Finset filter empty argument, no sorry"
-  - "omegaDoubledPhoton canonical witness: colorZero by fin_cases on Fin 6"
-  - "omegaDoubled_gateCount_zero: direct corollary"
-  - "lake build passes clean (lean_build: passed)"
-  - "Supporting theorems in PhotonMasslessness.lean: vacuum_orbit_colorSector_zero proved"
+- photon_gate_density_zero proved by Finset filter empty argument, no sorry
+- 'omegaDoubledPhoton canonical witness: colorZero by fin_cases on Fin 6'
+- 'omegaDoubled_gateCount_zero: direct corollary'
+- 'lake build passes clean (lean_build: passed)'
+- 'Supporting theorems in PhotonMasslessness.lean: vacuum_orbit_colorSector_zero proved'
 lean_theorems:
-  - CausalGraph.photon_gate_density_zero         # proved (Gate 2, PhotonMassless.lean)
-  - CausalGraph.omegaDoubled_gateCount_zero      # proved (Gate 2, PhotonMassless.lean)
-  - CausalGraph.omegaDoubled_colorSector_zero    # proved (PhotonMasslessness.lean)
-  - CausalGraph.negIOmegaDoubled_colorSector_zero # proved (PhotonMasslessness.lean)
-  - CausalGraph.vacuum_orbit_colorSector_zero    # proved (PhotonMasslessness.lean)
+- CausalGraph.photon_gate_density_zero
+- CausalGraph.omegaDoubled_gateCount_zero
+- CausalGraph.omegaDoubled_colorSector_zero
+- CausalGraph.negIOmegaDoubled_colorSector_zero
+- CausalGraph.vacuum_orbit_colorSector_zero
 python_check: calc/test_photon001_massless.py
 depends_on:
-  - MASS-001
-  - GAUGE-001
-  - LEPTON-001
+- MASS-001
+- GAUGE-001
+- LEPTON-001
 literature:
-  - "Furey (2016): Charge quantization from a number operator, arXiv:1603.04078 (U(1)_EM = Q = N/3)"
-  - "Furey, Hughes (2022): One generation of SM Weyl representations, arXiv:2209.13016"
-  - "RFC-015: Photon Energy in the Causal Octonion Graph"
-notes: |
-  Lean proof status: COMPLETE (Gate 2 closed).
-    photon_gate_density_zero proved in CausalGraphTheory/PhotonMassless.lean.
-    Proof strategy:
-      - PhotonState structure: bundles CO element with colorZero condition.
-      - gateCount: noncomputable Nat (Finset.filter cardinality).
-      - photon_gate_density_zero: hempty via ext+simp, then Finset.card_empty.
-      - omegaDoubledPhoton: colorZero by fin_cases + simp + rfl.
-      - lake build: lean_build passed, no sorry.
-
-  Physical meaning:
-    V_photon = 0 because the photon operator L_{e7} preserves the {e0, e7}
-    subspace (proved in PhotonMasslessness.lean via vacuum_orbit_colorSector_zero).
-    No SU(3)_c color charge is excited -> zero G2 triality overhead.
-
-  Open gaps (physics, not Lean):
-    Full photon energy formula (absolute spectral lines) requires the COG
-    orbital energy level derivation. The muon/electron ratio gap (~13.8x)
-    is the same open problem as LEPTON-001.
+- 'Furey (2016): Charge quantization from a number operator, arXiv:1603.04078 (U(1)_EM = Q = N/3)'
+- 'Furey, Hughes (2022): One generation of SM Weyl representations, arXiv:2209.13016'
+- 'RFC-015: Photon Energy in the Causal Octonion Graph'
+notes: "Lean proof status: COMPLETE (Gate 2 closed).\n  photon_gate_density_zero proved in CausalGraphTheory/PhotonMassless.lean.\n\
+  \  Proof strategy:\n    - PhotonState structure: bundles CO element with colorZero condition.\n    - gateCount: noncomputable\
+  \ Nat (Finset.filter cardinality).\n    - photon_gate_density_zero: hempty via ext+simp, then Finset.card_empty.\n    -\
+  \ omegaDoubledPhoton: colorZero by fin_cases + simp + rfl.\n    - lake build: lean_build passed, no sorry.\n\nPhysical meaning:\n\
+  \  V_photon = 0 because the photon operator L_{e7} preserves the {e0, e7}\n  subspace (proved in PhotonMasslessness.lean\
+  \ via vacuum_orbit_colorSector_zero).\n  No SU(3)_c color charge is excited -> zero G2 triality overhead.\n\nOpen gaps (physics,\
+  \ not Lean):\n  Full photon energy formula (absolute spectral lines) requires the COG\n  orbital energy level derivation.\
+  \ The muon/electron ratio gap (~13.8x)\n  is the same open problem as LEPTON-001."
+derivation_status: bridge_assumed
+bridge_assumptions:
+- not_yet_documented_bridge_assumption
+falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the stated
+  prediction or constraint.

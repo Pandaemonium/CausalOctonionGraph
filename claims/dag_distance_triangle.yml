@@ -1,46 +1,39 @@
-﻿id: DIST-001
-title: "DAG distance satisfies triangle inequality"
-statement: |
-  For any nodes a, b, c in a causal graph G, if directed paths exist
+id: DIST-001
+title: DAG distance satisfies triangle inequality
+statement: 'For any nodes a, b, c in a causal graph G, if directed paths exist
+
   a->b, b->c, and a->c, then dist(a,c) <= dist(a,b) + dist(b,c).
 
+  '
 status: proved
 pi_obs_profile: minimal
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
-profile_contrast_run: ""
+profile_contrast_run: ''
 equivalence_mode: none
 lean_file: CausalGraphTheory/Distance.lean
 lean_theorems:
-  - CausalGraph.dist_triangle
-  - CausalGraph.reachableIn_concat
-  - CausalGraph.dist_implies_reachable
-  - CausalGraph.reachable_implies_dist_le
+- CausalGraph.dist_triangle
+- CausalGraph.reachableIn_concat
+- CausalGraph.dist_implies_reachable
+- CausalGraph.reachable_implies_dist_le
 python_test: calc/test_graph.py::test_distance_triangle
 depends_on: []
 literature: []
-notes: |
-  Reformulated using Bool-valued n-step reachability predicate (reachableIn)
-  instead of fuel-based BFS. All lemmas proved with no sorry.
-
-  reachableIn G s t n = true iff there is a directed path of exactly n edges
-  from s to t. dist G s t = (List.range (t-s+1)).find? (reachableIn G s t).
-
-  Key lemmas:
-    reachableIn_bound: path existence implies s<=t and depth bound d<=t-s.
-      Uses G.acyclic (edge source < target) to bound path length.
-    reachableIn_concat: n-hop path a->b and m-hop path b->c compose to
-      (n+m)-hop path a->c. Proved via auxiliary lemma (reachableIn_concat_aux)
-      to ensure the IH is universally quantified over the start node.
-    find?_range_le: List.find? on List.range returns the minimum index.
-      Proved by contradiction: if d'> d and p d = true, decompose
-      List.range n = List.range d' ++ rest, show prefix has no match
-      via find?_append + List.find?_eq_none, derive p d = false.
-    dist_implies_reachable: dist G s t = some d -> reachableIn G s t d.
-      Uses List.find?_some + by_cases on s>t.
-    reachable_implies_dist_le: reachable in d steps -> exists d'<=d with
-      dist G s t = some d'. Uses find?_range_le for the minimality.
-    dist_triangle: combines the above to prove dac <= dab + dbc.
-blocked_reason: ""
-
-
+notes: "Reformulated using Bool-valued n-step reachability predicate (reachableIn)\ninstead of fuel-based BFS. All lemmas\
+  \ proved with no sorry.\n\nreachableIn G s t n = true iff there is a directed path of exactly n edges\nfrom s to t. dist\
+  \ G s t = (List.range (t-s+1)).find? (reachableIn G s t).\n\nKey lemmas:\n  reachableIn_bound: path existence implies s<=t\
+  \ and depth bound d<=t-s.\n    Uses G.acyclic (edge source < target) to bound path length.\n  reachableIn_concat: n-hop\
+  \ path a->b and m-hop path b->c compose to\n    (n+m)-hop path a->c. Proved via auxiliary lemma (reachableIn_concat_aux)\n\
+  \    to ensure the IH is universally quantified over the start node.\n  find?_range_le: List.find? on List.range returns\
+  \ the minimum index.\n    Proved by contradiction: if d'> d and p d = true, decompose\n    List.range n = List.range d'\
+  \ ++ rest, show prefix has no match\n    via find?_append + List.find?_eq_none, derive p d = false.\n  dist_implies_reachable:\
+  \ dist G s t = some d -> reachableIn G s t d.\n    Uses List.find?_some + by_cases on s>t.\n  reachable_implies_dist_le:\
+  \ reachable in d steps -> exists d'<=d with\n    dist G s t = some d'. Uses find?_range_le for the minimality.\n  dist_triangle:\
+  \ combines the above to prove dac <= dab + dbc.\n"
+blocked_reason: ''
+derivation_status: bridge_assumed
+bridge_assumptions:
+- not_yet_documented_bridge_assumption
+falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the stated
+  prediction or constraint.

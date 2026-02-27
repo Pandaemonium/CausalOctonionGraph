@@ -1,195 +1,124 @@
 id: WEINBERG-001
-title: "Weinberg angle from C x O projector observables (baseline and H2 ceiling locked, mechanism open)"
-statement: |
-  Canonical claim file: this record supersedes duplicate drafts of WEINBERG-001.
-
-  In the current COG Lean formalization, the locked projector baseline is:
-      sin2ThetaWRaw = maskCard(U1) / maskCard(EW) = 1/2.
-
-  A derived candidate from the same locked masks is the exclusive-U(1) ratio:
-      sin2ThetaWExclusive = (maskCard(U1) - maskCard(U1 intersect Weak)) / maskCard(EW)
-                          = (2 - 1) / 4
-                          = 1/4.
-
-  This baseline is formally proved and intentionally frozen to prevent
-  retrofitting. The physical Z-pole weak-mixing target (~0.23122) is NOT yet
-  derived from COG and remains an open mechanism under RFC-029.
-
+title: Weinberg angle from C x O projector observables (baseline and H2 ceiling locked, mechanism open)
+statement: "Canonical claim file: this record supersedes duplicate drafts of WEINBERG-001.\n\nIn the current COG Lean formalization,\
+  \ the locked projector baseline is:\n    sin2ThetaWRaw = maskCard(U1) / maskCard(EW) = 1/2.\n\nA derived candidate from\
+  \ the same locked masks is the exclusive-U(1) ratio:\n    sin2ThetaWExclusive = (maskCard(U1) - maskCard(U1 intersect Weak))\
+  \ / maskCard(EW)\n                        = (2 - 1) / 4\n                        = 1/4.\n\nThis baseline is formally proved\
+  \ and intentionally frozen to prevent\nretrofitting. The physical Z-pole weak-mixing target (~0.23122) is NOT yet\nderived\
+  \ from COG and remains an open mechanism under RFC-029.\n"
 status: partial
 status_split:
   uv_structural_observable:
     status: supported
     claim_id: WEINBERG-UV-001
-    statement: "The exclusive-U(1) observable is 1/4 and stabilizer-invariant in the locked S4 transport frame."
+    statement: The exclusive-U(1) observable is 1/4 and stabilizer-invariant in the locked S4 transport frame.
   ir_physical_running:
     status: open
-    statement: "The scale-running bridge from the UV 1/4 observable to Z-pole ~0.23122 remains unclosed."
+    statement: The scale-running bridge from the UV 1/4 observable to Z-pole ~0.23122 remains unclosed.
 pi_obs_profile: with_sector
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
-profile_contrast_run: ""
+profile_contrast_run: ''
 equivalence_mode: none
 lean_file: CausalGraphTheory/WeakMixingObservable.lean
 lean_theorems:
-  # S4 stabilizer evidence (GAUGE-001 bridge for this claim)
-  - GaugeGroup.vacuumStabilizer_iso_S4
-  - CausalGraph.inducedNonVacLinePerms_count
-  - CausalGraph.inducedNonVacLinePerms_perm_S4
-  - CausalGraph.vacuumStabilizer_explicit_iso_S4_bool
-  - CausalGraph.vacuumStabilizer_order_histogram
-  - CausalGraph.vacuumStabilizer_involution_count
-
-  # Locked weak-mixing projector baseline
-  - CausalGraph.sin2ThetaWRaw_eq_one_half
-  - CausalGraph.sin2ThetaWRaw_above_zpole_target
-  - CausalGraph.u1Mask_subset_electroweak
-  - CausalGraph.weakMask_subset_electroweak
-  - CausalGraph.u1Mask_inter_weakMask_card
-  - CausalGraph.u1Projector_idempotent
-  - CausalGraph.weakProjector_idempotent
-  - CausalGraph.electroweakProjector_idempotent
-  - CausalGraph.u1Mask_card
-  - CausalGraph.weakMask_card
-  - CausalGraph.electroweakMask_card
-  - CausalGraph.weightedTrace_overlap_card
-  - CausalGraph.sin2ThetaWObs_baseline_eq_one_half
-  - CausalGraph.sin2ThetaWObs_exclusive_u1_eq_one_four
-  - CausalGraph.sin2ThetaWObs_exclusive_u1_stabilizer_invariant_bool
-  - CausalGraph.sin2ThetaWObs_exclusive_u1_stabilizer_invariant
-  - CausalGraph.weakMaskUnder_stabilizer_all_card_three
-  - CausalGraph.electroweakMaskUnder_stabilizer_all_card_four
-  - CausalGraph.overlapMaskUnder_stabilizer_all_card_one
-  - CausalGraph.weakMaskUnder_stabilizer_card_three
-  - CausalGraph.electroweakMaskUnder_stabilizer_card_four
-  - CausalGraph.overlapMaskUnder_stabilizer_card_one
-  - CausalGraph.sin2ThetaWObsNat_weakBoost_eq_one_third
+- GaugeGroup.vacuumStabilizer_iso_S4
+- CausalGraph.inducedNonVacLinePerms_count
+- CausalGraph.inducedNonVacLinePerms_perm_S4
+- CausalGraph.vacuumStabilizer_explicit_iso_S4_bool
+- CausalGraph.vacuumStabilizer_order_histogram
+- CausalGraph.vacuumStabilizer_involution_count
+- CausalGraph.sin2ThetaWRaw_eq_one_half
+- CausalGraph.sin2ThetaWRaw_above_zpole_target
+- CausalGraph.u1Mask_subset_electroweak
+- CausalGraph.weakMask_subset_electroweak
+- CausalGraph.u1Mask_inter_weakMask_card
+- CausalGraph.u1Projector_idempotent
+- CausalGraph.weakProjector_idempotent
+- CausalGraph.electroweakProjector_idempotent
+- CausalGraph.u1Mask_card
+- CausalGraph.weakMask_card
+- CausalGraph.electroweakMask_card
+- CausalGraph.weightedTrace_overlap_card
+- CausalGraph.sin2ThetaWObs_baseline_eq_one_half
+- CausalGraph.sin2ThetaWObs_exclusive_u1_eq_one_four
+- CausalGraph.sin2ThetaWObs_exclusive_u1_stabilizer_invariant_bool
+- CausalGraph.sin2ThetaWObs_exclusive_u1_stabilizer_invariant
+- CausalGraph.weakMaskUnder_stabilizer_all_card_three
+- CausalGraph.electroweakMaskUnder_stabilizer_all_card_four
+- CausalGraph.overlapMaskUnder_stabilizer_all_card_one
+- CausalGraph.weakMaskUnder_stabilizer_card_three
+- CausalGraph.electroweakMaskUnder_stabilizer_card_four
+- CausalGraph.overlapMaskUnder_stabilizer_card_one
+- CausalGraph.sin2ThetaWObsNat_weakBoost_eq_one_third
 python_test: calc/test_constants.py::TestWeinbergAngle::test_weinberg_target_value
 depends_on:
-  - GAUGE-001
-  - FANO-001
+- GAUGE-001
+- FANO-001
 literature:
-  - "PDG 2024: weak-mixing observables near Z pole around 0.231"
-  - "Glashow, Salam, Weinberg (1967-68): Electroweak unification"
-  - "Furey (2016): Standard model physics from an algebra? arXiv:1603.04078"
-notes: |
-  S4 RECONCILIATION (Lean, 2026-02-26):
-    The vacuum stabilizer of e7 is now fixed to S4 in this encoding.
-    Action-level witness and histogram checks are proved in:
-      - GaugeGroup.vacuumStabilizer_iso_S4
-      - CausalGraph.inducedNonVacLinePerms_perm_S4
-      - CausalGraph.vacuumStabilizer_order_histogram = [(1,1), (2,9), (4,6), (3,8)]
-    Any prior SL(2,3)-specific WEINBERG pipeline is superseded.
+- 'PDG 2024: weak-mixing observables near Z pole around 0.231'
+- 'Glashow, Salam, Weinberg (1967-68): Electroweak unification'
+- 'Furey (2016): Standard model physics from an algebra? arXiv:1603.04078'
+notes: "S4 RECONCILIATION (Lean, 2026-02-26):\n  The vacuum stabilizer of e7 is now fixed to S4 in this encoding.\n  Action-level\
+  \ witness and histogram checks are proved in:\n    - GaugeGroup.vacuumStabilizer_iso_S4\n    - CausalGraph.inducedNonVacLinePerms_perm_S4\n\
+  \    - CausalGraph.vacuumStabilizer_order_histogram = [(1,1), (2,9), (4,6), (3,8)]\n  Any prior SL(2,3)-specific WEINBERG\
+  \ pipeline is superseded.\n\nLOCKED BASELINE (Lean, 2026-02-26):\n  u1Mask card = 2\n  weakMask card = 3\n  electroweakMask\
+  \ card = 4\n  sin2ThetaWRaw = 2/4 = 1/2\n  u1Mask subset electroweakMask\n  weakMask subset electroweakMask\n  card(u1Mask\
+  \ intersect weakMask) = 1\n  sin2ThetaWZPoleTarget < sin2ThetaWRaw\n\nNEW STRUCTURED CANDIDATE (Lean-derived, 2026-02-26):\n\
+  \  Define \"exclusive U(1)\" support by removing the U1/Weak overlap:\n    exclusiveU1Card = card(u1Mask) - card(u1Mask\
+  \ intersect weakMask) = 2 - 1 = 1\n  Then:\n    sin2ThetaWExclusiveCandidate = exclusiveU1Card / card(electroweakMask) =\
+  \ 1/4 = 0.25\n  This candidate is directly grounded in:\n    CausalGraph.u1Mask_card\n    CausalGraph.electroweakMask_card\n\
+  \    CausalGraph.u1Mask_inter_weakMask_card\n    CausalGraph.sin2ThetaWObs_exclusive_u1_eq_one_four\n\n  Status note:\n\
+  \    1/4 is currently the strongest non-retrofitted structured candidate in this file.\n    It remains above the Z-pole\
+  \ target (~0.23122), so WEINBERG-001 is still open.\n\nFROZEN NON-BINARY WEIGHTED CANDIDATE (Lean-derived, 2026-02-26):\n\
+  \  weakBoostWeight assigns:\n    weight 2 to the canonical weak-pair coordinates,\n    weight 1 to all other coordinates.\n\
+  \  Under this frozen policy:\n    sin2ThetaWObsNat(policyWeakBoost) = 1/3.\n  This provides a true non-binary weighting\
+  \ baseline for RFC-029 ablations.\n\nGovernance:\n  The baseline is intentionally locked to stop denominator drift.\n  Any\
+  \ movement from 1/2 toward physical values must come from a\n  predeclared weighted observable and/or scale bridge, not\
+  \ post-hoc\n  projector edits.\n  Target scale policy is fixed to M_Z for current comparisons.\n\nCurrent closure track:\n\
+  \  RFC-029 defines the gap-closure hypotheses and acceptance gates.\n  H2 falsification harness is now available in:\n \
+  \   - calc/weinberg_s4_decomp.py\n    - calc/test_weinberg_s4_decomp.py\n    - calc/weinberg_h2_policies.json\n    - calc/run_weinberg_h2_ablation.py\n\
+  \    - calc/test_weinberg_h2_governance.py\n    - sources/weinberg_h2_ablation_results.md\n  Weighted estimate + H1 bridge\
+  \ scaffold is now available in:\n    - calc/gauge_scale_bridge.py\n    - calc/weinberg_h1_bridge_policies.json\n    - calc/estimate_weinberg_angle_weighted.py\n\
+  \    - calc/test_gauge_scale_bridge.py\n    - calc/test_estimate_weinberg_angle_weighted.py\n    - sources/weinberg_weighted_estimate_results.md\n\
+  \  S4 character-theory weighting probe (RFC-037 Avenue 2):\n    - calc/weinberg_s4_character_weights.py\n    - calc/test_weinberg_s4_character_weights.py\n\
+  \    - sources/weinberg_s4_character_weight_scan.md\n  Coupling-ratio scaffold (RFC-037 Avenue 7):\n    - calc/weinberg_coupling_policies.json\n\
+  \    - calc/weinberg_coupling_ratio.py\n    - calc/test_weinberg_coupling_ratio.py\n    - sources/weinberg_coupling_ratio_results.md\n\
+  \  Associator-running prototype (RFC-037 Avenue 13):\n    - calc/weinberg_associator_policies.json\n    - calc/weinberg_associator_running.py\n\
+  \    - calc/test_weinberg_associator_running.py\n    - sources/weinberg_associator_running_results.md\n    - rollout-traffic\
+  \ mode derives message triples from deterministic\n      `next_state_v2` payload streams; includes empirical-frequency reconstruction.\n\
+  \  Associator-running ensemble (RFC-037 Avenue 13):\n    - calc/weinberg_associator_ensemble_conditions.json\n    - calc/weinberg_associator_ensemble.py\n\
+  \    - calc/test_weinberg_associator_ensemble.py\n    - sources/weinberg_associator_ensemble_results.md\n    - computes\
+  \ macro-conditioned combinatoric averages over predeclared\n      environment families instead of selecting a single favorable\
+  \ policy.\n  Governance for that harness:\n    - policy_id is predeclared input (no output-driven policy selection),\n \
+  \   - policy checksum is emitted,\n    - structural S4 invariants are test-pinned (class sizes, irrep dims, subgroup-order\
+  \ profile).\n    - target comparison scale is fixed to M_Z in policy bundles.\n  Current frozen outputs (descriptive, not\
+  \ proof):\n    - best H2-only row: 0.25 (gap +0.01878 from target 0.23122),\n    - best H1+H2 row in current policy set:\
+  \ 0.21523361 (gap -0.01598639).\n    - character-weight scan (square/absolute transforms over S4 irreps)\n      did not\
+  \ produce near-target candidates; all scanned rows are far above target.\n  H2 ceiling lock:\n    - Treat 1/4 as the current\
+  \ fixed-weight H2 ceiling in this branch.\n    - Do not promote WEINBERG-001 using additional H2 weight-search rows unless\n\
+  \      a new observable family is declared and frozen before comparison.\n  H1 usage policy:\n    - Existing H1 bridge rows\
+  \ are exploratory diagnostics only.\n    - They do not qualify for claim promotion until bridge parameters are\n      derived\
+  \ from a model-internal mechanism rather than policy literals.\n  H4 usage policy:\n    - Associator-running outputs are\
+  \ currently prototype diagnostics.\n    - Promote only after robustness/basis perturbation gates are passed.\n  New Lean\
+  \ transport-invariance evidence (2026-02-26):\n    - `sin2ThetaWObs_exclusive_u1_stabilizer_invariant_bool` proves the\n\
+  \      exclusive-U1 1/4 observable is unchanged across all 24 vacuum-stabilizer\n      permutations under transported weak-pair\
+  \ coordinates.\n"
+blocked_reason: 'The physical weak-mixing mechanism is still open:
 
-  LOCKED BASELINE (Lean, 2026-02-26):
-    u1Mask card = 2
-    weakMask card = 3
-    electroweakMask card = 4
-    sin2ThetaWRaw = 2/4 = 1/2
-    u1Mask subset electroweakMask
-    weakMask subset electroweakMask
-    card(u1Mask intersect weakMask) = 1
-    sin2ThetaWZPoleTarget < sin2ThetaWRaw
-
-  NEW STRUCTURED CANDIDATE (Lean-derived, 2026-02-26):
-    Define "exclusive U(1)" support by removing the U1/Weak overlap:
-      exclusiveU1Card = card(u1Mask) - card(u1Mask intersect weakMask) = 2 - 1 = 1
-    Then:
-      sin2ThetaWExclusiveCandidate = exclusiveU1Card / card(electroweakMask) = 1/4 = 0.25
-    This candidate is directly grounded in:
-      CausalGraph.u1Mask_card
-      CausalGraph.electroweakMask_card
-      CausalGraph.u1Mask_inter_weakMask_card
-      CausalGraph.sin2ThetaWObs_exclusive_u1_eq_one_four
-
-    Status note:
-      1/4 is currently the strongest non-retrofitted structured candidate in this file.
-      It remains above the Z-pole target (~0.23122), so WEINBERG-001 is still open.
-
-  FROZEN NON-BINARY WEIGHTED CANDIDATE (Lean-derived, 2026-02-26):
-    weakBoostWeight assigns:
-      weight 2 to the canonical weak-pair coordinates,
-      weight 1 to all other coordinates.
-    Under this frozen policy:
-      sin2ThetaWObsNat(policyWeakBoost) = 1/3.
-    This provides a true non-binary weighting baseline for RFC-029 ablations.
-
-  Governance:
-    The baseline is intentionally locked to stop denominator drift.
-    Any movement from 1/2 toward physical values must come from a
-    predeclared weighted observable and/or scale bridge, not post-hoc
-    projector edits.
-    Target scale policy is fixed to M_Z for current comparisons.
-
-  Current closure track:
-    RFC-029 defines the gap-closure hypotheses and acceptance gates.
-    H2 falsification harness is now available in:
-      - calc/weinberg_s4_decomp.py
-      - calc/test_weinberg_s4_decomp.py
-      - calc/weinberg_h2_policies.json
-      - calc/run_weinberg_h2_ablation.py
-      - calc/test_weinberg_h2_governance.py
-      - sources/weinberg_h2_ablation_results.md
-    Weighted estimate + H1 bridge scaffold is now available in:
-      - calc/gauge_scale_bridge.py
-      - calc/weinberg_h1_bridge_policies.json
-      - calc/estimate_weinberg_angle_weighted.py
-      - calc/test_gauge_scale_bridge.py
-      - calc/test_estimate_weinberg_angle_weighted.py
-      - sources/weinberg_weighted_estimate_results.md
-    S4 character-theory weighting probe (RFC-037 Avenue 2):
-      - calc/weinberg_s4_character_weights.py
-      - calc/test_weinberg_s4_character_weights.py
-      - sources/weinberg_s4_character_weight_scan.md
-    Coupling-ratio scaffold (RFC-037 Avenue 7):
-      - calc/weinberg_coupling_policies.json
-      - calc/weinberg_coupling_ratio.py
-      - calc/test_weinberg_coupling_ratio.py
-      - sources/weinberg_coupling_ratio_results.md
-    Associator-running prototype (RFC-037 Avenue 13):
-      - calc/weinberg_associator_policies.json
-      - calc/weinberg_associator_running.py
-      - calc/test_weinberg_associator_running.py
-      - sources/weinberg_associator_running_results.md
-      - rollout-traffic mode derives message triples from deterministic
-        `next_state_v2` payload streams; includes empirical-frequency reconstruction.
-    Associator-running ensemble (RFC-037 Avenue 13):
-      - calc/weinberg_associator_ensemble_conditions.json
-      - calc/weinberg_associator_ensemble.py
-      - calc/test_weinberg_associator_ensemble.py
-      - sources/weinberg_associator_ensemble_results.md
-      - computes macro-conditioned combinatoric averages over predeclared
-        environment families instead of selecting a single favorable policy.
-    Governance for that harness:
-      - policy_id is predeclared input (no output-driven policy selection),
-      - policy checksum is emitted,
-      - structural S4 invariants are test-pinned (class sizes, irrep dims, subgroup-order profile).
-      - target comparison scale is fixed to M_Z in policy bundles.
-    Current frozen outputs (descriptive, not proof):
-      - best H2-only row: 0.25 (gap +0.01878 from target 0.23122),
-      - best H1+H2 row in current policy set: 0.21523361 (gap -0.01598639).
-      - character-weight scan (square/absolute transforms over S4 irreps)
-        did not produce near-target candidates; all scanned rows are far above target.
-    H2 ceiling lock:
-      - Treat 1/4 as the current fixed-weight H2 ceiling in this branch.
-      - Do not promote WEINBERG-001 using additional H2 weight-search rows unless
-        a new observable family is declared and frozen before comparison.
-    H1 usage policy:
-      - Existing H1 bridge rows are exploratory diagnostics only.
-      - They do not qualify for claim promotion until bridge parameters are
-        derived from a model-internal mechanism rather than policy literals.
-    H4 usage policy:
-      - Associator-running outputs are currently prototype diagnostics.
-      - Promote only after robustness/basis perturbation gates are passed.
-    New Lean transport-invariance evidence (2026-02-26):
-      - `sin2ThetaWObs_exclusive_u1_stabilizer_invariant_bool` proves the
-        exclusive-U1 1/4 observable is unchanged across all 24 vacuum-stabilizer
-        permutations under transported weak-pair coordinates.
-blocked_reason: |
-  The physical weak-mixing mechanism is still open:
   1) weighted projector/coupling observable not fully locked, and/or
+
   2) explicit scale-running bridge not yet closed.
+
   S4 stabilizer reconciliation is closed; subgroup-to-observable mapping is still open.
+
   The exclusive-U(1) 1/4 candidate is promising but not sufficient by itself.
+
   Keep status partial until RFC-029 gates pass.
 
-
+  '
+derivation_status: bridge_assumed
+bridge_assumptions:
+- not_yet_documented_bridge_assumption
+falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the stated
+  prediction or constraint.

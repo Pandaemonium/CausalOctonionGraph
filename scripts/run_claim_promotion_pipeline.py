@@ -5,11 +5,15 @@ Single-command claim-promotion gate.
 Pipeline:
 1. sync matrix
 2. validate matrix
-3. validate claim events
-4. validate public accomplishments
-5. run battery checks for selected statuses
-6. build proof-ledger artifacts
-7. optionally enforce matrix is committed/up-to-date
+3. validate claim epistemic schema fields
+4. rebuild + validate quantum-number claim ledger
+5. run oracle prediction checks
+6. build manager context package (includes oracle block)
+7. validate claim events
+8. validate public accomplishments
+9. run battery checks for selected statuses
+10. build proof-ledger artifacts
+11. optionally enforce matrix/ledger are committed and up-to-date
 """
 
 from __future__ import annotations
@@ -40,11 +44,28 @@ def main() -> int:
         action="store_true",
         help="Fail if claims/CLAIM_STATUS_MATRIX.yml has uncommitted changes after sync.",
     )
+    parser.add_argument(
+        "--enforce-clean-ledger",
+        action="store_true",
+        help="Fail if sources/qn_claim_ledger.json has uncommitted changes after rebuild.",
+    )
     args = parser.parse_args()
 
     steps = [
         [sys.executable, "scripts/sync_claim_status_matrix.py"],
         [sys.executable, "scripts/validate_claim_status_matrix.py"],
+        [sys.executable, "scripts/validate_claim_epistemic_fields.py"],
+        [sys.executable, "-m", "calc.derive_sm_quantum_numbers"],
+        [
+            sys.executable,
+            "scripts/validate_qn_claim_ledger.py",
+            "--path",
+            "sources/qn_claim_ledger.json",
+            "--require-lean-backed-statuses",
+            "core_derived",
+        ],
+        [sys.executable, "oracle/check_predictions.py"],
+        [sys.executable, "scripts/build_manager_context_package.py"],
         [sys.executable, "scripts/validate_claim_events.py"],
         [sys.executable, "scripts/validate_public_accomplishments.py"],
         [
@@ -66,6 +87,15 @@ def main() -> int:
             print(
                 "ERROR: claims/CLAIM_STATUS_MATRIX.yml is stale. "
                 "Run scripts/sync_claim_status_matrix.py and commit the result."
+            )
+            return rc
+
+    if args.enforce_clean_ledger:
+        rc = _run(["git", "diff", "--exit-code", "sources/qn_claim_ledger.json"])
+        if rc != 0:
+            print(
+                "ERROR: sources/qn_claim_ledger.json is stale. "
+                "Run python -m calc.derive_sm_quantum_numbers and commit the result."
             )
             return rc
 

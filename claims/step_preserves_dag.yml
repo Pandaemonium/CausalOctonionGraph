@@ -1,26 +1,27 @@
-﻿id: DAG-001
-title: "Graph update step preserves acyclicity"
-statement: |
-  If G is an acyclic causal graph, then step(G) is also acyclic.
+id: DAG-001
+title: Graph update step preserves acyclicity
+statement: 'If G is an acyclic causal graph, then step(G) is also acyclic.
 
+  '
 status: proved
 pi_obs_profile: minimal
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
-profile_contrast_run: ""
+profile_contrast_run: ''
 equivalence_mode: none
 lean_file: CausalGraphTheory/DAGProof.lean
 lean_theorems:
-  - step_preserves_acyclic
-  - step_is_acyclic
+- step_preserves_acyclic
+- step_is_acyclic
 python_test: calc/test_graph.py::test_step_acyclic
 depends_on: []
 literature:
-  - "RFC-001 Â§2"
-notes: |
-  step_preserves_acyclic reduces to rfl (step returns a CausalGraph which
-  carries .acyclic in its structure). step_is_acyclic witnesses the property
-  directly: âˆ€ e âˆˆ (step G).edges, e.source < e.target.
-blocked_reason: ""
-
-
+- "RFC-001 \xC2\xA72"
+notes: "step_preserves_acyclic reduces to rfl (step returns a CausalGraph which\ncarries .acyclic in its structure). step_is_acyclic\
+  \ witnesses the property\ndirectly: \xE2\u02C6\u20AC e \xE2\u02C6\u02C6 (step G).edges, e.source < e.target.\n"
+blocked_reason: ''
+derivation_status: bridge_assumed
+bridge_assumptions:
+- not_yet_documented_bridge_assumption
+falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the stated
+  prediction or constraint.

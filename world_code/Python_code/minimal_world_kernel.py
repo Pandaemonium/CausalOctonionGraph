@@ -161,14 +161,29 @@ def run(world: World, steps: int) -> World:
     return cur
 
 
-def _parse_cxo(raw: List[List[int]]) -> CxO:
+def _parse_int_coeff(value: object, label: str) -> int:
+    """
+    Parse a Gaussian-integer component from JSON.
+
+    Canonical microstate format requires integer literals (e.g. 1, not 1.0).
+    """
+    if isinstance(value, bool) or not isinstance(value, int):
+        raise ValueError(
+            f"{label} must be an integer literal (no decimal point), got {value!r}."
+        )
+    return value
+
+
+def _parse_cxo(raw: List[List[object]]) -> CxO:
     if len(raw) != 8:
         raise ValueError("Each CxO state must have 8 basis coefficients.")
     vals = []
-    for pair in raw:
+    for basis_idx, pair in enumerate(raw):
         if not isinstance(pair, list) or len(pair) != 2:
             raise ValueError("Each coefficient must be [re, im].")
-        vals.append(GInt(int(pair[0]), int(pair[1])))
+        re_part = _parse_int_coeff(pair[0], f"basis[{basis_idx}].re")
+        im_part = _parse_int_coeff(pair[1], f"basis[{basis_idx}].im")
+        vals.append(GInt(re_part, im_part))
     return (
         vals[0],
         vals[1],
@@ -225,4 +240,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

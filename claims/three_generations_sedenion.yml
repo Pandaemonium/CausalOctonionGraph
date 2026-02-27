@@ -1,164 +1,112 @@
-﻿id: GEN-002
-title: "Three Generations from Sedenion S3 Automorphism"
-statement: |
-  The Cayley-Dickson algebra of sedenions S (16-dimensional) admits a finite
+id: GEN-002
+title: Three Generations from Sedenion S3 Automorphism
+statement: 'The Cayley-Dickson algebra of sedenions S (16-dimensional) admits a finite
+
   group S3 (order 6) of automorphisms that are automorphisms of S but NOT of
+
   O (octonions). Applying the S3 automorphism of order 3 to a single-generation
+
   fermion representation (constructed from C@O subalgebras of S) generates
+
   exactly three generations, all transforming under a single copy of SU(3)_C.
 
+
   Formally: S = S0 + S1 + S2 + S3 (four octonion subalgebras).
+
   One generation from C@O1; S3-automorphism sigma generates C@O2, C@O3.
+
   Result: exactly 3 generations, no duplication of gauge bosons.
 
-status: partial  # S3 action on unordered Witt-pair labels is proved inside vacuum stabilizer; sedenion-level generation lift still open
+  '
+status: partial
 pi_obs_profile: with_sector
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
-profile_contrast_run: ""
+profile_contrast_run: ''
 equivalence_mode: none
-python_test: "calc/test_sedenion_gen.py::TestThreeGenerations [xfail â€” GEN-002 open]"
+python_test: "calc/test_sedenion_gen.py::TestThreeGenerations [xfail \xE2\u20AC\u201D GEN-002 open]"
 lean_file: CausalGraphTheory/WittPairSymmetry.lean
 lean_theorems:
-  - CausalGraph.wittPair_cyclic_perm_is_fano_aut        # Z3 orientation-preserving 3-cycle IS Aut(Fano)
-  - CausalGraph.wittPair_cyclic_perm_flip_not_fano_aut  # S3 flip variant is NOT Aut(Fano)
-  - CausalGraph.wittPairs_on_distinct_lines              # 3 Witt pairs on 3 distinct Fano lines
-  - CausalGraph.vacuumStabilizerList_count               # 24-element stabilizer, reconstructed in CausalGraph namespace
-  - CausalGraph.wittPair_cyclic_in_vacuumStabilizerList  # explicit cycle element lies in stabilizer
-  - CausalGraph.wittPair_cyclic_inducedColorPerm         # cycle acts as [0,1,2] -> [1,2,0]
-  - CausalGraph.inducedColorPerms_count                  # induced distinct permutations count = 6
-  - CausalGraph.inducedColorPermFiberSizes_eq            # each S3 permutation has 4 stabilizer preimages
-  - CausalGraph.inducedColorPerms_perm_S3                # induced action is exactly S3 on color labels
-  - CausalGraph.color_perm_realized_by_vacuum_stabilizer # every S3 label permutation has a stabilizer preimage
-  - CausalGraph.inducedColorPerm_hom_on_vacuumStabilizer_bool  # finite hom check for induced action
-  - CausalGraph.stabilizerKernelList_count                     # kernel size 4
-  - CausalGraph.stabilizerKernel_normal_bool                   # normality under conjugation
-  - CausalGraph.stabilizer_kernel_index_six                    # 24/4 = 6 quotient size
-  - CausalGraph.wittPair_swap01_in_vacuumStabilizer           # explicit transposition witness in stabilizer
-  - CausalGraph.wittPair_swap01_inducedColorPerm              # witness induces [1,0,2]
-  - CausalGraph.inducedNonVacLinePerms_perm_S4                # stabilizer gives full S4 on non-vacuum lines
-  - CausalGraph.inducedNonVacLinePerm_faithful_bool           # action on 4-line set is faithful
-  - CausalGraph.vacuumStabilizer_explicit_iso_S4_bool         # explicit list-level S4 isomorphism witness
+- CausalGraph.wittPair_cyclic_perm_is_fano_aut
+- CausalGraph.wittPair_cyclic_perm_flip_not_fano_aut
+- CausalGraph.wittPairs_on_distinct_lines
+- CausalGraph.vacuumStabilizerList_count
+- CausalGraph.wittPair_cyclic_in_vacuumStabilizerList
+- CausalGraph.wittPair_cyclic_inducedColorPerm
+- CausalGraph.inducedColorPerms_count
+- CausalGraph.inducedColorPermFiberSizes_eq
+- CausalGraph.inducedColorPerms_perm_S3
+- CausalGraph.color_perm_realized_by_vacuum_stabilizer
+- CausalGraph.inducedColorPerm_hom_on_vacuumStabilizer_bool
+- CausalGraph.stabilizerKernelList_count
+- CausalGraph.stabilizerKernel_normal_bool
+- CausalGraph.stabilizer_kernel_index_six
+- CausalGraph.wittPair_swap01_in_vacuumStabilizer
+- CausalGraph.wittPair_swap01_inducedColorPerm
+- CausalGraph.inducedNonVacLinePerms_perm_S4
+- CausalGraph.inducedNonVacLinePerm_faithful_bool
+- CausalGraph.vacuumStabilizer_explicit_iso_S4_bool
 depends_on:
-  - GEN-001
-  - GAUGE-001
+- GEN-001
+- GAUGE-001
 literature:
-  - "Gresnigt, Gourlay, Varma (2023): Three generations from S3 sedenion automorphisms, arXiv:2306.13098"
-  - "Gillard, Gresnigt (2019): Three fermion generations from complex sedenions, arXiv:1904.03186"
-  - "Furey (2019): Three generations from C@O, arXiv:1910.08395"
-notes: |
-  KEY FINDING (search 2026-02-23):
-    S3 IS an automorphism of the Cayley-Dickson sedenions S.
-    S3 is NOT an automorphism of the octonions O.
-    This is the algebraic discriminant between 1 and 3 generations.
-
-    The Gresnigt construction (2306.13098):
-    1. Represent ONE generation using two minimal left ideals of Cl(6),
-       generated from a subset of left actions of C@S on itself.
-    2. The single-generation construction uses all three O subalgebras of S
-       to build one generation (generalizing Furey's use of three H in O).
-    3. The S3 automorphism of order 3 maps (O1, O2, O3) -> (O2, O3, O1),
-       generating two additional generations.
-    4. All three generations transform under ONE copy of SU(3)_C
-       (no three copies of gluons â€” a major improvement).
-
-  COG RELEVANCE:
-    COG currently uses C@O only (8-dimensional complex octonionic space).
-    The sedenion extension C@S is 16-dimensional.
-    The three-generation structure requires the S3 automorphism, which
-    lives at the SEDENION level, not the octonionic level.
-
-    This explains why COG's single-octonionic update rule cannot generate
-    three distinct generations in-algebra: the generational discriminant
-    (S3 âŠ‚ Aut(S) \ Aut(O)) is structurally above the octonionic layer.
-
-  CONNECTION TO KOIDE-001:
-    The S3 group has Z3 as a normal subgroup (S3 = Z3 â‹Š Z2).
-    This Z3 is the symmetry needed for the Brannen parametrization
-    f_k = A + B*cos(phi + 2*pi*k/3) in claims/koide_exactness.yml.
-    If the S3 automorphism acts on the lepton mass eigenvalues as Z3,
-    it forces the equal phase-spacing (sum c_k = 0, sum c_j*c_k = -3/4)
-    that is the COG-side Koide Z3 ansatz.
-
-  OBSTACLES:
-    - COG uses C@O (8D); S3 lives at C@S (16D). Bridge undefined.
-    - The sedenions are neither division algebras nor alternative.
-    - The non-alternativity of S may break COG's Alternativity Theorem
-      (which is the origin of discrete ticking from the non-associativity of O).
-    - McRae Â§5 obstruction (representation-level automorphisms vs algebra-
-      level automorphisms) may apply here too.
-
-  OPEN QUESTIONS:
-    1. Can S3 act as a TOPOLOGICAL symmetry of the COG DAG without requiring
-       the full sedenion algebra (i.e., S3 on graph topology, not on states)?
-    2. Can the sedenion C@S construction be approximated within C@O by using
-       the three Witt-basis pairs (e6,e1), (e2,e5), (e3,e4) as the "three
-       O subalgebras" that S3 permutes?
-    3. If yes to (2), does the COG DAG edge rule automatically generate an
-       S3 symmetry over the three Witt-pair directions?
-
-  STATUS NOTE (2026-02-23):
-    Created as stub. The Gresnigt mechanism is the strongest algebraic
-    result in the literature for the three-generation origin question.
-    It is not directly implementable in COG without extending to C@S.
-    The Witt-pair question (open question 2) is the COG-native research direction.
-
-  PARTIAL RESULT (2026-02-24, updated):
-    1) Point-level gates (WittPairSymmetry.lean):
-       - wittPair_cyclic_perm_is_fano_aut:
-         The orientation-preserving cyclic map (Pair0 -> Pair1 -> Pair2 -> Pair0)
-         is a Fano automorphism.
-       - wittPair_cyclic_perm_flip_not_fano_aut:
-         A specific flip-style candidate map is not a Fano automorphism.
-
-    2) Stabilizer-induced color action (VacuumStabilizerAction.lean):
-       - wittPair_cyclic_in_vacuumStabilizerList:
-         The cycle element is explicitly present in the 24-element vacuum stabilizer.
-       - wittPair_cyclic_inducedColorPerm:
-         Its induced color action is [0,1,2] -> [1,2,0].
-       - inducedColorPerms_perm_S3 + color_perm_realized_by_vacuum_stabilizer:
-       The full vacuum stabilizer induces all 6 permutations of the 3 Witt-pair labels.
-
-    3) Quotient structure checks (VacuumStabilizerQuotient.lean):
-       - inducedColorPerm_hom_on_vacuumStabilizer_bool:
-         finite homomorphism check for the induced action.
-       - stabilizerKernelList_count + stabilizerKernel_normal_bool:
-         kernel has size 4 and is normal.
-       - stabilizer_kernel_index_six:
-         quotient cardinality is 6.
-       - wittPair_swap01_in_vacuumStabilizer + wittPair_swap01_inducedColorPerm:
-         an explicit transposition is realized in the stabilizer action.
-       - inducedNonVacLinePerms_perm_S4 + inducedNonVacLinePerm_faithful_bool:
-         the same stabilizer acts as full S4 on the four non-vacuum Fano lines.
-       - vacuumStabilizer_explicit_iso_S4_bool:
-         explicit lift and left/right inverse checks complete a concrete
-         list-level isomorphism witness to S4.
-
-    Interpretation:
-    - A specific pointwise "flip candidate" can fail to be an automorphism while
-      the stabilizer still realizes full S3 on unordered Witt-pair labels.
-    - Therefore C@O has a proved internal S3 label action at the vacuum-stabilizer level.
-    - What remains open is the state-level generation mechanism claimed for C@S
-      (sedenions), and whether that lift is definable inside octonion-only COG dynamics.
-
-blocked_reason: |
-  The stabilizer-level S3 action on Witt-pair labels is proved.
-  Remaining blocker: derive a physically meaningful generation operator on full
-  fermion state sectors from this discrete action, and connect it (or rule it out)
-  against the sedenion-level S3 mechanism in the Gresnigt construction.
-
-  NUMERICAL DIAGNOSIS (2026-02-26, test run in sedenion_gen.py):
-    - The Cayley-Dickson 4-doubling sedenion algebra has exactly 35 unordered
-      Witt triples (i.e. triples {i,j,k} with e_i*e_j = Â±e_k, all distinct and >0).
-    - The arithmetic partition G0={1..5}, G1={6..10}, G2={11..15} is NOT algebraically
-      closed: applying S3 permutations on these groups does NOT map Witt triples to
-      Witt triples (cross-products of lower and upper halves break the partition).
-    - Result: 32 singleton orbits (instead of 3), 7 membership patterns (instead of 3),
-      172 labeled orbits.
-    - TestThreeGenerations tests marked xfail with strict=True pending resolution.
-
-  REQUIRED: Either identify the algebraically natural 3-partition of the 15 sedenion
-  imaginaries that is preserved by the Witt-triple structure, or re-define the S3 action
-  in terms of Gresnigt's 4 octonion subalgebras of S rather than arithmetic groups.
-
-
+- 'Gresnigt, Gourlay, Varma (2023): Three generations from S3 sedenion automorphisms, arXiv:2306.13098'
+- 'Gillard, Gresnigt (2019): Three fermion generations from complex sedenions, arXiv:1904.03186'
+- 'Furey (2019): Three generations from C@O, arXiv:1910.08395'
+notes: "KEY FINDING (search 2026-02-23):\n  S3 IS an automorphism of the Cayley-Dickson sedenions S.\n  S3 is NOT an automorphism\
+  \ of the octonions O.\n  This is the algebraic discriminant between 1 and 3 generations.\n\n  The Gresnigt construction\
+  \ (2306.13098):\n  1. Represent ONE generation using two minimal left ideals of Cl(6),\n     generated from a subset of\
+  \ left actions of C@S on itself.\n  2. The single-generation construction uses all three O subalgebras of S\n     to build\
+  \ one generation (generalizing Furey's use of three H in O).\n  3. The S3 automorphism of order 3 maps (O1, O2, O3) -> (O2,\
+  \ O3, O1),\n     generating two additional generations.\n  4. All three generations transform under ONE copy of SU(3)_C\n\
+  \     (no three copies of gluons \xE2\u20AC\u201D a major improvement).\n\nCOG RELEVANCE:\n  COG currently uses C@O only\
+  \ (8-dimensional complex octonionic space).\n  The sedenion extension C@S is 16-dimensional.\n  The three-generation structure\
+  \ requires the S3 automorphism, which\n  lives at the SEDENION level, not the octonionic level.\n\n  This explains why COG's\
+  \ single-octonionic update rule cannot generate\n  three distinct generations in-algebra: the generational discriminant\n\
+  \  (S3 \xE2\u0160\u201A Aut(S) \\ Aut(O)) is structurally above the octonionic layer.\n\nCONNECTION TO KOIDE-001:\n  The\
+  \ S3 group has Z3 as a normal subgroup (S3 = Z3 \xE2\u2039\u0160 Z2).\n  This Z3 is the symmetry needed for the Brannen\
+  \ parametrization\n  f_k = A + B*cos(phi + 2*pi*k/3) in claims/koide_exactness.yml.\n  If the S3 automorphism acts on the\
+  \ lepton mass eigenvalues as Z3,\n  it forces the equal phase-spacing (sum c_k = 0, sum c_j*c_k = -3/4)\n  that is the COG-side\
+  \ Koide Z3 ansatz.\n\nOBSTACLES:\n  - COG uses C@O (8D); S3 lives at C@S (16D). Bridge undefined.\n  - The sedenions are\
+  \ neither division algebras nor alternative.\n  - The non-alternativity of S may break COG's Alternativity Theorem\n   \
+  \ (which is the origin of discrete ticking from the non-associativity of O).\n  - McRae \xC2\xA75 obstruction (representation-level\
+  \ automorphisms vs algebra-\n    level automorphisms) may apply here too.\n\nOPEN QUESTIONS:\n  1. Can S3 act as a TOPOLOGICAL\
+  \ symmetry of the COG DAG without requiring\n     the full sedenion algebra (i.e., S3 on graph topology, not on states)?\n\
+  \  2. Can the sedenion C@S construction be approximated within C@O by using\n     the three Witt-basis pairs (e6,e1), (e2,e5),\
+  \ (e3,e4) as the \"three\n     O subalgebras\" that S3 permutes?\n  3. If yes to (2), does the COG DAG edge rule automatically\
+  \ generate an\n     S3 symmetry over the three Witt-pair directions?\n\nSTATUS NOTE (2026-02-23):\n  Created as stub. The\
+  \ Gresnigt mechanism is the strongest algebraic\n  result in the literature for the three-generation origin question.\n\
+  \  It is not directly implementable in COG without extending to C@S.\n  The Witt-pair question (open question 2) is the\
+  \ COG-native research direction.\n\nPARTIAL RESULT (2026-02-24, updated):\n  1) Point-level gates (WittPairSymmetry.lean):\n\
+  \     - wittPair_cyclic_perm_is_fano_aut:\n       The orientation-preserving cyclic map (Pair0 -> Pair1 -> Pair2 -> Pair0)\n\
+  \       is a Fano automorphism.\n     - wittPair_cyclic_perm_flip_not_fano_aut:\n       A specific flip-style candidate\
+  \ map is not a Fano automorphism.\n\n  2) Stabilizer-induced color action (VacuumStabilizerAction.lean):\n     - wittPair_cyclic_in_vacuumStabilizerList:\n\
+  \       The cycle element is explicitly present in the 24-element vacuum stabilizer.\n     - wittPair_cyclic_inducedColorPerm:\n\
+  \       Its induced color action is [0,1,2] -> [1,2,0].\n     - inducedColorPerms_perm_S3 + color_perm_realized_by_vacuum_stabilizer:\n\
+  \     The full vacuum stabilizer induces all 6 permutations of the 3 Witt-pair labels.\n\n  3) Quotient structure checks\
+  \ (VacuumStabilizerQuotient.lean):\n     - inducedColorPerm_hom_on_vacuumStabilizer_bool:\n       finite homomorphism check\
+  \ for the induced action.\n     - stabilizerKernelList_count + stabilizerKernel_normal_bool:\n       kernel has size 4 and\
+  \ is normal.\n     - stabilizer_kernel_index_six:\n       quotient cardinality is 6.\n     - wittPair_swap01_in_vacuumStabilizer\
+  \ + wittPair_swap01_inducedColorPerm:\n       an explicit transposition is realized in the stabilizer action.\n     - inducedNonVacLinePerms_perm_S4\
+  \ + inducedNonVacLinePerm_faithful_bool:\n       the same stabilizer acts as full S4 on the four non-vacuum Fano lines.\n\
+  \     - vacuumStabilizer_explicit_iso_S4_bool:\n       explicit lift and left/right inverse checks complete a concrete\n\
+  \       list-level isomorphism witness to S4.\n\n  Interpretation:\n  - A specific pointwise \"flip candidate\" can fail\
+  \ to be an automorphism while\n    the stabilizer still realizes full S3 on unordered Witt-pair labels.\n  - Therefore C@O\
+  \ has a proved internal S3 label action at the vacuum-stabilizer level.\n  - What remains open is the state-level generation\
+  \ mechanism claimed for C@S\n    (sedenions), and whether that lift is definable inside octonion-only COG dynamics.\n"
+blocked_reason: "The stabilizer-level S3 action on Witt-pair labels is proved.\nRemaining blocker: derive a physically meaningful\
+  \ generation operator on full\nfermion state sectors from this discrete action, and connect it (or rule it out)\nagainst\
+  \ the sedenion-level S3 mechanism in the Gresnigt construction.\n\nNUMERICAL DIAGNOSIS (2026-02-26, test run in sedenion_gen.py):\n\
+  \  - The Cayley-Dickson 4-doubling sedenion algebra has exactly 35 unordered\n    Witt triples (i.e. triples {i,j,k} with\
+  \ e_i*e_j = \xC2\xB1e_k, all distinct and >0).\n  - The arithmetic partition G0={1..5}, G1={6..10}, G2={11..15} is NOT algebraically\n\
+  \    closed: applying S3 permutations on these groups does NOT map Witt triples to\n    Witt triples (cross-products of\
+  \ lower and upper halves break the partition).\n  - Result: 32 singleton orbits (instead of 3), 7 membership patterns (instead\
+  \ of 3),\n    172 labeled orbits.\n  - TestThreeGenerations tests marked xfail with strict=True pending resolution.\n\n\
+  REQUIRED: Either identify the algebraically natural 3-partition of the 15 sedenion\nimaginaries that is preserved by the\
+  \ Witt-triple structure, or re-define the S3 action\nin terms of Gresnigt's 4 octonion subalgebras of S rather than arithmetic\
+  \ groups.\n"
+derivation_status: bridge_assumed
+bridge_assumptions:
+- not_yet_documented_bridge_assumption
+falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the stated
+  prediction or constraint.

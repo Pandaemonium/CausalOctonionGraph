@@ -32,6 +32,7 @@ ALLOWED_STATUS = {
     "falsified",
     "superseded",
 }
+ALLOWED_DERIVATION_STATUS = {"core_derived", "bridge_assumed", "falsified", "untested"}
 
 STATUS_MAP = {
     "open": "active_hypothesis",
@@ -189,6 +190,16 @@ def _to_list(value: Any) -> list[str]:
     return []
 
 
+def _normalize_derivation_status(value: Any, status: str) -> str:
+    if isinstance(value, str) and value.strip() in ALLOWED_DERIVATION_STATUS:
+        return value.strip()
+    if status == "falsified":
+        return "falsified"
+    if status in {"supported", "partial"}:
+        return "bridge_assumed"
+    return "untested"
+
+
 def _extract_claim_id(path: Path, data: dict[str, Any]) -> str:
     for key in ("id", "claim_id", "name"):
         value = data.get(key)
@@ -254,6 +265,19 @@ def _row_from_claim(claim_id: str, canonical: ClaimDoc, all_docs: list[ClaimDoc]
     python_artifacts.extend(_to_list(data.get("simulation_records")))
 
     status = _normalize_status(data.get("status"))
+    derivation_status = _normalize_derivation_status(data.get("derivation_status"), status)
+    bridge_assumptions = _to_list(data.get("bridge_assumptions"))
+    if derivation_status == "bridge_assumed" and not bridge_assumptions:
+        bridge_assumptions = ["not_yet_documented_bridge_assumption"]
+
+    falsification_condition = data.get("falsification_condition")
+    if not isinstance(falsification_condition, str) or not falsification_condition.strip():
+        falsification_condition = (
+            "Claim is falsified if deterministic replayable evidence contradicts the stated prediction/constraint."
+        )
+    else:
+        falsification_condition = falsification_condition.strip()
+
     now = datetime.fromtimestamp(canonical.path.stat().st_mtime, tz=timezone.utc).isoformat().replace(
         "+00:00", "Z"
     )
@@ -277,6 +301,9 @@ def _row_from_claim(claim_id: str, canonical: ClaimDoc, all_docs: list[ClaimDoc]
         "equivalence_mode": str(data.get("equivalence_mode", "none")),
         "equivalence_artifact": "",
         "evidence_level": _derive_evidence_level(data),
+        "derivation_status": derivation_status,
+        "bridge_assumptions": bridge_assumptions,
+        "falsification_condition": falsification_condition,
         "last_verified_at": now,
         "owner_rfc": _rfc_owner_from_claim(data),
         "notes": " | ".join(note_fragments),

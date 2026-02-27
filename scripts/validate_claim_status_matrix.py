@@ -23,6 +23,7 @@ ALLOWED_STATUS = {
     "falsified",
     "superseded",
 }
+ALLOWED_DERIVATION_STATUS = {"core_derived", "bridge_assumed", "falsified", "untested"}
 ALLOWED_PI_OBS_PROFILE = {"minimal", "with_sector"}
 ALLOWED_PROJECTION_SENSITIVITY = {"unknown", "insensitive", "sensitive"}
 ALLOWED_EQUIVALENCE_MODE = {"none", "static", "one_step", "horizon"}
@@ -45,6 +46,9 @@ REQUIRED_FIELDS = [
     "projection_sensitivity",
     "equivalence_mode",
     "evidence_level",
+    "derivation_status",
+    "bridge_assumptions",
+    "falsification_condition",
     "last_verified_at",
     "owner_rfc",
     "notes",
@@ -163,6 +167,10 @@ def _validate_enums(claim_id: str, row: dict[str, Any], errors: list[str]) -> No
     if reduction_mode not in ALLOWED_REDUCTION_MODE:
         errors.append(f"{claim_id}: invalid reduction_mode '{reduction_mode}'")
 
+    derivation_status = row.get("derivation_status")
+    if derivation_status not in ALLOWED_DERIVATION_STATUS:
+        errors.append(f"{claim_id}: invalid derivation_status '{derivation_status}'")
+
 
 def _validate_semantics(
     claim_id: str,
@@ -170,6 +178,23 @@ def _validate_semantics(
     errors: list[str],
     source_docs: dict[str, list[dict[str, Any]]],
 ) -> None:
+    bridge_assumptions = row.get("bridge_assumptions")
+    if not isinstance(bridge_assumptions, list):
+        errors.append(f"{claim_id}: bridge_assumptions must be a list")
+        bridge_assumptions = []
+    elif not all(_is_nonempty_str(x) for x in bridge_assumptions):
+        errors.append(f"{claim_id}: bridge_assumptions entries must be non-empty strings")
+
+    falsification_condition = row.get("falsification_condition")
+    if not _is_nonempty_str(falsification_condition):
+        errors.append(f"{claim_id}: falsification_condition must be non-empty string")
+
+    derivation_status = row.get("derivation_status")
+    if derivation_status == "core_derived" and bridge_assumptions:
+        errors.append(f"{claim_id}: core_derived requires empty bridge_assumptions")
+    if derivation_status == "bridge_assumed" and not bridge_assumptions:
+        errors.append(f"{claim_id}: bridge_assumed requires non-empty bridge_assumptions")
+
     if row.get("equivalence_mode") != "none" and not _is_nonempty_str(row.get("equivalence_artifact", "")):
         errors.append(f"{claim_id}: equivalence_mode != none requires equivalence_artifact")
 
@@ -182,6 +207,8 @@ def _validate_semantics(
             errors.append(f"{claim_id}: supported status requires at least one evidence artifact list non-empty")
         if str(row.get("evidence_level", "")).strip().lower() == "hypothesis":
             errors.append(f"{claim_id}: supported status cannot use evidence_level=hypothesis")
+        if derivation_status == "untested":
+            errors.append(f"{claim_id}: supported status cannot use derivation_status=untested")
         # Tightened gate: supported claims must have battery evidence.
         if not bool(row.get("battery_artifacts")):
             errors.append(f"{claim_id}: supported status requires non-empty battery_artifacts")

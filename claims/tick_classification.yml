@@ -1,25 +1,29 @@
-﻿id: TICK-001
-title: "Tick/Batch classification is decidable"
-statement: |
-  Every node in the causal graph can be classified as either 'Batch' (associative incoming operators)
-  or 'Tick' (non-associative incoming operators).
+id: TICK-001
+title: Tick/Batch classification is decidable
+statement: 'Every node in the causal graph can be classified as either ''Batch'' (associative incoming operators)
 
+  or ''Tick'' (non-associative incoming operators).
+
+  '
 status: proved
 pi_obs_profile: minimal
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
-profile_contrast_run: ""
+profile_contrast_run: ''
 equivalence_mode: none
 lean_file: CausalGraphTheory/Tick.lean
 lean_theorems:
-  - classify
-  - batchable_decidable
+- classify
+- batchable_decidable
 python_test: calc/test_tick.py::TestClassify
 depends_on:
-  - ALG-002
+- ALG-002
 literature:
-  - "RFC-001 Â§3.1"
-notes: ""
-blocked_reason: ""
-
-
+- "RFC-001 \xC2\xA73.1"
+notes: ''
+blocked_reason: ''
+derivation_status: bridge_assumed
+bridge_assumptions:
+- not_yet_documented_bridge_assumption
+falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the stated
+  prediction or constraint.

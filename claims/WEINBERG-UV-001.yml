@@ -1,37 +1,39 @@
 id: WEINBERG-UV-001
-title: "UV weak-mixing structural observable (exclusive-U1) is 1/4"
-statement: |
-  In the locked COG projector formalization, the UV structural weak-mixing
-  observable defined by exclusive-U(1) support is:
-
-      sin2ThetaWExclusive = (card(U1) - card(U1 intersect Weak)) / card(EW) = 1/4
-
-  and this value is invariant under all vacuum-stabilizer (S4) transported
-  weak-pair permutations used by the current encoding.
-
+title: UV weak-mixing structural observable (exclusive-U1) is 1/4
+statement: "In the locked COG projector formalization, the UV structural weak-mixing\nobservable defined by exclusive-U(1)\
+  \ support is:\n\n    sin2ThetaWExclusive = (card(U1) - card(U1 intersect Weak)) / card(EW) = 1/4\n\nand this value is invariant\
+  \ under all vacuum-stabilizer (S4) transported\nweak-pair permutations used by the current encoding.\n"
 status: supported
 pi_obs_profile: with_sector
 pi_obs_profile_version: v1
 projection_sensitivity: sensitive
-profile_contrast_run: ""
+profile_contrast_run: ''
 equivalence_mode: none
 lean_file: CausalGraphTheory/WeakMixingObservable.lean
 lean_theorems:
-  - CausalGraph.u1Mask_inter_weakMask_card
-  - CausalGraph.electroweakMask_card
-  - CausalGraph.sin2ThetaWObs_exclusive_u1_eq_one_four
-  - CausalGraph.sin2ThetaWObs_exclusive_u1_stabilizer_invariant_bool
-  - CausalGraph.sin2ThetaWObs_exclusive_u1_stabilizer_invariant
+- CausalGraph.u1Mask_inter_weakMask_card
+- CausalGraph.electroweakMask_card
+- CausalGraph.sin2ThetaWObs_exclusive_u1_eq_one_four
+- CausalGraph.sin2ThetaWObs_exclusive_u1_stabilizer_invariant_bool
+- CausalGraph.sin2ThetaWObs_exclusive_u1_stabilizer_invariant
 python_test: calc/test_weinberg_h2_governance.py::test_expected_baseline_values
 depends_on:
-  - WEINBERG-001
-  - GAUGE-001
+- WEINBERG-001
+- GAUGE-001
 literature:
-  - "PDG 2024: weak-mixing observables near Z pole around 0.231"
-  - "Glashow, Salam, Weinberg (1967-68): Electroweak unification"
-notes: |
-  This is intentionally a UV structural claim only.
+- 'PDG 2024: weak-mixing observables near Z pole around 0.231'
+- 'Glashow, Salam, Weinberg (1967-68): Electroweak unification'
+notes: 'This is intentionally a UV structural claim only.
+
   It does NOT claim Z-pole closure.
 
+
   IR running remains tracked under WEINBERG-001.
-blocked_reason: ""
+
+  '
+blocked_reason: ''
+derivation_status: bridge_assumed
+bridge_assumptions:
+- not_yet_documented_bridge_assumption
+falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the stated
+  prediction or constraint.

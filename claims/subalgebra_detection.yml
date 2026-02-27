@@ -1,39 +1,40 @@
-﻿id: ALG-002
-title: "Associative subalgebra detection"
-statement: |
-  A subset of imaginary basis units generates an associative subalgebra iff
-  all elements lie on a single Fano line.
-  The predicate 'batchable' implements this check.
+id: ALG-002
+title: Associative subalgebra detection
+statement: 'A subset of imaginary basis units generates an associative subalgebra iff
 
+  all elements lie on a single Fano line.
+
+  The predicate ''batchable'' implements this check.
+
+  '
 status: proved
 pi_obs_profile: minimal
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
-profile_contrast_run: ""
+profile_contrast_run: ''
 equivalence_mode: none
 lean_file: CausalGraphTheory/SubalgebraDetect.lean
 lean_theorems:
-  - batchable_fano_line
-  - not_batchable_example
-  - batchable_triple_count
-  # Grassmann / Pauli-exclusion structure of the Witt basis (WittBasis.lean):
-  - WittBasis.wittLower_nilpotent   # (2Î±â±¼)Â² = 0 for j = 0,1,2 â€” lowering is nilpotent
-  - WittBasis.wittRaise_nilpotent   # (2Î±â±¼â€ )Â² = 0 for j = 0,1,2 â€” raising is nilpotent
-  - WittBasis.wittRaise_right_identity_scaled  # (2Î±â±¼â€ )Â·(2Ï‰) = 2Â·(2Î±â±¼â€ )
+- batchable_fano_line
+- not_batchable_example
+- batchable_triple_count
+- WittBasis.wittLower_nilpotent
+- WittBasis.wittRaise_nilpotent
+- WittBasis.wittRaise_right_identity_scaled
 python_test: calc/test_subalgebra.py
 depends_on:
-  - FANO-001
+- FANO-001
 literature:
-  - "RFC-001 Â§3"
-  - "Furey (2019): Standard Model particles from split octonions â€” Witt basis properties"
-notes: |
-  Exactly 7 unordered triples are associative (the lines).
-
-  Witt operator nilpotency (added 2026-02-24): the doubled raising and lowering
-  operators are nilpotent â€” (2Î±â±¼)Â² = 0 and (2Î±â±¼â€ )Â² = 0 for each j = 0,1,2.
-  These are the Grassmann/Pauli-exclusion identities: you cannot create or
-  annihilate the same color-charge state twice. Proved in WittBasis.lean by
-  fin_cases + norm_num component-by-component over â„¤.
-blocked_reason: ""
-
-
+- "RFC-001 \xC2\xA73"
+- "Furey (2019): Standard Model particles from split octonions \xE2\u20AC\u201D Witt basis properties"
+notes: "Exactly 7 unordered triples are associative (the lines).\n\nWitt operator nilpotency (added 2026-02-24): the doubled\
+  \ raising and lowering\noperators are nilpotent \xE2\u20AC\u201D (2\xCE\xB1\xE2\xB1\xBC)\xC2\xB2 = 0 and (2\xCE\xB1\xE2\xB1\
+  \xBC\xE2\u20AC\_)\xC2\xB2 = 0 for each j = 0,1,2.\nThese are the Grassmann/Pauli-exclusion identities: you cannot create\
+  \ or\nannihilate the same color-charge state twice. Proved in WittBasis.lean by\nfin_cases + norm_num component-by-component\
+  \ over \xE2\u201E\xA4.\n"
+blocked_reason: ''
+derivation_status: bridge_assumed
+bridge_assumptions:
+- not_yet_documented_bridge_assumption
+falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the stated
+  prediction or constraint.

@@ -1,80 +1,66 @@
-﻿id: GEN-001
-title: "Three Generations from Triality"
-statement: |
-  The Spin(8) group admits a triality automorphism tau of order 3 that permutes
+id: GEN-001
+title: Three Generations from Triality
+statement: 'The Spin(8) group admits a triality automorphism tau of order 3 that permutes
+
   the three 8-dimensional irreducible representations: Vector (V),
+
   Spinor+ (S+), and Spinor- (S-). These three representations correspond to
+
   three distinct generations of fermions in the graph model.
 
+  '
 status: stub
 pi_obs_profile: with_sector
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
-profile_contrast_run: ""
+profile_contrast_run: ''
 equivalence_mode: none
 lean_file: CausalGraphTheory/Spinors.lean
 lean_theorems:
-  - CausalGraph.generationShift_order3
-  - CausalGraph.wittPairs_on_distinct_lines
-  - CausalGraph.wittPair_cyclic_perm_is_fano_aut
-  - CausalGraph.wittPair_cyclic_perm_flip_not_fano_aut
-  - CausalGraph.vacuumStabilizerList_count
-  - CausalGraph.wittPair_cyclic_in_vacuumStabilizerList
-  - CausalGraph.wittPair_cyclic_inducedColorPerm
-  - CausalGraph.inducedColorPerms_count
-  - CausalGraph.inducedColorPermFiberSizes_eq
-  - CausalGraph.inducedColorPerms_perm_S3
-  - CausalGraph.color_perm_realized_by_vacuum_stabilizer
-  - CausalGraph.inducedColorPerm_hom_on_vacuumStabilizer_bool
-  - CausalGraph.stabilizerKernelList_count
-  - CausalGraph.stabilizerKernel_normal_bool
-  - CausalGraph.stabilizer_kernel_index_six
-  - CausalGraph.wittPair_swap01_in_vacuumStabilizer
-  - CausalGraph.wittPair_swap01_inducedColorPerm
-  - CausalGraph.inducedNonVacLinePerms_perm_S4
-  - CausalGraph.inducedNonVacLinePerm_faithful_bool
-  - CausalGraph.vacuumStabilizer_explicit_iso_S4_bool
-  - CausalGraph.wittPair_cyclic_color_powers
-  - CausalGraph.gen1_ne_gen2
-  - CausalGraph.gen1dual_ne_gen2
-  - CausalGraph.gen1_ne_gen1dual
+- CausalGraph.generationShift_order3
+- CausalGraph.wittPairs_on_distinct_lines
+- CausalGraph.wittPair_cyclic_perm_is_fano_aut
+- CausalGraph.wittPair_cyclic_perm_flip_not_fano_aut
+- CausalGraph.vacuumStabilizerList_count
+- CausalGraph.wittPair_cyclic_in_vacuumStabilizerList
+- CausalGraph.wittPair_cyclic_inducedColorPerm
+- CausalGraph.inducedColorPerms_count
+- CausalGraph.inducedColorPermFiberSizes_eq
+- CausalGraph.inducedColorPerms_perm_S3
+- CausalGraph.color_perm_realized_by_vacuum_stabilizer
+- CausalGraph.inducedColorPerm_hom_on_vacuumStabilizer_bool
+- CausalGraph.stabilizerKernelList_count
+- CausalGraph.stabilizerKernel_normal_bool
+- CausalGraph.stabilizer_kernel_index_six
+- CausalGraph.wittPair_swap01_in_vacuumStabilizer
+- CausalGraph.wittPair_swap01_inducedColorPerm
+- CausalGraph.inducedNonVacLinePerms_perm_S4
+- CausalGraph.inducedNonVacLinePerm_faithful_bool
+- CausalGraph.vacuumStabilizer_explicit_iso_S4_bool
+- CausalGraph.wittPair_cyclic_color_powers
+- CausalGraph.gen1_ne_gen2
+- CausalGraph.gen1dual_ne_gen2
+- CausalGraph.gen1_ne_gen1dual
 python_test: calc/test_triality.py
 depends_on:
-  - OCT-001
+- OCT-001
 literature:
-  - "Baez (2002): The Octonions Â§4.3"
-  - "Furey (2018): Three generations..."
-notes: |
-  Crucial to show that V, S+, S- are chemically distinct in the graph (e.g.,
-  different tick frequencies or connectivity rules) to explain why they aren't
-  just relabelings of the same physics.
-
-  New finite gate checks (Lean, 2026-02-24):
-  - Distinct Witt pairs lie on distinct Fano lines (`wittPairs_on_distinct_lines`).
-  - The orientation-preserving cyclic map of Witt pairs is a Fano automorphism
-    (`wittPair_cyclic_perm_is_fano_aut`).
-  - A closely related cycle with one internal pair flip is NOT a Fano
-    automorphism (`wittPair_cyclic_perm_flip_not_fano_aut`).
-  - Generation-sector states are pairwise distinct
-    (`gen1_ne_gen2`, `gen1dual_ne_gen2`, `gen1_ne_gen1dual`).
-  - Vacuum-stabilizer action on Witt-pair labels is explicit and exhaustive:
-    `wittPair_cyclic_in_vacuumStabilizerList`, `wittPair_cyclic_inducedColorPerm`,
-    `inducedColorPerms_count`, `inducedColorPerms_perm_S3`,
-    `color_perm_realized_by_vacuum_stabilizer`.
-  - Structural quotient checks landed:
-    `inducedColorPerm_hom_on_vacuumStabilizer_bool`,
-    `stabilizerKernelList_count`, `stabilizerKernel_normal_bool`,
-    `stabilizer_kernel_index_six`.
-  - A concrete transposition witness exists inside the stabilizer:
-    `wittPair_swap01_in_vacuumStabilizer` and
-    `wittPair_swap01_inducedColorPerm`.
-  - The same stabilizer also acts as full S4 on the 4 non-vacuum Fano lines,
-    with faithful action (`inducedNonVacLinePerms_perm_S4`,
-    `inducedNonVacLinePerm_faithful_bool`).
-  - An explicit list-level S4 isomorphism witness is now present
-    (`vacuumStabilizer_explicit_iso_S4_bool`).
-
-  Full Spin(8)-representation-level mapping remains open.
-blocked_reason: ""
-
-
+- "Baez (2002): The Octonions \xC2\xA74.3"
+- 'Furey (2018): Three generations...'
+notes: "Crucial to show that V, S+, S- are chemically distinct in the graph (e.g.,\ndifferent tick frequencies or connectivity\
+  \ rules) to explain why they aren't\njust relabelings of the same physics.\n\nNew finite gate checks (Lean, 2026-02-24):\n\
+  - Distinct Witt pairs lie on distinct Fano lines (`wittPairs_on_distinct_lines`).\n- The orientation-preserving cyclic map\
+  \ of Witt pairs is a Fano automorphism\n  (`wittPair_cyclic_perm_is_fano_aut`).\n- A closely related cycle with one internal\
+  \ pair flip is NOT a Fano\n  automorphism (`wittPair_cyclic_perm_flip_not_fano_aut`).\n- Generation-sector states are pairwise\
+  \ distinct\n  (`gen1_ne_gen2`, `gen1dual_ne_gen2`, `gen1_ne_gen1dual`).\n- Vacuum-stabilizer action on Witt-pair labels\
+  \ is explicit and exhaustive:\n  `wittPair_cyclic_in_vacuumStabilizerList`, `wittPair_cyclic_inducedColorPerm`,\n  `inducedColorPerms_count`,\
+  \ `inducedColorPerms_perm_S3`,\n  `color_perm_realized_by_vacuum_stabilizer`.\n- Structural quotient checks landed:\n  `inducedColorPerm_hom_on_vacuumStabilizer_bool`,\n\
+  \  `stabilizerKernelList_count`, `stabilizerKernel_normal_bool`,\n  `stabilizer_kernel_index_six`.\n- A concrete transposition\
+  \ witness exists inside the stabilizer:\n  `wittPair_swap01_in_vacuumStabilizer` and\n  `wittPair_swap01_inducedColorPerm`.\n\
+  - The same stabilizer also acts as full S4 on the 4 non-vacuum Fano lines,\n  with faithful action (`inducedNonVacLinePerms_perm_S4`,\n\
+  \  `inducedNonVacLinePerm_faithful_bool`).\n- An explicit list-level S4 isomorphism witness is now present\n  (`vacuumStabilizer_explicit_iso_S4_bool`).\n\
+  \nFull Spin(8)-representation-level mapping remains open.\n"
+blocked_reason: ''
+derivation_status: untested
+bridge_assumptions: []
+falsification_condition: Claim is falsified if deterministic tests contradict the stated claim conditions.

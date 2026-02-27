@@ -1,0 +1,124 @@
+{
+  "schema_version": "qn_claim_ledger_v1",
+  "generated_at_utc": "2026-02-27T18:48:49.598256Z",
+  "generated_by": "calc.derive_sm_quantum_numbers",
+  "source_script": "calc\\derive_sm_quantum_numbers.py",
+  "source_script_sha256": "a121e9e00f17e4310a806f0a2d1e3da503ec68fbb52331db25c31f056baa38a2",
+  "preconditions": {
+    "N_c": 3,
+    "N_gen": 3,
+    "N_w": 2
+  },
+  "claim_count": 7,
+  "rows": [
+    {
+      "claim_id": "QN-001",
+      "status": "core_derived",
+      "assumptions": [
+        "Witt basis convention is locked in rfc/CONVENTIONS.md",
+        "Charge table follows right-handed Witt occupation pattern"
+      ],
+      "theorem_refs": [
+        "CausalGraphTheory/WittBasis.lean#wittPair"
+      ],
+      "tests": [
+        "calc/test_derive_sm_quantum_numbers.py::test_witt_charge_set",
+        "calc/test_derive_sm_quantum_numbers.py::test_witt_charges_integer_multiples_of_1_over_N_c"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "QN-002",
+      "status": "core_derived",
+      "assumptions": [
+        "N_c is defined as len(WITT_PAIRS) from locked conventions"
+      ],
+      "theorem_refs": [
+        "CausalGraphTheory/WittBasis.lean#wittPair"
+      ],
+      "tests": [
+        "calc/test_derive_sm_quantum_numbers.py::test_N_c_equals_3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "QN-003",
+      "status": "bridge_assumed",
+      "assumptions": [
+        "N_gen = N_c identification",
+        "Three-generation decomposition interpretation from literature framing"
+      ],
+      "theorem_refs": [
+        "CausalGraphTheory/GenerationCount.lean#generation_count_eq_three"
+      ],
+      "tests": [
+        "calc/test_derive_sm_quantum_numbers.py::test_N_gen_equals_N_c"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "QN-004",
+      "status": "bridge_assumed",
+      "assumptions": [
+        "SU(3) color dim rule N_c^2-1",
+        "SU(2)_L fixed to 2-dimensional fundamental",
+        "One U(1) hypercharge channel"
+      ],
+      "theorem_refs": [
+        "not_yet_lean_backed"
+      ],
+      "tests": [
+        "calc/test_derive_sm_quantum_numbers.py::test_total_gauge_bosons"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "QN-005",
+      "status": "bridge_assumed",
+      "assumptions": [
+        "Standard 15-LH-Weyl hypercharge assignment",
+        "Anomaly checks performed on reconstructed SM basis"
+      ],
+      "theorem_refs": [
+        "not_yet_lean_backed"
+      ],
+      "tests": [
+        "calc/test_derive_sm_quantum_numbers.py::test_sm_hypercharge_linear_anomaly",
+        "calc/test_derive_sm_quantum_numbers.py::test_sm_hypercharge_cubic_anomaly"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "QN-006",
+      "status": "bridge_assumed",
+      "assumptions": [
+        "SU(5) normalization bridge with k = N_c/(N_c+N_w)",
+        "GUT-scale interpretation for sin^2(theta_W)=3/8"
+      ],
+      "theorem_refs": [
+        "CausalGraphTheory/WeakMixingObservable.lean#sin2ThetaWObs_exclusive_u1_eq_one_four",
+        "not_yet_lean_backed_for_su5_bridge"
+      ],
+      "tests": [
+        "calc/test_derive_sm_quantum_numbers.py::test_sin2_theta_W_exact"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "QN-007",
+      "status": "bridge_assumed",
+      "assumptions": [
+        "Standard one-loop QCD beta-function form",
+        "UV choice N_f = N_gen"
+      ],
+      "theorem_refs": [
+        "not_yet_lean_backed"
+      ],
+      "tests": [
+        "calc/test_derive_sm_quantum_numbers.py::test_beta0_uv",
+        "calc/test_derive_sm_quantum_numbers.py::test_beta0_nf6"
+      ],
+      "confidence": "medium"
+    }
+  ]
+}

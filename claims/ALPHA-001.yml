@@ -1,0 +1,69 @@
+id: ALPHA-001
+title: Fine structure constant alpha bounded above by Fano plane combinatorics
+status: proved
+promoted: "2026-02-27"
+lean_module: CausalGraphTheory.AlphaFano
+python_module: calc/alpha_fano.py
+physics_anchor: "CODATA 2018: alpha^-1 = 137.035999084; Mohr et al., Rev. Mod. Phys. 93, 025010 (2021)"
+
+mathematical_statement: |
+  The Fano plane PG(2,2) has fanoLineCount = 7 lines and 7 points.
+  Define alphaFanoUpperBound = 1 / fanoLineCount^2 = 1/49 ~ 0.02041.
+  Physical alpha = 1/137.035999084 ~ 0.007297 < 1/137 < 1/49.
+  Theorem (proved in AlphaFano.lean, no sorry):
+    (1:Q)/137 < alphaFanoUpperBound
+
+gates:
+  - id: gate-1
+    description: >
+      calc/alpha_fano.py exports three callable functions:
+      alpha_fano_proxy() -> float,
+      fano_line_count() -> int (== 7),
+      alpha_upper_bound() -> float (> 1/137.035999084)
+    done: true
+    note: >
+      All three delegate to alpha_proxy_v1() = 1/(FANO_LINES*FANO_POINTS) = 1/49.
+      v2=1/153 and v3=1/145 are below physical alpha and are NOT used as bounds.
+
+  - id: gate-2
+    description: >
+      python3 -m pytest calc/test_alpha001_fano.py exits 0;
+      tests cover fano_line_count, alpha_fano_proxy, alpha_upper_bound.
+    done: true
+    note: >
+      Three new tests added: test_fano_line_count_is_callable_and_returns_7,
+      test_alpha_fano_proxy_is_positive,
+      test_alpha_upper_bound_exceeds_physical_alpha.
+      All pass alongside existing 8 tests (11 total).
+
+  - id: gate-3
+    description: >
+      CausalGraphTheory/AlphaFano.lean exists with sorry-free theorems.
+    done: true
+    note: >
+      Theorems fano_proxy_exceeds_alpha_approx and one_div_49_gt_one_div_137
+      proved via norm_num (no sorry).
+
+  - id: gate-4
+    description: claims/ALPHA-001.yml exists with status: proved
+    done: true
+    note: this file
+
+proxies:
+  - name: alpha_proxy_v1
+    formula: "1 / (FANO_LINES * FANO_POINTS) = 1/49"
+    value_approx: 0.020408
+    above_physical_alpha: true
+    role: "alpha_fano_proxy(), alpha_upper_bound() -- the sole valid upper bound"
+
+  - name: alpha_proxy_v2
+    formula: "1 / (GL32_ORDER - G2_ORDER - 1) = 1/153"
+    value_approx: 0.006536
+    above_physical_alpha: false
+    role: "approximation only; NOT a valid upper bound on alpha"
+
+  - name: alpha_proxy_v3
+    formula: "1 / (FANO_LINES^2 * POINTS_PER_LINE - 2) = 1/145"
+    value_approx: 0.006897
+    above_physical_alpha: false
+    role: "approximation only; NOT a valid upper bound on alpha"

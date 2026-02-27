@@ -1,44 +1,46 @@
-﻿id: GAUGE-001-LEGACY
-title: "Emergence of Standard Model Gauge Group G_SM (Legacy Statement)"
-statement: |
-  [SUPERSEDED] Legacy broad gauge-group statement.
+id: GAUGE-001-LEGACY
+title: Emergence of Standard Model Gauge Group G_SM (Legacy Statement)
+statement: '[SUPERSEDED] Legacy broad gauge-group statement.
+
   This file predates the stabilizer reconciliation in RFC-017 and duplicates
+
   the GAUGE-001 claim ID. In the current encoding, the finite vacuum stabilizer
+
   identified in Lean is S4 (order 24), not an SL(2,3)-labeled object nor a direct
+
   proof of continuous SU(3) isomorphism at the kernel level.
 
+  '
 status: superseded
 pi_obs_profile: with_sector
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
-profile_contrast_run: ""
+profile_contrast_run: ''
 equivalence_mode: none
 lean_file: CausalGraphTheory/GaugeGroup.lean
 lean_theorems:
-  - stabilizer_of_imaginary_unit_is_su3
-  - witt_basis_automorphisms_is_gsm
+- stabilizer_of_imaginary_unit_is_su3
+- witt_basis_automorphisms_is_gsm
 python_test: calc/gauge_check.py
 superseded_by:
-  - GAUGE-001
-superseded_on: "2026-02-25"
+- GAUGE-001
+superseded_on: '2026-02-25'
 depends_on:
-  - FANO-001
-  - OCT-001
+- FANO-001
+- OCT-001
 literature:
-  - "Gunaydin & Gursey (1973): Quark structure and octonions"
-  - "Furey (2016): Standard model physics from an algebra?"
-  - "Todorov (2019): Exceptional quantum algebra for the standard model"
-notes: |
-  SUPERSESSION RATIONALE (2026-02-25):
-  - Duplicate claim ID with claims/gauge_group.yml created an ambiguity.
-  - The statement overreaches current formal evidence.
-  - Active gauge-group evidence and caveats are now tracked in:
-      claims/gauge_group.yml and rfc/RFC-017_Vacuum_Stabilizer_Reconciliation.md
+- 'Gunaydin & Gursey (1973): Quark structure and octonions'
+- 'Furey (2016): Standard model physics from an algebra?'
+- 'Todorov (2019): Exceptional quantum algebra for the standard model'
+notes: "SUPERSESSION RATIONALE (2026-02-25):\n- Duplicate claim ID with claims/gauge_group.yml created an ambiguity.\n- The\
+  \ statement overreaches current formal evidence.\n- Active gauge-group evidence and caveats are now tracked in:\n    claims/gauge_group.yml\
+  \ and rfc/RFC-017_Vacuum_Stabilizer_Reconciliation.md\n\nThe derivation must be purely algebraic. The U(1) factor comes\
+  \ from the\ncomplex phase symmetry of the ladder operators. The SU(2) comes from the\nquaternion subalgebra of the weak\
+  \ sector.\n"
+blocked_reason: 'Superseded by the reconciled GAUGE-001 claim and RFC-017.
 
-  The derivation must be purely algebraic. The U(1) factor comes from the
-  complex phase symmetry of the ladder operators. The SU(2) comes from the
-  quaternion subalgebra of the weak sector.
-blocked_reason: |
-  Superseded by the reconciled GAUGE-001 claim and RFC-017.
-
-
+  '
+derivation_status: untested
+bridge_assumptions: []
+falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the stated
+  prediction or constraint.

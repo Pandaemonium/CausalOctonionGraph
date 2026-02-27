@@ -1,25 +1,37 @@
 status: proved
 name: STRONG-001
 title: Strong Coupling Constant alpha_s
-description: The leading-order estimate for the strong coupling constant is alpha_s_proxy = 1/7, derived from the Fano plane geometry |Stab(e7)| / |Aut(PG(2,2))| = 24/168.
-
+description: The leading-order estimate for the strong coupling constant is alpha_s_proxy = 1/7, derived from the Fano plane
+  geometry |Stab(e7)| / |Aut(PG(2,2))| = 24/168.
 pi_obs_profile: with_sector
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
-profile_contrast_run: ""
+profile_contrast_run: ''
 equivalence_mode: none
-reason: The physical value of alpha_s at the Z pole (alpha_s(M_Z) ~ 0.118) differs from the COG proxy (1/7 ~ 0.143) by 20%, requiring correction mechanisms to reconcile theory with observation. The 20% gap is explicitly documented per RFC-026 §7 honesty requirement.
+reason: "The physical value of alpha_s at the Z pole (alpha_s(M_Z) ~ 0.118) differs from the COG proxy (1/7 ~ 0.143) by 20%,\
+  \ requiring correction mechanisms to reconcile theory with observation. The 20% gap is explicitly documented per RFC-026\
+  \ \xA77 honesty requirement."
 proof: CausalGraphTheory/GaugeObservables.lean
 lean_file: CausalGraphTheory/StrongCoupling.lean
 lean_theorems:
-  - alpha_s_fano_bound
-  - alpha_s_proxy_overestimates_pdg_proof
-  - alpha_s_proxy_overestimates
+- alpha_s_fano_bound
+- alpha_s_proxy_overestimates_pdg_proof
+- alpha_s_proxy_overestimates
 python_test: calc/test_strong_alpha.py
-notes: |
-  Theorem alpha_s_fano_bound (proved by native_decide) formally connects the
+notes: 'Theorem alpha_s_fano_bound (proved by native_decide) formally connects the
+
   Fano geometry to the 1/7 estimate by showing alpha_s_proxy > 1179/10000
+
   (PDG value). Located in CausalGraphTheory/StrongCoupling.lean. The Python
+
   test test_alpha_s_fano_estimate in calc/test_strong_alpha.py numerically
+
   verifies the 20% gap and confirms the proxy is an overestimate.
+
+  '
 version: 1.0
+derivation_status: bridge_assumed
+bridge_assumptions:
+- not_yet_documented_bridge_assumption
+falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the stated
+  prediction or constraint.

@@ -1,66 +1,47 @@
-﻿id: CAUS-001
-title: "Reachability defines a strict partial order on the causal graph"
-statement: |
-  The reachability relation on a CausalGraph G is a strict partial order:
-
-    1. Irreflexivity:  not (reachable G n n)
-    2. Asymmetry:      reachable G m n -> not (reachable G n m)
-    3. Transitivity:   reachable G m k -> reachable G k n -> reachable G m n
-
-  These follow from the acyclicity invariant: every edge e in G satisfies
-  e.source < e.target (Nat ordering). Hence any directed path m ->* n
-  implies m < n (by transitivity of Nat.<), which immediately gives
-  irreflexivity and asymmetry.
-
-  The causal future and past of a node are decidable:
-    directFuture G n = {k | n -> k in G}  (all targets of edges from n)
-    directPast G n   = {k | k -> n in G}  (all sources of edges to n)
-
-  Two nodes m, n are causally disconnected iff neither m ->* n nor n ->* m.
-  Disconnectedness is symmetric by definition.
-
+id: CAUS-001
+title: Reachability defines a strict partial order on the causal graph
+statement: "The reachability relation on a CausalGraph G is a strict partial order:\n\n  1. Irreflexivity:  not (reachable\
+  \ G n n)\n  2. Asymmetry:      reachable G m n -> not (reachable G n m)\n  3. Transitivity:   reachable G m k -> reachable\
+  \ G k n -> reachable G m n\n\nThese follow from the acyclicity invariant: every edge e in G satisfies\ne.source < e.target\
+  \ (Nat ordering). Hence any directed path m ->* n\nimplies m < n (by transitivity of Nat.<), which immediately gives\nirreflexivity\
+  \ and asymmetry.\n\nThe causal future and past of a node are decidable:\n  directFuture G n = {k | n -> k in G}  (all targets\
+  \ of edges from n)\n  directPast G n   = {k | k -> n in G}  (all sources of edges to n)\n\nTwo nodes m, n are causally disconnected\
+  \ iff neither m ->* n nor n ->* m.\nDisconnectedness is symmetric by definition.\n"
 status: proved
 pi_obs_profile: minimal
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
-profile_contrast_run: ""
+profile_contrast_run: ''
 equivalence_mode: none
 lean_file: CausalGraphTheory/CausalOrder.lean
 lean_theorems:
-  - CausalGraph.reachable_implies_lt
-  - CausalGraph.reachable_irrefl
-  - CausalGraph.reachable_asymm
-  - CausalGraph.reachable_trans
-  - CausalGraph.directFuture_gt
-  - CausalGraph.directPast_lt
-  - CausalGraph.not_disconnected_of_edge
-  - CausalGraph.causallyDisconnected_symm
-python_test: ""
+- CausalGraph.reachable_implies_lt
+- CausalGraph.reachable_irrefl
+- CausalGraph.reachable_asymm
+- CausalGraph.reachable_trans
+- CausalGraph.directFuture_gt
+- CausalGraph.directPast_lt
+- CausalGraph.not_disconnected_of_edge
+- CausalGraph.causallyDisconnected_symm
+python_test: ''
 depends_on:
-  - DAG-001
+- DAG-001
 literature:
-  - "Bombelli et al. (1987): Space-time as a causal set, PRL 59, 521"
-  - "Henson (2006): The causal set approach to quantum gravity, arXiv:gr-qc/0601121"
-  - "Wolfram (2020): A class of models with the potential to represent fundamental physics"
-  - "RFC-002 section 3 (causal structure of the COG)"
-notes: |
-  The key lemma is reachable_implies_lt: any reachable pair (m, n) satisfies
-  m < n in the natural number ordering on node IDs. This follows from the
-  CausalGraph.acyclic invariant (e.source < e.target for all edges e).
-
-  Proof by induction on the reachable relation:
-    - Base case (edge): directly from acyclic
-    - Inductive step (trans): by Nat.lt_trans
-
-  Irreflexivity and asymmetry are immediate corollaries of reachable_implies_lt
-  since m < n implies m != n (irrefl) and n is not < m (asymm).
-
-  The directFuture/directPast sets are computed by List.filter on the edge list,
-  using Decidable coercion of Nat.decEq. The filter proofs use decide_eq_true_eq
-  to convert Bool filter results to Prop-level equalities.
-
-  Note: common_future_lt and common_past_gt theorems show that common causal
-  descendants/ancestors must respect the ID ordering.
-blocked_reason: ""
-
-
+- 'Bombelli et al. (1987): Space-time as a causal set, PRL 59, 521'
+- 'Henson (2006): The causal set approach to quantum gravity, arXiv:gr-qc/0601121'
+- 'Wolfram (2020): A class of models with the potential to represent fundamental physics'
+- RFC-002 section 3 (causal structure of the COG)
+notes: "The key lemma is reachable_implies_lt: any reachable pair (m, n) satisfies\nm < n in the natural number ordering on\
+  \ node IDs. This follows from the\nCausalGraph.acyclic invariant (e.source < e.target for all edges e).\n\nProof by induction\
+  \ on the reachable relation:\n  - Base case (edge): directly from acyclic\n  - Inductive step (trans): by Nat.lt_trans\n\
+  \nIrreflexivity and asymmetry are immediate corollaries of reachable_implies_lt\nsince m < n implies m != n (irrefl) and\
+  \ n is not < m (asymm).\n\nThe directFuture/directPast sets are computed by List.filter on the edge list,\nusing Decidable\
+  \ coercion of Nat.decEq. The filter proofs use decide_eq_true_eq\nto convert Bool filter results to Prop-level equalities.\n\
+  \nNote: common_future_lt and common_past_gt theorems show that common causal\ndescendants/ancestors must respect the ID\
+  \ ordering.\n"
+blocked_reason: ''
+derivation_status: bridge_assumed
+bridge_assumptions:
+- not_yet_documented_bridge_assumption
+falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the stated
+  prediction or constraint.

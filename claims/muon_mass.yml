@@ -1,175 +1,153 @@
-﻿id: LEPTON-001
-title: "Muon-to-electron mass ratio from COG orbit length"
-statement: |
-  The muon-to-electron mass ratio m_Î¼/m_e â‰ˆ 206.768 equals, in the
-  COG framework, the ratio of orbit lengths (tick counts) of the muon
-  and electron motifs under the COG exchange rule:
-
-      m_Î¼ / m_e = C_Î¼ / C_e
-
-  where:
-    C_e = orbit length of the electron motif (generation-1 state Ïˆ_e
-          in the sÂ·S* sector of CâŠ—O, cycling through the L1
-          associative quaternionic subalgebra {eâ‚, eâ‚‚, eâ‚ƒ}).
-
-    C_Î¼ = orbit length of the muon motif (generation-2 state Ïˆ_Î¼
-          in the s*Â·S* sector of CâŠ—O, cycling through a non-associative
-          Fano path and returning to the starting state).
-
-  The key mechanism: Ïˆ_e absorbs photons (eâ‚‡ right-mult) and returns to
-  its initial signed state in C_e = 4 symmetric exchange cycles (exact
-  signed return). Earlier drafts stated C_e = 3; the 2026-02-23 calibration
-  (qed_calibration.py, 50 tests) gives C_e = 4 from the signed kick orbit.
-  Ïˆ_Î¼ requires a non-associative Fano path â€” its orbit is longer, and the
-  ratio C_Î¼/C_e should match 206.768.
-
-
-status: open  # orbit-length mechanism; COG-QC-01 sub-hypothesis falsified (see notes)
+id: LEPTON-001
+title: Muon-to-electron mass ratio from COG orbit length
+statement: "The muon-to-electron mass ratio m_\xCE\xBC/m_e \xE2\u2030\u02C6 206.768 equals, in the\nCOG framework, the ratio\
+  \ of orbit lengths (tick counts) of the muon\nand electron motifs under the COG exchange rule:\n\n    m_\xCE\xBC / m_e =\
+  \ C_\xCE\xBC / C_e\n\nwhere:\n  C_e = orbit length of the electron motif (generation-1 state \xCF\u02C6_e\n        in the\
+  \ s\xC2\xB7S* sector of C\xE2\u0160\u2014O, cycling through the L1\n        associative quaternionic subalgebra {e\xE2\u201A\
+  , e\xE2\u201A\u201A, e\xE2\u201A\u0192}).\n\n  C_\xCE\xBC = orbit length of the muon motif (generation-2 state \xCF\u02C6\
+  _\xCE\xBC\n        in the s*\xC2\xB7S* sector of C\xE2\u0160\u2014O, cycling through a non-associative\n        Fano path\
+  \ and returning to the starting state).\n\nThe key mechanism: \xCF\u02C6_e absorbs photons (e\xE2\u201A\u2021 right-mult)\
+  \ and returns to\nits initial signed state in C_e = 4 symmetric exchange cycles (exact\nsigned return). Earlier drafts stated\
+  \ C_e = 3; the 2026-02-23 calibration\n(qed_calibration.py, 50 tests) gives C_e = 4 from the signed kick orbit.\n\xCF\u02C6\
+  _\xCE\xBC requires a non-associative Fano path \xE2\u20AC\u201D its orbit is longer, and the\nratio C_\xCE\xBC/C_e should\
+  \ match 206.768.\n"
+status: open
 pi_obs_profile: minimal
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
-profile_contrast_run: ""
+profile_contrast_run: ''
 equivalence_mode: none
 lean_file: CausalGraphTheory/Spinors.lean
 lean_theorems:
-  # Universal C_e = 4 stack (core LEPTON-001 result)
-  - CausalGraph.e7LeftOp_square_eq_neg_one
-  - CausalGraph.e7_left_twice_neg
-  - CausalGraph.e7_left_four_id
-  - CausalGraph.e7_left_period_one_impossible
-  - CausalGraph.e7_left_period_two_impossible
-  - CausalGraph.universal_Ce_period_four
-  # Right-action symmetry (orientation-independence)
-  - CausalGraph.e7_right_twice_neg
-  - CausalGraph.e7_right_four_id
-  - CausalGraph.e7_right_period_one_impossible
-  - CausalGraph.e7_right_period_two_impossible
-  - CausalGraph.universal_Ce_right_period_four
-  # Generation-1 (electron) state: period-4 corollaries
-  - CausalGraph.fureyElectronStateDoubled_closed_form
-  - CausalGraph.alpha3Dag_mul_omega_step
-  - CausalGraph.alpha2Dag_mul_step1
-  - CausalGraph.alpha1Dag_mul_step2
-  - CausalGraph.fureyElectronStateDoubled_chain
-  - CausalGraph.negEightIOmegaDagDoubled_scalar_bridge
-  - CausalGraph.fureyElectronStateDoubled_ne_zero
-  - CausalGraph.fureyElectronState_left_orbit_exact_period_four
-  - CausalGraph.fureyElectronState_right_orbit_exact_period_four
-  # Generation-2 (muon) state: anti-idempotent, period-4 corollaries
-  - CausalGraph.gen2State_proportional_idempotent
-  - CausalGraph.gen2StateQuadruple_ne_zero
-  - CausalGraph.gen2State_left_orbit_exact_period_four
-  - CausalGraph.gen2State_right_orbit_exact_period_four
-  # Dual sector: shows both projector sectors have C_e = 4
-  - CausalGraph.fureyDualElectronStateDoubled_closed_form
-  - CausalGraph.alpha3_mul_omegaDag_step
-  - CausalGraph.alpha2_mul_dual_step1
-  - CausalGraph.alpha1_mul_dual_step2
-  - CausalGraph.fureyDualElectronStateDoubled_chain
-  - CausalGraph.negEightIOmegaDoubled_scalar_bridge
-  - CausalGraph.fureyDualElectronStateDoubled_ne_zero
-  - CausalGraph.fureyDualElectronState_left_orbit_exact_period_four
-  - CausalGraph.fureyDualElectronState_right_orbit_exact_period_four
-  # Generation cycle (Spinors.lean)
-  - CausalGraph.generationShift_order3
-  # NOTE: vacuum eigenvalue theorems (e7Left_on_omegaDoubled etc.) are in
-  # claims/vacuum_symmetry_from_octonions.yml (CFS-003).
-  # Witt nilpotency theorems are in claims/subalgebra_detection.yml (ALG-002).
+- CausalGraph.e7LeftOp_square_eq_neg_one
+- CausalGraph.e7_left_twice_neg
+- CausalGraph.e7_left_four_id
+- CausalGraph.e7_left_period_one_impossible
+- CausalGraph.e7_left_period_two_impossible
+- CausalGraph.universal_Ce_period_four
+- CausalGraph.e7_right_twice_neg
+- CausalGraph.e7_right_four_id
+- CausalGraph.e7_right_period_one_impossible
+- CausalGraph.e7_right_period_two_impossible
+- CausalGraph.universal_Ce_right_period_four
+- CausalGraph.fureyElectronStateDoubled_closed_form
+- CausalGraph.alpha3Dag_mul_omega_step
+- CausalGraph.alpha2Dag_mul_step1
+- CausalGraph.alpha1Dag_mul_step2
+- CausalGraph.fureyElectronStateDoubled_chain
+- CausalGraph.negEightIOmegaDagDoubled_scalar_bridge
+- CausalGraph.fureyElectronStateDoubled_ne_zero
+- CausalGraph.fureyElectronState_left_orbit_exact_period_four
+- CausalGraph.fureyElectronState_right_orbit_exact_period_four
+- CausalGraph.gen2State_proportional_idempotent
+- CausalGraph.gen2StateQuadruple_ne_zero
+- CausalGraph.gen2State_left_orbit_exact_period_four
+- CausalGraph.gen2State_right_orbit_exact_period_four
+- CausalGraph.fureyDualElectronStateDoubled_closed_form
+- CausalGraph.alpha3_mul_omegaDag_step
+- CausalGraph.alpha2_mul_dual_step1
+- CausalGraph.alpha1_mul_dual_step2
+- CausalGraph.fureyDualElectronStateDoubled_chain
+- CausalGraph.negEightIOmegaDoubled_scalar_bridge
+- CausalGraph.fureyDualElectronStateDoubled_ne_zero
+- CausalGraph.fureyDualElectronState_left_orbit_exact_period_four
+- CausalGraph.fureyDualElectronState_right_orbit_exact_period_four
+- CausalGraph.generationShift_order3
 python_test: calc/test_spinor_state.py
 depends_on:
-  - KOIDE-001
-  - GAUGE-001
+- KOIDE-001
+- GAUGE-001
 literature:
-  - "Furey (2019): Standard Model particles from split octonions, arXiv:1910.08395, Eq. 21-22"
-  - "McRae (2025): Triality and the Standard Model, arXiv:2502.14016, Eq. 7-8"
-  - "Baez (2002): The Octonions, math/0105155, Section 4"
-  - "Baez-Huerta (2010): Division Algebras and Supersymmetry I, arXiv:0909.0319"
-  - "CODATA 2022: m_mu/m_e = 206.7682830 Â± 0.0000046"
-  - "Gresnigt, Gourlay, Varma (2023): Three fermion generations with two unbroken gauge symmetries from the sedenions, arXiv:2306.13098 â€” S3 sedenion automorphism generates 3 generations; COG relevance: S3 âŠ„ Aut(O) so three-generation mechanism is structurally above the octonionic layer"
-  - "Finster (2022): Causal Fermion Systems and the Discrete Dirac Sphere, arXiv:2201.06382 â€” shows CFS action minimizers for m spacetime points converge to equally-spaced configurations; S ~ m^2 scaling gives effective m^2 model for mass ratios"
-  - "Finster (2025): Action-driven flows for causal variational principles, arXiv:2503.00526 â€” gradient-flow formulation of CFS action; non-convexity requires penalization; COG 4-cycle is consistent with natural-cycle attractor behavior"
-
+- 'Furey (2019): Standard Model particles from split octonions, arXiv:1910.08395, Eq. 21-22'
+- 'McRae (2025): Triality and the Standard Model, arXiv:2502.14016, Eq. 7-8'
+- 'Baez (2002): The Octonions, math/0105155, Section 4'
+- 'Baez-Huerta (2010): Division Algebras and Supersymmetry I, arXiv:0909.0319'
+- "CODATA 2022: m_mu/m_e = 206.7682830 \xC2\xB1 0.0000046"
+- "Gresnigt, Gourlay, Varma (2023): Three fermion generations with two unbroken gauge symmetries from the sedenions, arXiv:2306.13098\
+  \ \xE2\u20AC\u201D S3 sedenion automorphism generates 3 generations; COG relevance: S3 \xE2\u0160\u201E Aut(O) so three-generation\
+  \ mechanism is structurally above the octonionic layer"
+- "Finster (2022): Causal Fermion Systems and the Discrete Dirac Sphere, arXiv:2201.06382 \xE2\u20AC\u201D shows CFS action\
+  \ minimizers for m spacetime points converge to equally-spaced configurations; S ~ m^2 scaling gives effective m^2 model\
+  \ for mass ratios"
+- "Finster (2025): Action-driven flows for causal variational principles, arXiv:2503.00526 \xE2\u20AC\u201D gradient-flow\
+  \ formulation of CFS action; non-convexity requires penalization; COG 4-cycle is consistent with natural-cycle attractor\
+  \ behavior"
 experimental_value:
-  ratio: 206.7682830
-  uncertainty: 0.0000046
-  source: "CODATA 2022"
-
+  ratio: 206.768283
+  uncertainty: 4.6e-06
+  source: CODATA 2022
 state_vectors:
-  electron_sector: "sÂ·S* where s = Â½(1+ieâ‚‡) from LEFT, S* = Â½(1-ieâ‚‡) from RIGHT"
-  muon_sector: "s*Â·S* where s* = Â½(1-ieâ‚‡) from LEFT, S* = Â½(1-ieâ‚‡) from RIGHT"
-  electron_state: |
-    Ïˆ_e = eâ‚â» = sÂ·S* Â· (iÂ·eâ‚ - eâ‚ƒ + eâ‚â‚‚â‚† + eâ‚â‚„â‚…) Â· s*Â·S*
-    (Furey 2019, Eq. 21 â€” first charged lepton)
-  muon_state: |
-    Ïˆ_Î¼ = eâ‚‚â» = sÂ·S* Â· (-iÂ·eâ‚‚ + eâ‚† + eâ‚â‚‚â‚ƒ - iÂ·eâ‚â‚ƒâ‚†) Â· s*Â·S*
-    (Furey 2019, Eq. 21 â€” second charged lepton)
-  note: |
-    Triple products: eâ‚â‚‚â‚ƒ = eâ‚Â·eâ‚‚Â·eâ‚ƒ, eâ‚â‚‚â‚† = eâ‚Â·eâ‚‚Â·eâ‚†, etc.
-    All computed via the Furey Fano convention in rfc/CONVENTIONS.md.
-
+  electron_sector: "s\xC2\xB7S* where s = \xC2\xBD(1+ie\xE2\u201A\u2021) from LEFT, S* = \xC2\xBD(1-ie\xE2\u201A\u2021) from\
+    \ RIGHT"
+  muon_sector: "s*\xC2\xB7S* where s* = \xC2\xBD(1-ie\xE2\u201A\u2021) from LEFT, S* = \xC2\xBD(1-ie\xE2\u201A\u2021) from\
+    \ RIGHT"
+  electron_state: "\xCF\u02C6_e = e\xE2\u201A\xE2\xBB = s\xC2\xB7S* \xC2\xB7 (i\xC2\xB7e\xE2\u201A - e\xE2\u201A\u0192 + e\xE2\
+    \u201A\xE2\u201A\u201A\xE2\u201A\u2020 + e\xE2\u201A\xE2\u201A\u201E\xE2\u201A\u2026) \xC2\xB7 s*\xC2\xB7S*\n(Furey 2019,\
+    \ Eq. 21 \xE2\u20AC\u201D first charged lepton)\n"
+  muon_state: "\xCF\u02C6_\xCE\xBC = e\xE2\u201A\u201A\xE2\xBB = s\xC2\xB7S* \xC2\xB7 (-i\xC2\xB7e\xE2\u201A\u201A + e\xE2\
+    \u201A\u2020 + e\xE2\u201A\xE2\u201A\u201A\xE2\u201A\u0192 - i\xC2\xB7e\xE2\u201A\xE2\u201A\u0192\xE2\u201A\u2020) \xC2\
+    \xB7 s*\xC2\xB7S*\n(Furey 2019, Eq. 21 \xE2\u20AC\u201D second charged lepton)\n"
+  note: "Triple products: e\xE2\u201A\xE2\u201A\u201A\xE2\u201A\u0192 = e\xE2\u201A\xC2\xB7e\xE2\u201A\u201A\xC2\xB7e\xE2\u201A\
+    \u0192, e\xE2\u201A\xE2\u201A\u201A\xE2\u201A\u2020 = e\xE2\u201A\xC2\xB7e\xE2\u201A\u201A\xC2\xB7e\xE2\u201A\u2020, etc.\n\
+    All computed via the Furey Fano convention in rfc/CONVENTIONS.md.\n"
 implementation_plan:
-  - "rfc/RFC-010_Rep_Labels_and_Muon_Orbit.md"  # orbit-length spec
-  - "rfc/RFC-012_QED_Scattering_Graph_Simulation.md"  # QED vertex + vacuum lattice sim
-
+- rfc/RFC-010_Rep_Labels_and_Muon_Orbit.md
+- rfc/RFC-012_QED_Scattering_Graph_Simulation.md
 simulation_records:
-  - date: "2026-02-23"
-    tool: "calc/qed_calibration.py (RFC-012 Goal A)"
-    description: "L1 electron calibration â€” C_e exact signed orbit"
-    L1_ELECTRON_STATE: 1  # e1 (corrected from e6)
-    photon_op: 7           # e7, right-multiplication
-    orbit_period_exact: 4
-    orbit_period_l1: 2
-    Ce_exact: 4
-    Ce_L1: 2
-    vacuum_independent: true
-    tests_passing: 50
-    witt_pair_interconversion:
-      - "e1 x e7 = +e6  (forward kick)"
-      - "e6 x e7 = -e1  (reverse kick, phase flip)"
-      - "e2 x e7 = -e5,  e5 x e7 = +e2"
-      - "e3 x e7 = -e4,  e4 x e7 = +e3"
-    note: |
-      ELECTRON STATE CORRECTION: Prior simulation_record_2026_02_22 used
-      ELECTRON_STATE=6 (Witt nil-element) with LEFT-multiplication, giving
-      orbit_period=2 (unsigned). Corrected to ELECTRON_STATE=1 (L1 triad)
-      with RIGHT-multiplication, period=4 (signed). See qed_scatter.py
-      ELECTRON_STATE deprecation warning.
+- date: '2026-02-23'
+  tool: calc/qed_calibration.py (RFC-012 Goal A)
+  description: "L1 electron calibration \xE2\u20AC\u201D C_e exact signed orbit"
+  L1_ELECTRON_STATE: 1
+  photon_op: 7
+  orbit_period_exact: 4
+  orbit_period_l1: 2
+  Ce_exact: 4
+  Ce_L1: 2
+  vacuum_independent: true
+  tests_passing: 50
+  witt_pair_interconversion:
+  - e1 x e7 = +e6  (forward kick)
+  - e6 x e7 = -e1  (reverse kick, phase flip)
+  - e2 x e7 = -e5,  e5 x e7 = +e2
+  - e3 x e7 = -e4,  e4 x e7 = +e3
+  note: 'ELECTRON STATE CORRECTION: Prior simulation_record_2026_02_22 used
 
+    ELECTRON_STATE=6 (Witt nil-element) with LEFT-multiplication, giving
+
+    orbit_period=2 (unsigned). Corrected to ELECTRON_STATE=1 (L1 triad)
+
+    with RIGHT-multiplication, period=4 (signed). See qed_scatter.py
+
+    ELECTRON_STATE deprecation warning.
+
+    '
 falsified_sub_hypothesis:
   id: COG-QC-01
-  statement: "m_mu/m_e = 1 + N_tau where N_tau is the Boolean circuit depth of the triality map"
+  statement: m_mu/m_e = 1 + N_tau where N_tau is the Boolean circuit depth of the triality map
   status: falsified
-  date: "2026-02-22"
-  evidence: |
-    Computed count_circuit_depth_greedy(H) = 14 for McRae (2025) eq. (8),
-    the exact 4x4 Euclidean triality quartet matrix.  Verified H^3=I, H^T H=I.
-    CSE structure: 4 shift ticks + 2 Walsh-Hadamard intermediates + 8 summation ticks.
-    Key: 14 = dim(G_2), the octonion automorphism group and triality stabilizer.
-    Prediction 1+14=15 and 1+7*14=99 â€” neither matches 206.768 at any natural scale.
-    The O(N log N) geometric bound on a 4x4 Hadamard butterfly rules out naive scaling
-    to 206 without an arbitrary multiplier.
-  significance: |
-    N_tau = 14 = dim(G_2) is a proved non-trivial result: the hardware cost of one
+  date: '2026-02-22'
+  evidence: "Computed count_circuit_depth_greedy(H) = 14 for McRae (2025) eq. (8),\nthe exact 4x4 Euclidean triality quartet\
+    \ matrix.  Verified H^3=I, H^T H=I.\nCSE structure: 4 shift ticks + 2 Walsh-Hadamard intermediates + 8 summation ticks.\n\
+    Key: 14 = dim(G_2), the octonion automorphism group and triality stabilizer.\nPrediction 1+14=15 and 1+7*14=99 \xE2\u20AC\
+    \u201D neither matches 206.768 at any natural scale.\nThe O(N log N) geometric bound on a 4x4 Hadamard butterfly rules\
+    \ out naive scaling\nto 206 without an arbitrary multiplier.\n"
+  significance: 'N_tau = 14 = dim(G_2) is a proved non-trivial result: the hardware cost of one
+
     triality quartet evaluation equals the dimension of the symmetry group it stabilizes.
 
+    '
 schur_lemma_block:
-  date: "2026-02-22"
-  statement: |
-    The 8Ã—8 SO(8) outer triality intertwiner T satisfying
-      T Â· V_ij Â· T^{-1} = L_{H(ij)}
-    for all 28 generator pairs does NOT exist as a single 8Ã—8 matrix.
-    Reason: Schur's Lemma â€” V-rep and S+-rep have different eigenvalue spectra
-    (Â±i vs Â±i/2), so there is no intertwiner between them.
-  consequence: |
-    The COG mechanism does NOT translate the 8D fermion state vector.
-    Instead, the OPERATOR (photon, eâ‚‡) is translated via the 4Ã—4 McRae H matrix,
-    incurring N_Ï„ = 14 ticks per S+ vertex (the triality emulation overhead).
-    The state-space orbit is determined by the DAG graph topology, not by the
-    representation-theoretic intertwiner.
-
+  date: '2026-02-22'
+  statement: "The 8\xC3\u20148 SO(8) outer triality intertwiner T satisfying\n  T \xC2\xB7 V_ij \xC2\xB7 T^{-1} = L_{H(ij)}\n\
+    for all 28 generator pairs does NOT exist as a single 8\xC3\u20148 matrix.\nReason: Schur's Lemma \xE2\u20AC\u201D V-rep\
+    \ and S+-rep have different eigenvalue spectra\n(\xC2\xB1i vs \xC2\xB1i/2), so there is no intertwiner between them.\n"
+  consequence: "The COG mechanism does NOT translate the 8D fermion state vector.\nInstead, the OPERATOR (photon, e\xE2\u201A\
+    \u2021) is translated via the 4\xC3\u20144 McRae H matrix,\nincurring N_\xCF\u201E = 14 ticks per S+ vertex (the triality\
+    \ emulation overhead).\nThe state-space orbit is determined by the DAG graph topology, not by the\nrepresentation-theoretic\
+    \ intertwiner.\n"
 simulation_record_2026_02_22:
-  date: "2026-02-22"
-  tool: "calc/qed_scatter.py (RFC-012)"
+  date: '2026-02-22'
+  tool: calc/qed_scatter.py (RFC-012)
   N_tau: 14
   vertex_tick_cost_ee: 1
   vertex_tick_cost_emu: 15
@@ -177,95 +155,85 @@ simulation_record_2026_02_22:
   orbit_return_time_Cmu_placeholder: 30
   ratio_vertex: 15.0
   ratio_orbit_placeholder: 15.0
-  target_ratio: 206.7682830
-  gap_factor: "~13.8x â€” orbit topology not yet fully simulated"
-  note: |
-    The vertex cost ratio (15) and placeholder orbit ratio (15) are both LOWER BOUNDS.
-    The true C_Î¼/C_e emerges from the macroscopic return-time in the full Fano DAG,
-    not from a single photon vertex. The 8Ã—8 intertwiner approach is ruled out by
-    Schur's Lemma (see schur_lemma_block above). Next step: simulate the full orbit
-    topology in the COG DAG with N_Ï„=14 per S+ vertex and measure when the
-    muon motif returns to its initial state.
-
+  target_ratio: 206.768283
+  gap_factor: "~13.8x \xE2\u20AC\u201D orbit topology not yet fully simulated"
+  note: "The vertex cost ratio (15) and placeholder orbit ratio (15) are both LOWER BOUNDS.\nThe true C_\xCE\xBC/C_e emerges\
+    \ from the macroscopic return-time in the full Fano DAG,\nnot from a single photon vertex. The 8\xC3\u20148 intertwiner\
+    \ approach is ruled out by\nSchur's Lemma (see schur_lemma_block above). Next step: simulate the full orbit\ntopology\
+    \ in the COG DAG with N_\xCF\u201E=14 per S+ vertex and measure when the\nmuon motif returns to its initial state.\n"
 literature_gaps_found_2026_02_23:
   search_agent: afd2f71
-  source: "arXiv search: Furey 1603.04078, 1611.09182, 1910.08395; McRae 2502.14016; Dixon hep-th/9410202"
+  source: 'arXiv search: Furey 1603.04078, 1611.09182, 1910.08395; McRae 2502.14016; Dixon hep-th/9410202'
   findings:
-    - id: gap_1_electron_state
-      severity: important
-      finding: |
-        Furey's electron is NOT simply e1 or the L1 quaternionic subalgebra.
-        In Furey (1603.04078 eq. 20, 1611.09182 ch. 6), the electron is
-        Î±â‚Î±â‚‚Î±â‚ƒÏ‰â€ Ï‰ â€” the fully lowered state in the S^d minimal left ideal,
-        a composite of all three Witt pairs simultaneously. The "L1 = electron"
-        label is a COG-local simplification.
-      cog_position: |
-        The COG qed_calibration.py models a SINGLE BASIS ELEMENT e1 kicked by
-        the e7 operator, obtaining C_e = 4. This is a valid reduced model
-        (tracking one component of the full state) but is not equivalent to
-        simulating the full Furey electron state Î±â‚Î±â‚‚Î±â‚ƒÏ‰â€ Ï‰. The relationship
-        between C_e(e1 component) and C_e(full Furey state) is OPEN.
-      resolution_2026_02_23: |
-        CLOSED by calc/furey_electron_orbit.py (26 tests, all passing).
+  - id: gap_1_electron_state
+    severity: important
+    finding: "Furey's electron is NOT simply e1 or the L1 quaternionic subalgebra.\nIn Furey (1603.04078 eq. 20, 1611.09182\
+      \ ch. 6), the electron is\n\xCE\xB1\xE2\u201A\xCE\xB1\xE2\u201A\u201A\xCE\xB1\xE2\u201A\u0192\xCF\u2030\xE2\u20AC\_\xCF\
+      \u2030 \xE2\u20AC\u201D the fully lowered state in the S^d minimal left ideal,\na composite of all three Witt pairs\
+      \ simultaneously. The \"L1 = electron\"\nlabel is a COG-local simplification.\n"
+    cog_position: "The COG qed_calibration.py models a SINGLE BASIS ELEMENT e1 kicked by\nthe e7 operator, obtaining C_e =\
+      \ 4. This is a valid reduced model\n(tracking one component of the full state) but is not equivalent to\nsimulating\
+      \ the full Furey electron state \xCE\xB1\xE2\u201A\xCE\xB1\xE2\u201A\u201A\xCE\xB1\xE2\u201A\u0192\xCF\u2030\xE2\u20AC\
+      \_\xCF\u2030. The relationship\nbetween C_e(e1 component) and C_e(full Furey state) is OPEN.\n"
+    resolution_2026_02_23: "CLOSED by calc/furey_electron_orbit.py (26 tests, all passing).\n\nUNIVERSAL C_e THEOREM (proved\
+      \ algebraically, verified numerically):\nBy the left-alternative law of C(x)O:\n    e7 * (e7 * x) = (e7 * e7) * x =\
+      \ -x   for ALL non-zero x.\nTherefore L_{e7}^4 = id and the orbit period of ANY non-zero state\nis exactly 4. Period\
+      \ 1 and 2 are impossible for non-zero states\n(they would require -x = x, hence x = 0).\n\nCOMPUTED RESULT:\nThe full\
+      \ Furey electron state (CONVENTIONS.md \xC2\xA76):\n    psi_e = alpha1_dag * (alpha2_dag * (alpha3_dag * omega)) = -i\
+      \ * omega_dag\nAlgebraic derivation confirms:\n    alpha3_dag * omega = alpha3_dag        (omega is right identity on\
+      \ S)\n    alpha2_dag * alpha3_dag = 0.5*(e1 - i*e6)\n    alpha1_dag * 0.5*(e1-i*e6) = -i * omega_dag\nOrbit: {-i*omega_dag,\
+      \ omega_dag, i*omega_dag, -omega_dag}, period 4.\n\nC_e(e1 component) = C_e(full Furey state) = 4. The simplification\n\
+      is not an artifact. The gap is RESOLVED.\n\nCONSEQUENCE: Since C_e = C_mu = 4 universally, the mass ratio\nm_mu/m_e\
+      \ = 206.768 CANNOT arise from state-orbit period under L_{e7}\nalone. The mechanism must come from triality overhead\
+      \ (N_tau=14 per\nS+ vertex) or DAG topology.\n"
+  - id: gap_2_e7_photon
+    severity: moderate
+    finding: 'No Furey paper explicitly identifies e7 right-multiplication as the
 
-        UNIVERSAL C_e THEOREM (proved algebraically, verified numerically):
-        By the left-alternative law of C(x)O:
-            e7 * (e7 * x) = (e7 * e7) * x = -x   for ALL non-zero x.
-        Therefore L_{e7}^4 = id and the orbit period of ANY non-zero state
-        is exactly 4. Period 1 and 2 are impossible for non-zero states
-        (they would require -x = x, hence x = 0).
+      photon absorption operator. Furey identifies e7 as the vacuum axis
 
-        COMPUTED RESULT:
-        The full Furey electron state (CONVENTIONS.md Â§6):
-            psi_e = alpha1_dag * (alpha2_dag * (alpha3_dag * omega)) = -i * omega_dag
-        Algebraic derivation confirms:
-            alpha3_dag * omega = alpha3_dag        (omega is right identity on S)
-            alpha2_dag * alpha3_dag = 0.5*(e1 - i*e6)
-            alpha1_dag * 0.5*(e1-i*e6) = -i * omega_dag
-        Orbit: {-i*omega_dag, omega_dag, i*omega_dag, -omega_dag}, period 4.
+      (held fixed by SU(3)_c) and U(1)_EM with the number operator N/3.
 
-        C_e(e1 component) = C_e(full Furey state) = 4. The simplification
-        is not an artifact. The gap is RESOLVED.
+      The "photon = e7 right-mult kick" is COG-original with no arXiv precedent.
 
-        CONSEQUENCE: Since C_e = C_mu = 4 universally, the mass ratio
-        m_mu/m_e = 206.768 CANNOT arise from state-orbit period under L_{e7}
-        alone. The mechanism must come from triality overhead (N_tau=14 per
-        S+ vertex) or DAG topology.
-    - id: gap_2_e7_photon
-      severity: moderate
-      finding: |
-        No Furey paper explicitly identifies e7 right-multiplication as the
-        photon absorption operator. Furey identifies e7 as the vacuum axis
-        (held fixed by SU(3)_c) and U(1)_EM with the number operator N/3.
-        The "photon = e7 right-mult kick" is COG-original with no arXiv precedent.
-    - id: gap_3_dixon_orbits
-      severity: important
-      finding: |
-        Dixon (1994 hep-th/9410202) X-product orbits are algebraic orbits under
-        a PERMUTED multiplication table, not physical orbits under repeated
-        application of a fixed operator. Full text not yet read; abstract makes
-        no lepton mass ratio claims. The connection of Dixon periods to ~206 is
-        unsupported by evidence reviewed.
-    - id: gap_4_mcrae_three_generations
-      severity: moderate
-      finding: |
-        McRae (2502.14016) Section 5 explicitly states: "One obstruction to
-        making this work in the 'obvious' way is finding outer automorphisms
-        which act at the level of the representation, and not merely on the
-        algebra." McRae identifies this as an OPEN PROBLEM, not a solution.
-        The COG use of the 4Ã—4 H matrix for operator translation (N_Ï„ = 14)
-        remains valid; the generation-identification use is challenged.
+      '
+  - id: gap_3_dixon_orbits
+    severity: important
+    finding: 'Dixon (1994 hep-th/9410202) X-product orbits are algebraic orbits under
 
+      a PERMUTED multiplication table, not physical orbits under repeated
+
+      application of a fixed operator. Full text not yet read; abstract makes
+
+      no lepton mass ratio claims. The connection of Dixon periods to ~206 is
+
+      unsupported by evidence reviewed.
+
+      '
+  - id: gap_4_mcrae_three_generations
+    severity: moderate
+    finding: "McRae (2502.14016) Section 5 explicitly states: \"One obstruction to\nmaking this work in the 'obvious' way\
+      \ is finding outer automorphisms\nwhich act at the level of the representation, and not merely on the\nalgebra.\" McRae\
+      \ identifies this as an OPEN PROBLEM, not a solution.\nThe COG use of the 4\xC3\u20144 H matrix for operator translation\
+      \ (N_\xCF\u201E = 14)\nremains valid; the generation-identification use is challenged.\n"
 simulation_record_2026_02_23_goal_b:
-  date: "2026-02-23"
-  tool: "calc/emu_dag_sim.py (RFC-012 Goal B)"
-  description: "E-mu DAG timing simulation with 15-tick muon vertex (queued-photon model)"
+  date: '2026-02-23'
+  tool: calc/emu_dag_sim.py (RFC-012 Goal B)
+  description: E-mu DAG timing simulation with 15-tick muon vertex (queued-photon model)
   N_tau: 14
   vertex_cost_electron: 1
   vertex_cost_muon: 15
   topology_D0:
-    e_abs_ticks: [1, 17, 32, 47]
-    mu_abs_ticks: [1, 16, 31, 46]
+    e_abs_ticks:
+    - 1
+    - 17
+    - 32
+    - 47
+    mu_abs_ticks:
+    - 1
+    - 16
+    - 31
+    - 46
     e_orbit_time: 47
     mu_orbit_time: 46
     max_orbit_time: 47
@@ -274,46 +242,35 @@ simulation_record_2026_02_23_goal_b:
     timing_ratio_mu: 11.5
     timing_ratio_max: 11.75
   topology_D1:
-    e_abs_ticks: [2, 19, 34, 49]
-    mu_abs_ticks: [2, 17, 32, 47]
+    e_abs_ticks:
+    - 2
+    - 19
+    - 34
+    - 49
+    mu_abs_ticks:
+    - 2
+    - 17
+    - 32
+    - 47
   vertex_cost_ratio: 15.0
   gap_to_experimental: 13.78
   tests_passing: 30
   algebraic_orbit_period_both: 4
-  note: |
-    QUEUED-PHOTON MODEL: when a photon arrives at the muon while it is
-    processing (V_mu = 15 ticks), it is buffered and absorbed as soon as
-    the muon becomes free. Timing ratio_max = 11.75 for D=0 vs the
-    vertex_cost_ratio = 15. The timing ratio decreases as D increases
-    (approaching 1 as D -> inf), so the vertex cost mechanism alone cannot
-    produce 206.768.
-
-    ALGEBRAIC CLOSURE CONFIRMED: both particles return to initial state after
-    exactly 4 absorptions (Universal C_e Theorem). The algebraic period is 4
-    regardless of vertex cost.
-
-    GAP QUANTIFIED:
-      vertex_cost_ratio (lower bound) = 15
-      gap_factor = 206.768 / 15 approximately 13.78x
-      The remaining mechanism is open (LEPTON-001 status: open).
-
-next_action: |
-  Electron state gap (gap_1_electron_state) is RESOLVED: C_e = 4 universally
-  (calc/furey_electron_orbit.py, 26 tests, 2026-02-23).
-
-  Goal B partial result: 15-tick muon vertex confirmed as lower bound
-  (calc/emu_dag_sim.py, 30 tests, 2026-02-23). Full mechanism open.
-
-  Remaining open questions:
-  1. LEPTON-001 (Goal B -- partial): vertex_cost_ratio = 15, gap_factor ~13.78x.
-     The full mechanism bridging to 206.768 requires DAG topology beyond
-     single-vertex timing: either (a) a non-trivial multi-hop Fano path for
-     the muon that extends its orbit beyond the algebraic period of 4, or
-     (b) a generation structure (e.g., triality repetition count) that
-     multiplies the base period.
-  2. GENERATION STRUCTURE: McRae (gap_4_mcrae_three_generations) identifies
-     three-generation orbit topology as an open problem. A COG-specific
-     mechanism using Fano non-associativity to distinguish muon from electron
-     path lengths has not yet been found in the literature.
-
-
+  note: "QUEUED-PHOTON MODEL: when a photon arrives at the muon while it is\nprocessing (V_mu = 15 ticks), it is buffered\
+    \ and absorbed as soon as\nthe muon becomes free. Timing ratio_max = 11.75 for D=0 vs the\nvertex_cost_ratio = 15. The\
+    \ timing ratio decreases as D increases\n(approaching 1 as D -> inf), so the vertex cost mechanism alone cannot\nproduce\
+    \ 206.768.\n\nALGEBRAIC CLOSURE CONFIRMED: both particles return to initial state after\nexactly 4 absorptions (Universal\
+    \ C_e Theorem). The algebraic period is 4\nregardless of vertex cost.\n\nGAP QUANTIFIED:\n  vertex_cost_ratio (lower bound)\
+    \ = 15\n  gap_factor = 206.768 / 15 approximately 13.78x\n  The remaining mechanism is open (LEPTON-001 status: open).\n"
+next_action: "Electron state gap (gap_1_electron_state) is RESOLVED: C_e = 4 universally\n(calc/furey_electron_orbit.py, 26\
+  \ tests, 2026-02-23).\n\nGoal B partial result: 15-tick muon vertex confirmed as lower bound\n(calc/emu_dag_sim.py, 30 tests,\
+  \ 2026-02-23). Full mechanism open.\n\nRemaining open questions:\n1. LEPTON-001 (Goal B -- partial): vertex_cost_ratio =\
+  \ 15, gap_factor ~13.78x.\n   The full mechanism bridging to 206.768 requires DAG topology beyond\n   single-vertex timing:\
+  \ either (a) a non-trivial multi-hop Fano path for\n   the muon that extends its orbit beyond the algebraic period of 4,\
+  \ or\n   (b) a generation structure (e.g., triality repetition count) that\n   multiplies the base period.\n2. GENERATION\
+  \ STRUCTURE: McRae (gap_4_mcrae_three_generations) identifies\n   three-generation orbit topology as an open problem. A\
+  \ COG-specific\n   mechanism using Fano non-associativity to distinguish muon from electron\n   path lengths has not yet\
+  \ been found in the literature.\n"
+derivation_status: untested
+bridge_assumptions: []
+falsification_condition: Claim is falsified if deterministic tests contradict the stated claim conditions.

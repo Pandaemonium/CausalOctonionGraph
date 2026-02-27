@@ -1,6 +1,6 @@
 schema_version: 2.1.0
-generated_at_utc: '2026-02-27T05:34:57.027122Z'
-row_count: 33
+generated_at_utc: '2026-02-27T18:48:49.037492Z'
+row_count: 34
 rows:
   ALG:
     claim_id: ALG
@@ -15,6 +15,9 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: hypothesis
+    derivation_status: untested
+    bridge_assumptions: []
+    falsification_condition: Claim is falsified if deterministic replayable evidence contradicts the stated prediction/constraint.
     last_verified_at: '2026-02-26T22:31:31.825842Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=alg.yml
@@ -66,7 +69,12 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-26T22:29:36.654293Z'
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:58.987849Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=octonion_alternativity.yml
     confinement_relevant: false
@@ -121,7 +129,12 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-26T22:29:36.865390Z'
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:59.033160Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=subalgebra_detection.yml
     confinement_relevant: false
@@ -166,7 +179,12 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-26T22:29:36.683189Z'
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:58.989902Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=octonion_nonassoc.yml
     confinement_relevant: false
@@ -215,7 +233,12 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-26T22:29:36.340119Z'
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:58.907396Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=co_witt_basis.yml
     confinement_relevant: false
@@ -243,30 +266,25 @@ rows:
     - co_witt_basis.yml
   ALPHA-001:
     claim_id: ALPHA-001
-    status: partial
-    lean_artifacts:
-    - CausalGraphTheory/Constants.lean
-    - CausalGraph.alpha_candidate_def
-    - CausalGraph.alpha_fano_bound
-    python_artifacts:
-    - calc/test_alpha001_fano.py
-    - calc/test_alpha_policy_governance.py
-    - calc/estimate_alpha_from_policy.py
+    status: stub
+    lean_artifacts: []
+    python_artifacts: []
     battery_artifacts:
-    - calc/test_alpha_policy_governance.py
-    - calc/estimate_alpha_from_policy.py
-    - sources/alpha_policy_results.md
-    - calc/test_alpha001_fano.py
+    - calc/test_constants.py::TestAlphaFineStructure::test_alpha_target_value
+    - CausalGraphTheory/Constants.lean
     motif_id: u1_phase_penalty_v1
     rule_profile: default_multiplicative_markov
     pi_obs_profile: minimal
     projection_sensitivity: sensitive
     equivalence_mode: none
     equivalence_artifact: ''
-    evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-27T00:24:34.411997Z'
+    evidence_level: hypothesis
+    derivation_status: untested
+    bridge_assumptions: []
+    falsification_condition: Claim is falsified if deterministic replayable evidence contradicts the stated prediction/constraint.
+    last_verified_at: '2026-02-27T18:26:50.641648Z'
     owner_rfc: rfc/ALPHA-001_Closure_Tasklist.md
-    notes: source=alpha_fine_structure.yml | closure_pack=alpha_policy_v1
+    notes: source=ALPHA-001.yml | aliases=ALPHA-001.yml,alpha_fine_structure.yml | backfill=priority_v1
     confinement_relevant: false
     confinement_gate_status: not_applicable
     confinement_artifact: ''
@@ -289,6 +307,7 @@ rows:
     entropy_functional_id: ''
     entropy_artifact_ref: ''
     source_files:
+    - ALPHA-001.yml
     - alpha_fine_structure.yml
   ANOM-001:
     claim_id: ANOM-001
@@ -305,7 +324,10 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: python_verified
-    last_verified_at: '2026-02-26T22:29:36.216448Z'
+    derivation_status: untested
+    bridge_assumptions: []
+    falsification_condition: Claim is falsified if deterministic tests contradict the stated claim conditions.
+    last_verified_at: '2026-02-27T18:47:58.878658Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=anomaly_cancellation.yml
     confinement_relevant: false
@@ -362,7 +384,12 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: lean_proved
-    last_verified_at: '2026-02-26T22:29:36.309293Z'
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:58.898039Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=causal_order.yml
     confinement_relevant: false
@@ -391,19 +418,36 @@ rows:
   CFS-001:
     claim_id: CFS-001
     status: partial
-    lean_artifacts: []
+    lean_artifacts:
+    - CausalGraphTheory/CFS001Embedding.lean
+    - cfs_gram_symmetric
+    - cfs_vacuum_rank_one
+    - cfs_rank_bound
+    - cfs_fano_triple_order
+    - cfs_embedding_injective
     python_artifacts:
     - calc/test_cfs001_embedding.py
     battery_artifacts:
+    - CausalGraphTheory/CFS001Embedding.lean
     - calc/test_cfs001_embedding.py
+    - cfs_embedding_injective
+    - cfs_fano_triple_order
+    - cfs_gram_symmetric
+    - cfs_rank_bound
+    - cfs_vacuum_rank_one
     motif_id: unassigned
     rule_profile: default_multiplicative_markov
     pi_obs_profile: minimal
     projection_sensitivity: unknown
     equivalence_mode: none
     equivalence_artifact: ''
-    evidence_level: python_verified
-    last_verified_at: '2026-02-27T03:35:57.585284Z'
+    evidence_level: mixed:lean_proved+python_verified
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:58.885043Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=causal_action_discrete.yml
     confinement_relevant: false
@@ -431,18 +475,25 @@ rows:
     - causal_action_discrete.yml
   CFS-002:
     claim_id: CFS-002
-    status: stub
+    status: partial
     lean_artifacts: []
-    python_artifacts: []
-    battery_artifacts: []
+    python_artifacts:
+    - calc/test_cfs002_local_algebra.py
+    battery_artifacts:
+    - calc/test_cfs002_local_algebra.py
     motif_id: unassigned
     rule_profile: default_multiplicative_markov
     pi_obs_profile: minimal
     projection_sensitivity: unknown
     equivalence_mode: none
     equivalence_artifact: ''
-    evidence_level: hypothesis
-    last_verified_at: '2026-02-26T22:29:36.589668Z'
+    evidence_level: python_verified
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:58.951392Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=minimizer_discreteness.yml
     confinement_relevant: false
@@ -471,43 +522,24 @@ rows:
   CFS-003:
     claim_id: CFS-003
     status: partial
-    lean_artifacts:
-    - CausalGraphTheory/Spinors.lean
-    - CausalGraph.e7Left_on_omegaDoubled
-    - CausalGraph.e7Right_on_omegaDoubled
-    - CausalGraph.e7Left_on_leftVacConjDoubled
-    - CausalGraph.e7Right_on_leftVacConjDoubled
-    - CausalGraph.omegaDoubled_ne_zero
-    - CausalGraph.leftVacConjDoubled_ne_zero
-    - CausalGraph.leftVacConjDoubled_idempotent_scaled
-    - CausalGraph.vacuum_orbit_exact_period_four
-    - CausalGraph.vacuum_orbit_exact_period_four_right
-    - CausalGraph.leftVacConjDoubled_left_orbit_exact_period_four
-    - CausalGraph.leftVacConjDoubled_right_orbit_exact_period_four
+    lean_artifacts: []
     python_artifacts: []
-    battery_artifacts:
-    - CausalGraph.e7Left_on_leftVacConjDoubled
-    - CausalGraph.e7Left_on_omegaDoubled
-    - CausalGraph.e7Right_on_leftVacConjDoubled
-    - CausalGraph.e7Right_on_omegaDoubled
-    - CausalGraph.leftVacConjDoubled_idempotent_scaled
-    - CausalGraph.leftVacConjDoubled_left_orbit_exact_period_four
-    - CausalGraph.leftVacConjDoubled_ne_zero
-    - CausalGraph.leftVacConjDoubled_right_orbit_exact_period_four
-    - CausalGraph.omegaDoubled_ne_zero
-    - CausalGraph.vacuum_orbit_exact_period_four
-    - CausalGraph.vacuum_orbit_exact_period_four_right
-    - CausalGraphTheory/Spinors.lean
+    battery_artifacts: []
     motif_id: unassigned
     rule_profile: default_multiplicative_markov
     pi_obs_profile: minimal
     projection_sensitivity: unknown
     equivalence_mode: none
     equivalence_artifact: ''
-    evidence_level: lean_proved
-    last_verified_at: '2026-02-26T22:29:37.019129Z'
+    evidence_level: hypothesis
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:58.901933Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
-    notes: source=vacuum_symmetry_from_octonions.yml
+    notes: source=CFS-003.yml | aliases=CFS-003.yml,vacuum_symmetry_from_octonions.yml
     confinement_relevant: false
     confinement_gate_status: not_applicable
     confinement_artifact: ''
@@ -530,6 +562,7 @@ rows:
     entropy_functional_id: ''
     entropy_artifact_ref: ''
     source_files:
+    - CFS-003.yml
     - vacuum_symmetry_from_octonions.yml
   DAG-001:
     claim_id: DAG-001
@@ -552,7 +585,12 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-26T22:29:36.807715Z'
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:59.020941Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=step_preserves_dag.yml
     confinement_relevant: false
@@ -603,7 +641,12 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-26T22:29:36.372036Z'
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:58.907396Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=dag_distance_triangle.yml
     confinement_relevant: false
@@ -654,7 +697,12 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-26T22:29:36.403744Z'
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:58.916040Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=fano_plane.yml
     confinement_relevant: false
@@ -731,7 +779,12 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-27T05:10:09.630506Z'
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:58.926484Z'
     owner_rfc: rfc/RFC-017_Vacuum_Stabilizer_Reconciliation.md
     notes: source=gauge_group.yml | backfill=priority_v1
     confinement_relevant: false
@@ -778,7 +831,11 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-26T22:29:36.465007Z'
+    derivation_status: untested
+    bridge_assumptions: []
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:58.931757Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=gauge_group_emergence.yml
     confinement_relevant: false
@@ -869,7 +926,10 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-26T22:29:36.958137Z'
+    derivation_status: untested
+    bridge_assumptions: []
+    falsification_condition: Claim is falsified if deterministic tests contradict the stated claim conditions.
+    last_verified_at: '2026-02-27T18:47:59.058698Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=triality_generations.yml
     confinement_relevant: false
@@ -950,7 +1010,12 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-26T22:29:36.896682Z'
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:59.048287Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=three_generations_sedenion.yml
     confinement_relevant: false
@@ -976,6 +1041,54 @@ rows:
     entropy_artifact_ref: ''
     source_files:
     - three_generations_sedenion.yml
+  HYDROGEN-001:
+    claim_id: HYDROGEN-001
+    status: partial
+    lean_artifacts:
+    - CausalGraphTheory/HydrogenBinding.lean
+    python_artifacts:
+    - calc/test_hydrogen001_binding.py
+    battery_artifacts:
+    - CausalGraphTheory/HydrogenBinding.lean
+    - calc/test_hydrogen001_binding.py
+    motif_id: unassigned
+    rule_profile: default_multiplicative_markov
+    pi_obs_profile: minimal
+    projection_sensitivity: unknown
+    equivalence_mode: none
+    equivalence_artifact: ''
+    evidence_level: mixed:lean_proved+python_verified
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:58.934525Z'
+    owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
+    notes: source=HYDROGEN-001.yml
+    confinement_relevant: false
+    confinement_gate_status: not_applicable
+    confinement_artifact: ''
+    ensemble_policy_id: ''
+    spin_sensitive: false
+    spin_mode: none
+    spin_artifact: ''
+    spin_sensitivity: unknown
+    scheduler_mode: snapshot_sync_v1
+    scheduler_profile_version: v1
+    many_body_relevant: false
+    pair_extraction_mode: not_applicable
+    reduction_mode: none
+    reduction_horizon: 0
+    reduction_artifact_ref: ''
+    physical_units_relevant: false
+    calibration_mode: native_only
+    scale_profile_id: ''
+    uncertainty_relevant: false
+    entropy_functional_id: ''
+    entropy_artifact_ref: ''
+    source_files:
+    - HYDROGEN-001.yml
   KOIDE-001:
     claim_id: KOIDE-001
     status: stub
@@ -989,6 +1102,9 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: hypothesis
+    derivation_status: untested
+    bridge_assumptions: []
+    falsification_condition: Claim is falsified if deterministic replayable evidence contradicts the stated prediction/constraint.
     last_verified_at: '2026-02-26T23:53:24.976518Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=KOIDE-001.yml
@@ -1028,6 +1144,9 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: hypothesis
+    derivation_status: untested
+    bridge_assumptions: []
+    falsification_condition: Claim is falsified if deterministic replayable evidence contradicts the stated prediction/constraint.
     last_verified_at: '2026-02-27T02:51:51.812789Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=koide_exactness.yml
@@ -1056,45 +1175,9 @@ rows:
     - koide_exactness.yml
   LEPTON-001:
     claim_id: LEPTON-001
-    status: active_hypothesis
-    lean_artifacts:
-    - CausalGraphTheory/Spinors.lean
-    - CausalGraph.e7LeftOp_square_eq_neg_one
-    - CausalGraph.e7_left_twice_neg
-    - CausalGraph.e7_left_four_id
-    - CausalGraph.e7_left_period_one_impossible
-    - CausalGraph.e7_left_period_two_impossible
-    - CausalGraph.universal_Ce_period_four
-    - CausalGraph.e7_right_twice_neg
-    - CausalGraph.e7_right_four_id
-    - CausalGraph.e7_right_period_one_impossible
-    - CausalGraph.e7_right_period_two_impossible
-    - CausalGraph.universal_Ce_right_period_four
-    - CausalGraph.fureyElectronStateDoubled_closed_form
-    - CausalGraph.alpha3Dag_mul_omega_step
-    - CausalGraph.alpha2Dag_mul_step1
-    - CausalGraph.alpha1Dag_mul_step2
-    - CausalGraph.fureyElectronStateDoubled_chain
-    - CausalGraph.negEightIOmegaDagDoubled_scalar_bridge
-    - CausalGraph.fureyElectronStateDoubled_ne_zero
-    - CausalGraph.fureyElectronState_left_orbit_exact_period_four
-    - CausalGraph.fureyElectronState_right_orbit_exact_period_four
-    - CausalGraph.gen2State_proportional_idempotent
-    - CausalGraph.gen2StateQuadruple_ne_zero
-    - CausalGraph.gen2State_left_orbit_exact_period_four
-    - CausalGraph.gen2State_right_orbit_exact_period_four
-    - CausalGraph.fureyDualElectronStateDoubled_closed_form
-    - CausalGraph.alpha3_mul_omegaDag_step
-    - CausalGraph.alpha2_mul_dual_step1
-    - CausalGraph.alpha1_mul_dual_step2
-    - CausalGraph.fureyDualElectronStateDoubled_chain
-    - CausalGraph.negEightIOmegaDoubled_scalar_bridge
-    - CausalGraph.fureyDualElectronStateDoubled_ne_zero
-    - CausalGraph.fureyDualElectronState_left_orbit_exact_period_four
-    - CausalGraph.fureyDualElectronState_right_orbit_exact_period_four
-    - CausalGraph.generationShift_order3
-    python_artifacts:
-    - calc/test_spinor_state.py
+    status: stub
+    lean_artifacts: []
+    python_artifacts: []
     battery_artifacts:
     - calc/test_furey_electron_orbit.py
     - CausalGraphTheory/LeptonOrbits.lean
@@ -1104,10 +1187,13 @@ rows:
     projection_sensitivity: unknown
     equivalence_mode: none
     equivalence_artifact: ''
-    evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-26T22:32:24.753624Z'
+    evidence_level: hypothesis
+    derivation_status: untested
+    bridge_assumptions: []
+    falsification_condition: Claim is falsified if deterministic replayable evidence contradicts the stated prediction/constraint.
+    last_verified_at: '2026-02-27T06:50:29.597913Z'
     owner_rfc: rfc/RFC-034_Electron_Mass_Mechanism.md
-    notes: source=muon_mass.yml | backfill=priority_v1
+    notes: source=LEPTON-001.yml | aliases=LEPTON-001.yml,muon_mass.yml | backfill=priority_v1
     confinement_relevant: false
     confinement_gate_status: not_applicable
     confinement_artifact: ''
@@ -1130,46 +1216,8 @@ rows:
     entropy_functional_id: ''
     entropy_artifact_ref: ''
     source_files:
-    - muon_mass.yml
-  LEPTON-001-LEGACY:
-    claim_id: LEPTON-001-LEGACY
-    status: superseded
-    lean_artifacts: []
-    python_artifacts: []
-    battery_artifacts: []
-    motif_id: unassigned
-    rule_profile: default_multiplicative_markov
-    pi_obs_profile: minimal
-    projection_sensitivity: unknown
-    equivalence_mode: none
-    equivalence_artifact: ''
-    evidence_level: hypothesis
-    last_verified_at: '2026-02-27T00:08:51.305588Z'
-    owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
-    notes: source=LEPTON-001.yml
-    confinement_relevant: false
-    confinement_gate_status: not_applicable
-    confinement_artifact: ''
-    ensemble_policy_id: ''
-    spin_sensitive: false
-    spin_mode: none
-    spin_artifact: ''
-    spin_sensitivity: unknown
-    scheduler_mode: snapshot_sync_v1
-    scheduler_profile_version: v1
-    many_body_relevant: false
-    pair_extraction_mode: not_applicable
-    reduction_mode: none
-    reduction_horizon: 0
-    reduction_artifact_ref: ''
-    physical_units_relevant: false
-    calibration_mode: native_only
-    scale_profile_id: ''
-    uncertainty_relevant: false
-    entropy_functional_id: ''
-    entropy_artifact_ref: ''
-    source_files:
     - LEPTON-001.yml
+    - muon_mass.yml
   MASS-001:
     claim_id: MASS-001
     status: partial
@@ -1195,7 +1243,12 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-26T22:29:36.556638Z'
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:58.941943Z'
     owner_rfc: rfc/RFC-045_Energy_Mass_Observable_Unification.md
     notes: source=mass_tick_frequency.yml | backfill=priority_v1
     confinement_relevant: false
@@ -1242,7 +1295,10 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-27T00:24:34.411997Z'
+    derivation_status: untested
+    bridge_assumptions: []
+    falsification_condition: Claim is falsified if deterministic tests contradict the stated claim conditions.
+    last_verified_at: '2026-02-27T18:47:59.014447Z'
     owner_rfc: rfc/MU-001_Closure_Tasklist.md
     notes: source=proton_electron_ratio.yml | backfill=priority_v1
     confinement_relevant: false
@@ -1272,11 +1328,15 @@ rows:
     claim_id: PHOTON-001
     status: partial
     lean_artifacts:
-    - CausalGraphTheory/PhotonMasslessness.lean
+    - CausalGraphTheory/PhotonMassless.lean
+    - CausalGraph.photon_gate_density_zero
+    - CausalGraph.omegaDoubled_gateCount_zero
     - CausalGraph.omegaDoubled_colorSector_zero
     - CausalGraph.negIOmegaDoubled_colorSector_zero
     - CausalGraph.vacuum_orbit_colorSector_zero
-    python_artifacts: []
+    python_artifacts:
+    - calc/test_photon001_massless.py
+    - calc/test_photon001_massless.py
     battery_artifacts:
     - CausalGraphTheory/PhotonMasslessness.lean
     - sources/photon_energy_discrete_models.md
@@ -1286,8 +1346,13 @@ rows:
     projection_sensitivity: insensitive
     equivalence_mode: none
     equivalence_artifact: ''
-    evidence_level: lean_proved
-    last_verified_at: '2026-02-26T22:32:24.753624Z'
+    evidence_level: mixed:lean_proved+python_verified
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:58.989902Z'
     owner_rfc: rfc/RFC-015_Photon_Energy_COG.md
     notes: source=PHOTON-001.yml | backfill=priority_v1
     confinement_relevant: false
@@ -1313,6 +1378,54 @@ rows:
     entropy_artifact_ref: ''
     source_files:
     - PHOTON-001.yml
+  PROTON-001:
+    claim_id: PROTON-001
+    status: partial
+    lean_artifacts:
+    - CausalGraphTheory/ProtonColor.lean
+    python_artifacts:
+    - calc/test_proton_color_structure.py
+    battery_artifacts:
+    - CausalGraphTheory/ProtonColor.lean
+    - calc/test_proton_color_structure.py
+    motif_id: unassigned
+    rule_profile: default_multiplicative_markov
+    pi_obs_profile: minimal
+    projection_sensitivity: unknown
+    equivalence_mode: none
+    equivalence_artifact: ''
+    evidence_level: mixed:lean_proved+python_verified
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:59.003071Z'
+    owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
+    notes: source=PROTON-001.yml
+    confinement_relevant: false
+    confinement_gate_status: not_applicable
+    confinement_artifact: ''
+    ensemble_policy_id: ''
+    spin_sensitive: false
+    spin_mode: none
+    spin_artifact: ''
+    spin_sensitivity: unknown
+    scheduler_mode: snapshot_sync_v1
+    scheduler_profile_version: v1
+    many_body_relevant: false
+    pair_extraction_mode: not_applicable
+    reduction_mode: none
+    reduction_horizon: 0
+    reduction_artifact_ref: ''
+    physical_units_relevant: false
+    calibration_mode: native_only
+    scale_profile_id: ''
+    uncertainty_relevant: false
+    entropy_functional_id: ''
+    entropy_artifact_ref: ''
+    source_files:
+    - PROTON-001.yml
   RACE-001:
     claim_id: RACE-001
     status: partial
@@ -1340,7 +1453,12 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-26T22:29:36.775598Z'
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:59.020941Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=race_condition.yml
     confinement_relevant: false
@@ -1393,7 +1511,12 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-27T04:18:27.342581Z'
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:58.891552Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=causal_invariance.yml
     confinement_relevant: false
@@ -1439,7 +1562,12 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-27T01:15:51.573119Z'
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:59.027921Z'
     owner_rfc: rfc/STRONG-001_Closure_Tasklist.md
     notes: source=STRONG-001.yml | backfill=priority_v1
     confinement_relevant: false
@@ -1478,7 +1606,11 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: hypothesis
-    last_verified_at: '2026-02-27T00:09:02.541991Z'
+    derivation_status: untested
+    bridge_assumptions: []
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:58.874593Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=alpha_strong.yml
     confinement_relevant: false
@@ -1525,7 +1657,12 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-26T22:29:36.927443Z'
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:59.051063Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=tick_classification.yml
     confinement_relevant: false
@@ -1572,7 +1709,11 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-26T22:29:36.988507Z'
+    derivation_status: untested
+    bridge_assumptions: []
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:59.064399Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=vacuum_stability.yml
     confinement_relevant: false
@@ -1645,7 +1786,12 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-27T00:24:34.411997Z'
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:59.091638Z'
     owner_rfc: rfc/RFC-029_Weinberg_Angle_Gap_Closure.md
     notes: source=weinberg_angle.yml | backfill=priority_v1
     confinement_relevant: false
@@ -1693,7 +1839,12 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-27T00:22:05.282011Z'
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - not_yet_documented_bridge_assumption
+    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
+      stated prediction or constraint.
+    last_verified_at: '2026-02-27T18:47:59.074955Z'
     owner_rfc: rfc/RFC-029_Weinberg_Angle_Gap_Closure.md
     notes: source=WEINBERG-UV-001.yml | backfill=priority_v1
     confinement_relevant: false

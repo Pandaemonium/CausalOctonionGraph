@@ -1,27 +1,28 @@
-﻿id: ALG-004
-title: "Witt basis ladder operators"
-statement: |
-  The operators Î±_j and Î±_jâ€  generate the Clifford algebra Cl(6) â‰… Cl(0,6).
-  They satisfy {Î±_j, Î±_kâ€ } = Î´_jk and {Î±_j, Î±_k} = 0.
-  The vacuum state Ï‰ is annihilated by all Î±_j.
-
+id: ALG-004
+title: Witt basis ladder operators
+statement: "The operators \xCE\xB1_j and \xCE\xB1_j\xE2\u20AC\_ generate the Clifford algebra Cl(6) \xE2\u2030\u2026 Cl(0,6).\n\
+  They satisfy {\xCE\xB1_j, \xCE\xB1_k\xE2\u20AC\_} = \xCE\xB4_jk and {\xCE\xB1_j, \xCE\xB1_k} = 0.\nThe vacuum state \xCF\
+  \u2030 is annihilated by all \xCE\xB1_j.\n"
 status: proved
 pi_obs_profile: minimal
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
-profile_contrast_run: ""
+profile_contrast_run: ''
 equivalence_mode: none
 lean_file: CausalGraphTheory/WittBasis.lean
 lean_theorems:
-  - witt_anticommute
-  - witt_create_annihilate
-  - wittLower_annihilates_vacuum
+- witt_anticommute
+- witt_create_annihilate
+- wittLower_annihilates_vacuum
 python_test: calc/test_complex_octonion.py
 depends_on:
-  - ALG-001
+- ALG-001
 literature:
-  - "Furey F2"
-notes: "Requires correct Hermitian adjoint definition (including octonion conjugation) for Î±â€ ."
-blocked_reason: ""
-
-
+- Furey F2
+notes: "Requires correct Hermitian adjoint definition (including octonion conjugation) for \xCE\xB1\xE2\u20AC\_."
+blocked_reason: ''
+derivation_status: bridge_assumed
+bridge_assumptions:
+- not_yet_documented_bridge_assumption
+falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the stated
+  prediction or constraint.

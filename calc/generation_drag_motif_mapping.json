@@ -1,29 +1,35 @@
 {
   "schema_version": "generation_drag_motif_mapping_v1",
   "generated_for_rfc": "RFC-068",
+  "lock_protocol_rfc": "RFC-074",
+  "lock_mode": "proof_first_gen3",
   "baseline_label": "electron",
   "notes": [
     "These are predeclared candidate mappings for generation-drag instrumentation runs.",
-    "muon_candidate and tau_candidate are placeholders until dedicated motif-lock RFC lands."
+    "muon_candidate and tau_candidate are placeholders until dedicated motif-lock RFC lands.",
+    "Per RFC-074, gen3 remains a derived target until Lean uniqueness-class closure."
   ],
   "motifs": [
     {
       "label": "electron",
       "motif_id": "furey_electron_doubled",
       "family": "spinor",
-      "ideal_hint": "Su"
+      "ideal_hint": "Su",
+      "lock_status": "locked"
     },
     {
       "label": "muon_candidate",
       "motif_id": "su_double_12",
       "family": "spinor",
-      "ideal_hint": "Su"
+      "ideal_hint": "Su",
+      "lock_status": "derived_target"
     },
     {
       "label": "tau_candidate",
       "motif_id": "su_single_1",
       "family": "spinor",
-      "ideal_hint": "Su"
+      "ideal_hint": "Su",
+      "lock_status": "derived_target"
     }
   ]
 }

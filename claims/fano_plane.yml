@@ -1,28 +1,33 @@
-﻿id: FANO-001
-title: "Fano plane has 7 points and 7 lines"
-statement: |
-  The Fano plane PG(2,2) is the unique (7,7,3,3,1)-design:
+id: FANO-001
+title: Fano plane has 7 points and 7 lines
+statement: 'The Fano plane PG(2,2) is the unique (7,7,3,3,1)-design:
+
   7 points, 7 lines, 3 points per line, 3 lines per point,
+
   any 2 points on exactly 1 line.
 
+  '
 status: proved
 pi_obs_profile: minimal
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
-profile_contrast_run: ""
+profile_contrast_run: ''
 equivalence_mode: none
 lean_file: CausalGraphTheory/Fano.lean
 lean_theorems:
-  - each_line_has_three_points
-  - each_point_on_three_lines
-  - two_points_determine_line
-  - two_lines_meet_in_one_point
+- each_line_has_three_points
+- each_point_on_three_lines
+- two_points_determine_line
+- two_lines_meet_in_one_point
 python_test: calc/test_fano.py
 depends_on: []
 literature:
-  - "Baez BH2 Â§4"
-  - "Furey F1 Â§2"
-notes: "Implemented with 0-indexed Fin 7 in Lean and Python."
-blocked_reason: ""
-
-
+- "Baez BH2 \xC2\xA74"
+- "Furey F1 \xC2\xA72"
+notes: Implemented with 0-indexed Fin 7 in Lean and Python.
+blocked_reason: ''
+derivation_status: bridge_assumed
+bridge_assumptions:
+- not_yet_documented_bridge_assumption
+falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the stated
+  prediction or constraint.

@@ -1,0 +1,35 @@
+{
+  "schema_version": "oracle_report_v1",
+  "generated_at_utc": "2026-02-27T18:48:49.771466Z",
+  "comparison_count": 1,
+  "mismatch_count": 1,
+  "comparisons": [
+    {
+      "claim_id": "QN-006",
+      "quantity": "sin2_theta_W_MZ",
+      "expected": 0.23122,
+      "observed": 0.375,
+      "abs_error": 0.14378,
+      "tolerance_abs": 0.005,
+      "within_tolerance": false,
+      "source": "PDG-style electroweak reference target (configured in oracle stub)",
+      "provenance": "calc.derive_sm_quantum_numbers::derive_weinberg_angle",
+      "status": "mismatch"
+    }
+  ],
+  "mismatch_events": [
+    {
+      "event_id": "oracle_mismatch_2026-02-27T18:48:49.771466Z_0",
+      "event_type": "oracle_mismatch",
+      "created_at_utc": "2026-02-27T18:48:49.771466Z",
+      "claim_id": "QN-006",
+      "quantity": "sin2_theta_W_MZ",
+      "expected": 0.23122,
+      "observed": 0.375,
+      "abs_error": 0.14378,
+      "tolerance_abs": 0.005,
+      "source": "PDG-style electroweak reference target (configured in oracle stub)",
+      "recommended_task_type": "prediction_review"
+    }
+  ]
+}

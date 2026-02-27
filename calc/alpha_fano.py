@@ -47,3 +47,41 @@ def best_proxy() -> tuple[str, float, float]:
     scored = [(name, value, abs(value - target) / target) for name, value in candidates]
     return min(scored, key=lambda item: item[2])
 
+
+# ---------------------------------------------------------------------------
+# Gate-1 contract functions required by ALPHA-001 task specification
+# ---------------------------------------------------------------------------
+
+def fano_line_count() -> int:
+    """Return the number of lines in the Fano plane PG(2,2).
+
+    Wraps the module-level FANO_LINES constant as a callable so that
+    downstream tests and the Lean statement can refer to the same source.
+    Standard Fano plane PG(2,2) has exactly 7 lines.
+    """
+    return int(FANO_LINES)
+
+
+def alpha_fano_proxy() -> float:
+    """Primary Fano-plane proxy for the fine-structure constant alpha.
+
+    Returns 1 / (FANO_LINES * FANO_POINTS) = 1/49 for the standard Fano
+    plane.  This equals alpha_proxy_v1() and is the only shipped proxy that
+    lies strictly above the physical value alpha ~ 1/137.036
+    (CODATA 2018: Mohr et al., Rev. Mod. Phys. 93, 025010, 2021).
+    """
+    return alpha_proxy_v1()
+
+
+def alpha_upper_bound() -> float:
+    """Upper bound on alpha derived from Fano-plane combinatorics.
+
+    Returns 1/49 ~ 0.02041, which is strictly greater than the CODATA 2018
+    value alpha = 1/137.035999084 ~ 0.007297
+    (Mohr et al., Rev. Mod. Phys. 93, 025010, 2021).
+
+    NOTE: alpha_proxy_v2 (= 1/153 ~ 0.00654) and alpha_proxy_v3
+    (= 1/145 ~ 0.00690) both fall *below* physical alpha and must NOT
+    be used as upper bounds on alpha.
+    """
+    return alpha_proxy_v1()

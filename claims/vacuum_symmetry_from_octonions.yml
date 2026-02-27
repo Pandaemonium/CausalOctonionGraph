@@ -1,57 +1,50 @@
-﻿id: CFS-003
-title: "Vacuum symmetry from octonions with causal-action dynamics"
-statement: |
-  The vacuum-axis stabilizer structure from octonionic/Fano automorphisms
+id: CFS-003
+title: Vacuum symmetry from octonions with causal-action dynamics
+statement: 'The vacuum-axis stabilizer structure from octonionic/Fano automorphisms
+
   (GAUGE-001) is preserved under the discrete causal-action dynamics, so
+
   vacuum symmetry is algebraically fixed and does not require tunable inputs.
 
+  '
 status: partial
 pi_obs_profile: minimal
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
-profile_contrast_run: ""
+profile_contrast_run: ''
 equivalence_mode: none
 lean_file: CausalGraphTheory/Spinors.lean
 lean_theorems:
-  # Photon operator eigenvalues on vacuum projectors
-  # (proves particle/antiparticle charge symmetry at the algebraic level)
-  - CausalGraph.e7Left_on_omegaDoubled        # e7Â·Ï‰  = âˆ’iÂ·Ï‰  (vacuum is âˆ’i eigenstate)
-  - CausalGraph.e7Right_on_omegaDoubled       # Ï‰Â·e7  = âˆ’iÂ·Ï‰  (left = right: Ï‰ is symmetric)
-  - CausalGraph.e7Left_on_leftVacConjDoubled  # e7Â·Ï‰â€  = +iÂ·Ï‰â€  (conjugate vacuum is +i eigenstate)
-  - CausalGraph.e7Right_on_leftVacConjDoubled # Ï‰â€ Â·e7 = +iÂ·Ï‰â€  (left = right: Ï‰â€  is symmetric)
-  # Projector idempotence
-  - CausalGraph.omegaDoubled_ne_zero
-  - CausalGraph.leftVacConjDoubled_ne_zero
-  - CausalGraph.leftVacConjDoubled_idempotent_scaled  # (2Ï‰â€ )Â² = 2Â·(2Ï‰â€ )
-  # Vacuum period-4 corollaries (period-4 holds for the projectors themselves)
-  - CausalGraph.vacuum_orbit_exact_period_four
-  - CausalGraph.vacuum_orbit_exact_period_four_right
-  - CausalGraph.leftVacConjDoubled_left_orbit_exact_period_four
-  - CausalGraph.leftVacConjDoubled_right_orbit_exact_period_four
-python_test: ""
+- CausalGraph.e7Left_on_omegaDoubled
+- CausalGraph.e7Right_on_omegaDoubled
+- CausalGraph.e7Left_on_leftVacConjDoubled
+- CausalGraph.e7Right_on_leftVacConjDoubled
+- CausalGraph.omegaDoubled_ne_zero
+- CausalGraph.leftVacConjDoubled_ne_zero
+- CausalGraph.leftVacConjDoubled_idempotent_scaled
+- CausalGraph.vacuum_orbit_exact_period_four
+- CausalGraph.vacuum_orbit_exact_period_four_right
+- CausalGraph.leftVacConjDoubled_left_orbit_exact_period_four
+- CausalGraph.leftVacConjDoubled_right_orbit_exact_period_four
+python_test: ''
 depends_on:
-  - GAUGE-001
-  - CFS-001
-  # VAC-001 was superseded (2026-02-25) because it depended on a legacy
-  # label-based vacuum fixed-point model.
+- GAUGE-001
+- CFS-001
 literature:
-  - "Finster et al. (2024): Causal Fermion Systems and Octonions, arXiv:2403.00360"
-  - "Furey (2016): Charge quantization from a number operator, arXiv:1603.04078"
-  - "Todorov and Dubois-Violette (2018): Exceptional Jordan symmetry route, arXiv:1806.09450"
-notes: |
-  The eigenvalue theorems e7Left_on_omegaDoubled and e7Right_on_omegaDoubled prove
-  that the vacuum projector Ï‰ is an eigenstate of the photon operator e7 with
-  eigenvalue âˆ’i, under BOTH left and right multiplication. The conjugate vacuum Ï‰â€ 
-  has eigenvalue +i. Left/right agreement is nontrivial â€” it holds because Ï‰ and Ï‰â€ 
-  are in an especially symmetric position relative to e7 in the Fano structure.
-
-  Physical interpretation: the vacuum (generation-1 projector) carries âˆ’i charge under
-  the photon, the conjugate vacuum carries +i charge. This is the algebraic origin of
-  the particle/antiparticle asymmetry in CâŠ—O.
-
-  The claim that vacuum symmetry is PRESERVED under CFS-style causal dynamics (the
-  full CFS-003 statement) remains open â€” the theorems above establish the static
-  algebraic fact, not the dynamical preservation.
-blocked_reason: ""
-
-
+- 'Finster et al. (2024): Causal Fermion Systems and Octonions, arXiv:2403.00360'
+- 'Furey (2016): Charge quantization from a number operator, arXiv:1603.04078'
+- 'Todorov and Dubois-Violette (2018): Exceptional Jordan symmetry route, arXiv:1806.09450'
+notes: "The eigenvalue theorems e7Left_on_omegaDoubled and e7Right_on_omegaDoubled prove\nthat the vacuum projector \xCF\u2030\
+  \ is an eigenstate of the photon operator e7 with\neigenvalue \xE2\u02C6\u2019i, under BOTH left and right multiplication.\
+  \ The conjugate vacuum \xCF\u2030\xE2\u20AC\_\nhas eigenvalue +i. Left/right agreement is nontrivial \xE2\u20AC\u201D it\
+  \ holds because \xCF\u2030 and \xCF\u2030\xE2\u20AC\_\nare in an especially symmetric position relative to e7 in the Fano\
+  \ structure.\n\nPhysical interpretation: the vacuum (generation-1 projector) carries \xE2\u02C6\u2019i charge under\nthe\
+  \ photon, the conjugate vacuum carries +i charge. This is the algebraic origin of\nthe particle/antiparticle asymmetry in\
+  \ C\xE2\u0160\u2014O.\n\nThe claim that vacuum symmetry is PRESERVED under CFS-style causal dynamics (the\nfull CFS-003\
+  \ statement) remains open \xE2\u20AC\u201D the theorems above establish the static\nalgebraic fact, not the dynamical preservation.\n"
+blocked_reason: ''
+derivation_status: bridge_assumed
+bridge_assumptions:
+- not_yet_documented_bridge_assumption
+falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the stated
+  prediction or constraint.

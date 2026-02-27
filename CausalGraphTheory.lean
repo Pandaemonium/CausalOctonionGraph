@@ -21,6 +21,7 @@ import CausalGraphTheory.SubalgebraDetect
 import CausalGraphTheory.Spinors
 import CausalGraphTheory.FureyChain
 import CausalGraphTheory.GenerationSeparation
+import CausalGraphTheory.GenerationLockContract
 import CausalGraphTheory.PhotonMasslessness
 
 -- Phase 1.5: Constants and gauge foundations
