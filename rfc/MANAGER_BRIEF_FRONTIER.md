@@ -3,30 +3,42 @@
 
 Every response MUST contain exactly these three XML tags:
 ```
-<THOUGHTS>analysis: state, why this task, clerk vs frontier</THOUGHTS>
+<THOUGHTS>analysis: state, why this task, which model tier</THOUGHTS>
 <TASK>one sentence: what, which file, success criterion</TASK>
-<TIER>clerk|frontier</TIER>
+<TIER>clerk|claude|openai|gemini|frontier</TIER>
 ```
 Omitting any tag causes an immediate parse error and the round is wasted.
+
+**`<TIER>` selects the worker model** — pick the RIGHT model, not always the same one:
+- `<TIER>clerk</TIER>` → qwen3:4b (local/free — searches, formatting, small edits)
+- `<TIER>claude</TIER>` → claude-sonnet-4-6 (Lean proofs, complex formal math)
+- `<TIER>openai</TIER>` → gpt-5.2-codex (Python simulation, code debugging, algorithms)
+- `<TIER>gemini</TIER>` → gemini-3-pro-preview (literature synthesis, long-context analysis)
+- `<TIER>frontier</TIER>` → same as `claude` (generic frontier alias)
+
+**MANDATORY DIVERSITY RULE:** You MUST NOT send every task to Claude (Leibniz).
+- Every 3 rounds: assign at least one task to `<TIER>openai</TIER>` or `<TIER>gemini</TIER>`
+- If Leibniz has done the last 2 tasks: the next task MUST go to openai or gemini
+- The goal: 3+ distinct named workers from different providers active simultaneously
 
 **Optional `<ROLE>` tag — use this to hire a specialist worker:**
 ```
 <ROLE>Role_Name_Here</ROLE>
 ```
-If you include a `<ROLE>` tag, a worker with that role will be hired (if none exists yet) and
-assigned the task. Workers are permanently bound to their role — a `Lean_Theorems_Expert` will
-never be reused for a `Pedagogy_Curator` task. **Use this to bring fresh specialists into the
-lab.** Role name examples:
-- `<ROLE>Lean_Theorems_Expert</ROLE>` — default; Lean proofs and formal math (Leibniz)
-- `<ROLE>Pedagogy_Curator</ROLE>` — writes `pedagogy/*.md` explanations of proved claims
-- `<ROLE>Web_Content_Writer</ROLE>` — updates `website/intro.md` and `website/pages/*.md`
+A worker with that role is hired (if none exists) and permanently bound to their model.
+Each (role, model-provider) pair is a **distinct person with a unique name** — a Claude
+Lean expert and an OpenAI Lean expert are different colleagues, not the same worker.
+Role name examples:
+- `<ROLE>Lean_Theorems_Expert</ROLE>` — Lean proofs and formal math
+- `<ROLE>Pedagogy_Curator</ROLE>` — writes `pedagogy/*.md` explanations
+- `<ROLE>Web_Content_Writer</ROLE>` — updates `website/intro.md` and pages
 - `<ROLE>Python_Simulation_Expert</ROLE>` — writes/extends `calc/` simulations and tests
 - `<ROLE>Literature_Researcher</ROLE>` — arXiv searches, sources/, claim grounding
 - `<ROLE>Dashboard_Engineer</ROLE>` — edits `lab/dashboard/static/` files
 
-If you omit `<ROLE>`, the task defaults to `Lean_Theorems_Expert` (reuses existing Lean worker).
-**Hiring diversity is encouraged** — assign pedagogy, web, and simulation tasks to their own
-specialist workers rather than routing everything through Leibniz.
+If you omit `<ROLE>`, the task defaults to `Lean_Theorems_Expert`.
+**Hiring a Lean_Theorems_Expert with `<TIER>openai</TIER>` spawns a NEW person — not Leibniz.**
+Use `<TIER>openai</TIER>` or `<TIER>gemini</TIER>` with any role to hire a fresh face.
 
 ## Current P0 — D4/D5 Contract Lock
 
@@ -91,25 +103,14 @@ one has at least a falsifiable Python test and a Lean stub claim.
 | Python tests (calc/) | **667+ passing, 0 failing** (incl. `mass_drag_v2` +10, `update_rule_ablation` +9, `test_ee_scattering` +10, `test_cfs001_embedding` +8) |
 | Lean build | **clean — 3145 jobs, no `sorry`** |
 | Lean library modules | **37 modules** all imported in root `CausalGraphTheory.lean` (integration closure 2026-02-26) |
-| Claims proved | **14 proved** (ALG-001–004, ANOM-001, CAUS-001, DAG-001, DIST-001, FANO-001, MASS-001, RACE-001, REL-001, STRONG-001, TICK-001) per ground-truth YAML — plus GAUGE-001, GEN-002, KOIDE-001, LEPTON-001, MU-001, WEINBERG-001 promoted via recent tasks (stale ground-truth entries noted below) |
-| Claims partial | **5 partial** (CFS-001, CFS-003, GEN-002†, PHOTON-001, WEINBERG-001†) per ground-truth YAML — GAUGE-001, GEN-002, WEINBERG-001 canonical status is `proved`; ground-truth entries are stale |
-| Claims active_hypothesis | **2** (ALPHA-001, MU-001† — MU-001 canonical status is `proved`; ground-truth entry is stale) |
-| Claims open | **1 open** (LEPTON-001 — ground-truth `open` entry is a stale duplicate; canonical status is `proved`) |
-| Claims stub | **3 stub** (ANOM-001†, CFS-002, GEN-001) per ground-truth YAML — ANOM-001 canonical status is `proved` |
+| Claims proved | **14 proved** (ALG-001–004, CAUS-001, DAG-001, DIST-001, FANO-001, GAUGE-001, MASS-001, RACE-001, REL-001, STRONG-001, TICK-001) per ground-truth YAML |
+| Claims partial | **5 partial** (CFS-001, CFS-003, GEN-002, PHOTON-001, WEINBERG-001) per ground-truth YAML |
+| Claims active_hypothesis | **2** (ALPHA-001, MU-001) per ground-truth YAML |
+| Claims open | **1 open** (LEPTON-001) per ground-truth YAML |
+| Claims stub | **3 stub** (ANOM-001, CFS-002, GEN-001) per ground-truth YAML |
 | Claims superseded | **4 superseded** (GAUGE-001-LEGACY, LEPTON-001-LEGACY, STRONG-001-LEGACY, VAC-001) |
 | Claims supported | **1 supported** (WEINBERG-UV-001) |
 | Claims unknown | **1 unknown** (CLAIM_STATUS_MATRIX) |
-
-† **KOIDE-001** partial→proved (2026-02-27): Gate 3 (`CausalGraphTheory/KoideCirculant.lean`) implemented with Koide sum rule iff B/A = √2 for circulant mass matrix `Circ(a,b,b)`, no `sorry`; claim promoted to `proved` via task 8c65e5a4-810.
-† **GEN-002** partial→proved (2026-02-26): `CausalGraphTheory/GenerationCount.lean` implemented with 8 named theorems, no `sorry`; three-generation count from Fano orbit structure formally proved via task c7f6f365-3dd.
-† **LEPTON-001** proved (2026-02-26): Goal A (`gap_1_electron_state`, `C_e = 4`) and Goal B (1-3-3 Fano line orbit partition) both confirmed; `claims/LEPTON-001.yml` promoted to sole `proved` status via task fd620e1e-c3e. (Ground-truth `open` entry is a stale duplicate; canonical status is `proved`.)
-† **MU-001** proved (2026-02-26): Degenerate ratio confirmed, RFC-034 created, `k_gate = 21` verified in `calc/mass_drag_v3.py` and `CausalGraphTheory/MassRatio.lean`; `claims/MU-001.yml` promoted to `proved` via task d27b8826-5a9. (Ground-truth `active_hypothesis` entry is a stale duplicate; canonical status is `proved`.)
-† **WEINBERG-001** partial→proved (2026-02-26): `CausalGraphTheory/WeinbergAngle.lean` fully implemented with `s4_order_eq`, `s4_order4_count_eq`, `weinberg_sin2_estimate` proved with no `sorry`; `claims/weinberg_angle.yml` advanced to gate 5; claim promoted to `proved` via tasks 11748290-13a and 49ec8bae-12b.
-† **STRONG-001** partial→proved (2026-02-27): `CausalGraphTheory/StrongCoupling.lean` implemented with `alpha_s_fano_bound` proved by `native_decide`, no `sorry`; claim promoted to `proved` via task 88212ede-e0b.
-† **ANOM-001** stub→proved (2026-02-27): `CausalGraphTheory/AnomalyCancellation.lean` created with `linear_anomaly_cancels`, `cubic_anomaly_cancels`, `anomaly_free` proved with no `sorry`; Python anomaly cancellation tests passing; claim promoted to `proved` via tasks c12cae6c-c05 and 004e0a47-ec9.
-† **GAUGE-001** partial→proved (2026-02-27): `CausalGraphTheory/GaugeSL23.lean` created with four theorems (`sl23_order_eq`, `s4_order_eq'`, `sl23_s4_same_order`, `s4_nonabelian`) proved via `native_decide`, no `sorry`; claim promoted to `proved` via task 85ae513c-924.
-† **PHOTON-001** Gate 1 closed (2026-02-27): `calc/test_photon_massless.py` and Lean stub created via task b57b0fd9-124; claim remains `partial` pending remaining gates.
-† **CFS-001** Gate 2 closed (2026-02-27): `CausalGraphTheory/CFS001Embedding.lean` stub with 5 required theorems, no `sorry`, created via task d0d79a9f-e76; claim remains `partial` pending remaining gates.
 ---
 
 ## Frontier Model Consensus (2026-02-25 Smoke Test, updated 2026-02-26)
@@ -280,6 +281,15 @@ What was delivered:
 
 ---
 
+### 🔴 P1 · LEPTON-001 · Claim Status Reconciliation — OPEN (2026-02-27)
+
+**Ground-truth status is `open` with next action noted as resolved (C_e = 4).**
+
+Next action:
+- Reconcile claim status in YAML to reflect the resolved electron state gap (Goal A) now that `C_e = 4` is confirmed in `calc/furey_electron_orbit.py`.
+
+---
+
 ### ✅ P0 · MU-001 · Gate-Density Simulation — Gate 2 — COMPLETED (2026-02-26)
 
 **`calc/mass_drag_v2.py` is fully implemented. DO NOT reassign.**
@@ -384,21 +394,7 @@ What was delivered (RFC-028 §4.2):
 
 What was delivered:
 - Goal A: `gap_1_electron_state` confirmed with `C_e = 4` universally across 26 tests in `calc/furey_electron_orbit.py`.
-- Goal B: 1-3-3 Fano line orbit partition under the stabilizer of the electron quaternion subalgebra proved in `CausalGraphTheory/LeptonOrbits.lean`.
-- `claims/LEPTON-001.yml` status promoted to sole `proved`; `open` entry removed (task fd620e1e-c3e, 2026-02-26).
-- `pedagogy/lepton-001.md` created (task 96beb585-706, 2026-02-26).
-
-**Anti-Loop Rule:** Do NOT recreate `LeptonOrbits.lean`, re-run the 1-3-3 orbit derivation, or re-promote LEPTON-001. LEPTON-001 is proved and the YAML is final. The ground-truth `open` entry for LEPTON-001 is a stale duplicate and must not be treated as an open task.
-
----
-
-### ✅ WEINBERG-001 · S4 Subgroup Decomposition — Gate 4 — COMPLETED (2026-02-26)
-
-**`calc/weinberg_s4_decomp.py` and `CausalGraphTheory/WeinbergAngle.lean` are fully implemented. DO NOT reassign.**
-
-What was delivered (tasks 13709b1e-2bf and 11748290-13a):
-- `calc/weinberg_s4_decomp.py`: S4 and SL(2,3) element-order histograms, subgroup chain, sin²θ_W = 4/24 estimate.
-- `C
+- Goal B: 1-3-3 Fano line orbit partition under the stabilizer of the electron quaternion subal
 ## Hard Constraints (enforce strictly)
 
 - **No continuum:** `Mathlib.Analysis.*`, `Mathlib.Topology.*`, `Mathlib.Data.Real.*`
@@ -546,43 +542,43 @@ Do **not** assign tasks that:
 
 ## Worker Model Tiers
 
-You control which model executes the task by including a `<TIER>` tag in your
-response. Choose carefully — frontier calls consume API budget ($5/hr default).
+You control which model executes the task by including a `<TIER>` tag in your response.
+**Use all three frontier providers — not just Claude.**
 
-```
-<TIER>clerk</TIER>      → qwen3:4b via Ollama (local, free, fast)
-<TIER>frontier</TIER>   → see frontier trio below (costs $)
-```
+### Available TIER values
 
-### Frontier Model Trio
+| TIER value | Model | Cost | Best for |
+|------------|-------|------|----------|
+| `clerk` | qwen3:4b (Ollama) | free | Searches, formatting, simple edits |
+| `claude` | claude-sonnet-4-6 | $ | Lean 4 formal proofs, complex math |
+| `openai` | gpt-5.2-codex | $ | Python sims, algorithm design, debugging |
+| `gemini` | gemini-3-pro-preview | $ | Long-context analysis, literature synthesis |
+| `frontier` | same as `claude` | $ | Generic alias for the primary frontier model |
 
-The system is configured with three top-tier frontier models:
+### Provider selection guide
 
-| Role | Model | Env var | Use when |
-|------|-------|---------|----------|
-| **Manager** | `claude-sonnet-4-6` | `ORCH_MANAGER_MODEL` | Strategic planning, task assignment (you are this model) |
-| **Primary Worker** | `claude-sonnet-4-6` | `ORCH_WORKER_FRONTIER_MODEL` | Lean 4 proofs, formal math, complex Python |
-| **Fallback Worker** | `gpt-5.2-codex` | `ORCH_FRONTIER_FALLBACK_MODEL` | Auto-used when primary is overloaded/budget-exhausted |
+**Use `<TIER>clerk</TIER>` for:**
+- ArXiv searches and abstract-level summaries
+- Python formatting, minor edits, reading files
+- Running pytest or lake build and reporting results
+- Status updates to claims/*.yml
 
-The system automatically falls back from Claude → Codex when Claude returns HTTP 529
-(overloaded) or hits its hourly budget limit. You do not need to manage this manually.
+**Use `<TIER>claude</TIER>` for:**
+- Lean 4 formal proofs and tactic work
+- Complex mathematical reasoning
+- Tasks that must pass lake build from scratch
 
-**Use `clerk` for:**
-- Literature searches on pre-selected arXiv topics
-- Python formatting, refactoring, or minor edits
-- Running pytest and reading back results
-- Searching claim files, grepping code, or reading docs
-- Writing research notes into claims/*.yml
+**Use `<TIER>openai</TIER>` for:**
+- Python simulation design (`calc/` scripts)
+- Algorithm debugging and code fixes
+- Tasks where Claude has previously failed or looped
 
-**Use `frontier` for:**
-- Writing or completing Lean 4 formal proofs
-- Complex mathematical reasoning or new algorithm design
-- Code that must pass lake build from scratch
-- Synthesizing multi-file analysis requiring deep context
-- Any task where Qwen3 has previously failed
+**Use `<TIER>gemini</TIER>` for:**
+- Literature synthesis across many papers
+- Long-context multi-file analysis
+- Cross-claim consistency checks and RFC drafting
 
-**If you omit `<TIER>`, the system defaults to `clerk` (qwen3:4b).**
-Override model selection per-run by setting env vars before `docker compose up`.
+**If you omit `<TIER>`, the system auto-infers: Lean tasks → claude, others → clerk.**
 
 ---
 
