@@ -504,34 +504,25 @@ What was delivered:
 
 ---
 
-### 🟡 P2 · WEINBERG-001 · Weinberg Angle Derivation — PARTIAL (2026-02-27)
+### ✅ P0 · ANOM-001 · Anomaly Cancellation — COMPLETED (2026-02-27)
 
-**Ground-truth status: `partial`. Gates 4 and 5 completed (S4 subgroup decomposition, Lean formalization). Further gates remain.**
+**`CausalGraphTheory/AnomalyCancellation.lean` is fully implemented. `claims/ANOM-001.yml` is promoted to `proved`. DO NOT reassign.**
 
-Next action:
-- Advance remaining open gates per the WEINBERG-001 claim file. Check `claims/WEINBERG-001.yml` for the current gate frontier before assigning work.
+What was delivered (tasks c12cae6c-c05, 004e0a47-ec9, 7a28e84a-038):
+- `calc/test_anom001_cancellation.py` — Python verification of anomaly cancellation with all tests passing.
+- `CausalGraphTheory/AnomalyCancellation.lean` — three no-sorry theorems (`linear_anomaly_cancels`, `cubic_anomaly_cancels`, `anomaly_free`) using COG charge vectors.
+- `claims/ANOM-001.yml` status promoted to `proved`.
 
----
-
-### 🟡 P2 · PHOTON-001 · Photon Masslessness — PARTIAL (2026-02-27)
-
-**Ground-truth status: `partial`. Gate 1 Python verification and Lean stub delivered (task b57b0fd9-124). `CausalGraphTheory/PhotonMassless.lean` stub compiles.**
-
-Next action:
-- Advance to Gate 2: fully prove `photon_gate_density_zero` in `CausalGraphTheory/PhotonMassless.lean` without `sorry`.
+**Anti-Loop Rule:** Do NOT recreate `AnomalyCancellation.lean`, re-verify the anomaly cancellation Python tests, or re-promote ANOM-001. The claim is `proved` and the YAML is final.
 
 ---
 
-### 🟡 P2 · GEN-002 · Three-Generation Count — PARTIAL (2026-02-27)
+### ✅ P0 · GEN-001 · First-Generation Algebraic Structure — COMPLETED (2026-02-27)
 
-**Ground-truth status: `partial`. Lean formalization delivered in `CausalGraphTheory/GenerationCount.lean` (task c7f6f365-3dd, 8 named theorems, no `sorry`).**
+**`CausalGraphTheory/GenerationCount.lean` includes GEN-001 results. `claims/GEN-001.yml` is promoted to `proved`. DO NOT reassign.**
 
-Next action:
-- Verify remaining open gates in `claims/GEN-002.yml` and advance claim to `proved` if all gates cleared.
-
----
-
-###
+What was delivered (task 5bf6bda2-c20):
+- Python verification and Lean formalization of first
 ## Hard Constraints (enforce strictly)
 
 - **No continuum:** `Mathlib.Analysis.*`, `Mathlib.Topology.*`, `Mathlib.Data.Real.*`
