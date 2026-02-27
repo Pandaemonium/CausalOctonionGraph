@@ -394,7 +394,9 @@ What was delivered (RFC-028 §4.2):
 
 What was delivered:
 - Goal A: `gap_1_electron_state` confirmed with `C_e = 4` universally across 26 tests in `calc/furey_electron_orbit.py`.
-- Goal B: 1-3-3 Fano line orbit partition under the stabilizer of the electron quaternion subal
+- Goal B: 1-3-3 Fano line orbit partition under the stabilizer of the electron quaternion subalgebra, proved in `CausalGraphTheory/LeptonOrbits.lean`.
+
+**Anti-Loop Rule:** Do NOT re-prove LEPTON-001 Goals A or B. The YAML is final.
 
 ---
 
@@ -494,7 +496,42 @@ What was delivered:
 
 ---
 
-### ✅ P0 · TICK-001 ·
+### ✅ P0 · TICK-001 · Completed (2026-02-27)
+
+**TICK-001 is proved. DO NOT reassign.**
+
+**Anti-Loop Rule:** Do NOT re-prove TICK-001; the YAML is final.
+
+---
+
+### 🟡 P2 · WEINBERG-001 · Weinberg Angle Derivation — PARTIAL (2026-02-27)
+
+**Ground-truth status: `partial`. Gates 4 and 5 completed (S4 subgroup decomposition, Lean formalization). Further gates remain.**
+
+Next action:
+- Advance remaining open gates per the WEINBERG-001 claim file. Check `claims/WEINBERG-001.yml` for the current gate frontier before assigning work.
+
+---
+
+### 🟡 P2 · PHOTON-001 · Photon Masslessness — PARTIAL (2026-02-27)
+
+**Ground-truth status: `partial`. Gate 1 Python verification and Lean stub delivered (task b57b0fd9-124). `CausalGraphTheory/PhotonMassless.lean` stub compiles.**
+
+Next action:
+- Advance to Gate 2: fully prove `photon_gate_density_zero` in `CausalGraphTheory/PhotonMassless.lean` without `sorry`.
+
+---
+
+### 🟡 P2 · GEN-002 · Three-Generation Count — PARTIAL (2026-02-27)
+
+**Ground-truth status: `partial`. Lean formalization delivered in `CausalGraphTheory/GenerationCount.lean` (task c7f6f365-3dd, 8 named theorems, no `sorry`).**
+
+Next action:
+- Verify remaining open gates in `claims/GEN-002.yml` and advance claim to `proved` if all gates cleared.
+
+---
+
+###
 ## Hard Constraints (enforce strictly)
 
 - **No continuum:** `Mathlib.Analysis.*`, `Mathlib.Topology.*`, `Mathlib.Data.Real.*`
