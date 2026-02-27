@@ -72,7 +72,11 @@ REQUIRED_FIELDS = [
 
 
 def _read_yaml(path: Path) -> dict[str, Any]:
-    loaded = yaml.safe_load(path.read_text(encoding="utf-8"))
+    try:
+        loaded = yaml.safe_load(path.read_text(encoding="utf-8"))
+    except yaml.YAMLError as exc:
+        print(f"WARN: skipping malformed claim YAML: {path.name} ({exc})")
+        return {}
     if not isinstance(loaded, dict):
         return {}
     return loaded

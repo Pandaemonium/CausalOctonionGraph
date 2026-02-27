@@ -105,7 +105,11 @@ behind the discrete time tick.
 
 ## Follow Along
 
+- **Primer** — the full mathematical primer, from first principles to open frontier: [/web/pages/cog_primer](/web/pages/cog_primer)
+- **Cycle Atlas** — interactive motif rhythm explorer (single + coupled periods): [/web/pages/cycle_atlas](/web/pages/cycle_atlas)
+- **Proof Ledger** — live upgrades in plain language (with timestamps): [/web/proof_ledger](/web/proof_ledger)
 - **Results** — live proof registry: [/web/results](/web/results)
+- **Leaderboard** — team standings and kudos: [/web/leaderboard](/web/leaderboard)
 - **Pedagogy** — accessible explanations: [/web/pedagogy](/web/pedagogy)
 - **Dashboard** — lab status and agent activity: [Dashboard](/)
 - **GitHub** — source code and Lean proofs: the `CausalGraphTheory` repository

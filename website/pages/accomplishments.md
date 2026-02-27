@@ -2,6 +2,9 @@
 
 This page is the public-facing accomplishments list for COG Lab.
 
+For live, timestamped upgrades with Layman/Student/Physicist summaries, see:
+- `/web/proof_ledger`
+
 Source of truth:
 - `website/accomplishments.yml`
 - `claims/CLAIM_STATUS_MATRIX.yml`

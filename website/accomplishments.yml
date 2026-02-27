@@ -1,9 +1,9 @@
-schema_version: "1.0.0"
-generated_at_utc: "2026-02-27T00:45:00Z"
-source_matrix: "claims/CLAIM_STATUS_MATRIX.yml"
+schema_version: 1.0.0
+generated_at_utc: '2026-02-27T00:45:00Z'
+source_matrix: claims/CLAIM_STATUS_MATRIX.yml
 audience:
-  primary: "public"
-  secondary: "professional_physicists"
+  primary: public
+  secondary: professional_physicists
 display_policy:
   rigor_first: true
   require_evidence_links: true
@@ -12,279 +12,303 @@ display_policy:
   non_supported_must_show_open_gap: true
 sections:
   spotlight:
-    title: "Spotlight Wins"
+    title: Spotlight Wins
     card_ids:
-      - ACC-001
-      - ACC-003
-      - ACC-004
+    - ACC-001
+    - ACC-003
+    - ACC-004
   validated_results:
-    title: "Validated Results"
+    title: Validated Results
     status_filter:
-      - supported
+    - supported
   promising_frontier:
-    title: "Promising Frontier"
+    title: Promising Frontier
     status_filter:
-      - partial
-      - active_hypothesis
+    - partial
+    - active_hypothesis
   open_gaps:
-    title: "Open Gaps"
+    title: Open Gaps
     include_gap_metrics: true
 cards:
-  - card_id: "ACC-001"
-    claim_id: "WEINBERG-UV-001"
-    public_headline: "Machine-checked electroweak UV invariant: 1/4"
-    technical_claim: "The exclusive-U1 weak-mixing observable is exactly 1/4 and invariant under transported S4 stabilizer action."
-    status: "supported"
-    wow_score_1_to_5: 5
-    rigor_score_1_to_5: 5
-    why_it_matters: "Shows a nontrivial electroweak structural constant emerging from locked algebraic projectors, with formal invariance."
-    evidence:
-      claim_file: "claims/WEINBERG-UV-001.yml"
-      owner_rfc: "rfc/RFC-029_Weinberg_Angle_Gap_Closure.md"
-      lean_artifacts:
-        - "CausalGraph.sin2ThetaWObs_exclusive_u1_eq_one_four"
-        - "CausalGraph.sin2ThetaWObs_exclusive_u1_stabilizer_invariant_bool"
-      battery_artifacts:
-        - "calc/test_weinberg_h2_governance.py::test_expected_baseline_values"
-    gap_metric:
-      name: "Gap to Z-pole target sin^2(theta_W)=0.23122"
-      value: "+0.01878 absolute (0.25 - 0.23122)"
-    last_verified_at: "2026-02-27T00:22:05.282011Z"
-    not_claimed:
-      - "Does not yet derive Z-pole running to 0.23122."
-      - "Does not supersede Standard Model electroweak phenomenology."
-    tags:
-      - "electroweak"
-      - "formal-proof"
-      - "invariance"
-
-  - card_id: "ACC-002"
-    claim_id: "WEINBERG-001"
-    public_headline: "IR Weinberg-angle closure remains open, with explicit gates"
-    technical_claim: "Baseline and weighted observable families are locked and tested; physical-scale closure is still partial."
-    status: "partial"
-    wow_score_1_to_5: 4
-    rigor_score_1_to_5: 5
-    why_it_matters: "Demonstrates anti-retrofit governance: open mechanisms are clearly separated from proved structure."
-    evidence:
-      claim_file: "claims/weinberg_angle.yml"
-      owner_rfc: "rfc/RFC-029_Weinberg_Angle_Gap_Closure.md"
-      battery_artifacts:
-        - "calc/test_weinberg_h2_governance.py"
-        - "sources/weinberg_h2_ablation_results.md"
-    gap_metric:
-      name: "Current best fixed-weight structural row vs Z-pole"
-      value: "0.25 vs 0.23122 (open running bridge)"
-    last_verified_at: "2026-02-27T00:24:34.411997Z"
-    not_claimed:
-      - "No claim of full electroweak-constant derivation at measurement scale."
-    tags:
-      - "electroweak"
-      - "governance"
-      - "open-problem"
-
-  - card_id: "ACC-003"
-    claim_id: "GAUGE-001"
-    public_headline: "Vacuum stabilizer action reconciled with S4 structure"
-    technical_claim: "Gauge-group action on the non-vacuum line sector is locked to an S4-compatible stabilizer profile in this encoding."
-    status: "partial"
-    wow_score_1_to_5: 5
-    rigor_score_1_to_5: 4
-    why_it_matters: "Fixes a foundational symmetry identification that downstream particle and coupling claims depend on."
-    evidence:
-      claim_file: "claims/gauge_group.yml"
-      owner_rfc: "rfc/RFC-017_Vacuum_Stabilizer_Reconciliation.md"
-      lean_artifacts:
-        - "GaugeGroup.fano_aut_count"
-        - "GaugeGroup.vacuum_stabilizer_count"
-      battery_artifacts:
-        - "calc/test_gauge.py"
-        - "calc/gauge_check.py"
-    gap_metric:
-      name: "Closure gap"
-      value: "Bridge theorem harmonization still open in claim notes"
-    last_verified_at: "2026-02-26T22:29:36.433945Z"
-    not_claimed:
-      - "Does not by itself derive all Standard Model gauge couplings."
-    tags:
-      - "symmetry"
-      - "gauge-structure"
-
-  - card_id: "ACC-004"
-    claim_id: "PHOTON-001"
-    public_headline: "Photon-vacuum orbit is colorless in the locked model"
-    technical_claim: "Vacuum-orbit states remain in a color-sector-zero subspace under the current photon/vacuum formalization."
-    status: "partial"
-    wow_score_1_to_5: 4
-    rigor_score_1_to_5: 4
-    why_it_matters: "Provides a sharp algebraic selection rule for why the photon channel is special."
-    evidence:
-      claim_file: "claims/PHOTON-001.yml"
-      owner_rfc: "rfc/RFC-015_Photon_Energy_COG.md"
-      lean_artifacts:
-        - "CausalGraph.vacuum_orbit_colorSector_zero"
-      battery_artifacts:
-        - "CausalGraphTheory/PhotonMasslessness.lean"
-    gap_metric:
-      name: "Physical calibration gap"
-      value: "Absolute energy-scale mapping remains open"
-    last_verified_at: "2026-02-26T22:32:24.753624Z"
-    not_claimed:
-      - "Does not yet provide full spectral prediction."
-    tags:
-      - "photon"
-      - "selection-rules"
-
-  - card_id: "ACC-005"
-    claim_id: "MASS-001"
-    public_headline: "Mass modeled as tick-overhead with formal monotonicity lemmas"
-    technical_claim: "Mass proxies are tied to tick-count observables with proved monotonic and zero-baseline properties."
-    status: "partial"
-    wow_score_1_to_5: 4
-    rigor_score_1_to_5: 4
-    why_it_matters: "Turns a conceptual idea (mass as computational drag) into explicit kernel-level observables."
-    evidence:
-      claim_file: "claims/mass_tick_frequency.yml"
-      owner_rfc: "rfc/RFC-045_Energy_Mass_Observable_Unification.md"
-      lean_artifacts:
-        - "CausalGraph.tickMass_mono"
-        - "CausalGraph.step_tickMass_nondecreasing"
-      battery_artifacts:
-        - "calc/test_koide.py"
-        - "calc/mass_ratios.py"
-    gap_metric:
-      name: "Physical-units closure"
-      value: "Calibration profile still native_only"
-    last_verified_at: "2026-02-26T22:29:36.556638Z"
-    not_claimed:
-      - "No full SI-unit calibration claim yet."
-    tags:
-      - "mass"
-      - "observables"
-
-  - card_id: "ACC-006"
-    claim_id: "LEPTON-001"
-    public_headline: "Universal period-4 e7 orbit behavior across multiple lepton-state constructions"
-    technical_claim: "Locked theorem stack shows exact period-4 behavior under e7 action for broad nonzero state classes; generation-scale mass ratio mechanism remains open."
-    status: "active_hypothesis"
-    wow_score_1_to_5: 5
-    rigor_score_1_to_5: 3
-    why_it_matters: "Establishes a strong discrete-phase backbone while keeping mass-ratio closure honest."
-    evidence:
-      claim_file: "claims/muon_mass.yml"
-      owner_rfc: "rfc/RFC-034_Electron_Mass_Mechanism.md"
-      lean_artifacts:
-        - "CausalGraph.universal_Ce_period_four"
-      battery_artifacts:
-        - "calc/test_furey_electron_orbit.py"
-    gap_metric:
-      name: "m_mu/m_e closure"
-      value: "Mechanism to 206.768 remains open"
-    last_verified_at: "2026-02-26T22:32:24.753624Z"
-    not_claimed:
-      - "No final derivation of the muon-electron mass ratio yet."
-    tags:
-      - "leptons"
-      - "discrete-phase"
-      - "open-problem"
-
-  - card_id: "ACC-007"
-    claim_id: "STRONG-001"
-    public_headline: "Strong-coupling proxy anchored to a discrete symmetry ratio"
-    technical_claim: "Leading proxy 24/168 = 1/7 is locked and test-backed as a structured baseline."
-    status: "partial"
-    wow_score_1_to_5: 4
-    rigor_score_1_to_5: 4
-    why_it_matters: "Converts group structure into a reproducible coupling proxy, with quantified gap to experiment."
-    evidence:
-      claim_file: "claims/STRONG-001.yml"
-      owner_rfc: "rfc/STRONG-001_Closure_Tasklist.md"
-      battery_artifacts:
-        - "calc/test_constants.py::TestAlphaStrong::test_alpha_strong_candidate_is_stab_ratio"
-        - "calc/estimate_alpha_strong.py"
-    gap_metric:
-      name: "Gap to alpha_s(M_Z)"
-      value: "~21 percent (1/7 vs ~0.118)"
-    last_verified_at: "2026-02-26T22:31:09.375869Z"
-    not_claimed:
-      - "No full running-corrected alpha_s closure yet."
-    tags:
-      - "strong-force"
-      - "couplings"
-
-  - card_id: "ACC-008"
-    claim_id: "DIST-001"
-    public_headline: "Distance and triangle behavior proved directly on the causal DAG"
-    technical_claim: "Distance triangle and reachability consistency are formalized over directed graph semantics."
-    status: "partial"
-    wow_score_1_to_5: 3
-    rigor_score_1_to_5: 4
-    why_it_matters: "Provides geometric primitives needed for higher-level spacetime interpretation."
-    evidence:
-      claim_file: "claims/dag_distance_triangle.yml"
-      owner_rfc: "rfc/MASTER_IMPLEMENTATION_PLAN_V2.md"
-      lean_artifacts:
-        - "CausalGraph.dist_triangle"
-      battery_artifacts:
-        - "calc/test_graph.py::test_distance_triangle"
-    gap_metric:
-      name: "Phenomenology bridge"
-      value: "Macroscopic metric recovery is still open"
-    last_verified_at: "2026-02-26T22:29:36.372036Z"
-    not_claimed:
-      - "Not yet a full relativistic spacetime derivation."
-    tags:
-      - "causal-geometry"
-      - "graph-distance"
-
-  - card_id: "ACC-009"
-    claim_id: "RACE-001"
-    public_headline: "Race-condition control with confluence-oriented proof stack"
-    technical_claim: "Core confluence and batchability lemmas are formalized for deterministic ordering behavior."
-    status: "partial"
-    wow_score_1_to_5: 3
-    rigor_score_1_to_5: 4
-    why_it_matters: "Supports deterministic reproducibility in non-associative update settings."
-    evidence:
-      claim_file: "claims/race_condition.yml"
-      owner_rfc: "rfc/MASTER_IMPLEMENTATION_PLAN_V2.md"
-      lean_artifacts:
-        - "RaceCondition.confluence"
-      battery_artifacts:
-        - "calc/test_tick.py::TestClassify"
-    gap_metric:
-      name: "Kernel integration"
-      value: "Needs broader many-body stress coverage"
-    last_verified_at: "2026-02-26T22:29:36.775598Z"
-    not_claimed:
-      - "Does not imply full physical equivalence across all scheduler profiles."
-    tags:
-      - "determinism"
-      - "runtime-safety"
-
-  - card_id: "ACC-010"
-    claim_id: "ALG-001"
-    public_headline: "Alternativity formalized as the discrete time-driver primitive"
-    technical_claim: "Left/right alternativity and explicit non-associative witness are proved in the octonion core."
-    status: "partial"
-    wow_score_1_to_5: 4
-    rigor_score_1_to_5: 4
-    why_it_matters: "This is the algebraic engine behind sequential update pressure in COG."
-    evidence:
-      claim_file: "claims/octonion_alternativity.yml"
-      owner_rfc: "rfc/MASTER_IMPLEMENTATION_PLAN_V2.md"
-      lean_artifacts:
-        - "left_alternative"
-        - "right_alternative"
-        - "non_associative_witness"
-      battery_artifacts:
-        - "calc/test_octonion.py::test_alternativity"
-    gap_metric:
-      name: "Physics mapping gap"
-      value: "Alternativity-to-observable map still in progress"
-    last_verified_at: "2026-02-26T22:29:36.654293Z"
-    not_claimed:
-      - "Does not alone produce Standard Model phenomenology."
-    tags:
-      - "algebra-core"
-      - "non-associativity"
+- card_id: ACC-001
+  claim_id: WEINBERG-UV-001
+  public_headline: 'Machine-checked electroweak UV invariant: 1/4'
+  technical_claim: The exclusive-U1 weak-mixing observable is exactly 1/4 and invariant
+    under transported S4 stabilizer action.
+  status: supported
+  wow_score_1_to_5: 5
+  rigor_score_1_to_5: 5
+  why_it_matters: Shows a nontrivial electroweak structural constant emerging from
+    locked algebraic projectors, with formal invariance.
+  evidence:
+    claim_file: claims/WEINBERG-UV-001.yml
+    owner_rfc: rfc/RFC-029_Weinberg_Angle_Gap_Closure.md
+    lean_artifacts:
+    - CausalGraph.sin2ThetaWObs_exclusive_u1_eq_one_four
+    - CausalGraph.sin2ThetaWObs_exclusive_u1_stabilizer_invariant_bool
+    battery_artifacts:
+    - calc/test_weinberg_h2_governance.py::test_expected_baseline_values
+  gap_metric:
+    name: Gap to Z-pole target sin^2(theta_W)=0.23122
+    value: +0.01878 absolute (0.25 - 0.23122)
+  last_verified_at: '2026-02-27T00:26:10.282011Z'
+  not_claimed:
+  - Does not yet derive Z-pole running to 0.23122.
+  - Does not supersede Standard Model electroweak phenomenology.
+  tags:
+  - electroweak
+  - formal-proof
+  - invariance
+  last_promotion_event_id: EVT-20260227-0002
+- card_id: ACC-002
+  claim_id: WEINBERG-001
+  public_headline: IR Weinberg-angle closure remains open, with explicit gates
+  technical_claim: Baseline and weighted observable families are locked and tested;
+    physical-scale closure is still partial.
+  status: partial
+  wow_score_1_to_5: 4
+  rigor_score_1_to_5: 5
+  why_it_matters: 'Demonstrates anti-retrofit governance: open mechanisms are clearly
+    separated from proved structure.'
+  evidence:
+    claim_file: claims/weinberg_angle.yml
+    owner_rfc: rfc/RFC-029_Weinberg_Angle_Gap_Closure.md
+    battery_artifacts:
+    - calc/test_weinberg_h2_governance.py
+    - sources/weinberg_h2_ablation_results.md
+  gap_metric:
+    name: Current best fixed-weight structural row vs Z-pole
+    value: 0.25 vs 0.23122 (open running bridge)
+  last_verified_at: '2026-02-27T00:24:34.411997Z'
+  not_claimed:
+  - No claim of full electroweak-constant derivation at measurement scale.
+  tags:
+  - electroweak
+  - governance
+  - open-problem
+  last_promotion_event_id: EVT-20260227-0001
+- card_id: ACC-003
+  claim_id: GAUGE-001
+  public_headline: Vacuum stabilizer action reconciled with S4 structure
+  technical_claim: Gauge-group action on the non-vacuum line sector is locked to an
+    S4-compatible stabilizer profile in this encoding.
+  status: partial
+  wow_score_1_to_5: 5
+  rigor_score_1_to_5: 4
+  why_it_matters: Fixes a foundational symmetry identification that downstream particle
+    and coupling claims depend on.
+  evidence:
+    claim_file: claims/gauge_group.yml
+    owner_rfc: rfc/RFC-017_Vacuum_Stabilizer_Reconciliation.md
+    lean_artifacts:
+    - GaugeGroup.fano_aut_count
+    - GaugeGroup.vacuum_stabilizer_count
+    battery_artifacts:
+    - calc/test_gauge.py
+    - calc/gauge_check.py
+  gap_metric:
+    name: Closure gap
+    value: Bridge theorem harmonization still open in claim notes
+  last_verified_at: '2026-02-26T22:29:36.433945Z'
+  not_claimed:
+  - Does not by itself derive all Standard Model gauge couplings.
+  tags:
+  - symmetry
+  - gauge-structure
+  last_promotion_event_id: EVT-20260226-0006
+- card_id: ACC-004
+  claim_id: PHOTON-001
+  public_headline: Photon-vacuum orbit is colorless in the locked model
+  technical_claim: Vacuum-orbit states remain in a color-sector-zero subspace under
+    the current photon/vacuum formalization.
+  status: partial
+  wow_score_1_to_5: 4
+  rigor_score_1_to_5: 4
+  why_it_matters: Provides a sharp algebraic selection rule for why the photon channel
+    is special.
+  evidence:
+    claim_file: claims/PHOTON-001.yml
+    owner_rfc: rfc/RFC-015_Photon_Energy_COG.md
+    lean_artifacts:
+    - CausalGraph.vacuum_orbit_colorSector_zero
+    battery_artifacts:
+    - CausalGraphTheory/PhotonMasslessness.lean
+  gap_metric:
+    name: Physical calibration gap
+    value: Absolute energy-scale mapping remains open
+  last_verified_at: '2026-02-26T22:32:24.753624Z'
+  not_claimed:
+  - Does not yet provide full spectral prediction.
+  tags:
+  - photon
+  - selection-rules
+  last_promotion_event_id: EVT-20260226-0004
+- card_id: ACC-005
+  claim_id: MASS-001
+  public_headline: Mass modeled as tick-overhead with formal monotonicity lemmas
+  technical_claim: Mass proxies are tied to tick-count observables with proved monotonic
+    and zero-baseline properties.
+  status: partial
+  wow_score_1_to_5: 4
+  rigor_score_1_to_5: 4
+  why_it_matters: Turns a conceptual idea (mass as computational drag) into explicit
+    kernel-level observables.
+  evidence:
+    claim_file: claims/mass_tick_frequency.yml
+    owner_rfc: rfc/RFC-045_Energy_Mass_Observable_Unification.md
+    lean_artifacts:
+    - CausalGraph.tickMass_mono
+    - CausalGraph.step_tickMass_nondecreasing
+    battery_artifacts:
+    - calc/test_koide.py
+    - calc/mass_ratios.py
+  gap_metric:
+    name: Physical-units closure
+    value: Calibration profile still native_only
+  last_verified_at: '2026-02-26T22:29:36.556638Z'
+  not_claimed:
+  - No full SI-unit calibration claim yet.
+  tags:
+  - mass
+  - observables
+  last_promotion_event_id: EVT-20260226-0003
+- card_id: ACC-006
+  claim_id: LEPTON-001
+  public_headline: Universal period-4 e7 orbit behavior across multiple lepton-state
+    constructions
+  technical_claim: Locked theorem stack shows exact period-4 behavior under e7 action
+    for broad nonzero state classes; generation-scale mass ratio mechanism remains
+    open.
+  status: active_hypothesis
+  wow_score_1_to_5: 5
+  rigor_score_1_to_5: 3
+  why_it_matters: Establishes a strong discrete-phase backbone while keeping mass-ratio
+    closure honest.
+  evidence:
+    claim_file: claims/muon_mass.yml
+    owner_rfc: rfc/RFC-034_Electron_Mass_Mechanism.md
+    lean_artifacts:
+    - CausalGraph.universal_Ce_period_four
+    battery_artifacts:
+    - calc/test_furey_electron_orbit.py
+  gap_metric:
+    name: m_mu/m_e closure
+    value: Mechanism to 206.768 remains open
+  last_verified_at: '2026-02-26T22:32:24.753624Z'
+  not_claimed:
+  - No final derivation of the muon-electron mass ratio yet.
+  tags:
+  - leptons
+  - discrete-phase
+  - open-problem
+  last_promotion_event_id: EVT-20260226-0007
+- card_id: ACC-007
+  claim_id: STRONG-001
+  public_headline: Strong-coupling proxy anchored to a discrete symmetry ratio
+  technical_claim: Leading proxy 24/168 = 1/7 is locked and test-backed as a structured
+    baseline.
+  status: partial
+  wow_score_1_to_5: 4
+  rigor_score_1_to_5: 4
+  why_it_matters: Converts group structure into a reproducible coupling proxy, with
+    quantified gap to experiment.
+  evidence:
+    claim_file: claims/STRONG-001.yml
+    owner_rfc: rfc/STRONG-001_Closure_Tasklist.md
+    battery_artifacts:
+    - calc/test_constants.py::TestAlphaStrong::test_alpha_strong_candidate_is_stab_ratio
+    - calc/estimate_alpha_strong.py
+  gap_metric:
+    name: Gap to alpha_s(M_Z)
+    value: ~21 percent (1/7 vs ~0.118)
+  last_verified_at: '2026-02-26T22:31:09.375869Z'
+  not_claimed:
+  - No full running-corrected alpha_s closure yet.
+  tags:
+  - strong-force
+  - couplings
+  last_promotion_event_id: EVT-20260226-0005
+- card_id: ACC-008
+  claim_id: DIST-001
+  public_headline: Distance and triangle behavior proved directly on the causal DAG
+  technical_claim: Distance triangle and reachability consistency are formalized over
+    directed graph semantics.
+  status: partial
+  wow_score_1_to_5: 3
+  rigor_score_1_to_5: 4
+  why_it_matters: Provides geometric primitives needed for higher-level spacetime
+    interpretation.
+  evidence:
+    claim_file: claims/dag_distance_triangle.yml
+    owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
+    lean_artifacts:
+    - CausalGraph.dist_triangle
+    battery_artifacts:
+    - calc/test_graph.py::test_distance_triangle
+  gap_metric:
+    name: Phenomenology bridge
+    value: Macroscopic metric recovery is still open
+  last_verified_at: '2026-02-26T22:29:36.372036Z'
+  not_claimed:
+  - Not yet a full relativistic spacetime derivation.
+  tags:
+  - causal-geometry
+  - graph-distance
+  last_promotion_event_id: EVT-20260226-0001
+- card_id: ACC-009
+  claim_id: RACE-001
+  public_headline: Race-condition control with confluence-oriented proof stack
+  technical_claim: Core confluence and batchability lemmas are formalized for deterministic
+    ordering behavior.
+  status: partial
+  wow_score_1_to_5: 3
+  rigor_score_1_to_5: 4
+  why_it_matters: Supports deterministic reproducibility in non-associative update
+    settings.
+  evidence:
+    claim_file: claims/race_condition.yml
+    owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
+    lean_artifacts:
+    - RaceCondition.confluence
+    battery_artifacts:
+    - calc/test_tick.py::TestClassify
+  gap_metric:
+    name: Kernel integration
+    value: Needs broader many-body stress coverage
+  last_verified_at: '2026-02-26T22:29:36.775598Z'
+  not_claimed:
+  - Does not imply full physical equivalence across all scheduler profiles.
+  tags:
+  - determinism
+  - runtime-safety
+  last_promotion_event_id: EVT-20260226-0002
+- card_id: ACC-010
+  claim_id: ALG-001
+  public_headline: Alternativity formalized as the discrete time-driver primitive
+  technical_claim: Left/right alternativity and explicit non-associative witness are
+    proved in the octonion core.
+  status: partial
+  wow_score_1_to_5: 4
+  rigor_score_1_to_5: 4
+  why_it_matters: This is the algebraic engine behind sequential update pressure in
+    COG.
+  evidence:
+    claim_file: claims/octonion_alternativity.yml
+    owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
+    lean_artifacts:
+    - left_alternative
+    - right_alternative
+    - non_associative_witness
+    battery_artifacts:
+    - calc/test_octonion.py::test_alternativity
+  gap_metric:
+    name: Physics mapping gap
+    value: Alternativity-to-observable map still in progress
+  last_verified_at: '2026-02-26T22:29:36.654293Z'
+  not_claimed:
+  - Does not alone produce Standard Model phenomenology.
+  tags:
+  - algebra-core
+  - non-associativity
+  last_promotion_event_id: EVT-20260225-0001
+ledger_source: website/claim_events.yml

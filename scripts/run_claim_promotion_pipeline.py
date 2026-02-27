@@ -5,8 +5,11 @@ Single-command claim-promotion gate.
 Pipeline:
 1. sync matrix
 2. validate matrix
-3. run battery checks for selected statuses
-4. optionally enforce matrix is committed/up-to-date
+3. validate claim events
+4. validate public accomplishments
+5. run battery checks for selected statuses
+6. build proof-ledger artifacts
+7. optionally enforce matrix is committed/up-to-date
 """
 
 from __future__ import annotations
@@ -42,12 +45,15 @@ def main() -> int:
     steps = [
         [sys.executable, "scripts/sync_claim_status_matrix.py"],
         [sys.executable, "scripts/validate_claim_status_matrix.py"],
+        [sys.executable, "scripts/validate_claim_events.py"],
+        [sys.executable, "scripts/validate_public_accomplishments.py"],
         [
             sys.executable,
             "scripts/check_claim_batteries.py",
             "--statuses",
             args.battery_statuses,
         ],
+        [sys.executable, "scripts/build_proof_ledger_artifacts.py"],
     ]
     for step in steps:
         rc = _run(step)

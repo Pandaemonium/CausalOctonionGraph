@@ -42,6 +42,7 @@ import CausalGraphTheory.DAGProof
 -- Phase 3: Kernel v2 and locked update rule (RFC-028)
 import CausalGraphTheory.KernelV2
 import CausalGraphTheory.UpdateRule
+import CausalGraphTheory.XorGate
 
 -- Phase 4: Derived physical quantities
 import CausalGraphTheory.Mass

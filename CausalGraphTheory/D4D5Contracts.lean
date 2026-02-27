@@ -45,6 +45,10 @@ structure FullMicrostate where
 def nodeExistsById (ms : FullMicrostate) (nid : Nat) : Prop :=
   ∃ n ∈ ms.nodes, n.nodeId = nid
 
+/-- Computable node-ID membership test over a full microstate. -/
+def nodeExistsByIdB (ms : FullMicrostate) (nid : Nat) : Bool :=
+  ms.nodes.any (fun n => n.nodeId == nid)
+
 /-! ## D4: spawn semantics signatures -/
 
 /-- Decide whether a destination node should spawn from local data. -/
@@ -58,6 +62,13 @@ abbrev SpawnEdges := NodeStateV2 → Nat → List BoundaryMsg → List SpawnEdge
 
 /-- Apply spawn transition to the full microstate. -/
 abbrev ApplySpawn := FullMicrostate → NodeStateV2 → List BoundaryMsg → FullMicrostate
+
+/-- Canonical boundary ordering: source depth first, source id as tiebreaker. -/
+def sortBoundaryMsgs (msgs : List BoundaryMsg) : List BoundaryMsg :=
+  msgs.mergeSort (fun a b =>
+    if a.srcDepth < b.srcDepth then true
+    else if a.srcDepth > b.srcDepth then false
+    else a.srcId ≤ b.srcId)
 
 /-- Cone-locality guard: only messages strictly inside parent's past cone. -/
 def isConeLocalMsg (parent : NodeStateV2) (m : BoundaryMsg) : Bool :=
@@ -76,6 +87,54 @@ def isActiveMsg (parent : NodeStateV2) (m : BoundaryMsg) : Bool :=
 /-- Active cone slice: cone-local messages that carry non-identity payload. -/
 def activeConeSlice (parent : NodeStateV2) (msgs : List BoundaryMsg) : List BoundaryMsg :=
   msgs.filter (isActiveMsg parent)
+
+/-- Ordered active payloads consumed by the spawn first-tick update. -/
+def activePayloadsOrdered (parent : NodeStateV2) (msgs : List BoundaryMsg) :
+    List (ComplexOctonion ℤ) :=
+  (sortBoundaryMsgs (activeConeSlice parent msgs)).map (fun m => m.payload)
+
+/-- Spawn depth policy: min active source depth + 1; defensive fallback uses parent+1. -/
+def spawnTopoDepth (parent : NodeStateV2) (msgs : List BoundaryMsg) : Nat :=
+  match (sortBoundaryMsgs (activeConeSlice parent msgs)).head? with
+  | some m => m.srcDepth + 1
+  | none => parent.topoDepth + 1
+
+/-! ## D4: concrete implementation (Phase 1) -/
+
+/-- Concrete spawn trigger: spawn iff active cone-local input exists. -/
+def shouldSpawnImpl : ShouldSpawn := fun parent msgs =>
+  !(activeConeSlice parent msgs).isEmpty
+
+/-- Concrete spawn initializer for a fresh node id. -/
+def spawnInitImpl : SpawnInitState := fun _parent newId =>
+  { nodeId     := newId
+    psi        := omega_vac
+    tickCount  := 0
+    topoDepth  := 0
+    colorLabel := vacuumColorLabel }
+
+/-- Concrete spawn transition:
+    1) no-op if destination already exists,
+    2) no-op on empty active input (temporary defensive wrapper),
+    3) else materialize a spawned node and apply one `nextStateV2` tick
+       using canonically ordered active payloads. -/
+def applySpawnImpl : ApplySpawn := by
+  intro ms parent msgs
+  if nodeExistsByIdB ms ms.nextNodeId then
+    exact ms
+  else
+    let activeSlice := activeConeSlice parent msgs
+    if hActive : activeSlice.isEmpty then
+      exact ms
+    else
+      let active := sortBoundaryMsgs activeSlice
+      let spawned0 : NodeStateV2 := spawnInitImpl parent ms.nextNodeId
+      let spawned1 : NodeStateV2 := { spawned0 with topoDepth := spawnTopoDepth parent msgs }
+      let spawned2 : NodeStateV2 := UpdateRule.nextStateV2 spawned1 (active.map (fun m => m.payload))
+      exact
+        { ms with
+          nodes := spawned2 :: ms.nodes
+          nextNodeId := ms.nextNodeId + 1 }
 
 /-- Determinism contract for the spawn transition. -/
 def SpawnDeterministic (applySpawn : ApplySpawn) : Prop :=
@@ -131,6 +190,108 @@ def SpawnThenUpdateLaw (shouldSpawn : ShouldSpawn) (applySpawn : ApplySpawn) : P
     shouldSpawn parent (activeConeSlice parent msgs) = true →
     ∃ n ∈ (applySpawn ms parent msgs).nodes,
       n.nodeId = ms.nextNodeId ∧ n.tickCount = 1
+
+/-! ## D4: concrete Phase 2 closure theorems -/
+
+/-- Bridge lemma: computable membership implies propositional membership. -/
+theorem nodeExistsById_of_nodeExistsByIdB_true
+    {ms : FullMicrostate} {nid : Nat}
+    (h : nodeExistsByIdB ms nid = true) :
+    nodeExistsById ms nid := by
+  unfold nodeExistsByIdB at h
+  rw [List.any_eq_true] at h
+  rcases h with ⟨n, hnMem, hnEq⟩
+  refine ⟨n, hnMem, ?_⟩
+  exact beq_iff_eq.mp hnEq
+
+/-- Active-slice filtering is idempotent. -/
+theorem activeConeSlice_idem (parent : NodeStateV2) (msgs : List BoundaryMsg) :
+    activeConeSlice parent (activeConeSlice parent msgs) = activeConeSlice parent msgs := by
+  unfold activeConeSlice
+  simp [List.filter_filter, Bool.and_self]
+
+/-- Concrete spawn initializer satisfies node-id law. -/
+theorem spawnInitImpl_nodeId_law : SpawnNodeIdLaw spawnInitImpl := by
+  intro parent newId
+  rfl
+
+/-- Concrete spawn initializer satisfies locked vacuum-color law. -/
+theorem spawnInitImpl_color_law : SpawnColorLabelLaw spawnInitImpl := by
+  intro parent newId
+  rfl
+
+/-- Concrete trigger satisfies locality law over active cone slice. -/
+theorem shouldSpawnImpl_locality_law : SpawnLocalityLaw shouldSpawnImpl := by
+  intro parent msgs
+  unfold shouldSpawnImpl
+  rw [activeConeSlice_idem]
+
+/-- Concrete spawn transition is deterministic. -/
+theorem applySpawnImpl_deterministic : SpawnDeterministic applySpawnImpl := by
+  intro ms₁ ms₂ parent₁ parent₂ msgs₁ msgs₂ hms hparent hmsgs
+  subst hms
+  subst hparent
+  subst hmsgs
+  rfl
+
+/-- Concrete spawn transition satisfies no-exogenous-input contract. -/
+theorem applySpawnImpl_no_exogenous : SpawnNoExogenous applySpawnImpl := by
+  exact applySpawnImpl_deterministic
+
+/-- Concrete spawn transition satisfies "no dead letters" completeness. -/
+theorem applySpawnImpl_completeness : SpawnCompleteness applySpawnImpl := by
+  intro ms parent msgs hMissing hActive
+  have hExistsBFalse : nodeExistsByIdB ms ms.nextNodeId = false := by
+    cases hB : nodeExistsByIdB ms ms.nextNodeId with
+    | true =>
+        exfalso
+        apply hMissing
+        exact nodeExistsById_of_nodeExistsByIdB_true hB
+    | false =>
+        simp
+  let active := sortBoundaryMsgs (activeConeSlice parent msgs)
+  let spawned0 : NodeStateV2 := spawnInitImpl parent ms.nextNodeId
+  let spawned1 : NodeStateV2 := { spawned0 with topoDepth := spawnTopoDepth parent msgs }
+  let spawned2 : NodeStateV2 := UpdateRule.nextStateV2 spawned1 (active.map (fun m => m.payload))
+  have hOut :
+      applySpawnImpl ms parent msgs =
+        { ms with
+          nodes := spawned2 :: ms.nodes
+          nextNodeId := ms.nextNodeId + 1 } := by
+    unfold applySpawnImpl
+    simp [hExistsBFalse, hActive, active, spawned0, spawned1, spawned2]
+  rw [hOut]
+  unfold nodeExistsById
+  refine ⟨spawned2, ?_, ?_⟩
+  · simp
+  · simp [spawned2, spawned1, spawned0, spawnInitImpl, UpdateRule.nextStateV2]
+
+/-- Concrete spawn transition materializes with first-step tickCount = 1. -/
+theorem applySpawnImpl_then_update_tick1 :
+    SpawnThenUpdateLaw shouldSpawnImpl applySpawnImpl := by
+  intro ms parent msgs hMissing hSpawn
+  have hExistsBFalse : nodeExistsByIdB ms ms.nextNodeId = false := by
+    cases hB : nodeExistsByIdB ms ms.nextNodeId with
+    | true =>
+        exfalso
+        apply hMissing
+        exact nodeExistsById_of_nodeExistsByIdB_true hB
+    | false =>
+        simp
+  have hActiveFalseAA :
+      (activeConeSlice parent (activeConeSlice parent msgs)).isEmpty = false := by
+    have hNotEmptyAA :
+        !(activeConeSlice parent (activeConeSlice parent msgs)).isEmpty = true := by
+      simpa [shouldSpawnImpl] using hSpawn
+    cases hE : (activeConeSlice parent (activeConeSlice parent msgs)).isEmpty with
+    | true =>
+        simp [hE] at hNotEmptyAA
+    | false =>
+        simp
+  have hActiveFalse : (activeConeSlice parent msgs).isEmpty = false := by
+    simpa [activeConeSlice_idem] using hActiveFalseAA
+  unfold applySpawnImpl
+  simp [hExistsBFalse, hActiveFalse, spawnInitImpl, UpdateRule.nextStateV2]
 
 /-! ## D5: projection contract signatures -/
 

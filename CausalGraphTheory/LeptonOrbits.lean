@@ -1,3 +1,6 @@
+import Mathlib.Data.Finset.Basic
+import Mathlib.Data.Fintype.Basic
+
 /-!
 # Lepton Orbit Partition — Fano Plane Stabilizer
 
@@ -26,9 +29,6 @@ Under the point-stabilizer of 0 in GL(3,2) (order 24) the 7 lines split as:
   • Size-3 orbit A: { {1,2,4}, {2,3,5}, {5,6,1} }
   • Size-3 orbit B: { {0,1,3}, {0,4,5}, {0,2,6} }
 -/
-
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Basic
 
 namespace LeptonOrbits
 

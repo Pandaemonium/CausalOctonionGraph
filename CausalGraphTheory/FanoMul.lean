@@ -86,3 +86,27 @@ theorem fano_sign_antisymmetric (i j : FanoPoint) (h : i ≠ j) :
 theorem fano_sign_nonzero (i j : FanoPoint) (h : i ≠ j) :
     fanoSign i j ≠ 0 := by
   revert h; revert j; revert i; decide
+
+-- ============================================================
+-- XOR-index channel evidence (for distinct imaginary units)
+-- ============================================================
+
+/--
+  For distinct imaginary basis indices (0-indexed Fano points), the output index
+  channel matches XOR in one-indexed physics labels:
+
+    (fanoThird i j).val + 1 = (i.val + 1) xor (j.val + 1)
+
+  This isolates the index-channel from orientation/sign, which is carried by `fanoSign`.
+-/
+theorem fano_third_xor_one_indexed (i j : FanoPoint) (h : i ≠ j) :
+    (fanoThird i j).val + 1 = Nat.xor (i.val + 1) (j.val + 1) := by
+  revert h; revert j; revert i; decide
+
+/--
+  Distinct imaginary basis multiplication always has unit sign magnitude:
+  the orientation/sign channel is exactly `+1` or `-1`.
+-/
+theorem fano_sign_unit (i j : FanoPoint) (h : i ≠ j) :
+    fanoSign i j = 1 ∨ fanoSign i j = -1 := by
+  revert h; revert j; revert i; decide

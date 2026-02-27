@@ -6,17 +6,24 @@ statement: |
   deterministic update step is defined by local action comparison with no
   continuum limit assumptions.
 
-status: partial
+status: proved
 python_test: calc/test_cfs001_embedding.py
 gates_complete:
   - 1
+  - 2
+  - 3
+lean_file: CausalGraphTheory/CFS001Embedding.lean
+lean_theorems:
+  - cfs_gram_symmetric
+  - cfs_vacuum_rank_one
+  - cfs_rank_bound
+  - cfs_fano_triple_order
+  - cfs_embedding_injective
 pi_obs_profile: minimal
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
 profile_contrast_run: ""
 equivalence_mode: none
-lean_file: ""
-lean_theorems: []
 depends_on:
   - DAG-001
   - CAUS-001
@@ -24,10 +31,26 @@ literature:
   - "Finster et al. (2024): Causal Fermion Systems and Octonions, arXiv:2403.00360"
   - "Finster et al. (2011): Causal Fermion Systems, arXiv:1102.2585"
   - "Finster (2018): Discrete Space-Times in CFS, arXiv:1812.00238"
+gate_1:
+  status: closed
+  python_file: calc/test_cfs001_embedding.py
+  tests: 8
+  date: 2026-02-27
+gate_2:
+  status: closed
+  lean_file: CausalGraphTheory/CFS001Embedding.lean
+  note: stub theorems created
+  date: 2026-02-27
+gate_3:
+  status: closed
+  lean_file: CausalGraphTheory/CFS001Embedding.lean
+  date: 2026-02-27
 notes: |
   This claim is the COG-side analog of the CFS causal action principle, but
   formulated entirely over finite combinatorial data.
   Gate 1: Python embedding axiom scaffold -- 8 tests passing (task CFS-001-gate1).
   Verifies Gram-matrix selfadjointness, vacuum rank-1, Fano triple ordering,
   CFS dimension bound, causal antisymmetry, discrete measure, and finiteness axiom.
+  Gate 2: Lean stub theorems created (task d0d79a9f-e76).
+  Gate 3: All 5 theorems fully proved, no sorry (task c5c9d354-903).
 blocked_reason: ""

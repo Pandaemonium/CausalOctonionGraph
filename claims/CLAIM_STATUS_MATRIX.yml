@@ -1,6 +1,6 @@
 schema_version: 2.1.0
-generated_at_utc: '2026-02-27T00:41:51.354186Z'
-row_count: 32
+generated_at_utc: '2026-02-27T05:34:57.027122Z'
+row_count: 33
 rows:
   ALG:
     claim_id: ALG
@@ -386,18 +386,20 @@ rows:
     - causal_order.yml
   CFS-001:
     claim_id: CFS-001
-    status: stub
+    status: partial
     lean_artifacts: []
-    python_artifacts: []
-    battery_artifacts: []
+    python_artifacts:
+    - calc/test_cfs001_embedding.py
+    battery_artifacts:
+    - calc/test_cfs001_embedding.py
     motif_id: unassigned
     rule_profile: default_multiplicative_markov
     pi_obs_profile: minimal
     projection_sensitivity: unknown
     equivalence_mode: none
     equivalence_artifact: ''
-    evidence_level: hypothesis
-    last_verified_at: '2026-02-26T22:29:36.249676Z'
+    evidence_level: python_verified
+    last_verified_at: '2026-02-27T03:35:57.585284Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=causal_action_discrete.yml
     confinement_relevant: false
@@ -725,7 +727,7 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-26T22:29:36.433945Z'
+    last_verified_at: '2026-02-27T05:10:09.630506Z'
     owner_rfc: rfc/RFC-017_Vacuum_Stabilizer_Reconciliation.md
     notes: source=gauge_group.yml | backfill=priority_v1
     confinement_relevant: false
@@ -985,7 +987,7 @@ rows:
     evidence_level: hypothesis
     last_verified_at: '2026-02-26T23:53:24.976518Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
-    notes: source=KOIDE-001.yml | aliases=KOIDE-001.yml,koide_exactness.yml
+    notes: source=KOIDE-001.yml
     confinement_relevant: false
     confinement_gate_status: not_applicable
     confinement_artifact: ''
@@ -1009,6 +1011,44 @@ rows:
     entropy_artifact_ref: ''
     source_files:
     - KOIDE-001.yml
+  KOIDE_EXACTNESS:
+    claim_id: KOIDE_EXACTNESS
+    status: stub
+    lean_artifacts: []
+    python_artifacts: []
+    battery_artifacts: []
+    motif_id: unassigned
+    rule_profile: default_multiplicative_markov
+    pi_obs_profile: minimal
+    projection_sensitivity: unknown
+    equivalence_mode: none
+    equivalence_artifact: ''
+    evidence_level: hypothesis
+    last_verified_at: '2026-02-27T02:51:51.812789Z'
+    owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
+    notes: source=koide_exactness.yml
+    confinement_relevant: false
+    confinement_gate_status: not_applicable
+    confinement_artifact: ''
+    ensemble_policy_id: ''
+    spin_sensitive: false
+    spin_mode: none
+    spin_artifact: ''
+    spin_sensitivity: unknown
+    scheduler_mode: snapshot_sync_v1
+    scheduler_profile_version: v1
+    many_body_relevant: false
+    pair_extraction_mode: not_applicable
+    reduction_mode: none
+    reduction_horizon: 0
+    reduction_artifact_ref: ''
+    physical_units_relevant: false
+    calibration_mode: native_only
+    scale_profile_id: ''
+    uncertainty_relevant: false
+    entropy_functional_id: ''
+    entropy_artifact_ref: ''
+    source_files:
     - koide_exactness.yml
   LEPTON-001:
     claim_id: LEPTON-001
@@ -1324,18 +1364,24 @@ rows:
     - race_condition.yml
   REL-001:
     claim_id: REL-001
-    status: stub
+    status: partial
     lean_artifacts:
-    - CausalGraphTheory/RaceCondition.lean
-    - RaceCondition.confluence
-    - RaceCondition.classify_perm_of_edges
+    - CausalGraphTheory/CausalInvariance.lean
+    - CausalInvariance.causalOrder_refl
+    - CausalInvariance.causalOrder_trans
+    - CausalInvariance.nonInteracting_tick_advance
+    - CausalInvariance.causal_tick_parity
+    - CausalInvariance.causal_depth_monotone
     python_artifacts:
-    - calc/test_confluence.py
+    - calc/test_rel_emergence.py
     battery_artifacts:
-    - CausalGraphTheory/RaceCondition.lean
-    - RaceCondition.classify_perm_of_edges
-    - RaceCondition.confluence
-    - calc/test_confluence.py
+    - CausalGraphTheory/CausalInvariance.lean
+    - CausalInvariance.causalOrder_refl
+    - CausalInvariance.causalOrder_trans
+    - CausalInvariance.causal_depth_monotone
+    - CausalInvariance.causal_tick_parity
+    - CausalInvariance.nonInteracting_tick_advance
+    - calc/test_rel_emergence.py
     motif_id: unassigned
     rule_profile: default_multiplicative_markov
     pi_obs_profile: minimal
@@ -1343,7 +1389,7 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
-    last_verified_at: '2026-02-26T22:29:36.279214Z'
+    last_verified_at: '2026-02-27T04:18:27.342581Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=causal_invariance.yml
     confinement_relevant: false
@@ -1373,8 +1419,12 @@ rows:
     claim_id: STRONG-001
     status: partial
     lean_artifacts:
-    - CausalGraphTheory/GaugeObservables.lean
-    python_artifacts: []
+    - CausalGraphTheory/StrongCoupling.lean
+    - alpha_s_fano_bound
+    - alpha_s_proxy_overestimates_pdg_proof
+    - alpha_s_proxy_overestimates
+    python_artifacts:
+    - calc/test_strong_alpha.py
     battery_artifacts:
     - calc/test_constants.py::TestAlphaStrong::test_alpha_strong_candidate_is_stab_ratio
     - calc/estimate_alpha_strong.py
@@ -1384,8 +1434,8 @@ rows:
     projection_sensitivity: sensitive
     equivalence_mode: none
     equivalence_artifact: ''
-    evidence_level: lean_proved
-    last_verified_at: '2026-02-26T22:31:09.375869Z'
+    evidence_level: mixed:lean_proved+python_verified
+    last_verified_at: '2026-02-27T01:15:51.573119Z'
     owner_rfc: rfc/STRONG-001_Closure_Tasklist.md
     notes: source=STRONG-001.yml | backfill=priority_v1
     confinement_relevant: false

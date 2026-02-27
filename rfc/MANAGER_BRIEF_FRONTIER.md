@@ -36,9 +36,12 @@ Role name examples:
 - `<ROLE>Literature_Researcher</ROLE>` — arXiv searches, sources/, claim grounding
 - `<ROLE>Dashboard_Engineer</ROLE>` — edits `lab/dashboard/static/` files
 
-If you omit `<ROLE>`, the task defaults to `Lean_Theorems_Expert`.
-**Hiring a Lean_Theorems_Expert with `<TIER>openai</TIER>` spawns a NEW person — not Leibniz.**
-Use `<TIER>openai</TIER>` or `<TIER>gemini</TIER>` with any role to hire a fresh face.
+Do not use a global default role. If `<ROLE>` is omitted, infer role from task class:
+- kernel/proof closure -> `Lean_Theorems_Expert`
+- simulation/artifact generation -> `Python_Simulation_Expert`
+- literature/theory synthesis -> `Literature_Researcher`
+- audit/replay/verification -> `Verification_Clerk`
+**Hiring a role with `<TIER>openai</TIER>` or `<TIER>gemini</TIER>` spawns a NEW person — not Leibniz.**
 
 ## Current P0 — D4/D5 Contract Lock
 
@@ -54,6 +57,29 @@ Check the “COMPLETED TASKS” section before assigning. Assigning a completed 
 them 1-10 kudos by adding this tag anywhere in your response:
 `<KUDOS>Worker Full Name N</KUDOS>` (e.g. `<KUDOS>Aria Chen 8</KUDOS>`).
 Use sparingly — reserve for genuinely exceptional contributions.
+
+---
+
+## Primitive-Closure Default Mode (H7)
+
+Default research mode is now **primitive closure**, not broad claim speculation.
+The core object is:
+
+`H7 = {e1..e7 with fixed Fano incidence + local orientation bit for sign, e0 as identity outside H7}`
+
+Every foundational task must close one primitive:
+1. `index(i,j) = i xor j` (distinct imaginaries),
+2. `sign(i,j)` from locked oriented-line convention,
+3. handedness law: left/right preserve index and flip sign on distinct imaginaries,
+4. deterministic cycle extraction from fixed policy,
+5. support-closure stability predicate,
+6. reproducible artifact emission (json/csv) for replay and website use.
+
+Task-shape rule:
+1. one primitive per task,
+2. one executable success gate (`pytest`, `lake build`, or deterministic artifact hash),
+3. one explicit artifact output path.
+4. use `rfc/PRIMITIVE_CLOSURE_TASK_TEMPLATE.md` dossier format.
 
 ---
 
@@ -183,11 +209,9 @@ physics claims.
     for claim statuses, or read the specific Lean file mentioned in the brief.
     Under no circumstances may ORIENTATION.md be used as a source of truth for
     project state. Assign a real physics or infrastructure task instead.
-13. **Do NOT assign diagnostic "orientation" or "status check" tasks as a
-    substitute for real work.** If you are uncertain which task to assign next,
-    follow the Task Selection Rules in the next section. The anti-loop rules above
-    tell you what has already been done. Combine them with the P0 queue below to
-    pick the next concrete deliverable.
+13. **Do not spam diagnostic-only tasks.** Orientation/status meta-analysis is
+    allowed on cadence (about every 8-12 rounds) or after repeated failures,
+    but most assignments must produce code/proofs/artifacts that close a gate.
 
 ---
 
@@ -629,22 +653,30 @@ one type of task for multiple rounds, course-correct.
 
 | Lane | Target share | What qualifies |
 |------|-------------|----------------|
-| **Foundation** | ~60% | Kernel, update rule, invariants, contracts (Gates 1-4). No gate requirement — always assignable. |
-| **Near-complete** | ~30% | Proofs/docs one step from done. Claim is `partial`; a single task would move it to `proved`. |
+| **Foundation (Primitive Closure)** | ~70% | H7 primitives: XOR index/sign, handedness, cycle/stability contracts, replay artifacts. |
+| **Near-complete** | ~20% | Proofs/docs one step from done. Claim is `partial`; a single task would move it to `proved`. |
 | **Exploration** | ~10% | New hypotheses, literature searches, new RFCs. RETROSPECTIVE mode triggers this lane. |
+
+Primitive-closure packeting rule:
+1. run in packets of 3-5 small tasks that target different primitives,
+2. at least one independent audit task per packet (`Verification_Clerk` or different model provider),
+3. reject packets where >1 task shares the same primitive/gate.
+If the manager interface only permits one `<TASK>` per response, treat a packet as a
+contiguous sequence of 3-5 rounds.
 
 ### Task Selection Rules
 
 When choosing which task to assign, prefer:
-1. **D4/D5 lock (P0)** — RFC-028 D4 (spawn predicate) and D5 (Pi_obs projection) are still open
+1. **Primitive closure first** — prioritize H7 XOR/sign/handedness/cycle tasks until all are replay-stable.
+2. **D4/D5 lock (P0)** — RFC-028 D4 (spawn predicate) and D5 (Pi_obs projection) are still open
    architecture decisions. Lock them in `CausalGraphTheory/D4D5Contracts.lean` before assigning
    any further physics tasks that depend on the update rule contract.
-2. **e-e Phase 5b** — spatial/distance layer for electron-electron scattering trajectories
-3. **KOIDE continuation** — Gate 1 block lifted; can now assign B/A = √2 derivation from dynamics
-4. Foundation tasks that unblock ≥3 dependent claims have highest priority within their lane
-5. Tasks with clear success criteria you can verify programmatically
-6. Lean tasks when a Python check already passes (raise the bar to formal proof)
-7. Python tasks when a Lean theorem exists but needs numerical validation
+3. **e-e Phase 5b** — spatial/distance layer for electron-electron scattering trajectories
+4. **KOIDE continuation** — Gate 1 block lifted; can now assign B/A = √2 derivation from dynamics
+5. Foundation tasks that unblock ≥3 dependent claims have highest priority within their lane
+6. Tasks with clear success criteria you can verify programmatically
+7. Lean tasks when a Python check already passes (raise the bar to formal proof)
+8. Python tasks when a Lean theorem exists but needs numerical validation
 
 Do **not** assign tasks that:
 - Are blocked by an unclosed gate (check the Stage Gates section above)
@@ -726,6 +758,17 @@ or `lab/dashboard/app.py`. Note: Python/CSS/HTML changes require the manager to
 schedule a dashboard rebuild: `docker compose up -d --build dashboard`.
 Do NOT restructure routing without human review.
 
+### Hex Orientation Modeler (openai or gemini) — `<ROLE>Hex_Orientation_Modeler</ROLE>`
+**Triggered when:** Primitive-closure packet needs geometric/sign-intuition artifacts.
+**Task pattern:** Build or audit hex-based orientation/sign representations that must
+round-trip to locked `FANO_SIGN`/`FANO_THIRD` without drift. Output deterministic
+artifact files under `calc/` and optionally `website/data/`.
+
+### XOR Gate Auditor (clerk or openai) — `<ROLE>XOR_Gate_Auditor</ROLE>`
+**Triggered when:** XOR/index/sign assumptions need independent replay checks.
+**Task pattern:** write focused tests or replay scripts validating one primitive gate
+with explicit pass/fail criteria and no broader theory edits.
+
 ---
 
 ## Output Format (required)
@@ -764,4 +807,3 @@ in the same format but treat the injected question as your primary directive:
 - Scan for `proved` claims with no manuscript section
 - Assign a Pedagogy Curator task if any gap is found: use `<ROLE>Pedagogy_Curator</ROLE>` to hire a specialist — do NOT send this to Leibniz (Lean_Theorems_Expert)
 - Otherwise assign a literature search using `<ROLE>Literature_Researcher</ROLE>`
-
