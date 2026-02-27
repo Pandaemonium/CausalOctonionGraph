@@ -1,0 +1,30 @@
+id: PROTON-001
+title: "Proton Color Structure: uud Quark Coloring as Non-Collinear Fano Triple"
+status: partial
+description: >
+  In the COG model, quark color charge is assigned by a FanoPoint label on each
+  NodeStateV2. A valid proton (uud) color assignment requires three distinct
+  FanoPoints {p1, p2, p3} such that no two share a Fano line with the third
+  (non-collinear triple). This claim proves that such a triple exists in the
+  7-point Fano plane and that it is unique up to the automorphism group GL(3,2).
+physical_prediction: >
+  The 3-color degrees of freedom of a confined quark triplet are in bijection with
+  non-collinear Fano triples. The count of such triples (28 in PG(2,2)) matches the
+  dimension of the adjoint representation of SU(3) up to a factor.
+gates:
+  gate_1:
+    description: "Python: enumerate non-collinear Fano triples, count = 28"
+    status: open
+  gate_2:
+    description: "Lean: prove existence of at least one non-collinear Fano triple"
+    status: open
+  gate_3:
+    description: "Lean: prove all such triples are GL(3,2)-conjugate (single orbit)"
+    status: open
+lean_file: CausalGraphTheory/ProtonColor.lean
+python_test: calc/test_proton_color_structure.py
+notes:
+  - "Fano lines: the 7 lines of PG(2,2) each contain exactly 3 of the 7 points."
+  - "A collinear triple is one that lies on a single Fano line."
+  - "Non-collinear triples: C(7,3) - 7 = 35 - 7 = 28."
+  - "This count 28 = dim(su(3)) as adjoint rep — a non-trivial coincidence to explain."

@@ -1,0 +1,622 @@
+{
+  "schema_version": "xor_e7_muon_ablation_scan_v1",
+  "generated_at_utc": "2026-02-27T15:23:59.384342Z",
+  "rfc_scope": "RFC-068 pre-model preparation",
+  "conditions_path": "calc/e7_muon_ablation_conditions.json",
+  "conditions_hash": "1b71f89f1c8457a7e93c18f5c20a1b87824351c5070ff1c777568ba53eee24b2",
+  "baseline_case_id": "electron_electron",
+  "config": {
+    "depth_horizon": 12,
+    "initial_edge_distance": 5,
+    "background_id": "vacuum_doubled"
+  },
+  "cases": [
+    {
+      "case_id": "electron_electron",
+      "left_motif_id": "furey_electron_doubled",
+      "right_motif_id": "furey_electron_doubled",
+      "simulation_replay_hash": "42dc7be7716afbf77bcde9d3446e5f4c5961d15b8da68c463a7ac27ff386fe27",
+      "projection_profile": [
+        {
+          "depth": 0,
+          "node_count": 6,
+          "e7_projection_load": 20,
+          "e0_scalar_load": 20,
+          "e7_projection_avg": 3.3333333333333335,
+          "e0_scalar_avg": 3.3333333333333335
+        },
+        {
+          "depth": 1,
+          "node_count": 8,
+          "e7_projection_load": 8,
+          "e0_scalar_load": 8,
+          "e7_projection_avg": 1.0,
+          "e0_scalar_avg": 1.0
+        },
+        {
+          "depth": 2,
+          "node_count": 10,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 3,
+          "node_count": 12,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 4,
+          "node_count": 14,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 5,
+          "node_count": 16,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 6,
+          "node_count": 18,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 7,
+          "node_count": 20,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 8,
+          "node_count": 22,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 9,
+          "node_count": 24,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 10,
+          "node_count": 26,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 11,
+          "node_count": 28,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 12,
+          "node_count": 30,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        }
+      ],
+      "summary": {
+        "initial_e7_projection_load": 20,
+        "final_e7_projection_load": 0,
+        "net_e7_projection_delta": -20,
+        "e7_projection_total_variation": 20,
+        "initial_e0_scalar_load": 20,
+        "final_e0_scalar_load": 0,
+        "net_e0_scalar_delta": -20,
+        "cumulative_projected_ablation_vs_baseline": 0
+      },
+      "projected_e7_ablation": [
+        {
+          "depth": 0,
+          "baseline_e7_projection_load": 20,
+          "case_e7_projection_load": 20,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 1,
+          "baseline_e7_projection_load": 8,
+          "case_e7_projection_load": 8,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 2,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 3,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 4,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 5,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 6,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 7,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 8,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 9,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 10,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 11,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 12,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        }
+      ]
+    },
+    {
+      "case_id": "muon_candidate_electron",
+      "left_motif_id": "su_double_12",
+      "right_motif_id": "furey_electron_doubled",
+      "simulation_replay_hash": "8602fd0dab7744087280f3d098c58ad0a22200933de645472eba821979bac7ba",
+      "projection_profile": [
+        {
+          "depth": 0,
+          "node_count": 6,
+          "e7_projection_load": 12,
+          "e0_scalar_load": 12,
+          "e7_projection_avg": 2.0,
+          "e0_scalar_avg": 2.0
+        },
+        {
+          "depth": 1,
+          "node_count": 8,
+          "e7_projection_load": 8,
+          "e0_scalar_load": 8,
+          "e7_projection_avg": 1.0,
+          "e0_scalar_avg": 1.0
+        },
+        {
+          "depth": 2,
+          "node_count": 10,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 3,
+          "node_count": 12,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 4,
+          "node_count": 14,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 5,
+          "node_count": 16,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 6,
+          "node_count": 18,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 7,
+          "node_count": 20,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 8,
+          "node_count": 22,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 9,
+          "node_count": 24,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 10,
+          "node_count": 26,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 11,
+          "node_count": 28,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 12,
+          "node_count": 30,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        }
+      ],
+      "summary": {
+        "initial_e7_projection_load": 12,
+        "final_e7_projection_load": 0,
+        "net_e7_projection_delta": -12,
+        "e7_projection_total_variation": 12,
+        "initial_e0_scalar_load": 12,
+        "final_e0_scalar_load": 0,
+        "net_e0_scalar_delta": -12,
+        "cumulative_projected_ablation_vs_baseline": 8
+      },
+      "projected_e7_ablation": [
+        {
+          "depth": 0,
+          "baseline_e7_projection_load": 20,
+          "case_e7_projection_load": 12,
+          "projected_ablation_vs_baseline": 8
+        },
+        {
+          "depth": 1,
+          "baseline_e7_projection_load": 8,
+          "case_e7_projection_load": 8,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 2,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 3,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 4,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 5,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 6,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 7,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 8,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 9,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 10,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 11,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 12,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        }
+      ]
+    },
+    {
+      "case_id": "tau_candidate_electron",
+      "left_motif_id": "su_single_1",
+      "right_motif_id": "furey_electron_doubled",
+      "simulation_replay_hash": "cae702e62ab394b7ba0f1cb40d85e05441ac2580fd70b2d1bfe426a2ed6e8ab0",
+      "projection_profile": [
+        {
+          "depth": 0,
+          "node_count": 6,
+          "e7_projection_load": 12,
+          "e0_scalar_load": 12,
+          "e7_projection_avg": 2.0,
+          "e0_scalar_avg": 2.0
+        },
+        {
+          "depth": 1,
+          "node_count": 8,
+          "e7_projection_load": 8,
+          "e0_scalar_load": 8,
+          "e7_projection_avg": 1.0,
+          "e0_scalar_avg": 1.0
+        },
+        {
+          "depth": 2,
+          "node_count": 10,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 3,
+          "node_count": 12,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 4,
+          "node_count": 14,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 5,
+          "node_count": 16,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 6,
+          "node_count": 18,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 7,
+          "node_count": 20,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 8,
+          "node_count": 22,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 9,
+          "node_count": 24,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 10,
+          "node_count": 26,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 11,
+          "node_count": 28,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        },
+        {
+          "depth": 12,
+          "node_count": 30,
+          "e7_projection_load": 0,
+          "e0_scalar_load": 0,
+          "e7_projection_avg": 0.0,
+          "e0_scalar_avg": 0.0
+        }
+      ],
+      "summary": {
+        "initial_e7_projection_load": 12,
+        "final_e7_projection_load": 0,
+        "net_e7_projection_delta": -12,
+        "e7_projection_total_variation": 12,
+        "initial_e0_scalar_load": 12,
+        "final_e0_scalar_load": 0,
+        "net_e0_scalar_delta": -12,
+        "cumulative_projected_ablation_vs_baseline": 8
+      },
+      "projected_e7_ablation": [
+        {
+          "depth": 0,
+          "baseline_e7_projection_load": 20,
+          "case_e7_projection_load": 12,
+          "projected_ablation_vs_baseline": 8
+        },
+        {
+          "depth": 1,
+          "baseline_e7_projection_load": 8,
+          "case_e7_projection_load": 8,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 2,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 3,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 4,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 5,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 6,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 7,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 8,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 9,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 10,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 11,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        },
+        {
+          "depth": 12,
+          "baseline_e7_projection_load": 0,
+          "case_e7_projection_load": 0,
+          "projected_ablation_vs_baseline": 0
+        }
+      ]
+    }
+  ],
+  "suite_replay_hash": "895d45d2141451343a51b52ee4ce45fbda72bd394d18670e8bc4bbf6dda08845"
+}

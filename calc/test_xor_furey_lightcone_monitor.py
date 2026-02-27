@@ -8,6 +8,8 @@ import csv
 import json
 from pathlib import Path
 
+import pytest
+
 from calc.xor_furey_lightcone_monitor import (
     PredeterminedLightconeSpec,
     build_predetermined_lightcone,
@@ -89,3 +91,13 @@ def test_write_artifacts(tmp_path: Path):
     assert len(rows) > 0
     assert "distance_future" in rows[0]
     assert "interaction_occurred" in rows[0]
+
+
+def test_non_integer_initial_edge_distance_rejected() -> None:
+    with pytest.raises(TypeError, match="initial_edge_distance must be an integer"):
+        run_pair_on_predetermined_lightcone(
+            left_state=furey_electron_doubled(),
+            right_state=furey_electron_doubled(),
+            depth_horizon=8,
+            initial_edge_distance=3.25,  # type: ignore[arg-type]
+        )

@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "claim_id": "ALPHA-001",
+  "mode": "deterministic_full_cone_preconditioned",
+  "target": {
+    "source": "CODATA-2022",
+    "scale": "Q->0",
+    "alpha": 0.0072973525693
+  },
+  "kernel": {
+    "update_rule": "xor_full_lightcone_engine_v1",
+    "interaction_scope": "full_past_lightcone_all_contributors",
+    "distance_semantics": "edge_separation_count",
+    "time_semantics": "topological_depth",
+    "no_spawn": true,
+    "full_lightcone_preconditioned": true
+  },
+  "mass_normalization": {
+    "policy_id": "unit_reduced_mass_proxy_v1",
+    "mu_eff": 1.0
+  },
+  "signal_channel": {
+    "channel_id": "electron_electron",
+    "left_motif_id": "furey_electron_doubled",
+    "right_motif_id": "furey_electron_doubled"
+  },
+  "control_channel": {
+    "enabled": true,
+    "channel_id": "electron_identity_control",
+    "left_motif_id": "furey_electron_doubled",
+    "right_motif_id": "identity_e0"
+  },
+  "initial_edge_distances": [
+    1,
+    3,
+    5
+  ],
+  "depth_horizon_rule": {
+    "type": "linear",
+    "slope": 1,
+    "intercept": 6,
+    "min_depth": 8
+  },
+  "phase_event_rule": {
+    "definition": "relative_phase_change_between_tracked_electron_motifs",
+    "phase_channels": [
+      "e7"
+    ]
+  },
+  "phase_offsets": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "governance": {
+    "predeclared_only": true,
+    "no_fitted_attenuation": true,
+    "no_output_driven_selection": true
+  }
+}

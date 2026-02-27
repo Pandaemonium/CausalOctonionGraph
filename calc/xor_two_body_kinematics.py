@@ -29,6 +29,12 @@ from calc.xor_charge_sign_interaction_matrix import (
 from calc.xor_furey_ideals import StateGI, furey_dual_electron_doubled, furey_electron_doubled
 
 
+def _require_int(name: str, value: Any) -> int:
+    if not isinstance(value, int) or isinstance(value, bool):
+        raise TypeError(f"{name} must be an integer")
+    return int(value)
+
+
 def _to_base8(n: int) -> str:
     sign = "-" if n < 0 else ""
     return sign + format(abs(n), "o")
@@ -68,6 +74,7 @@ def initial_two_body_state(
     right_state: StateGI,
     edge_distance: int,
 ) -> TwoBodyKinematicsState:
+    edge_distance = _require_int("edge_distance", edge_distance)
     if edge_distance < 1:
         raise ValueError("edge_distance must be >= 1")
     return TwoBodyKinematicsState(
@@ -146,6 +153,7 @@ def step_two_body(state: TwoBodyKinematicsState) -> TwoBodyKinematicsState:
 
 
 def run_two_body_trajectory(initial: TwoBodyKinematicsState, steps: int) -> List[TwoBodyKinematicsState]:
+    steps = _require_int("steps", steps)
     if steps < 0:
         raise ValueError("steps must be >= 0")
     out = [initial]
@@ -172,6 +180,8 @@ def _snapshot_row(st: TwoBodyKinematicsState) -> Dict[str, Any]:
 
 
 def run_builtin_two_body_cases(steps: int = 24, edge_distance: int = 1) -> Dict[str, Any]:
+    steps = _require_int("steps", steps)
+    edge_distance = _require_int("edge_distance", edge_distance)
     same = initial_two_body_state(
         left_state=furey_electron_doubled(),
         right_state=furey_electron_doubled(),
@@ -271,4 +281,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

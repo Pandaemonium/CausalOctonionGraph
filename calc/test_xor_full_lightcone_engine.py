@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import pytest
+
 from calc.xor_full_lightcone_engine import (
     run_builtin_full_lightcone_cases,
     simulate_full_lightcone,
@@ -76,3 +78,13 @@ def test_builtin_case_keys() -> None:
     assert ds["schema_version"] == "xor_full_lightcone_cases_v1"
     assert set(ds["cases"].keys()) == {"electron_electron", "electron_positron"}
 
+
+def test_non_integer_edge_distance_rejected() -> None:
+    with pytest.raises(TypeError, match="initial_edge_distance must be an integer"):
+        simulate_full_lightcone(
+            channel_id="electron_electron",
+            depth_horizon=8,
+            initial_edge_distance=2.5,  # type: ignore[arg-type]
+            left_motif_id="furey_electron_doubled",
+            right_motif_id="furey_electron_doubled",
+        )

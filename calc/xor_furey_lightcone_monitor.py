@@ -31,6 +31,12 @@ from calc.xor_two_body_kinematics import (
 )
 
 
+def _require_int(name: str, value: Any) -> int:
+    if not isinstance(value, int) or isinstance(value, bool):
+        raise TypeError(f"{name} must be an integer")
+    return int(value)
+
+
 def _to_base8(n: int) -> str:
     sign = "-" if n < 0 else ""
     return sign + format(abs(n), "o")
@@ -53,23 +59,28 @@ def build_predetermined_lightcone(spec: PredeterminedLightconeSpec) -> Dict[str,
       [min_position_depth0 - d, max_position_depth0 + d]
     which is the future cone of the initial interval.
     """
-    if spec.depth_horizon < 0:
+    depth_horizon = _require_int("depth_horizon", spec.depth_horizon)
+    initial_edge_distance = _require_int("initial_edge_distance", spec.initial_edge_distance)
+    min_position_depth0 = _require_int("min_position_depth0", spec.min_position_depth0)
+    max_position_depth0 = _require_int("max_position_depth0", spec.max_position_depth0)
+
+    if depth_horizon < 0:
         raise ValueError("depth_horizon must be >= 0")
-    if spec.initial_edge_distance < 1:
+    if initial_edge_distance < 1:
         raise ValueError("initial_edge_distance must be >= 1")
-    if spec.min_position_depth0 > spec.max_position_depth0:
+    if min_position_depth0 > max_position_depth0:
         raise ValueError("min_position_depth0 must be <= max_position_depth0")
 
     depths: List[Dict[str, int]] = []
     total_nodes = 0
     total_edges = 0
 
-    for depth in range(spec.depth_horizon + 1):
-        min_pos = spec.min_position_depth0 - depth
-        max_pos = spec.max_position_depth0 + depth
+    for depth in range(depth_horizon + 1):
+        min_pos = min_position_depth0 - depth
+        max_pos = max_position_depth0 + depth
         node_count = max_pos - min_pos + 1
         # Two outgoing causal edges per node except at final depth.
-        edge_count = 0 if depth == spec.depth_horizon else 2 * node_count
+        edge_count = 0 if depth == depth_horizon else 2 * node_count
         total_nodes += node_count
         total_edges += edge_count
         depths.append(
@@ -85,10 +96,10 @@ def build_predetermined_lightcone(spec: PredeterminedLightconeSpec) -> Dict[str,
     return {
         "schema_version": "predetermined_lightcone_v1",
         "description": spec.description,
-        "depth_horizon": spec.depth_horizon,
-        "initial_edge_distance": spec.initial_edge_distance,
-        "min_position_depth0": spec.min_position_depth0,
-        "max_position_depth0": spec.max_position_depth0,
+        "depth_horizon": depth_horizon,
+        "initial_edge_distance": initial_edge_distance,
+        "min_position_depth0": min_position_depth0,
+        "max_position_depth0": max_position_depth0,
         "total_nodes": total_nodes,
         "total_edges": total_edges,
         "depths": depths,
@@ -136,6 +147,8 @@ def run_pair_on_predetermined_lightcone(
     depth_horizon: int,
     initial_edge_distance: int,
 ) -> Dict[str, Any]:
+    depth_horizon = _require_int("depth_horizon", depth_horizon)
+    initial_edge_distance = _require_int("initial_edge_distance", initial_edge_distance)
     if depth_horizon < 0:
         raise ValueError("depth_horizon must be >= 0")
     if initial_edge_distance < 1:
@@ -201,6 +214,8 @@ def run_pair_on_predetermined_lightcone(
 
 
 def run_builtin_furey_lightcone_cases(depth_horizon: int = 40, initial_edge_distance: int = 5) -> Dict[str, Any]:
+    depth_horizon = _require_int("depth_horizon", depth_horizon)
+    initial_edge_distance = _require_int("initial_edge_distance", initial_edge_distance)
     same = run_pair_on_predetermined_lightcone(
         left_state=furey_electron_doubled(),
         right_state=furey_electron_doubled(),

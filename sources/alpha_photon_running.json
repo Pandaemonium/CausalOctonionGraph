@@ -1,0 +1,190 @@
+{
+  "conditions_checksum": "3c4cd3b4dc19b37e2b61a97ee1d6bc73bd2e85a12e7c5db45afe781c6bf00c18",
+  "generated_at_utc": "2026-02-27T14:41:50.669847Z",
+  "replay_hash": "c910e0216b1f0b44f16722fb5758d6d14395f29d2cf851886d1e094665e78d01",
+  "rows": [
+    {
+      "alpha_em_mad": 0.625,
+      "alpha_em_median": 2.0,
+      "depth_horizon": 8,
+      "initial_edge_distance": 1,
+      "phase_offsets": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase_results": [
+        {
+          "alpha_control": null,
+          "alpha_em": null,
+          "alpha_signal": null,
+          "phase_offset": 0,
+          "signal_alpha_sample_count": 0,
+          "signal_event_count": 0,
+          "signal_replay_hash": "add8d7a67ff8420437f387d5747d261fc50551e1d71baa910f90fb0d0c5aa376"
+        },
+        {
+          "alpha_control": null,
+          "alpha_em": 2.0,
+          "alpha_signal": 2.0,
+          "phase_offset": 1,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "91576d8c8e829b0a1682f85e75cd55203e3e8f52643ef7945a45fa950f9ace3c"
+        },
+        {
+          "alpha_control": null,
+          "alpha_em": 2.6666666666666665,
+          "alpha_signal": 2.6666666666666665,
+          "phase_offset": 2,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "764bb03f95e2f9c114e2ad27b6237cc071443fba60baff537816a9b360c4e5a2"
+        },
+        {
+          "alpha_control": 0.625,
+          "alpha_em": 1.375,
+          "alpha_signal": 2.0,
+          "phase_offset": 3,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "9196190f121f110fdc18ec4c5572bdd174f2f4aad32ebebde2df7d98f44c47d3"
+        }
+      ],
+      "phase_valid_count": 3,
+      "signal_replay_hashes": [
+        "add8d7a67ff8420437f387d5747d261fc50551e1d71baa910f90fb0d0c5aa376",
+        "91576d8c8e829b0a1682f85e75cd55203e3e8f52643ef7945a45fa950f9ace3c",
+        "764bb03f95e2f9c114e2ad27b6237cc071443fba60baff537816a9b360c4e5a2",
+        "9196190f121f110fdc18ec4c5572bdd174f2f4aad32ebebde2df7d98f44c47d3"
+      ]
+    },
+    {
+      "alpha_em_mad": 0.28000000000000025,
+      "alpha_em_median": -5.88,
+      "depth_horizon": 9,
+      "initial_edge_distance": 3,
+      "phase_offsets": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase_results": [
+        {
+          "alpha_control": 7.0,
+          "alpha_em": null,
+          "alpha_signal": null,
+          "phase_offset": 0,
+          "signal_alpha_sample_count": 0,
+          "signal_event_count": 0,
+          "signal_replay_hash": "ef875993d69a49c076502f18e613674c867a82d5ca27814198a56d4f93116713"
+        },
+        {
+          "alpha_control": 7.0,
+          "alpha_em": -6.16,
+          "alpha_signal": 0.84,
+          "phase_offset": 1,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "4ccede16406e5d276684b5a19c639d8490eaa3f5e000a1212083bd42e25ec24c"
+        },
+        {
+          "alpha_control": 7.0,
+          "alpha_em": -5.88,
+          "alpha_signal": 1.12,
+          "phase_offset": 2,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "2ec09c0f67a1c11d3d8eb5f5a7b1329d2b9f3a691518bc00ea6d6895f9783335"
+        },
+        {
+          "alpha_control": null,
+          "alpha_em": 0.84,
+          "alpha_signal": 0.84,
+          "phase_offset": 3,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "ead8ab6a4f612ddf0651eb14e78170d12b3195d55a59defd6ba4bbeb11f98c84"
+        }
+      ],
+      "phase_valid_count": 3,
+      "signal_replay_hashes": [
+        "ef875993d69a49c076502f18e613674c867a82d5ca27814198a56d4f93116713",
+        "4ccede16406e5d276684b5a19c639d8490eaa3f5e000a1212083bd42e25ec24c",
+        "2ec09c0f67a1c11d3d8eb5f5a7b1329d2b9f3a691518bc00ea6d6895f9783335",
+        "ead8ab6a4f612ddf0651eb14e78170d12b3195d55a59defd6ba4bbeb11f98c84"
+      ]
+    },
+    {
+      "alpha_em_mad": 0.18367346938775597,
+      "alpha_em_median": -8.26530612244898,
+      "depth_horizon": 11,
+      "initial_edge_distance": 5,
+      "phase_offsets": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase_results": [
+        {
+          "alpha_control": 9.0,
+          "alpha_em": null,
+          "alpha_signal": null,
+          "phase_offset": 0,
+          "signal_alpha_sample_count": 0,
+          "signal_event_count": 0,
+          "signal_replay_hash": "2b55b9b10abfcb91f60efb60cd896721e8b5004ce228c849b1c1bc37ad260ce0"
+        },
+        {
+          "alpha_control": 9.0,
+          "alpha_em": -8.448979591836736,
+          "alpha_signal": 0.5510204081632653,
+          "phase_offset": 1,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "10f7b7c5ed398ce71c0df49e362cb16ab1402c80364fa89d8ac5983da2e03165"
+        },
+        {
+          "alpha_control": 9.0,
+          "alpha_em": -8.26530612244898,
+          "alpha_signal": 0.7346938775510204,
+          "phase_offset": 2,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "789acb129fac0372e4fe07155c40a0590ea755e4b123465be7528286ef17864a"
+        },
+        {
+          "alpha_control": null,
+          "alpha_em": 0.5510204081632653,
+          "alpha_signal": 0.5510204081632653,
+          "phase_offset": 3,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "4f2b99e0e7337196fa5048942e9731686967651b481b6e0e4ef4117f60b50e7b"
+        }
+      ],
+      "phase_valid_count": 3,
+      "signal_replay_hashes": [
+        "2b55b9b10abfcb91f60efb60cd896721e8b5004ce228c849b1c1bc37ad260ce0",
+        "10f7b7c5ed398ce71c0df49e362cb16ab1402c80364fa89d8ac5983da2e03165",
+        "789acb129fac0372e4fe07155c40a0590ea755e4b123465be7528286ef17864a",
+        "4f2b99e0e7337196fa5048942e9731686967651b481b6e0e4ef4117f60b50e7b"
+      ]
+    }
+  ],
+  "schema_version": "alpha_photon_running_v1",
+  "summary": {
+    "ir_alpha_em": -8.26530612244898,
+    "ir_distance": 5,
+    "mu_eff": 1.0,
+    "pooled_alpha_em_mad": 2.1156462585034013,
+    "pooled_alpha_em_median": 0.5510204081632653,
+    "pooled_relative_gap_to_target": 74.5096321481589,
+    "target_alpha": 0.0072973525693,
+    "uv_alpha_em": 2.0,
+    "uv_distance": 1
+  }
+}

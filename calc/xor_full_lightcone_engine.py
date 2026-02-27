@@ -27,9 +27,17 @@ from calc.xor_furey_ideals import (
     StateGI,
     furey_dual_electron_doubled,
     furey_electron_doubled,
+    ideal_sd_basis_doubled,
+    ideal_su_basis_doubled,
     state_basis,
     vacuum_doubled,
 )
+
+
+def _require_int(name: str, value: Any) -> int:
+    if not isinstance(value, int) or isinstance(value, bool):
+        raise TypeError(f"{name} must be an integer")
+    return int(value)
 
 
 def _sha(payload: Any) -> str:
@@ -70,13 +78,16 @@ def _background_state(background_id: str) -> StateGI:
 
 
 def _motif_state(motif_id: str) -> StateGI:
-    if motif_id == "furey_electron_doubled":
-        return furey_electron_doubled()
-    if motif_id == "furey_dual_electron_doubled":
-        return furey_dual_electron_doubled()
-    if motif_id == "identity_e0":
-        return state_basis(0, (1, 0))
-    raise KeyError(f"unknown motif_id: {motif_id}")
+    motifs: Dict[str, StateGI] = {
+        "furey_electron_doubled": furey_electron_doubled(),
+        "furey_dual_electron_doubled": furey_dual_electron_doubled(),
+        "identity_e0": state_basis(0, (1, 0)),
+    }
+    motifs.update(ideal_su_basis_doubled())
+    motifs.update(ideal_sd_basis_doubled())
+    if motif_id not in motifs:
+        raise KeyError(f"unknown motif_id: {motif_id}")
+    return motifs[motif_id]
 
 
 def _ordered_contributors(
@@ -117,6 +128,9 @@ def _simulate_raw(
     right_state: StateGI,
     background: StateGI,
 ) -> Dict[str, Any]:
+    depth_horizon = _require_int("depth_horizon", depth_horizon)
+    min_pos0 = _require_int("min_pos0", min_pos0)
+    max_pos0 = _require_int("max_pos0", max_pos0)
     if depth_horizon < 0:
         raise ValueError("depth_horizon must be >= 0")
     if min_pos0 >= max_pos0:
@@ -176,6 +190,10 @@ def simulate_full_lightcone(
     left_precommit_ticks: int = 0,
     right_precommit_ticks: int = 0,
 ) -> Dict[str, Any]:
+    depth_horizon = _require_int("depth_horizon", depth_horizon)
+    initial_edge_distance = _require_int("initial_edge_distance", initial_edge_distance)
+    left_precommit_ticks = _require_int("left_precommit_ticks", left_precommit_ticks)
+    right_precommit_ticks = _require_int("right_precommit_ticks", right_precommit_ticks)
     if initial_edge_distance < 1:
         raise ValueError("initial_edge_distance must be >= 1")
     min_pos0 = 0

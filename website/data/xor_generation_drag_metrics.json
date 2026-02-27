@@ -1,0 +1,449 @@
+{
+  "schema_version": "xor_generation_drag_metrics_v1",
+  "generated_at_utc": "2026-02-27T15:23:59.467513Z",
+  "rfc": "RFC-068",
+  "mapping_path": "calc/generation_drag_motif_mapping.json",
+  "mapping_hash": "37b28b51a5980dee59affe1f0311e28ae69b8ec053c213e7a05554b6ee132e87",
+  "baseline_label": "electron",
+  "config": {
+    "depth_horizon": 12,
+    "initial_edge_distance": 5,
+    "background_id": "vacuum_doubled"
+  },
+  "cases": [
+    {
+      "label": "electron",
+      "motif_id": "furey_electron_doubled",
+      "allowed_support": [
+        0,
+        7
+      ],
+      "drag_score": 369.38461538461536,
+      "simulation_replay_hash": "d69ef51e7bf5d81cc84249bcce656dc1da114d97860f82ed282e1e9b07b900bd",
+      "depth_metrics": [
+        {
+          "depth": 0,
+          "node_count": 6,
+          "S_t": 20,
+          "V_t": 20,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 0,
+          "D_t": 20
+        },
+        {
+          "depth": 1,
+          "node_count": 8,
+          "S_t": 8,
+          "V_t": 8,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 0,
+          "D_t": 8
+        },
+        {
+          "depth": 2,
+          "node_count": 10,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 14,
+          "D_t": 14
+        },
+        {
+          "depth": 3,
+          "node_count": 12,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 44,
+          "D_t": 44
+        },
+        {
+          "depth": 4,
+          "node_count": 14,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 88,
+          "D_t": 88
+        },
+        {
+          "depth": 5,
+          "node_count": 16,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 148,
+          "D_t": 148
+        },
+        {
+          "depth": 6,
+          "node_count": 18,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 226,
+          "D_t": 226
+        },
+        {
+          "depth": 7,
+          "node_count": 20,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 324,
+          "D_t": 324
+        },
+        {
+          "depth": 8,
+          "node_count": 22,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 444,
+          "D_t": 444
+        },
+        {
+          "depth": 9,
+          "node_count": 24,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 588,
+          "D_t": 588
+        },
+        {
+          "depth": 10,
+          "node_count": 26,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 758,
+          "D_t": 758
+        },
+        {
+          "depth": 11,
+          "node_count": 28,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 956,
+          "D_t": 956
+        },
+        {
+          "depth": 12,
+          "node_count": 30,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 1184,
+          "D_t": 1184
+        }
+      ],
+      "mu_eff": 1.0
+    },
+    {
+      "label": "muon_candidate",
+      "motif_id": "su_double_12",
+      "allowed_support": [
+        0,
+        3,
+        4,
+        7
+      ],
+      "drag_score": 368.15384615384613,
+      "simulation_replay_hash": "c39ec8a5bed4805a8e6b7e43ff2ac548fd0ecc4375906ea27b961dc7cc73812f",
+      "depth_metrics": [
+        {
+          "depth": 0,
+          "node_count": 6,
+          "S_t": 4,
+          "V_t": 4,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 0,
+          "D_t": 4
+        },
+        {
+          "depth": 1,
+          "node_count": 8,
+          "S_t": 8,
+          "V_t": 8,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 0,
+          "D_t": 8
+        },
+        {
+          "depth": 2,
+          "node_count": 10,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 14,
+          "D_t": 14
+        },
+        {
+          "depth": 3,
+          "node_count": 12,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 44,
+          "D_t": 44
+        },
+        {
+          "depth": 4,
+          "node_count": 14,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 88,
+          "D_t": 88
+        },
+        {
+          "depth": 5,
+          "node_count": 16,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 148,
+          "D_t": 148
+        },
+        {
+          "depth": 6,
+          "node_count": 18,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 226,
+          "D_t": 226
+        },
+        {
+          "depth": 7,
+          "node_count": 20,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 324,
+          "D_t": 324
+        },
+        {
+          "depth": 8,
+          "node_count": 22,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 444,
+          "D_t": 444
+        },
+        {
+          "depth": 9,
+          "node_count": 24,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 588,
+          "D_t": 588
+        },
+        {
+          "depth": 10,
+          "node_count": 26,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 758,
+          "D_t": 758
+        },
+        {
+          "depth": 11,
+          "node_count": 28,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 956,
+          "D_t": 956
+        },
+        {
+          "depth": 12,
+          "node_count": 30,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 1184,
+          "D_t": 1184
+        }
+      ],
+      "mu_eff": 0.9966680549770929
+    },
+    {
+      "label": "tau_candidate",
+      "motif_id": "su_single_1",
+      "allowed_support": [
+        0,
+        1,
+        6,
+        7
+      ],
+      "drag_score": 368.15384615384613,
+      "simulation_replay_hash": "c98d098e2c83b586162ad0c822b1d518e9fb252def040912cc9c73dddef7e75b",
+      "depth_metrics": [
+        {
+          "depth": 0,
+          "node_count": 6,
+          "S_t": 4,
+          "V_t": 4,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 0,
+          "D_t": 4
+        },
+        {
+          "depth": 1,
+          "node_count": 8,
+          "S_t": 8,
+          "V_t": 8,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 0,
+          "D_t": 8
+        },
+        {
+          "depth": 2,
+          "node_count": 10,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 14,
+          "D_t": 14
+        },
+        {
+          "depth": 3,
+          "node_count": 12,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 44,
+          "D_t": 44
+        },
+        {
+          "depth": 4,
+          "node_count": 14,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 88,
+          "D_t": 88
+        },
+        {
+          "depth": 5,
+          "node_count": 16,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 148,
+          "D_t": 148
+        },
+        {
+          "depth": 6,
+          "node_count": 18,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 226,
+          "D_t": 226
+        },
+        {
+          "depth": 7,
+          "node_count": 20,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 324,
+          "D_t": 324
+        },
+        {
+          "depth": 8,
+          "node_count": 22,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 444,
+          "D_t": 444
+        },
+        {
+          "depth": 9,
+          "node_count": 24,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 588,
+          "D_t": 588
+        },
+        {
+          "depth": 10,
+          "node_count": 26,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 758,
+          "D_t": 758
+        },
+        {
+          "depth": 11,
+          "node_count": 28,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 956,
+          "D_t": 956
+        },
+        {
+          "depth": 12,
+          "node_count": 30,
+          "S_t": 0,
+          "V_t": 0,
+          "M_t": 0,
+          "C_t": 0,
+          "A_t": 1184,
+          "D_t": 1184
+        }
+      ],
+      "mu_eff": 0.9966680549770929
+    }
+  ],
+  "suite_replay_hash": "2b9233264158bc7fe756d70a11495e3f88c9184ecf10d89ec0c8bfe64335e663"
+}

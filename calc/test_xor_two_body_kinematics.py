@@ -8,6 +8,8 @@ import csv
 import json
 from pathlib import Path
 
+import pytest
+
 from calc.xor_furey_ideals import furey_dual_electron_doubled, furey_electron_doubled
 from calc.xor_two_body_kinematics import (
     POLICY_LOCK,
@@ -82,3 +84,11 @@ def test_write_artifacts(tmp_path: Path):
     assert len(rows) == len(data["csv_rows"])
     assert "distance_delta" in rows[0]
 
+
+def test_non_integer_edge_distance_rejected() -> None:
+    with pytest.raises(TypeError, match="edge_distance must be an integer"):
+        initial_two_body_state(
+            furey_electron_doubled(),
+            furey_electron_doubled(),
+            edge_distance=1.5,  # type: ignore[arg-type]
+        )
