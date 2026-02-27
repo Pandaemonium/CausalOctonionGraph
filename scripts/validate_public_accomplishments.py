@@ -18,6 +18,10 @@ ACCOMPLISH_PATH = ROOT / "website" / "accomplishments.yml"
 EVENTS_PATH = ROOT / "website" / "claim_events.yml"
 
 
+def _canonical_status(status: str) -> str:
+    return "supported_bridge" if status == "supported" else status
+
+
 def _read_yaml(path: Path) -> dict[str, Any]:
     loaded = yaml.safe_load(path.read_text(encoding="utf-8"))
     if not isinstance(loaded, dict):
@@ -107,7 +111,8 @@ def main() -> int:
             continue
         card_id = str(card.get("card_id", "")).strip()
         claim_id = str(card.get("claim_id", "")).strip()
-        status = str(card.get("status", "")).strip()
+        status_raw = str(card.get("status", "")).strip()
+        status = _canonical_status(status_raw)
         evidence = card.get("evidence", {})
         last_event_id = str(card.get("last_promotion_event_id", "")).strip()
         if not card_id:
@@ -122,10 +127,10 @@ def main() -> int:
         if claim_id not in rows:
             errors.append(f"{card_id}: unknown claim_id {claim_id}")
             continue
-        matrix_status = str(rows[claim_id].get("status", ""))
+        matrix_status = _canonical_status(str(rows[claim_id].get("status", "")))
         if status != matrix_status:
-            errors.append(f"{card_id}: status mismatch for {claim_id}: card={status}, matrix={matrix_status}")
-        if matrix_status != "supported" and not card.get("gap_metric"):
+            errors.append(f"{card_id}: status mismatch for {claim_id}: card={status_raw}, matrix={matrix_status}")
+        if matrix_status not in {"supported_bridge", "proved_core"} and not card.get("gap_metric"):
             errors.append(f"{card_id}: non-supported claim must include gap_metric")
         if not isinstance(evidence, dict) or not evidence.get("claim_file"):
             errors.append(f"{card_id}: evidence.claim_file required")
@@ -156,11 +161,14 @@ def main() -> int:
                     errors.append(f"{card_id}: missing artifact path in {key}: {ref}")
 
         latest_event = latest_event_by_claim.get(claim_id)
-        if status == "supported":
+        if status in {"supported_bridge", "proved_core"}:
             if latest_event is None:
                 errors.append(f"{card_id}: supported claim must have a promotion event")
-            elif str(latest_event.get("to_status", "")).strip() != "supported":
-                errors.append(f"{card_id}: latest promotion event is not to supported")
+            elif _canonical_status(str(latest_event.get("to_status", "")).strip()) not in {
+                "supported_bridge",
+                "proved_core",
+            }:
+                errors.append(f"{card_id}: latest promotion event is not to a promoted status")
 
         if last_event_id:
             event = events_by_id.get(last_event_id)
@@ -168,7 +176,7 @@ def main() -> int:
                 errors.append(f"{card_id}: unknown last_promotion_event_id {last_event_id}")
             else:
                 event_claim_id = str(event.get("claim_id", "")).strip()
-                event_to_status = str(event.get("to_status", "")).strip()
+                event_to_status = _canonical_status(str(event.get("to_status", "")).strip())
                 if event_claim_id != claim_id:
                     errors.append(
                         f"{card_id}: last_promotion_event_id claim mismatch "
@@ -177,7 +185,7 @@ def main() -> int:
                 if event_to_status != status:
                     errors.append(
                         f"{card_id}: last_promotion_event_id status mismatch "
-                        f"(event to_status={event_to_status}, card status={status})"
+                        f"(event to_status={event_to_status}, card status={status_raw})"
                     )
 
                 last_verified_at = str(card.get("last_verified_at", "")).strip()

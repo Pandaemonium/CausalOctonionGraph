@@ -29,15 +29,21 @@ ALLOWED_STATUS = {
     "stub",
     "active_hypothesis",
     "partial",
+    "supported_bridge",
+    "proved_core",
+    # Legacy alias still accepted in event history.
     "supported",
     "falsified",
     "superseded",
 }
 ALLOWED_TRANSITIONS = {
     "stub": {"active_hypothesis", "partial", "falsified", "superseded"},
-    "active_hypothesis": {"partial", "supported", "falsified", "superseded"},
-    "partial": {"supported", "falsified", "superseded"},
-    "supported": {"falsified", "superseded"},
+    "active_hypothesis": {"partial", "supported_bridge", "proved_core", "falsified", "superseded"},
+    "partial": {"supported_bridge", "proved_core", "falsified", "superseded"},
+    "supported_bridge": {"proved_core", "falsified", "superseded"},
+    "proved_core": {"falsified", "superseded"},
+    # Legacy alias resolves to supported_bridge.
+    "supported": {"proved_core", "falsified", "superseded"},
     "falsified": set(),
     "superseded": set(),
 }
@@ -61,6 +67,10 @@ def _parse_utc(ts: str) -> datetime | None:
 
 def _is_nonempty_str(v: Any) -> bool:
     return isinstance(v, str) and bool(v.strip())
+
+
+def _canonical_status(s: str) -> str:
+    return "supported_bridge" if s == "supported" else s
 
 
 def _extract_file_ref(ref: str) -> str:
@@ -125,8 +135,10 @@ def main() -> int:
 
         event_id = str(ev.get("event_id", "")).strip()
         claim_id = str(ev.get("claim_id", "")).strip()
-        from_status = str(ev.get("from_status", "")).strip()
-        to_status = str(ev.get("to_status", "")).strip()
+        from_status_raw = str(ev.get("from_status", "")).strip()
+        to_status_raw = str(ev.get("to_status", "")).strip()
+        from_status = _canonical_status(from_status_raw)
+        to_status = _canonical_status(to_status_raw)
         promoted_at_utc = str(ev.get("promoted_at_utc", "")).strip()
 
         if not event_id:
@@ -141,12 +153,12 @@ def main() -> int:
         elif claim_id not in rows:
             errors.append(f"{ctx}: unknown claim_id '{claim_id}'")
 
-        if from_status not in ALLOWED_STATUS:
-            errors.append(f"{ctx}: invalid from_status '{from_status}'")
-        if to_status not in ALLOWED_STATUS:
-            errors.append(f"{ctx}: invalid to_status '{to_status}'")
+        if from_status_raw not in ALLOWED_STATUS:
+            errors.append(f"{ctx}: invalid from_status '{from_status_raw}'")
+        if to_status_raw not in ALLOWED_STATUS:
+            errors.append(f"{ctx}: invalid to_status '{to_status_raw}'")
         if from_status in ALLOWED_TRANSITIONS and to_status not in ALLOWED_TRANSITIONS[from_status]:
-            errors.append(f"{ctx}: disallowed transition '{from_status}' -> '{to_status}'")
+            errors.append(f"{ctx}: disallowed transition '{from_status_raw}' -> '{to_status_raw}'")
 
         ts = _parse_utc(promoted_at_utc)
         if ts is None:
@@ -223,8 +235,8 @@ def main() -> int:
         prev_to: str | None = None
         for i, ev in enumerate(ordered):
             event_id = str(ev.get("event_id", ""))
-            from_status = str(ev.get("from_status", ""))
-            to_status = str(ev.get("to_status", ""))
+            from_status = _canonical_status(str(ev.get("from_status", "")))
+            to_status = _canonical_status(str(ev.get("to_status", "")))
             if i > 0 and prev_to is not None and from_status != prev_to:
                 errors.append(
                     f"{event_id}: chain mismatch for {claim_id} "
@@ -232,8 +244,8 @@ def main() -> int:
                 )
             prev_to = to_status
 
-        latest_to_status = str(ordered[-1].get("to_status", ""))
-        matrix_status = str(rows.get(claim_id, {}).get("status", ""))
+        latest_to_status = _canonical_status(str(ordered[-1].get("to_status", "")))
+        matrix_status = _canonical_status(str(rows.get(claim_id, {}).get("status", "")))
         if matrix_status and latest_to_status != matrix_status:
             errors.append(
                 f"{claim_id}: latest event to_status={latest_to_status} "

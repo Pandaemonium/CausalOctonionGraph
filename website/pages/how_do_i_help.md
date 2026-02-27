@@ -83,8 +83,8 @@ Input format:
     "n1": ["n0"]
   },
   "init_state": {
-    "n0": [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[1,0]],
-    "n1": [[1,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]
+    "n0": [[0, 0],[0, 0],[0, 0],[0, 0],[0, 0],[0, 0],[0, 0],[1, 0]],
+    "n1": [[1, 0],[0, 0],[0, 0],[0, 0],[0, 0],[0, 0],[0, 0],[0, 0]]
   }
 }
 ```
@@ -138,11 +138,18 @@ This makes your run reproducible and useful for later extraction of constants an
 
 ---
 
-## Reporting Results (Next Step)
+## Reporting Results
 
-Public submission intake is not yet live.
+Open a GitHub issue in the repository with the label **`results`**:
 
-For now:
-1. keep your run artifacts organized locally,
-2. prefer campaign-style folders with manifest + summaries,
-3. prepare to upload once the public result reporting endpoint is enabled.
+```
+https://github.com/Pandaemonium/CausalOctonionGraph/issues/new?labels=results
+```
+
+Attach or paste:
+1. your input microstate JSON,
+2. the command you ran (input path, steps, output path),
+3. your output JSON (or a link to it),
+4. any derived analysis or summary you produced.
+
+We review all `results`-labelled issues. Interesting or unexpected outputs are prioritised for integration into the formal claim pipeline.

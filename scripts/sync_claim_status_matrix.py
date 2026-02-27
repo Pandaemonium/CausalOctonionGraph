@@ -28,6 +28,9 @@ ALLOWED_STATUS = {
     "stub",
     "active_hypothesis",
     "partial",
+    "supported_bridge",
+    "proved_core",
+    # Backward-compatible alias; migrated to supported_bridge during sync.
     "supported",
     "falsified",
     "superseded",
@@ -39,6 +42,8 @@ STATUS_MAP = {
     "active": "active_hypothesis",
     "hypothesis": "active_hypothesis",
     "revised_pending": "active_hypothesis",
+    # Governance migration: legacy supported -> explicit bridge-supported label.
+    "supported": "supported_bridge",
     # Keep this conservative to avoid automatic status inflation.
     "proved": "partial",
 }
@@ -81,6 +86,7 @@ CLAIM_BACKFILL: dict[str, dict[str, Any]] = {
         "calibration_mode": "native_only",
     },
     "LEPTON-001": {
+        "status": "active_hypothesis",
         "motif_id": "furey_lepton_orbit_v1",
         "owner_rfc": "rfc/RFC-034_Electron_Mass_Mechanism.md",
         "battery_artifacts": [
@@ -195,7 +201,9 @@ def _normalize_derivation_status(value: Any, status: str) -> str:
         return value.strip()
     if status == "falsified":
         return "falsified"
-    if status in {"supported", "partial"}:
+    if status == "proved_core":
+        return "core_derived"
+    if status in {"supported", "supported_bridge", "partial"}:
         return "bridge_assumed"
     return "untested"
 
@@ -267,6 +275,8 @@ def _row_from_claim(claim_id: str, canonical: ClaimDoc, all_docs: list[ClaimDoc]
     status = _normalize_status(data.get("status"))
     derivation_status = _normalize_derivation_status(data.get("derivation_status"), status)
     bridge_assumptions = _to_list(data.get("bridge_assumptions"))
+    if derivation_status == "core_derived":
+        bridge_assumptions = []
     if derivation_status == "bridge_assumed" and not bridge_assumptions:
         bridge_assumptions = ["not_yet_documented_bridge_assumption"]
 

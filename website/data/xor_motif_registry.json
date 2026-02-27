@@ -1,11 +1,11 @@
 {
   "schema_version": "xor_motif_registry_v1",
-  "generated_at_utc": "2026-02-27T10:58:40.583218Z",
-  "registry_sha256": "38055d5a1c5c6ff23a9b55d03a8478f1e5899c1ba9bc963dc3bee28e429ba6e3",
-  "motif_count": 27,
-  "stable_period4_count": 27,
+  "generated_at_utc": "2026-02-27T20:13:08.589552Z",
+  "registry_sha256": "1125f7f8e85af288dc5fc027c2728494b1d263fdad070b3d64c0013170afbe21",
+  "motif_count": 29,
+  "stable_period4_count": 29,
   "representation_counts": {
-    "spinor": 18,
+    "spinor": 20,
     "vector": 9
   },
   "motifs": [
@@ -40,6 +40,76 @@
       "tags": [
         "spinor",
         "electron_alias",
+        "su"
+      ]
+    },
+    {
+      "motif_id": "left_spinor_muon_motif",
+      "representation": "spinor",
+      "family": "Su",
+      "construction": "Su ideal basis element",
+      "source_module": "calc/xor_furey_ideals.py",
+      "support": [
+        3,
+        4
+      ],
+      "support_bits": [
+        "011",
+        "100"
+      ],
+      "support_size": 2,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e3": {
+          "re": 0,
+          "im": -4
+        },
+        "e4": {
+          "re": 4,
+          "im": 0
+        }
+      },
+      "tags": [
+        "spinor",
+        "furey_ideal",
+        "su"
+      ]
+    },
+    {
+      "motif_id": "left_spinor_tau_motif",
+      "representation": "spinor",
+      "family": "Su",
+      "construction": "Su ideal basis element",
+      "source_module": "calc/xor_furey_ideals.py",
+      "support": [
+        1,
+        6
+      ],
+      "support_bits": [
+        "001",
+        "110"
+      ],
+      "support_size": 2,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e1": {
+          "re": 0,
+          "im": 2
+        },
+        "e6": {
+          "re": -2,
+          "im": 0
+        }
+      },
+      "tags": [
+        "spinor",
+        "furey_ideal",
         "su"
       ]
     },
@@ -1009,6 +1079,28 @@
       "support": "[0, 7]",
       "support_bits": "['111']",
       "u1_charge_proxy": -8,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "left_spinor_muon_motif",
+      "representation": "spinor",
+      "family": "Su",
+      "support": "[3, 4]",
+      "support_bits": "['011', '100']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "left_spinor_tau_motif",
+      "representation": "spinor",
+      "family": "Su",
+      "support": "[1, 6]",
+      "support_bits": "['001', '110']",
+      "u1_charge_proxy": 0,
       "period_left_e7": 4,
       "period_right_e7": 4,
       "stable_period4": true

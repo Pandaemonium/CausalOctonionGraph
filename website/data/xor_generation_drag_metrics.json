@@ -1,9 +1,9 @@
 {
   "schema_version": "xor_generation_drag_metrics_v1",
-  "generated_at_utc": "2026-02-27T15:23:59.467513Z",
+  "generated_at_utc": "2026-02-27T20:13:08.675821Z",
   "rfc": "RFC-068",
   "mapping_path": "calc/generation_drag_motif_mapping.json",
-  "mapping_hash": "37b28b51a5980dee59affe1f0311e28ae69b8ec053c213e7a05554b6ee132e87",
+  "mapping_hash": "0d177f7b001ebb7c70e2c50ff3054aa7e2abebd178c987630025e30af5d6f999",
   "baseline_label": "electron",
   "config": {
     "depth_horizon": 12,
@@ -155,8 +155,8 @@
       "mu_eff": 1.0
     },
     {
-      "label": "muon_candidate",
-      "motif_id": "su_double_12",
+      "label": "muon",
+      "motif_id": "left_spinor_muon_motif",
       "allowed_support": [
         0,
         3,
@@ -164,7 +164,7 @@
         7
       ],
       "drag_score": 368.15384615384613,
-      "simulation_replay_hash": "c39ec8a5bed4805a8e6b7e43ff2ac548fd0ecc4375906ea27b961dc7cc73812f",
+      "simulation_replay_hash": "752dce05b044f916455026991c9c9d4b91548a7b944faeca1c40399f216ff3f2",
       "depth_metrics": [
         {
           "depth": 0,
@@ -300,8 +300,8 @@
       "mu_eff": 0.9966680549770929
     },
     {
-      "label": "tau_candidate",
-      "motif_id": "su_single_1",
+      "label": "tau",
+      "motif_id": "left_spinor_tau_motif",
       "allowed_support": [
         0,
         1,
@@ -309,7 +309,7 @@
         7
       ],
       "drag_score": 368.15384615384613,
-      "simulation_replay_hash": "c98d098e2c83b586162ad0c822b1d518e9fb252def040912cc9c73dddef7e75b",
+      "simulation_replay_hash": "c7df9642aee15d6999ebbaee3c75a7facdf6f8680d24977fc145de188a4b1a52",
       "depth_metrics": [
         {
           "depth": 0,
@@ -445,5 +445,5 @@
       "mu_eff": 0.9966680549770929
     }
   ],
-  "suite_replay_hash": "2b9233264158bc7fe756d70a11495e3f88c9184ecf10d89ec0c8bfe64335e663"
+  "suite_replay_hash": "2e82d551d721344a1f18d552fb51726540f1bd51c580bd77fa4612bf459f893d"
 }

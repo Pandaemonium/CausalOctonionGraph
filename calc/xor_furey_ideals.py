@@ -176,6 +176,35 @@ def furey_dual_electron_doubled() -> StateGI:
     return s
 
 
+def muon_motif_derived_doubled() -> StateGI:
+    """
+    Current derived-target muon motif scaffold in Su:
+      alpha1^dagger(alpha2^dagger omega) at doubled scale.
+
+    Note:
+    This is a governance-level derived target alias (RFC-074), not a final
+    generation lock claim.
+    """
+    w = vacuum_doubled()
+    a1 = witt_raise_doubled(1)
+    a2 = witt_raise_doubled(2)
+    return oct_mul_xor(a1, oct_mul_xor(a2, w))
+
+
+def tau_motif_derived_doubled() -> StateGI:
+    """
+    Current derived-target tau motif scaffold in Su:
+      alpha1^dagger omega at doubled scale.
+
+    Note:
+    This is a governance-level derived target alias (RFC-074), not a final
+    generation lock claim.
+    """
+    w = vacuum_doubled()
+    a1 = witt_raise_doubled(1)
+    return oct_mul_xor(a1, w)
+
+
 def ideal_su_basis_doubled() -> dict[str, StateGI]:
     """
     Basis-like motifs of S^u minimal left ideal generated from omega.
@@ -184,6 +213,8 @@ def ideal_su_basis_doubled() -> dict[str, StateGI]:
     a1 = witt_raise_doubled(1)
     a2 = witt_raise_doubled(2)
     a3 = witt_raise_doubled(3)
+    muon = muon_motif_derived_doubled()
+    tau = tau_motif_derived_doubled()
     return {
         "su_vacuum_omega": w,
         "su_single_1": oct_mul_xor(a1, w),
@@ -193,6 +224,8 @@ def ideal_su_basis_doubled() -> dict[str, StateGI]:
         "su_double_13": oct_mul_xor(a1, oct_mul_xor(a3, w)),
         "su_double_23": oct_mul_xor(a2, oct_mul_xor(a3, w)),
         "su_triple_electron": furey_electron_doubled(),
+        "left_spinor_muon_motif": muon,
+        "left_spinor_tau_motif": tau,
     }
 
 
@@ -374,4 +407,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

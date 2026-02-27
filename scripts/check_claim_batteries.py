@@ -2,7 +2,7 @@
 """
 Run claim battery checks from claims/CLAIM_STATUS_MATRIX.yml.
 
-For selected statuses (default: supported), this script:
+For selected statuses (default: supported_bridge,proved_core), this script:
 1. ensures each battery artifact exists (for file paths),
 2. runs pytest selectors for artifacts containing "::",
 3. runs pytest on test files referenced directly (e.g. calc/test_x.py).
@@ -43,8 +43,8 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--statuses",
-        default="supported",
-        help="Comma-separated statuses to enforce (default: supported).",
+        default="supported_bridge,proved_core",
+        help="Comma-separated statuses to enforce (default: supported_bridge,proved_core).",
     )
     args = parser.parse_args()
     statuses = {s.strip() for s in args.statuses.split(",") if s.strip()}

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Nightly prediction oracle stub.
+Nightly prediction oracle with hard + soft classification.
 
-Compares selected model predictions to fixed reference targets and writes:
+Outputs:
 1) sources/oracle_report.json
-2) sources/oracle_mismatch_events.json
+2) sources/oracle_mismatch_events.json (backward-compatible subset)
 """
 
 from __future__ import annotations
@@ -33,6 +33,8 @@ class Target:
     quantity: str
     expected: float
     tolerance_abs: float
+    tolerance_rel_soft: float
+    tolerance_rel_critical: float
     source: str
 
 
@@ -42,7 +44,9 @@ TARGETS: tuple[Target, ...] = (
         quantity="sin2_theta_W_MZ",
         expected=0.23122,
         tolerance_abs=0.005,
-        source="PDG-style electroweak reference target (configured in oracle stub)",
+        tolerance_rel_soft=0.75,
+        tolerance_rel_critical=2.0,
+        source="PDG-style electroweak reference target (configured in oracle)",
     ),
 )
 
@@ -63,70 +67,125 @@ def _observed_predictions() -> dict[str, dict[str, Any]]:
     return out
 
 
+def _classify(target: Target, observed_value: float) -> tuple[str, float, float]:
+    abs_error = abs(observed_value - target.expected)
+    denom = abs(target.expected) if abs(target.expected) > 1e-12 else 1.0
+    rel_error = abs_error / denom
+    if abs_error <= target.tolerance_abs:
+        return "hard_pass", abs_error, rel_error
+    if rel_error <= target.tolerance_rel_soft:
+        return "soft_pass", abs_error, rel_error
+    if rel_error <= target.tolerance_rel_critical:
+        return "mismatch", abs_error, rel_error
+    return "critical_mismatch", abs_error, rel_error
+
+
+def _event_for_comparison(now: str, idx: int, cmp_row: dict[str, Any]) -> dict[str, Any]:
+    status = str(cmp_row.get("status", ""))
+    claim_id = str(cmp_row.get("claim_id", ""))
+    quantity = str(cmp_row.get("quantity", ""))
+    if status == "soft_pass":
+        event_type = "oracle_soft_pass"
+        task_type = "prediction_review"
+    elif status == "mismatch":
+        event_type = "oracle_mismatch"
+        task_type = "falsification_task"
+    elif status == "critical_mismatch":
+        event_type = "oracle_critical_mismatch"
+        task_type = "direction_review"
+    elif status == "missing_observation":
+        event_type = "oracle_missing_observation"
+        task_type = "prediction_review"
+    else:
+        event_type = "oracle_info"
+        task_type = "none"
+
+    return {
+        "event_id": f"{event_type}_{now}_{idx}",
+        "event_type": event_type,
+        "created_at_utc": now,
+        "claim_id": claim_id,
+        "quantity": quantity,
+        "expected": cmp_row.get("expected"),
+        "observed": cmp_row.get("observed"),
+        "abs_error": cmp_row.get("abs_error"),
+        "rel_error": cmp_row.get("rel_error"),
+        "tolerance_abs": cmp_row.get("tolerance_abs"),
+        "tolerance_rel_soft": cmp_row.get("tolerance_rel_soft"),
+        "tolerance_rel_critical": cmp_row.get("tolerance_rel_critical"),
+        "source": cmp_row.get("source"),
+        "recommended_task_type": task_type,
+    }
+
+
 def run_oracle() -> dict[str, Any]:
     observed = _observed_predictions()
     comparisons: list[dict[str, Any]] = []
-    mismatches: list[dict[str, Any]] = []
+    action_events: list[dict[str, Any]] = []
 
     now = _utc_now()
     for target in TARGETS:
         obs = observed.get(target.claim_id)
         if obs is None:
-            comparisons.append(
-                {
-                    "claim_id": target.claim_id,
-                    "quantity": target.quantity,
-                    "status": "missing_observation",
-                    "expected": target.expected,
-                    "tolerance_abs": target.tolerance_abs,
-                    "source": target.source,
-                }
-            )
+            row = {
+                "claim_id": target.claim_id,
+                "quantity": target.quantity,
+                "status": "missing_observation",
+                "expected": target.expected,
+                "observed": None,
+                "abs_error": None,
+                "rel_error": None,
+                "tolerance_abs": target.tolerance_abs,
+                "tolerance_rel_soft": target.tolerance_rel_soft,
+                "tolerance_rel_critical": target.tolerance_rel_critical,
+                "source": target.source,
+                "provenance": "",
+            }
+            comparisons.append(row)
+            action_events.append(_event_for_comparison(now, len(action_events), row))
             continue
 
         observed_value = float(obs["value"])
-        abs_error = abs(observed_value - target.expected)
-        within_tolerance = abs_error <= target.tolerance_abs
-        record = {
+        status, abs_error, rel_error = _classify(target, observed_value)
+        row = {
             "claim_id": target.claim_id,
             "quantity": target.quantity,
+            "status": status,
             "expected": target.expected,
             "observed": observed_value,
             "abs_error": abs_error,
+            "rel_error": rel_error,
             "tolerance_abs": target.tolerance_abs,
-            "within_tolerance": within_tolerance,
+            "tolerance_rel_soft": target.tolerance_rel_soft,
+            "tolerance_rel_critical": target.tolerance_rel_critical,
             "source": target.source,
             "provenance": obs.get("provenance", ""),
-            "status": "ok" if within_tolerance else "mismatch",
         }
-        comparisons.append(record)
-        if not within_tolerance:
-            mismatches.append(record)
+        comparisons.append(row)
+        if status in {"soft_pass", "mismatch", "critical_mismatch"}:
+            action_events.append(_event_for_comparison(now, len(action_events), row))
 
-    mismatch_events = []
-    for idx, mismatch in enumerate(mismatches):
-        mismatch_events.append(
-            {
-                "event_id": f"oracle_mismatch_{now}_{idx}",
-                "event_type": "oracle_mismatch",
-                "created_at_utc": now,
-                "claim_id": mismatch["claim_id"],
-                "quantity": mismatch["quantity"],
-                "expected": mismatch["expected"],
-                "observed": mismatch["observed"],
-                "abs_error": mismatch["abs_error"],
-                "tolerance_abs": mismatch["tolerance_abs"],
-                "source": mismatch["source"],
-                "recommended_task_type": "prediction_review",
-            }
-        )
+    hard_pass_count = sum(1 for row in comparisons if row.get("status") == "hard_pass")
+    soft_pass_count = sum(1 for row in comparisons if row.get("status") == "soft_pass")
+    mismatch_count = sum(1 for row in comparisons if row.get("status") == "mismatch")
+    critical_mismatch_count = sum(1 for row in comparisons if row.get("status") == "critical_mismatch")
+
+    # Backward-compatible mismatch subset for existing consumers.
+    mismatch_events = [
+        ev for ev in action_events if ev.get("event_type") in {"oracle_mismatch", "oracle_critical_mismatch"}
+    ]
 
     return {
-        "schema_version": "oracle_report_v1",
+        "schema_version": "oracle_report_v2",
         "generated_at_utc": now,
         "comparison_count": len(comparisons),
-        "mismatch_count": len(mismatch_events),
+        "hard_pass_count": hard_pass_count,
+        "soft_pass_count": soft_pass_count,
+        "mismatch_count": mismatch_count,
+        "critical_mismatch_count": critical_mismatch_count,
+        "action_event_count": len(action_events),
         "comparisons": comparisons,
+        "action_events": action_events,
         "mismatch_events": mismatch_events,
     }
 
@@ -142,9 +201,16 @@ def main() -> int:
     write_outputs(report)
     print(f"Wrote {OUT_REPORT}")
     print(f"Wrote {OUT_EVENTS}")
-    print(f"Oracle mismatch_count={report['mismatch_count']}")
+    print(
+        "Oracle counts: "
+        f"hard={report['hard_pass_count']} "
+        f"soft={report['soft_pass_count']} "
+        f"mismatch={report['mismatch_count']} "
+        f"critical={report['critical_mismatch_count']}"
+    )
     return 0
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

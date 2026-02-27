@@ -32,7 +32,9 @@ Want to contribute runs? See:
       <label>Status</label>
       <select id="status-filter">
         <option value="all">All statuses</option>
-        <option value="supported">Proved</option>
+        <option value="proved_core">Proved (Core)</option>
+        <option value="supported_bridge">Supported (Bridge)</option>
+        <option value="supported">Proved (Legacy)</option>
         <option value="partial">In Progress</option>
         <option value="active_hypothesis">Hypothesis</option>
         <option value="stub">Queued</option>
@@ -254,6 +256,8 @@ Want to contribute runs? See:
   }
 
   .event-card.supported { border-left-color: var(--proved); }
+  .event-card.supported_bridge { border-left-color: var(--progress); }
+  .event-card.proved_core { border-left-color: var(--proved); }
   .event-card.partial { border-left-color: var(--progress); }
   .event-card.active_hypothesis { border-left-color: var(--hypothesis); }
   .event-card.stub { border-left-color: var(--queued); }
@@ -403,6 +407,8 @@ Want to contribute runs? See:
   function statusDisplay(status) {
     const map = {
       supported: "Proved",
+      supported_bridge: "Supported (Bridge)",
+      proved_core: "Proved (Core)",
       partial: "In Progress",
       active_hypothesis: "Hypothesis",
       stub: "Queued",
@@ -413,6 +419,10 @@ Want to contribute runs? See:
   }
 
   function statusCount(status) {
+    if (Array.isArray(status)) {
+      const set = new Set(status);
+      return state.claims.filter((c) => set.has(c.status)).length;
+    }
     return state.claims.filter((c) => c.status === status).length;
   }
 
@@ -442,7 +452,8 @@ Want to contribute runs? See:
     const latest = state.events[0];
     const latestText = latest ? relTime(latest.promoted_at_utc) : "n/a";
     el.innerHTML = `
-      <div class="metric"><small>Proved</small><strong>${statusCount("supported")}</strong></div>
+      <div class="metric"><small>Proved (Core)</small><strong>${statusCount(["proved_core", "supported"])}</strong></div>
+      <div class="metric"><small>Supported (Bridge)</small><strong>${statusCount("supported_bridge")}</strong></div>
       <div class="metric"><small>In Progress</small><strong>${statusCount("partial")}</strong></div>
       <div class="metric"><small>Hypotheses</small><strong>${statusCount("active_hypothesis")}</strong></div>
       <div class="metric"><small>Latest Upgrade</small><strong>${latestText}</strong></div>

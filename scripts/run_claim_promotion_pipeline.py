@@ -36,8 +36,8 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--battery-statuses",
-        default="supported",
-        help="Comma-separated statuses to evaluate in battery checks (default: supported).",
+        default="supported_bridge,proved_core",
+        help="Comma-separated statuses to evaluate in battery checks (default: supported_bridge,proved_core).",
     )
     parser.add_argument(
         "--enforce-clean-matrix",

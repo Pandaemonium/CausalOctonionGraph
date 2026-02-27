@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-02-27T05:35:00.825021Z",
-  "node_count": 33,
+  "generated_at_utc": "2026-02-27T19:27:53.483567Z",
+  "node_count": 34,
   "edge_count": 37,
   "nodes": [
     {
@@ -45,9 +45,9 @@
     },
     {
       "id": "ALPHA-001",
-      "status": "active_hypothesis",
-      "public_status_label": "Hypothesis",
-      "status_color_token": "hypothesis",
+      "status": "stub",
+      "public_status_label": "Queued",
+      "status_color_token": "queued",
       "latest_event_id": "",
       "unlocks_count": 0
     },
@@ -77,9 +77,9 @@
     },
     {
       "id": "CFS-002",
-      "status": "stub",
-      "public_status_label": "Queued",
-      "status_color_token": "queued",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
       "latest_event_id": "",
       "unlocks_count": 0
     },
@@ -148,6 +148,14 @@
       "unlocks_count": 0
     },
     {
+      "id": "HYDROGEN-001",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "",
+      "unlocks_count": 0
+    },
+    {
       "id": "KOIDE-001",
       "status": "stub",
       "public_status_label": "Queued",
@@ -172,14 +180,6 @@
       "unlocks_count": 1
     },
     {
-      "id": "LEPTON-001-LEGACY",
-      "status": "superseded",
-      "public_status_label": "Superseded",
-      "status_color_token": "superseded",
-      "latest_event_id": "",
-      "unlocks_count": 0
-    },
-    {
       "id": "MASS-001",
       "status": "partial",
       "public_status_label": "In Progress",
@@ -201,6 +201,14 @@
       "public_status_label": "In Progress",
       "status_color_token": "progress",
       "latest_event_id": "EVT-20260226-0004",
+      "unlocks_count": 0
+    },
+    {
+      "id": "PROTON-001",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "",
       "unlocks_count": 0
     },
     {
@@ -261,9 +269,9 @@
     },
     {
       "id": "WEINBERG-UV-001",
-      "status": "supported",
-      "public_status_label": "Proved",
-      "status_color_token": "proved",
+      "status": "supported_bridge",
+      "public_status_label": "Supported (Bridge)",
+      "status_color_token": "progress",
       "latest_event_id": "EVT-20260227-0002",
       "unlocks_count": 0
     }

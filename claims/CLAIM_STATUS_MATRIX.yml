@@ -1,5 +1,5 @@
 schema_version: 2.1.0
-generated_at_utc: '2026-02-27T18:48:49.037492Z'
+generated_at_utc: '2026-02-27T19:27:46.828042Z'
 row_count: 34
 rows:
   ALG:
@@ -1175,7 +1175,7 @@ rows:
     - koide_exactness.yml
   LEPTON-001:
     claim_id: LEPTON-001
-    status: stub
+    status: active_hypothesis
     lean_artifacts: []
     python_artifacts: []
     battery_artifacts:
@@ -1819,7 +1819,7 @@ rows:
     - weinberg_angle.yml
   WEINBERG-UV-001:
     claim_id: WEINBERG-UV-001
-    status: supported
+    status: supported_bridge
     lean_artifacts:
     - CausalGraphTheory/WeakMixingObservable.lean
     - CausalGraph.u1Mask_inter_weakMask_card

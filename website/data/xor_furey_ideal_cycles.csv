@@ -7,6 +7,8 @@ su_double_12,Su,"[3, 4]","['011', '100']",4,4,True
 su_double_13,Su,"[2, 5]","['010', '101']",4,4,True
 su_double_23,Su,"[1, 6]","['001', '110']",4,4,True
 su_triple_electron,Su,"[0, 7]",['111'],4,4,True
+left_spinor_muon_motif,Sd,"[3, 4]","['011', '100']",4,4,True
+left_spinor_tau_motif,Sd,"[1, 6]","['001', '110']",4,4,True
 sd_vacuum_omega_dag,Sd,"[0, 7]",['111'],4,4,True
 sd_single_1,Sd,"[1, 6]","['001', '110']",4,4,True
 sd_single_2,Sd,"[2, 5]","['010', '101']",4,4,True

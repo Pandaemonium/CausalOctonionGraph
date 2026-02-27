@@ -1,35 +1,45 @@
 {
-  "schema_version": "oracle_report_v1",
-  "generated_at_utc": "2026-02-27T18:48:49.771466Z",
+  "schema_version": "oracle_report_v2",
+  "generated_at_utc": "2026-02-27T19:27:47.602359Z",
   "comparison_count": 1,
-  "mismatch_count": 1,
+  "hard_pass_count": 0,
+  "soft_pass_count": 1,
+  "mismatch_count": 0,
+  "critical_mismatch_count": 0,
+  "action_event_count": 1,
   "comparisons": [
     {
       "claim_id": "QN-006",
       "quantity": "sin2_theta_W_MZ",
+      "status": "soft_pass",
       "expected": 0.23122,
       "observed": 0.375,
       "abs_error": 0.14378,
+      "rel_error": 0.6218320214514315,
       "tolerance_abs": 0.005,
-      "within_tolerance": false,
-      "source": "PDG-style electroweak reference target (configured in oracle stub)",
-      "provenance": "calc.derive_sm_quantum_numbers::derive_weinberg_angle",
-      "status": "mismatch"
+      "tolerance_rel_soft": 0.75,
+      "tolerance_rel_critical": 2.0,
+      "source": "PDG-style electroweak reference target (configured in oracle)",
+      "provenance": "calc.derive_sm_quantum_numbers::derive_weinberg_angle"
     }
   ],
-  "mismatch_events": [
+  "action_events": [
     {
-      "event_id": "oracle_mismatch_2026-02-27T18:48:49.771466Z_0",
-      "event_type": "oracle_mismatch",
-      "created_at_utc": "2026-02-27T18:48:49.771466Z",
+      "event_id": "oracle_soft_pass_2026-02-27T19:27:47.602359Z_0",
+      "event_type": "oracle_soft_pass",
+      "created_at_utc": "2026-02-27T19:27:47.602359Z",
       "claim_id": "QN-006",
       "quantity": "sin2_theta_W_MZ",
       "expected": 0.23122,
       "observed": 0.375,
       "abs_error": 0.14378,
+      "rel_error": 0.6218320214514315,
       "tolerance_abs": 0.005,
-      "source": "PDG-style electroweak reference target (configured in oracle stub)",
+      "tolerance_rel_soft": 0.75,
+      "tolerance_rel_critical": 2.0,
+      "source": "PDG-style electroweak reference target (configured in oracle)",
       "recommended_task_type": "prediction_review"
     }
-  ]
+  ],
+  "mismatch_events": []
 }

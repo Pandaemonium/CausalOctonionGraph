@@ -13,9 +13,12 @@ from calc.xor_furey_ideals import (
     e7_right,
     furey_dual_electron_doubled,
     furey_electron_doubled,
+    ideal_su_basis_doubled,
+    muon_motif_derived_doubled,
     oct_mul_xor,
     state_basis,
     state_sparse,
+    tau_motif_derived_doubled,
     vacuum_conj_doubled,
     vacuum_doubled,
     witt_lower_doubled,
@@ -77,10 +80,12 @@ def test_furey_states_have_period_four_under_e7_left_and_right():
 def test_dataset_contains_ideal_motifs_and_stability_flags():
     data = build_furey_ideal_cycle_dataset(max_steps=32)
     assert data["schema_version"] == "xor_furey_ideal_cycles_v1"
-    assert data["motif_count"] == 16
+    assert data["motif_count"] == 18
     ids = {m["motif_id"] for m in data["motifs"]}
     assert "su_triple_electron" in ids
     assert "sd_triple_dual_electron" in ids
+    assert "left_spinor_muon_motif" in ids
+    assert "left_spinor_tau_motif" in ids
     assert all(m["stable_period4"] for m in data["motifs"])
 
 
@@ -95,11 +100,18 @@ def test_artifact_write_json_csv(tmp_path: Path):
 
     with csv_path.open("r", encoding="utf-8", newline="") as f:
         rows = list(csv.DictReader(f))
-    assert len(rows) == 16
+    assert len(rows) == 18
+
+
+def test_muon_tau_aliases_match_su_basis_construction():
+    su = ideal_su_basis_doubled()
+    assert muon_motif_derived_doubled() == su["su_double_12"]
+    assert tau_motif_derived_doubled() == su["su_single_1"]
+    assert su["left_spinor_muon_motif"] == su["su_double_12"]
+    assert su["left_spinor_tau_motif"] == su["su_single_1"]
 
 
 def test_state_sparse_json_shape():
     s = state_basis(0, (1, 0))
     out = state_sparse(s)
     assert out == {"e0": {"re": 1, "im": 0}}
-

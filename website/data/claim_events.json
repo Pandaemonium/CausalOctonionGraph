@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-02-27T05:35:00.825021Z",
+  "generated_at_utc": "2026-02-27T19:27:53.483567Z",
   "events": [
     {
       "event_id": "EVT-20260227-0002",
@@ -37,7 +37,7 @@
       ],
       "verified_by": "Clerk Qwen-3",
       "verification_run_id": "battery_v2_20260227_0022Z",
-      "public_status_label": "Proved",
+      "public_status_label": "Proved (Legacy)",
       "status_color_token": "proved",
       "topics": [
         "electroweak",

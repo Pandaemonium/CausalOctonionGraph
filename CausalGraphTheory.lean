@@ -22,6 +22,7 @@ import CausalGraphTheory.Spinors
 import CausalGraphTheory.FureyChain
 import CausalGraphTheory.GenerationSeparation
 import CausalGraphTheory.GenerationLockContract
+import CausalGraphTheory.TrialityIntertwiner
 import CausalGraphTheory.PhotonMasslessness
 
 -- Phase 1.5: Constants and gauge foundations
@@ -52,6 +53,7 @@ import CausalGraphTheory.Vacuum
 
 -- Phase 5: Interaction semantics (e-e interaction, RFC-028 scoped)
 import CausalGraphTheory.TwoNodeSystem
+import CausalGraphTheory.ElectronSelfInteraction
 
 -- ExportOracle defines its own `main`; built as a standalone executable
 -- via [[lean_exe]] in lakefile.toml — not imported into the library root.

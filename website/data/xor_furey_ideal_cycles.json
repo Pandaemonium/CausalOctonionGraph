@@ -1,6 +1,6 @@
 {
   "schema_version": "xor_furey_ideal_cycles_v1",
-  "generated_at_utc": "2026-02-27T10:21:06.705572Z",
+  "generated_at_utc": "2026-02-27T20:13:08.577884Z",
   "notation": {
     "basis": "e0..e7",
     "imag_channels_bits": {
@@ -28,8 +28,8 @@
       4
     ]
   ],
-  "motif_count": 16,
-  "stable_period4_count": 16,
+  "motif_count": 18,
+  "stable_period4_count": 18,
   "motifs": [
     {
       "motif_id": "su_vacuum_omega",
@@ -222,6 +222,56 @@
         },
         "e7": {
           "re": -8,
+          "im": 0
+        }
+      },
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "left_spinor_muon_motif",
+      "family": "Sd",
+      "support": [
+        3,
+        4
+      ],
+      "support_bits": [
+        "011",
+        "100"
+      ],
+      "state_sparse": {
+        "e3": {
+          "re": 0,
+          "im": -4
+        },
+        "e4": {
+          "re": 4,
+          "im": 0
+        }
+      },
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "left_spinor_tau_motif",
+      "family": "Sd",
+      "support": [
+        1,
+        6
+      ],
+      "support_bits": [
+        "001",
+        "110"
+      ],
+      "state_sparse": {
+        "e1": {
+          "re": 0,
+          "im": 2
+        },
+        "e6": {
+          "re": -2,
           "im": 0
         }
       },
@@ -497,6 +547,24 @@
       "family": "Su",
       "support": "[0, 7]",
       "support_bits": "['111']",
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "left_spinor_muon_motif",
+      "family": "Sd",
+      "support": "[3, 4]",
+      "support_bits": "['011', '100']",
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "left_spinor_tau_motif",
+      "family": "Sd",
+      "support": "[1, 6]",
+      "support_bits": "['001', '110']",
       "period_left_e7": 4,
       "period_right_e7": 4,
       "stable_period4": true

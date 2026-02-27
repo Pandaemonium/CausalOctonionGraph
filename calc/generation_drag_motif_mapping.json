@@ -5,8 +5,8 @@
   "lock_mode": "proof_first_gen3",
   "baseline_label": "electron",
   "notes": [
-    "These are predeclared candidate mappings for generation-drag instrumentation runs.",
-    "muon_candidate and tau_candidate are placeholders until dedicated motif-lock RFC lands.",
+    "These are predeclared motif mappings for generation-drag instrumentation runs.",
+    "muon and tau are currently derived-target motifs until dedicated motif-lock closure lands.",
     "Per RFC-074, gen3 remains a derived target until Lean uniqueness-class closure."
   ],
   "motifs": [
@@ -18,15 +18,15 @@
       "lock_status": "locked"
     },
     {
-      "label": "muon_candidate",
-      "motif_id": "su_double_12",
+      "label": "muon",
+      "motif_id": "left_spinor_muon_motif",
       "family": "spinor",
       "ideal_hint": "Su",
       "lock_status": "derived_target"
     },
     {
-      "label": "tau_candidate",
-      "motif_id": "su_single_1",
+      "label": "tau",
+      "motif_id": "left_spinor_tau_motif",
       "family": "spinor",
       "ideal_hint": "Su",
       "lock_status": "derived_target"

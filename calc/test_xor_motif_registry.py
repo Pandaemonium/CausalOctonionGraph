@@ -34,6 +34,8 @@ def test_registry_schema_and_presence():
     assert "sd_triple_dual_electron" in ids
     assert "left_spinor_electron_ideal" in ids
     assert "right_spinor_electron_ideal" in ids
+    assert "left_spinor_muon_motif" in ids
+    assert "left_spinor_tau_motif" in ids
 
 
 def test_registry_ids_unique_and_support_in_bounds():
@@ -66,6 +68,19 @@ def test_named_vector_electron_support_and_cycle():
     assert vec_e["stable_period4"] is True
 
 
+def test_named_spinor_muon_tau_support_and_cycle():
+    data = build_xor_motif_registry_dataset()
+    mu = _by_id(data, "left_spinor_muon_motif")
+    tau = _by_id(data, "left_spinor_tau_motif")
+
+    assert mu["representation"] == "spinor"
+    assert tau["representation"] == "spinor"
+    assert mu["support"] == [3, 4]
+    assert tau["support"] == [1, 6]
+    assert mu["period_left_e7"] == 4 and mu["period_right_e7"] == 4
+    assert tau["period_left_e7"] == 4 and tau["period_right_e7"] == 4
+
+
 def test_write_registry_artifacts(tmp_path: Path):
     data = build_xor_motif_registry_dataset()
     json_path = tmp_path / "xor_motif_registry.json"
@@ -85,4 +100,3 @@ def test_write_registry_artifacts(tmp_path: Path):
     assert "motif_id" in rows[0]
     assert "representation" in rows[0]
     assert "support" in rows[0]
-

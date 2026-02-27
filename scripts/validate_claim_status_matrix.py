@@ -19,6 +19,9 @@ ALLOWED_STATUS = {
     "stub",
     "active_hypothesis",
     "partial",
+    "supported_bridge",
+    "proved_core",
+    # Backward-compatible alias; should be migrated by sync.
     "supported",
     "falsified",
     "superseded",
@@ -198,30 +201,41 @@ def _validate_semantics(
     if row.get("equivalence_mode") != "none" and not _is_nonempty_str(row.get("equivalence_artifact", "")):
         errors.append(f"{claim_id}: equivalence_mode != none requires equivalence_artifact")
 
-    supported = row.get("status") == "supported"
-    if supported:
+    status = row.get("status")
+    promoted = status in {"supported", "supported_bridge", "proved_core"}
+    if promoted:
         has_any_evidence = bool(row.get("lean_artifacts")) or bool(row.get("python_artifacts")) or bool(
             row.get("battery_artifacts")
         )
         if not has_any_evidence:
-            errors.append(f"{claim_id}: supported status requires at least one evidence artifact list non-empty")
+            errors.append(f"{claim_id}: promoted status requires at least one evidence artifact list non-empty")
         if str(row.get("evidence_level", "")).strip().lower() == "hypothesis":
-            errors.append(f"{claim_id}: supported status cannot use evidence_level=hypothesis")
+            errors.append(f"{claim_id}: promoted status cannot use evidence_level=hypothesis")
         if derivation_status == "untested":
-            errors.append(f"{claim_id}: supported status cannot use derivation_status=untested")
+            errors.append(f"{claim_id}: promoted status cannot use derivation_status=untested")
         # Tightened gate: supported claims must have battery evidence.
         if not bool(row.get("battery_artifacts")):
-            errors.append(f"{claim_id}: supported status requires non-empty battery_artifacts")
-        # Tightened gate: supported claims must not keep unknown projection sensitivity.
+            errors.append(f"{claim_id}: promoted status requires non-empty battery_artifacts")
+        # Tightened gate: promoted claims must not keep unknown projection sensitivity.
         if row.get("projection_sensitivity") == "unknown":
-            errors.append(f"{claim_id}: supported status requires projection_sensitivity != unknown")
+            errors.append(f"{claim_id}: promoted status requires projection_sensitivity != unknown")
         # Tightened gate: source claim file must not still report a blocked_reason.
         docs = source_docs.get(claim_id, [])
         for d in docs:
             blocked_reason = d.get("blocked_reason")
             if _is_nonempty_str(blocked_reason):
-                errors.append(f"{claim_id}: supported status conflicts with non-empty blocked_reason in source claim")
+                errors.append(f"{claim_id}: promoted status conflicts with non-empty blocked_reason in source claim")
                 break
+
+    if status == "supported":
+        errors.append(f"{claim_id}: legacy status 'supported' is deprecated; use supported_bridge or proved_core")
+    if status == "supported_bridge" and derivation_status != "bridge_assumed":
+        errors.append(f"{claim_id}: supported_bridge requires derivation_status=bridge_assumed")
+    if status == "proved_core":
+        if derivation_status != "core_derived":
+            errors.append(f"{claim_id}: proved_core requires derivation_status=core_derived")
+        if bridge_assumptions:
+            errors.append(f"{claim_id}: proved_core requires empty bridge_assumptions")
 
     confinement_relevant = bool(row.get("confinement_relevant", False))
     if confinement_relevant:
@@ -231,8 +245,8 @@ def _validate_semantics(
             errors.append(f"{claim_id}: confinement_relevant requires confinement_artifact")
         if not _is_nonempty_str(row.get("ensemble_policy_id", "")):
             errors.append(f"{claim_id}: confinement_relevant requires ensemble_policy_id")
-        if supported and row.get("confinement_gate_status") != "pass":
-            errors.append(f"{claim_id}: supported confinement-relevant claim requires confinement_gate_status=pass")
+        if promoted and row.get("confinement_gate_status") != "pass":
+            errors.append(f"{claim_id}: promoted confinement-relevant claim requires confinement_gate_status=pass")
 
     spin_sensitive = bool(row.get("spin_sensitive", False))
     if spin_sensitive:
@@ -242,8 +256,8 @@ def _validate_semantics(
             errors.append(f"{claim_id}: spin_sensitive requires spin_artifact")
         if row.get("spin_sensitivity") not in {"insensitive", "sensitive", "unknown"}:
             errors.append(f"{claim_id}: spin_sensitive has invalid spin_sensitivity")
-        if supported and row.get("spin_mode") != "algebraic":
-            errors.append(f"{claim_id}: supported spin-sensitive claim requires spin_mode=algebraic")
+        if promoted and row.get("spin_mode") != "algebraic":
+            errors.append(f"{claim_id}: promoted spin-sensitive claim requires spin_mode=algebraic")
 
     scheduler_mode = row.get("scheduler_mode")
     if not _is_nonempty_str(scheduler_mode):
@@ -255,11 +269,11 @@ def _validate_semantics(
     many_body_relevant = bool(row.get("many_body_relevant", False))
     if many_body_relevant and row.get("pair_extraction_mode") in {"", "not_applicable", None}:
         errors.append(f"{claim_id}: many_body_relevant requires pair_extraction_mode")
-    if supported and many_body_relevant:
+    if promoted and many_body_relevant:
         if row.get("reduction_mode") not in {"exact", "approx"}:
-            errors.append(f"{claim_id}: supported many_body_relevant claim requires reduction_mode in exact/approx")
+            errors.append(f"{claim_id}: promoted many_body_relevant claim requires reduction_mode in exact/approx")
         if not _is_nonempty_str(row.get("reduction_artifact_ref", "")):
-            errors.append(f"{claim_id}: supported many_body_relevant claim requires reduction_artifact_ref")
+            errors.append(f"{claim_id}: promoted many_body_relevant claim requires reduction_artifact_ref")
 
     reduction_mode = row.get("reduction_mode")
     if reduction_mode in {"exact", "approx"}:
@@ -270,16 +284,16 @@ def _validate_semantics(
     physical_units_relevant = bool(row.get("physical_units_relevant", False))
     # Physical-units relevance can be true before calibration is closed; enforce
     # calibrated mode at promotion time.
-    if supported and physical_units_relevant and row.get("calibration_mode") != "calibrated":
-        errors.append(f"{claim_id}: supported physical_units_relevant claim requires calibration_mode=calibrated")
+    if promoted and physical_units_relevant and row.get("calibration_mode") != "calibrated":
+        errors.append(f"{claim_id}: promoted physical_units_relevant claim requires calibration_mode=calibrated")
     if row.get("calibration_mode") == "calibrated" and not _is_nonempty_str(row.get("scale_profile_id", "")):
         errors.append(f"{claim_id}: calibration_mode=calibrated requires scale_profile_id")
 
     uncertainty_relevant = bool(row.get("uncertainty_relevant", False))
     if uncertainty_relevant and not _is_nonempty_str(row.get("entropy_functional_id", "")):
         errors.append(f"{claim_id}: uncertainty_relevant requires entropy_functional_id")
-    if supported and uncertainty_relevant and not _is_nonempty_str(row.get("entropy_artifact_ref", "")):
-        errors.append(f"{claim_id}: supported uncertainty_relevant claim requires entropy_artifact_ref")
+    if promoted and uncertainty_relevant and not _is_nonempty_str(row.get("entropy_artifact_ref", "")):
+        errors.append(f"{claim_id}: promoted uncertainty_relevant claim requires entropy_artifact_ref")
 
 
 def validate_matrix(matrix: dict[str, Any]) -> list[str]:

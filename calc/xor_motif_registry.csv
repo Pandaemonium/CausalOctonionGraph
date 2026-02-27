@@ -1,5 +1,7 @@
 motif_id,representation,family,support,support_bits,u1_charge_proxy,period_left_e7,period_right_e7,stable_period4
 left_spinor_electron_ideal,spinor,named_alias,"[0, 7]",['111'],-8,4,4,True
+left_spinor_muon_motif,spinor,Su,"[3, 4]","['011', '100']",0,4,4,True
+left_spinor_tau_motif,spinor,Su,"[1, 6]","['001', '110']",0,4,4,True
 right_spinor_electron_ideal,spinor,named_alias,"[0, 7]",['111'],8,4,4,True
 sd_double_12,spinor,Sd,"[3, 4]","['011', '100']",0,4,4,True
 sd_double_13,spinor,Sd,"[2, 5]","['010', '101']",0,4,4,True

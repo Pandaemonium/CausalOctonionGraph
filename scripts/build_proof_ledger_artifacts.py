@@ -22,7 +22,9 @@ ACCOMPLISH_PATH = ROOT / "website" / "accomplishments.yml"
 OUT_DIR = ROOT / "website" / "data"
 
 STATUS_LABEL = {
-    "supported": "Proved",
+    "supported": "Proved (Legacy)",
+    "supported_bridge": "Supported (Bridge)",
+    "proved_core": "Proved",
     "partial": "In Progress",
     "active_hypothesis": "Hypothesis",
     "stub": "Queued",
@@ -31,6 +33,8 @@ STATUS_LABEL = {
 }
 STATUS_COLOR = {
     "supported": "proved",
+    "supported_bridge": "progress",
+    "proved_core": "proved",
     "partial": "progress",
     "active_hypothesis": "hypothesis",
     "stub": "queued",
