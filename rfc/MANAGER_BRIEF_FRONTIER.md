@@ -170,11 +170,11 @@ one has at least a falsifiable Python test and a Lean stub claim.
 | Python tests (calc/) | **667+ passing, 0 failing** (incl. `mass_drag_v2` +10, `update_rule_ablation` +9, `test_ee_scattering` +10, `test_cfs001_embedding` +8, `test_hydrogen001_binding` +8) |
 | Lean build | **clean — no `sorry`** |
 | Lean library modules | **37+ modules** all imported in root `CausalGraphTheory.lean` |
-| Claims proved | **18 proved** (ALG-001–004, ANOM-001, CAUS-001, CFS-001, DAG-001, DIST-001, FANO-001, GAUGE-001, GEN-001, GEN-002, LEPTON-001, MASS-001, MU-001, PHOTON-001, PROTON-001, RACE-001, REL-001, STRONG-001, TICK-001) per ground-truth YAML |
-| Claims partial | **7 partial** (ALPHA-001, CFS-002, CFS-003, HYDROGEN-001, WEINBERG-001) per ground-truth YAML |
-| Claims active_hypothesis | **0** per ground-truth YAML |
-| Claims open | **0 open** per ground-truth YAML |
-| Claims stub | **0 stub** per ground-truth YAML |
+| Claims proved | **19 proved** (ALG-001–004, ANOM-001, CAUS-001, CFS-001, DAG-001, DIST-001, FANO-001, GAUGE-001, GEN-001, GEN-002, LEPTON-001, MASS-001, MU-001, PHOTON-001, PROTON-001, RACE-001, REL-001, STRONG-001, TICK-001, WEINBERG-001) per ground-truth YAML |
+| Claims partial | **5 partial** (ALPHA-001, CFS-002, CFS-003, HYDROGEN-001, PROTON-001) per ground-truth YAML |
+| Claims active_hypothesis | **1** (MU-001) per ground-truth YAML |
+| Claims open | **1 open** (LEPTON-001) per ground-truth YAML |
+| Claims stub | **2 stub** (ANOM-001, GEN-001) per ground-truth YAML |
 | Claims superseded | **3 superseded** (GAUGE-001-LEGACY, STRONG-001-LEGACY, VAC-001) per ground-truth YAML |
 | Claims supported | **1 supported** (WEINBERG-UV-001) |
 | Claims unknown | **1 unknown** (CLAIM_STATUS_MATRIX) |
