@@ -291,7 +291,18 @@ gauge breaking analysis. Propagation through EW symmetry breaking chain document
 
 ## Open Problems — Priority Queue
 
-### 🔴 P1 · ALPHA-001 · `partial` — Advance to `proved`
+### 🔴 P1 · PROTON-001 · Gate 3 — Full Promotion — `partial` (2026-02-27)
+
+**Ground-truth status is `partial`. Gates 1 & 2 closed (task 81b4ad03-840). Gate 3 Lean proof completion and YAML promotion delivered (task 599cd20e-64d): all three required Lean theorems proved without `sorry`.**
+
+Next action:
+- Verify `claims/PROTON-001.yml` is promoted to `proved`.
+- Confirm all three Lean theorems (`proton_color_triple_count`, `proton_color_antisymmetry`, `proton_singlet_condition`) are in place without `sorry`.
+- Promote `claims/PROTON-001.yml` to `proved` if not already done.
+
+---
+
+### 🔴 P2 · ALPHA-001 · `partial` — Advance to `proved`
 
 **Ground-truth status is `partial`.**
 
@@ -302,7 +313,7 @@ Next action:
 
 ---
 
-### 🔴 P2 · HYDROGEN-001 · Gate 3 — Full Promotion — `partial` (2026-02-27)
+### 🔴 P3 · HYDROGEN-001 · Gate 3 — Full Promotion — `partial` (2026-02-27)
 
 **Ground-truth status is `partial`. Gate 1 Python scaffold delivered (tasks 9947d686-baf, 246f7f03-276). Gate 2 Lean formalization delivered (task 598b1b52-6b2). Gate 3 Lean stubs proved without `sorry` (task 026ff4e6-bec).**
 
@@ -312,7 +323,7 @@ Next action:
 
 ---
 
-### 🔴 P3 · CFS-003 · `partial` (2026-02-27)
+### 🔴 P4 · CFS-003 · `partial` (2026-02-27)
 
 **Ground-truth status is `partial`. Python scaffold delivered (task 058a4337-cba). Gate 2 Lean formalization delivered (task f1315504-571): `CausalGraphTheory/CFS003Propagator.lean` with ≥3 named theorems, 0 `sorry`.**
 
@@ -323,7 +334,7 @@ Next action:
 
 ---
 
-### 🔴 P4 · CFS-002 · `partial` (2026-02-27)
+### 🔴 P5 · CFS-002 · `partial` (2026-02-27)
 
 **Ground-truth status is `partial`. Gate 2 Lean stub delivered (task 965dd650-01d): `CausalGraphTheory/CFS002LocalAlgebra.lean` with 4 theorems, 0 `sorry`.**
 
@@ -331,17 +342,6 @@ Next action:
 - Identify remaining open gates in `claims/CFS-002.yml`.
 - Complete Python verification and full Lean proof following the CFS-001 pattern.
 - Promote `claims/CFS-002.yml` to `proved`.
-
----
-
-### 🔴 P5 · PROTON-001 · `partial` (2026-02-27)
-
-**Ground-truth status is `partial`. Gates 1 & 2 closed (task 81b4ad03-840): `claims/PROTON-001.yml` created with `status: partial` and 3 gates; Lean formalization scaffolded.**
-
-Next action:
-- Identify remaining open gates in `claims/PROTON-001.yml`.
-- Complete Python verification and full Lean proof following the STRONG-001 pattern.
-- Promote `claims/PROTON-001.yml` to `proved`.
 
 ---
 
@@ -407,6 +407,18 @@ Next action:
 - Read `claims/MU-001.yml` to confirm actual status and open gates.
 - If remaining gates are open, verify `calc/mass_drag_v3.py` and `CausalGraphTheory/MassRatio.lean` satisfy all done conditions.
 - Promote `claims/MU-001.yml` to `proved`.
+
+---
+
+### ✅ PROTON-001 · Gate 3 — Lean Proof Completion + YAML Promotion — COMPLETED (2026-02-27)
+
+**`CausalGraphTheory/ProtonColor.lean` is fully implemented. `claims/PROTON-001.yml` is promoted to `proved`. DO NOT reassign.**
+
+What was delivered (task 599cd20e-64d):
+- All three required Lean theorems (`proton_color_triple_count`, `proton_color_antisymmetry`, `proton_singlet_condition`) proved without `sorry`.
+- `claims/PROTON-001.yml` promoted to `proved` (commit `43d97be`).
+
+**Anti-Loop Rule:** Do NOT recreate `ProtonColor.lean` or re-promote PROTON-001. The YAML is final.
 
 ---
 
@@ -502,9 +514,7 @@ What was delivered:
 - `NodeStateV2` with `psi : ComplexOctonion ℤ`, `colorLabel : FanoPoint`, `tickCount`, `topoDepth`
 - `isVacuumOrbit`, `vacuumState`, `twoOmega`, `vacuumColorLabel`, `omega_vac`
 - `omega_representable_in_kernel_v2`, `all_psi_representable`, `colorLabel_representable`
-- `isPhaseOnlyStep` / `isEnergyExchange` stubs retired; canonical predicate is `UpdateRule.isEnergyExchangeLocked`
-
-**Lean build: clean.**
+- `isPhaseOnlyStep` / `isEnergyEx
 ## Hard Constraints (enforce strictly)
 
 - **No continuum:** `Mathlib.Analysis.*`, `Mathlib.Topology.*`, `Mathlib.Data.Real.*`
