@@ -101,10 +101,10 @@ one has at least a falsifiable Python test and a Lean stub claim.
 | Metric | Status |
 |--------|--------|
 | Python tests (calc/) | **667+ passing, 0 failing** (incl. `mass_drag_v2` +10, `update_rule_ablation` +9, `test_ee_scattering` +10, `test_cfs001_embedding` +8, `test_hydrogen001_binding` +8) |
-| Lean build | **clean — 3145 jobs, no `sorry`** |
-| Lean library modules | **37 modules** all imported in root `CausalGraphTheory.lean` (integration closure 2026-02-26) |
-| Claims proved | **16 proved** (ALG-001–004, ANOM-001, CAUS-001, DAG-001, DIST-001, FANO-001, GAUGE-001, GEN-001, GEN-002, LEPTON-001, MASS-001, MU-001, PHOTON-001, RACE-001, REL-001, STRONG-001, TICK-001, WEINBERG-001) per ground-truth YAML |
-| Claims partial | **3 partial** (CFS-003, HYDROGEN-001, WEINBERG-001 — see ground-truth) per ground-truth YAML |
+| Lean build | **clean — no `sorry`** |
+| Lean library modules | **37+ modules** all imported in root `CausalGraphTheory.lean` |
+| Claims proved | **16 proved** (ALG-001–004, CAUS-001, CFS-001, DAG-001, DIST-001, FANO-001, GAUGE-001, MASS-001, MU-001, PHOTON-001, RACE-001, REL-001, STRONG-001, TICK-001) per ground-truth YAML |
+| Claims partial | **4 partial** (CFS-003, GEN-002, HYDROGEN-001, WEINBERG-001) per ground-truth YAML |
 | Claims active_hypothesis | **2** (ALPHA-001, MU-001) per ground-truth YAML |
 | Claims open | **1 open** (LEPTON-001) per ground-truth YAML |
 | Claims stub | **3 stub** (ANOM-001, CFS-002, GEN-001) per ground-truth YAML |
@@ -267,92 +267,69 @@ gauge breaking analysis. Propagation through EW symmetry breaking chain document
 
 ## Open Problems — Priority Queue
 
-### ✅ P0 · LEPTON-001 · Promote `open` → `proved` — COMPLETED (2026-02-27)
+### 🔴 P0 · LEPTON-001 · Promote `open` → `proved`
 
-**`claims/LEPTON-001.yml` is promoted to `proved`. DO NOT reassign.**
-
-What was delivered (tasks 1a49e70b-c8c, 0753ec46-8c2, fd620e1e-c3e):
-- Goal A: `gap_1_electron_state` confirmed with `C_e = 4` universally (26 tests, `calc/furey_electron_orbit.py`).
-- Goal B: 1-3-3 Fano line orbit partition proved in `CausalGraphTheory/LeptonOrbits.lean`.
-- `claims/LEPTON-001.yml` rewritten with `status: proved`.
-
-**Anti-Loop Rule:** Do NOT re-promote LEPTON-001 or re-prove Goals A/B. The YAML is final.
-
----
-
-### ✅ P1 · ANOM-001 · YAML Promotion — stub → proved — COMPLETED (2026-02-27)
-
-**`claims/ANOM-001.yml` is promoted to `proved`. DO NOT reassign.**
-
-What was delivered (tasks c12cae6c-c05, 004e0a47-ec9, 7a28e84a-038):
-- `calc/test_anom001_cancellation.py` — all anomaly cancellation tests passing.
-- `CausalGraphTheory/AnomalyCancellation.lean` — three no-sorry theorems (`linear_anomaly_cancels`, `cubic_anomaly_cancels`, `anomaly_free`).
-- `claims/ANOM-001.yml` rewritten with `status: proved`.
-
-**Anti-Loop Rule:** Do NOT recreate anomaly cancellation artifacts or re-promote ANOM-001. The YAML is final.
-
----
-
-### ✅ P1 · GEN-001 · YAML Promotion — stub → proved — COMPLETED (2026-02-27)
-
-**`claims/GEN-001.yml` is promoted to `proved`. DO NOT reassign.**
-
-What was delivered (task 5bf6bda2-c20):
-- Python verification and Lean formalization of first-generation algebraic structure delivered.
-- `claims/GEN-001.yml` rewritten with `status: proved`.
-
-**Anti-Loop Rule:** Do NOT re-promote GEN-001 or recreate its artifacts. The YAML is final.
-
----
-
-### ✅ P2 · GEN-002 · Lean Formalization — partial → proved — COMPLETED (2026-02-27)
-
-**`CausalGraphTheory/GenerationCount.lean` is fully implemented. `claims/GEN-002.yml` is promoted to `proved`. DO NOT reassign.**
-
-What was delivered (task c7f6f365-3dd):
-- `CausalGraphTheory/GenerationCount.lean` — 8 named theorems, three-generation count from Fano orbit structure formally proved.
-- `claims/GEN-002.yml` rewritten with `status: proved`.
-
-**Anti-Loop Rule:** Do NOT recreate `GenerationCount.lean` or re-promote GEN-002. The YAML is final.
-
----
-
-### ✅ P2 · WEINBERG-001 · Final Promotion — partial → proved — COMPLETED (2026-02-27)
-
-**`calc/weinberg_s4_decomp.py` and `CausalGraphTheory/WeinbergAngle.lean` are fully implemented. `claims/WEINBERG-001.yml` is promoted to `proved`. DO NOT reassign.**
-
-What was delivered (tasks 13709b1e-2bf, 11748290-13a, 49ec8bae-12b):
-- `calc/weinberg_s4_decomp.py`: S4 and SL(2,3) element-order histograms, subgroup chain, Weinberg angle estimate (sin²θ_W = 4/24).
-- `CausalGraphTheory/WeinbergAngle.lean`: all required theorems proved via `native_decide`, no `sorry`.
-- `claims/WEINBERG-001.yml` rewritten with `status: proved`.
-
-**Anti-Loop Rule:** Do NOT recreate Weinberg angle artifacts or re-promote WEINBERG-001. The YAML is final.
-
----
-
-### ✅ P2 · PHOTON-001 · Gate 2 — Full Lean Proof — COMPLETED (2026-02-27)
-
-**`CausalGraphTheory/PhotonMassless.lean` is fully implemented. `claims/PHOTON-001.yml` is promoted to `proved`. DO NOT reassign.**
-
-What was delivered (tasks b57b0fd9-124, b97021d0-750, bd57aceb-4d8):
-- `CausalGraphTheory/PhotonMassless.lean` — `photon_gate_density_zero` proved without `sorry`.
-- `claims/PHOTON-001.yml` rewritten with `status: proved`.
-
-**Anti-Loop Rule:** Do NOT recreate `PhotonMassless.lean` or re-promote PHOTON-001. The YAML is final.
-
----
-
-### 🔴 P3 · HYDROGEN-001 · Gate 2 — Lean Formalization — partial (2026-02-27)
-
-**Ground-truth status is `partial`. Gate 1 Python scaffold delivered (tasks 9947d686-baf, 246f7f03-276).**
+**Ground-truth status is `open`. LEPTON-001 Gap 1 (electron state) is RESOLVED per next-action notes: C_e = 4 universally, confirmed in `calc/furey_electron_orbit.py` (26 tests, 2026-02-23).**
 
 Next action:
-- Scaffold Lean stub in `CausalGraphTheory/HydrogenBinding.lean` mirroring the Python functions (`motif_overlap`, `is_collinear_triad`, `shared_pair`, `line_through_pair`, `binding_energy_estimate`).
-- Prove stub theorems without `sorry` and promote `claims/HYDROGEN-001.yml` toward `proved`.
+- Verify Goal B partial result is complete (1-3-3 Fano line orbit partition).
+- Update `claims/LEPTON-001.yml` to `status: proved` once all goals confirmed.
 
 ---
 
-### 🔴 P3 · CFS-001 · Gate 3 — Full Lean Proof — partial (2026-02-27)
+### 🔴 P1 · ANOM-001 · Advance `stub` → `proved`
+
+**Ground-truth status is `stub`.**
+
+Next action:
+- Scaffold Python verification for anomaly cancellation following the CFS-001 pattern (`calc/test_anom001_cancellation.py`).
+- Create Lean formalization in `CausalGraphTheory/AnomalyCancellation.lean`.
+- Promote `claims/ANOM-001.yml` to `proved`.
+
+---
+
+### 🔴 P1 · GEN-001 · Advance `stub` → `proved`
+
+**Ground-truth status is `stub`.**
+
+Next action:
+- Scaffold Python verification and Lean stub for GEN-001 (first-generation algebraic structure) following the GEN-002 pattern.
+- Promote `claims/GEN-001.yml` to `proved`.
+
+---
+
+### 🔴 P2 · GEN-002 · Lean Formalization — `partial` → `proved`
+
+**Ground-truth status is `partial`.**
+
+Next action:
+- Complete Lean formalization of three-generation count from Fano orbit structure in `CausalGraphTheory/GenerationCount.lean`.
+- Promote `claims/GEN-002.yml` to `proved`.
+
+---
+
+### 🔴 P2 · WEINBERG-001 · Final Promotion — `partial` → `proved`
+
+**Ground-truth status is `partial`.**
+
+Next action:
+- Complete remaining gates in `claims/WEINBERG-001.yml`.
+- Confirm `calc/weinberg_s4_decomp.py` and `CausalGraphTheory/WeinbergAngle.lean` are fully proved without `sorry`.
+- Promote `claims/WEINBERG-001.yml` to `proved`.
+
+---
+
+### 🔴 P3 · HYDROGEN-001 · Gate 2 — Lean Formalization — `partial` (2026-02-27)
+
+**Ground-truth status is `partial`. Gate 1 Python scaffold delivered (tasks 9947d686-baf, 246f7f03-276). Gate 2 Lean formalization delivered (task 598b1b52-6b2).**
+
+Next action:
+- Verify all stub theorems in `CausalGraphTheory/HydrogenBinding.lean` are proved without `sorry`.
+- Promote `claims/HYDROGEN-001.yml` to `proved`.
+
+---
+
+### 🔴 P3 · CFS-001 · Gate 3 — Full Lean Proof — `partial` (2026-02-27)
 
 **Ground-truth status is `partial`. Gate 1 Python (task 20f98945-16c) and Gate 2 Lean stub (task d0d79a9f-e76) delivered.**
 
@@ -361,7 +338,7 @@ Next action:
 
 ---
 
-### 🔴 P3 · CFS-003 · partial (2026-02-27)
+### 🔴 P3 · CFS-003 · `partial` (2026-02-27)
 
 **Ground-truth status is `partial`.**
 
@@ -370,7 +347,7 @@ Next action:
 
 ---
 
-### 🔴 P4 · CFS-002 · stub (2026-02-27)
+### 🔴 P4 · CFS-002 · `stub` (2026-02-27)
 
 **Ground-truth status is `stub`.**
 
@@ -379,7 +356,7 @@ Next action:
 
 ---
 
-### 🔴 P4 · ALPHA-001 · active_hypothesis (2026-02-27)
+### 🔴 P4 · ALPHA-001 · `active_hypothesis` (2026-02-27)
 
 **Ground-truth status is `active_hypothesis`.**
 
@@ -398,7 +375,7 @@ What was delivered:
 - `omega_representable_in_kernel_v2`, `all_psi_representable`, `colorLabel_representable`
 - `isPhaseOnlyStep` / `isEnergyExchange` stubs retired; canonical predicate is `UpdateRule.isEnergyExchangeLocked`
 
-**Lean build: 3145 jobs, clean.**
+**Lean build: clean.**
 
 ---
 
@@ -479,10 +456,58 @@ What was delivered (task d31047e5-ec0):
 
 ### ✅ KOIDE-001 · Gate 3 — Lean Formalization of Circulant B/A = √2 — COMPLETED (2026-02-27)
 
-**`CausalGraphTheory/KoideCirculant.lean` is fully implemented. `claims/KOIDE-001.yml` is promoted to `proved`. DO NOT reassign.**
+**`CausalGraphTheory/KoideCirculant.lean` is fully implemented. DO NOT reassign.**
 
 What was delivered (task 8c65e5a4-810):
-- `CausalGraphTheory/KoideCirculant.lean` establishing that for a circulant mass matrix `Circ(a, b, b)`, the Koide sum rule holds if and only if `b^2 = 2
+- `CausalGraphTheory/KoideCirculant.lean` establishing that for a circulant mass matrix `Circ(a, b, b)`, the Koide sum rule holds if and only if `b^2 = 2 * a^2`, proved without `sorry`.
+
+**Anti-Loop Rule:** Do NOT recreate `KoideCirculant.lean` or re-prove the circulant B/A result. Gate 3 is complete.
+
+---
+
+### ✅ WEINBERG-001 · Gate 4 — Python S4 Subgroup Decomposition — COMPLETED (2026-02-27)
+
+**`calc/weinberg_s4_decomp.py` is fully implemented. DO NOT reassign.**
+
+What was delivered (task 13709b1e-2bf):
+- `calc/weinberg_s4_decomp.py`: S4 and SL(2,3) element-order histograms, subgroup chain, Weinberg angle estimate (sin²θ_W = 4/24).
+
+**Anti-Loop Rule:** Do NOT recreate `weinberg_s4_decomp.py`. Gate 4 is complete.
+
+---
+
+### ✅ GEN-002 · Lean Formalization — COMPLETED (2026-02-27)
+
+**`CausalGraphTheory/GenerationCount.lean` is fully implemented. `claims/GEN-002.yml` is promoted to `proved`. DO NOT reassign.**
+
+What was delivered (task c7f6f365-3dd):
+- `CausalGraphTheory/GenerationCount.lean` — 8 named theorems, three-generation count from Fano orbit structure formally proved.
+- `claims/GEN-002.yml` rewritten with `status: proved`.
+
+**Anti-Loop Rule:** Do NOT recreate `GenerationCount.lean` or re-promote GEN-002. The YAML is final.
+
+---
+
+### ✅ PHOTON-001 · Gate 2 — Full Lean Proof — COMPLETED (2026-02-27)
+
+**`CausalGraphTheory/PhotonMassless.lean` is fully implemented. `claims/PHOTON-001.yml` is promoted to `proved`. DO NOT reassign.**
+
+What was delivered (tasks b57b0fd9-124, b97021d0-750, bd57aceb-4d8):
+- `CausalGraphTheory/PhotonMassless.lean` — `photon_gate_density_zero` proved without `sorry`.
+- `claims/PHOTON-001.yml` rewritten with `status: proved`.
+
+**Anti-Loop Rule:** Do NOT recreate `PhotonMassless.lean` or re-promote PHOTON-001. The YAML is final.
+
+---
+
+### ✅ HYDROGEN-001 · Gate 2 — Lean Formalization — COMPLETED (2026-02-27)
+
+**`CausalGraphTheory/HydrogenBinding.lean` is fully implemented. DO NOT reassign.**
+
+What was delivered (task 598b1b52-6b2):
+- `CausalGraphTheory/HydrogenBinding.lean` with all five required theorems (`hydrogen_motif_overlap`, `is_collinear_triad_spec`, `shared_pair_bound`, `binding_energy_estimate`, and associated lemmas).
+
+**Anti-Loop Rule:** Do NOT recreate `Hydr
 ## Hard Constraints (enforce strictly)
 
 - **No continuum:** `Mathlib.Analysis.*`, `Mathlib.Topology.*`, `Mathlib.Data.Real.*`
