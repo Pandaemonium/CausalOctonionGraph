@@ -1,0 +1,69 @@
+{
+  "examples": [
+    {
+      "file": "000_vacuum_single_node.json",
+      "label": "Single-node vacuum baseline"
+    },
+    {
+      "file": "001_vacuum_cone_depth2.json",
+      "label": "Depth-2 vacuum cone"
+    },
+    {
+      "file": "010_electron_seed_single.json",
+      "label": "Single electron-like motif seed"
+    },
+    {
+      "file": "011_positron_seed_single.json",
+      "label": "Single positron-like motif seed"
+    },
+    {
+      "file": "020_two_electrons_small_cone.json",
+      "label": "Two-electron small cone"
+    },
+    {
+      "file": "021_electron_positron_small_cone.json",
+      "label": "Electron-positron small cone"
+    },
+    {
+      "file": "030_proton_triad_seed_single.json",
+      "label": "Single proton-like triad seed"
+    },
+    {
+      "file": "031_three_quark_toy_cone.json",
+      "label": "Three-quark toy cone"
+    },
+    {
+      "file": "040_hydrogen_toy_pair.json",
+      "label": "Hydrogen-like toy pair"
+    },
+    {
+      "file": "041_hydrogen_far_separation.json",
+      "label": "Hydrogen-like pair with larger separation"
+    },
+    {
+      "file": "050_photon_like_e7_pulse.json",
+      "label": "Vacuum-axis pulse toy state"
+    },
+    {
+      "file": "051_phase_shifted_electron.json",
+      "label": "Phase-shifted electron-like seed"
+    },
+    {
+      "file": "060_distance_chain_electron_electron.json",
+      "label": "Distance-chain electron-electron layout"
+    },
+    {
+      "file": "070_mixed_excitation_cone_small.json",
+      "label": "Mixed excitation small cone"
+    },
+    {
+      "file": "080_balanced_complex_pair.json",
+      "label": "Balanced complex pair"
+    },
+    {
+      "file": "090_large_toy_cone_depth3.json",
+      "label": "Larger depth-3 toy cone"
+    }
+  ]
+}
+
