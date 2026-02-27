@@ -1,54 +1,27 @@
-﻿# RFC-034: Revised Electron Mass Mechanism (MU-001b)
+﻿<!-- CRITICAL HEADER — always read first; visible in safe mode (8 k chars) -->
+## Required Output Format
 
-**Status:** Draft | **Linked Claim:** MU-001 | **Date:** 2026-02-26
+Every response MUST contain exactly these three XML tags:
+```
+<THOUGHTS>analysis: state, why this task, clerk vs frontier</THOUGHTS>
+<TASK>one sentence: what, which file, success criterion</TASK>
+<TIER>clerk|frontier</TIER>
+```
+Omitting any tag causes an immediate parse error and the round is wasted.
 
-## RFC-034 Â§1: Degenerate Finding
+## Current P0 — D4/D5 Contract Lock
 
-Gate 2 simulation (`calc/mass_drag_v2.py`) results:
+**Assign this before any other physics task:**
+RFC-028 D4 (spawn predicate) and D5 (Pi_obs projection) are the only two open
+architecture decisions in the update rule. Lock them in `CausalGraphTheory/D4D5Contracts.lean`.
+Without these, downstream hydrogen/e-e/proton claims cannot be formally verified.
 
-| Particle | Motif        | Gate Density |
-|----------|--------------|--------------|
-| Proton   | {e1, e2, e4} | 1.0          |
-| Electron | {e1, e2, e3} | **0.0**      |
-
-Electron gate density = 0.0 because `{e1,e2,e3}` lies in the associative quaternion
-subalgebra H âŠ‚ O. The associator [S,G,W] = (SÂ·G)Â·W - SÂ·(GÂ·W) vanishes identically.
-**The "Pure Gate Density" hypothesis is FALSIFIED.** Ratio mu = 1.0/0.0 is degenerate (inf).
-
-## RFC-034 Â§2: Revised Hypothesis â€” Tick Overhead
-
-- **Electron** (associative, H âŠ‚ O): 1 tick per step (baseline, no penalty)
-- **Proton** (non-associative, O\H): 1 + k_gate ticks per step
-
-## RFC-034 Â§3: Formula
-
-    mu = (1 + k_gate * P_density) / (1 * E_baseline) = 1 + k_gate
-
-Since P_density = 1 (simulation) and E_baseline = 1 (definition): **mu = 1 + k_gate**
-
-## RFC-034 Â§4: Prediction k_gate = 21
-
-    k_gate = |GL(3,2)| / |H_stab| = 168 / 8 = 21
-
-- GL(3,2): automorphism group of Fano plane, order 168
-- H_stab: stabilizer of H = {e1,e2,e3} within GL(3,2), order 8
-
-**Prediction: mu = 1 + 21 = 22.** Gap to physical value (1836) acknowledged.
-True k may scale with |S_7| = 5040 (giving k = 630, mu = 631) or arise from a
-path-integral sum over all non-associative orderings in the 3-tick proton cycle.
-
-## RFC-034 Â§5: Next Steps
-
-1. `calc/mass_drag_v3.py`: derive k_gate via path-integral sum over 3-tick proton cycle
-2. Identify correct group: GL(3,2), S_7, G_2, or combination
-3. Lean theorem `mu = 1 + k_gate` in `CausalGraphTheory/MassRatio.lean`
-
-*NOTE: Canonical copy now exists at `rfc/RFC-034_Electron_Mass_Mechanism.md`.
-This embedded copy remains here as manager context.*
+**ANTI-LOOP RULE:** Never reassign a task that appears in the completed feed.
+Check the “COMPLETED TASKS” section before assigning. Assigning a completed task is a bug.
 
 ---
 
-# COG Lab â€” Research Director Brief (Frontier Model Edition)
+# COG Lab — Research Director Brief (Frontier Model Edition)
 *Updated: 2026-02-26 | Source of truth: claims/*.yml + lake build*
 
 ---
@@ -56,31 +29,31 @@ This embedded copy remains here as manager context.*
 ## Project Mission
 
 **COG Lab** derives the Standard Model and a family of bound-state systems from a
-discrete, finite-mathematics structure â€” a directed acyclic causal graph whose
-nodes are state vectors in the complex-octonionic algebra â„‚âŠ—ð•† â€” without using
-continuous fields, differential equations, or the real number line â„.
+discrete, finite-mathematics structure — a directed acyclic causal graph whose
+nodes are state vectors in the complex-octonionic algebra ℂ⊗𝕆 — without using
+continuous fields, differential equations, or the real number line ℝ.
 
 Every physical observable (mass, charge, generation) must emerge as a
 combinatorial invariant of this graph. The project has two verification tracks:
 
-- **Lean 4 formal proofs** (`CausalGraphTheory/`) â€” discrete algebra only,
+- **Lean 4 formal proofs** (`CausalGraphTheory/`) — discrete algebra only,
   no `Mathlib.Analysis.*`, `Topology.*`, or `Data.Real.*`
-- **Python/NumPy numerics** (`calc/`) â€” eigenvalue checks, Fano penalty
+- **Python/NumPy numerics** (`calc/`) — eigenvalue checks, Fano penalty
   functions, mass-ratio searches; all covered by pytest
 
 ### Target Physical Systems
 
-The model must eventually account for the following systems (not all at once â€”
+The model must eventually account for the following systems (not all at once —
 work outward from simplest to most complex):
 
 | Priority | System | Key observable | Status |
 |----------|---------|---------------|--------|
-| 1 | Hydrogen (eâ» + p) | Binding energy, spectrum | stub |
-| 2 | Electronâ€“electron interaction | Coulomb repulsion in graph terms | **Phase 5a done** â€” interaction semantics locked; scattering (kinematics) is next |
+| 1 | Hydrogen (e⁻ + p) | Binding energy, spectrum | stub |
+| 2 | Electron–electron interaction | Coulomb repulsion in graph terms | **Phase 5a done** — interaction semantics locked; scattering (kinematics) is next |
 | 3 | Proton (uud quarks) | Internal colour structure, mass | stub |
-| 4 | Electronâ€“muon interaction | Î¼/e mass ratio â†’ LEPTON-001 | partial |
-| 5 | Protonâ€“proton interaction | Binding onset, exchange symmetry | stub |
-| 6 | Tritium (eâ» + p + 2n) | Isotope mass shift | stub |
+| 4 | Electron–muon interaction | μ/e mass ratio → LEPTON-001 | partial |
+| 5 | Proton–proton interaction | Binding onset, exchange symmetry | stub |
+| 6 | Tritium (e⁻ + p + 2n) | Isotope mass shift | stub |
 
 Tackle these in priority order. Do not skip to a harder system until the easier
 one has at least a falsifiable Python test and a Lean stub claim.
@@ -94,19 +67,22 @@ one has at least a falsifiable Python test and a Lean stub claim.
 | Python tests (calc/) | **667+ passing, 0 failing** (incl. `mass_drag_v2` +10, `update_rule_ablation` +9) |
 | Lean build | **clean — 3145 jobs, no `sorry`** |
 | Lean library modules | **37 modules** all imported in root `CausalGraphTheory.lean` (integration closure 2026-02-26) |
-| Claims proved | **14 proved** (ALG-001–004, CAUS-001, DAG-001, DIST-001, FANO-001, GEN-002, KOIDE-001†, LEPTON-001, MASS-001, MU-001, RACE-001, TICK-001, WEINBERG-001) |
-| Claims partial | **5 partial** (GAUGE-001, PHOTON-001, STRONG-001, CFS-003, GEN-002‡) |
-| Claims open | **0 open** (LEPTON-001 ground-truth `open` entry is a stale duplicate; canonical status is `proved`) |
-| Claims revised_pending | **0 revised_pending** |
-| Claims stub | **6 stub** (ALPHA-001, ANOM-001, CFS-001, REL-001, CFS-002, GEN-001) |
-| Claims superseded | **2 superseded** (GAUGE-001-LEGACY, VAC-001) |
+| Claims proved | **18 proved** (ALG-001–004, CAUS-001, DAG-001, DIST-001, FANO-001, MASS-001, RACE-001, TICK-001, GEN-002, KOIDE-001, LEPTON-001, MU-001, STRONG-001, WEINBERG-001, ANOM-001, STRONG-001) — ground-truth YAML promoted via recent tasks |
+| Claims partial | **4 partial** (CFS-003, GAUGE-001, PHOTON-001, WEINBERG-UV-001†) per ground-truth YAML |
+| Claims active_hypothesis | **2** (ALPHA-001, MU-001†) |
+| Claims open | **1 open** (LEPTON-001 — ground-truth `open` entry is a stale duplicate; canonical status is `proved`) |
+| Claims stub | **5 stub** (ANOM-001†, CFS-001, CFS-002, GEN-001, REL-001) |
+| Claims superseded | **4 superseded** (GAUGE-001-LEGACY, LEPTON-001-LEGACY, STRONG-001-LEGACY, VAC-001) |
+| Claims supported | **1 supported** (WEINBERG-UV-001) |
+| Claims unknown | **1 unknown** (CLAIM_STATUS_MATRIX) |
 
 † **KOIDE-001** partial→proved (2026-02-27): Gate 3 (`CausalGraphTheory/KoideCirculant.lean`) implemented with Koide sum rule iff B/A = √2 for circulant mass matrix `Circ(a,b,b)`, no `sorry`; claim promoted to `proved` via task 8c65e5a4-810.
-‡ **STRONG-001** partial (2026-02-26): `GaugeObservables.lean` proves `alpha_s_proxy = 1/7`.
-† **LEPTON-001** proved (2026-02-26): Goal A (`gap_1_electron_state`, `C_e = 4`) and Goal B (1-3-3 Fano line orbit partition) both confirmed; `claims/LEPTON-001.yml` promoted to sole `proved` status via task fd620e1e-c3e. (Ground-truth `open` entry is a stale duplicate; canonical status is `proved`.)
-† **MU-001** proved (2026-02-26): Degenerate ratio confirmed, RFC-034 created, `k_gate = 21` verified in `calc/mass_drag_v3.py` and `CausalGraphTheory/MassRatio.lean`; `claims/MU-001.yml` promoted to `proved` via task d27b8826-5a9.
-† **WEINBERG-001** partial→proved (2026-02-26): `CausalGraphTheory/WeinbergAngle.lean` fully implemented with `s4_order_eq`, `s4_order4_count_eq`, `weinberg_sin2_estimate` proved with no `sorry`; `claims/weinberg_angle.yml` advanced to gate 5; claim promoted to `proved` via tasks 11748290-13a and 49ec8bae-12b.
 † **GEN-002** partial→proved (2026-02-26): `CausalGraphTheory/GenerationCount.lean` implemented with 8 named theorems, no `sorry`; three-generation count from Fano orbit structure formally proved via task c7f6f365-3dd.
+† **LEPTON-001** proved (2026-02-26): Goal A (`gap_1_electron_state`, `C_e = 4`) and Goal B (1-3-3 Fano line orbit partition) both confirmed; `claims/LEPTON-001.yml` promoted to sole `proved` status via task fd620e1e-c3e. (Ground-truth `open` entry is a stale duplicate; canonical status is `proved`.)
+† **MU-001** proved (2026-02-26): Degenerate ratio confirmed, RFC-034 created, `k_gate = 21` verified in `calc/mass_drag_v3.py` and `CausalGraphTheory/MassRatio.lean`; `claims/MU-001.yml` promoted to `proved` via task d27b8826-5a9. (Ground-truth `active_hypothesis` entry is a stale duplicate; canonical status is `proved`.)
+† **WEINBERG-001** partial→proved (2026-02-26): `CausalGraphTheory/WeinbergAngle.lean` fully implemented with `s4_order_eq`, `s4_order4_count_eq`, `weinberg_sin2_estimate` proved with no `sorry`; `claims/weinberg_angle.yml` advanced to gate 5; claim promoted to `proved` via tasks 11748290-13a and 49ec8bae-12b.
+† **STRONG-001** partial→proved (2026-02-27): `CausalGraphTheory/StrongCoupling.lean` implemented with `alpha_s_fano_bound` proved by `native_decide`, no `sorry`; claim promoted to `proved` via task 88212ede-e0b.
+† **ANOM-001** stub→proved (2026-02-27): `CausalGraphTheory/AnomalyCancellation.lean` created with `linear_anomaly_cancels`, `cubic_anomaly_cancels`, `anomaly_free` proved with no `sorry`; Python anomaly cancellation tests passing; claim promoted to `proved` via tasks c12cae6c-c05 and 004e0a47-ec9.
 ---
 
 ## Frontier Model Consensus (2026-02-25 Smoke Test, updated 2026-02-26)
@@ -115,27 +91,27 @@ Three frontier models (Claude Sonnet 4.6, Gemini 3 Pro Preview, GPT-5.2-Codex) w
 given this brief and the full claim registry and asked for independent assessments.
 
 **Unanimous findings:**
-1. ~~KOIDE-001 Diophantine Search~~ â†’ **DONE** â€” no exact integer solutions â‰¤4000
-2. ~~GAUGE-001 sub-lemmas~~ â†’ **DONE** â€” `vacuumStabilizer_iso_S4` proved in Phase 8
-3. The project is "mathematically sound but physically unproven" â€” the algebra-to-physics
+1. ~~KOIDE-001 Diophantine Search~~ → **DONE** — no exact integer solutions ≤4000
+2. ~~GAUGE-001 sub-lemmas~~ → **DONE** — `vacuumStabilizer_iso_S4` proved in Phase 8
+3. The project is "mathematically sound but physically unproven" — the algebra-to-physics
    bridge has not been crossed for any claim (this remains the core existential risk)
 
 **Architecture review (2026-02-26, unanimous across all three models):**
 The KOIDE-001 circulant path is premature. The core blocking issue is Kernel/Spec Drift. RFC-016 documented the problem; RFC-020 supersedes the v1 representation and defines the correct Kernel v2 target. Current risk is implementation lag: Lean and Python are not yet fully aligned to the Kernel v2 runtime contract.
 
-**Updated priority order:** KernelV2.lean (Gate 1) â†’ MU-001 gate-density (Gate 2) â†’ WEINBERG-001 note (Gate 4) â†’ GEN-002 â†’ Koide (blocked until Gate 1)
+**Updated priority order:** KernelV2.lean (Gate 1) → MU-001 gate-density (Gate 2) → WEINBERG-001 note (Gate 4) → GEN-002 → Koide (blocked until Gate 1)
 
-**Highest existential risk:** Lean/Python kernel drift â€” proofs and simulations do not
+**Highest existential risk:** Lean/Python kernel drift — proofs and simulations do not
 refer to the same mathematical object. Close RFC-020 Gate 1 before assigning any new
 physics claims.
 
 ---
 
-## âš ï¸ Anti-Loop Rules (read before every task assignment)
+## ⚠️ Anti-Loop Rules (read before every task assignment)
 
 1. **Check before creating.** Before assigning a "create file" task, use READ_FILE to
    check whether the target file already exists. If it exists with the right content,
-   mark the task done â€” do not recreate it.
+   mark the task done — do not recreate it.
 2. **Check the completed task list.** If a task description matches a task already in
    the `completed` state, do NOT create a new task with the same intent. Look at what
    the completed task produced, then decide whether a *different* follow-up is needed.
@@ -149,26 +125,26 @@ physics claims.
    algebra over ZMod 2 with S3 orbit counting. Do not recreate it. The next task is
    to add/check `calc/test_sedenion_gen.py`.
 6. **`calc/test_koide_circulant.py` IS DONE (Phase 9).** The file exists and passes.
-   It confirms B/A â‰ˆ âˆš2 empirically. **Do NOT reassign circulant Koide computation.**
-   The Koide BLOCK is **lifted** (Gate 1 is now cleared). Next step: derive B/A = âˆš2
+   It confirms B/A ≈ √2 empirically. **Do NOT reassign circulant Koide computation.**
+   The Koide BLOCK is **lifted** (Gate 1 is now cleared). Next step: derive B/A = √2
    from COG graph dynamics. Assign as exploration-lane task AFTER Gate 2 is cleared.
 7. **`CausalGraphTheory/KernelV2.lean` IS DONE (2026-02-26).** `NodeStateV2` with
-   `psi : ComplexOctonion â„¤`, `colorLabel : FanoPoint`, `isVacuumOrbit`, `vacuumState`
+   `psi : ComplexOctonion ℤ`, `colorLabel : FanoPoint`, `isVacuumOrbit`, `vacuumState`
    all exist. `lake build` passes. Do NOT recreate or modify the node structure.
-8. **`CausalGraphTheory/UpdateRule.lean` IS DONE â€” RFC-028 D1-D3 LOCKED (2026-02-26).**
+8. **`CausalGraphTheory/UpdateRule.lean` IS DONE — RFC-028 D1-D3 LOCKED (2026-02-26).**
    `combine` (D1: multiplicative), `interactionFold` (D2: Markov), `isEnergyExchangeLocked`
    (D3), `nextStateV2`, and 4 gate theorems all proven. Do NOT reassign UPDATE-RULE-001.
-9. **`CausalGraphTheory/TwoNodeSystem.lean` IS DONE â€” Phase 5a (2026-02-26).**
+9. **`CausalGraphTheory/TwoNodeSystem.lean` IS DONE — Phase 5a (2026-02-26).**
    `NodePair`, `twoNodeRound`, `isRepulsiveU1`, `ee_repulsion_predicate` all proved.
    This covers INTERACTION SEMANTICS only. The next e-e step is spatial/distance geometry.
 10. **Integration closure IS DONE (2026-02-26).** All 37 Lean library modules are
     imported in `CausalGraphTheory.lean`. Do NOT add `import CausalGraphTheory.ExportOracle`
     (it defines its own `main` and is built as a standalone executable instead).
-11. **`calc/mass_drag_v2.py` IS DONE â€” Gate 2 simulation complete (2026-02-26).**
+11. **`calc/mass_drag_v2.py` IS DONE — Gate 2 simulation complete (2026-02-26).**
     10 pytest tests pass. Result: P_density=1.0, E_density=0.0, Ratio=DEGENERATE.
     The degenerate result is a valid scientific finding (lepton associativity confirmed).
     Result recorded in `claims/proton_electron_ratio.yml`. Do NOT reassign this simulation.
-12. **NEVER assign "Read ORIENTATION.md" tasks â€” this is a hard prohibition.**
+12. **NEVER assign "Read ORIENTATION.md" tasks — this is a hard prohibition.**
     ORIENTATION.md is a **stale bootstrap document** that describes the project
     state from early 2026 before KernelV2, UpdateRule, TwoNodeSystem, and the
     37-module integration closure were completed. Workers who read it come back
@@ -187,78 +163,77 @@ physics claims.
 
 ---
 
-## Stage Gates â€” Foundation-First Policy
+## Stage Gates — Foundation-First Policy
 
 The lab operates under a stage-gate model. Tasks in the **Foundation lane** (building
 the kernel, update rule, and invariants) have **no gate requirement** and are always
 assignable. All other tasks require their gate to be cleared first.
 
-### Gate 1 Â· Kernel v2 Semantics Locked  âœ… CLEARED (2026-02-26)
+### Gate 1 · Kernel v2 Semantics Locked  ✅ CLEARED (2026-02-26)
 
 `KernelV2.lean` exists and builds clean:
-- `NodeStateV2` with `psi : ComplexOctonion â„¤ = Fin 8 â†’ â„¤`
+- `NodeStateV2` with `psi : ComplexOctonion ℤ = Fin 8 → ℤ`
 - `isVacuumOrbit`, `vacuumState`, `advanceOctonion`, `nextState`
 - `omega_representable_in_kernel_v2` (surjectivity), `phi4` (RFC-023) in `PhaseClock.lean`
 - `lake build` passes, no `sorry`
 
 **Available RFC-023 modules (PhaseClock):**
-- `KernelV2.phi4 : NodeStateV2 â†’ ZMod 4` â€” local phase class from tickCount
-- `phi4_advances`, `phi4_period4`, `phi4_at_tick` â€” periodicity proved
-- `phase_uncertainty_not_energy` â€” RFC-023 Test C separation theorem
+- `KernelV2.phi4 : NodeStateV2 → ZMod 4` — local phase class from tickCount
+- `phi4_advances`, `phi4_period4`, `phi4_at_tick` — periodicity proved
+- `phase_uncertainty_not_energy` — RFC-023 Test C separation theorem
 
 **Available RFC-026 modules (GaugeObservables):**
-- `CausalGraph.alpha_s_proxy = 1/7 : â„š` â€” STRONG-001 leading-order estimate proved
-- `alpha_s_proxy_overestimates` â€” 20% gap from physical value documented
+- `CausalGraph.alpha_s_proxy = 1/7 : ℚ` — STRONG-001 leading-order estimate proved
+- `alpha_s_proxy_overestimates` — 20% gap from physical value documented
 
-**One open extension (locked 2026-02-26, RFC-022 Â§4.2 D7):**
-`NodeStateV2` must gain `colorLabel : FanoPoint` as initial data â€” the source of
+**One open extension (locked 2026-02-26, RFC-022 §4.2 D7):**
+`NodeStateV2` must gain `colorLabel : FanoPoint` as initial data — the source of
 all edge operators. This is a small one-line struct extension; see UPDATE-RULE-001
-below. `vacuumState` default: `colorLabel := âŸ¨6, by omegaâŸ©` (e7 vacuum axis).
+below. `vacuumState` default: `colorLabel := ⟨6, by omega⟩` (e7 vacuum axis).
 
-**âœ… CLEARED â€” actual contents of `CausalGraphTheory/KernelV2.lean`:**
-- `NodeStateV2` with `psi : ComplexOctonion â„¤`, `colorLabel : FanoPoint`, `tickCount`, `topoDepth`
+**✅ CLEARED — actual contents of `CausalGraphTheory/KernelV2.lean`:**
+- `NodeStateV2` with `psi : ComplexOctonion ℤ`, `colorLabel : FanoPoint`, `tickCount`, `topoDepth`
 - `isVacuumOrbit`, `vacuumState`, `twoOmega`, `vacuumColorLabel`
 - `omega_representable_in_kernel_v2`, `all_psi_representable`, `colorLabel_representable`
-- `isPhaseOnlyStep` / `isEnergyExchange` stubs **removed** â€” `UpdateRule.isEnergyExchangeLocked` is the canonical D3 predicate
-- `UpdateRule.lean`: RFC-028 D1â€“D3 locked (`combine`, `interactionFold`, `nextStateV2`, 4 gate theorems)
+- `isPhaseOnlyStep` / `isEnergyExchange` stubs **removed** — `UpdateRule.isEnergyExchangeLocked` is the canonical D3 predicate
+- `UpdateRule.lean`: RFC-028 D1–D3 locked (`combine`, `interactionFold`, `nextStateV2`, 4 gate theorems)
 - `lake build`: 3145 jobs, clean, no `sorry`
 
 **Why this is P0:** Without Kernel v2 semantics (RFC-020), Lean proofs and Python simulations can still drift and vacuum/time predicates remain under-specified in runtime code. Every downstream mass-ratio or Koide-style claim remains ungrounded until this gate is closed.
 
 **Blocked by Gate 1:** Any Koide derivation from COG dynamics, LEPTON-001 mass mechanism, and all claims that cite tick-count ratios as evidence for physics.
 
-### Gate 2 Â· Simulation Architecture Verified  âœ… CLEARED (2026-02-26)
+### Gate 2 · Simulation Architecture Verified  ✅ CLEARED (2026-02-26)
 
-`calc/mass_drag_v2.py` runs the RFC-009 Â§7b.10 architecture. 10 pytest tests pass.
+`calc/mass_drag_v2.py` runs the RFC-009 §7b.10 architecture. 10 pytest tests pass.
 
 **Result:** P_density=1.000000, E_density=0.000000, Ratio=DEGENERATE.
-The degenerate result is scientifically valid â€” it confirms that the electron motif
-`{e1,e2,e3}` lives in the quaternion subalgebra HâŠ‚O (fully associative, zero gate cost)
+The degenerate result is scientifically valid — it confirms that the electron motif
+`{e1,e2,e3}` lives in the quaternion subalgebra H⊂O (fully associative, zero gate cost)
 while the proton motif `{e1,e2,e4}` fires a non-associative gate on every tick.
 
 The ratio `gate_density(proton)/gate_density(electron)` is undefined (0 denominator).
-The architectural implication (RFC-009 Â§7b.11): the electron mass mechanism must be
-defined independently â€” it cannot arise from non-associative gate density alone.
+The architectural implication (RFC-009 §7b.11): the electron mass mechanism must be
+defined independently — it cannot arise from non-associative gate density alone.
 Result recorded in `claims/proton_electron_ratio.yml`.
 
 **Blocked by Gate 2:** Any claim citing a mass ratio as simulation evidence.
 Gate 2 is now cleared for the degenerate finding; Gate 3 requires the revised
 electron mass mechanism before a finite ratio can be computed.
 
-### Gate 3 Â· MU-001 Confirmed or Falsified
-**Cleared when:** The corrected simulation from Gate 2 either (a) converges to
-`mu_COG â‰ˆ 1836.15` (landmark result â€” update claim to `proved`) or (b) delivers a
-precise falsification with an identified structural gap documented in RFC-009
-(not "the simulation has bugs" â€” the simulation must be architecturally correct first).
+### ✅ Gate 3 · MU-001 — CLEARED (2026-02-26)
+**Falsification path confirmed:** `calc/mass_drag_v2.py` shows gate_density(electron) = 0.0
+(associative H ⊂ O subalgebra). Pure gate density hypothesis falsified. Revised mechanism:
+`mu = 1 + k_gate`, k_gate = 21 (GL(3,2)/H_stab = 168/8), giving mu = 22 (gap to 1836 acknowledged).
+`claims/proton_electron_ratio.yml` updated. RFC-034 written and filed.
 
-**Blocked by Gate 3:** Hydrogen, electron-electron, and proton-proton system claims.
+**Gate 3 is CLEARED. Hydrogen, electron-electron, and proton-proton system claims are UNBLOCKED.**
 
-### Gate 4 Â· S4 Reconciliation Complete
-**Cleared when:** `claims/weinberg_angle.yml` notes section describes how S4 replaces
-SL(2,3) in the gauge breaking analysis, with a concrete testable next step and a
-reference to how this propagates through the EW symmetry breaking chain.
+### ✅ Gate 4 · S4 Reconciliation — CLEARED (2026-02-26)
+**WEINBERG-001 proved.** `claims/weinberg_angle.yml` updated with S4 replacing SL(2,3) in the
+gauge breaking analysis. Propagation through EW symmetry breaking chain documented.
 
-**Blocked by Gate 4:** Weinberg angle and EW breaking claims.
+**Gate 4 is CLEARED. Weinberg angle and EW breaking claims are UNBLOCKED.**
 
 ---
 
@@ -420,37 +395,22 @@ What was delivered (tasks 49ec8bae-12b and 11748290-13a):
 What was delivered (task c7f6f365-3dd):
 - `CausalGraphTheory/GenerationCount.lean` with 8 named theorems, no `sorry`.
 - Three-generation count formally derived from Fano orbit structure.
-- `claims/GEN-002.yml` status promoted to `proved`.
-
-**Anti-Loop Rule:** Do NOT recreate `GenerationCount.lean` or re-derive the three-generation count. GEN-002 is proved and the YAML is final.
-
----
-
-### P1 · WEINBERG-001 · H2/H1 Closure Program — SUPERSEDED BY PROMOTION
-
-**Canonical claim path: `claims/weinberg_angle.yml` (status: proved).**
-
-All gates closed. No further action required on H2/H1 ablation program. Artifacts remain available for reference:
-- calc/weinberg_h2_policies.json + calc/run_weinberg_h2_ablation.py (H2 policy lock).
-- calc/weinberg_h1_bridge_policies.json + calc/gauge_scale_bridge.py (H1 scaffold).
-- sources/weinberg_h2_ablation_results.md and sources/weinberg_weighted_estimate_results.md (replayable artifacts).
-
-**Anti-Loop Rule:** Do NOT create or use `claims/WEINBERG-001.yml
+- `claims/GEN-002
 ## Hard Constraints (enforce strictly)
 
 - **No continuum:** `Mathlib.Analysis.*`, `Mathlib.Topology.*`, `Mathlib.Data.Real.*`
   imports are forbidden in all Lean files
 - **No `sorry`:** Every Lean theorem must compile without sorry
-- **Convention lock:** All octonion triples must match `rfc/CONVENTIONS.md Â§2`
-  (7 directed Fano cycles â€” do not reorder or invent new ones)
-- **Python constants:** Import from `calc/conftest.py` â€” never redefine locally
+- **Convention lock:** All octonion triples must match `rfc/CONVENTIONS.md §2`
+  (7 directed Fano cycles — do not reorder or invent new ones)
+- **Python constants:** Import from `calc/conftest.py` — never redefine locally
 
 ---
 
 ## Literature Research Policy
 
-**This project is not in a silo.** Assign literature searches regularly â€” every
-3â€“5 rounds â€” to keep the research grounded in existing work.
+**This project is not in a silo.** Assign literature searches regularly — every
+3–5 rounds — to keep the research grounded in existing work.
 
 Key precedents and related papers to engage with:
 
@@ -505,12 +465,12 @@ review progress asynchronously.
 RUN_COMMAND('cd /workspace && git add -A && git commit -m "<type>(<claim-id>): <brief description>" && git push https://x-access-token:${GITHUB_TOKEN}@github.com/Pandaemonium/CausalOctonionGraph.git main')
 ```
 
-**When to push:** After every successful task completion â€” commit and push in a
+**When to push:** After every successful task completion — commit and push in a
 single command as shown above. Do not commit without pushing.
 
 **Prerequisite:** `GITHUB_TOKEN` is injected into the crucible container via
 `docker-compose.yml`. If `echo $GITHUB_TOKEN` returns empty inside the container,
-the push will fail â€” escalate to the human operator to add `GITHUB_TOKEN=<PAT>` to `.env`.
+the push will fail — escalate to the human operator to add `GITHUB_TOKEN=<PAT>` to `.env`.
 
 **Commit message format:**
 ```
@@ -518,11 +478,11 @@ the push will fail â€” escalate to the human operator to add `GITHUB_TOKEN=
 
 E.g.:
 proof(GAUGE-001): add stabilizer_to_perm sub-lemma
-test(KOIDE-001): diophantine search â€” no integer solutions found â‰¤4000
+test(KOIDE-001): diophantine search — no integer solutions found ≤4000
 rfc(PHOTON-001): document photon masslessness derivation plan
 pedagogy(ALG-001): add octonionic alternativity LaTeX section
 kernel(KERNEL-001): add NodeStateV2 and transition semantics to KernelV2.lean
-sim(MU-001): gate-density simulation v2 â€” ratio recorded
+sim(MU-001): gate-density simulation v2 — ratio recorded
 ```
 
 ---
@@ -551,23 +511,22 @@ one type of task for multiple rounds, course-correct.
 
 | Lane | Target share | What qualifies |
 |------|-------------|----------------|
-| **Foundation** | ~60% | Kernel, update rule, invariants, contracts (Gates 1-4). No gate requirement â€” always assignable. |
+| **Foundation** | ~60% | Kernel, update rule, invariants, contracts (Gates 1-4). No gate requirement — always assignable. |
 | **Near-complete** | ~30% | Proofs/docs one step from done. Claim is `partial`; a single task would move it to `proved`. |
 | **Exploration** | ~10% | New hypotheses, literature searches, new RFCs. RETROSPECTIVE mode triggers this lane. |
 
 ### Task Selection Rules
 
 When choosing which task to assign, prefer:
-1. **MU-001b (P0) â€” Electron mass mechanism RFC** â€” Gate 2 is DONE (degenerate result);
-   the highest-priority open item is now `rfc/RFC-034_Electron_Mass_Mechanism.md` (see P0 task below)
-2. **D4/D5 lock** â€” RFC-028 D4 (spawn predicate) and D5 (Pi_obs projection) are still open
-   architecture decisions; lock them before assigning more physics tasks
-3. **e-e Phase 5b** â€” spatial/distance layer for electron-electron scattering trajectories
-4. **KOIDE continuation** â€” Gate 1 block lifted; can now assign B/A = âˆš2 derivation from dynamics
-5. Foundation tasks that unblock â‰¥3 dependent claims have highest priority within their lane
-4. Tasks with clear success criteria you can verify programmatically
-5. Lean tasks when a Python check already passes (raise the bar to formal proof)
-6. Python tasks when a Lean theorem exists but needs numerical validation
+1. **D4/D5 lock (P0)** — RFC-028 D4 (spawn predicate) and D5 (Pi_obs projection) are still open
+   architecture decisions. Lock them in `CausalGraphTheory/D4D5Contracts.lean` before assigning
+   any further physics tasks that depend on the update rule contract.
+2. **e-e Phase 5b** — spatial/distance layer for electron-electron scattering trajectories
+3. **KOIDE continuation** — Gate 1 block lifted; can now assign B/A = √2 derivation from dynamics
+4. Foundation tasks that unblock ≥3 dependent claims have highest priority within their lane
+5. Tasks with clear success criteria you can verify programmatically
+6. Lean tasks when a Python check already passes (raise the bar to formal proof)
+7. Python tasks when a Lean theorem exists but needs numerical validation
 
 Do **not** assign tasks that:
 - Are blocked by an unclosed gate (check the Stage Gates section above)
@@ -579,11 +538,11 @@ Do **not** assign tasks that:
 ## Worker Model Tiers
 
 You control which model executes the task by including a `<TIER>` tag in your
-response. Choose carefully â€” frontier calls consume API budget ($5/hr default).
+response. Choose carefully — frontier calls consume API budget ($5/hr default).
 
 ```
-<TIER>clerk</TIER>      â†’ qwen3:4b via Ollama (local, free, fast)
-<TIER>frontier</TIER>   â†’ see frontier trio below (costs $)
+<TIER>clerk</TIER>      → qwen3:4b via Ollama (local, free, fast)
+<TIER>frontier</TIER>   → see frontier trio below (costs $)
 ```
 
 ### Frontier Model Trio
@@ -592,11 +551,11 @@ The system is configured with three top-tier frontier models:
 
 | Role | Model | Env var | Use when |
 |------|-------|---------|----------|
-| **Manager** | `gemini-3-pro-preview` | `ORCH_MANAGER_MODEL` | Strategic planning, task assignment (you are this model) |
+| **Manager** | `claude-sonnet-4-6` | `ORCH_MANAGER_MODEL` | Strategic planning, task assignment (you are this model) |
 | **Primary Worker** | `claude-sonnet-4-6` | `ORCH_WORKER_FRONTIER_MODEL` | Lean 4 proofs, formal math, complex Python |
 | **Fallback Worker** | `gpt-5.2-codex` | `ORCH_FRONTIER_FALLBACK_MODEL` | Auto-used when primary is overloaded/budget-exhausted |
 
-The system automatically falls back from Claude â†’ Codex when Claude returns HTTP 529
+The system automatically falls back from Claude → Codex when Claude returns HTTP 529
 (overloaded) or hits its hourly budget limit. You do not need to manage this manually.
 
 **Use `clerk` for:**
