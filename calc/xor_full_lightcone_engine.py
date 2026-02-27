@@ -19,6 +19,7 @@ from typing import Any, Dict, List, Tuple
 from calc.xor_charge_sign_interaction_matrix import (
     is_energy_exchange_locked_xor,
     next_state_v2_xor,
+    temporal_commit,
     u1_charge,
 )
 from calc.xor_furey_ideals import (
@@ -172,6 +173,8 @@ def simulate_full_lightcone(
     left_motif_id: str,
     right_motif_id: str,
     background_id: str = "vacuum_doubled",
+    left_precommit_ticks: int = 0,
+    right_precommit_ticks: int = 0,
 ) -> Dict[str, Any]:
     if initial_edge_distance < 1:
         raise ValueError("initial_edge_distance must be >= 1")
@@ -180,6 +183,12 @@ def simulate_full_lightcone(
     left_state = _motif_state(left_motif_id)
     right_state = _motif_state(right_motif_id)
     background = _background_state(background_id)
+    if left_precommit_ticks < 0 or right_precommit_ticks < 0:
+        raise ValueError("precommit ticks must be >= 0")
+    for _ in range(left_precommit_ticks):
+        left_state = temporal_commit(left_state)
+    for _ in range(right_precommit_ticks):
+        right_state = temporal_commit(right_state)
 
     raw = _simulate_raw(
         depth_horizon=depth_horizon,
@@ -239,6 +248,8 @@ def simulate_full_lightcone(
             "left_motif_id": left_motif_id,
             "right_motif_id": right_motif_id,
             "background_id": background_id,
+            "left_precommit_ticks": left_precommit_ticks,
+            "right_precommit_ticks": right_precommit_ticks,
         },
         "depth_summary": depth_rows,
         "csv_rows": csv_rows,

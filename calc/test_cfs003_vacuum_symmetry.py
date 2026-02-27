@@ -14,7 +14,7 @@ All octonion triples follow rfc/CONVENTIONS.md §2 (7 directed Fano cycles).
 
 import pytest
 import numpy as np
-from conftest import FANO_CYCLES, FANO_SIGN, FANO_THIRD, VACUUM_AXIS, WITT_PAIRS
+from calc.conftest import FANO_CYCLES, FANO_SIGN, FANO_THIRD, VACUUM_AXIS, WITT_PAIRS
 
 # ---------------------------------------------------------------------------
 # Octonion arithmetic (8-dimensional, float-valued)

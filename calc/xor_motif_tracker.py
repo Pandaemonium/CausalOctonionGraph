@@ -35,10 +35,14 @@ def _motif_state(motif_id: str) -> StateGI:
         return furey_electron_doubled()
     if motif_id == "furey_dual_electron_doubled":
         return furey_dual_electron_doubled()
+    if motif_id == "identity_e0":
+        from calc.xor_furey_ideals import state_basis
+
+        return state_basis(0, (1, 0))
     raise KeyError(f"unknown motif_id: {motif_id}")
 
 
-def _decode_state_base8(encoded: List[List[str]]) -> StateGI:
+def decode_state_base8(encoded: List[List[str]]) -> StateGI:
     if len(encoded) != 8:
         raise ValueError("state encoding must have 8 channels")
     out: List[Tuple[int, int]] = []
@@ -71,7 +75,7 @@ def best_motif_position(
     candidates: List[Tuple[int, int, bool]] = []
     for pos_s, enc in depth_slice.items():
         pos = int(pos_s)
-        state = _decode_state_base8(enc)
+        state = decode_state_base8(enc)
         dist = motif_l1_distance(state, motif)
         score = -dist
         exact = dist == 0
