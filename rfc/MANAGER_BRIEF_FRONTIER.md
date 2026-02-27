@@ -130,10 +130,10 @@ one has at least a falsifiable Python test and a Lean stub claim.
 | Lean build | **clean — no `sorry`** |
 | Lean library modules | **37+ modules** all imported in root `CausalGraphTheory.lean` |
 | Claims proved | **19 proved** (ALG-001–004, ANOM-001, CAUS-001, CFS-001, DAG-001, DIST-001, FANO-001, GAUGE-001, GEN-001, GEN-002, LEPTON-001, MASS-001, MU-001, PHOTON-001, RACE-001, REL-001, STRONG-001, TICK-001, WEINBERG-001) per ground-truth YAML |
-| Claims partial | **5 partial** (ALPHA-001, CFS-003, HYDROGEN-001, GEN-002, CFS-003) → **4 partial** (ALPHA-001, CFS-003, HYDROGEN-001, GEN-002) per ground-truth YAML |
+| Claims partial | **4 partial** (ALPHA-001, CFS-002, CFS-003, HYDROGEN-001) per ground-truth YAML |
 | Claims active_hypothesis | **1** (MU-001) per ground-truth YAML |
 | Claims open | **1 open** (LEPTON-001) per ground-truth YAML |
-| Claims stub | **3 stub** (ANOM-001, CFS-002, GEN-001) per ground-truth YAML |
+| Claims stub | **2 stub** (ANOM-001, GEN-001) per ground-truth YAML |
 | Claims superseded | **3 superseded** (GAUGE-001-LEGACY, STRONG-001-LEGACY, VAC-001) per ground-truth YAML |
 | Claims supported | **1 supported** (WEINBERG-UV-001) |
 | Claims unknown | **1 unknown** (CLAIM_STATUS_MATRIX) |
@@ -314,16 +314,18 @@ Next action:
 
 ### 🔴 P3 · CFS-003 · `partial` (2026-02-27)
 
-**Ground-truth status is `partial`.**
+**Ground-truth status is `partial`. Python scaffold delivered (task 058a4337-cba).**
 
 Next action:
-- Identify remaining open gates in `claims/CFS-003.yml` and assign the next concrete sub-task.
+- Identify remaining open gates in `claims/CFS-003.yml`.
+- Complete Lean formalization following the CFS-001 pattern.
+- Promote `claims/CFS-003.yml` to `proved`.
 
 ---
 
-### 🔴 P4 · CFS-002 · `stub` (2026-02-27)
+### 🔴 P4 · CFS-002 · `partial` (2026-02-27)
 
-**Ground-truth status is `stub`. Gate 2 Lean stub delivered (task 965dd650-01d): `CausalGraphTheory/CFS002LocalAlgebra.lean` with 4 theorems, 0 `sorry`.**
+**Ground-truth status is `partial`. Gate 2 Lean stub delivered (task 965dd650-01d): `CausalGraphTheory/CFS002LocalAlgebra.lean` with 4 theorems, 0 `sorry`.**
 
 Next action:
 - Identify remaining open gates in `claims/CFS-002.yml`.
@@ -504,10 +506,6 @@ What was delivered:
 - Electron motif `{e1,e2,e3}` — quaternion H⊂O — E_density = 0.000000 (associative)
 - Outcome: **DEGENERATE** (ratio undefined; lepton associativity confirmed).
 - 10 pytest tests all passing; result recorded in `claims/proton_electron_ratio.yml`.
-
----
-
-### ✅ P0 · MU-001b ·
 ## Hard Constraints (enforce strictly)
 
 - **No continuum:** `Mathlib.Analysis.*`, `Mathlib.Topology.*`, `Mathlib.Data.Real.*`
