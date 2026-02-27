@@ -256,6 +256,23 @@ Required wording updates (follow-up patch):
 2. move `~0.231` target to "open mechanism under RFC-029",
 3. forbid projector-denominator changes without policy-id update.
 
+### 10.1 Claim-ID Split (Locked Governance)
+
+Claim semantics are now split explicitly:
+
+1. `WEINBERG-UV-001`:
+   - scope: UV structural observable only,
+   - status target: `supported`,
+   - current anchor: exclusive-U1 invariant `1/4` in locked S4 transport frame.
+2. `WEINBERG-001`:
+   - scope: IR physical closure at Z-pole scale (`~0.23122`),
+   - status target: remains `partial` until running/bridge mechanism is closed.
+
+Promotion policy implication:
+
+1. No IR claim promotion may reuse UV-only success criteria.
+2. Any WEINBERG-001 promotion must pass mechanism gates (H1/H4 as applicable), not just structural invariance.
+
 ---
 
 ## 11. Recommended Execution Order

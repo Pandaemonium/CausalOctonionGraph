@@ -1,4 +1,4 @@
-﻿id: CFS-001
+id: CFS-001
 title: "Discrete causal action for finite octonionic causal graphs"
 statement: |
   There exists a finite, computable causal-action functional S on COG graph
@@ -6,7 +6,10 @@ statement: |
   deterministic update step is defined by local action comparison with no
   continuum limit assumptions.
 
-status: stub
+status: partial
+python_test: calc/test_cfs001_embedding.py
+gates_complete:
+  - 1
 pi_obs_profile: minimal
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
@@ -14,7 +17,6 @@ profile_contrast_run: ""
 equivalence_mode: none
 lean_file: ""
 lean_theorems: []
-python_test: ""
 depends_on:
   - DAG-001
   - CAUS-001
@@ -25,6 +27,7 @@ literature:
 notes: |
   This claim is the COG-side analog of the CFS causal action principle, but
   formulated entirely over finite combinatorial data.
+  Gate 1: Python embedding axiom scaffold -- 8 tests passing (task CFS-001-gate1).
+  Verifies Gram-matrix selfadjointness, vacuum rank-1, Fano triple ordering,
+  CFS dimension bound, causal antisymmetry, discrete measure, and finiteness axiom.
 blocked_reason: ""
-
-

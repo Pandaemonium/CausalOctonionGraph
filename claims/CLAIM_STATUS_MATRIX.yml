@@ -1,5 +1,5 @@
 schema_version: 2.1.0
-generated_at_utc: '2026-02-27T00:24:45.490374Z'
+generated_at_utc: '2026-02-27T00:41:51.354186Z'
 row_count: 32
 rows:
   ALG:
@@ -261,7 +261,7 @@ rows:
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
     last_verified_at: '2026-02-27T00:24:34.411997Z'
-    owner_rfc: rfc/RFC-061_Fine_Structure_Constant_from_Fano_Counting.md
+    owner_rfc: rfc/ALPHA-001_Closure_Tasklist.md
     notes: source=alpha_fine_structure.yml | backfill=priority_v1
     confinement_relevant: false
     confinement_gate_status: not_applicable
@@ -1199,7 +1199,7 @@ rows:
     equivalence_artifact: ''
     evidence_level: mixed:lean_proved+python_verified
     last_verified_at: '2026-02-27T00:24:34.411997Z'
-    owner_rfc: rfc/RFC-009_Spinor_Representations_and_Triality_Overhead.md
+    owner_rfc: rfc/MU-001_Closure_Tasklist.md
     notes: source=proton_electron_ratio.yml | backfill=priority_v1
     confinement_relevant: false
     confinement_gate_status: not_applicable

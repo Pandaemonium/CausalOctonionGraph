@@ -102,7 +102,7 @@ CLAIM_BACKFILL: dict[str, dict[str, Any]] = {
     },
     "ALPHA-001": {
         "motif_id": "u1_phase_penalty_v1",
-        "owner_rfc": "rfc/RFC-061_Fine_Structure_Constant_from_Fano_Counting.md",
+        "owner_rfc": "rfc/ALPHA-001_Closure_Tasklist.md",
         "projection_sensitivity": "sensitive",
         "battery_artifacts": [
             "calc/test_constants.py::TestAlphaFineStructure::test_alpha_target_value",
@@ -125,7 +125,7 @@ CLAIM_BACKFILL: dict[str, dict[str, Any]] = {
     },
     "MU-001": {
         "motif_id": "proton_electron_drag_ratio_v1",
-        "owner_rfc": "rfc/RFC-009_Spinor_Representations_and_Triality_Overhead.md",
+        "owner_rfc": "rfc/MU-001_Closure_Tasklist.md",
         "projection_sensitivity": "sensitive",
         "battery_artifacts": [
             "calc/test_mass_drag_v2.py",

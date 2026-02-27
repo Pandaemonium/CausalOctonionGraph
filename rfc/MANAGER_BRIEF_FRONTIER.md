@@ -463,13 +463,19 @@ the pedagogical explanation in LaTeX for any proved claim that is undocumented.
 completed work so the repo always reflects current state and collaborators can
 review progress asynchronously.
 
-**Standard commit-and-push procedure for workers:**
-```bash
-RUN_COMMAND('cd /workspace && git add -A && git commit -m "<type>(<claim-id>): <brief description>" && git push https://x-access-token:${GITHUB_TOKEN}@github.com/Pandaemonium/CausalOctonionGraph.git main')
+**Standard commit-and-push procedure for workers (THREE separate RUN_COMMAND calls):**
+```
+RUN_COMMAND: git add -A
+RUN_COMMAND: git commit -m "<type>(<claim-id>): <brief description>"
+RUN_COMMAND: git push https://x-access-token:${GITHUB_TOKEN}@github.com/Pandaemonium/CausalOctonionGraph.git main
 ```
 
-**When to push:** After every successful task completion — commit and push in a
-single command as shown above. Do not commit without pushing.
+**IMPORTANT:** Issue these as three separate `<RUN_COMMAND>` tags, NOT a combined one-liner.
+The command sandbox only allows commands that begin with `git add`, `git commit`, or
+`git push https://x-access-token:` — chained `cd /workspace && git ...` commands will be blocked.
+
+**When to push:** After every successful task completion — stage, commit, AND push. Do not
+commit without pushing. The push is what makes progress visible on GitHub.
 
 **Prerequisite:** `GITHUB_TOKEN` is injected into the crucible container via
 `docker-compose.yml`. If `echo $GITHUB_TOKEN` returns empty inside the container,

@@ -9,7 +9,7 @@ statement: |
   in this encoding â€” see RFC-017). Exactly 3 Fano lines pass through
   eâ‚‡; these are the Witt basis lines.
 
-status: partial
+status: proved
 pi_obs_profile: with_sector
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
