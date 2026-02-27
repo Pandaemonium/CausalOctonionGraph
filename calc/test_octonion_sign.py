@@ -1,1 +1,99 @@
-"""Tests for canonical octonion sign table (Primitive-2)."""\n\nfrom __future__ import annotations\n\nfrom calc.octonion_sign import FANO_LINES, INDEX_TABLE, octonion_product, sign, sign_table\n\nEXPECTED_FANO_LINES = [\n    (1, 2, 3),\n    (1, 4, 5),\n    (1, 7, 6),\n    (2, 4, 6),\n    (2, 5, 7),\n    (3, 4, 7),\n    (3, 6, 5),\n]\n\n\ndef multiply_basis(i: int, j: int) -> int:\n    """Return signed basis index as integer (negative = -e_k)."""\n    if i == 0:\n        return j\n    if j == 0:\n        return i\n    if i == j:\n        return 0\n    k, s = octonion_product(i, j)\n    return s * k\n\n\ndef test_fano_lines_count() -> None:\n    assert len(FANO_LINES) == 7\n\n\ndef test_fano_lines_match_conventions() -> None:\n    assert FANO_LINES == EXPECTED_FANO_LINES\n\n\ndef test_index_is_xor() -> None:\n    for i in range(1, 8):\n        for j in range(1, 8):\n            if i == j:\n                continue\n            assert INDEX_TABLE[(i, j)] == (i ^ j)\n            assert 1 <= INDEX_TABLE[(i, j)] <= 7\n\n\ndef test_sign_returns_plus_or_minus_one() -> None:\n    for i in range(1, 8):\n        for j in range(1, 8):\n            if i == j:\n                continue\n            assert sign(i, j) in {1, -1}\n\n\ndef test_sign_antisymmetry() -> None:\n    for i in range(1, 8):\n        for j in range(1, 8):\n            if i == j:\n                continue\n            assert sign(i, j) == -sign(j, i)\n\n\ndef test_sign_cyclic_on_fano_lines() -> None:\n    for a, b, c in FANO_LINES:\n        assert sign(a, b) == 1\n        assert sign(b, c) == 1\n        assert sign(a, c) == -1\n\n\ndef test_octonion_product_index() -> None:\n    for i in range(1, 8):\n        for j in range(1, 8):\n            if i == j:\n                continue\n            assert octonion_product(i, j)[0] == (i ^ j)\n\n\ndef test_octonion_product_associator_spot_check() -> None:\n    triples = [\n        (1, 2, 4),\n        (1, 2, 5),\n        (2, 3, 4),\n    ]\n    for a, b, c in triples:\n        left = multiply_basis(a, multiply_basis(b, c))\n        right = multiply_basis(multiply_basis(a, b), c)\n        assert left != right\n\n\ndef test_sign_table_completeness() -> None:\n    assert len(sign_table()) == 42\n\n\ndef test_no_sign_ambiguity() -> None:\n    for a, b, c in FANO_LINES:\n        assert sign(a, b) * sign(b, c) == sign(a, c) * (-1)\n\n\n# Gauss\n
+"""Tests for canonical octonion sign table (Primitive-2)."""
+
+from __future__ import annotations
+
+from calc.octonion_sign import FANO_LINES, INDEX_TABLE, octonion_product, sign, sign_table
+
+EXPECTED_FANO_LINES = [
+    (1, 2, 3),
+    (1, 4, 5),
+    (1, 7, 6),
+    (2, 4, 6),
+    (2, 5, 7),
+    (3, 4, 7),
+    (3, 6, 5),
+]
+
+
+def multiply_basis(i: int, j: int) -> int:
+    """Return signed basis index as integer (negative = -e_k)."""
+    if i == 0:
+        return j
+    if j == 0:
+        return i
+    if i == j:
+        return 0
+    k, s = octonion_product(i, j)
+    return s * k
+
+
+def test_fano_lines_count() -> None:
+    assert len(FANO_LINES) == 7
+
+
+def test_fano_lines_match_conventions() -> None:
+    assert FANO_LINES == EXPECTED_FANO_LINES
+
+
+def test_index_is_xor() -> None:
+    for i in range(1, 8):
+        for j in range(1, 8):
+            if i == j:
+                continue
+            assert INDEX_TABLE[(i, j)] == (i ^ j)
+            assert 1 <= INDEX_TABLE[(i, j)] <= 7
+
+
+def test_sign_returns_plus_or_minus_one() -> None:
+    for i in range(1, 8):
+        for j in range(1, 8):
+            if i == j:
+                continue
+            assert sign(i, j) in {1, -1}
+
+
+def test_sign_antisymmetry() -> None:
+    for i in range(1, 8):
+        for j in range(1, 8):
+            if i == j:
+                continue
+            assert sign(i, j) == -sign(j, i)
+
+
+def test_sign_cyclic_on_fano_lines() -> None:
+    for a, b, c in FANO_LINES:
+        assert sign(a, b) == 1
+        assert sign(b, c) == 1
+        assert sign(a, c) == -1
+
+
+def test_octonion_product_index() -> None:
+    for i in range(1, 8):
+        for j in range(1, 8):
+            if i == j:
+                continue
+            assert octonion_product(i, j)[0] == (i ^ j)
+
+
+def test_octonion_product_associator_spot_check() -> None:
+    triples = [
+        (1, 2, 4),
+        (1, 2, 5),
+        (2, 3, 4),
+    ]
+    for a, b, c in triples:
+        left = multiply_basis(a, multiply_basis(b, c))
+        right = multiply_basis(multiply_basis(a, b), c)
+        assert left != right
+
+
+def test_sign_table_completeness() -> None:
+    assert len(sign_table()) == 42
+
+
+def test_no_sign_ambiguity() -> None:
+    for a, b, c in FANO_LINES:
+        assert sign(a, b) * sign(b, c) == sign(a, c) * (-1)
+
+
+# Gauss

@@ -206,7 +206,7 @@ theorem step_tickMass_nondecreasing (G : CausalGraph) :
   not on the absolute depth d.
 -/
 theorem koide_from_ticks_stub :
-    ∀ (t_e t_mu t_tau : Nat),
+    ∀ (_ _ _ : Nat),
       -- Placeholder: the actual constraint relates t_e², t_μ², t_τ²
       -- to satisfy Q ≈ 2/3 (see calc/koide.py for the numerical computation)
       True :=

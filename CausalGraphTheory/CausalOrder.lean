@@ -15,7 +15,6 @@
 -/
 
 import CausalGraphTheory.State
-import Mathlib.Data.Nat.Basic
 
 namespace CausalGraph
 
@@ -173,7 +172,7 @@ theorem not_disconnected_of_edge {G : CausalGraph} {m n : Nat}
   comparable or equal IDs (since both precede the descendant).
 -/
 theorem common_future_lt {G : CausalGraph} {m n k : Nat}
-    (hm : reachable G m k) (hn : reachable G n k) (hne : m ≠ n) :
+    (_hm : reachable G m k) (_hn : reachable G n k) (hne : m ≠ n) :
     m < n ∨ n < m :=
   Nat.lt_or_gt_of_ne hne
 
