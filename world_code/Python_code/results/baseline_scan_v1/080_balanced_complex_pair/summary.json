@@ -1,0 +1,162 @@
+{
+  "example_file": "080_balanced_complex_pair.json",
+  "example_name": "080_balanced_complex_pair",
+  "input_file": "world_code/Python_code/lightcone_microstate_examples/080_balanced_complex_pair.json",
+  "runs": [
+    {
+      "steps": 0,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/080_balanced_complex_pair/step_0000.json",
+      "metrics": {
+        "tick": 0,
+        "node_count": 4,
+        "edge_count": 4,
+        "max_depth": 2,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 1
+        },
+        "active_coeff_count": 8,
+        "basis_l1_totals": [
+          1,
+          4,
+          2,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        "axis_weights": {
+          "e0": 1,
+          "e7": 1,
+          "e0_over_e7": 1.0
+        }
+      }
+    },
+    {
+      "steps": 1,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/080_balanced_complex_pair/step_0001.json",
+      "metrics": {
+        "tick": 1,
+        "node_count": 4,
+        "edge_count": 4,
+        "max_depth": 2,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 1
+        },
+        "active_coeff_count": 11,
+        "basis_l1_totals": [
+          4,
+          2,
+          0,
+          4,
+          2,
+          2,
+          2,
+          3
+        ],
+        "axis_weights": {
+          "e0": 4,
+          "e7": 3,
+          "e0_over_e7": 1.3333333333333333
+        }
+      }
+    },
+    {
+      "steps": 2,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/080_balanced_complex_pair/step_0002.json",
+      "metrics": {
+        "tick": 2,
+        "node_count": 4,
+        "edge_count": 4,
+        "max_depth": 2,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 1
+        },
+        "active_coeff_count": 11,
+        "basis_l1_totals": [
+          12,
+          4,
+          2,
+          2,
+          8,
+          8,
+          0,
+          17
+        ],
+        "axis_weights": {
+          "e0": 12,
+          "e7": 17,
+          "e0_over_e7": 0.7058823529411765
+        }
+      }
+    },
+    {
+      "steps": 4,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/080_balanced_complex_pair/step_0004.json",
+      "metrics": {
+        "tick": 4,
+        "node_count": 4,
+        "edge_count": 4,
+        "max_depth": 2,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 1
+        },
+        "active_coeff_count": 11,
+        "basis_l1_totals": [
+          272,
+          4,
+          2,
+          2,
+          192,
+          192,
+          0,
+          385
+        ],
+        "axis_weights": {
+          "e0": 272,
+          "e7": 385,
+          "e0_over_e7": 0.7064935064935065
+        }
+      }
+    },
+    {
+      "steps": 8,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/080_balanced_complex_pair/step_0008.json",
+      "metrics": {
+        "tick": 8,
+        "node_count": 4,
+        "edge_count": 4,
+        "max_depth": 2,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 1
+        },
+        "active_coeff_count": 11,
+        "basis_l1_totals": [
+          147712,
+          4,
+          2,
+          2,
+          104448,
+          104448,
+          0,
+          208897
+        ],
+        "axis_weights": {
+          "e0": 147712,
+          "e7": 208897,
+          "e0_over_e7": 0.7071044581779538
+        }
+      }
+    }
+  ]
+}

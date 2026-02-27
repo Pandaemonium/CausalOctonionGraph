@@ -1,0 +1,162 @@
+{
+  "example_file": "040_hydrogen_toy_pair.json",
+  "example_name": "040_hydrogen_toy_pair",
+  "input_file": "world_code/Python_code/lightcone_microstate_examples/040_hydrogen_toy_pair.json",
+  "runs": [
+    {
+      "steps": 0,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/040_hydrogen_toy_pair/step_0000.json",
+      "metrics": {
+        "tick": 0,
+        "node_count": 6,
+        "edge_count": 6,
+        "max_depth": 2,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 3
+        },
+        "active_coeff_count": 14,
+        "basis_l1_totals": [
+          1,
+          4,
+          4,
+          2,
+          2,
+          0,
+          0,
+          1
+        ],
+        "axis_weights": {
+          "e0": 1,
+          "e7": 1,
+          "e0_over_e7": 1.0
+        }
+      }
+    },
+    {
+      "steps": 1,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/040_hydrogen_toy_pair/step_0001.json",
+      "metrics": {
+        "tick": 1,
+        "node_count": 6,
+        "edge_count": 6,
+        "max_depth": 2,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 3
+        },
+        "active_coeff_count": 15,
+        "basis_l1_totals": [
+          8,
+          2,
+          1,
+          2,
+          0,
+          2,
+          3,
+          2
+        ],
+        "axis_weights": {
+          "e0": 8,
+          "e7": 2,
+          "e0_over_e7": 4.0
+        }
+      }
+    },
+    {
+      "steps": 2,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/040_hydrogen_toy_pair/step_0002.json",
+      "metrics": {
+        "tick": 2,
+        "node_count": 6,
+        "edge_count": 6,
+        "max_depth": 2,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 3
+        },
+        "active_coeff_count": 19,
+        "basis_l1_totals": [
+          7,
+          5,
+          4,
+          9,
+          3,
+          3,
+          8,
+          5
+        ],
+        "axis_weights": {
+          "e0": 7,
+          "e7": 5,
+          "e0_over_e7": 1.4
+        }
+      }
+    },
+    {
+      "steps": 4,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/040_hydrogen_toy_pair/step_0004.json",
+      "metrics": {
+        "tick": 4,
+        "node_count": 6,
+        "edge_count": 6,
+        "max_depth": 2,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 3
+        },
+        "active_coeff_count": 19,
+        "basis_l1_totals": [
+          17,
+          20,
+          48,
+          38,
+          38,
+          0,
+          28,
+          57
+        ],
+        "axis_weights": {
+          "e0": 17,
+          "e7": 57,
+          "e0_over_e7": 0.2982456140350877
+        }
+      }
+    },
+    {
+      "steps": 8,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/040_hydrogen_toy_pair/step_0008.json",
+      "metrics": {
+        "tick": 8,
+        "node_count": 6,
+        "edge_count": 6,
+        "max_depth": 2,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 3
+        },
+        "active_coeff_count": 19,
+        "basis_l1_totals": [
+          5983,
+          164,
+          1116,
+          1034,
+          1034,
+          0,
+          952,
+          1905
+        ],
+        "axis_weights": {
+          "e0": 5983,
+          "e7": 1905,
+          "e0_over_e7": 3.140682414698163
+        }
+      }
+    }
+  ]
+}

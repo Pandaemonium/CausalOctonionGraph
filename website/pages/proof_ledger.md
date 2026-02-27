@@ -4,6 +4,9 @@ This is the live public ledger of claim upgrades in COG Lab.
 
 Default mode is **Layman**.
 
+Want to contribute runs? See:
+- `/web/pages/how_do_i_help`
+
 <div id="proof-ledger-app" class="ledger-shell">
   <section class="ledger-hero">
     <div class="hero-kicker">Live Discovery Feed</div>

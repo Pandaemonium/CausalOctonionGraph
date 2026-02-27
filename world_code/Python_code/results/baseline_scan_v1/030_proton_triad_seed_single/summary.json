@@ -1,0 +1,152 @@
+{
+  "example_file": "030_proton_triad_seed_single.json",
+  "example_name": "030_proton_triad_seed_single",
+  "input_file": "world_code/Python_code/lightcone_microstate_examples/030_proton_triad_seed_single.json",
+  "runs": [
+    {
+      "steps": 0,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/030_proton_triad_seed_single/step_0000.json",
+      "metrics": {
+        "tick": 0,
+        "node_count": 1,
+        "edge_count": 0,
+        "max_depth": 0,
+        "depth_histogram": {
+          "0": 1
+        },
+        "active_coeff_count": 3,
+        "basis_l1_totals": [
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "axis_weights": {
+          "e0": 0,
+          "e7": 0,
+          "e0_over_e7": null
+        }
+      }
+    },
+    {
+      "steps": 1,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/030_proton_triad_seed_single/step_0001.json",
+      "metrics": {
+        "tick": 1,
+        "node_count": 1,
+        "edge_count": 0,
+        "max_depth": 0,
+        "depth_histogram": {
+          "0": 1
+        },
+        "active_coeff_count": 3,
+        "basis_l1_totals": [
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "axis_weights": {
+          "e0": 0,
+          "e7": 0,
+          "e0_over_e7": null
+        }
+      }
+    },
+    {
+      "steps": 2,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/030_proton_triad_seed_single/step_0002.json",
+      "metrics": {
+        "tick": 2,
+        "node_count": 1,
+        "edge_count": 0,
+        "max_depth": 0,
+        "depth_histogram": {
+          "0": 1
+        },
+        "active_coeff_count": 3,
+        "basis_l1_totals": [
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "axis_weights": {
+          "e0": 0,
+          "e7": 0,
+          "e0_over_e7": null
+        }
+      }
+    },
+    {
+      "steps": 4,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/030_proton_triad_seed_single/step_0004.json",
+      "metrics": {
+        "tick": 4,
+        "node_count": 1,
+        "edge_count": 0,
+        "max_depth": 0,
+        "depth_histogram": {
+          "0": 1
+        },
+        "active_coeff_count": 3,
+        "basis_l1_totals": [
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "axis_weights": {
+          "e0": 0,
+          "e7": 0,
+          "e0_over_e7": null
+        }
+      }
+    },
+    {
+      "steps": 8,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/030_proton_triad_seed_single/step_0008.json",
+      "metrics": {
+        "tick": 8,
+        "node_count": 1,
+        "edge_count": 0,
+        "max_depth": 0,
+        "depth_histogram": {
+          "0": 1
+        },
+        "active_coeff_count": 3,
+        "basis_l1_totals": [
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "axis_weights": {
+          "e0": 0,
+          "e7": 0,
+          "e0_over_e7": null
+        }
+      }
+    }
+  ]
+}

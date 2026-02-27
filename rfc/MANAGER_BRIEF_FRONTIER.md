@@ -50,6 +50,31 @@ RFC-028 D4 (spawn predicate) and D5 (Pi_obs projection) are the only two open
 architecture decisions in the update rule. Lock them in `CausalGraphTheory/D4D5Contracts.lean`.
 Without these, downstream hydrogen/e-e/proton claims cannot be formally verified.
 
+## Parallel P0 Track — WORLD_CODE Deterministic Simulation Campaign
+
+Run this in parallel with D4/D5 closure using `<TIER>openai</TIER>` and
+`<ROLE>Python_Simulation_Expert</ROLE>`.
+
+Objective:
+1. generate deterministic raw-state artifacts from the minimal kernel for many
+   predefined lightcone systems,
+2. save artifacts for later representation-layer extraction (fine structure,
+   strong coupling, muon mass-drag observables).
+
+Use:
+1. `rfc/WORLD_CODE_SIMULATION_CAMPAIGN_TASK_DOSSIER.md`
+2. `world_code/Python_code/run_world_code_campaign.py`
+3. `world_code/Python_code/campaign_configs/baseline_scan.json`
+
+Required outputs:
+1. `world_code/Python_code/results/<campaign_id>/manifest.json`
+2. `world_code/Python_code/results/<campaign_id>/campaign_summary.json`
+3. per-example `step_XXXX.json` traces
+
+Review gate:
+1. campaign outputs are `pending_review` until skeptic verifies replay
+   determinism and completeness claim-by-claim.
+
 **ANTI-LOOP RULE:** Never reassign a task that appears in the completed feed.
 Check the “COMPLETED TASKS” section before assigning. Assigning a completed task is a bug.
 

@@ -5,6 +5,9 @@ This page is the public-facing accomplishments list for COG Lab.
 For live, timestamped upgrades with Layman/Student/Physicist summaries, see:
 - `/web/proof_ledger`
 
+Want to contribute compute and run your own deterministic world-code simulations:
+- `/web/pages/how_do_i_help`
+
 Source of truth:
 - `website/accomplishments.yml`
 - `claims/CLAIM_STATUS_MATRIX.yml`

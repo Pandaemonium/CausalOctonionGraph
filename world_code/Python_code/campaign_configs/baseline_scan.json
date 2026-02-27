@@ -1,0 +1,24 @@
+{
+  "campaign_id": "baseline_scan_v1",
+  "examples": [
+    "000_vacuum_single_node.json",
+    "001_vacuum_cone_depth2.json",
+    "010_electron_seed_single.json",
+    "011_positron_seed_single.json",
+    "020_two_electrons_small_cone.json",
+    "021_electron_positron_small_cone.json",
+    "030_proton_triad_seed_single.json",
+    "031_three_quark_toy_cone.json",
+    "040_hydrogen_toy_pair.json",
+    "041_hydrogen_far_separation.json",
+    "050_photon_like_e7_pulse.json",
+    "051_phase_shifted_electron.json",
+    "060_distance_chain_electron_electron.json",
+    "070_mixed_excitation_cone_small.json",
+    "080_balanced_complex_pair.json",
+    "090_large_toy_cone_depth3.json"
+  ],
+  "steps": [0, 1, 2, 4, 8],
+  "notes": "Baseline deterministic sweep for representation-layer development (edge counting, axis weights, motif-distance extraction)."
+}
+

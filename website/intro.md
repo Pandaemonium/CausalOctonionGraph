@@ -67,6 +67,7 @@ Key milestones:
   $(1 : 207 : 3477)$.
 
 See the [Results](/web/results) page for the live claim registry.
+Want to run simulations yourself? Start here: [How do I help?](/web/pages/how_do_i_help).
 
 ---
 
@@ -109,6 +110,7 @@ behind the discrete time tick.
 - **Cycle Atlas** — interactive motif rhythm explorer (single + coupled periods): [/web/pages/cycle_atlas](/web/pages/cycle_atlas)
 - **Proof Ledger** — live upgrades in plain language (with timestamps): [/web/proof_ledger](/web/proof_ledger)
 - **Results** — live proof registry: [/web/results](/web/results)
+- **How do I help?** — download world code, build canonical lightcone inputs, run deterministic COG simulations: [/web/pages/how_do_i_help](/web/pages/how_do_i_help)
 - **Leaderboard** — team standings and kudos: [/web/leaderboard](/web/leaderboard)
 - **Pedagogy** — accessible explanations: [/web/pedagogy](/web/pedagogy)
 - **Dashboard** — lab status and agent activity: [Dashboard](/)

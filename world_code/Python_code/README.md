@@ -30,3 +30,16 @@ See:
 1. `world_code/Python_code/lightcone_microstate_examples/README.md`
 2. `world_code/Python_code/lightcone_microstate_examples/examples_index.json`
 
+## Campaign Runner (for autonomous lab)
+
+Run the baseline sweep:
+
+```bash
+python world_code/Python_code/run_world_code_campaign.py \
+  --config world_code/Python_code/campaign_configs/baseline_scan.json
+```
+
+Outputs are saved under:
+1. `world_code/Python_code/results/<campaign_id>/manifest.json`
+2. `world_code/Python_code/results/<campaign_id>/campaign_summary.json`
+3. `world_code/Python_code/results/<campaign_id>/<example>/step_XXXX.json`

@@ -1,0 +1,162 @@
+{
+  "example_file": "020_two_electrons_small_cone.json",
+  "example_name": "020_two_electrons_small_cone",
+  "input_file": "world_code/Python_code/lightcone_microstate_examples/020_two_electrons_small_cone.json",
+  "runs": [
+    {
+      "steps": 0,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/020_two_electrons_small_cone/step_0000.json",
+      "metrics": {
+        "tick": 0,
+        "node_count": 6,
+        "edge_count": 6,
+        "max_depth": 2,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 3
+        },
+        "active_coeff_count": 14,
+        "basis_l1_totals": [
+          1,
+          4,
+          4,
+          4,
+          0,
+          0,
+          0,
+          1
+        ],
+        "axis_weights": {
+          "e0": 1,
+          "e7": 1,
+          "e0_over_e7": 1.0
+        }
+      }
+    },
+    {
+      "steps": 1,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/020_two_electrons_small_cone/step_0001.json",
+      "metrics": {
+        "tick": 1,
+        "node_count": 6,
+        "edge_count": 6,
+        "max_depth": 2,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 3
+        },
+        "active_coeff_count": 10,
+        "basis_l1_totals": [
+          9,
+          2,
+          0,
+          2,
+          0,
+          0,
+          2,
+          1
+        ],
+        "axis_weights": {
+          "e0": 9,
+          "e7": 1,
+          "e0_over_e7": 9.0
+        }
+      }
+    },
+    {
+      "steps": 2,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/020_two_electrons_small_cone/step_0002.json",
+      "metrics": {
+        "tick": 2,
+        "node_count": 6,
+        "edge_count": 6,
+        "max_depth": 2,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 3
+        },
+        "active_coeff_count": 14,
+        "basis_l1_totals": [
+          9,
+          8,
+          2,
+          8,
+          0,
+          0,
+          6,
+          1
+        ],
+        "axis_weights": {
+          "e0": 9,
+          "e7": 1,
+          "e0_over_e7": 9.0
+        }
+      }
+    },
+    {
+      "steps": 4,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/020_two_electrons_small_cone/step_0004.json",
+      "metrics": {
+        "tick": 4,
+        "node_count": 6,
+        "edge_count": 6,
+        "max_depth": 2,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 3
+        },
+        "active_coeff_count": 14,
+        "basis_l1_totals": [
+          81,
+          20,
+          20,
+          20,
+          0,
+          0,
+          0,
+          1
+        ],
+        "axis_weights": {
+          "e0": 81,
+          "e7": 1,
+          "e0_over_e7": 81.0
+        }
+      }
+    },
+    {
+      "steps": 8,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/020_two_electrons_small_cone/step_0008.json",
+      "metrics": {
+        "tick": 8,
+        "node_count": 6,
+        "edge_count": 6,
+        "max_depth": 2,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 3
+        },
+        "active_coeff_count": 14,
+        "basis_l1_totals": [
+          6561,
+          164,
+          164,
+          164,
+          0,
+          0,
+          0,
+          1
+        ],
+        "axis_weights": {
+          "e0": 6561,
+          "e7": 1,
+          "e0_over_e7": 6561.0
+        }
+      }
+    }
+  ]
+}

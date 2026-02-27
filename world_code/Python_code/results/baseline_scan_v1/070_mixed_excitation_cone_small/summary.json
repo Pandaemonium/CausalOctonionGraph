@@ -1,0 +1,162 @@
+{
+  "example_file": "070_mixed_excitation_cone_small.json",
+  "example_name": "070_mixed_excitation_cone_small",
+  "input_file": "world_code/Python_code/lightcone_microstate_examples/070_mixed_excitation_cone_small.json",
+  "runs": [
+    {
+      "steps": 0,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/070_mixed_excitation_cone_small/step_0000.json",
+      "metrics": {
+        "tick": 0,
+        "node_count": 5,
+        "edge_count": 5,
+        "max_depth": 2,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 2
+        },
+        "active_coeff_count": 16,
+        "basis_l1_totals": [
+          3,
+          3,
+          3,
+          2,
+          1,
+          2,
+          1,
+          2
+        ],
+        "axis_weights": {
+          "e0": 3,
+          "e7": 2,
+          "e0_over_e7": 1.5
+        }
+      }
+    },
+    {
+      "steps": 1,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/070_mixed_excitation_cone_small/step_0001.json",
+      "metrics": {
+        "tick": 1,
+        "node_count": 5,
+        "edge_count": 5,
+        "max_depth": 2,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 2
+        },
+        "active_coeff_count": 21,
+        "basis_l1_totals": [
+          3,
+          7,
+          5,
+          3,
+          11,
+          8,
+          4,
+          5
+        ],
+        "axis_weights": {
+          "e0": 3,
+          "e7": 5,
+          "e0_over_e7": 0.6
+        }
+      }
+    },
+    {
+      "steps": 2,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/070_mixed_excitation_cone_small/step_0002.json",
+      "metrics": {
+        "tick": 2,
+        "node_count": 5,
+        "edge_count": 5,
+        "max_depth": 2,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 2
+        },
+        "active_coeff_count": 23,
+        "basis_l1_totals": [
+          18,
+          6,
+          34,
+          17,
+          5,
+          33,
+          44,
+          21
+        ],
+        "axis_weights": {
+          "e0": 18,
+          "e7": 21,
+          "e0_over_e7": 0.8571428571428571
+        }
+      }
+    },
+    {
+      "steps": 4,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/070_mixed_excitation_cone_small/step_0004.json",
+      "metrics": {
+        "tick": 4,
+        "node_count": 5,
+        "edge_count": 5,
+        "max_depth": 2,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 2
+        },
+        "active_coeff_count": 15,
+        "basis_l1_totals": [
+          258,
+          2,
+          706,
+          257,
+          1,
+          705,
+          960,
+          449
+        ],
+        "axis_weights": {
+          "e0": 258,
+          "e7": 449,
+          "e0_over_e7": 0.5746102449888641
+        }
+      }
+    },
+    {
+      "steps": 8,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/070_mixed_excitation_cone_small/step_0008.json",
+      "metrics": {
+        "tick": 8,
+        "node_count": 5,
+        "edge_count": 5,
+        "max_depth": 2,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 2
+        },
+        "active_coeff_count": 15,
+        "basis_l1_totals": [
+          196610,
+          2,
+          335874,
+          196609,
+          1,
+          335873,
+          532480,
+          253953
+        ],
+        "axis_weights": {
+          "e0": 196610,
+          "e7": 253953,
+          "e0_over_e7": 0.7741983752899159
+        }
+      }
+    }
+  ]
+}

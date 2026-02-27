@@ -1,0 +1,167 @@
+{
+  "example_file": "090_large_toy_cone_depth3.json",
+  "example_name": "090_large_toy_cone_depth3",
+  "input_file": "world_code/Python_code/lightcone_microstate_examples/090_large_toy_cone_depth3.json",
+  "runs": [
+    {
+      "steps": 0,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/090_large_toy_cone_depth3/step_0000.json",
+      "metrics": {
+        "tick": 0,
+        "node_count": 10,
+        "edge_count": 12,
+        "max_depth": 3,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 3,
+          "3": 4
+        },
+        "active_coeff_count": 26,
+        "basis_l1_totals": [
+          5,
+          6,
+          6,
+          4,
+          1,
+          1,
+          2,
+          3
+        ],
+        "axis_weights": {
+          "e0": 5,
+          "e7": 3,
+          "e0_over_e7": 1.6666666666666667
+        }
+      }
+    },
+    {
+      "steps": 1,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/090_large_toy_cone_depth3/step_0001.json",
+      "metrics": {
+        "tick": 1,
+        "node_count": 10,
+        "edge_count": 12,
+        "max_depth": 3,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 3,
+          "3": 4
+        },
+        "active_coeff_count": 50,
+        "basis_l1_totals": [
+          11,
+          16,
+          9,
+          12,
+          10,
+          7,
+          11,
+          14
+        ],
+        "axis_weights": {
+          "e0": 11,
+          "e7": 14,
+          "e0_over_e7": 0.7857142857142857
+        }
+      }
+    },
+    {
+      "steps": 2,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/090_large_toy_cone_depth3/step_0002.json",
+      "metrics": {
+        "tick": 2,
+        "node_count": 10,
+        "edge_count": 12,
+        "max_depth": 3,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 3,
+          "3": 4
+        },
+        "active_coeff_count": 50,
+        "basis_l1_totals": [
+          104,
+          152,
+          70,
+          80,
+          141,
+          124,
+          139,
+          128
+        ],
+        "axis_weights": {
+          "e0": 104,
+          "e7": 128,
+          "e0_over_e7": 0.8125
+        }
+      }
+    },
+    {
+      "steps": 4,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/090_large_toy_cone_depth3/step_0004.json",
+      "metrics": {
+        "tick": 4,
+        "node_count": 10,
+        "edge_count": 12,
+        "max_depth": 3,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 3,
+          "3": 4
+        },
+        "active_coeff_count": 48,
+        "basis_l1_totals": [
+          4439862,
+          4418030,
+          656534,
+          3066551,
+          415743,
+          1509399,
+          1922919,
+          1552996
+        ],
+        "axis_weights": {
+          "e0": 4439862,
+          "e7": 1552996,
+          "e0_over_e7": 2.858901117581758
+        }
+      }
+    },
+    {
+      "steps": 8,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/090_large_toy_cone_depth3/step_0008.json",
+      "metrics": {
+        "tick": 8,
+        "node_count": 10,
+        "edge_count": 12,
+        "max_depth": 3,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 3,
+          "3": 4
+        },
+        "active_coeff_count": 48,
+        "basis_l1_totals": [
+          1308505218027379460899848,
+          1387435483891012258456994,
+          172952247117108635804504,
+          801141523090015633243175,
+          62863235533630580933241,
+          332050159017762954735609,
+          816302131917459627702987,
+          439118666160524524006318
+        ],
+        "axis_weights": {
+          "e0": 1308505218027379460899848,
+          "e7": 439118666160524524006318,
+          "e0_over_e7": 2.979844217209936
+        }
+      }
+    }
+  ]
+}

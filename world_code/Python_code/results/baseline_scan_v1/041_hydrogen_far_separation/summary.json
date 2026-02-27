@@ -1,0 +1,167 @@
+{
+  "example_file": "041_hydrogen_far_separation.json",
+  "example_name": "041_hydrogen_far_separation",
+  "input_file": "world_code/Python_code/lightcone_microstate_examples/041_hydrogen_far_separation.json",
+  "runs": [
+    {
+      "steps": 0,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/041_hydrogen_far_separation/step_0000.json",
+      "metrics": {
+        "tick": 0,
+        "node_count": 9,
+        "edge_count": 11,
+        "max_depth": 3,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 3,
+          "3": 3
+        },
+        "active_coeff_count": 21,
+        "basis_l1_totals": [
+          2,
+          6,
+          6,
+          3,
+          3,
+          0,
+          0,
+          1
+        ],
+        "axis_weights": {
+          "e0": 2,
+          "e7": 1,
+          "e0_over_e7": 2.0
+        }
+      }
+    },
+    {
+      "steps": 1,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/041_hydrogen_far_separation/step_0001.json",
+      "metrics": {
+        "tick": 1,
+        "node_count": 9,
+        "edge_count": 11,
+        "max_depth": 3,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 3,
+          "3": 3
+        },
+        "active_coeff_count": 23,
+        "basis_l1_totals": [
+          16,
+          3,
+          2,
+          2,
+          0,
+          3,
+          4,
+          3
+        ],
+        "axis_weights": {
+          "e0": 16,
+          "e7": 3,
+          "e0_over_e7": 5.333333333333333
+        }
+      }
+    },
+    {
+      "steps": 2,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/041_hydrogen_far_separation/step_0002.json",
+      "metrics": {
+        "tick": 2,
+        "node_count": 9,
+        "edge_count": 11,
+        "max_depth": 3,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 3,
+          "3": 3
+        },
+        "active_coeff_count": 27,
+        "basis_l1_totals": [
+          34,
+          41,
+          40,
+          9,
+          3,
+          39,
+          44,
+          41
+        ],
+        "axis_weights": {
+          "e0": 34,
+          "e7": 41,
+          "e0_over_e7": 0.8292682926829268
+        }
+      }
+    },
+    {
+      "steps": 4,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/041_hydrogen_far_separation/step_0004.json",
+      "metrics": {
+        "tick": 4,
+        "node_count": 9,
+        "edge_count": 11,
+        "max_depth": 3,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 3,
+          "3": 3
+        },
+        "active_coeff_count": 33,
+        "basis_l1_totals": [
+          10661642,
+          341678,
+          19355484,
+          19014059,
+          19014059,
+          341172,
+          18672634,
+          17111145
+        ],
+        "axis_weights": {
+          "e0": 10661642,
+          "e7": 17111145,
+          "e0_over_e7": 0.62308174000045
+        }
+      }
+    },
+    {
+      "steps": 8,
+      "state_file": "world_code/Python_code/results/baseline_scan_v1/041_hydrogen_far_separation/step_0008.json",
+      "metrics": {
+        "tick": 8,
+        "node_count": 9,
+        "edge_count": 11,
+        "max_depth": 3,
+        "depth_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 3,
+          "3": 3
+        },
+        "active_coeff_count": 33,
+        "basis_l1_totals": [
+          2420169832844655558015987949822,
+          531508802641486591671581201390,
+          1463551126648165401617775497058,
+          932042324006678809946581716239,
+          932042324006678809946581716239,
+          531508802641486591670806360248,
+          400533521365192218275387935420,
+          1152451540771508881678710757425
+        ],
+        "axis_weights": {
+          "e0": 2420169832844655558015987949822,
+          "e7": 1152451540771508881678710757425,
+          "e0_over_e7": 2.1000187402452277
+        }
+      }
+    }
+  ]
+}
