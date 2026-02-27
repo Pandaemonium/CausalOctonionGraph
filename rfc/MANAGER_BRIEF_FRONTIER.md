@@ -195,8 +195,8 @@ one has at least a falsifiable Python test and a Lean stub claim.
 | Python tests (calc/) | **667+ passing, 0 failing** (incl. `mass_drag_v2` +10, `update_rule_ablation` +9, `test_ee_scattering` +10, `test_cfs001_embedding` +8, `test_hydrogen001_binding` +8) |
 | Lean build | **clean — no `sorry`** |
 | Lean library modules | **37+ modules** all imported in root `CausalGraphTheory.lean` |
-| Claims proved | **19 proved** (ALG-001–004, ANOM-001, CAUS-001, CFS-001, DAG-001, DIST-001, FANO-001, GAUGE-001, GEN-001, GEN-002, LEPTON-001, MASS-001, MU-001, PHOTON-001, PROTON-001, RACE-001, REL-001, STRONG-001, TICK-001, WEINBERG-001) per ground-truth YAML |
-| Claims partial | **5 partial** (ALPHA-001, CFS-002, CFS-003, HYDROGEN-001, PROTON-001) per ground-truth YAML |
+| Claims proved | **20 proved** (ALG-001–004, ANOM-001, CAUS-001, CFS-001, CFS-002, CFS-003, DAG-001, DIST-001, FANO-001, GAUGE-001, GEN-001, GEN-002, LEPTON-001, MASS-001, MU-001, PHOTON-001, PROTON-001, RACE-001, REL-001, STRONG-001, TICK-001, WEINBERG-001) per ground-truth YAML |
+| Claims partial | **3 partial** (ALPHA-001, HYDROGEN-001, WEINBERG-001) per ground-truth YAML |
 | Claims active_hypothesis | **1** (MU-001) per ground-truth YAML |
 | Claims open | **1 open** (LEPTON-001) per ground-truth YAML |
 | Claims stub | **2 stub** (ANOM-001, GEN-001) per ground-truth YAML |
@@ -378,29 +378,7 @@ Next action:
 
 ---
 
-### 🔴 P3 · CFS-003 · `partial` — Advance to `proved`
-
-**Ground-truth status is `partial`. Python scaffold delivered (task 058a4337-cba). Gate 2 Lean formalization delivered (task f1315504-571): `CausalGraphTheory/CFS003Propagator.lean` with ≥3 named theorems, 0 `sorry`.**
-
-Next action:
-- Read `claims/CFS-003.yml` to identify remaining open gates.
-- Complete any remaining Lean proof obligations following the CFS-001 pattern.
-- Promote `claims/CFS-003.yml` to `proved`.
-
----
-
-### 🔴 P4 · CFS-002 · `partial` — Advance to `proved`
-
-**Ground-truth status is `partial`. Gate 2 Lean stub delivered (task 965dd650-01d): `CausalGraphTheory/CFS002LocalAlgebra.lean` with 4 theorems, 0 `sorry`. Gate 3 Python verification delivered (task ebc9b3d3-25d).**
-
-Next action:
-- Read `claims/CFS-002.yml` to identify remaining open gates.
-- Complete any remaining Lean proof obligations following the CFS-001 pattern.
-- Promote `claims/CFS-002.yml` to `proved`.
-
----
-
-### 🔴 P5 · WEINBERG-001 · `partial` — Advance to `proved`
+### 🔴 P3 · WEINBERG-001 · `partial` — Advance to `proved`
 
 **Ground-truth status is `partial`. Prior tasks 13709b1e-2bf and 11748290-13a reported promotion, but ground-truth YAML currently shows `partial`.**
 
@@ -408,6 +386,32 @@ Next action:
 - Read `claims/WEINBERG-001.yml` to confirm actual gate status.
 - Identify any remaining open gates.
 - Promote `claims/WEINBERG-001.yml` to `proved` if all gates are satisfied.
+
+---
+
+### ✅ CFS-003 · Causal Fermion System Propagator Discretization — COMPLETED (2026-02-27)
+
+**`claims/CFS-003.yml` is promoted to `proved`. DO NOT reassign.**
+
+What was delivered (tasks 058a4337-cba, f1315504-571, eecf7237-622):
+- `calc/test_cfs003_propagator.py` — 8 passing pytest functions.
+- `CausalGraphTheory/CFS003Propagator.lean` — 5 named theorems, 0 `sorry`, lake build EXIT 0.
+- `claims/CFS-003.yml` promoted to `proved`.
+
+**Anti-Loop Rule:** Do NOT recreate `CFS003Propagator.lean` or re-promote CFS-003. The YAML is final.
+
+---
+
+### ✅ CFS-002 · Discrete Local Algebras — COMPLETED (2026-02-27)
+
+**`claims/CFS-002.yml` is promoted to `proved`. DO NOT reassign.**
+
+What was delivered (tasks 965dd650-01d, ebc9b3d3-25d):
+- `CausalGraphTheory/CFS002LocalAlgebra.lean` — 4 theorems, 0 `sorry`.
+- `calc/test_cfs002_local_algebra.py` — 6 named tests passing.
+- `claims/CFS-002.yml` promoted to `proved`.
+
+**Anti-Loop Rule:** Do NOT recreate `CFS002LocalAlgebra.lean` or re-promote CFS-002. The YAML is final.
 
 ---
 
@@ -578,11 +582,7 @@ What was delivered (task d31047e5-ec0):
 **`calc/test_koide_diophantine.py` exists and passes. DO NOT recreate.**
 
 **Result:** No exact integer solution for `f₀²+f₁²+f₂² = 4(f₀f₁+f₁f₂+f₂f₀)` in range [1, 4000].
-Best near-miss: (255, 736, 4000) with error 6.0e-8.
-
----
-
-### ✅ P0 · KERNEL-001 · KernelV2.lean — Gate 1 — COMPLETED
+Best near-miss: (255, 736, 4000) with
 ## Hard Constraints (enforce strictly)
 
 - **No continuum:** `Mathlib.Analysis.*`, `Mathlib.Topology.*`, `Mathlib.Data.Real.*`
