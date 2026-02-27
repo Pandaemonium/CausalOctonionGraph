@@ -1,0 +1,142 @@
+{
+  "q_proj": {
+    "states": [
+      {
+        "label": "nu_R  (omega)",
+        "q_proj": 0.0,
+        "state": "+0.500*e0  +0.500i*e7"
+      },
+      {
+        "label": "q_r   (a1d omega)",
+        "q_proj": 0.0,
+        "state": "+0.500i*e1  -0.500*e6"
+      },
+      {
+        "label": "q_g   (a2d omega)",
+        "q_proj": 0.0,
+        "state": "-0.500*e2  +0.500i*e5"
+      },
+      {
+        "label": "q_b   (a3d omega)",
+        "q_proj": 0.0,
+        "state": "-0.500*e3  +0.500i*e4"
+      },
+      {
+        "label": "dq_r  (a2d a3d omega)",
+        "q_proj": 0.0,
+        "state": "+0.500*e1  -0.500i*e6"
+      },
+      {
+        "label": "dq_g  (a1d a3d omega)",
+        "q_proj": 0.0,
+        "state": "+0.500i*e2  -0.500*e5"
+      },
+      {
+        "label": "dq_b  (a1d a2d omega)",
+        "q_proj": 0.0,
+        "state": "-0.500i*e3  +0.500*e4"
+      },
+      {
+        "label": "e_R   (a1d a2d a3d omega)",
+        "q_proj": -0.5,
+        "state": "-0.500i*e0  -0.500*e7"
+      }
+    ],
+    "anomaly_coefficients": {
+      "tr_q": -0.5,
+      "tr_q2": 0.25,
+      "tr_q3": -0.125,
+      "tr_q_vanishes": false,
+      "tr_q3_vanishes": false
+    },
+    "sm_reference": {
+      "sm_qem": [
+        0.0,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.6666666666666666,
+        -0.3333333333333333,
+        -0.3333333333333333,
+        -0.3333333333333333,
+        -1.0
+      ],
+      "sm_tr_q": 0.0,
+      "sm_tr_q2": 2.66666667,
+      "sm_tr_q3": -0.22222222
+    },
+    "scale_analysis": {
+      "scale": 2.0,
+      "scaled_charges": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "match_sm": false
+    }
+  },
+  "q_num": {
+    "states": [
+      {
+        "label": "nu_R  (omega)",
+        "N": 0,
+        "q_num": 0.0,
+        "particle": "sterile neutrino"
+      },
+      {
+        "label": "q_r   (a1d omega)",
+        "N": 1,
+        "q_num": 0.6666666666666666,
+        "particle": "u quark color r"
+      },
+      {
+        "label": "q_g   (a2d omega)",
+        "N": 1,
+        "q_num": 0.6666666666666666,
+        "particle": "u quark color g"
+      },
+      {
+        "label": "q_b   (a3d omega)",
+        "N": 1,
+        "q_num": 0.6666666666666666,
+        "particle": "u quark color b"
+      },
+      {
+        "label": "dq_r  (a2d a3d omega)",
+        "N": 2,
+        "q_num": -0.3333333333333333,
+        "particle": "d quark color r"
+      },
+      {
+        "label": "dq_g  (a1d a3d omega)",
+        "N": 2,
+        "q_num": -0.3333333333333333,
+        "particle": "d quark color g"
+      },
+      {
+        "label": "dq_b  (a1d a2d omega)",
+        "N": 2,
+        "q_num": -0.3333333333333333,
+        "particle": "d quark color b"
+      },
+      {
+        "label": "e_R   (a1d a2d a3d)",
+        "N": 3,
+        "q_num": -1.0,
+        "particle": "charged lepton"
+      }
+    ],
+    "anomaly_coefficients": {
+      "tr_q": 0.0,
+      "tr_q2": 2.6666666667,
+      "tr_q3": -0.2222222222,
+      "tr_q_rh_vanishes": true,
+      "tr_q3_rh_vanishes": false,
+      "tr_q3_combined_vanishes": true
+    }
+  }
+}

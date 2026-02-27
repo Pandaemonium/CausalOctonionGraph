@@ -1,0 +1,55 @@
+{
+  "config": {
+    "n_bins": 121,
+    "shots": 8000,
+    "screen_distance": 1.2,
+    "source_distance": 1.0,
+    "slit_separation": 0.18,
+    "screen_half_width": 0.9,
+    "ticks_per_unit": 56.0,
+    "envelope_sigma": 0.42,
+    "slit_width": 0.08,
+    "sample_seed": 7331
+  },
+  "metrics": {
+    "visibility_A": 0.0,
+    "visibility_B": 0.0,
+    "visibility_AB": 0.6769485054698573,
+    "interference_l1_vs_AplusB": 0.06833943893030703
+  },
+  "which_way_sweep": {
+    "rows": [
+      {
+        "which_way": 0.0,
+        "visibility_local": 0.6769485054698573,
+        "interference_strength": 0.06833943893030703
+      },
+      {
+        "which_way": 0.2,
+        "visibility_local": 0.7024371628939134,
+        "interference_strength": 0.05489400636082125
+      },
+      {
+        "which_way": 0.4,
+        "visibility_local": 0.7287126050019241,
+        "interference_strength": 0.041338709464850194
+      },
+      {
+        "which_way": 0.6,
+        "visibility_local": 0.7558118326067665,
+        "interference_strength": 0.027672196145418184
+      },
+      {
+        "which_way": 0.8,
+        "visibility_local": 0.7837742035631278,
+        "interference_strength": 0.01389309202717902
+      },
+      {
+        "which_way": 1.0,
+        "visibility_local": 0.8126416234914233,
+        "interference_strength": 2.1138990487213972e-11
+      }
+    ],
+    "monotone_nonincreasing": true
+  }
+}

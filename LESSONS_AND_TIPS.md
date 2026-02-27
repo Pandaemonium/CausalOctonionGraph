@@ -14,6 +14,101 @@ Add new entries at the **top** of each section so the most recent fixes are easy
 | `split_ifs`, `induction` IH wrong shape, `simp` | [Lean 4 Proof Issues](#lean-4-proof-issues) |
 | `lean_diagnostic_messages` codec error | [UTF-8 / Encoding Issues](#utf-8--encoding-issues) |
 | `python3` not found on Windows | [Python / pytest Issues](#python--pytest-issues) |
+| `status after pi`, YAML metadata backfill, claim schema | [YAML / Claim Metadata Issues](#yaml--claim-metadata-issues) |
+| `unacceptable character #x0081`, YAML parse error | [YAML / Claim Metadata Issues](#yaml--claim-metadata-issues) |
+
+---
+
+## YAML / Claim Metadata Issues
+
+### Regex Backfill Can Accidentally Delete `status:` Lines
+
+**Symptom:** After automated metadata insertion, claims have only:
+`pi_obs_profile`, `projection_sensitivity`, etc., and top-level `status:` is missing.
+This silently breaks claim governance and any status-dependent tooling.
+
+**Root cause:** PowerShell regex replacement used a replacement string like
+`"$1`n$ins"` where `$1` is interpreted as a PowerShell variable (empty), not
+a regex capture-group reference.
+
+**Fix:** Use `Regex.Replace` with an explicit match evaluator or construct the
+new line with the captured group value, e.g.:
+
+```powershell
+$new = [regex]::Replace($raw, '(?m)^(status:\s*.*)$', { param($m) $m.Value + "`n" + $ins }, 1)
+```
+
+Then run a validation pass:
+1. every claim must still have `^status:`,
+2. `status:` must appear before `pi_obs_profile:`.
+
+---
+
+### Untracked Claim Files Cannot Be Recovered from `HEAD`
+
+**Symptom:** Recovery script uses `git show HEAD:claims/<file>.yml` and fails with:
+`path exists on disk, but not in 'HEAD'`.
+
+**Root cause:** File is untracked (`??`) and has no committed baseline in `HEAD`.
+Any "restore from git" logic will fail for these files.
+
+**Fix:**
+1. Detect tracked/untracked before recovery.
+2. For tracked files, restore from `HEAD`.
+3. For untracked files, treat as standalone and reconstruct from alternate artifacts
+   (manager briefs, notes, copies), or quarantine/remove until canonical source exists.
+
+Quick check:
+
+```powershell
+git status --short claims
+```
+
+---
+
+### Strict YAML Parsing Fails on Hidden Control Characters
+
+**Symptom:** YAML loader errors like:
+`unacceptable character #x0081` or `#x008f`.
+
+**Root cause:** Corrupted control bytes (often from encoding/tool-chain issues)
+inside text blocks; YAML parsers reject them.
+
+**Fix:** Sanitize control characters before parse validation:
+1. remove `[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x9F]`,
+2. rewrite file UTF-8 with normalized newlines,
+3. rerun YAML parser over all claims.
+
+Minimal Python sanitizer pattern:
+
+```python
+import re, glob
+pat = re.compile(r'[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x9F]')
+for p in glob.glob('claims/*.yml'):
+    s = open(p, 'r', encoding='utf-8').read()
+    ns = pat.sub('', s)
+    if ns != s:
+        open(p, 'w', encoding='utf-8', newline='\n').write(ns)
+```
+
+Always follow with parser validation (`yaml.safe_load`) across all claim files.
+
+---
+
+### List-Style YAML Files Need Entry-Scoped Backfills
+
+**Symptom:** Multi-entry files (e.g., list of `- id: ...`) lose list markers or
+become malformed after global replace.
+
+**Root cause:** Line-oriented replacement scripts assume one top-level map per file.
+That assumption fails for list-style claim registries.
+
+**Fix:**
+1. Detect list-style files first (`^- id:`).
+2. Apply metadata insertion per entry with two-space indentation.
+3. Validate counts (`entries == status == pi_obs_profile`) after patch.
+
+Never run one-map backfill logic on list files.
 
 ---
 

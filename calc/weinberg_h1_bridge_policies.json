@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "rfc": "RFC-029",
+  "target": {
+    "scale": "M_Z",
+    "sin2_theta_w": 0.23122
+  },
+  "policies": [
+    {
+      "policy_id": "h1_no_running",
+      "description": "Control policy: no running applied.",
+      "steps": 0,
+      "attenuation": 1.0
+    },
+    {
+      "policy_id": "h1_mild_running_4x0p95",
+      "description": "Mild discrete running over 4 steps with attenuation 0.95.",
+      "steps": 4,
+      "attenuation": 0.95
+    },
+    {
+      "policy_id": "h1_strong_running_8x0p90",
+      "description": "Stronger discrete running over 8 steps with attenuation 0.90.",
+      "steps": 8,
+      "attenuation": 0.9
+    }
+  ]
+}

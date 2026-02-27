@@ -13,6 +13,7 @@
 -/
 
 import CausalGraphTheory.WittBasis
+import CausalGraphTheory.VacuumStabilizerAction
 import Mathlib.Data.Finset.Basic
 import Mathlib.Tactic
 
@@ -246,5 +247,100 @@ theorem sin2ThetaWObsNat_weakBoost_eq_one_third :
   unfold sin2ThetaWObsNat policyWeakBoost
   simp [weightedTraceNat_weakBoost_u1, weightedTraceNat_weakBoost_ew]
   norm_num
+
+/-! ## S4-stabilizer transport check for the 1/4 observable (RFC-037 Avenue 2) -/
+
+/-- Weak pair coordinates after transporting `wittPair 0` by a Fano stabilizer permutation. -/
+def weakPair0OctIdxUnder (sigma : List FanoPoint) : Prod (Fin 8) (Fin 8) :=
+  let p := WittBasis.wittPair 0
+  (fanoToOctIdx (applyPermList sigma p.1), fanoToOctIdx (applyPermList sigma p.2))
+
+/-- Weak mask with transported weak-pair coordinates; vacuum axis stays at `idx7`. -/
+def weakMaskUnder (sigma : List FanoPoint) (i : Fin 8) : Bool :=
+  let p := weakPair0OctIdxUnder sigma
+  i == p.1 || i == p.2 || i == idx7
+
+/-- Electroweak mask under transported weak-pair coordinates. -/
+def electroweakMaskUnder (sigma : List FanoPoint) (i : Fin 8) : Bool :=
+  u1Mask i || weakMaskUnder sigma i
+
+/-- U1/Weak overlap mask under transported weak-pair coordinates. -/
+def overlapMaskUnder (sigma : List FanoPoint) (i : Fin 8) : Bool :=
+  u1Mask i && weakMaskUnder sigma i
+
+/-- Exclusive-U1 weight under transported weak-pair coordinates. -/
+def exclusiveU1WeightUnder (sigma : List FanoPoint) : BinWeight :=
+  fun i => !(overlapMaskUnder sigma i)
+
+/-- Exclusive-U1 observable under transported weak-pair coordinates. -/
+def sin2ThetaWObsExclusiveUnder (sigma : List FanoPoint) : Rat :=
+  (weightedTrace (exclusiveU1WeightUnder sigma) u1Mask : Rat) /
+    (weightedTrace allOnesWeight (electroweakMaskUnder sigma) : Rat)
+
+/-- For every vacuum-stabilizer permutation, transported weak mask still has support size 3. -/
+theorem weakMaskUnder_stabilizer_all_card_three :
+    (vacuumStabilizerList.all fun sigma =>
+      maskCard (weakMaskUnder sigma) == 3) = true := by
+  native_decide
+
+/-- For every vacuum-stabilizer permutation, transported EW mask still has support size 4. -/
+theorem electroweakMaskUnder_stabilizer_all_card_four :
+    (vacuumStabilizerList.all fun sigma =>
+      maskCard (electroweakMaskUnder sigma) == 4) = true := by
+  native_decide
+
+/-- For every vacuum-stabilizer permutation, transported U1/Weak overlap has support size 1. -/
+theorem overlapMaskUnder_stabilizer_all_card_one :
+    (vacuumStabilizerList.all fun sigma =>
+      maskCard (overlapMaskUnder sigma) == 1) = true := by
+  native_decide
+
+/-- Invariance check: exclusive-U1 observable remains exactly 1/4 across the vacuum stabilizer. -/
+theorem sin2ThetaWObs_exclusive_u1_stabilizer_invariant_bool :
+    (vacuumStabilizerList.all fun sigma =>
+      sin2ThetaWObsExclusiveUnder sigma == (1 / 4 : Rat)) = true := by
+  native_decide
+
+/-- Proposition-level transport fact: weak-mask support remains 3 for stabilizer elements. -/
+theorem weakMaskUnder_stabilizer_card_three
+    (sigma : List FanoPoint)
+    (hsigma : sigma ∈ vacuumStabilizerList) :
+    maskCard (weakMaskUnder sigma) = 3 := by
+  have hAll : (vacuumStabilizerList.all fun tau => maskCard (weakMaskUnder tau) == 3) = true :=
+    weakMaskUnder_stabilizer_all_card_three
+  have hTau : (maskCard (weakMaskUnder sigma) == 3) = true := (List.all_eq_true.mp hAll) sigma hsigma
+  simpa using hTau
+
+/-- Proposition-level transport fact: electroweak-mask support remains 4 for stabilizer elements. -/
+theorem electroweakMaskUnder_stabilizer_card_four
+    (sigma : List FanoPoint)
+    (hsigma : sigma ∈ vacuumStabilizerList) :
+    maskCard (electroweakMaskUnder sigma) = 4 := by
+  have hAll : (vacuumStabilizerList.all fun tau => maskCard (electroweakMaskUnder tau) == 4) = true :=
+    electroweakMaskUnder_stabilizer_all_card_four
+  have hTau : (maskCard (electroweakMaskUnder sigma) == 4) = true := (List.all_eq_true.mp hAll) sigma hsigma
+  simpa using hTau
+
+/-- Proposition-level transport fact: U1/Weak overlap support remains 1 for stabilizer elements. -/
+theorem overlapMaskUnder_stabilizer_card_one
+    (sigma : List FanoPoint)
+    (hsigma : sigma ∈ vacuumStabilizerList) :
+    maskCard (overlapMaskUnder sigma) = 1 := by
+  have hAll : (vacuumStabilizerList.all fun tau => maskCard (overlapMaskUnder tau) == 1) = true :=
+    overlapMaskUnder_stabilizer_all_card_one
+  have hTau : (maskCard (overlapMaskUnder sigma) == 1) = true := (List.all_eq_true.mp hAll) sigma hsigma
+  simpa using hTau
+
+/-- Proposition-level invariance: exclusive-U1 observable stays exactly 1/4 on stabilizer orbit. -/
+theorem sin2ThetaWObs_exclusive_u1_stabilizer_invariant
+    (sigma : List FanoPoint)
+    (hsigma : sigma ∈ vacuumStabilizerList) :
+    sin2ThetaWObsExclusiveUnder sigma = (1 / 4 : Rat) := by
+  have hAll : (vacuumStabilizerList.all fun tau =>
+      sin2ThetaWObsExclusiveUnder tau == (1 / 4 : Rat)) = true :=
+    sin2ThetaWObs_exclusive_u1_stabilizer_invariant_bool
+  have hTau : (sin2ThetaWObsExclusiveUnder sigma == (1 / 4 : Rat)) = true :=
+    (List.all_eq_true.mp hAll) sigma hsigma
+  simpa using hTau
 
 end CausalGraph

@@ -1,0 +1,24 @@
+{
+  "charges": {
+    "electron": -0.5,
+    "positron_like": 0.5,
+    "vacuum": 0.0
+  },
+  "matrix": {
+    "electron": {
+      "electron": "repulsive",
+      "positron_like": "attractive",
+      "vacuum": "neutral"
+    },
+    "positron_like": {
+      "electron": "attractive",
+      "positron_like": "repulsive",
+      "vacuum": "neutral"
+    },
+    "vacuum": {
+      "electron": "neutral",
+      "positron_like": "neutral",
+      "vacuum": "neutral"
+    }
+  }
+}

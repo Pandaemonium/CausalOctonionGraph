@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "rfc": "RFC-037",
+  "avenue": "A7",
+  "target": {
+    "scale": "M_Z",
+    "sin2_theta_w": 0.23122
+  },
+  "observables_checksum": "b608c67c789a8030ead484e44ddd37c53885940ea54ff399496741065515b839",
+  "policies": [
+    {
+      "policy_id": "a7_baseline_half",
+      "description": "Legacy baseline proxy: g'^2=u1_card and g^2=(ew-u1)_card => 1/2.",
+      "gprime_sq_source": "u1_card",
+      "g_sq_source": "ew_minus_u1_card"
+    },
+    {
+      "policy_id": "a7_exclusive_u1_quarter",
+      "description": "Exclusive-U(1) coupling proxy: g'^2=exclusive_u1_card and g^2=weak_card => 1/4.",
+      "gprime_sq_source": "exclusive_u1_card",
+      "g_sq_source": "weak_card"
+    },
+    {
+      "policy_id": "a7_overlap_shift_third",
+      "description": "Alternative frozen proxy: g'^2=u1_card and g^2=ew_card => 1/3.",
+      "gprime_sq_source": "u1_card",
+      "g_sq_source": "ew_card"
+    }
+  ]
+}

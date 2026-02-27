@@ -1,0 +1,471 @@
+{
+  "best_by_abs_gap": {
+    "denominator": 24.0,
+    "ew_irrep": "chi_sign",
+    "gap_from_target": 0.43544666666666665,
+    "numerator": 16.0,
+    "sin2_theta_w_obs": 0.6666666666666666,
+    "transform": "absolute",
+    "u1_irrep": "chi_2d"
+  },
+  "class_sizes": {
+    "1^4": 1,
+    "2,1,1": 6,
+    "2,2": 3,
+    "3,1": 8,
+    "4": 6
+  },
+  "rows": [
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_2d",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_2d"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_3d_std",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_2d"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_3d_twist",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_2d"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_sign",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_2d"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_trivial",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_2d"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_2d",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_3d_std"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_3d_std",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_3d_std"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_3d_twist",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_3d_std"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_sign",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_3d_std"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_trivial",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_3d_std"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_2d",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_3d_twist"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_3d_std",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_3d_twist"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_3d_twist",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_3d_twist"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_sign",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_3d_twist"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_trivial",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_3d_twist"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_2d",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_sign"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_3d_std",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_sign"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_3d_twist",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_sign"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_sign",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_sign"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_trivial",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_sign"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_2d",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_trivial"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_3d_std",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_trivial"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_3d_twist",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_trivial"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_sign",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_trivial"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_trivial",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "square",
+      "u1_irrep": "chi_trivial"
+    },
+    {
+      "denominator": 16.0,
+      "ew_irrep": "chi_2d",
+      "gap_from_target": 0.76878,
+      "numerator": 16.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "absolute",
+      "u1_irrep": "chi_2d"
+    },
+    {
+      "denominator": 18.0,
+      "ew_irrep": "chi_3d_std",
+      "gap_from_target": 0.6576688888888889,
+      "numerator": 16.0,
+      "sin2_theta_w_obs": 0.8888888888888888,
+      "transform": "absolute",
+      "u1_irrep": "chi_2d"
+    },
+    {
+      "denominator": 18.0,
+      "ew_irrep": "chi_3d_twist",
+      "gap_from_target": 0.6576688888888889,
+      "numerator": 16.0,
+      "sin2_theta_w_obs": 0.8888888888888888,
+      "transform": "absolute",
+      "u1_irrep": "chi_2d"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_sign",
+      "gap_from_target": 0.43544666666666665,
+      "numerator": 16.0,
+      "sin2_theta_w_obs": 0.6666666666666666,
+      "transform": "absolute",
+      "u1_irrep": "chi_2d"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_trivial",
+      "gap_from_target": 0.43544666666666665,
+      "numerator": 16.0,
+      "sin2_theta_w_obs": 0.6666666666666666,
+      "transform": "absolute",
+      "u1_irrep": "chi_2d"
+    },
+    {
+      "denominator": 16.0,
+      "ew_irrep": "chi_2d",
+      "gap_from_target": 0.89378,
+      "numerator": 18.0,
+      "sin2_theta_w_obs": 1.125,
+      "transform": "absolute",
+      "u1_irrep": "chi_3d_std"
+    },
+    {
+      "denominator": 18.0,
+      "ew_irrep": "chi_3d_std",
+      "gap_from_target": 0.76878,
+      "numerator": 18.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "absolute",
+      "u1_irrep": "chi_3d_std"
+    },
+    {
+      "denominator": 18.0,
+      "ew_irrep": "chi_3d_twist",
+      "gap_from_target": 0.76878,
+      "numerator": 18.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "absolute",
+      "u1_irrep": "chi_3d_std"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_sign",
+      "gap_from_target": 0.51878,
+      "numerator": 18.0,
+      "sin2_theta_w_obs": 0.75,
+      "transform": "absolute",
+      "u1_irrep": "chi_3d_std"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_trivial",
+      "gap_from_target": 0.51878,
+      "numerator": 18.0,
+      "sin2_theta_w_obs": 0.75,
+      "transform": "absolute",
+      "u1_irrep": "chi_3d_std"
+    },
+    {
+      "denominator": 16.0,
+      "ew_irrep": "chi_2d",
+      "gap_from_target": 0.89378,
+      "numerator": 18.0,
+      "sin2_theta_w_obs": 1.125,
+      "transform": "absolute",
+      "u1_irrep": "chi_3d_twist"
+    },
+    {
+      "denominator": 18.0,
+      "ew_irrep": "chi_3d_std",
+      "gap_from_target": 0.76878,
+      "numerator": 18.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "absolute",
+      "u1_irrep": "chi_3d_twist"
+    },
+    {
+      "denominator": 18.0,
+      "ew_irrep": "chi_3d_twist",
+      "gap_from_target": 0.76878,
+      "numerator": 18.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "absolute",
+      "u1_irrep": "chi_3d_twist"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_sign",
+      "gap_from_target": 0.51878,
+      "numerator": 18.0,
+      "sin2_theta_w_obs": 0.75,
+      "transform": "absolute",
+      "u1_irrep": "chi_3d_twist"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_trivial",
+      "gap_from_target": 0.51878,
+      "numerator": 18.0,
+      "sin2_theta_w_obs": 0.75,
+      "transform": "absolute",
+      "u1_irrep": "chi_3d_twist"
+    },
+    {
+      "denominator": 16.0,
+      "ew_irrep": "chi_2d",
+      "gap_from_target": 1.26878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.5,
+      "transform": "absolute",
+      "u1_irrep": "chi_sign"
+    },
+    {
+      "denominator": 18.0,
+      "ew_irrep": "chi_3d_std",
+      "gap_from_target": 1.1021133333333333,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.3333333333333333,
+      "transform": "absolute",
+      "u1_irrep": "chi_sign"
+    },
+    {
+      "denominator": 18.0,
+      "ew_irrep": "chi_3d_twist",
+      "gap_from_target": 1.1021133333333333,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.3333333333333333,
+      "transform": "absolute",
+      "u1_irrep": "chi_sign"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_sign",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "absolute",
+      "u1_irrep": "chi_sign"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_trivial",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "absolute",
+      "u1_irrep": "chi_sign"
+    },
+    {
+      "denominator": 16.0,
+      "ew_irrep": "chi_2d",
+      "gap_from_target": 1.26878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.5,
+      "transform": "absolute",
+      "u1_irrep": "chi_trivial"
+    },
+    {
+      "denominator": 18.0,
+      "ew_irrep": "chi_3d_std",
+      "gap_from_target": 1.1021133333333333,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.3333333333333333,
+      "transform": "absolute",
+      "u1_irrep": "chi_trivial"
+    },
+    {
+      "denominator": 18.0,
+      "ew_irrep": "chi_3d_twist",
+      "gap_from_target": 1.1021133333333333,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.3333333333333333,
+      "transform": "absolute",
+      "u1_irrep": "chi_trivial"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_sign",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "absolute",
+      "u1_irrep": "chi_trivial"
+    },
+    {
+      "denominator": 24.0,
+      "ew_irrep": "chi_trivial",
+      "gap_from_target": 0.76878,
+      "numerator": 24.0,
+      "sin2_theta_w_obs": 1.0,
+      "transform": "absolute",
+      "u1_irrep": "chi_trivial"
+    }
+  ],
+  "target_sin2_theta_w": 0.23122
+}

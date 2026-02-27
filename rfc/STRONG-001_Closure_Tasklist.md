@@ -2,6 +2,7 @@
 
 Status: Active execution plan  
 Scope: Close the largest gaps between current proved facts and the strong-force claim (`claims/alpha_strong.yml`).
+Governance note: confinement-grade interpretations must pass RFC-047 gates before promotion-grade status.
 
 ---
 
@@ -172,6 +173,7 @@ Tasks:
 3. If closure criteria met:
    - move to `status: proved` only with theorem and simulation evidence references.
 4. Add one-paragraph residual risk note either way.
+5. Record confinement-gate status and artifact pointers used by RFC-047/RFC-049.
 
 Done criteria:
 - Claim status matches actual evidence state.

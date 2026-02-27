@@ -1,10 +1,16 @@
-id: ALG-004
+﻿id: ALG-004
 title: "Witt basis ladder operators"
 statement: |
-  The operators α_j and α_j† generate the Clifford algebra Cl(6) ≅ Cl(0,6).
-  They satisfy {α_j, α_k†} = δ_jk and {α_j, α_k} = 0.
-  The vacuum state ω is annihilated by all α_j.
+  The operators Î±_j and Î±_jâ€  generate the Clifford algebra Cl(6) â‰… Cl(0,6).
+  They satisfy {Î±_j, Î±_kâ€ } = Î´_jk and {Î±_j, Î±_k} = 0.
+  The vacuum state Ï‰ is annihilated by all Î±_j.
+
 status: proved
+pi_obs_profile: minimal
+pi_obs_profile_version: v1
+projection_sensitivity: unknown
+profile_contrast_run: ""
+equivalence_mode: none
 lean_file: CausalGraphTheory/WittBasis.lean
 lean_theorems:
   - witt_anticommute
@@ -15,5 +21,7 @@ depends_on:
   - ALG-001
 literature:
   - "Furey F2"
-notes: "Requires correct Hermitian adjoint definition (including octonion conjugation) for α†."
+notes: "Requires correct Hermitian adjoint definition (including octonion conjugation) for Î±â€ ."
 blocked_reason: ""
+
+

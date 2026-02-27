@@ -1,4 +1,4 @@
-id: CAUS-001
+﻿id: CAUS-001
 title: "Reachability defines a strict partial order on the causal graph"
 statement: |
   The reachability relation on a CausalGraph G is a strict partial order:
@@ -18,7 +18,13 @@ statement: |
 
   Two nodes m, n are causally disconnected iff neither m ->* n nor n ->* m.
   Disconnectedness is symmetric by definition.
+
 status: proved
+pi_obs_profile: minimal
+pi_obs_profile_version: v1
+projection_sensitivity: unknown
+profile_contrast_run: ""
+equivalence_mode: none
 lean_file: CausalGraphTheory/CausalOrder.lean
 lean_theorems:
   - CausalGraph.reachable_implies_lt
@@ -56,3 +62,5 @@ notes: |
   Note: common_future_lt and common_past_gt theorems show that common causal
   descendants/ancestors must respect the ID ordering.
 blocked_reason: ""
+
+

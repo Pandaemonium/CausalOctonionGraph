@@ -1,14 +1,20 @@
-id: GAUGE-001
+﻿id: GAUGE-001
 title: "Fano automorphism group (discrete GL(3,2) / vacuum SU(3))"
 statement: |
   The automorphism group of the Fano plane PG(2,2) has order 168,
-  isomorphic to GL(3,2) ≅ PSL(2,7). The stabilizer of the vacuum
-  axis e₇ (Fano point 6) has order 24, isomorphic to S4 in this
+  isomorphic to GL(3,2) â‰… PSL(2,7). The stabilizer of the vacuum
+  axis eâ‚‡ (Fano point 6) has order 24, isomorphic to S4 in this
   encoding (Lean-proved via element-order histogram and explicit
   isomorphism witness; the historical SL(2,3) label is inapplicable
-  in this encoding — see RFC-017). Exactly 3 Fano lines pass through
-  e₇; these are the Witt basis lines.
+  in this encoding â€” see RFC-017). Exactly 3 Fano lines pass through
+  eâ‚‡; these are the Witt basis lines.
+
 status: partial
+pi_obs_profile: with_sector
+pi_obs_profile_version: v1
+projection_sensitivity: unknown
+profile_contrast_run: ""
+equivalence_mode: none
 lean_file: CausalGraphTheory/GaugeGroup.lean
 lean_theorems:
   - GaugeGroup.fano_aut_count
@@ -48,14 +54,14 @@ python_test: calc/test_gauge.py
 depends_on:
   - FANO-001
 literature:
-  - "Conway & Sloane, SPLAG §4.5 (Mathieu groups / Fano automorphisms)"
+  - "Conway & Sloane, SPLAG Â§4.5 (Mathieu groups / Fano automorphisms)"
   - "Furey (2018): Standard Model symmetries from octonions, arXiv:1603.04078"
   - "Manogue & Schray (1993): Octonionic representations of Clifford algebras"
-  - "RFC-001 §4.1"
+  - "RFC-001 Â§4.1"
 notes: |
-  168 = 2³ × 3 × 7 = |GL(3,2)| = |PSL(2,7)|.
+  168 = 2Â³ Ã— 3 Ã— 7 = |GL(3,2)| = |PSL(2,7)|.
   Vacuum stabilizer order is 24; in this encoding the stabilizer is identified with S4 (see RFC-017).
-  Orbit-stabilizer: |GL(3,2)| = 7 × 24 = 168. ✓
+  Orbit-stabilizer: |GL(3,2)| = 7 Ã— 24 = 168. âœ“
   The 3 vacuum lines are the Witt basis pairs from CONVENTIONS.md section 5.2:
     Line 2: {e1, e7, e6}  (pair e6, e1)
     Line 4: {e2, e5, e7}  (pair e2, e5)
@@ -95,5 +101,7 @@ blocked_reason: |
      - STRONG-001: numerically unaffected (order-24 only).
 
   See RFC-017 for full reconciliation plan and timeline.
+
+
 
 

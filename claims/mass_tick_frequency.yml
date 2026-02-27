@@ -1,4 +1,4 @@
-id: MASS-001
+﻿id: MASS-001
 title: "Mass as tick-count frequency (computational drag)"
 statement: |
   In the Causal Octonion Graph, the inertial mass of a node n is
@@ -18,7 +18,13 @@ statement: |
 
   with the angle between the tick vector and the democratic direction
   theta = 45 degrees (cos^2(theta) = 1/2, so Q = 1/(3 cos^(-2)(theta)) = 2/3).
+
 status: proved
+pi_obs_profile: minimal
+pi_obs_profile_version: v1
+projection_sensitivity: unknown
+profile_contrast_run: ""
+equivalence_mode: none
 lean_file: CausalGraphTheory/Mass.lean
 lean_theorems:
   - CausalGraph.tickMass_zero_of_tickCount_zero
@@ -67,7 +73,7 @@ mass_observable_policy: |
     This is compatible with RFC-002 superdeterminism: no branch choice is
     made at runtime; we measure the rate along the pre-encoded path.
 
-  SECONDARY OBSERVABLES (diagnostic use only — not primary evidence):
+  SECONDARY OBSERVABLES (diagnostic use only â€” not primary evidence):
     - First-recurrence time: the step at which a motif returns to its
       initial state for the first time. Useful for sanity-checking motif
       construction but NOT the physical mass ratio. Cited as "diagnostic".
@@ -85,8 +91,10 @@ mass_observable_policy: |
   NOTE ON SUPERDETERMINISTIC COMPATIBILITY:
     The long-run rate is the natural observable in a superdeterministic
     universe. "Long-run" here means following the single causal path encoded
-    in the initial evaluation plan (RFC-002 §3.2), not averaging over branches.
+    in the initial evaluation plan (RFC-002 Â§3.2), not averaging over branches.
     The simulation explores branches only as a SEARCH technique to identify
     which plan encodes the observed physics.
 
 blocked_reason: ""
+
+

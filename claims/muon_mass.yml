@@ -1,29 +1,35 @@
-id: LEPTON-001
+﻿id: LEPTON-001
 title: "Muon-to-electron mass ratio from COG orbit length"
 statement: |
-  The muon-to-electron mass ratio m_μ/m_e ≈ 206.768 equals, in the
+  The muon-to-electron mass ratio m_Î¼/m_e â‰ˆ 206.768 equals, in the
   COG framework, the ratio of orbit lengths (tick counts) of the muon
   and electron motifs under the COG exchange rule:
 
-      m_μ / m_e = C_μ / C_e
+      m_Î¼ / m_e = C_Î¼ / C_e
 
   where:
-    C_e = orbit length of the electron motif (generation-1 state ψ_e
-          in the s·S* sector of C⊗O, cycling through the L1
-          associative quaternionic subalgebra {e₁, e₂, e₃}).
+    C_e = orbit length of the electron motif (generation-1 state Ïˆ_e
+          in the sÂ·S* sector of CâŠ—O, cycling through the L1
+          associative quaternionic subalgebra {eâ‚, eâ‚‚, eâ‚ƒ}).
 
-    C_μ = orbit length of the muon motif (generation-2 state ψ_μ
-          in the s*·S* sector of C⊗O, cycling through a non-associative
+    C_Î¼ = orbit length of the muon motif (generation-2 state Ïˆ_Î¼
+          in the s*Â·S* sector of CâŠ—O, cycling through a non-associative
           Fano path and returning to the starting state).
 
-  The key mechanism: ψ_e absorbs photons (e₇ right-mult) and returns to
+  The key mechanism: Ïˆ_e absorbs photons (eâ‚‡ right-mult) and returns to
   its initial signed state in C_e = 4 symmetric exchange cycles (exact
   signed return). Earlier drafts stated C_e = 3; the 2026-02-23 calibration
   (qed_calibration.py, 50 tests) gives C_e = 4 from the signed kick orbit.
-  ψ_μ requires a non-associative Fano path — its orbit is longer, and the
-  ratio C_μ/C_e should match 206.768.
+  Ïˆ_Î¼ requires a non-associative Fano path â€” its orbit is longer, and the
+  ratio C_Î¼/C_e should match 206.768.
+
 
 status: open  # orbit-length mechanism; COG-QC-01 sub-hypothesis falsified (see notes)
+pi_obs_profile: minimal
+pi_obs_profile_version: v1
+projection_sensitivity: unknown
+profile_contrast_run: ""
+equivalence_mode: none
 lean_file: CausalGraphTheory/Spinors.lean
 lean_theorems:
   # Universal C_e = 4 stack (core LEPTON-001 result)
@@ -78,10 +84,10 @@ literature:
   - "McRae (2025): Triality and the Standard Model, arXiv:2502.14016, Eq. 7-8"
   - "Baez (2002): The Octonions, math/0105155, Section 4"
   - "Baez-Huerta (2010): Division Algebras and Supersymmetry I, arXiv:0909.0319"
-  - "CODATA 2022: m_mu/m_e = 206.7682830 ± 0.0000046"
-  - "Gresnigt, Gourlay, Varma (2023): Three fermion generations with two unbroken gauge symmetries from the sedenions, arXiv:2306.13098 — S3 sedenion automorphism generates 3 generations; COG relevance: S3 ⊄ Aut(O) so three-generation mechanism is structurally above the octonionic layer"
-  - "Finster (2022): Causal Fermion Systems and the Discrete Dirac Sphere, arXiv:2201.06382 — shows CFS action minimizers for m spacetime points converge to equally-spaced configurations; S ~ m^2 scaling gives effective m^2 model for mass ratios"
-  - "Finster (2025): Action-driven flows for causal variational principles, arXiv:2503.00526 — gradient-flow formulation of CFS action; non-convexity requires penalization; COG 4-cycle is consistent with natural-cycle attractor behavior"
+  - "CODATA 2022: m_mu/m_e = 206.7682830 Â± 0.0000046"
+  - "Gresnigt, Gourlay, Varma (2023): Three fermion generations with two unbroken gauge symmetries from the sedenions, arXiv:2306.13098 â€” S3 sedenion automorphism generates 3 generations; COG relevance: S3 âŠ„ Aut(O) so three-generation mechanism is structurally above the octonionic layer"
+  - "Finster (2022): Causal Fermion Systems and the Discrete Dirac Sphere, arXiv:2201.06382 â€” shows CFS action minimizers for m spacetime points converge to equally-spaced configurations; S ~ m^2 scaling gives effective m^2 model for mass ratios"
+  - "Finster (2025): Action-driven flows for causal variational principles, arXiv:2503.00526 â€” gradient-flow formulation of CFS action; non-convexity requires penalization; COG 4-cycle is consistent with natural-cycle attractor behavior"
 
 experimental_value:
   ratio: 206.7682830
@@ -89,16 +95,16 @@ experimental_value:
   source: "CODATA 2022"
 
 state_vectors:
-  electron_sector: "s·S* where s = ½(1+ie₇) from LEFT, S* = ½(1-ie₇) from RIGHT"
-  muon_sector: "s*·S* where s* = ½(1-ie₇) from LEFT, S* = ½(1-ie₇) from RIGHT"
+  electron_sector: "sÂ·S* where s = Â½(1+ieâ‚‡) from LEFT, S* = Â½(1-ieâ‚‡) from RIGHT"
+  muon_sector: "s*Â·S* where s* = Â½(1-ieâ‚‡) from LEFT, S* = Â½(1-ieâ‚‡) from RIGHT"
   electron_state: |
-    ψ_e = e₁⁻ = s·S* · (i·e₁ - e₃ + e₁₂₆ + e₁₄₅) · s*·S*
-    (Furey 2019, Eq. 21 — first charged lepton)
+    Ïˆ_e = eâ‚â» = sÂ·S* Â· (iÂ·eâ‚ - eâ‚ƒ + eâ‚â‚‚â‚† + eâ‚â‚„â‚…) Â· s*Â·S*
+    (Furey 2019, Eq. 21 â€” first charged lepton)
   muon_state: |
-    ψ_μ = e₂⁻ = s·S* · (-i·e₂ + e₆ + e₁₂₃ - i·e₁₃₆) · s*·S*
-    (Furey 2019, Eq. 21 — second charged lepton)
+    Ïˆ_Î¼ = eâ‚‚â» = sÂ·S* Â· (-iÂ·eâ‚‚ + eâ‚† + eâ‚â‚‚â‚ƒ - iÂ·eâ‚â‚ƒâ‚†) Â· s*Â·S*
+    (Furey 2019, Eq. 21 â€” second charged lepton)
   note: |
-    Triple products: e₁₂₃ = e₁·e₂·e₃, e₁₂₆ = e₁·e₂·e₆, etc.
+    Triple products: eâ‚â‚‚â‚ƒ = eâ‚Â·eâ‚‚Â·eâ‚ƒ, eâ‚â‚‚â‚† = eâ‚Â·eâ‚‚Â·eâ‚†, etc.
     All computed via the Furey Fano convention in rfc/CONVENTIONS.md.
 
 implementation_plan:
@@ -108,7 +114,7 @@ implementation_plan:
 simulation_records:
   - date: "2026-02-23"
     tool: "calc/qed_calibration.py (RFC-012 Goal A)"
-    description: "L1 electron calibration — C_e exact signed orbit"
+    description: "L1 electron calibration â€” C_e exact signed orbit"
     L1_ELECTRON_STATE: 1  # e1 (corrected from e6)
     photon_op: 7           # e7, right-multiplication
     orbit_period_exact: 4
@@ -139,7 +145,7 @@ falsified_sub_hypothesis:
     the exact 4x4 Euclidean triality quartet matrix.  Verified H^3=I, H^T H=I.
     CSE structure: 4 shift ticks + 2 Walsh-Hadamard intermediates + 8 summation ticks.
     Key: 14 = dim(G_2), the octonion automorphism group and triality stabilizer.
-    Prediction 1+14=15 and 1+7*14=99 — neither matches 206.768 at any natural scale.
+    Prediction 1+14=15 and 1+7*14=99 â€” neither matches 206.768 at any natural scale.
     The O(N log N) geometric bound on a 4x4 Hadamard butterfly rules out naive scaling
     to 206 without an arbitrary multiplier.
   significance: |
@@ -149,15 +155,15 @@ falsified_sub_hypothesis:
 schur_lemma_block:
   date: "2026-02-22"
   statement: |
-    The 8×8 SO(8) outer triality intertwiner T satisfying
-      T · V_ij · T^{-1} = L_{H(ij)}
-    for all 28 generator pairs does NOT exist as a single 8×8 matrix.
-    Reason: Schur's Lemma — V-rep and S+-rep have different eigenvalue spectra
-    (±i vs ±i/2), so there is no intertwiner between them.
+    The 8Ã—8 SO(8) outer triality intertwiner T satisfying
+      T Â· V_ij Â· T^{-1} = L_{H(ij)}
+    for all 28 generator pairs does NOT exist as a single 8Ã—8 matrix.
+    Reason: Schur's Lemma â€” V-rep and S+-rep have different eigenvalue spectra
+    (Â±i vs Â±i/2), so there is no intertwiner between them.
   consequence: |
     The COG mechanism does NOT translate the 8D fermion state vector.
-    Instead, the OPERATOR (photon, e₇) is translated via the 4×4 McRae H matrix,
-    incurring N_τ = 14 ticks per S+ vertex (the triality emulation overhead).
+    Instead, the OPERATOR (photon, eâ‚‡) is translated via the 4Ã—4 McRae H matrix,
+    incurring N_Ï„ = 14 ticks per S+ vertex (the triality emulation overhead).
     The state-space orbit is determined by the DAG graph topology, not by the
     representation-theoretic intertwiner.
 
@@ -172,13 +178,13 @@ simulation_record_2026_02_22:
   ratio_vertex: 15.0
   ratio_orbit_placeholder: 15.0
   target_ratio: 206.7682830
-  gap_factor: "~13.8x — orbit topology not yet fully simulated"
+  gap_factor: "~13.8x â€” orbit topology not yet fully simulated"
   note: |
     The vertex cost ratio (15) and placeholder orbit ratio (15) are both LOWER BOUNDS.
-    The true C_μ/C_e emerges from the macroscopic return-time in the full Fano DAG,
-    not from a single photon vertex. The 8×8 intertwiner approach is ruled out by
+    The true C_Î¼/C_e emerges from the macroscopic return-time in the full Fano DAG,
+    not from a single photon vertex. The 8Ã—8 intertwiner approach is ruled out by
     Schur's Lemma (see schur_lemma_block above). Next step: simulate the full orbit
-    topology in the COG DAG with N_τ=14 per S+ vertex and measure when the
+    topology in the COG DAG with N_Ï„=14 per S+ vertex and measure when the
     muon motif returns to its initial state.
 
 literature_gaps_found_2026_02_23:
@@ -190,14 +196,14 @@ literature_gaps_found_2026_02_23:
       finding: |
         Furey's electron is NOT simply e1 or the L1 quaternionic subalgebra.
         In Furey (1603.04078 eq. 20, 1611.09182 ch. 6), the electron is
-        α₁α₂α₃ω†ω — the fully lowered state in the S^d minimal left ideal,
+        Î±â‚Î±â‚‚Î±â‚ƒÏ‰â€ Ï‰ â€” the fully lowered state in the S^d minimal left ideal,
         a composite of all three Witt pairs simultaneously. The "L1 = electron"
         label is a COG-local simplification.
       cog_position: |
         The COG qed_calibration.py models a SINGLE BASIS ELEMENT e1 kicked by
         the e7 operator, obtaining C_e = 4. This is a valid reduced model
         (tracking one component of the full state) but is not equivalent to
-        simulating the full Furey electron state α₁α₂α₃ω†ω. The relationship
+        simulating the full Furey electron state Î±â‚Î±â‚‚Î±â‚ƒÏ‰â€ Ï‰. The relationship
         between C_e(e1 component) and C_e(full Furey state) is OPEN.
       resolution_2026_02_23: |
         CLOSED by calc/furey_electron_orbit.py (26 tests, all passing).
@@ -210,7 +216,7 @@ literature_gaps_found_2026_02_23:
         (they would require -x = x, hence x = 0).
 
         COMPUTED RESULT:
-        The full Furey electron state (CONVENTIONS.md §6):
+        The full Furey electron state (CONVENTIONS.md Â§6):
             psi_e = alpha1_dag * (alpha2_dag * (alpha3_dag * omega)) = -i * omega_dag
         Algebraic derivation confirms:
             alpha3_dag * omega = alpha3_dag        (omega is right identity on S)
@@ -247,7 +253,7 @@ literature_gaps_found_2026_02_23:
         making this work in the 'obvious' way is finding outer automorphisms
         which act at the level of the representation, and not merely on the
         algebra." McRae identifies this as an OPEN PROBLEM, not a solution.
-        The COG use of the 4×4 H matrix for operator translation (N_τ = 14)
+        The COG use of the 4Ã—4 H matrix for operator translation (N_Ï„ = 14)
         remains valid; the generation-identification use is challenged.
 
 simulation_record_2026_02_23_goal_b:
@@ -309,3 +315,5 @@ next_action: |
      three-generation orbit topology as an open problem. A COG-specific
      mechanism using Fano non-associativity to distinguish muon from electron
      path lengths has not yet been found in the literature.
+
+

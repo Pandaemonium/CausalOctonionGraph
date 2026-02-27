@@ -17,6 +17,7 @@
 
 import CausalGraphTheory.KernelV2
 import CausalGraphTheory.Fano
+import Mathlib.Data.ZMod.Basic
 
 namespace UpdateRule
 
@@ -61,7 +62,7 @@ theorem edgeOp_unique (l₁ l₂ : FanoPoint) (h : l₁ ≠ l₂) :
     intro i; exact congr_fun (congrArg Octonion.c happ) i
   -- e_k * e_0 = e_k, so c[l₁+1] of result = 1 iff i = l₁+1
   -- Both results agree, so l₁+1 = l₂+1
-  fin_cases l₁ <;> fin_cases l₂ <;> simp_all (config := { decide := true }) [Fin.ext_iff]
+  fin_cases l₁ <;> fin_cases l₂ <;> simp_all (config := { decide := true })
 
 /-! ## Depth-ordered edge list -/
 
@@ -168,5 +169,60 @@ theorem update_deterministic (s1 s2 : NodeStateV2)
 theorem nextStateV2_preserves_colorLabel (s : NodeStateV2)
     (msgs : List (ComplexOctonion ℤ)) :
     (nextStateV2 s msgs).colorLabel = s.colorLabel := rfl
+
+/-! ## D4: Spawn predicate (RFC-028 D4 locked) -/
+
+/-- spawnPredicate u v: a pair of nodes spawns a child iff ALL of:
+    1. isEnergyExchangeLocked [u.psi, v.psi] = true  (D3 gate is open for the pair)
+    2. u.colorLabel ≠ v.colorLabel                    (distinct Fano lines)
+    3. u.tickCount = v.tickCount                      (synchronous tick)
+    RFC-028 D4 decision (locked in rfc/RFC-028-D4-D5.md). -/
+def spawnPredicate (u v : NodeStateV2) : Bool :=
+  isEnergyExchangeLocked [u.psi, v.psi] &&
+  (u.colorLabel != v.colorLabel) &&
+  (u.tickCount == v.tickCount)
+
+/-! ## D5: Observable projection (RFC-028 D5 locked) -/
+
+/-- piObs s: projects a NodeStateV2 onto the Fano color class (ZMod 7 scalar).
+    This is the minimal observable consistent with Fano symmetry.
+    RFC-028 D5 decision (locked in rfc/RFC-028-D4-D5.md). -/
+def piObs (s : NodeStateV2) : ZMod 7 :=
+  s.colorLabel.val
+
+/-! ## Theorem D4-1: spawnPredicate is symmetric -/
+
+/-- spawnPredicate_symm: spawn predicate is symmetric in u and v,
+    given that the energy-exchange gate is symmetric for the pair.
+    The energy conjunct isEnergyExchangeLocked [u.psi, v.psi] unfolds to
+    u.psi * v.psi ≠ 1, which is NOT equal to v.psi * u.psi ≠ 1 in general
+    (octonion multiplication is non-commutative). The hypothesis h_energy
+    encodes the physical assumption that the gate commutes for the given pair.
+    The remaining conjuncts are unconditionally symmetric:
+    - colorLabel ≠ is symmetric: ne_comm
+    - tickCount = is symmetric: eq_comm -/
+theorem spawnPredicate_symm (u v : NodeStateV2)
+    (h_energy : isEnergyExchangeLocked [u.psi, v.psi] =
+                isEnergyExchangeLocked [v.psi, u.psi]) :
+    spawnPredicate u v = spawnPredicate v u := by
+  simp only [spawnPredicate, Bool.and_assoc]
+  rw [h_energy]
+  congr 1
+  congr 1
+  · -- colorLabel: bne a b = bne b a for FanoPoint (Fin 7)
+    unfold bne; congr 1
+    rw [Bool.eq_iff_iff]; simp only [beq_iff_eq]; exact eq_comm
+  · -- tickCount: (u.tickCount == v.tickCount) = (v.tickCount == u.tickCount)
+    rw [Bool.eq_iff_iff]; simp only [beq_iff_eq]; exact eq_comm
+
+/-! ## Theorem D5-1: piObs lands in the valid Fano range -/
+
+/-- piObs_lt_seven: the observable projection always returns a value < 7.
+    Follows from s.colorLabel : Fin 7, so colorLabel.val < 7, and
+    ZMod.val_lt gives (s.colorLabel.val : ZMod 7).val < 7. -/
+theorem piObs_lt_seven (s : NodeStateV2) :
+    (piObs s).val < 7 := by
+  simp only [piObs]
+  exact ZMod.val_lt _
 
 end UpdateRule

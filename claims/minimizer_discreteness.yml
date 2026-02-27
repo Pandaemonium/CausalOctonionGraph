@@ -1,11 +1,17 @@
-id: CFS-002
+﻿id: CFS-002
 title: "Discrete minimizers and unique tick choice"
 statement: |
   Given a fixed initial microstate with predeclared parenthesization
   (RFC-002), each tick chooses a unique next local update by deterministic
   minimization over a finite candidate set. No exogenous information is
   introduced during evolution.
+
 status: stub
+pi_obs_profile: minimal
+pi_obs_profile_version: v1
+projection_sensitivity: unknown
+profile_contrast_run: ""
+equivalence_mode: none
 lean_file: ""
 lean_theorems: []
 python_test: ""
@@ -19,3 +25,5 @@ notes: |
   This captures the bridge between RFC-002 deterministic ordering and a
   CFS-style action-minimizer update rule on finite graphs.
 blocked_reason: ""
+
+

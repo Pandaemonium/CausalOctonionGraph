@@ -1,11 +1,17 @@
-id: GEN-001
+﻿id: GEN-001
 title: "Three Generations from Triality"
 statement: |
   The Spin(8) group admits a triality automorphism tau of order 3 that permutes
   the three 8-dimensional irreducible representations: Vector (V),
   Spinor+ (S+), and Spinor- (S-). These three representations correspond to
   three distinct generations of fermions in the graph model.
+
 status: stub
+pi_obs_profile: with_sector
+pi_obs_profile_version: v1
+projection_sensitivity: unknown
+profile_contrast_run: ""
+equivalence_mode: none
 lean_file: CausalGraphTheory/Spinors.lean
 lean_theorems:
   - CausalGraph.generationShift_order3
@@ -36,7 +42,7 @@ python_test: calc/test_triality.py
 depends_on:
   - OCT-001
 literature:
-  - "Baez (2002): The Octonions §4.3"
+  - "Baez (2002): The Octonions Â§4.3"
   - "Furey (2018): Three generations..."
 notes: |
   Crucial to show that V, S+, S- are chemically distinct in the graph (e.g.,
@@ -70,3 +76,5 @@ notes: |
 
   Full Spin(8)-representation-level mapping remains open.
 blocked_reason: ""
+
+

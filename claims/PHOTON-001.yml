@@ -1,42 +1,48 @@
-id: PHOTON-001
+﻿id: PHOTON-001
 title: "Photon masslessness and action quantization"
 statement: |
   In the Causal Octonion Graph, the photon has zero computational drag
   (V_photon = 0). This follows from three interlocked principles:
 
-  P1 — Action Quantization:
+  P1 â€” Action Quantization:
     Each e7 causal edge carries exactly one quantum of causal action:
-      ΔS = ℏ  (per e7 graph edge)
+      Î”S = â„  (per e7 graph edge)
     This is a local, per-edge property.
 
-  P2 — Colorless Orbit:
-    The photon operator L_{e7}, when applied to the vacuum ω, produces
+  P2 â€” Colorless Orbit:
+    The photon operator L_{e7}, when applied to the vacuum Ï‰, produces
     no color-sector excitations. The vacuum orbit
-      {2ω, -i·2ω, -2ω, i·2ω}
+      {2Ï‰, -iÂ·2Ï‰, -2Ï‰, iÂ·2Ï‰}
     has zero components at all color-sector indices {e1,...,e6}
     (Fano basis indices 1-6). The orbit stays entirely in the
     {e0, e7} = {scalar, vacuum-axis} subspace.
     Proved in Lean: vacuum_orbit_colorSector_zero.
 
-  P3 — Algebraic Masslessness:
-    The U(1)_EM charge operator Q = N/3 = (1/3)Σαᵢ†αᵢ commutes with
+  P3 â€” Algebraic Masslessness:
+    The U(1)_EM charge operator Q = N/3 = (1/3)Î£Î±áµ¢â€ Î±áµ¢ commutes with
     all SU(3)_c generators. The photon carries no color charge, creates
-    no octonionic non-associativity, and therefore forces no G₂ triality
+    no octonionic non-associativity, and therefore forces no Gâ‚‚ triality
     evaluation overhead. Hence V_photon = 0.
-    (Source: Furey 1603.04078; RFC-015 §6.)
+    (Source: Furey 1603.04078; RFC-015 Â§6.)
 
-  P4 — Energy Direction (partial):
+  P4 â€” Energy Direction (partial):
     Photon energy is not a local property of the e7 edge. It is the
     orbital transition energy of the emitting/absorbing particle:
       E_photon = |E_upper_level - E_lower_level|
     At the level of vertex-cost counting:
-      E_photon ~ C × V_particle × ℏ_unit / r²
-    so E_mu_photon / E_e_photon ~ (4×15)/(4×1) = 15.
+      E_photon ~ C Ã— V_particle Ã— â„_unit / rÂ²
+    so E_mu_photon / E_e_photon ~ (4Ã—15)/(4Ã—1) = 15.
     This is the correct direction (muon photons > electron photons),
-    but not yet the full ~207× factor. The coefficient requires the
+    but not yet the full ~207Ã— factor. The coefficient requires the
     COG orbital energy level derivation (deferred).
 
+
 status: partial
+pi_obs_profile: minimal
+pi_obs_profile_version: v1
+projection_sensitivity: unknown
+profile_contrast_run: ""
+equivalence_mode: none
 lean_file: CausalGraphTheory/PhotonMasslessness.lean
 lean_theorems:
   - CausalGraph.omegaDoubled_colorSector_zero        # proved (Codex, 2026-02-24)
@@ -56,7 +62,7 @@ literature:
   - "Sorkin (2009): Light, Links and Causal Sets, arXiv:0910.0673 (photon energy on causal links)"
   - "RFC-015: Photon Energy in the Causal Octonion Graph"
 notes: |
-  Lean proof status (2026-02-24): COMPLETE — lake build passes.
+  Lean proof status (2026-02-24): COMPLETE â€” lake build passes.
     Three theorems proved in CausalGraphTheory/PhotonMasslessness.lean.
     Proof strategy (Codex, 2026-02-24):
       colorFin helper: `private def colorFin (i : Fin 6) : Fin 8 := Fin.mk (i.val + 1) (by omega)`
@@ -64,7 +70,7 @@ notes: |
         `fin_cases i <;> simp [colorFin, omegaDoubled, WittBasis.vacuumDoubled] <;> rfl`
       T2 (negIOmegaDoubled_colorSector_zero):
         `fin_cases i <;> simp [colorFin, negIOmegaDoubled]`
-      T3 (vacuum_orbit_colorSector_zero): uses `refine ⟨...⟩`, rewrites via
+      T3 (vacuum_orbit_colorSector_zero): uses `refine âŸ¨...âŸ©`, rewrites via
         `e7Left_on_omegaDoubled` and `e7_left_twice_neg`, and `change` tactic to
         make negation explicit before simp: `change -(x.c (colorFin i)) = 0`.
     Key lessons:
@@ -76,18 +82,18 @@ notes: |
   Physical meaning:
     V_photon = 0 because the vacuum orbit lives in the {e0,e7} subspace.
     This subspace is closed under L_{e7} (proved: e7Left_on_omegaDoubled)
-    and is algebraically associative (ℂ·1 ⊕ ℂ·ie7 with commutative multiplication).
-    No G₂ triality path ever exits this subspace → zero overhead ticks.
+    and is algebraically associative (â„‚Â·1 âŠ• â„‚Â·ie7 with commutative multiplication).
+    No Gâ‚‚ triality path ever exits this subspace â†’ zero overhead ticks.
 
   Direction problem (corrected from prior analysis):
-    The formula E = ΔS/Δt with Δt = vertex tick cost predicts
-    E_mu < E_e (15× smaller). This is WRONG — muonic hydrogen
-    transitions are ~200× MORE energetic than ordinary hydrogen.
-    Correct: E_photon ∝ V_particle (proportional, not inverse).
+    The formula E = Î”S/Î”t with Î”t = vertex tick cost predicts
+    E_mu < E_e (15Ã— smaller). This is WRONG â€” muonic hydrogen
+    transitions are ~200Ã— MORE energetic than ordinary hydrogen.
+    Correct: E_photon âˆ V_particle (proportional, not inverse).
     Ratio: E_mu/E_e ~ 15 from vertex costs (right direction, not full magnitude).
 
   Gap:
-    V_mu/V_e = 15 but m_mu/m_e = 207 (gap factor ~13.8×).
+    V_mu/V_e = 15 but m_mu/m_e = 207 (gap factor ~13.8Ã—).
     This gap is identical to the open LEPTON-001 gap.
     Photon energy coefficient and muon mass are the same open problem.
 
@@ -101,5 +107,7 @@ blocked_reason: |
   2. PHYSICS BLOCKER (long-term, still open): Full photon energy formula
      (absolute energies, spectral lines) requires the COG orbital energy level
      derivation. P1 (action quantization), P3 (U(1)_EM/SU(3)_c commutativity
-     in Lean), and P4 (energy direction coefficient ~207×) all remain open.
+     in Lean), and P4 (energy direction coefficient ~207Ã—) all remain open.
      Deferred until after mass-ratio proof program (LEPTON-001, MU-001).
+
+

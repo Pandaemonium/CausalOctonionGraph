@@ -1,4 +1,4 @@
-id: GEN-002
+﻿id: GEN-002
 title: "Three Generations from Sedenion S3 Automorphism"
 statement: |
   The Cayley-Dickson algebra of sedenions S (16-dimensional) admits a finite
@@ -10,8 +10,14 @@ statement: |
   Formally: S = S0 + S1 + S2 + S3 (four octonion subalgebras).
   One generation from C@O1; S3-automorphism sigma generates C@O2, C@O3.
   Result: exactly 3 generations, no duplication of gauge bosons.
+
 status: partial  # S3 action on unordered Witt-pair labels is proved inside vacuum stabilizer; sedenion-level generation lift still open
-python_test: "calc/test_sedenion_gen.py::TestThreeGenerations [xfail — GEN-002 open]"
+pi_obs_profile: with_sector
+pi_obs_profile_version: v1
+projection_sensitivity: unknown
+profile_contrast_run: ""
+equivalence_mode: none
+python_test: "calc/test_sedenion_gen.py::TestThreeGenerations [xfail â€” GEN-002 open]"
 lean_file: CausalGraphTheory/WittPairSymmetry.lean
 lean_theorems:
   - CausalGraph.wittPair_cyclic_perm_is_fano_aut        # Z3 orientation-preserving 3-cycle IS Aut(Fano)
@@ -54,7 +60,7 @@ notes: |
     3. The S3 automorphism of order 3 maps (O1, O2, O3) -> (O2, O3, O1),
        generating two additional generations.
     4. All three generations transform under ONE copy of SU(3)_C
-       (no three copies of gluons — a major improvement).
+       (no three copies of gluons â€” a major improvement).
 
   COG RELEVANCE:
     COG currently uses C@O only (8-dimensional complex octonionic space).
@@ -64,10 +70,10 @@ notes: |
 
     This explains why COG's single-octonionic update rule cannot generate
     three distinct generations in-algebra: the generational discriminant
-    (S3 ⊂ Aut(S) \ Aut(O)) is structurally above the octonionic layer.
+    (S3 âŠ‚ Aut(S) \ Aut(O)) is structurally above the octonionic layer.
 
   CONNECTION TO KOIDE-001:
-    The S3 group has Z3 as a normal subgroup (S3 = Z3 ⋊ Z2).
+    The S3 group has Z3 as a normal subgroup (S3 = Z3 â‹Š Z2).
     This Z3 is the symmetry needed for the Brannen parametrization
     f_k = A + B*cos(phi + 2*pi*k/3) in claims/koide_exactness.yml.
     If the S3 automorphism acts on the lepton mass eigenvalues as Z3,
@@ -79,7 +85,7 @@ notes: |
     - The sedenions are neither division algebras nor alternative.
     - The non-alternativity of S may break COG's Alternativity Theorem
       (which is the origin of discrete ticking from the non-associativity of O).
-    - McRae §5 obstruction (representation-level automorphisms vs algebra-
+    - McRae Â§5 obstruction (representation-level automorphisms vs algebra-
       level automorphisms) may apply here too.
 
   OPEN QUESTIONS:
@@ -143,7 +149,7 @@ blocked_reason: |
 
   NUMERICAL DIAGNOSIS (2026-02-26, test run in sedenion_gen.py):
     - The Cayley-Dickson 4-doubling sedenion algebra has exactly 35 unordered
-      Witt triples (i.e. triples {i,j,k} with e_i*e_j = ±e_k, all distinct and >0).
+      Witt triples (i.e. triples {i,j,k} with e_i*e_j = Â±e_k, all distinct and >0).
     - The arithmetic partition G0={1..5}, G1={6..10}, G2={11..15} is NOT algebraically
       closed: applying S3 permutations on these groups does NOT map Witt triples to
       Witt triples (cross-products of lower and upper halves break the partition).
@@ -154,3 +160,5 @@ blocked_reason: |
   REQUIRED: Either identify the algebraically natural 3-partition of the 15 sedenion
   imaginaries that is preserved by the Witt-triple structure, or re-define the S3 action
   in terms of Gresnigt's 4 octonion subalgebras of S rather than arithmetic groups.
+
+

@@ -1,4 +1,4 @@
-id: RACE-001
+﻿id: RACE-001
 title: "Discrete Lorentz Covariance (Confluence / No Race Condition)"
 statement: |
   For any two causal graphs G1 and G2 whose edge lists are permutations of each
@@ -16,7 +16,13 @@ statement: |
   This is the COG formalization of Lorentz covariance: causal event
   classification is a physical invariant, not an artefact of the observer's
   representational ordering.
+
 status: proved
+pi_obs_profile: minimal
+pi_obs_profile_version: v1
+projection_sensitivity: unknown
+profile_contrast_run: ""
+equivalence_mode: none
 lean_file: CausalGraphTheory/RaceCondition.lean
 lean_theorems:
   - RaceCondition.confluence
@@ -29,7 +35,7 @@ depends_on:
   - TICK-001
   - ALG-002
 literature:
-  - "RFC-001 §3.1"
+  - "RFC-001 Â§3.1"
   - "rfc/LITERATURE_INSIGHTS.md section 2 (RaceCondition.lean priority note)"
 notes: |
   Key algebraic chain proved:
@@ -50,3 +56,5 @@ notes: |
   tick_nonassoc_example delegates to Octonion.non_associative_witness (already
   proved by native_decide in OctonionNonAssoc.lean).
 blocked_reason: ""
+
+

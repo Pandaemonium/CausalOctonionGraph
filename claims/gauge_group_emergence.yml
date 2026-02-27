@@ -1,4 +1,4 @@
-id: GAUGE-001-LEGACY
+﻿id: GAUGE-001-LEGACY
 title: "Emergence of Standard Model Gauge Group G_SM (Legacy Statement)"
 statement: |
   [SUPERSEDED] Legacy broad gauge-group statement.
@@ -6,7 +6,13 @@ statement: |
   the GAUGE-001 claim ID. In the current encoding, the finite vacuum stabilizer
   identified in Lean is S4 (order 24), not an SL(2,3)-labeled object nor a direct
   proof of continuous SU(3) isomorphism at the kernel level.
+
 status: superseded
+pi_obs_profile: with_sector
+pi_obs_profile_version: v1
+projection_sensitivity: unknown
+profile_contrast_run: ""
+equivalence_mode: none
 lean_file: CausalGraphTheory/GaugeGroup.lean
 lean_theorems:
   - stabilizer_of_imaginary_unit_is_su3
@@ -34,3 +40,5 @@ notes: |
   quaternion subalgebra of the weak sector.
 blocked_reason: |
   Superseded by the reconciled GAUGE-001 claim and RFC-017.
+
+

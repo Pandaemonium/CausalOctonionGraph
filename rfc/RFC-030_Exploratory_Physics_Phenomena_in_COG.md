@@ -1,4 +1,4 @@
-# RFC-029: Exploratory Broad Physics Phenomena in COG
+# RFC-030: Exploratory Broad Physics Phenomena in COG
 
 **Status:** Active - Exploratory Draft (2026-02-26)  
 **Module:** `COG.Core.Phenomenology`  

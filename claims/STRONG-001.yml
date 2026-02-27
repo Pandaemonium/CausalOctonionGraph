@@ -1,0 +1,14 @@
+﻿status: partial
+name: STRONG-001
+title: Strong Coupling Constant Î±_s
+description: The leading-order estimate for the strong coupling constant is Î±_s_proxy = 1/7.
+
+pi_obs_profile: with_sector
+pi_obs_profile_version: v1
+projection_sensitivity: unknown
+profile_contrast_run: ""
+equivalence_mode: none
+reason: The physical value of Î±_s at the Z pole (Î±_s(M_Z) â‰ˆ 0.118) differs from the COG proxy (1/7 â‰ˆ 0.143) by 20%, requiring correction mechanisms to reconcile theory with observation.
+proof: CausalGraphTheory/GaugeObservables.lean
+version: 1.0
+

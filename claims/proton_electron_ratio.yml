@@ -1,7 +1,7 @@
 id: MU-001
 title: "Proton-to-electron mass ratio from octonionic tri-state cycle overhead"
 statement: |
-  The proton-to-electron mass ratio mu ≈ 1836.152673 equals, in the
+  The proton-to-electron mass ratio mu â‰ˆ 1836.152673 equals, in the
   COG framework, the ratio of the forced Tick evaluation overhead of
   maintaining a stable color-singlet tri-state cycle (proton motif) to
   that of a single propagating lepton state (electron motif):
@@ -11,7 +11,13 @@ statement: |
   SU(3) Fano-cycle edges, requiring sustained non-associative bookkeeping
   (the Alternativity Trigger) that the electron motif, cycling through
   an associative subalgebra, does not.
-status: revised_pending
+
+status: active_hypothesis
+pi_obs_profile: minimal
+pi_obs_profile_version: v1
+projection_sensitivity: sensitive
+profile_contrast_run: ""
+equivalence_mode: none
 lean_file: CausalGraphTheory/Constants.lean
 lean_theorems:
   - CausalGraph.proton_motif_def
@@ -23,22 +29,22 @@ depends_on:
   - GAUGE-001
   - GEN-001
 literature:
-  - "CODATA 2022: mu = m_p/m_e = 1836.15267343 ± 0.00000011"
-  - "Barrow & Tipler (1986): Anthropic Cosmological Principle §5.1"
+  - "CODATA 2022: mu = m_p/m_e = 1836.15267343 Â± 0.00000011"
+  - "Barrow & Tipler (1986): Anthropic Cosmological Principle Â§5.1"
   - "Duff (2002): Comment on time-variation of fundamental constants, arXiv:hep-th/0208093"
   - "Furey (2018): Three generations, two unbroken gauge symmetries, arXiv:1910.08395"
 notes: |
   EXPERIMENTAL VALUE (CODATA 2022):
-    mu = m_p / m_e = 1836.15267343 ± 0.00000011
+    mu = m_p / m_e = 1836.15267343 Â± 0.00000011
 
   KNOWN NUMERICAL COINCIDENCES (not explanations):
-    6*pi^5       ≈ 1836.1181     (error: 0.002%)  — Armand Wyler, 1969
-    6*pi^5 + 3/2 ≈ 1837.62       (no improvement)
-    (3/2)*(1/alpha)*ln(1/alpha) ≈ 1836.07  (Borsanyi et al., numerical)
+    6*pi^5       â‰ˆ 1836.1181     (error: 0.002%)  â€” Armand Wyler, 1969
+    6*pi^5 + 3/2 â‰ˆ 1837.62       (no improvement)
+    (3/2)*(1/alpha)*ln(1/alpha) â‰ˆ 1836.07  (Borsanyi et al., numerical)
 
   COG INTERPRETATION:
     Electron motif: 1 node cycling through the associative quaternion
-    subalgebra H ⊂ O.  No Alternativity Trigger fires; tick overhead = 1.
+    subalgebra H âŠ‚ O.  No Alternativity Trigger fires; tick overhead = 1.
 
     Proton motif: 3 nodes (u, u, d quarks) exchanging gluon edges on the
     3 Witt color-plane lines.  Each exchange may trigger the Alternativity
@@ -47,49 +53,49 @@ notes: |
     The 1836 overhead is hypothesized to arise from:
       - 3 color charge transfers per baryon number cycle
       - Each transfer traverses O(168) Fano automorphisms
-      - Effective overhead ≈ (number of bookkeeping steps per cycle)
+      - Effective overhead â‰ˆ (number of bookkeeping steps per cycle)
 
   CRITICAL REFRAMING (2026-02-22, Gemini feedback):
     1836 IS NOT A MAGIC INTEGER. Do not prime-factorize it.
-    The physical ratio is ≈ 1836.15267, an irrational number.
+    The physical ratio is â‰ˆ 1836.15267, an irrational number.
 
     In the COG framework, MASS IS GATE DENSITY (thermodynamic limit):
       - Electron mass ~ sparse density of P? (propagation) gates
         (the L1 associative cycle fires 1 gate per tick, 3 ticks/cycle).
-      - Proton mass ~ dense density of S?/S₂ (strong) gates
+      - Proton mass ~ dense density of S?/Sâ‚‚ (strong) gates
         (the color-singlet cycle fires many non-associative gates with
         cost 2 each, over a much longer causal chain).
-    The ratio mu ≈ 1836.15 emerges as the thermodynamic LIMIT of the
+    The ratio mu â‰ˆ 1836.15 emerges as the thermodynamic LIMIT of the
     ratio of gate frequencies as the simulation runs long.
 
-  GATE DENSITY SIMULATION (revised approach, RFC-009 §7b.10):
+  GATE DENSITY SIMULATION (revised approach, RFC-009 Â§7b.10):
     1. Implement electron motif with sign tracking: track (OctIdx, sign).
        Gate density = 1 gate/tick = 1.0 (associative, cost 1 each hop).
-    2. Implement proton motif with cyclic exchange C1→C2→C3→C1 and sign
-       tracking. Count total S?/S₂ gate firings over N steps.
+    2. Implement proton motif with cyclic exchange C1â†’C2â†’C3â†’C1 and sign
+       tracking. Count total S?/Sâ‚‚ gate firings over N steps.
     3. Run N steps. Compute gate_density(proton) / gate_density(electron).
     4. Let the ratio CONVERGE to a thermodynamic limit. Do NOT stop at
        first recurrence. Run until the ratio stabilizes.
 
-  SIGN TRACKING — ARCHITECTURAL REQUIREMENT:
-    DO NOT collapse +e₇ and −e₇. The signs encode chirality. The node
-    state must be (OctIdx, sign) where sign ∈ {+1, −1}. This is required
+  SIGN TRACKING â€” ARCHITECTURAL REQUIREMENT:
+    DO NOT collapse +eâ‚‡ and âˆ’eâ‚‡. The signs encode chirality. The node
+    state must be (OctIdx, sign) where sign âˆˆ {+1, âˆ’1}. This is required
     to correctly distinguish attractive from repulsive next-step interactions.
 
-  GATE 2 SIMULATION RESULT (2026-02-26, RFC-009 §7b.10):
+  GATE 2 SIMULATION RESULT (2026-02-26, RFC-009 Â§7b.10):
     Script: calc/mass_drag_v2.py
     Steps: N = 10,000
     Proton motif  [u1=e1(0), u2=e2(1), d1=e4(3)]:
       P_nonassoc = 10000, P_density = 1.000000 (every tick fires a gate).
-    Electron motif [c1=e1(0), c2=e2(1), c3=e3(2), quaternion H⊂O]:
+    Electron motif [c1=e1(0), c2=e2(1), c3=e3(2), quaternion HâŠ‚O]:
       E_nonassoc = 0, E_density = 0.000000 (associative subalgebra).
-    Outcome: DEGENERATE (associative baseline — E_density = 0).
+    Outcome: DEGENERATE (associative baseline â€” E_density = 0).
 
     Physical interpretation:
       The degenerate result CONFIRMS the COG lepton-associativity hypothesis
-      (RFC-009 §6.3): leptons do not carry non-associative overhead, baryons do.
+      (RFC-009 Â§6.3): leptons do not carry non-associative overhead, baryons do.
       The proton-to-electron mass ratio cannot be expressed as a simple
-      gate-density ratio when E_density=0. The next step (RFC-009 §7b.11)
+      gate-density ratio when E_density=0. The next step (RFC-009 Â§7b.11)
       is to define the electron mass via tick-overhead in the associative
       limit (cost per hop = 1) vs. the proton's non-associative cost (cost > 1).
 
@@ -97,9 +103,10 @@ simulation_records:
   - date: "2026-02-26"
     script: "calc/mass_drag_v2.py"
     steps: 10000
-    proton_init: "[e1(0), e2(1), e4(3)] — non-associative triad"
-    electron_init: "[e1(0), e2(1), e3(2)] — quaternion H⊂O"
+    proton_init: "[e1(0), e2(1), e4(3)] â€” non-associative triad"
+    electron_init: "[e1(0), e2(1), e3(2)] â€” quaternion HâŠ‚O"
     p_density: 1.000000
     e_density: 0.000000
     ratio: null
     outcome: "Degenerate (associative baseline)"
+

@@ -1,4 +1,4 @@
-id: VAC-001
+﻿id: VAC-001
 title: "Stability of the Sterile Vacuum"
 statement: |
   [SUPERSEDED] Legacy claim from the label-based kernel.
@@ -6,7 +6,13 @@ statement: |
   as the zero state under operator action. The current model treats vacuum as
   the algebraic projector orbit of omega under e7 action, not as a static
   metadata label fixed point.
+
 status: superseded
+pi_obs_profile: minimal
+pi_obs_profile_version: v1
+projection_sensitivity: unknown
+profile_contrast_run: ""
+equivalence_mode: none
 lean_file: CausalGraphTheory/Vacuum.lean
 lean_theorems:
   - CausalGraph.vacuum_is_stable
@@ -51,3 +57,5 @@ blocked_reason: |
   - rfc/RFC-013_Algebraic_Vacuum_and_Causal_Spawning.md
   - rfc/RFC-018_Time_as_Graph_Depth_and_Interaction_Clock.md
   - rfc/RFC-019_e7_Temporal_Axis_Vacuum_Photon_Duality.md
+
+

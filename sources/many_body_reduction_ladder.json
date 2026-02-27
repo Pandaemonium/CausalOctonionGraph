@@ -1,0 +1,359 @@
+{
+  "replay_hash": "865f73a0e4180918d48eb0ebe5eec89bfe3f889a3deb01ac9b5727a81c1e8ae8",
+  "rfc": "RFC-053",
+  "scenarios": [
+    {
+      "divergence_tick": null,
+      "eps": 0,
+      "error_max": 0,
+      "error_mean": 0.0,
+      "horizon": 8,
+      "pair_ids": [
+        "a",
+        "b"
+      ],
+      "reduction_mode": "exact",
+      "scenario": "N2_baseline",
+      "spawn_affected": false,
+      "trace": [
+        {
+          "channel_conditioned": "repulsive",
+          "channel_direct": "repulsive",
+          "delta_bg": 0,
+          "error_abs": 0,
+          "score_conditioned": 1,
+          "score_direct": 1,
+          "tick": 0
+        },
+        {
+          "channel_conditioned": "repulsive",
+          "channel_direct": "repulsive",
+          "delta_bg": 0,
+          "error_abs": 0,
+          "score_conditioned": 1,
+          "score_direct": 1,
+          "tick": 1
+        },
+        {
+          "channel_conditioned": "repulsive",
+          "channel_direct": "repulsive",
+          "delta_bg": 0,
+          "error_abs": 0,
+          "score_conditioned": 1,
+          "score_direct": 1,
+          "tick": 2
+        },
+        {
+          "channel_conditioned": "repulsive",
+          "channel_direct": "repulsive",
+          "delta_bg": 0,
+          "error_abs": 0,
+          "score_conditioned": 1,
+          "score_direct": 1,
+          "tick": 3
+        },
+        {
+          "channel_conditioned": "repulsive",
+          "channel_direct": "repulsive",
+          "delta_bg": 0,
+          "error_abs": 0,
+          "score_conditioned": 1,
+          "score_direct": 1,
+          "tick": 4
+        },
+        {
+          "channel_conditioned": "repulsive",
+          "channel_direct": "repulsive",
+          "delta_bg": 0,
+          "error_abs": 0,
+          "score_conditioned": 1,
+          "score_direct": 1,
+          "tick": 5
+        },
+        {
+          "channel_conditioned": "repulsive",
+          "channel_direct": "repulsive",
+          "delta_bg": 0,
+          "error_abs": 0,
+          "score_conditioned": 1,
+          "score_direct": 1,
+          "tick": 6
+        },
+        {
+          "channel_conditioned": "repulsive",
+          "channel_direct": "repulsive",
+          "delta_bg": 0,
+          "error_abs": 0,
+          "score_conditioned": 1,
+          "score_direct": 1,
+          "tick": 7
+        }
+      ]
+    },
+    {
+      "divergence_tick": null,
+      "eps": 0,
+      "error_max": 0,
+      "error_mean": 0.0,
+      "horizon": 8,
+      "pair_ids": [
+        "a",
+        "b"
+      ],
+      "reduction_mode": "exact",
+      "scenario": "N3_inert_spectator",
+      "spawn_affected": false,
+      "trace": [
+        {
+          "channel_conditioned": "repulsive",
+          "channel_direct": "repulsive",
+          "delta_bg": 0,
+          "error_abs": 0,
+          "score_conditioned": 1,
+          "score_direct": 1,
+          "tick": 0
+        },
+        {
+          "channel_conditioned": "repulsive",
+          "channel_direct": "repulsive",
+          "delta_bg": 0,
+          "error_abs": 0,
+          "score_conditioned": 1,
+          "score_direct": 1,
+          "tick": 1
+        },
+        {
+          "channel_conditioned": "repulsive",
+          "channel_direct": "repulsive",
+          "delta_bg": 0,
+          "error_abs": 0,
+          "score_conditioned": 1,
+          "score_direct": 1,
+          "tick": 2
+        },
+        {
+          "channel_conditioned": "repulsive",
+          "channel_direct": "repulsive",
+          "delta_bg": 0,
+          "error_abs": 0,
+          "score_conditioned": 1,
+          "score_direct": 1,
+          "tick": 3
+        },
+        {
+          "channel_conditioned": "repulsive",
+          "channel_direct": "repulsive",
+          "delta_bg": 0,
+          "error_abs": 0,
+          "score_conditioned": 1,
+          "score_direct": 1,
+          "tick": 4
+        },
+        {
+          "channel_conditioned": "repulsive",
+          "channel_direct": "repulsive",
+          "delta_bg": 0,
+          "error_abs": 0,
+          "score_conditioned": 1,
+          "score_direct": 1,
+          "tick": 5
+        },
+        {
+          "channel_conditioned": "repulsive",
+          "channel_direct": "repulsive",
+          "delta_bg": 0,
+          "error_abs": 0,
+          "score_conditioned": 1,
+          "score_direct": 1,
+          "tick": 6
+        },
+        {
+          "channel_conditioned": "repulsive",
+          "channel_direct": "repulsive",
+          "delta_bg": 0,
+          "error_abs": 0,
+          "score_conditioned": 1,
+          "score_direct": 1,
+          "tick": 7
+        }
+      ]
+    },
+    {
+      "divergence_tick": 0,
+      "eps": 0,
+      "error_max": 1,
+      "error_mean": 1.0,
+      "horizon": 8,
+      "pair_ids": [
+        "a",
+        "b"
+      ],
+      "reduction_mode": "approx",
+      "scenario": "N3_active_spectator",
+      "spawn_affected": false,
+      "trace": [
+        {
+          "channel_conditioned": "neutral",
+          "channel_direct": "repulsive",
+          "delta_bg": -1,
+          "error_abs": 1,
+          "score_conditioned": 0,
+          "score_direct": 1,
+          "tick": 0
+        },
+        {
+          "channel_conditioned": "neutral",
+          "channel_direct": "repulsive",
+          "delta_bg": -1,
+          "error_abs": 1,
+          "score_conditioned": 0,
+          "score_direct": 1,
+          "tick": 1
+        },
+        {
+          "channel_conditioned": "neutral",
+          "channel_direct": "repulsive",
+          "delta_bg": -1,
+          "error_abs": 1,
+          "score_conditioned": 0,
+          "score_direct": 1,
+          "tick": 2
+        },
+        {
+          "channel_conditioned": "neutral",
+          "channel_direct": "repulsive",
+          "delta_bg": -1,
+          "error_abs": 1,
+          "score_conditioned": 0,
+          "score_direct": 1,
+          "tick": 3
+        },
+        {
+          "channel_conditioned": "neutral",
+          "channel_direct": "repulsive",
+          "delta_bg": -1,
+          "error_abs": 1,
+          "score_conditioned": 0,
+          "score_direct": 1,
+          "tick": 4
+        },
+        {
+          "channel_conditioned": "neutral",
+          "channel_direct": "repulsive",
+          "delta_bg": -1,
+          "error_abs": 1,
+          "score_conditioned": 0,
+          "score_direct": 1,
+          "tick": 5
+        },
+        {
+          "channel_conditioned": "neutral",
+          "channel_direct": "repulsive",
+          "delta_bg": -1,
+          "error_abs": 1,
+          "score_conditioned": 0,
+          "score_direct": 1,
+          "tick": 6
+        },
+        {
+          "channel_conditioned": "neutral",
+          "channel_direct": "repulsive",
+          "delta_bg": -1,
+          "error_abs": 1,
+          "score_conditioned": 0,
+          "score_direct": 1,
+          "tick": 7
+        }
+      ]
+    },
+    {
+      "divergence_tick": 0,
+      "eps": 0,
+      "error_max": 2,
+      "error_mean": 2.0,
+      "horizon": 8,
+      "pair_ids": [
+        "a",
+        "b"
+      ],
+      "reduction_mode": "approx",
+      "scenario": "N4_mixed_background",
+      "spawn_affected": false,
+      "trace": [
+        {
+          "channel_conditioned": "attractive",
+          "channel_direct": "repulsive",
+          "delta_bg": -2,
+          "error_abs": 2,
+          "score_conditioned": -1,
+          "score_direct": 1,
+          "tick": 0
+        },
+        {
+          "channel_conditioned": "attractive",
+          "channel_direct": "repulsive",
+          "delta_bg": -2,
+          "error_abs": 2,
+          "score_conditioned": -1,
+          "score_direct": 1,
+          "tick": 1
+        },
+        {
+          "channel_conditioned": "attractive",
+          "channel_direct": "repulsive",
+          "delta_bg": -2,
+          "error_abs": 2,
+          "score_conditioned": -1,
+          "score_direct": 1,
+          "tick": 2
+        },
+        {
+          "channel_conditioned": "attractive",
+          "channel_direct": "repulsive",
+          "delta_bg": -2,
+          "error_abs": 2,
+          "score_conditioned": -1,
+          "score_direct": 1,
+          "tick": 3
+        },
+        {
+          "channel_conditioned": "attractive",
+          "channel_direct": "repulsive",
+          "delta_bg": -2,
+          "error_abs": 2,
+          "score_conditioned": -1,
+          "score_direct": 1,
+          "tick": 4
+        },
+        {
+          "channel_conditioned": "attractive",
+          "channel_direct": "repulsive",
+          "delta_bg": -2,
+          "error_abs": 2,
+          "score_conditioned": -1,
+          "score_direct": 1,
+          "tick": 5
+        },
+        {
+          "channel_conditioned": "attractive",
+          "channel_direct": "repulsive",
+          "delta_bg": -2,
+          "error_abs": 2,
+          "score_conditioned": -1,
+          "score_direct": 1,
+          "tick": 6
+        },
+        {
+          "channel_conditioned": "attractive",
+          "channel_direct": "repulsive",
+          "delta_bg": -2,
+          "error_abs": 2,
+          "score_conditioned": -1,
+          "score_direct": 1,
+          "tick": 7
+        }
+      ]
+    }
+  ],
+  "scheduler_mode": "snapshot_sync_v1"
+}

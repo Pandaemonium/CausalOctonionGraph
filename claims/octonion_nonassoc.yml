@@ -1,9 +1,15 @@
-id: ALG-003
+﻿id: ALG-003
 title: "Non-associativity witness count"
 statement: |
   Of the 35 unordered triples of imaginary units, exactly 28 are non-associative.
   The 7 associative triples correspond to the Fano lines.
+
 status: proved
+pi_obs_profile: minimal
+pi_obs_profile_version: v1
+projection_sensitivity: unknown
+profile_contrast_run: ""
+equivalence_mode: none
 lean_file: CausalGraphTheory/SubalgebraDetect.lean
 lean_theorems:
   - batchable_triple_count
@@ -11,6 +17,8 @@ python_test: calc/test_subalgebra.py
 depends_on:
   - ALG-002
 literature:
-  - "RFC-001 §3"
+  - "RFC-001 Â§3"
 notes: "Verified by exhaustive enumeration in Lean."
 blocked_reason: ""
+
+

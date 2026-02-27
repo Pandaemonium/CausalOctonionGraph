@@ -1,0 +1,70 @@
+{
+  "avenue": "A7",
+  "best_by_abs_gap": {
+    "avenue": "A7",
+    "g_sq": 3.0,
+    "g_sq_source": "weak_card",
+    "gap_from_target": 0.01877999999999999,
+    "gprime_sq": 1.0,
+    "gprime_sq_source": "exclusive_u1_card",
+    "observables_checksum": "b608c67c789a8030ead484e44ddd37c53885940ea54ff399496741065515b839",
+    "policy_checksum": "ad4078d33886e2fab36950a000a2bbbbf50f856ff1e4bf4383a0a312dfb3ae98",
+    "policy_description": "Exclusive-U(1) coupling proxy: g'^2=exclusive_u1_card and g^2=weak_card => 1/4.",
+    "policy_id": "a7_exclusive_u1_quarter",
+    "rfc": "RFC-037",
+    "sin2_theta_w_obs": 0.25,
+    "target_scale": "M_Z",
+    "target_sin2_theta_w": 0.23122
+  },
+  "rfc": "RFC-037",
+  "rows": [
+    {
+      "avenue": "A7",
+      "g_sq": 2.0,
+      "g_sq_source": "ew_minus_u1_card",
+      "gap_from_target": 0.26878,
+      "gprime_sq": 2.0,
+      "gprime_sq_source": "u1_card",
+      "observables_checksum": "b608c67c789a8030ead484e44ddd37c53885940ea54ff399496741065515b839",
+      "policy_checksum": "084c6c5d88521e6c251bf70a126f5638318504f783ea68b18bd955f0274b9294",
+      "policy_description": "Legacy baseline proxy: g'^2=u1_card and g^2=(ew-u1)_card => 1/2.",
+      "policy_id": "a7_baseline_half",
+      "rfc": "RFC-037",
+      "sin2_theta_w_obs": 0.5,
+      "target_scale": "M_Z",
+      "target_sin2_theta_w": 0.23122
+    },
+    {
+      "avenue": "A7",
+      "g_sq": 3.0,
+      "g_sq_source": "weak_card",
+      "gap_from_target": 0.01877999999999999,
+      "gprime_sq": 1.0,
+      "gprime_sq_source": "exclusive_u1_card",
+      "observables_checksum": "b608c67c789a8030ead484e44ddd37c53885940ea54ff399496741065515b839",
+      "policy_checksum": "ad4078d33886e2fab36950a000a2bbbbf50f856ff1e4bf4383a0a312dfb3ae98",
+      "policy_description": "Exclusive-U(1) coupling proxy: g'^2=exclusive_u1_card and g^2=weak_card => 1/4.",
+      "policy_id": "a7_exclusive_u1_quarter",
+      "rfc": "RFC-037",
+      "sin2_theta_w_obs": 0.25,
+      "target_scale": "M_Z",
+      "target_sin2_theta_w": 0.23122
+    },
+    {
+      "avenue": "A7",
+      "g_sq": 4.0,
+      "g_sq_source": "ew_card",
+      "gap_from_target": 0.1021133333333333,
+      "gprime_sq": 2.0,
+      "gprime_sq_source": "u1_card",
+      "observables_checksum": "b608c67c789a8030ead484e44ddd37c53885940ea54ff399496741065515b839",
+      "policy_checksum": "a2f3bcb132ba727c18754d71d5582f926e84ba37767478436bc83d28ed50be7a",
+      "policy_description": "Alternative frozen proxy: g'^2=u1_card and g^2=ew_card => 1/3.",
+      "policy_id": "a7_overlap_shift_third",
+      "rfc": "RFC-037",
+      "sin2_theta_w_obs": 0.3333333333333333,
+      "target_scale": "M_Z",
+      "target_sin2_theta_w": 0.23122
+    }
+  ]
+}

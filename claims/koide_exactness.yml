@@ -1,10 +1,16 @@
-id: KOIDE-001
+﻿id: KOIDE-001
 title: "Koide Formula from Integer Constraints"
 statement: |
   The Koide ratio Q = (sum m_i) / (sum sqrt(m_i))^2 equals exactly 2/3
   because the allowed tick frequencies (m_i) are constrained by the
   diophantine equations governing the Fano plane's cycle structure.
+
 status: partial  # brannen_b_squared proved 2026-02-22; Z3 ansatz from COG still blocked
+pi_obs_profile: minimal
+pi_obs_profile_version: v1
+projection_sensitivity: unknown
+profile_contrast_run: ""
+equivalence_mode: none
 lean_file: CausalGraphTheory/Koide.lean
 lean_theorems:
   - koide_algebraic_iff
@@ -22,16 +28,16 @@ depends_on:
 literature:
   - "Koide (1982): A new formula for the masses of charged leptons"
   - "Brannen (2006): Discrete Fourier Transform and the Koide Formula (non-arXiv preprint)"
-  - "Koide (2005, hep-ph/0506247): Derivation from S3-symmetric Higgs VEV — requires continuous fields, FORBIDDEN in COG"
+  - "Koide (2005, hep-ph/0506247): Derivation from S3-symmetric Higgs VEV â€” requires continuous fields, FORBIDDEN in COG"
 notes: |
   This is the 'Hail Mary' claim. If the COG update rules naturally force the
-  algebraic relation f₀²+f₁²+f₂² = 4(f₀f₁+f₁f₂+f₂f₀), the theory is
+  algebraic relation fâ‚€Â²+fâ‚Â²+fâ‚‚Â² = 4(fâ‚€fâ‚+fâ‚fâ‚‚+fâ‚‚fâ‚€), the theory is
   strongly supported.  If not, it is a falsification target.
 
   BRANNEN PARAMETRIZATION (key insight):
-    Write f_k = A + B·cos(φ + 2πk/3)  (k = 0, 1, 2).
-    Z3 phase spacing forces Q = 1/3 + B²/(6A²).
-    Q = 2/3  requires  B = A√2  (a SEPARATE constraint beyond Z3).
+    Write f_k = A + BÂ·cos(Ï† + 2Ï€k/3)  (k = 0, 1, 2).
+    Z3 phase spacing forces Q = 1/3 + BÂ²/(6AÂ²).
+    Q = 2/3  requires  B = Aâˆš2  (a SEPARATE constraint beyond Z3).
 
   WHAT S4 / INDUCED Z3 ACTUALLY FORCES:
     In this encoding, the 24-element vacuum stabilizer is identified as S4.
@@ -49,61 +55,76 @@ notes: |
     - `CausalGraph.brannen_sos_from_z3_and_b2`
     - `CausalGraph.brannen_koide_from_z3_and_b2`
 
-  GEOMETRIC DERIVATION OF B/A = √2 (unblocking candidate, 2026-02-22):
-    The constraint B/A = √2 is PURE GEOMETRY of the 3-generation mass space.
+  GEOMETRIC DERIVATION OF B/A = âˆš2 (unblocking candidate, 2026-02-22):
+    The constraint B/A = âˆš2 is PURE GEOMETRY of the 3-generation mass space.
     It does not require a new group-theoretic mechanism.
 
-    Setup: Write the 3 square-root masses as a vector v = (√m₀, √m₁, √m₂).
-    The "democratic axis" in this 3D space is d = (1,1,1)/√3.
-    The Koide ratio satisfies Q = 1 / (3 cos²θ) where θ is the angle
-    between v and d.  Q = 2/3 requires cos²θ = 1/2, i.e. θ = 45°.
+    Setup: Write the 3 square-root masses as a vector v = (âˆšmâ‚€, âˆšmâ‚, âˆšmâ‚‚).
+    The "democratic axis" in this 3D space is d = (1,1,1)/âˆš3.
+    The Koide ratio satisfies Q = 1 / (3 cosÂ²Î¸) where Î¸ is the angle
+    between v and d.  Q = 2/3 requires cosÂ²Î¸ = 1/2, i.e. Î¸ = 45Â°.
 
     Orthonormal basis of the 2D plane perpendicular to d:
-      u₁ = (1, -1, 0) / √2
-      u₂ = (1,  1,-2) / √6
+      uâ‚ = (1, -1, 0) / âˆš2
+      uâ‚‚ = (1,  1,-2) / âˆš6
 
-    The normalization factor 1/√2 on u₁ IS the √2 in B/A = √2.
-    When the v-component along u₁ has amplitude B, the democratic component
-    has amplitude A·√3 and the off-democratic has amplitude B·√(3/2).
-    Equal amplitudes (θ = 45°) require A·√3 = B·√(3/2), giving B/A = √2.
+    The normalization factor 1/âˆš2 on uâ‚ IS the âˆš2 in B/A = âˆš2.
+    When the v-component along uâ‚ has amplitude B, the democratic component
+    has amplitude AÂ·âˆš3 and the off-democratic has amplitude BÂ·âˆš(3/2).
+    Equal amplitudes (Î¸ = 45Â°) require AÂ·âˆš3 = BÂ·âˆš(3/2), giving B/A = âˆš2.
 
-    CIRCULANT MATRIX ORIGIN (Brannen/J₃(𝕆) connection):
-    The Brannen parametrization √mₙ = A + B·cos(θ + 2πn/3) is exactly the
-    eigenvalue formula for a 3×3 circulant Hermitian matrix C ∈ J₃(ℂ).
+    CIRCULANT MATRIX ORIGIN (Brannen/Jâ‚ƒ(ð•†) connection):
+    The Brannen parametrization âˆšmâ‚™ = A + BÂ·cos(Î¸ + 2Ï€n/3) is exactly the
+    eigenvalue formula for a 3Ã—3 circulant Hermitian matrix C âˆˆ Jâ‚ƒ(â„‚).
     The three generation masses are the eigenvalues of such a matrix.
-    The "democratic limit" (B → 0) is the degenerate matrix A·I₃.
-    The B/A = √2 constraint is the condition that the matrix norm in the
-    off-democratic sector equals the democratic sector norm — the matrix
-    version of the θ = 45° projection condition.
+    The "democratic limit" (B â†’ 0) is the degenerate matrix AÂ·Iâ‚ƒ.
+    The B/A = âˆš2 constraint is the condition that the matrix norm in the
+    off-democratic sector equals the democratic sector norm â€” the matrix
+    version of the Î¸ = 45Â° projection condition.
 
-    Connection to J₃(𝕆): Carl Brannen's circulant Hermitian matrices live in
-    J₃(ℂ) ⊂ J₃(𝕆) (Albert algebra of 3×3 octonionic Hermitian matrices).
+    Connection to Jâ‚ƒ(ð•†): Carl Brannen's circulant Hermitian matrices live in
+    Jâ‚ƒ(â„‚) âŠ‚ Jâ‚ƒ(ð•†) (Albert algebra of 3Ã—3 octonionic Hermitian matrices).
     The three COG lepton generation states correspond to the 3 diagonal entries;
     the COG exchange rule (with Triality overhead) generates the off-diagonal
-    circulant structure.  The constraint B/A = √2 then follows from the equal-
+    circulant structure.  The constraint B/A = âˆš2 then follows from the equal-
     weight Triality mixing across the three Witt color planes.
 
+  ASSOCIATOR NORM RESULT (2026-02-26):
+    The exploration `calc/koide_associator_derive.py` confirmed that for ALL
+    28 non-collinear Fano triples, the associator squared norm ||[e_i, e_j, e_k]||Â²
+    is exactly 4.0.
+    Since Koide Q=2/3 requires BÂ²/AÂ² = 2, and the associator yields 4, we have:
+        BÂ²/AÂ² = 1/2 * ||assoc||Â²
+    This implies B/A = sqrt(2) matches exactly with ||assoc|| / sqrt(2).
+       B/A = 2 / sqrt(2) = sqrt(2).
+    The raw associator magnitude is 2 (norm-sq 4).
+    If the off-diagonal coupling B is driven by the non-associative residue magnitude,
+    normalized by the standard complex projection factor 1/sqrt(2) (common in
+    projection from H/O to C), then B/A = 2 * (1/sqrt(2)) = sqrt(2) is exact.
+    The stable value of 4.0 (integer) across all non-collinear triples is a
+    strong signal of algebraic origin.
+
   ALGEBRAIC REFORMULATION (provable in Lean now):
-    Q = 2/3  ⟺  f₀²+f₁²+f₂² = 4(f₀f₁+f₁f₂+f₂f₀).
+    Q = 2/3  âŸº  fâ‚€Â²+fâ‚Â²+fâ‚‚Â² = 4(fâ‚€fâ‚+fâ‚fâ‚‚+fâ‚‚fâ‚€).
     This identity holds over any commutative ring and can be proved
-    by `ring` in Lean 4 without importing ℝ.  The identity itself
-    is NOT the blocked part — the blocked part is showing the COG
+    by `ring` in Lean 4 without importing â„.  The identity itself
+    is NOT the blocked part â€” the blocked part is showing the COG
     update rules force exactly this identity.
 candidate_mechanism: |
-  B/A = √2 is the GEOMETRIC NORMALIZATION of the 2D complement to the
+  B/A = âˆš2 is the GEOMETRIC NORMALIZATION of the 2D complement to the
   democratic axis in 3-generation mass space.  The key insight (Gemini,
   2026-02-22): the Brannen parametrization is the eigenvalue formula of a
-  3×3 circulant Hermitian matrix in J₃(ℂ) ⊂ J₃(𝕆).  The condition Q = 2/3
-  (θ = 45° from democratic axis) follows from equal democratic and off-
+  3Ã—3 circulant Hermitian matrix in Jâ‚ƒ(â„‚) âŠ‚ Jâ‚ƒ(ð•†).  The condition Q = 2/3
+  (Î¸ = 45Â° from democratic axis) follows from equal democratic and off-
   democratic amplitudes, which is imposed by the equal-weight Triality mixing
   of COG's three lepton generation states across the three Witt color planes.
 
   REMAINING OPEN QUESTION:
-    The GEOMETRIC picture is clear (B/A = √2 = normalization of u₁ = (1,-1,0)/√2).
+    The GEOMETRIC picture is clear (B/A = âˆš2 = normalization of uâ‚ = (1,-1,0)/âˆš2).
     What remains is to show that COG's exchange rule SPECIFICALLY produces
-    the circulant Hermitian structure — i.e., that the Triality rotation
+    the circulant Hermitian structure â€” i.e., that the Triality rotation
     overhead for each generation is exactly equal in magnitude (but with
-    120° phase spacing), which is the COG statement that generates the
+    120Â° phase spacing), which is the COG statement that generates the
     circulant matrix.  This is the task of calc/lepton_generations.py.
 
 proved_results:
@@ -151,5 +172,7 @@ previously_blocked_reason: |
   parametrization. The previous claim that "group symmetry alone forces
   cos^2(theta) = 1/2 yielding Q = 2/3" was incorrect and has been retracted from
   calc/koide.py. Unblocked 2026-02-22 by the
-  geometric realization that √2 is the normalization of the orthogonal
-  complement to the democratic axis, derivable from J₃(𝕆) circulant structure.
+  geometric realization that âˆš2 is the normalization of the orthogonal
+  complement to the democratic axis, derivable from Jâ‚ƒ(ð•†) circulant structure.
+
+

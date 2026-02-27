@@ -1,0 +1,20 @@
+id: LEPTON-001-LEGACY
+title: "Legacy placeholder for LEPTON-001"
+statement: |
+  [SUPERSEDED] This file was a temporary placeholder created before the
+  canonical LEPTON-001 record was fully persisted in `claims/muon_mass.yml`.
+
+status: superseded
+superseded_by:
+  - LEPTON-001
+superseded_on: "2026-02-26"
+pi_obs_profile: minimal
+pi_obs_profile_version: v1
+projection_sensitivity: unknown
+profile_contrast_run: ""
+equivalence_mode: none
+notes: |
+  Keep this file only as migration history.
+  Canonical LEPTON-001 source is `claims/muon_mass.yml`.
+blocked_reason: |
+  Superseded by canonical LEPTON-001.

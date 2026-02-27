@@ -1,49 +1,21 @@
-id: STRONG-001
-title: "Strong coupling leading-order proxy from vacuum stabilizer ratio"
+id: STRONG-001-LEGACY
+title: "Legacy placeholder for STRONG-001"
 statement: |
-  The current COG leading-order proxy for the strong coupling is:
-      alpha_s_proxy = |Stab(e7)| / |Aut(Fano)| = 24/168 = 1/7.
+  [SUPERSEDED] This file preserved an early summary of the strong-coupling
+  baseline before the canonical STRONG-001 record was consolidated in
+  `claims/STRONG-001.yml`.
 
-  This is a formally proved baseline, not a complete physical derivation.
-  The measured Z-pole value (~0.118) is lower; the residual gap is tracked
-  explicitly and requires a correction mechanism (for example, finite-density
-  trapped/escaped mixing and/or scale bridge).
-status: partial
-lean_file: CausalGraphTheory/GaugeObservables.lean
-lean_theorems:
-  - CausalGraph.alpha_s_proxy_eq
-  - CausalGraph.alpha_s_proxy_bounds
-  - CausalGraph.orbit_stabilizer_ratio
-  - CausalGraph.gauge_group_factored
-  - CausalGraph.alpha_s_proxy_overestimates
-  - CausalGraph.alpha_s_gap_eq
-  - CausalGraph.alpha_s_gap_pos
-python_test: calc/test_constants.py::test_alpha_strong_candidate
-depends_on:
-  - GAUGE-001
-  - FANO-001
-literature:
-  - "PDG 2024: alpha_s(M_Z) around 0.118"
-  - "Bethke (2006): alpha_s measurements, arXiv:hep-ex/0606035"
-  - "Asymptotic freedom and running coupling literature"
+status: superseded
+superseded_by:
+  - STRONG-001
+superseded_on: "2026-02-26"
+pi_obs_profile: with_sector
+pi_obs_profile_version: v1
+projection_sensitivity: unknown
+profile_contrast_run: ""
+equivalence_mode: none
 notes: |
-  LOCKED LEAN BASELINE:
-    alpha_s_proxy = 1/7 (exact)
-    alpha_s_physical = 1181/10000 (declared comparison value)
-    alpha_s_gap = alpha_s_proxy - alpha_s_physical = 1733/70000 > 0
-
-  Interpretation:
-    COG currently overestimates the Z-pole value at leading order.
-    This is documented as an open correction problem, not tuned away.
-
-  Governance:
-    No projector or ratio edits may be made post-hoc to force agreement.
-    Gap-closure work must be via predeclared correction terms and
-    reproducible ablation tests.
-
-  Execution tracking:
-    rfc/STRONG-001_Closure_Tasklist.md
+  Keep this file only for migration history and provenance.
+  Canonical STRONG-001 source is `claims/STRONG-001.yml`.
 blocked_reason: |
-  Leading-order proxy is proved, but the correction mechanism for the
-  measured value is still open. Keep status partial until correction
-  model + uncertainty + scale declaration are closed.
+  Superseded by canonical STRONG-001.

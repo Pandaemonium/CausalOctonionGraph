@@ -1,9 +1,15 @@
-id: DIST-001
+﻿id: DIST-001
 title: "DAG distance satisfies triangle inequality"
 statement: |
   For any nodes a, b, c in a causal graph G, if directed paths exist
   a->b, b->c, and a->c, then dist(a,c) <= dist(a,b) + dist(b,c).
+
 status: proved
+pi_obs_profile: minimal
+pi_obs_profile_version: v1
+projection_sensitivity: unknown
+profile_contrast_run: ""
+equivalence_mode: none
 lean_file: CausalGraphTheory/Distance.lean
 lean_theorems:
   - CausalGraph.dist_triangle
@@ -36,3 +42,5 @@ notes: |
       dist G s t = some d'. Uses find?_range_le for the minimality.
     dist_triangle: combines the above to prove dac <= dab + dbc.
 blocked_reason: ""
+
+

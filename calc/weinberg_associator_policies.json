@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "rfc": "RFC-037",
+  "avenue": "A13",
+  "target": {
+    "scale": "M_Z",
+    "sin2_theta_w": 0.23122
+  },
+  "initial_state": "uniform_ew_unit",
+  "ticks": 24,
+  "policies": [
+    {
+      "policy_id": "a13_associative_control_rollout",
+      "description": "Empirical traffic from deterministic rollout with EW-core source colors only.",
+      "central_color": 6,
+      "source_colors": [0, 5, 6],
+      "source_order": "asc",
+      "basis_selector": "imag_abs_argmax",
+      "init_mode": "base",
+      "projection": "sign_clip"
+    },
+    {
+      "policy_id": "a13_mixed_nonassoc_rollout",
+      "description": "Empirical traffic from deterministic rollout with non-associative mixed color sources.",
+      "central_color": 6,
+      "source_colors": [3, 2, 5],
+      "source_order": "asc",
+      "basis_selector": "imag_abs_argmax",
+      "init_mode": "base",
+      "projection": "sign_clip"
+    }
+  ]
+}
