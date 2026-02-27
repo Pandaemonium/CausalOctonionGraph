@@ -1,0 +1,150 @@
+{
+  "conditions_checksum": "0d79a8d0bbfe7f9fe2721146222cdc4d088176dd868154a24c0e8997317de498",
+  "rows": [
+    {
+      "best_proxy_id": "alpha_proxy_hybrid_sites_plus_ticks",
+      "best_proxy_relative_gap": 2.045244424082129,
+      "best_proxy_value": 0.022222222222222223,
+      "ce_exact": 4,
+      "ce_l1": 2,
+      "ce_ticks_exact": 20,
+      "condition_id": "cone_d4",
+      "cone_depth": 4,
+      "description": "Full cone depth 4, vacuum initialized.",
+      "full_cone_sites": 25,
+      "proxies": {
+        "alpha_proxy_cone_sites": 0.04,
+        "alpha_proxy_cycle_ticks": 0.05,
+        "alpha_proxy_hybrid_sites_plus_ticks": 0.022222222222222223
+      },
+      "relative_gaps": {
+        "alpha_proxy_cone_sites": 4.481439963347832,
+        "alpha_proxy_cycle_ticks": 5.85179995418479,
+        "alpha_proxy_hybrid_sites_plus_ticks": 2.045244424082129
+      },
+      "replay_hash": "7a64bf5f4d71831da2788d338bf60fab5e91a0dd136bd479ec79e3fa08490ea8",
+      "tick_per_cycle": 5
+    },
+    {
+      "best_proxy_id": "alpha_proxy_hybrid_sites_plus_ticks",
+      "best_proxy_relative_gap": 0.4274583237884978,
+      "best_proxy_value": 0.010416666666666666,
+      "ce_exact": 4,
+      "ce_l1": 2,
+      "ce_ticks_exact": 32,
+      "condition_id": "cone_d7",
+      "cone_depth": 7,
+      "description": "Full cone depth 7, vacuum initialized.",
+      "full_cone_sites": 64,
+      "proxies": {
+        "alpha_proxy_cone_sites": 0.015625,
+        "alpha_proxy_cycle_ticks": 0.03125,
+        "alpha_proxy_hybrid_sites_plus_ticks": 0.010416666666666666
+      },
+      "relative_gaps": {
+        "alpha_proxy_cone_sites": 1.1411874856827469,
+        "alpha_proxy_cycle_ticks": 3.2823749713654937,
+        "alpha_proxy_hybrid_sites_plus_ticks": 0.4274583237884978
+      },
+      "replay_hash": "50576b4906eb865c506ecbf666ceec88f4159d18ac51f28759d9329a51385ea5",
+      "tick_per_cycle": 8
+    },
+    {
+      "best_proxy_id": "alpha_proxy_cone_sites",
+      "best_proxy_relative_gap": 0.04836111747433482,
+      "best_proxy_value": 0.006944444444444444,
+      "ce_exact": 4,
+      "ce_l1": 2,
+      "ce_ticks_exact": 48,
+      "condition_id": "cone_d11",
+      "cone_depth": 11,
+      "description": "Full cone depth 11, vacuum initialized.",
+      "full_cone_sites": 144,
+      "proxies": {
+        "alpha_proxy_cone_sites": 0.006944444444444444,
+        "alpha_proxy_cycle_ticks": 0.020833333333333332,
+        "alpha_proxy_hybrid_sites_plus_ticks": 0.005208333333333333
+      },
+      "relative_gaps": {
+        "alpha_proxy_cone_sites": 0.04836111747433482,
+        "alpha_proxy_cycle_ticks": 1.8549166475769956,
+        "alpha_proxy_hybrid_sites_plus_ticks": 0.2862708381057511
+      },
+      "replay_hash": "af5c0e13440c2a381fddabde4160257820ceb4cf514d2b2d10d67ca5d17afd8a",
+      "tick_per_cycle": 12
+    },
+    {
+      "best_proxy_id": "alpha_proxy_cone_sites",
+      "best_proxy_relative_gap": 0.4647031285793133,
+      "best_proxy_value": 0.00390625,
+      "ce_exact": 4,
+      "ce_l1": 2,
+      "ce_ticks_exact": 64,
+      "condition_id": "cone_d15",
+      "cone_depth": 15,
+      "description": "Full cone depth 15, vacuum initialized.",
+      "full_cone_sites": 256,
+      "proxies": {
+        "alpha_proxy_cone_sites": 0.00390625,
+        "alpha_proxy_cycle_ticks": 0.015625,
+        "alpha_proxy_hybrid_sites_plus_ticks": 0.003125
+      },
+      "relative_gaps": {
+        "alpha_proxy_cone_sites": 0.4647031285793133,
+        "alpha_proxy_cycle_ticks": 1.1411874856827469,
+        "alpha_proxy_hybrid_sites_plus_ticks": 0.5717625028634507
+      },
+      "replay_hash": "46ad121df217c318fb9d7dfdbd37c49c1e135bd46cfaf9d66b44a832bbbb8310",
+      "tick_per_cycle": 16
+    },
+    {
+      "best_proxy_id": "alpha_proxy_cycle_ticks",
+      "best_proxy_relative_gap": 0.4274583237884978,
+      "best_proxy_value": 0.010416666666666666,
+      "ce_exact": 4,
+      "ce_l1": 2,
+      "ce_ticks_exact": 96,
+      "condition_id": "cone_d23",
+      "cone_depth": 23,
+      "description": "Full cone depth 23, vacuum initialized.",
+      "full_cone_sites": 576,
+      "proxies": {
+        "alpha_proxy_cone_sites": 0.001736111111111111,
+        "alpha_proxy_cycle_ticks": 0.010416666666666666,
+        "alpha_proxy_hybrid_sites_plus_ticks": 0.001488095238095238
+      },
+      "relative_gaps": {
+        "alpha_proxy_cone_sites": 0.7620902793685838,
+        "alpha_proxy_cycle_ticks": 0.4274583237884978,
+        "alpha_proxy_hybrid_sites_plus_ticks": 0.7960773823159288
+      },
+      "replay_hash": "b29e85158bf9eee2e82e0116dd52e6e62be2fe9d71559303bf24d3241693299e",
+      "tick_per_cycle": 24
+    },
+    {
+      "best_proxy_id": "alpha_proxy_cycle_ticks",
+      "best_proxy_relative_gap": 0.07059374284137339,
+      "best_proxy_value": 0.0078125,
+      "ce_exact": 4,
+      "ce_l1": 2,
+      "ce_ticks_exact": 128,
+      "condition_id": "cone_d31",
+      "cone_depth": 31,
+      "description": "Full cone depth 31, vacuum initialized.",
+      "full_cone_sites": 1024,
+      "proxies": {
+        "alpha_proxy_cone_sites": 0.0009765625,
+        "alpha_proxy_cycle_ticks": 0.0078125,
+        "alpha_proxy_hybrid_sites_plus_ticks": 0.0008680555555555555
+      },
+      "relative_gaps": {
+        "alpha_proxy_cone_sites": 0.8661757821448284,
+        "alpha_proxy_cycle_ticks": 0.07059374284137339,
+        "alpha_proxy_hybrid_sites_plus_ticks": 0.8810451396842919
+      },
+      "replay_hash": "77f8c462c6c7060029f2c7b713caf85308f8ab157f75d55188c87b7ae9593e35",
+      "tick_per_cycle": 32
+    }
+  ],
+  "schema_version": "alpha_simulation_scan_v1"
+}

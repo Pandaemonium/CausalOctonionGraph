@@ -1,0 +1,119 @@
+{
+  "version": "1.0.0",
+  "rfc": "ALPHA-001_Closure_Tasklist",
+  "target": {
+    "source": "CODATA-2022",
+    "scale": "Q->0",
+    "alpha": 0.0072973525693
+  },
+  "discrete_inputs": {
+    "fano_points": 7,
+    "fano_lines": 7,
+    "points_per_line": 3,
+    "gl32_order": 168,
+    "vacuum_stab_order": 24,
+    "g2_order": 14
+  },
+  "policies": [
+    {
+      "policy_id": "alpha_proxy_v1_area",
+      "description": "Naive Fano area proxy: 1/(fano_lines*fano_points).",
+      "no_fitted_attenuation": true,
+      "allowed_inputs": [
+        "fano_lines",
+        "fano_points"
+      ],
+      "formula": {
+        "numerator": {
+          "op": "const",
+          "value": 1
+        },
+        "denominator": {
+          "op": "mul",
+          "args": [
+            {
+              "op": "input",
+              "name": "fano_lines"
+            },
+            {
+              "op": "input",
+              "name": "fano_points"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy_id": "alpha_proxy_v2_stabilizer_gap",
+      "description": "Stabilizer-gap proxy: 1/(gl32_order - g2_order - 1).",
+      "no_fitted_attenuation": true,
+      "allowed_inputs": [
+        "gl32_order",
+        "g2_order"
+      ],
+      "formula": {
+        "numerator": {
+          "op": "const",
+          "value": 1
+        },
+        "denominator": {
+          "op": "sub",
+          "left": {
+            "op": "sub",
+            "left": {
+              "op": "input",
+              "name": "gl32_order"
+            },
+            "right": {
+              "op": "input",
+              "name": "g2_order"
+            }
+          },
+          "right": {
+            "op": "const",
+            "value": 1
+          }
+        }
+      }
+    },
+    {
+      "policy_id": "alpha_proxy_v3_cubic_fano",
+      "description": "Cubic Fano proxy: 1/(fano_lines^2*points_per_line - 2).",
+      "no_fitted_attenuation": true,
+      "allowed_inputs": [
+        "fano_lines",
+        "points_per_line"
+      ],
+      "formula": {
+        "numerator": {
+          "op": "const",
+          "value": 1
+        },
+        "denominator": {
+          "op": "sub",
+          "left": {
+            "op": "mul",
+            "args": [
+              {
+                "op": "pow",
+                "base": {
+                  "op": "input",
+                  "name": "fano_lines"
+                },
+                "exp": 2
+              },
+              {
+                "op": "input",
+                "name": "points_per_line"
+              }
+            ]
+          },
+          "right": {
+            "op": "const",
+            "value": 2
+          }
+        }
+      }
+    }
+  ]
+}

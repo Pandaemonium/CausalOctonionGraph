@@ -1,0 +1,598 @@
+{
+  "schema_version": "xor_motif_tracker_v1",
+  "generated_at_utc": "2026-02-27T13:22:15.441111Z",
+  "depth_horizon": 12,
+  "initial_edge_distance": 5,
+  "cases": {
+    "electron_electron": {
+      "track_a": [
+        {
+          "track_id": "ee_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 0,
+          "pos": 0,
+          "score": 0,
+          "exact_match": true
+        },
+        {
+          "track_id": "ee_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 1,
+          "pos": -1,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 2,
+          "pos": -2,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 3,
+          "pos": -3,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 4,
+          "pos": -4,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 5,
+          "pos": -5,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 6,
+          "pos": -6,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 7,
+          "pos": -7,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 8,
+          "pos": -8,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 9,
+          "pos": -9,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 10,
+          "pos": -10,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 11,
+          "pos": -11,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 12,
+          "pos": -12,
+          "score": -16,
+          "exact_match": false
+        }
+      ],
+      "track_b": [
+        {
+          "track_id": "ee_right_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 0,
+          "pos": 5,
+          "score": 0,
+          "exact_match": true
+        },
+        {
+          "track_id": "ee_right_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 1,
+          "pos": 6,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_right_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 2,
+          "pos": 7,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_right_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 3,
+          "pos": 8,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_right_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 4,
+          "pos": 9,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_right_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 5,
+          "pos": 10,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_right_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 6,
+          "pos": 11,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_right_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 7,
+          "pos": 12,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_right_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 8,
+          "pos": 13,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_right_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 9,
+          "pos": 14,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_right_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 10,
+          "pos": 15,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_right_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 11,
+          "pos": 16,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ee_right_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 12,
+          "pos": 17,
+          "score": -16,
+          "exact_match": false
+        }
+      ],
+      "distance": [
+        {
+          "depth": 0,
+          "pos_a": 0,
+          "pos_b": 5,
+          "edge_distance": 5
+        },
+        {
+          "depth": 1,
+          "pos_a": -1,
+          "pos_b": 6,
+          "edge_distance": 7
+        },
+        {
+          "depth": 2,
+          "pos_a": -2,
+          "pos_b": 7,
+          "edge_distance": 9
+        },
+        {
+          "depth": 3,
+          "pos_a": -3,
+          "pos_b": 8,
+          "edge_distance": 11
+        },
+        {
+          "depth": 4,
+          "pos_a": -4,
+          "pos_b": 9,
+          "edge_distance": 13
+        },
+        {
+          "depth": 5,
+          "pos_a": -5,
+          "pos_b": 10,
+          "edge_distance": 15
+        },
+        {
+          "depth": 6,
+          "pos_a": -6,
+          "pos_b": 11,
+          "edge_distance": 17
+        },
+        {
+          "depth": 7,
+          "pos_a": -7,
+          "pos_b": 12,
+          "edge_distance": 19
+        },
+        {
+          "depth": 8,
+          "pos_a": -8,
+          "pos_b": 13,
+          "edge_distance": 21
+        },
+        {
+          "depth": 9,
+          "pos_a": -9,
+          "pos_b": 14,
+          "edge_distance": 23
+        },
+        {
+          "depth": 10,
+          "pos_a": -10,
+          "pos_b": 15,
+          "edge_distance": 25
+        },
+        {
+          "depth": 11,
+          "pos_a": -11,
+          "pos_b": 16,
+          "edge_distance": 27
+        },
+        {
+          "depth": 12,
+          "pos_a": -12,
+          "pos_b": 17,
+          "edge_distance": 29
+        }
+      ],
+      "final_distance": 29
+    },
+    "electron_positron": {
+      "track_a": [
+        {
+          "track_id": "ep_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 0,
+          "pos": 0,
+          "score": 0,
+          "exact_match": true
+        },
+        {
+          "track_id": "ep_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 1,
+          "pos": -1,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 2,
+          "pos": -2,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 3,
+          "pos": -3,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 4,
+          "pos": -4,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 5,
+          "pos": -5,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 6,
+          "pos": -6,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 7,
+          "pos": -7,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 8,
+          "pos": -8,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 9,
+          "pos": -9,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 10,
+          "pos": -10,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 11,
+          "pos": -11,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_left_e",
+          "motif_id": "furey_electron_doubled",
+          "depth": 12,
+          "pos": -12,
+          "score": -16,
+          "exact_match": false
+        }
+      ],
+      "track_b": [
+        {
+          "track_id": "ep_right_p",
+          "motif_id": "furey_dual_electron_doubled",
+          "depth": 0,
+          "pos": 5,
+          "score": 0,
+          "exact_match": true
+        },
+        {
+          "track_id": "ep_right_p",
+          "motif_id": "furey_dual_electron_doubled",
+          "depth": 1,
+          "pos": 3,
+          "score": -8,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_right_p",
+          "motif_id": "furey_dual_electron_doubled",
+          "depth": 2,
+          "pos": 2,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_right_p",
+          "motif_id": "furey_dual_electron_doubled",
+          "depth": 3,
+          "pos": 3,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_right_p",
+          "motif_id": "furey_dual_electron_doubled",
+          "depth": 4,
+          "pos": 4,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_right_p",
+          "motif_id": "furey_dual_electron_doubled",
+          "depth": 5,
+          "pos": 5,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_right_p",
+          "motif_id": "furey_dual_electron_doubled",
+          "depth": 6,
+          "pos": 6,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_right_p",
+          "motif_id": "furey_dual_electron_doubled",
+          "depth": 7,
+          "pos": 7,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_right_p",
+          "motif_id": "furey_dual_electron_doubled",
+          "depth": 8,
+          "pos": 8,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_right_p",
+          "motif_id": "furey_dual_electron_doubled",
+          "depth": 9,
+          "pos": 9,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_right_p",
+          "motif_id": "furey_dual_electron_doubled",
+          "depth": 10,
+          "pos": 10,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_right_p",
+          "motif_id": "furey_dual_electron_doubled",
+          "depth": 11,
+          "pos": 11,
+          "score": -16,
+          "exact_match": false
+        },
+        {
+          "track_id": "ep_right_p",
+          "motif_id": "furey_dual_electron_doubled",
+          "depth": 12,
+          "pos": 12,
+          "score": -16,
+          "exact_match": false
+        }
+      ],
+      "distance": [
+        {
+          "depth": 0,
+          "pos_a": 0,
+          "pos_b": 5,
+          "edge_distance": 5
+        },
+        {
+          "depth": 1,
+          "pos_a": -1,
+          "pos_b": 3,
+          "edge_distance": 4
+        },
+        {
+          "depth": 2,
+          "pos_a": -2,
+          "pos_b": 2,
+          "edge_distance": 4
+        },
+        {
+          "depth": 3,
+          "pos_a": -3,
+          "pos_b": 3,
+          "edge_distance": 6
+        },
+        {
+          "depth": 4,
+          "pos_a": -4,
+          "pos_b": 4,
+          "edge_distance": 8
+        },
+        {
+          "depth": 5,
+          "pos_a": -5,
+          "pos_b": 5,
+          "edge_distance": 10
+        },
+        {
+          "depth": 6,
+          "pos_a": -6,
+          "pos_b": 6,
+          "edge_distance": 12
+        },
+        {
+          "depth": 7,
+          "pos_a": -7,
+          "pos_b": 7,
+          "edge_distance": 14
+        },
+        {
+          "depth": 8,
+          "pos_a": -8,
+          "pos_b": 8,
+          "edge_distance": 16
+        },
+        {
+          "depth": 9,
+          "pos_a": -9,
+          "pos_b": 9,
+          "edge_distance": 18
+        },
+        {
+          "depth": 10,
+          "pos_a": -10,
+          "pos_b": 10,
+          "edge_distance": 20
+        },
+        {
+          "depth": 11,
+          "pos_a": -11,
+          "pos_b": 11,
+          "edge_distance": 22
+        },
+        {
+          "depth": 12,
+          "pos_a": -12,
+          "pos_b": 12,
+          "edge_distance": 24
+        }
+      ],
+      "final_distance": 24
+    }
+  }
+}

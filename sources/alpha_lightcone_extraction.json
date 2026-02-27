@@ -1,0 +1,417 @@
+{
+  "conditions_checksum": "507fc25cce6e69df7325bd49227b5c828aaae3957607e133f1ad2556cb9a085f",
+  "mu_eff": 1.0,
+  "per_channel": {
+    "electron_electron": {
+      "alpha_hat_mad": 6728.0,
+      "alpha_hat_median": 6793.0,
+      "relative_gap_to_target": 930884.5417755456,
+      "sample_count": 8
+    },
+    "electron_positron": {
+      "alpha_hat_mad": 24.0,
+      "alpha_hat_median": 49.0,
+      "relative_gap_to_target": 6713.763955101093,
+      "sample_count": 3
+    }
+  },
+  "per_run": [
+    {
+      "alpha_hat_mad": 0.0,
+      "alpha_hat_median": 13225.0,
+      "channel_id": "electron_electron",
+      "initial_edge_distance": 5,
+      "matched_control_run_id": "electron_identity_control__phase00__d5",
+      "phase_id": "phase00",
+      "relative_gap_to_target": 1812300.0878818769,
+      "run_id": "electron_electron__phase00__d5",
+      "sample_count": 1,
+      "samples": [
+        {
+          "a_control": 0,
+          "a_em": 1,
+          "a_signal": 1,
+          "alpha_hat": 13225.0,
+          "depth": 62,
+          "distance": 115
+        }
+      ]
+    },
+    {
+      "alpha_hat_mad": 0.0,
+      "alpha_hat_median": 22801.0,
+      "channel_id": "electron_electron",
+      "initial_edge_distance": 7,
+      "matched_control_run_id": "electron_identity_control__phase00__d7",
+      "phase_id": "phase00",
+      "relative_gap_to_target": 3124556.815107348,
+      "run_id": "electron_electron__phase00__d7",
+      "sample_count": 1,
+      "samples": [
+        {
+          "a_control": 0,
+          "a_em": 1,
+          "a_signal": 1,
+          "alpha_hat": 22801.0,
+          "depth": 82,
+          "distance": 151
+        }
+      ]
+    },
+    {
+      "alpha_hat_mad": null,
+      "alpha_hat_median": null,
+      "channel_id": "electron_electron",
+      "initial_edge_distance": 9,
+      "matched_control_run_id": "electron_identity_control__phase00__d9",
+      "phase_id": "phase00",
+      "relative_gap_to_target": null,
+      "run_id": "electron_electron__phase00__d9",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "alpha_hat_mad": null,
+      "alpha_hat_median": null,
+      "channel_id": "electron_electron",
+      "initial_edge_distance": 5,
+      "matched_control_run_id": "electron_identity_control__phase01__d5",
+      "phase_id": "phase01",
+      "relative_gap_to_target": null,
+      "run_id": "electron_electron__phase01__d5",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "alpha_hat_mad": null,
+      "alpha_hat_median": null,
+      "channel_id": "electron_electron",
+      "initial_edge_distance": 7,
+      "matched_control_run_id": "electron_identity_control__phase01__d7",
+      "phase_id": "phase01",
+      "relative_gap_to_target": null,
+      "run_id": "electron_electron__phase01__d7",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "alpha_hat_mad": null,
+      "alpha_hat_median": null,
+      "channel_id": "electron_electron",
+      "initial_edge_distance": 9,
+      "matched_control_run_id": "electron_identity_control__phase01__d9",
+      "phase_id": "phase01",
+      "relative_gap_to_target": null,
+      "run_id": "electron_electron__phase01__d9",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "alpha_hat_mad": 0.0,
+      "alpha_hat_median": 25.0,
+      "channel_id": "electron_electron",
+      "initial_edge_distance": 5,
+      "matched_control_run_id": "electron_identity_control__phase10__d5",
+      "phase_id": "phase10",
+      "relative_gap_to_target": 3424.899977092395,
+      "run_id": "electron_electron__phase10__d5",
+      "sample_count": 1,
+      "samples": [
+        {
+          "a_control": 1,
+          "a_em": -1,
+          "a_signal": 0,
+          "alpha_hat": 25.0,
+          "depth": 67,
+          "distance": 5
+        }
+      ]
+    },
+    {
+      "alpha_hat_mad": 0.0,
+      "alpha_hat_median": 49.0,
+      "channel_id": "electron_electron",
+      "initial_edge_distance": 7,
+      "matched_control_run_id": "electron_identity_control__phase10__d7",
+      "phase_id": "phase10",
+      "relative_gap_to_target": 6713.763955101093,
+      "run_id": "electron_electron__phase10__d7",
+      "sample_count": 1,
+      "samples": [
+        {
+          "a_control": 1,
+          "a_em": -1,
+          "a_signal": 0,
+          "alpha_hat": 49.0,
+          "depth": 89,
+          "distance": 7
+        }
+      ]
+    },
+    {
+      "alpha_hat_mad": 0.0,
+      "alpha_hat_median": 81.0,
+      "channel_id": "electron_electron",
+      "initial_edge_distance": 9,
+      "matched_control_run_id": "electron_identity_control__phase10__d9",
+      "phase_id": "phase10",
+      "relative_gap_to_target": 11098.91592577936,
+      "run_id": "electron_electron__phase10__d9",
+      "sample_count": 1,
+      "samples": [
+        {
+          "a_control": 1,
+          "a_em": -1,
+          "a_signal": 0,
+          "alpha_hat": 81.0,
+          "depth": 27,
+          "distance": 9
+        }
+      ]
+    },
+    {
+      "alpha_hat_mad": 0.0,
+      "alpha_hat_median": 13225.0,
+      "channel_id": "electron_electron",
+      "initial_edge_distance": 5,
+      "matched_control_run_id": "electron_identity_control__phase11__d5",
+      "phase_id": "phase11",
+      "relative_gap_to_target": 1812300.0878818769,
+      "run_id": "electron_electron__phase11__d5",
+      "sample_count": 1,
+      "samples": [
+        {
+          "a_control": 0,
+          "a_em": 1,
+          "a_signal": 1,
+          "alpha_hat": 13225.0,
+          "depth": 67,
+          "distance": 115
+        }
+      ]
+    },
+    {
+      "alpha_hat_mad": 0.0,
+      "alpha_hat_median": 22801.0,
+      "channel_id": "electron_electron",
+      "initial_edge_distance": 7,
+      "matched_control_run_id": "electron_identity_control__phase11__d7",
+      "phase_id": "phase11",
+      "relative_gap_to_target": 3124556.815107348,
+      "run_id": "electron_electron__phase11__d7",
+      "sample_count": 1,
+      "samples": [
+        {
+          "a_control": 0,
+          "a_em": 1,
+          "a_signal": 1,
+          "alpha_hat": 22801.0,
+          "depth": 89,
+          "distance": 151
+        }
+      ]
+    },
+    {
+      "alpha_hat_mad": 0.0,
+      "alpha_hat_median": 361.0,
+      "channel_id": "electron_electron",
+      "initial_edge_distance": 9,
+      "matched_control_run_id": "electron_identity_control__phase11__d9",
+      "phase_id": "phase11",
+      "relative_gap_to_target": 49468.99566921418,
+      "run_id": "electron_electron__phase11__d9",
+      "sample_count": 1,
+      "samples": [
+        {
+          "a_control": 0,
+          "a_em": 1,
+          "a_signal": 1,
+          "alpha_hat": 361.0,
+          "depth": 27,
+          "distance": 19
+        }
+      ]
+    },
+    {
+      "alpha_hat_mad": null,
+      "alpha_hat_median": null,
+      "channel_id": "electron_positron",
+      "initial_edge_distance": 5,
+      "matched_control_run_id": "electron_identity_control__phase00__d5",
+      "phase_id": "phase00",
+      "relative_gap_to_target": null,
+      "run_id": "electron_positron__phase00__d5",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "alpha_hat_mad": null,
+      "alpha_hat_median": null,
+      "channel_id": "electron_positron",
+      "initial_edge_distance": 7,
+      "matched_control_run_id": "electron_identity_control__phase00__d7",
+      "phase_id": "phase00",
+      "relative_gap_to_target": null,
+      "run_id": "electron_positron__phase00__d7",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "alpha_hat_mad": null,
+      "alpha_hat_median": null,
+      "channel_id": "electron_positron",
+      "initial_edge_distance": 9,
+      "matched_control_run_id": "electron_identity_control__phase00__d9",
+      "phase_id": "phase00",
+      "relative_gap_to_target": null,
+      "run_id": "electron_positron__phase00__d9",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "alpha_hat_mad": null,
+      "alpha_hat_median": null,
+      "channel_id": "electron_positron",
+      "initial_edge_distance": 5,
+      "matched_control_run_id": "electron_identity_control__phase01__d5",
+      "phase_id": "phase01",
+      "relative_gap_to_target": null,
+      "run_id": "electron_positron__phase01__d5",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "alpha_hat_mad": null,
+      "alpha_hat_median": null,
+      "channel_id": "electron_positron",
+      "initial_edge_distance": 7,
+      "matched_control_run_id": "electron_identity_control__phase01__d7",
+      "phase_id": "phase01",
+      "relative_gap_to_target": null,
+      "run_id": "electron_positron__phase01__d7",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "alpha_hat_mad": null,
+      "alpha_hat_median": null,
+      "channel_id": "electron_positron",
+      "initial_edge_distance": 9,
+      "matched_control_run_id": "electron_identity_control__phase01__d9",
+      "phase_id": "phase01",
+      "relative_gap_to_target": null,
+      "run_id": "electron_positron__phase01__d9",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "alpha_hat_mad": 0.0,
+      "alpha_hat_median": 25.0,
+      "channel_id": "electron_positron",
+      "initial_edge_distance": 5,
+      "matched_control_run_id": "electron_identity_control__phase10__d5",
+      "phase_id": "phase10",
+      "relative_gap_to_target": 3424.899977092395,
+      "run_id": "electron_positron__phase10__d5",
+      "sample_count": 1,
+      "samples": [
+        {
+          "a_control": 1,
+          "a_em": -1,
+          "a_signal": 0,
+          "alpha_hat": 25.0,
+          "depth": 67,
+          "distance": 5
+        }
+      ]
+    },
+    {
+      "alpha_hat_mad": 0.0,
+      "alpha_hat_median": 49.0,
+      "channel_id": "electron_positron",
+      "initial_edge_distance": 7,
+      "matched_control_run_id": "electron_identity_control__phase10__d7",
+      "phase_id": "phase10",
+      "relative_gap_to_target": 6713.763955101093,
+      "run_id": "electron_positron__phase10__d7",
+      "sample_count": 1,
+      "samples": [
+        {
+          "a_control": 1,
+          "a_em": -1,
+          "a_signal": 0,
+          "alpha_hat": 49.0,
+          "depth": 89,
+          "distance": 7
+        }
+      ]
+    },
+    {
+      "alpha_hat_mad": 0.0,
+      "alpha_hat_median": 81.0,
+      "channel_id": "electron_positron",
+      "initial_edge_distance": 9,
+      "matched_control_run_id": "electron_identity_control__phase10__d9",
+      "phase_id": "phase10",
+      "relative_gap_to_target": 11098.91592577936,
+      "run_id": "electron_positron__phase10__d9",
+      "sample_count": 1,
+      "samples": [
+        {
+          "a_control": 1,
+          "a_em": -1,
+          "a_signal": 0,
+          "alpha_hat": 81.0,
+          "depth": 27,
+          "distance": 9
+        }
+      ]
+    },
+    {
+      "alpha_hat_mad": null,
+      "alpha_hat_median": null,
+      "channel_id": "electron_positron",
+      "initial_edge_distance": 5,
+      "matched_control_run_id": "electron_identity_control__phase11__d5",
+      "phase_id": "phase11",
+      "relative_gap_to_target": null,
+      "run_id": "electron_positron__phase11__d5",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "alpha_hat_mad": null,
+      "alpha_hat_median": null,
+      "channel_id": "electron_positron",
+      "initial_edge_distance": 7,
+      "matched_control_run_id": "electron_identity_control__phase11__d7",
+      "phase_id": "phase11",
+      "relative_gap_to_target": null,
+      "run_id": "electron_positron__phase11__d7",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "alpha_hat_mad": null,
+      "alpha_hat_median": null,
+      "channel_id": "electron_positron",
+      "initial_edge_distance": 9,
+      "matched_control_run_id": "electron_identity_control__phase11__d9",
+      "phase_id": "phase11",
+      "relative_gap_to_target": null,
+      "run_id": "electron_positron__phase11__d9",
+      "sample_count": 0,
+      "samples": []
+    }
+  ],
+  "pooled": {
+    "alpha_hat_mad": 56.0,
+    "alpha_hat_median": 81.0,
+    "relative_gap_to_target": 11098.91592577936,
+    "sample_count": 11
+  },
+  "replay_hash": "127ad14bb2c47674d0516a431d13c385ac06ff6af9c07baacc072fd8050b34b0",
+  "schema_version": "alpha_lightcone_extraction_v1",
+  "simulation_replay_hash": "3f11bec53af6263c178f128e7d0468995cd039740809689d3a1b90ed7b74bb92",
+  "target_alpha": 0.0072973525693
+}

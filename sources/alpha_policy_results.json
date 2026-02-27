@@ -1,0 +1,83 @@
+[
+  {
+    "absolute_gap": {
+      "fraction": "6424297241043/490000000000000",
+      "value": 0.013110810696006123
+    },
+    "bundle_checksum": "131c95e545174efc679ddf810e57ecc714b048205604de9853897e37aa2deabf",
+    "candidate": {
+      "fraction": "1/49",
+      "value": 0.02040816326530612
+    },
+    "pass_gate_rel_gap_le_0p15": false,
+    "policy_checksum": "7b2eb8c65ac68a84fba8272b0bdc23d6fd52160c275215402527da4601034c0c",
+    "policy_description": "Naive Fano area proxy: 1/(fano_lines*fano_points).",
+    "policy_id": "alpha_proxy_v1_area",
+    "relative_gap": {
+      "fraction": "6424297241043/3575702758957",
+      "value": 1.796653042524404
+    },
+    "replay_hash": "16195987c5cfb13737af15c925abba582f8455aa95004a361f0839d06cfdcf32",
+    "rfc": "ALPHA-001",
+    "target": {
+      "fraction": "72973525693/10000000000000",
+      "value": 0.0072973525693
+    },
+    "target_scale": "Q->0",
+    "target_source": "CODATA-2022"
+  },
+  {
+    "absolute_gap": {
+      "fraction": "1164949431029/1530000000000000",
+      "value": 0.0007614048568816993
+    },
+    "bundle_checksum": "131c95e545174efc679ddf810e57ecc714b048205604de9853897e37aa2deabf",
+    "candidate": {
+      "fraction": "1/153",
+      "value": 0.006535947712418301
+    },
+    "pass_gate_rel_gap_le_0p15": true,
+    "policy_checksum": "7dca4966c2f7a9d592b353805e18e12fa3b139f9033a8e432afe5d38d09f0858",
+    "policy_description": "Stabilizer-gap proxy: 1/(gl32_order - g2_order - 1).",
+    "policy_id": "alpha_proxy_v2_stabilizer_gap",
+    "relative_gap": {
+      "fraction": "1164949431029/11164949431029",
+      "value": 0.10433987526996208
+    },
+    "replay_hash": "324c3b887daaa214fa7ee844ffa1f90b35a19ae103bb46b83408858b29b5b45b",
+    "rfc": "ALPHA-001",
+    "target": {
+      "fraction": "72973525693/10000000000000",
+      "value": 0.0072973525693
+    },
+    "target_scale": "Q->0",
+    "target_source": "CODATA-2022"
+  },
+  {
+    "absolute_gap": {
+      "fraction": "116232245097/290000000000000",
+      "value": 0.00040080084516206895
+    },
+    "bundle_checksum": "131c95e545174efc679ddf810e57ecc714b048205604de9853897e37aa2deabf",
+    "candidate": {
+      "fraction": "1/145",
+      "value": 0.006896551724137931
+    },
+    "pass_gate_rel_gap_le_0p15": true,
+    "policy_checksum": "de6379b9b31cd77b6ffcb32ca0a4b4ebb57a7b08b48c9b1bd2826ad3926f18b2",
+    "policy_description": "Cubic Fano proxy: 1/(fano_lines^2*points_per_line - 2).",
+    "policy_id": "alpha_proxy_v3_cubic_fano",
+    "relative_gap": {
+      "fraction": "116232245097/2116232245097",
+      "value": 0.054924144250373785
+    },
+    "replay_hash": "f431b6fed55eda288b06676a01f2ea5dd87ac74deebef1958c48725492ca3275",
+    "rfc": "ALPHA-001",
+    "target": {
+      "fraction": "72973525693/10000000000000",
+      "value": 0.0072973525693
+    },
+    "target_scale": "Q->0",
+    "target_source": "CODATA-2022"
+  }
+]

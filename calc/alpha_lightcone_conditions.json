@@ -1,0 +1,89 @@
+{
+  "version": "1.0.0",
+  "claim_id": "ALPHA-001",
+  "mode": "deterministic_full_cone_preconditioned",
+  "target": {
+    "source": "CODATA-2022",
+    "scale": "Q->0",
+    "alpha": 0.0072973525693
+  },
+  "kernel": {
+    "distance_semantics": "edge_separation_count",
+    "time_semantics": "topological_depth",
+    "update_rule": "xor_two_body_kinematics_v1",
+    "interaction_scope": "full_past_lightcone_all_contributors",
+    "interaction_scope_canonical": true,
+    "no_spawn": true,
+    "full_lightcone_preconditioned": true
+  },
+  "mass_normalization": {
+    "policy_id": "unit_reduced_mass_proxy_v1",
+    "mu_eff": 1.0,
+    "notes": "Interim first-principles placeholder until mass proxy lock is finalized in kernel proofs."
+  },
+  "channels": [
+    {
+      "channel_id": "electron_electron",
+      "role": "signal",
+      "left_motif_id": "furey_electron_doubled",
+      "right_motif_id": "furey_electron_doubled",
+      "expected_polarity": "repulsive"
+    },
+    {
+      "channel_id": "electron_positron",
+      "role": "signal",
+      "left_motif_id": "furey_electron_doubled",
+      "right_motif_id": "furey_dual_electron_doubled",
+      "expected_polarity": "attractive"
+    },
+    {
+      "channel_id": "electron_identity_control",
+      "role": "control",
+      "left_motif_id": "furey_electron_doubled",
+      "right_motif_id": "identity_e0",
+      "expected_polarity": "neutral"
+    }
+  ],
+  "phase_classes": [
+    {
+      "phase_id": "phase00",
+      "left_precommit_ticks": 0,
+      "right_precommit_ticks": 0
+    },
+    {
+      "phase_id": "phase10",
+      "left_precommit_ticks": 1,
+      "right_precommit_ticks": 0
+    },
+    {
+      "phase_id": "phase01",
+      "left_precommit_ticks": 0,
+      "right_precommit_ticks": 1
+    },
+    {
+      "phase_id": "phase11",
+      "left_precommit_ticks": 1,
+      "right_precommit_ticks": 1
+    }
+  ],
+  "initial_edge_distances": [
+    5,
+    7,
+    9
+  ],
+  "depth_horizon": 120,
+  "plateau_rule": {
+    "min_depth": 24,
+    "max_depth": 96,
+    "interior_margin": 12,
+    "min_distance": 2,
+    "max_distance": 5000,
+    "require_nonzero_a_em": true
+  },
+  "governance": {
+    "predeclared_only": true,
+    "no_fitted_attenuation": true,
+    "no_output_driven_selection": true,
+    "control_subtraction_required": true
+  }
+}

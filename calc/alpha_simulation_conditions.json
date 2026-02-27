@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "rfc": "RFC-028",
+  "mode": "deterministic_full_cone_preconditioned",
+  "target": {
+    "source": "CODATA-2022",
+    "scale": "Q->0",
+    "alpha": 0.0072973525693
+  },
+  "conditions": [
+    {
+      "condition_id": "cone_d4",
+      "cone_depth": 4,
+      "description": "Full cone depth 4, vacuum initialized."
+    },
+    {
+      "condition_id": "cone_d7",
+      "cone_depth": 7,
+      "description": "Full cone depth 7, vacuum initialized."
+    },
+    {
+      "condition_id": "cone_d11",
+      "cone_depth": 11,
+      "description": "Full cone depth 11, vacuum initialized."
+    },
+    {
+      "condition_id": "cone_d15",
+      "cone_depth": 15,
+      "description": "Full cone depth 15, vacuum initialized."
+    },
+    {
+      "condition_id": "cone_d23",
+      "cone_depth": 23,
+      "description": "Full cone depth 23, vacuum initialized."
+    },
+    {
+      "condition_id": "cone_d31",
+      "cone_depth": 31,
+      "description": "Full cone depth 31, vacuum initialized."
+    }
+  ]
+}

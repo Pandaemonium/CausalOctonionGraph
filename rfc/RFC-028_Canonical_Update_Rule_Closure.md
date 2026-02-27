@@ -24,7 +24,7 @@ This RFC answers the current architecture question:
 "Kernel state is `C x O`; does update depend on lightcone, trace, and superdetermined ordering?"
 
 Answer:
-1. Yes, lightcone-local boundary inputs are required.
+1. Yes, lightcone-local inputs are required; canonical profile folds all past-cone contributors at each tick.
 2. Yes, deterministic ordering/parenthesization must be predeclared in the initial condition.
 3. Trace is optional only if the kernel is strictly Markov; otherwise it must be explicit kernel state.
 4. Fixed-topology update is now locked; D4 is now static-cone no-spawn; D5 projection closure remains.
@@ -230,8 +230,8 @@ tiebreak is physically meaningful and must be derived, not merely declared.
 Let `psi_t(v) : C x O` be node `v` at tick `t`.
 
 Define:
-1. `B_t(v)`: incoming boundary messages from the causal past cone boundary.
-2. `O_t(v)`: canonical order on `B_t(v)` (topoDepth, then nodeId), with immutable parenthesization.
+1. `C_t(v)`: all contributors in the causal past light cone of `v` available at tick `t`.
+2. `O_t(v)`: canonical order on `C_t(v)` (topoDepth, then nodeId), with immutable parenthesization.
 3. `H_t(v)`: local trace slice (possibly empty for Markov kernels).
 4. `T(x) := e7 * x`: temporal commit operator.
 
@@ -240,6 +240,11 @@ Required transition form:
 `psi_{t+1}(v) = U( T(psi_t(v)), O_t(v), H_t(v) )`
 
 where `U` is deterministic and free of external entropy.
+
+Canonical interaction-scope lock:
+1. At every tick, each active node interacts with all contributors in its past light cone under `O_t(v)`.
+2. Boundary-only folds and pair-only folds are reduced non-canonical profiles.
+3. Any claim that uses a reduced profile must declare that profile explicitly in provenance.
 
 ---
 
@@ -261,6 +266,7 @@ Canonical lock (superdeterministic preconditioning):
    for its declared horizon/window.
 2. Partial/sparse microstate starts are allowed only as non-canonical reduced
    experiments and must be labeled as such in claim provenance.
+3. Every canonical tick must fold full past-cone contributors (not boundary-only subset folds).
 
 No runtime rule may consult wall-clock time, RNG, or nondeterministic container order.
 
@@ -340,6 +346,27 @@ trajectory of ψ differs from the trajectory without those messages — i.e., th
 fold is a coincidence at the aggregate level but the individual messages do have physical
 effect. This would require a finer-grained exchange predicate that tests individual
 messages rather than their fold.
+
+## D3b. Lock canonical interaction scope
+
+Status: Locked (2026-02-27).
+
+**Decision:** Canonical update folds all past-lightcone contributors at each tick.
+Boundary-only and pair-only folds are reduced profiles for exploratory/testing use.
+
+Formally for canonical profile:
+1. `contributors_t(v) = PastCone_t(v)` (subject to deterministic in-cone pruning policy).
+2. `interactionFold` input is built from all `contributors_t(v)` under canonical order.
+3. omitting contributors for tractability is allowed only in non-canonical reduced profiles.
+
+**Justification:** This implements the superdeterministic claim directly:
+at an event, everything in the event's light cone is interacting with it.
+
+**Alternatives not taken in canonical mode:** boundary-only fold, two-body-only fold,
+stochastic sampled-cone fold.
+
+**Revision trigger:** a full-cone fold proof or simulation is shown to be inconsistent
+with locked determinism/locality axioms while a strict subset fold is consistent.
 
 ## D4. Lock topology policy (static cone, no spawn)
 
@@ -516,11 +543,11 @@ Until this RFC is closed:
 
 ## 10. Recommended Execution Order
 
-1. Implement concrete `applySpawn` and prove `SpawnCompleteness` + `SpawnThenUpdateLaw`.
-2. Prove canonical D4 no-spawn theorems (`shouldSpawn=false`, `applySpawn=id`) and enforce profile tagging for any dynamic-topology experiment.
+1. Implement full-cone contributor fold runtime (D3b) and enforce canonical profile checks.
+2. Keep canonical D4 static-cone no-spawn (`shouldSpawn=false`, `applySpawn=id`) and profile-tag any dynamic-topology experiment.
 3. Keep `piObsCanonical := piObsMinimal` for baseline runs and prove implementation-level permutation invariance.
 4. Run benchmark suite to decide whether extended `u1Sector` exposure is required by evidence.
-5. Implement invariants and replay/leak/equivalence harnesses against the locked contracts.
+5. Implement invariants and replay/leak/equivalence harnesses against locked contracts.
 6. Only then resume deeper constant-derivation pushes.
 
 ---
