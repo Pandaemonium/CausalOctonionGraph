@@ -315,7 +315,7 @@ Next action:
 
 ### 🔴 P3 · HYDROGEN-001 · Gate 3 — Full Promotion — `partial` (2026-02-27)
 
-**Ground-truth status is `partial`. Gate 1 Python scaffold delivered (tasks 9947d686-baf, 246f7f03-276). Gate 2 Lean formalization delivered (task 598b1b52-6b2). Gate 3 Lean stubs proved without `sorry` (task 026ff4e6-bec).**
+**Ground-truth status is `partial`. Gate 1 Python scaffold delivered (tasks 9947d686-baf, 246f7f03-276). Gate 2 Lean formalization delivered (task 598b1b52-6b2). Gate 3 quantitative binding energy prediction delivered (task 892ce7a2-596).**
 
 Next action:
 - Verify all stub theorems in `CausalGraphTheory/HydrogenBinding.lean` are proved without `sorry`.
@@ -401,12 +401,24 @@ Next action:
 
 ### 🔴 P11 · MU-001 · `active_hypothesis` — Advance to `proved`
 
-**Ground-truth status is `active_hypothesis`. Note: prior task d27b8826-5a9 reported promotion, but ground-truth YAML currently shows `active_hypothesis`.**
+**Ground-truth status is `active_hypothesis`. Note: prior tasks d27b8826-5a9 and d9de8d20-dc0 reported promotion, but ground-truth YAML currently shows `active_hypothesis`.**
 
 Next action:
 - Read `claims/MU-001.yml` to confirm actual status and open gates.
 - If remaining gates are open, verify `calc/mass_drag_v3.py` and `CausalGraphTheory/MassRatio.lean` satisfy all done conditions.
 - Promote `claims/MU-001.yml` to `proved`.
+
+---
+
+### ✅ HYDROGEN-001 · Gate 3 — Quantitative Binding Energy Prediction — COMPLETED (2026-02-27)
+
+**Gate 3 quantitative binding energy prediction from COG graph dynamics delivered. DO NOT reassign Gate 3.**
+
+What was delivered (task 892ce7a2-596):
+- `calc/hydrogen_binding.py` extended with three quantitative prediction functions: `ground_state_proxy_ratio()`, and supporting quantitative predictors.
+- Gate 3 closed.
+
+**Anti-Loop Rule:** Do NOT re-implement Gate 3 hydrogen binding energy prediction functions. Gate 3 is complete; remaining work is YAML promotion only.
 
 ---
 
@@ -506,15 +518,7 @@ Best near-miss: (255, 736, 4000) with error 6.0e-8.
 
 ---
 
-### ✅ P0 · KERNEL-001 · KernelV2.lean — Gate 1 — COMPLETED (2026-02-26)
-
-**`CausalGraphTheory/KernelV2.lean` is fully implemented. DO NOT reassign.**
-
-What was delivered:
-- `NodeStateV2` with `psi : ComplexOctonion ℤ`, `colorLabel : FanoPoint`, `tickCount`, `topoDepth`
-- `isVacuumOrbit`, `vacuumState`, `twoOmega`, `vacuumColorLabel`, `omega_vac`
-- `omega_representable_in_kernel_v2`, `all_psi_representable`, `colorLabel_representable`
-- `isPhaseOnlyStep` / `isEnergyEx
+### ✅ P0 · KERNEL-001 · KernelV2.lean — Gate 1 — COMPLETED
 ## Hard Constraints (enforce strictly)
 
 - **No continuum:** `Mathlib.Analysis.*`, `Mathlib.Topology.*`, `Mathlib.Data.Real.*`
