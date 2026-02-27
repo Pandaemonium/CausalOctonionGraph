@@ -1,0 +1,10 @@
+section,label,hand,sequence_id,cycle_found,cycle_start,period,steps_recorded
+dynamic,electron_favored_vector,left,vacuum_pass_e7,True,0,4,5
+dynamic,electron_favored_vector,left,interaction_pass_123,True,0,3,4
+dynamic,electron_favored_vector,right,vacuum_pass_e7,True,0,4,5
+dynamic,electron_favored_vector,right,interaction_pass_123,True,0,6,7
+dynamic,proton_proto_vector,left,vacuum_pass_e7,True,0,4,5
+dynamic,proton_proto_vector,left,interaction_pass_123,True,0,6,7
+dynamic,proton_proto_vector,right,vacuum_pass_e7,True,0,4,5
+dynamic,proton_proto_vector,right,interaction_pass_123,True,0,6,7
+coupled,electron_vs_proton_proto,mixed,coupled_internal123_plus_cross,True,0,16,17

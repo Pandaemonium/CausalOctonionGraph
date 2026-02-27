@@ -1,0 +1,40 @@
+{
+  "schema_version": "xor_charge_sign_interaction_matrix_v1",
+  "generated_at_utc": "2026-02-27T10:46:47.543959Z",
+  "charges": {
+    "vector_electron_favored": 0,
+    "left_spinor_electron_ideal": -8,
+    "right_spinor_electron_ideal": 8,
+    "vacuum_doubled": 0
+  },
+  "matrix": {
+    "vector_electron_favored": {
+      "vector_electron_favored": "neutral",
+      "left_spinor_electron_ideal": "neutral",
+      "right_spinor_electron_ideal": "neutral",
+      "vacuum_doubled": "neutral"
+    },
+    "left_spinor_electron_ideal": {
+      "vector_electron_favored": "neutral",
+      "left_spinor_electron_ideal": "repulsive",
+      "right_spinor_electron_ideal": "attractive",
+      "vacuum_doubled": "neutral"
+    },
+    "right_spinor_electron_ideal": {
+      "vector_electron_favored": "neutral",
+      "left_spinor_electron_ideal": "attractive",
+      "right_spinor_electron_ideal": "repulsive",
+      "vacuum_doubled": "neutral"
+    },
+    "vacuum_doubled": {
+      "vector_electron_favored": "neutral",
+      "left_spinor_electron_ideal": "neutral",
+      "right_spinor_electron_ideal": "neutral",
+      "vacuum_doubled": "neutral"
+    }
+  },
+  "notes": [
+    "XOR-basis polarity classifier using D1-D3 semantics.",
+    "No spatial trajectory or force magnitude model in this artifact."
+  ]
+}

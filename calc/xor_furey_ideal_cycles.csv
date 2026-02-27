@@ -1,0 +1,17 @@
+motif_id,family,support,support_bits,period_left_e7,period_right_e7,stable_period4
+su_vacuum_omega,Su,"[0, 7]",['111'],4,4,True
+su_single_1,Su,"[1, 6]","['001', '110']",4,4,True
+su_single_2,Su,"[2, 5]","['010', '101']",4,4,True
+su_single_3,Su,"[3, 4]","['011', '100']",4,4,True
+su_double_12,Su,"[3, 4]","['011', '100']",4,4,True
+su_double_13,Su,"[2, 5]","['010', '101']",4,4,True
+su_double_23,Su,"[1, 6]","['001', '110']",4,4,True
+su_triple_electron,Su,"[0, 7]",['111'],4,4,True
+sd_vacuum_omega_dag,Sd,"[0, 7]",['111'],4,4,True
+sd_single_1,Sd,"[1, 6]","['001', '110']",4,4,True
+sd_single_2,Sd,"[2, 5]","['010', '101']",4,4,True
+sd_single_3,Sd,"[3, 4]","['011', '100']",4,4,True
+sd_double_12,Sd,"[3, 4]","['011', '100']",4,4,True
+sd_double_13,Sd,"[2, 5]","['010', '101']",4,4,True
+sd_double_23,Sd,"[1, 6]","['001', '110']",4,4,True
+sd_triple_dual_electron,Sd,"[0, 7]",['111'],4,4,True

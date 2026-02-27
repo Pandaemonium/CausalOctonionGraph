@@ -1,0 +1,6415 @@
+{
+  "schema_version": "xor_coupled_motif_cycles_v1",
+  "generated_at_utc": "2026-02-27T10:21:06.709233Z",
+  "notes": [
+    "Coupled dynamics are deterministic and purely structural.",
+    "Higher periods are expected from motif coupling even when isolated motifs are period <= 4."
+  ],
+  "triads": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      1,
+      4,
+      5
+    ],
+    [
+      1,
+      6,
+      7
+    ],
+    [
+      2,
+      4,
+      6
+    ],
+    [
+      2,
+      5,
+      7
+    ],
+    [
+      3,
+      4,
+      7
+    ],
+    [
+      3,
+      5,
+      6
+    ]
+  ],
+  "pair_count": 21,
+  "period_histogram": {
+    "4": 11,
+    "16": 2,
+    "8": 5,
+    "2": 3
+  },
+  "pairs": [
+    {
+      "pair_id": "(1, 2, 3)-(1, 4, 5)",
+      "triad_a": [
+        1,
+        2,
+        3
+      ],
+      "triad_b": [
+        1,
+        4,
+        5
+      ],
+      "cycle_found": true,
+      "cycle_start": 2,
+      "period": 4,
+      "steps_recorded": 7,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            -1,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 4
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1,
+            1
+          ],
+          "b_vector": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            -1
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1,
+            1,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            1,
+            -1
+          ],
+          "b_vector": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            1
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            -1,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            1,
+            -1,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 6,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1,
+            1
+          ],
+          "b_vector": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            -1
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 2
+        }
+      ]
+    },
+    {
+      "pair_id": "(1, 2, 3)-(1, 6, 7)",
+      "triad_a": [
+        1,
+        2,
+        3
+      ],
+      "triad_b": [
+        1,
+        6,
+        7
+      ],
+      "cycle_found": true,
+      "cycle_start": 5,
+      "period": 16,
+      "steps_recorded": 22,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            -1,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 6
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            1,
+            1
+          ],
+          "b_vector": [
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            -1
+          ],
+          "b_vector": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 5,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            -1
+          ],
+          "b_vector": [
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 6,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            -1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 7,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            -1
+          ],
+          "b_vector": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "a_dominant_idx": 5,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 8,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1,
+            -1
+          ],
+          "b_vector": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 9,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "b_vector": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 10,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            -1
+          ],
+          "b_vector": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 11,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1,
+            1
+          ],
+          "b_vector": [
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 5,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 12,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            1,
+            1
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 13,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            -1
+          ],
+          "b_vector": [
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 14,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            1,
+            -1,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 15,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            -1
+          ],
+          "b_vector": [
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 5,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 16,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1,
+            -1
+          ],
+          "b_vector": [
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 17,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "b_vector": [
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 18,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            -1
+          ],
+          "b_vector": [
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 19,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1,
+            1
+          ],
+          "b_vector": [
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 5,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 20,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            1,
+            1
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 21,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            -1
+          ],
+          "b_vector": [
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 1
+        }
+      ]
+    },
+    {
+      "pair_id": "(1, 2, 3)-(2, 4, 6)",
+      "triad_a": [
+        1,
+        2,
+        3
+      ],
+      "triad_b": [
+        2,
+        4,
+        6
+      ],
+      "cycle_found": true,
+      "cycle_start": 4,
+      "period": 4,
+      "steps_recorded": 9,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            1,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            -1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            1,
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            -1,
+            0,
+            1,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 4
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            -1,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            1
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            1
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 6,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1,
+            1,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 7,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            -1
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 8,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            -1,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            1
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 1
+        }
+      ]
+    },
+    {
+      "pair_id": "(1, 2, 3)-(2, 5, 7)",
+      "triad_a": [
+        1,
+        2,
+        3
+      ],
+      "triad_b": [
+        2,
+        5,
+        7
+      ],
+      "cycle_found": true,
+      "cycle_start": 11,
+      "period": 8,
+      "steps_recorded": 20,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            1,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            1,
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 5
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            -1
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1,
+            -1,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 6,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            -1
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 7,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1,
+            -1
+          ],
+          "b_vector": [
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 5,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 8,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 5
+        },
+        {
+          "step": 9,
+          "a_vector": [
+            -1,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 10,
+          "a_vector": [
+            1,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 11,
+          "a_vector": [
+            0,
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 12,
+          "a_vector": [
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 13,
+          "a_vector": [
+            1,
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 14,
+          "a_vector": [
+            -1,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 15,
+          "a_vector": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 16,
+          "a_vector": [
+            -1,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 17,
+          "a_vector": [
+            -1,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 18,
+          "a_vector": [
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 19,
+          "a_vector": [
+            0,
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        }
+      ]
+    },
+    {
+      "pair_id": "(1, 2, 3)-(3, 4, 7)",
+      "triad_a": [
+        1,
+        2,
+        3
+      ],
+      "triad_b": [
+        3,
+        4,
+        7
+      ],
+      "cycle_found": true,
+      "cycle_start": 5,
+      "period": 4,
+      "steps_recorded": 10,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            -1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            1,
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            1,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            -1,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 4
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 6,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            -1
+          ],
+          "b_vector": [
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 7,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 8,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1,
+            0,
+            1
+          ],
+          "b_vector": [
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 9,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 1
+        }
+      ]
+    },
+    {
+      "pair_id": "(1, 2, 3)-(3, 5, 6)",
+      "triad_a": [
+        1,
+        2,
+        3
+      ],
+      "triad_b": [
+        3,
+        5,
+        6
+      ],
+      "cycle_found": true,
+      "cycle_start": 10,
+      "period": 16,
+      "steps_recorded": 27,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            -1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            -1,
+            0,
+            1,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            1,
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            -1,
+            0,
+            1,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            1,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            -1,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 5
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            1
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 6,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            1,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 7,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            -1
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 5,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 8,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            -1
+          ],
+          "b_vector": [
+            0,
+            -1,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 9,
+          "a_vector": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            1
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "a_dominant_idx": 5,
+          "b_dominant_idx": 5
+        },
+        {
+          "step": 10,
+          "a_vector": [
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 11,
+          "a_vector": [
+            -1,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 12,
+          "a_vector": [
+            -1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 13,
+          "a_vector": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 14,
+          "a_vector": [
+            -1,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 15,
+          "a_vector": [
+            1,
+            -1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            -1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 16,
+          "a_vector": [
+            1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            -1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 17,
+          "a_vector": [
+            0,
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 18,
+          "a_vector": [
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 19,
+          "a_vector": [
+            -1,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 20,
+          "a_vector": [
+            -1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 21,
+          "a_vector": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 22,
+          "a_vector": [
+            -1,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 23,
+          "a_vector": [
+            1,
+            -1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 24,
+          "a_vector": [
+            1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 25,
+          "a_vector": [
+            0,
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 26,
+          "a_vector": [
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        }
+      ]
+    },
+    {
+      "pair_id": "(1, 4, 5)-(1, 6, 7)",
+      "triad_a": [
+        1,
+        4,
+        5
+      ],
+      "triad_b": [
+        1,
+        6,
+        7
+      ],
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 2,
+      "steps_recorded": 6,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 6
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            -1,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            1,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            1,
+            -1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            1,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        }
+      ]
+    },
+    {
+      "pair_id": "(1, 4, 5)-(2, 4, 6)",
+      "triad_a": [
+        1,
+        4,
+        5
+      ],
+      "triad_b": [
+        2,
+        4,
+        6
+      ],
+      "cycle_found": true,
+      "cycle_start": 4,
+      "period": 4,
+      "steps_recorded": 9,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            1
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            -1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "a_dominant_idx": 3,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 4
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            -1,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 6,
+          "a_vector": [
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            -1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 7,
+          "a_vector": [
+            0,
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 8,
+          "a_vector": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        }
+      ]
+    },
+    {
+      "pair_id": "(1, 4, 5)-(2, 5, 7)",
+      "triad_a": [
+        1,
+        4,
+        5
+      ],
+      "triad_b": [
+        2,
+        5,
+        7
+      ],
+      "cycle_found": true,
+      "cycle_start": 5,
+      "period": 4,
+      "steps_recorded": 10,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            1
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 3,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 5
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            1,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            1,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 6,
+          "a_vector": [
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 7,
+          "a_vector": [
+            0,
+            0,
+            1,
+            -1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 8,
+          "a_vector": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 9,
+          "a_vector": [
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        }
+      ]
+    },
+    {
+      "pair_id": "(1, 4, 5)-(3, 4, 7)",
+      "triad_a": [
+        1,
+        4,
+        5
+      ],
+      "triad_b": [
+        3,
+        4,
+        7
+      ],
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 8,
+      "steps_recorded": 12,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          "b_vector": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            -1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 4
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            0,
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "b_vector": [
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 6,
+          "a_vector": [
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 7,
+          "a_vector": [
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 8,
+          "a_vector": [
+            0,
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "b_vector": [
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 9,
+          "a_vector": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 10,
+          "a_vector": [
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 11,
+          "a_vector": [
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        }
+      ]
+    },
+    {
+      "pair_id": "(1, 4, 5)-(3, 5, 6)",
+      "triad_a": [
+        1,
+        4,
+        5
+      ],
+      "triad_b": [
+        3,
+        5,
+        6
+      ],
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 8,
+      "steps_recorded": 12,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          "b_vector": [
+            0,
+            0,
+            -1,
+            0,
+            1,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            -1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 5
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            -1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            -1,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "b_vector": [
+            0,
+            -1,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 6,
+          "a_vector": [
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 7,
+          "a_vector": [
+            -1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            -1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 8,
+          "a_vector": [
+            -1,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            -1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 9,
+          "a_vector": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "b_vector": [
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 10,
+          "a_vector": [
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 11,
+          "a_vector": [
+            -1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        }
+      ]
+    },
+    {
+      "pair_id": "(1, 6, 7)-(2, 4, 6)",
+      "triad_a": [
+        1,
+        6,
+        7
+      ],
+      "triad_b": [
+        2,
+        4,
+        6
+      ],
+      "cycle_found": true,
+      "cycle_start": 5,
+      "period": 4,
+      "steps_recorded": 10,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "b_vector": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            0,
+            0,
+            0,
+            1,
+            -1,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            -1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "a_dominant_idx": 3,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 6,
+          "b_dominant_idx": 4
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            0,
+            0,
+            1,
+            -1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 6,
+          "a_vector": [
+            0,
+            0,
+            1,
+            -1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 7,
+          "a_vector": [
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 8,
+          "a_vector": [
+            0,
+            0,
+            -1,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 9,
+          "a_vector": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        }
+      ]
+    },
+    {
+      "pair_id": "(1, 6, 7)-(2, 5, 7)",
+      "triad_a": [
+        1,
+        6,
+        7
+      ],
+      "triad_b": [
+        2,
+        5,
+        7
+      ],
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 4,
+      "steps_recorded": 8,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "b_vector": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            0,
+            0,
+            0,
+            1,
+            -1,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 3,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "a_dominant_idx": 6,
+          "b_dominant_idx": 5
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            0,
+            0,
+            -1,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 6,
+          "a_vector": [
+            0,
+            0,
+            1,
+            -1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 7,
+          "a_vector": [
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        }
+      ]
+    },
+    {
+      "pair_id": "(1, 6, 7)-(3, 4, 7)",
+      "triad_a": [
+        1,
+        6,
+        7
+      ],
+      "triad_b": [
+        3,
+        4,
+        7
+      ],
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 8,
+      "steps_recorded": 12,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            0,
+            0,
+            -1,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 6,
+          "b_dominant_idx": 4
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            0,
+            0,
+            -1,
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 6,
+          "a_vector": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 7,
+          "a_vector": [
+            0,
+            0,
+            -1,
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 8,
+          "a_vector": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 9,
+          "a_vector": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 10,
+          "a_vector": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 11,
+          "a_vector": [
+            0,
+            0,
+            -1,
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        }
+      ]
+    },
+    {
+      "pair_id": "(1, 6, 7)-(3, 5, 6)",
+      "triad_a": [
+        1,
+        6,
+        7
+      ],
+      "triad_b": [
+        3,
+        5,
+        6
+      ],
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 8,
+      "steps_recorded": 12,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            0,
+            0,
+            -1,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            -1,
+            0,
+            1,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "a_dominant_idx": 6,
+          "b_dominant_idx": 5
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 6,
+          "a_vector": [
+            0,
+            0,
+            -1,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            -1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 7,
+          "a_vector": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 8,
+          "a_vector": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 9,
+          "a_vector": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 10,
+          "a_vector": [
+            0,
+            0,
+            -1,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 11,
+          "a_vector": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        }
+      ]
+    },
+    {
+      "pair_id": "(2, 4, 6)-(2, 5, 7)",
+      "triad_a": [
+        2,
+        4,
+        6
+      ],
+      "triad_b": [
+        2,
+        5,
+        7
+      ],
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 2,
+      "steps_recorded": 6,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 5
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            0,
+            -1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            1,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 2
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            1,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 2
+        }
+      ]
+    },
+    {
+      "pair_id": "(2, 4, 6)-(3, 4, 7)",
+      "triad_a": [
+        2,
+        4,
+        6
+      ],
+      "triad_b": [
+        3,
+        4,
+        7
+      ],
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 4,
+      "steps_recorded": 8,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 4
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            -1,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "b_vector": [
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 6,
+          "a_vector": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 7,
+          "a_vector": [
+            -1,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        }
+      ]
+    },
+    {
+      "pair_id": "(2, 4, 6)-(3, 5, 6)",
+      "triad_a": [
+        2,
+        4,
+        6
+      ],
+      "triad_b": [
+        3,
+        5,
+        6
+      ],
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 4,
+      "steps_recorded": 8,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 5
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            0,
+            -1,
+            0,
+            1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            -1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            1,
+            0,
+            -1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            -1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            0,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "b_vector": [
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 6,
+          "a_vector": [
+            -1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 7,
+          "a_vector": [
+            0,
+            -1,
+            0,
+            1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            -1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        }
+      ]
+    },
+    {
+      "pair_id": "(2, 5, 7)-(3, 4, 7)",
+      "triad_a": [
+        2,
+        5,
+        7
+      ],
+      "triad_b": [
+        3,
+        4,
+        7
+      ],
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 4,
+      "steps_recorded": 8,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            1,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "a_dominant_idx": 5,
+          "b_dominant_idx": 4
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            0,
+            1,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            -1,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            0,
+            -1,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 6,
+          "a_vector": [
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 7,
+          "a_vector": [
+            0,
+            1,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        }
+      ]
+    },
+    {
+      "pair_id": "(2, 5, 7)-(3, 5, 6)",
+      "triad_a": [
+        2,
+        5,
+        7
+      ],
+      "triad_b": [
+        3,
+        5,
+        6
+      ],
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 4,
+      "steps_recorded": 8,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            1,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 5,
+          "b_dominant_idx": 5
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 6,
+          "a_vector": [
+            0,
+            1,
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 7,
+          "a_vector": [
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 2,
+          "b_dominant_idx": 3
+        }
+      ]
+    },
+    {
+      "pair_id": "(3, 4, 7)-(3, 5, 6)",
+      "triad_a": [
+        3,
+        4,
+        7
+      ],
+      "triad_b": [
+        3,
+        5,
+        6
+      ],
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 2,
+      "steps_recorded": 6,
+      "trace": [
+        {
+          "step": 0,
+          "a_vector": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "b_vector": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "a_dominant_idx": 3,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 1,
+          "a_vector": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "a_dominant_idx": 4,
+          "b_dominant_idx": 5
+        },
+        {
+          "step": 2,
+          "a_vector": [
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "b_vector": [
+            0,
+            -1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "a_dominant_idx": 1,
+          "b_dominant_idx": 1
+        },
+        {
+          "step": 3,
+          "a_vector": [
+            1,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 3,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 4,
+          "a_vector": [
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "b_vector": [
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "a_dominant_idx": 3,
+          "b_dominant_idx": 3
+        },
+        {
+          "step": 5,
+          "a_vector": [
+            1,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "b_vector": [
+            -1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "a_dominant_idx": 3,
+          "b_dominant_idx": 3
+        }
+      ]
+    }
+  ],
+  "csv_rows": [
+    {
+      "pair_id": "(1, 2, 3)-(1, 4, 5)",
+      "triad_a": "(1, 2, 3)",
+      "triad_b": "(1, 4, 5)",
+      "cycle_found": true,
+      "cycle_start": 2,
+      "period": 4,
+      "steps_recorded": 7,
+      "period_gt_4": false
+    },
+    {
+      "pair_id": "(1, 2, 3)-(1, 6, 7)",
+      "triad_a": "(1, 2, 3)",
+      "triad_b": "(1, 6, 7)",
+      "cycle_found": true,
+      "cycle_start": 5,
+      "period": 16,
+      "steps_recorded": 22,
+      "period_gt_4": true
+    },
+    {
+      "pair_id": "(1, 2, 3)-(2, 4, 6)",
+      "triad_a": "(1, 2, 3)",
+      "triad_b": "(2, 4, 6)",
+      "cycle_found": true,
+      "cycle_start": 4,
+      "period": 4,
+      "steps_recorded": 9,
+      "period_gt_4": false
+    },
+    {
+      "pair_id": "(1, 2, 3)-(2, 5, 7)",
+      "triad_a": "(1, 2, 3)",
+      "triad_b": "(2, 5, 7)",
+      "cycle_found": true,
+      "cycle_start": 11,
+      "period": 8,
+      "steps_recorded": 20,
+      "period_gt_4": true
+    },
+    {
+      "pair_id": "(1, 2, 3)-(3, 4, 7)",
+      "triad_a": "(1, 2, 3)",
+      "triad_b": "(3, 4, 7)",
+      "cycle_found": true,
+      "cycle_start": 5,
+      "period": 4,
+      "steps_recorded": 10,
+      "period_gt_4": false
+    },
+    {
+      "pair_id": "(1, 2, 3)-(3, 5, 6)",
+      "triad_a": "(1, 2, 3)",
+      "triad_b": "(3, 5, 6)",
+      "cycle_found": true,
+      "cycle_start": 10,
+      "period": 16,
+      "steps_recorded": 27,
+      "period_gt_4": true
+    },
+    {
+      "pair_id": "(1, 4, 5)-(1, 6, 7)",
+      "triad_a": "(1, 4, 5)",
+      "triad_b": "(1, 6, 7)",
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 2,
+      "steps_recorded": 6,
+      "period_gt_4": false
+    },
+    {
+      "pair_id": "(1, 4, 5)-(2, 4, 6)",
+      "triad_a": "(1, 4, 5)",
+      "triad_b": "(2, 4, 6)",
+      "cycle_found": true,
+      "cycle_start": 4,
+      "period": 4,
+      "steps_recorded": 9,
+      "period_gt_4": false
+    },
+    {
+      "pair_id": "(1, 4, 5)-(2, 5, 7)",
+      "triad_a": "(1, 4, 5)",
+      "triad_b": "(2, 5, 7)",
+      "cycle_found": true,
+      "cycle_start": 5,
+      "period": 4,
+      "steps_recorded": 10,
+      "period_gt_4": false
+    },
+    {
+      "pair_id": "(1, 4, 5)-(3, 4, 7)",
+      "triad_a": "(1, 4, 5)",
+      "triad_b": "(3, 4, 7)",
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 8,
+      "steps_recorded": 12,
+      "period_gt_4": true
+    },
+    {
+      "pair_id": "(1, 4, 5)-(3, 5, 6)",
+      "triad_a": "(1, 4, 5)",
+      "triad_b": "(3, 5, 6)",
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 8,
+      "steps_recorded": 12,
+      "period_gt_4": true
+    },
+    {
+      "pair_id": "(1, 6, 7)-(2, 4, 6)",
+      "triad_a": "(1, 6, 7)",
+      "triad_b": "(2, 4, 6)",
+      "cycle_found": true,
+      "cycle_start": 5,
+      "period": 4,
+      "steps_recorded": 10,
+      "period_gt_4": false
+    },
+    {
+      "pair_id": "(1, 6, 7)-(2, 5, 7)",
+      "triad_a": "(1, 6, 7)",
+      "triad_b": "(2, 5, 7)",
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 4,
+      "steps_recorded": 8,
+      "period_gt_4": false
+    },
+    {
+      "pair_id": "(1, 6, 7)-(3, 4, 7)",
+      "triad_a": "(1, 6, 7)",
+      "triad_b": "(3, 4, 7)",
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 8,
+      "steps_recorded": 12,
+      "period_gt_4": true
+    },
+    {
+      "pair_id": "(1, 6, 7)-(3, 5, 6)",
+      "triad_a": "(1, 6, 7)",
+      "triad_b": "(3, 5, 6)",
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 8,
+      "steps_recorded": 12,
+      "period_gt_4": true
+    },
+    {
+      "pair_id": "(2, 4, 6)-(2, 5, 7)",
+      "triad_a": "(2, 4, 6)",
+      "triad_b": "(2, 5, 7)",
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 2,
+      "steps_recorded": 6,
+      "period_gt_4": false
+    },
+    {
+      "pair_id": "(2, 4, 6)-(3, 4, 7)",
+      "triad_a": "(2, 4, 6)",
+      "triad_b": "(3, 4, 7)",
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 4,
+      "steps_recorded": 8,
+      "period_gt_4": false
+    },
+    {
+      "pair_id": "(2, 4, 6)-(3, 5, 6)",
+      "triad_a": "(2, 4, 6)",
+      "triad_b": "(3, 5, 6)",
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 4,
+      "steps_recorded": 8,
+      "period_gt_4": false
+    },
+    {
+      "pair_id": "(2, 5, 7)-(3, 4, 7)",
+      "triad_a": "(2, 5, 7)",
+      "triad_b": "(3, 4, 7)",
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 4,
+      "steps_recorded": 8,
+      "period_gt_4": false
+    },
+    {
+      "pair_id": "(2, 5, 7)-(3, 5, 6)",
+      "triad_a": "(2, 5, 7)",
+      "triad_b": "(3, 5, 6)",
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 4,
+      "steps_recorded": 8,
+      "period_gt_4": false
+    },
+    {
+      "pair_id": "(3, 4, 7)-(3, 5, 6)",
+      "triad_a": "(3, 4, 7)",
+      "triad_b": "(3, 5, 6)",
+      "cycle_found": true,
+      "cycle_start": 3,
+      "period": 2,
+      "steps_recorded": 6,
+      "period_gt_4": false
+    }
+  ]
+}

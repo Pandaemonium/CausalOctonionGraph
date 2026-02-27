@@ -1,0 +1,6053 @@
+{
+  "schema_version": "xor_particle_motif_cycles_v1",
+  "generated_at_utc": "2026-02-27T10:21:06.724157Z",
+  "basis_index_map": {
+    "0": "e0",
+    "1": "e1",
+    "2": "e2",
+    "3": "e3",
+    "4": "e4",
+    "5": "e5",
+    "6": "e6",
+    "7": "e7"
+  },
+  "notes": [
+    "Cycle data is purely structural under XOR-gate dynamics.",
+    "No physical calibration constants are used."
+  ],
+  "stable_motif_definition": "support-closure under internal alternating schedule",
+  "motifs": [
+    {
+      "motif_id": "fano_line_l1",
+      "title": "Fano line L1",
+      "triad_oriented": [
+        1,
+        2,
+        3
+      ],
+      "triad_support_sorted": [
+        1,
+        2,
+        3
+      ],
+      "seed_vector": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seed_sparse": {
+        "e1": 1,
+        "e2": 1,
+        "e3": 1
+      },
+      "is_fano_line": true,
+      "is_stable_candidate": true,
+      "tags": [
+        "stable_candidate",
+        "fano_line"
+      ],
+      "policies": {
+        "internal_oriented_alternating": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                1,
+                -1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": -1,
+                "e3": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "internal_oriented_left_only": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 1,
+          "steps_recorded": 2,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "internal_oriented_right_only": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e2": -1,
+                "e3": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "vacuum_left_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e4": 1,
+                "e5": 1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e2": -1,
+                "e3": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                0,
+                0,
+                0,
+                -1,
+                -1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e4": -1,
+                "e5": -1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        },
+        "vacuum_right_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                0,
+                0,
+                -1,
+                -1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e4": -1,
+                "e5": -1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e2": -1,
+                "e3": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e4": 1,
+                "e5": 1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        },
+        "temporal_first_internal_alternating_left": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e4": 1,
+                "e5": 1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                -1,
+                1,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e2": 1,
+                "e3": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                0,
+                0,
+                0,
+                -1,
+                1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e4": -1,
+                "e5": 1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        },
+        "internal_alternating_then_temporal_left": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                0,
+                0,
+                1,
+                -1,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e4": 1,
+                "e5": -1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                -1,
+                1,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e2": 1,
+                "e3": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                0,
+                0,
+                0,
+                -1,
+                -1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e4": -1,
+                "e5": -1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        }
+      }
+    },
+    {
+      "motif_id": "fano_line_l2",
+      "title": "Fano line L2",
+      "triad_oriented": [
+        1,
+        4,
+        5
+      ],
+      "triad_support_sorted": [
+        1,
+        4,
+        5
+      ],
+      "seed_vector": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "seed_sparse": {
+        "e1": 1,
+        "e4": 1,
+        "e5": 1
+      },
+      "is_fano_line": true,
+      "is_stable_candidate": true,
+      "tags": [
+        "stable_candidate",
+        "fano_line"
+      ],
+      "policies": {
+        "internal_oriented_alternating": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e4": 1,
+                "e5": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                -1,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e4": -1,
+                "e5": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e4": 1,
+                "e5": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "internal_oriented_left_only": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 1,
+          "steps_recorded": 2,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e4": 1,
+                "e5": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e4": 1,
+                "e5": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "internal_oriented_right_only": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e4": 1,
+                "e5": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                -1,
+                0,
+                0,
+                -1,
+                -1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e4": -1,
+                "e5": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e4": 1,
+                "e5": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "vacuum_left_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e4": 1,
+                "e5": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                -1,
+                -1,
+                0,
+                0,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e2": -1,
+                "e3": -1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                -1,
+                0,
+                0,
+                -1,
+                -1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e4": -1,
+                "e5": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e2": 1,
+                "e3": 1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e4": 1,
+                "e5": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        },
+        "vacuum_right_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e4": 1,
+                "e5": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e2": 1,
+                "e3": 1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                -1,
+                0,
+                0,
+                -1,
+                -1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e4": -1,
+                "e5": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                0,
+                -1,
+                -1,
+                0,
+                0,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e2": -1,
+                "e3": -1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e4": 1,
+                "e5": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        },
+        "temporal_first_internal_alternating_left": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e4": 1,
+                "e5": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                -1,
+                -1,
+                0,
+                0,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e2": -1,
+                "e3": -1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                -1,
+                0,
+                0,
+                1,
+                -1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e4": 1,
+                "e5": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                0,
+                1,
+                -1,
+                0,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e2": 1,
+                "e3": -1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e4": 1,
+                "e5": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        },
+        "internal_alternating_then_temporal_left": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e4": 1,
+                "e5": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                -1,
+                1,
+                0,
+                0,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e2": -1,
+                "e3": 1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                -1,
+                0,
+                0,
+                1,
+                -1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e4": 1,
+                "e5": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e2": 1,
+                "e3": 1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e4": 1,
+                "e5": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        }
+      }
+    },
+    {
+      "motif_id": "fano_line_l3",
+      "title": "Fano line L3",
+      "triad_oriented": [
+        1,
+        7,
+        6
+      ],
+      "triad_support_sorted": [
+        1,
+        6,
+        7
+      ],
+      "seed_vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "seed_sparse": {
+        "e1": 1,
+        "e6": 1,
+        "e7": 1
+      },
+      "is_fano_line": true,
+      "is_stable_candidate": true,
+      "tags": [
+        "stable_candidate",
+        "fano_line"
+      ],
+      "policies": {
+        "internal_oriented_alternating": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "sparse": {
+                "e1": 1,
+                "e6": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                -1
+              ],
+              "sparse": {
+                "e1": 1,
+                "e6": 1,
+                "e7": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "sparse": {
+                "e1": 1,
+                "e6": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "internal_oriented_left_only": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 1,
+          "steps_recorded": 2,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "sparse": {
+                "e1": 1,
+                "e6": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "sparse": {
+                "e1": 1,
+                "e6": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "internal_oriented_right_only": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "sparse": {
+                "e1": 1,
+                "e6": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                -1
+              ],
+              "sparse": {
+                "e1": -1,
+                "e6": -1,
+                "e7": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "sparse": {
+                "e1": 1,
+                "e6": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "vacuum_left_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "sparse": {
+                "e1": 1,
+                "e6": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                -1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e0": -1,
+                "e1": 1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                -1
+              ],
+              "sparse": {
+                "e1": -1,
+                "e6": -1,
+                "e7": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e0": 1,
+                "e1": -1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "sparse": {
+                "e1": 1,
+                "e6": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "vacuum_right_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "sparse": {
+                "e1": 1,
+                "e6": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e0": -1,
+                "e1": -1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                -1
+              ],
+              "sparse": {
+                "e1": -1,
+                "e6": -1,
+                "e7": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e0": 1,
+                "e1": 1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "sparse": {
+                "e1": 1,
+                "e6": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "temporal_first_internal_alternating_left": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "sparse": {
+                "e1": 1,
+                "e6": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e0": 1,
+                "e1": 1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                -1
+              ],
+              "sparse": {
+                "e1": -1,
+                "e6": -1,
+                "e7": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e0": -1,
+                "e1": -1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "sparse": {
+                "e1": 1,
+                "e6": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "internal_alternating_then_temporal_left": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "sparse": {
+                "e1": 1,
+                "e6": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e0": 1,
+                "e1": 1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                -1
+              ],
+              "sparse": {
+                "e1": -1,
+                "e6": -1,
+                "e7": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e0": -1,
+                "e1": -1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "sparse": {
+                "e1": 1,
+                "e6": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        }
+      }
+    },
+    {
+      "motif_id": "fano_line_l4",
+      "title": "Fano line L4",
+      "triad_oriented": [
+        2,
+        4,
+        6
+      ],
+      "triad_support_sorted": [
+        2,
+        4,
+        6
+      ],
+      "seed_vector": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "seed_sparse": {
+        "e2": 1,
+        "e4": 1,
+        "e6": 1
+      },
+      "is_fano_line": true,
+      "is_stable_candidate": true,
+      "tags": [
+        "stable_candidate",
+        "fano_line"
+      ],
+      "policies": {
+        "internal_oriented_alternating": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e2": 1,
+                "e4": 1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                -1,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e2": 1,
+                "e4": -1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e2": 1,
+                "e4": 1,
+                "e6": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "internal_oriented_left_only": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 1,
+          "steps_recorded": 2,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e2": 1,
+                "e4": 1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e2": 1,
+                "e4": 1,
+                "e6": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "internal_oriented_right_only": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e2": 1,
+                "e4": 1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e2": -1,
+                "e4": -1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e2": 1,
+                "e4": 1,
+                "e6": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "vacuum_left_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e2": 1,
+                "e4": 1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                1,
+                0,
+                -1,
+                0,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e3": -1,
+                "e5": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e2": -1,
+                "e4": -1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                -1,
+                0,
+                1,
+                0,
+                -1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e3": 1,
+                "e5": -1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e2": 1,
+                "e4": 1,
+                "e6": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        },
+        "vacuum_right_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e2": 1,
+                "e4": 1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                -1,
+                0,
+                1,
+                0,
+                -1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e3": 1,
+                "e5": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e2": -1,
+                "e4": -1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                1,
+                0,
+                -1,
+                0,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e3": -1,
+                "e5": 1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e2": 1,
+                "e4": 1,
+                "e6": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        },
+        "temporal_first_internal_alternating_left": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e2": 1,
+                "e4": 1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                1,
+                0,
+                -1,
+                0,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e3": -1,
+                "e5": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                -1,
+                0,
+                1,
+                0,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e2": -1,
+                "e4": 1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e3": -1,
+                "e5": -1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e2": 1,
+                "e4": 1,
+                "e6": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        },
+        "internal_alternating_then_temporal_left": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e2": 1,
+                "e4": 1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e3": 1,
+                "e5": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                -1,
+                0,
+                1,
+                0,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e2": -1,
+                "e4": 1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                -1,
+                0,
+                1,
+                0,
+                -1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e3": 1,
+                "e5": -1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "sparse": {
+                "e2": 1,
+                "e4": 1,
+                "e6": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        }
+      }
+    },
+    {
+      "motif_id": "fano_line_l5",
+      "title": "Fano line L5",
+      "triad_oriented": [
+        2,
+        5,
+        7
+      ],
+      "triad_support_sorted": [
+        2,
+        5,
+        7
+      ],
+      "seed_vector": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "seed_sparse": {
+        "e2": 1,
+        "e5": 1,
+        "e7": 1
+      },
+      "is_fano_line": true,
+      "is_stable_candidate": true,
+      "tags": [
+        "stable_candidate",
+        "fano_line"
+      ],
+      "policies": {
+        "internal_oriented_alternating": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              "sparse": {
+                "e2": 1,
+                "e5": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                0,
+                -1,
+                0,
+                1
+              ],
+              "sparse": {
+                "e2": 1,
+                "e5": -1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              "sparse": {
+                "e2": 1,
+                "e5": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "internal_oriented_left_only": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 1,
+          "steps_recorded": 2,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              "sparse": {
+                "e2": 1,
+                "e5": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              "sparse": {
+                "e2": 1,
+                "e5": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "internal_oriented_right_only": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              "sparse": {
+                "e2": 1,
+                "e5": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                -1,
+                0,
+                0,
+                -1,
+                0,
+                -1
+              ],
+              "sparse": {
+                "e2": -1,
+                "e5": -1,
+                "e7": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              "sparse": {
+                "e2": 1,
+                "e5": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "vacuum_left_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              "sparse": {
+                "e2": 1,
+                "e5": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                -1,
+                0,
+                -1,
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e0": -1,
+                "e2": -1,
+                "e5": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                -1,
+                0,
+                0,
+                -1,
+                0,
+                -1
+              ],
+              "sparse": {
+                "e2": -1,
+                "e5": -1,
+                "e7": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                -1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e0": 1,
+                "e2": 1,
+                "e5": -1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              "sparse": {
+                "e2": 1,
+                "e5": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "vacuum_right_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              "sparse": {
+                "e2": 1,
+                "e5": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                -1,
+                0,
+                1,
+                0,
+                0,
+                -1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e0": -1,
+                "e2": 1,
+                "e5": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                -1,
+                0,
+                0,
+                -1,
+                0,
+                -1
+              ],
+              "sparse": {
+                "e2": -1,
+                "e5": -1,
+                "e7": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                1,
+                0,
+                -1,
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e0": 1,
+                "e2": -1,
+                "e5": 1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              "sparse": {
+                "e2": 1,
+                "e5": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "temporal_first_internal_alternating_left": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              "sparse": {
+                "e2": 1,
+                "e5": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                1,
+                0,
+                -1,
+                0,
+                0,
+                -1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e0": 1,
+                "e2": -1,
+                "e5": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              "sparse": {
+                "e2": 1,
+                "e5": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "internal_alternating_then_temporal_left": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              "sparse": {
+                "e2": 1,
+                "e5": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                -1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              "sparse": {
+                "e0": -1,
+                "e2": 1,
+                "e5": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              "sparse": {
+                "e2": 1,
+                "e5": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        }
+      }
+    },
+    {
+      "motif_id": "fano_line_l6",
+      "title": "Fano line L6",
+      "triad_oriented": [
+        3,
+        4,
+        7
+      ],
+      "triad_support_sorted": [
+        3,
+        4,
+        7
+      ],
+      "seed_vector": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "seed_sparse": {
+        "e3": 1,
+        "e4": 1,
+        "e7": 1
+      },
+      "is_fano_line": true,
+      "is_stable_candidate": true,
+      "tags": [
+        "stable_candidate",
+        "fano_line"
+      ],
+      "policies": {
+        "internal_oriented_alternating": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+              ],
+              "sparse": {
+                "e3": 1,
+                "e4": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                -1,
+                0,
+                0,
+                1
+              ],
+              "sparse": {
+                "e3": 1,
+                "e4": -1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+              ],
+              "sparse": {
+                "e3": 1,
+                "e4": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "internal_oriented_left_only": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 1,
+          "steps_recorded": 2,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+              ],
+              "sparse": {
+                "e3": 1,
+                "e4": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+              ],
+              "sparse": {
+                "e3": 1,
+                "e4": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "internal_oriented_right_only": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+              ],
+              "sparse": {
+                "e3": 1,
+                "e4": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                0,
+                -1,
+                -1,
+                0,
+                0,
+                -1
+              ],
+              "sparse": {
+                "e3": -1,
+                "e4": -1,
+                "e7": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+              ],
+              "sparse": {
+                "e3": 1,
+                "e4": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "vacuum_left_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+              ],
+              "sparse": {
+                "e3": 1,
+                "e4": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                -1,
+                0,
+                0,
+                -1,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e0": -1,
+                "e3": -1,
+                "e4": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                0,
+                -1,
+                -1,
+                0,
+                0,
+                -1
+              ],
+              "sparse": {
+                "e3": -1,
+                "e4": -1,
+                "e7": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                1,
+                0,
+                0,
+                1,
+                -1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e0": 1,
+                "e3": 1,
+                "e4": -1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+              ],
+              "sparse": {
+                "e3": 1,
+                "e4": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "vacuum_right_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+              ],
+              "sparse": {
+                "e3": 1,
+                "e4": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                -1,
+                0,
+                0,
+                1,
+                -1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e0": -1,
+                "e3": 1,
+                "e4": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                0,
+                -1,
+                -1,
+                0,
+                0,
+                -1
+              ],
+              "sparse": {
+                "e3": -1,
+                "e4": -1,
+                "e7": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                1,
+                0,
+                0,
+                -1,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e0": 1,
+                "e3": -1,
+                "e4": 1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+              ],
+              "sparse": {
+                "e3": 1,
+                "e4": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "temporal_first_internal_alternating_left": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+              ],
+              "sparse": {
+                "e3": 1,
+                "e4": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                1,
+                0,
+                0,
+                -1,
+                -1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e0": 1,
+                "e3": -1,
+                "e4": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+              ],
+              "sparse": {
+                "e3": 1,
+                "e4": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "internal_alternating_then_temporal_left": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+              ],
+              "sparse": {
+                "e3": 1,
+                "e4": 1,
+                "e7": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                -1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e0": -1,
+                "e3": 1,
+                "e4": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+              ],
+              "sparse": {
+                "e3": 1,
+                "e4": 1,
+                "e7": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        }
+      }
+    },
+    {
+      "motif_id": "fano_line_l7",
+      "title": "Fano line L7",
+      "triad_oriented": [
+        3,
+        6,
+        5
+      ],
+      "triad_support_sorted": [
+        3,
+        5,
+        6
+      ],
+      "seed_vector": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "seed_sparse": {
+        "e3": 1,
+        "e5": 1,
+        "e6": 1
+      },
+      "is_fano_line": true,
+      "is_stable_candidate": true,
+      "tags": [
+        "stable_candidate",
+        "fano_line"
+      ],
+      "policies": {
+        "internal_oriented_alternating": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e3": 1,
+                "e5": 1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e3": 1,
+                "e5": 1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e3": 1,
+                "e5": 1,
+                "e6": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "internal_oriented_left_only": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 1,
+          "steps_recorded": 2,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e3": 1,
+                "e5": 1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e3": 1,
+                "e5": 1,
+                "e6": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "internal_oriented_right_only": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e3": 1,
+                "e5": 1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e3": -1,
+                "e5": -1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e3": 1,
+                "e5": 1,
+                "e6": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "vacuum_left_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e3": 1,
+                "e5": 1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                1,
+                -1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": -1,
+                "e4": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e3": -1,
+                "e5": -1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                -1,
+                1,
+                0,
+                -1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e2": 1,
+                "e4": -1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e3": 1,
+                "e5": 1,
+                "e6": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        },
+        "vacuum_right_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e3": 1,
+                "e5": 1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                -1,
+                1,
+                0,
+                -1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e2": 1,
+                "e4": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e3": -1,
+                "e5": -1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                1,
+                -1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": -1,
+                "e4": 1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e3": 1,
+                "e5": 1,
+                "e6": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        },
+        "temporal_first_internal_alternating_left": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e3": 1,
+                "e5": 1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                1,
+                -1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": -1,
+                "e4": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e3": -1,
+                "e5": -1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                1,
+                1,
+                0,
+                -1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e4": -1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e3": 1,
+                "e5": 1,
+                "e6": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        },
+        "internal_alternating_then_temporal_left": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e3": 1,
+                "e5": 1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                -1,
+                -1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e2": -1,
+                "e4": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e3": -1,
+                "e5": -1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                -1,
+                1,
+                0,
+                -1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e2": 1,
+                "e4": -1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e3": 1,
+                "e5": 1,
+                "e6": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        }
+      }
+    },
+    {
+      "motif_id": "electron_line_l1",
+      "title": "Electron scaffold line",
+      "triad_oriented": [
+        1,
+        2,
+        3
+      ],
+      "triad_support_sorted": [
+        1,
+        2,
+        3
+      ],
+      "seed_vector": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seed_sparse": {
+        "e1": 1,
+        "e2": 1,
+        "e3": 1
+      },
+      "is_fano_line": true,
+      "is_stable_candidate": true,
+      "tags": [
+        "electron_scaffold",
+        "stable_candidate"
+      ],
+      "policies": {
+        "internal_oriented_alternating": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                1,
+                -1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": -1,
+                "e3": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "internal_oriented_left_only": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 1,
+          "steps_recorded": 2,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "internal_oriented_right_only": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e2": -1,
+                "e3": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "vacuum_left_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e4": 1,
+                "e5": 1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e2": -1,
+                "e3": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                0,
+                0,
+                0,
+                -1,
+                -1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e4": -1,
+                "e5": -1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        },
+        "vacuum_right_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                0,
+                0,
+                -1,
+                -1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e4": -1,
+                "e5": -1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e2": -1,
+                "e3": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e4": 1,
+                "e5": 1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        },
+        "temporal_first_internal_alternating_left": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e4": 1,
+                "e5": 1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                -1,
+                1,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e2": 1,
+                "e3": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                0,
+                0,
+                0,
+                -1,
+                1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e4": -1,
+                "e5": 1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        },
+        "internal_alternating_then_temporal_left": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                0,
+                0,
+                1,
+                -1,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e4": 1,
+                "e5": -1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                -1,
+                1,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e2": 1,
+                "e3": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                0,
+                0,
+                0,
+                -1,
+                -1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e4": -1,
+                "e5": -1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e3": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        }
+      }
+    },
+    {
+      "motif_id": "proton_proto_t124",
+      "title": "Proton-proto triad",
+      "triad_oriented": [
+        1,
+        2,
+        4
+      ],
+      "triad_support_sorted": [
+        1,
+        2,
+        4
+      ],
+      "seed_vector": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "seed_sparse": {
+        "e1": 1,
+        "e2": 1,
+        "e4": 1
+      },
+      "is_fano_line": false,
+      "is_stable_candidate": false,
+      "tags": [
+        "proton_proto_scaffold",
+        "noncollinear"
+      ],
+      "policies": {
+        "internal_oriented_alternating": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e4": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                0,
+                -1,
+                0,
+                1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e3": -1,
+                "e5": 1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                -1,
+                1,
+                0,
+                -1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e2": 1,
+                "e4": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e3": 1,
+                "e5": 1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e4": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        },
+        "internal_oriented_left_only": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e4": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                -1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e3": 1,
+                "e5": -1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e4": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        },
+        "internal_oriented_right_only": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e4": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                0,
+                -1,
+                0,
+                1,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e3": -1,
+                "e5": 1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e4": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        },
+        "vacuum_left_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e4": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                0,
+                -1,
+                0,
+                1,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e3": -1,
+                "e5": 1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                -1,
+                -1,
+                0,
+                -1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e2": -1,
+                "e4": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                -1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e3": 1,
+                "e5": -1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e4": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        },
+        "vacuum_right_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e4": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                -1,
+                1,
+                0
+              ],
+              "sparse": {
+                "e3": 1,
+                "e5": -1,
+                "e6": 1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                -1,
+                -1,
+                0,
+                -1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": -1,
+                "e2": -1,
+                "e4": -1
+              }
+            },
+            {
+              "step": 3,
+              "vector": [
+                0,
+                0,
+                0,
+                -1,
+                0,
+                1,
+                -1,
+                0
+              ],
+              "sparse": {
+                "e3": -1,
+                "e5": 1,
+                "e6": -1
+              }
+            },
+            {
+              "step": 4,
+              "vector": [
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e4": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": false
+        },
+        "temporal_first_internal_alternating_left": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e4": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                1,
+                1,
+                0,
+                -1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e4": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e4": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        },
+        "internal_alternating_then_temporal_left": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 2,
+          "steps_recorded": 3,
+          "trace": [
+            {
+              "step": 0,
+              "vector": [
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e4": 1
+              }
+            },
+            {
+              "step": 1,
+              "vector": [
+                0,
+                1,
+                -1,
+                0,
+                -1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": -1,
+                "e4": -1
+              }
+            },
+            {
+              "step": 2,
+              "vector": [
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "sparse": {
+                "e1": 1,
+                "e2": 1,
+                "e4": 1
+              }
+            }
+          ],
+          "support_closure_within_motif_plus_e0": true
+        }
+      }
+    }
+  ],
+  "csv_rows": [
+    {
+      "motif_id": "fano_line_l1",
+      "triad": "(1, 2, 3)",
+      "policy_id": "internal_oriented_alternating",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l1",
+      "triad": "(1, 2, 3)",
+      "policy_id": "internal_oriented_left_only",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 1,
+      "steps_recorded": 2,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l1",
+      "triad": "(1, 2, 3)",
+      "policy_id": "internal_oriented_right_only",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l1",
+      "triad": "(1, 2, 3)",
+      "policy_id": "vacuum_left_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l1",
+      "triad": "(1, 2, 3)",
+      "policy_id": "vacuum_right_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l1",
+      "triad": "(1, 2, 3)",
+      "policy_id": "temporal_first_internal_alternating_left",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l1",
+      "triad": "(1, 2, 3)",
+      "policy_id": "internal_alternating_then_temporal_left",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l2",
+      "triad": "(1, 4, 5)",
+      "policy_id": "internal_oriented_alternating",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l2",
+      "triad": "(1, 4, 5)",
+      "policy_id": "internal_oriented_left_only",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 1,
+      "steps_recorded": 2,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l2",
+      "triad": "(1, 4, 5)",
+      "policy_id": "internal_oriented_right_only",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l2",
+      "triad": "(1, 4, 5)",
+      "policy_id": "vacuum_left_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l2",
+      "triad": "(1, 4, 5)",
+      "policy_id": "vacuum_right_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l2",
+      "triad": "(1, 4, 5)",
+      "policy_id": "temporal_first_internal_alternating_left",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l2",
+      "triad": "(1, 4, 5)",
+      "policy_id": "internal_alternating_then_temporal_left",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l3",
+      "triad": "(1, 7, 6)",
+      "policy_id": "internal_oriented_alternating",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l3",
+      "triad": "(1, 7, 6)",
+      "policy_id": "internal_oriented_left_only",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 1,
+      "steps_recorded": 2,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l3",
+      "triad": "(1, 7, 6)",
+      "policy_id": "internal_oriented_right_only",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l3",
+      "triad": "(1, 7, 6)",
+      "policy_id": "vacuum_left_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l3",
+      "triad": "(1, 7, 6)",
+      "policy_id": "vacuum_right_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l3",
+      "triad": "(1, 7, 6)",
+      "policy_id": "temporal_first_internal_alternating_left",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l3",
+      "triad": "(1, 7, 6)",
+      "policy_id": "internal_alternating_then_temporal_left",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l4",
+      "triad": "(2, 4, 6)",
+      "policy_id": "internal_oriented_alternating",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l4",
+      "triad": "(2, 4, 6)",
+      "policy_id": "internal_oriented_left_only",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 1,
+      "steps_recorded": 2,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l4",
+      "triad": "(2, 4, 6)",
+      "policy_id": "internal_oriented_right_only",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l4",
+      "triad": "(2, 4, 6)",
+      "policy_id": "vacuum_left_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l4",
+      "triad": "(2, 4, 6)",
+      "policy_id": "vacuum_right_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l4",
+      "triad": "(2, 4, 6)",
+      "policy_id": "temporal_first_internal_alternating_left",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l4",
+      "triad": "(2, 4, 6)",
+      "policy_id": "internal_alternating_then_temporal_left",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l5",
+      "triad": "(2, 5, 7)",
+      "policy_id": "internal_oriented_alternating",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l5",
+      "triad": "(2, 5, 7)",
+      "policy_id": "internal_oriented_left_only",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 1,
+      "steps_recorded": 2,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l5",
+      "triad": "(2, 5, 7)",
+      "policy_id": "internal_oriented_right_only",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l5",
+      "triad": "(2, 5, 7)",
+      "policy_id": "vacuum_left_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l5",
+      "triad": "(2, 5, 7)",
+      "policy_id": "vacuum_right_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l5",
+      "triad": "(2, 5, 7)",
+      "policy_id": "temporal_first_internal_alternating_left",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l5",
+      "triad": "(2, 5, 7)",
+      "policy_id": "internal_alternating_then_temporal_left",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l6",
+      "triad": "(3, 4, 7)",
+      "policy_id": "internal_oriented_alternating",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l6",
+      "triad": "(3, 4, 7)",
+      "policy_id": "internal_oriented_left_only",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 1,
+      "steps_recorded": 2,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l6",
+      "triad": "(3, 4, 7)",
+      "policy_id": "internal_oriented_right_only",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l6",
+      "triad": "(3, 4, 7)",
+      "policy_id": "vacuum_left_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l6",
+      "triad": "(3, 4, 7)",
+      "policy_id": "vacuum_right_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l6",
+      "triad": "(3, 4, 7)",
+      "policy_id": "temporal_first_internal_alternating_left",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l6",
+      "triad": "(3, 4, 7)",
+      "policy_id": "internal_alternating_then_temporal_left",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l7",
+      "triad": "(3, 6, 5)",
+      "policy_id": "internal_oriented_alternating",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l7",
+      "triad": "(3, 6, 5)",
+      "policy_id": "internal_oriented_left_only",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 1,
+      "steps_recorded": 2,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l7",
+      "triad": "(3, 6, 5)",
+      "policy_id": "internal_oriented_right_only",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l7",
+      "triad": "(3, 6, 5)",
+      "policy_id": "vacuum_left_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l7",
+      "triad": "(3, 6, 5)",
+      "policy_id": "vacuum_right_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l7",
+      "triad": "(3, 6, 5)",
+      "policy_id": "temporal_first_internal_alternating_left",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "fano_line_l7",
+      "triad": "(3, 6, 5)",
+      "policy_id": "internal_alternating_then_temporal_left",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "electron_line_l1",
+      "triad": "(1, 2, 3)",
+      "policy_id": "internal_oriented_alternating",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "electron_line_l1",
+      "triad": "(1, 2, 3)",
+      "policy_id": "internal_oriented_left_only",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 1,
+      "steps_recorded": 2,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "electron_line_l1",
+      "triad": "(1, 2, 3)",
+      "policy_id": "internal_oriented_right_only",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "electron_line_l1",
+      "triad": "(1, 2, 3)",
+      "policy_id": "vacuum_left_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "electron_line_l1",
+      "triad": "(1, 2, 3)",
+      "policy_id": "vacuum_right_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "electron_line_l1",
+      "triad": "(1, 2, 3)",
+      "policy_id": "temporal_first_internal_alternating_left",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "electron_line_l1",
+      "triad": "(1, 2, 3)",
+      "policy_id": "internal_alternating_then_temporal_left",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": true,
+      "is_stable_candidate": true
+    },
+    {
+      "motif_id": "proton_proto_t124",
+      "triad": "(1, 2, 4)",
+      "policy_id": "internal_oriented_alternating",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": false,
+      "is_stable_candidate": false
+    },
+    {
+      "motif_id": "proton_proto_t124",
+      "triad": "(1, 2, 4)",
+      "policy_id": "internal_oriented_left_only",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": false,
+      "is_stable_candidate": false
+    },
+    {
+      "motif_id": "proton_proto_t124",
+      "triad": "(1, 2, 4)",
+      "policy_id": "internal_oriented_right_only",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": false,
+      "is_stable_candidate": false
+    },
+    {
+      "motif_id": "proton_proto_t124",
+      "triad": "(1, 2, 4)",
+      "policy_id": "vacuum_left_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": false,
+      "is_stable_candidate": false
+    },
+    {
+      "motif_id": "proton_proto_t124",
+      "triad": "(1, 2, 4)",
+      "policy_id": "vacuum_right_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5,
+      "support_closure_within_motif_plus_e0": false,
+      "is_fano_line": false,
+      "is_stable_candidate": false
+    },
+    {
+      "motif_id": "proton_proto_t124",
+      "triad": "(1, 2, 4)",
+      "policy_id": "temporal_first_internal_alternating_left",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": false,
+      "is_stable_candidate": false
+    },
+    {
+      "motif_id": "proton_proto_t124",
+      "triad": "(1, 2, 4)",
+      "policy_id": "internal_alternating_then_temporal_left",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 2,
+      "steps_recorded": 3,
+      "support_closure_within_motif_plus_e0": true,
+      "is_fano_line": false,
+      "is_stable_candidate": false
+    }
+  ]
+}

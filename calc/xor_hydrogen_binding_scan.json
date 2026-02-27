@@ -1,0 +1,1295 @@
+{
+  "schema_version": "xor_hydrogen_binding_scan_v1",
+  "generated_at_utc": "2026-02-27T10:46:47.548387Z",
+  "notes": [
+    "Structural + XOR dynamic scan for HYDROGEN-001 bridge.",
+    "No spectroscopic or SI-calibrated claim in this artifact."
+  ],
+  "structural": {
+    "electron_motif": [
+      1,
+      2,
+      3
+    ],
+    "proton_proto_motif": [
+      1,
+      2,
+      4
+    ],
+    "electron_class": "associative_line",
+    "proton_proto_class": "noncollinear_triad",
+    "overlap_count": 2,
+    "shared_pair": [
+      1,
+      2
+    ],
+    "line_through_shared_pair": [
+      1,
+      2,
+      3
+    ],
+    "shared_line_count": 6,
+    "binding_proxy": {
+      "numerator": 6,
+      "denominator": 7,
+      "value_float": 0.8571428571428571
+    }
+  },
+  "dynamic": {
+    "electron_favored_vector": {
+      "left": {
+        "vacuum_pass_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "state_sparse": {
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e3": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                3
+              ],
+              "op_idx": null,
+              "hand": "left"
+            },
+            {
+              "step": 1,
+              "state_sparse": {
+                "e4": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e5": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e6": {
+                  "re": -1,
+                  "im": 0
+                }
+              },
+              "support": [
+                4,
+                5,
+                6
+              ],
+              "op_idx": 7,
+              "hand": "left"
+            },
+            {
+              "step": 2,
+              "state_sparse": {
+                "e1": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e3": {
+                  "re": -1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                3
+              ],
+              "op_idx": 7,
+              "hand": "left"
+            },
+            {
+              "step": 3,
+              "state_sparse": {
+                "e4": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e5": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e6": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                4,
+                5,
+                6
+              ],
+              "op_idx": 7,
+              "hand": "left"
+            },
+            {
+              "step": 4,
+              "state_sparse": {
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e3": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                3
+              ],
+              "op_idx": 7,
+              "hand": "left"
+            }
+          ]
+        },
+        "interaction_pass_123": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 3,
+          "steps_recorded": 4,
+          "trace": [
+            {
+              "step": 0,
+              "state_sparse": {
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e3": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                3
+              ],
+              "op_idx": null,
+              "hand": "left"
+            },
+            {
+              "step": 1,
+              "state_sparse": {
+                "e0": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e3": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                0,
+                2,
+                3
+              ],
+              "op_idx": 1,
+              "hand": "left"
+            },
+            {
+              "step": 2,
+              "state_sparse": {
+                "e0": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": -1,
+                  "im": 0
+                }
+              },
+              "support": [
+                0,
+                1,
+                2
+              ],
+              "op_idx": 2,
+              "hand": "left"
+            },
+            {
+              "step": 3,
+              "state_sparse": {
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e3": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                3
+              ],
+              "op_idx": 3,
+              "hand": "left"
+            }
+          ]
+        }
+      },
+      "right": {
+        "vacuum_pass_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "state_sparse": {
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e3": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                3
+              ],
+              "op_idx": null,
+              "hand": "right"
+            },
+            {
+              "step": 1,
+              "state_sparse": {
+                "e4": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e5": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e6": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                4,
+                5,
+                6
+              ],
+              "op_idx": 7,
+              "hand": "right"
+            },
+            {
+              "step": 2,
+              "state_sparse": {
+                "e1": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e3": {
+                  "re": -1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                3
+              ],
+              "op_idx": 7,
+              "hand": "right"
+            },
+            {
+              "step": 3,
+              "state_sparse": {
+                "e4": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e5": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e6": {
+                  "re": -1,
+                  "im": 0
+                }
+              },
+              "support": [
+                4,
+                5,
+                6
+              ],
+              "op_idx": 7,
+              "hand": "right"
+            },
+            {
+              "step": 4,
+              "state_sparse": {
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e3": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                3
+              ],
+              "op_idx": 7,
+              "hand": "right"
+            }
+          ]
+        },
+        "interaction_pass_123": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 6,
+          "steps_recorded": 7,
+          "trace": [
+            {
+              "step": 0,
+              "state_sparse": {
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e3": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                3
+              ],
+              "op_idx": null,
+              "hand": "right"
+            },
+            {
+              "step": 1,
+              "state_sparse": {
+                "e0": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e3": {
+                  "re": -1,
+                  "im": 0
+                }
+              },
+              "support": [
+                0,
+                2,
+                3
+              ],
+              "op_idx": 1,
+              "hand": "right"
+            },
+            {
+              "step": 2,
+              "state_sparse": {
+                "e0": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": -1,
+                  "im": 0
+                }
+              },
+              "support": [
+                0,
+                1,
+                2
+              ],
+              "op_idx": 2,
+              "hand": "right"
+            },
+            {
+              "step": 3,
+              "state_sparse": {
+                "e1": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e3": {
+                  "re": -1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                3
+              ],
+              "op_idx": 3,
+              "hand": "right"
+            },
+            {
+              "step": 4,
+              "state_sparse": {
+                "e0": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e3": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                0,
+                2,
+                3
+              ],
+              "op_idx": 1,
+              "hand": "right"
+            },
+            {
+              "step": 5,
+              "state_sparse": {
+                "e0": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e1": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                0,
+                1,
+                2
+              ],
+              "op_idx": 2,
+              "hand": "right"
+            },
+            {
+              "step": 6,
+              "state_sparse": {
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e3": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                3
+              ],
+              "op_idx": 3,
+              "hand": "right"
+            }
+          ]
+        }
+      }
+    },
+    "proton_proto_vector": {
+      "left": {
+        "vacuum_pass_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "state_sparse": {
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e4": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                4
+              ],
+              "op_idx": null,
+              "hand": "left"
+            },
+            {
+              "step": 1,
+              "state_sparse": {
+                "e3": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e5": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e6": {
+                  "re": -1,
+                  "im": 0
+                }
+              },
+              "support": [
+                3,
+                5,
+                6
+              ],
+              "op_idx": 7,
+              "hand": "left"
+            },
+            {
+              "step": 2,
+              "state_sparse": {
+                "e1": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e4": {
+                  "re": -1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                4
+              ],
+              "op_idx": 7,
+              "hand": "left"
+            },
+            {
+              "step": 3,
+              "state_sparse": {
+                "e3": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e5": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e6": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                3,
+                5,
+                6
+              ],
+              "op_idx": 7,
+              "hand": "left"
+            },
+            {
+              "step": 4,
+              "state_sparse": {
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e4": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                4
+              ],
+              "op_idx": 7,
+              "hand": "left"
+            }
+          ]
+        },
+        "interaction_pass_123": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 6,
+          "steps_recorded": 7,
+          "trace": [
+            {
+              "step": 0,
+              "state_sparse": {
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e4": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                4
+              ],
+              "op_idx": null,
+              "hand": "left"
+            },
+            {
+              "step": 1,
+              "state_sparse": {
+                "e0": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e3": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e5": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                0,
+                3,
+                5
+              ],
+              "op_idx": 1,
+              "hand": "left"
+            },
+            {
+              "step": 2,
+              "state_sparse": {
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e7": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                7
+              ],
+              "op_idx": 2,
+              "hand": "left"
+            },
+            {
+              "step": 3,
+              "state_sparse": {
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e4": {
+                  "re": -1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                4
+              ],
+              "op_idx": 3,
+              "hand": "left"
+            },
+            {
+              "step": 4,
+              "state_sparse": {
+                "e0": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e3": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e5": {
+                  "re": -1,
+                  "im": 0
+                }
+              },
+              "support": [
+                0,
+                3,
+                5
+              ],
+              "op_idx": 1,
+              "hand": "left"
+            },
+            {
+              "step": 5,
+              "state_sparse": {
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e7": {
+                  "re": -1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                7
+              ],
+              "op_idx": 2,
+              "hand": "left"
+            },
+            {
+              "step": 6,
+              "state_sparse": {
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e4": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                4
+              ],
+              "op_idx": 3,
+              "hand": "left"
+            }
+          ]
+        }
+      },
+      "right": {
+        "vacuum_pass_e7": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 4,
+          "steps_recorded": 5,
+          "trace": [
+            {
+              "step": 0,
+              "state_sparse": {
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e4": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                4
+              ],
+              "op_idx": null,
+              "hand": "right"
+            },
+            {
+              "step": 1,
+              "state_sparse": {
+                "e3": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e5": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e6": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                3,
+                5,
+                6
+              ],
+              "op_idx": 7,
+              "hand": "right"
+            },
+            {
+              "step": 2,
+              "state_sparse": {
+                "e1": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e4": {
+                  "re": -1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                4
+              ],
+              "op_idx": 7,
+              "hand": "right"
+            },
+            {
+              "step": 3,
+              "state_sparse": {
+                "e3": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e5": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e6": {
+                  "re": -1,
+                  "im": 0
+                }
+              },
+              "support": [
+                3,
+                5,
+                6
+              ],
+              "op_idx": 7,
+              "hand": "right"
+            },
+            {
+              "step": 4,
+              "state_sparse": {
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e4": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                4
+              ],
+              "op_idx": 7,
+              "hand": "right"
+            }
+          ]
+        },
+        "interaction_pass_123": {
+          "cycle_found": true,
+          "cycle_start": 0,
+          "period": 6,
+          "steps_recorded": 7,
+          "trace": [
+            {
+              "step": 0,
+              "state_sparse": {
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e4": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                4
+              ],
+              "op_idx": null,
+              "hand": "right"
+            },
+            {
+              "step": 1,
+              "state_sparse": {
+                "e0": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e3": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e5": {
+                  "re": -1,
+                  "im": 0
+                }
+              },
+              "support": [
+                0,
+                3,
+                5
+              ],
+              "op_idx": 1,
+              "hand": "right"
+            },
+            {
+              "step": 2,
+              "state_sparse": {
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e7": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                7
+              ],
+              "op_idx": 2,
+              "hand": "right"
+            },
+            {
+              "step": 3,
+              "state_sparse": {
+                "e1": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e4": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                4
+              ],
+              "op_idx": 3,
+              "hand": "right"
+            },
+            {
+              "step": 4,
+              "state_sparse": {
+                "e0": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e3": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e5": {
+                  "re": -1,
+                  "im": 0
+                }
+              },
+              "support": [
+                0,
+                3,
+                5
+              ],
+              "op_idx": 1,
+              "hand": "right"
+            },
+            {
+              "step": 5,
+              "state_sparse": {
+                "e1": {
+                  "re": -1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e7": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                7
+              ],
+              "op_idx": 2,
+              "hand": "right"
+            },
+            {
+              "step": 6,
+              "state_sparse": {
+                "e1": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e2": {
+                  "re": 1,
+                  "im": 0
+                },
+                "e4": {
+                  "re": 1,
+                  "im": 0
+                }
+              },
+              "support": [
+                1,
+                2,
+                4
+              ],
+              "op_idx": 3,
+              "hand": "right"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "coupled": {
+    "cycle_found": true,
+    "cycle_start": 0,
+    "period": 16,
+    "period_gt_4": true,
+    "steps_recorded": 17
+  },
+  "csv_rows": [
+    {
+      "section": "dynamic",
+      "label": "electron_favored_vector",
+      "hand": "left",
+      "sequence_id": "vacuum_pass_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5
+    },
+    {
+      "section": "dynamic",
+      "label": "electron_favored_vector",
+      "hand": "left",
+      "sequence_id": "interaction_pass_123",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 3,
+      "steps_recorded": 4
+    },
+    {
+      "section": "dynamic",
+      "label": "electron_favored_vector",
+      "hand": "right",
+      "sequence_id": "vacuum_pass_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5
+    },
+    {
+      "section": "dynamic",
+      "label": "electron_favored_vector",
+      "hand": "right",
+      "sequence_id": "interaction_pass_123",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 6,
+      "steps_recorded": 7
+    },
+    {
+      "section": "dynamic",
+      "label": "proton_proto_vector",
+      "hand": "left",
+      "sequence_id": "vacuum_pass_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5
+    },
+    {
+      "section": "dynamic",
+      "label": "proton_proto_vector",
+      "hand": "left",
+      "sequence_id": "interaction_pass_123",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 6,
+      "steps_recorded": 7
+    },
+    {
+      "section": "dynamic",
+      "label": "proton_proto_vector",
+      "hand": "right",
+      "sequence_id": "vacuum_pass_e7",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 4,
+      "steps_recorded": 5
+    },
+    {
+      "section": "dynamic",
+      "label": "proton_proto_vector",
+      "hand": "right",
+      "sequence_id": "interaction_pass_123",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 6,
+      "steps_recorded": 7
+    },
+    {
+      "section": "coupled",
+      "label": "electron_vs_proton_proto",
+      "hand": "mixed",
+      "sequence_id": "coupled_internal123_plus_cross",
+      "cycle_found": true,
+      "cycle_start": 0,
+      "period": 16,
+      "steps_recorded": 17
+    }
+  ]
+}

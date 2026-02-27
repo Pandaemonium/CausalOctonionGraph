@@ -1,0 +1,28 @@
+motif_id,representation,family,support,support_bits,u1_charge_proxy,period_left_e7,period_right_e7,stable_period4
+left_spinor_electron_ideal,spinor,named_alias,"[0, 7]",['111'],-8,4,4,True
+right_spinor_electron_ideal,spinor,named_alias,"[0, 7]",['111'],8,4,4,True
+sd_double_12,spinor,Sd,"[3, 4]","['011', '100']",0,4,4,True
+sd_double_13,spinor,Sd,"[2, 5]","['010', '101']",0,4,4,True
+sd_double_23,spinor,Sd,"[1, 6]","['001', '110']",0,4,4,True
+sd_single_1,spinor,Sd,"[1, 6]","['001', '110']",0,4,4,True
+sd_single_2,spinor,Sd,"[2, 5]","['010', '101']",0,4,4,True
+sd_single_3,spinor,Sd,"[3, 4]","['011', '100']",0,4,4,True
+sd_triple_dual_electron,spinor,Sd,"[0, 7]",['111'],8,4,4,True
+sd_vacuum_omega_dag,spinor,Sd,"[0, 7]",['111'],0,4,4,True
+su_double_12,spinor,Su,"[3, 4]","['011', '100']",0,4,4,True
+su_double_13,spinor,Su,"[2, 5]","['010', '101']",0,4,4,True
+su_double_23,spinor,Su,"[1, 6]","['001', '110']",0,4,4,True
+su_single_1,spinor,Su,"[1, 6]","['001', '110']",0,4,4,True
+su_single_2,spinor,Su,"[2, 5]","['010', '101']",0,4,4,True
+su_single_3,spinor,Su,"[3, 4]","['011', '100']",0,4,4,True
+su_triple_electron,spinor,Su,"[0, 7]",['111'],-8,4,4,True
+su_vacuum_omega,spinor,Su,"[0, 7]",['111'],0,4,4,True
+vector_electron_favored,vector,named_alias,"[1, 2, 3]","['001', '010', '011']",0,4,4,True
+vector_fano_line_l1,vector,fano_line,"[1, 2, 3]","['001', '010', '011']",0,4,4,True
+vector_fano_line_l2,vector,fano_line,"[1, 4, 5]","['001', '100', '101']",0,4,4,True
+vector_fano_line_l3,vector,fano_line,"[1, 6, 7]","['001', '110', '111']",1,4,4,True
+vector_fano_line_l4,vector,fano_line,"[2, 4, 6]","['010', '100', '110']",0,4,4,True
+vector_fano_line_l5,vector,fano_line,"[2, 5, 7]","['010', '101', '111']",1,4,4,True
+vector_fano_line_l6,vector,fano_line,"[3, 4, 7]","['011', '100', '111']",1,4,4,True
+vector_fano_line_l7,vector,fano_line,"[3, 5, 6]","['011', '101', '110']",0,4,4,True
+vector_proton_proto_t124,vector,named_alias,"[1, 2, 4]","['001', '010', '100']",0,4,4,True

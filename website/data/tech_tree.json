@@ -1,0 +1,421 @@
+{
+  "generated_at_utc": "2026-02-27T05:35:00.825021Z",
+  "node_count": 33,
+  "edge_count": 37,
+  "nodes": [
+    {
+      "id": "ALG",
+      "status": "stub",
+      "public_status_label": "Queued",
+      "status_color_token": "queued",
+      "latest_event_id": "",
+      "unlocks_count": 0
+    },
+    {
+      "id": "ALG-001",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "EVT-20260225-0001",
+      "unlocks_count": 1
+    },
+    {
+      "id": "ALG-002",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "",
+      "unlocks_count": 3
+    },
+    {
+      "id": "ALG-003",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "",
+      "unlocks_count": 0
+    },
+    {
+      "id": "ALG-004",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "",
+      "unlocks_count": 0
+    },
+    {
+      "id": "ALPHA-001",
+      "status": "active_hypothesis",
+      "public_status_label": "Hypothesis",
+      "status_color_token": "hypothesis",
+      "latest_event_id": "",
+      "unlocks_count": 0
+    },
+    {
+      "id": "ANOM-001",
+      "status": "stub",
+      "public_status_label": "Queued",
+      "status_color_token": "queued",
+      "latest_event_id": "",
+      "unlocks_count": 0
+    },
+    {
+      "id": "CAUS-001",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "",
+      "unlocks_count": 1
+    },
+    {
+      "id": "CFS-001",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "",
+      "unlocks_count": 2
+    },
+    {
+      "id": "CFS-002",
+      "status": "stub",
+      "public_status_label": "Queued",
+      "status_color_token": "queued",
+      "latest_event_id": "",
+      "unlocks_count": 0
+    },
+    {
+      "id": "CFS-003",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "",
+      "unlocks_count": 0
+    },
+    {
+      "id": "DAG-001",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "",
+      "unlocks_count": 3
+    },
+    {
+      "id": "DIST-001",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "EVT-20260226-0001",
+      "unlocks_count": 0
+    },
+    {
+      "id": "FANO-001",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "",
+      "unlocks_count": 6
+    },
+    {
+      "id": "GAUGE-001",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "EVT-20260226-0006",
+      "unlocks_count": 11
+    },
+    {
+      "id": "GAUGE-001-LEGACY",
+      "status": "superseded",
+      "public_status_label": "Superseded",
+      "status_color_token": "superseded",
+      "latest_event_id": "",
+      "unlocks_count": 0
+    },
+    {
+      "id": "GEN-001",
+      "status": "stub",
+      "public_status_label": "Queued",
+      "status_color_token": "queued",
+      "latest_event_id": "",
+      "unlocks_count": 2
+    },
+    {
+      "id": "GEN-002",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "",
+      "unlocks_count": 0
+    },
+    {
+      "id": "KOIDE-001",
+      "status": "stub",
+      "public_status_label": "Queued",
+      "status_color_token": "queued",
+      "latest_event_id": "",
+      "unlocks_count": 1
+    },
+    {
+      "id": "KOIDE_EXACTNESS",
+      "status": "stub",
+      "public_status_label": "Queued",
+      "status_color_token": "queued",
+      "latest_event_id": "",
+      "unlocks_count": 0
+    },
+    {
+      "id": "LEPTON-001",
+      "status": "active_hypothesis",
+      "public_status_label": "Hypothesis",
+      "status_color_token": "hypothesis",
+      "latest_event_id": "EVT-20260226-0007",
+      "unlocks_count": 1
+    },
+    {
+      "id": "LEPTON-001-LEGACY",
+      "status": "superseded",
+      "public_status_label": "Superseded",
+      "status_color_token": "superseded",
+      "latest_event_id": "",
+      "unlocks_count": 0
+    },
+    {
+      "id": "MASS-001",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "EVT-20260226-0003",
+      "unlocks_count": 2
+    },
+    {
+      "id": "MU-001",
+      "status": "active_hypothesis",
+      "public_status_label": "Hypothesis",
+      "status_color_token": "hypothesis",
+      "latest_event_id": "",
+      "unlocks_count": 0
+    },
+    {
+      "id": "PHOTON-001",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "EVT-20260226-0004",
+      "unlocks_count": 0
+    },
+    {
+      "id": "RACE-001",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "EVT-20260226-0002",
+      "unlocks_count": 1
+    },
+    {
+      "id": "REL-001",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "",
+      "unlocks_count": 0
+    },
+    {
+      "id": "STRONG-001",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "EVT-20260226-0005",
+      "unlocks_count": 0
+    },
+    {
+      "id": "STRONG-001-LEGACY",
+      "status": "superseded",
+      "public_status_label": "Superseded",
+      "status_color_token": "superseded",
+      "latest_event_id": "",
+      "unlocks_count": 0
+    },
+    {
+      "id": "TICK-001",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "",
+      "unlocks_count": 2
+    },
+    {
+      "id": "VAC-001",
+      "status": "superseded",
+      "public_status_label": "Superseded",
+      "status_color_token": "superseded",
+      "latest_event_id": "",
+      "unlocks_count": 0
+    },
+    {
+      "id": "WEINBERG-001",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
+      "latest_event_id": "EVT-20260227-0001",
+      "unlocks_count": 1
+    },
+    {
+      "id": "WEINBERG-UV-001",
+      "status": "supported",
+      "public_status_label": "Proved",
+      "status_color_token": "proved",
+      "latest_event_id": "EVT-20260227-0002",
+      "unlocks_count": 0
+    }
+  ],
+  "edges": [
+    {
+      "from": "ALG-001",
+      "to": "ALG-004"
+    },
+    {
+      "from": "ALG-002",
+      "to": "ALG-003"
+    },
+    {
+      "from": "ALG-002",
+      "to": "RACE-001"
+    },
+    {
+      "from": "ALG-002",
+      "to": "TICK-001"
+    },
+    {
+      "from": "CAUS-001",
+      "to": "CFS-001"
+    },
+    {
+      "from": "CFS-001",
+      "to": "CFS-002"
+    },
+    {
+      "from": "CFS-001",
+      "to": "CFS-003"
+    },
+    {
+      "from": "DAG-001",
+      "to": "CAUS-001"
+    },
+    {
+      "from": "DAG-001",
+      "to": "CFS-001"
+    },
+    {
+      "from": "DAG-001",
+      "to": "MASS-001"
+    },
+    {
+      "from": "FANO-001",
+      "to": "ALG-001"
+    },
+    {
+      "from": "FANO-001",
+      "to": "ALG-002"
+    },
+    {
+      "from": "FANO-001",
+      "to": "ALPHA-001"
+    },
+    {
+      "from": "FANO-001",
+      "to": "GAUGE-001"
+    },
+    {
+      "from": "FANO-001",
+      "to": "GAUGE-001-LEGACY"
+    },
+    {
+      "from": "FANO-001",
+      "to": "WEINBERG-001"
+    },
+    {
+      "from": "GAUGE-001",
+      "to": "ALPHA-001"
+    },
+    {
+      "from": "GAUGE-001",
+      "to": "ANOM-001"
+    },
+    {
+      "from": "GAUGE-001",
+      "to": "CFS-003"
+    },
+    {
+      "from": "GAUGE-001",
+      "to": "GEN-002"
+    },
+    {
+      "from": "GAUGE-001",
+      "to": "LEPTON-001"
+    },
+    {
+      "from": "GAUGE-001",
+      "to": "MASS-001"
+    },
+    {
+      "from": "GAUGE-001",
+      "to": "MU-001"
+    },
+    {
+      "from": "GAUGE-001",
+      "to": "PHOTON-001"
+    },
+    {
+      "from": "GAUGE-001",
+      "to": "VAC-001"
+    },
+    {
+      "from": "GAUGE-001",
+      "to": "WEINBERG-001"
+    },
+    {
+      "from": "GAUGE-001",
+      "to": "WEINBERG-UV-001"
+    },
+    {
+      "from": "GEN-001",
+      "to": "GEN-002"
+    },
+    {
+      "from": "GEN-001",
+      "to": "MU-001"
+    },
+    {
+      "from": "KOIDE-001",
+      "to": "LEPTON-001"
+    },
+    {
+      "from": "LEPTON-001",
+      "to": "PHOTON-001"
+    },
+    {
+      "from": "MASS-001",
+      "to": "MU-001"
+    },
+    {
+      "from": "MASS-001",
+      "to": "PHOTON-001"
+    },
+    {
+      "from": "RACE-001",
+      "to": "CFS-002"
+    },
+    {
+      "from": "TICK-001",
+      "to": "MASS-001"
+    },
+    {
+      "from": "TICK-001",
+      "to": "RACE-001"
+    },
+    {
+      "from": "WEINBERG-001",
+      "to": "WEINBERG-UV-001"
+    }
+  ]
+}

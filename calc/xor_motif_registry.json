@@ -1,0 +1,1307 @@
+{
+  "schema_version": "xor_motif_registry_v1",
+  "generated_at_utc": "2026-02-27T10:58:40.583218Z",
+  "registry_sha256": "38055d5a1c5c6ff23a9b55d03a8478f1e5899c1ba9bc963dc3bee28e429ba6e3",
+  "motif_count": 27,
+  "stable_period4_count": 27,
+  "representation_counts": {
+    "spinor": 18,
+    "vector": 9
+  },
+  "motifs": [
+    {
+      "motif_id": "left_spinor_electron_ideal",
+      "representation": "spinor",
+      "family": "named_alias",
+      "construction": "Su electron ideal alias",
+      "source_module": "calc/xor_furey_ideals.py",
+      "support": [
+        0,
+        7
+      ],
+      "support_bits": [
+        "111"
+      ],
+      "support_size": 2,
+      "u1_charge_proxy": -8,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e0": {
+          "re": 0,
+          "im": -8
+        },
+        "e7": {
+          "re": -8,
+          "im": 0
+        }
+      },
+      "tags": [
+        "spinor",
+        "electron_alias",
+        "su"
+      ]
+    },
+    {
+      "motif_id": "right_spinor_electron_ideal",
+      "representation": "spinor",
+      "family": "named_alias",
+      "construction": "Sd electron ideal alias",
+      "source_module": "calc/xor_furey_ideals.py",
+      "support": [
+        0,
+        7
+      ],
+      "support_bits": [
+        "111"
+      ],
+      "support_size": 2,
+      "u1_charge_proxy": 8,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e0": {
+          "re": 0,
+          "im": -8
+        },
+        "e7": {
+          "re": 8,
+          "im": 0
+        }
+      },
+      "tags": [
+        "spinor",
+        "electron_alias",
+        "sd"
+      ]
+    },
+    {
+      "motif_id": "sd_double_12",
+      "representation": "spinor",
+      "family": "Sd",
+      "construction": "Sd ideal basis element",
+      "source_module": "calc/xor_furey_ideals.py",
+      "support": [
+        3,
+        4
+      ],
+      "support_bits": [
+        "011",
+        "100"
+      ],
+      "support_size": 2,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e3": {
+          "re": 0,
+          "im": 4
+        },
+        "e4": {
+          "re": 4,
+          "im": 0
+        }
+      },
+      "tags": [
+        "spinor",
+        "furey_ideal",
+        "sd"
+      ]
+    },
+    {
+      "motif_id": "sd_double_13",
+      "representation": "spinor",
+      "family": "Sd",
+      "construction": "Sd ideal basis element",
+      "source_module": "calc/xor_furey_ideals.py",
+      "support": [
+        2,
+        5
+      ],
+      "support_bits": [
+        "010",
+        "101"
+      ],
+      "support_size": 2,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e2": {
+          "re": 0,
+          "im": -4
+        },
+        "e5": {
+          "re": -4,
+          "im": 0
+        }
+      },
+      "tags": [
+        "spinor",
+        "furey_ideal",
+        "sd"
+      ]
+    },
+    {
+      "motif_id": "sd_double_23",
+      "representation": "spinor",
+      "family": "Sd",
+      "construction": "Sd ideal basis element",
+      "source_module": "calc/xor_furey_ideals.py",
+      "support": [
+        1,
+        6
+      ],
+      "support_bits": [
+        "001",
+        "110"
+      ],
+      "support_size": 2,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e1": {
+          "re": 4,
+          "im": 0
+        },
+        "e6": {
+          "re": 0,
+          "im": 4
+        }
+      },
+      "tags": [
+        "spinor",
+        "furey_ideal",
+        "sd"
+      ]
+    },
+    {
+      "motif_id": "sd_single_1",
+      "representation": "spinor",
+      "family": "Sd",
+      "construction": "Sd ideal basis element",
+      "source_module": "calc/xor_furey_ideals.py",
+      "support": [
+        1,
+        6
+      ],
+      "support_bits": [
+        "001",
+        "110"
+      ],
+      "support_size": 2,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e1": {
+          "re": 0,
+          "im": 2
+        },
+        "e6": {
+          "re": 2,
+          "im": 0
+        }
+      },
+      "tags": [
+        "spinor",
+        "furey_ideal",
+        "sd"
+      ]
+    },
+    {
+      "motif_id": "sd_single_2",
+      "representation": "spinor",
+      "family": "Sd",
+      "construction": "Sd ideal basis element",
+      "source_module": "calc/xor_furey_ideals.py",
+      "support": [
+        2,
+        5
+      ],
+      "support_bits": [
+        "010",
+        "101"
+      ],
+      "support_size": 2,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e2": {
+          "re": 2,
+          "im": 0
+        },
+        "e5": {
+          "re": 0,
+          "im": 2
+        }
+      },
+      "tags": [
+        "spinor",
+        "furey_ideal",
+        "sd"
+      ]
+    },
+    {
+      "motif_id": "sd_single_3",
+      "representation": "spinor",
+      "family": "Sd",
+      "construction": "Sd ideal basis element",
+      "source_module": "calc/xor_furey_ideals.py",
+      "support": [
+        3,
+        4
+      ],
+      "support_bits": [
+        "011",
+        "100"
+      ],
+      "support_size": 2,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e3": {
+          "re": 2,
+          "im": 0
+        },
+        "e4": {
+          "re": 0,
+          "im": 2
+        }
+      },
+      "tags": [
+        "spinor",
+        "furey_ideal",
+        "sd"
+      ]
+    },
+    {
+      "motif_id": "sd_triple_dual_electron",
+      "representation": "spinor",
+      "family": "Sd",
+      "construction": "Sd ideal basis element",
+      "source_module": "calc/xor_furey_ideals.py",
+      "support": [
+        0,
+        7
+      ],
+      "support_bits": [
+        "111"
+      ],
+      "support_size": 2,
+      "u1_charge_proxy": 8,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e0": {
+          "re": 0,
+          "im": -8
+        },
+        "e7": {
+          "re": 8,
+          "im": 0
+        }
+      },
+      "tags": [
+        "spinor",
+        "furey_ideal",
+        "sd"
+      ]
+    },
+    {
+      "motif_id": "sd_vacuum_omega_dag",
+      "representation": "spinor",
+      "family": "Sd",
+      "construction": "Sd ideal basis element",
+      "source_module": "calc/xor_furey_ideals.py",
+      "support": [
+        0,
+        7
+      ],
+      "support_bits": [
+        "111"
+      ],
+      "support_size": 2,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e0": {
+          "re": 1,
+          "im": 0
+        },
+        "e7": {
+          "re": 0,
+          "im": -1
+        }
+      },
+      "tags": [
+        "spinor",
+        "furey_ideal",
+        "sd"
+      ]
+    },
+    {
+      "motif_id": "su_double_12",
+      "representation": "spinor",
+      "family": "Su",
+      "construction": "Su ideal basis element",
+      "source_module": "calc/xor_furey_ideals.py",
+      "support": [
+        3,
+        4
+      ],
+      "support_bits": [
+        "011",
+        "100"
+      ],
+      "support_size": 2,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e3": {
+          "re": 0,
+          "im": -4
+        },
+        "e4": {
+          "re": 4,
+          "im": 0
+        }
+      },
+      "tags": [
+        "spinor",
+        "furey_ideal",
+        "su"
+      ]
+    },
+    {
+      "motif_id": "su_double_13",
+      "representation": "spinor",
+      "family": "Su",
+      "construction": "Su ideal basis element",
+      "source_module": "calc/xor_furey_ideals.py",
+      "support": [
+        2,
+        5
+      ],
+      "support_bits": [
+        "010",
+        "101"
+      ],
+      "support_size": 2,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e2": {
+          "re": 0,
+          "im": 4
+        },
+        "e5": {
+          "re": -4,
+          "im": 0
+        }
+      },
+      "tags": [
+        "spinor",
+        "furey_ideal",
+        "su"
+      ]
+    },
+    {
+      "motif_id": "su_double_23",
+      "representation": "spinor",
+      "family": "Su",
+      "construction": "Su ideal basis element",
+      "source_module": "calc/xor_furey_ideals.py",
+      "support": [
+        1,
+        6
+      ],
+      "support_bits": [
+        "001",
+        "110"
+      ],
+      "support_size": 2,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e1": {
+          "re": 4,
+          "im": 0
+        },
+        "e6": {
+          "re": 0,
+          "im": -4
+        }
+      },
+      "tags": [
+        "spinor",
+        "furey_ideal",
+        "su"
+      ]
+    },
+    {
+      "motif_id": "su_single_1",
+      "representation": "spinor",
+      "family": "Su",
+      "construction": "Su ideal basis element",
+      "source_module": "calc/xor_furey_ideals.py",
+      "support": [
+        1,
+        6
+      ],
+      "support_bits": [
+        "001",
+        "110"
+      ],
+      "support_size": 2,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e1": {
+          "re": 0,
+          "im": 2
+        },
+        "e6": {
+          "re": -2,
+          "im": 0
+        }
+      },
+      "tags": [
+        "spinor",
+        "furey_ideal",
+        "su"
+      ]
+    },
+    {
+      "motif_id": "su_single_2",
+      "representation": "spinor",
+      "family": "Su",
+      "construction": "Su ideal basis element",
+      "source_module": "calc/xor_furey_ideals.py",
+      "support": [
+        2,
+        5
+      ],
+      "support_bits": [
+        "010",
+        "101"
+      ],
+      "support_size": 2,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e2": {
+          "re": -2,
+          "im": 0
+        },
+        "e5": {
+          "re": 0,
+          "im": 2
+        }
+      },
+      "tags": [
+        "spinor",
+        "furey_ideal",
+        "su"
+      ]
+    },
+    {
+      "motif_id": "su_single_3",
+      "representation": "spinor",
+      "family": "Su",
+      "construction": "Su ideal basis element",
+      "source_module": "calc/xor_furey_ideals.py",
+      "support": [
+        3,
+        4
+      ],
+      "support_bits": [
+        "011",
+        "100"
+      ],
+      "support_size": 2,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e3": {
+          "re": -2,
+          "im": 0
+        },
+        "e4": {
+          "re": 0,
+          "im": 2
+        }
+      },
+      "tags": [
+        "spinor",
+        "furey_ideal",
+        "su"
+      ]
+    },
+    {
+      "motif_id": "su_triple_electron",
+      "representation": "spinor",
+      "family": "Su",
+      "construction": "Su ideal basis element",
+      "source_module": "calc/xor_furey_ideals.py",
+      "support": [
+        0,
+        7
+      ],
+      "support_bits": [
+        "111"
+      ],
+      "support_size": 2,
+      "u1_charge_proxy": -8,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e0": {
+          "re": 0,
+          "im": -8
+        },
+        "e7": {
+          "re": -8,
+          "im": 0
+        }
+      },
+      "tags": [
+        "spinor",
+        "furey_ideal",
+        "su"
+      ]
+    },
+    {
+      "motif_id": "su_vacuum_omega",
+      "representation": "spinor",
+      "family": "Su",
+      "construction": "Su ideal basis element",
+      "source_module": "calc/xor_furey_ideals.py",
+      "support": [
+        0,
+        7
+      ],
+      "support_bits": [
+        "111"
+      ],
+      "support_size": 2,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e0": {
+          "re": 1,
+          "im": 0
+        },
+        "e7": {
+          "re": 0,
+          "im": 1
+        }
+      },
+      "tags": [
+        "spinor",
+        "furey_ideal",
+        "su"
+      ]
+    },
+    {
+      "motif_id": "vector_electron_favored",
+      "representation": "vector",
+      "family": "named_alias",
+      "construction": "vector_motif_state((1, 2, 3), coeff=1)",
+      "source_module": "calc/xor_vector_spinor_phase_cycles.py",
+      "support": [
+        1,
+        2,
+        3
+      ],
+      "support_bits": [
+        "001",
+        "010",
+        "011"
+      ],
+      "support_size": 3,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e1": {
+          "re": 1,
+          "im": 0
+        },
+        "e2": {
+          "re": 1,
+          "im": 0
+        },
+        "e3": {
+          "re": 1,
+          "im": 0
+        }
+      },
+      "tags": [
+        "vector",
+        "electron_scaffold"
+      ]
+    },
+    {
+      "motif_id": "vector_fano_line_l1",
+      "representation": "vector",
+      "family": "fano_line",
+      "construction": "vector_motif_state((1, 2, 3), coeff=1)",
+      "source_module": "calc/xor_vector_spinor_phase_cycles.py",
+      "support": [
+        1,
+        2,
+        3
+      ],
+      "support_bits": [
+        "001",
+        "010",
+        "011"
+      ],
+      "support_size": 3,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e1": {
+          "re": 1,
+          "im": 0
+        },
+        "e2": {
+          "re": 1,
+          "im": 0
+        },
+        "e3": {
+          "re": 1,
+          "im": 0
+        }
+      },
+      "tags": [
+        "vector",
+        "fano_line",
+        "stable_candidate"
+      ]
+    },
+    {
+      "motif_id": "vector_fano_line_l2",
+      "representation": "vector",
+      "family": "fano_line",
+      "construction": "vector_motif_state((1, 4, 5), coeff=1)",
+      "source_module": "calc/xor_vector_spinor_phase_cycles.py",
+      "support": [
+        1,
+        4,
+        5
+      ],
+      "support_bits": [
+        "001",
+        "100",
+        "101"
+      ],
+      "support_size": 3,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e1": {
+          "re": 1,
+          "im": 0
+        },
+        "e4": {
+          "re": 1,
+          "im": 0
+        },
+        "e5": {
+          "re": 1,
+          "im": 0
+        }
+      },
+      "tags": [
+        "vector",
+        "fano_line",
+        "stable_candidate"
+      ]
+    },
+    {
+      "motif_id": "vector_fano_line_l3",
+      "representation": "vector",
+      "family": "fano_line",
+      "construction": "vector_motif_state((1, 7, 6), coeff=1)",
+      "source_module": "calc/xor_vector_spinor_phase_cycles.py",
+      "support": [
+        1,
+        6,
+        7
+      ],
+      "support_bits": [
+        "001",
+        "110",
+        "111"
+      ],
+      "support_size": 3,
+      "u1_charge_proxy": 1,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e1": {
+          "re": 1,
+          "im": 0
+        },
+        "e6": {
+          "re": 1,
+          "im": 0
+        },
+        "e7": {
+          "re": 1,
+          "im": 0
+        }
+      },
+      "tags": [
+        "vector",
+        "fano_line",
+        "stable_candidate"
+      ]
+    },
+    {
+      "motif_id": "vector_fano_line_l4",
+      "representation": "vector",
+      "family": "fano_line",
+      "construction": "vector_motif_state((2, 4, 6), coeff=1)",
+      "source_module": "calc/xor_vector_spinor_phase_cycles.py",
+      "support": [
+        2,
+        4,
+        6
+      ],
+      "support_bits": [
+        "010",
+        "100",
+        "110"
+      ],
+      "support_size": 3,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e2": {
+          "re": 1,
+          "im": 0
+        },
+        "e4": {
+          "re": 1,
+          "im": 0
+        },
+        "e6": {
+          "re": 1,
+          "im": 0
+        }
+      },
+      "tags": [
+        "vector",
+        "fano_line",
+        "stable_candidate"
+      ]
+    },
+    {
+      "motif_id": "vector_fano_line_l5",
+      "representation": "vector",
+      "family": "fano_line",
+      "construction": "vector_motif_state((2, 5, 7), coeff=1)",
+      "source_module": "calc/xor_vector_spinor_phase_cycles.py",
+      "support": [
+        2,
+        5,
+        7
+      ],
+      "support_bits": [
+        "010",
+        "101",
+        "111"
+      ],
+      "support_size": 3,
+      "u1_charge_proxy": 1,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e2": {
+          "re": 1,
+          "im": 0
+        },
+        "e5": {
+          "re": 1,
+          "im": 0
+        },
+        "e7": {
+          "re": 1,
+          "im": 0
+        }
+      },
+      "tags": [
+        "vector",
+        "fano_line",
+        "stable_candidate"
+      ]
+    },
+    {
+      "motif_id": "vector_fano_line_l6",
+      "representation": "vector",
+      "family": "fano_line",
+      "construction": "vector_motif_state((3, 4, 7), coeff=1)",
+      "source_module": "calc/xor_vector_spinor_phase_cycles.py",
+      "support": [
+        3,
+        4,
+        7
+      ],
+      "support_bits": [
+        "011",
+        "100",
+        "111"
+      ],
+      "support_size": 3,
+      "u1_charge_proxy": 1,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e3": {
+          "re": 1,
+          "im": 0
+        },
+        "e4": {
+          "re": 1,
+          "im": 0
+        },
+        "e7": {
+          "re": 1,
+          "im": 0
+        }
+      },
+      "tags": [
+        "vector",
+        "fano_line",
+        "stable_candidate"
+      ]
+    },
+    {
+      "motif_id": "vector_fano_line_l7",
+      "representation": "vector",
+      "family": "fano_line",
+      "construction": "vector_motif_state((3, 6, 5), coeff=1)",
+      "source_module": "calc/xor_vector_spinor_phase_cycles.py",
+      "support": [
+        3,
+        5,
+        6
+      ],
+      "support_bits": [
+        "011",
+        "101",
+        "110"
+      ],
+      "support_size": 3,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e3": {
+          "re": 1,
+          "im": 0
+        },
+        "e5": {
+          "re": 1,
+          "im": 0
+        },
+        "e6": {
+          "re": 1,
+          "im": 0
+        }
+      },
+      "tags": [
+        "vector",
+        "fano_line",
+        "stable_candidate"
+      ]
+    },
+    {
+      "motif_id": "vector_proton_proto_t124",
+      "representation": "vector",
+      "family": "named_alias",
+      "construction": "vector_motif_state((1, 2, 4), coeff=1)",
+      "source_module": "calc/xor_vector_spinor_phase_cycles.py",
+      "support": [
+        1,
+        2,
+        4
+      ],
+      "support_bits": [
+        "001",
+        "010",
+        "100"
+      ],
+      "support_size": 3,
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true,
+      "state_sparse": {
+        "e1": {
+          "re": 1,
+          "im": 0
+        },
+        "e2": {
+          "re": 1,
+          "im": 0
+        },
+        "e4": {
+          "re": 1,
+          "im": 0
+        }
+      },
+      "tags": [
+        "vector",
+        "proton_proto_scaffold"
+      ]
+    }
+  ],
+  "csv_rows": [
+    {
+      "motif_id": "left_spinor_electron_ideal",
+      "representation": "spinor",
+      "family": "named_alias",
+      "support": "[0, 7]",
+      "support_bits": "['111']",
+      "u1_charge_proxy": -8,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "right_spinor_electron_ideal",
+      "representation": "spinor",
+      "family": "named_alias",
+      "support": "[0, 7]",
+      "support_bits": "['111']",
+      "u1_charge_proxy": 8,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_double_12",
+      "representation": "spinor",
+      "family": "Sd",
+      "support": "[3, 4]",
+      "support_bits": "['011', '100']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_double_13",
+      "representation": "spinor",
+      "family": "Sd",
+      "support": "[2, 5]",
+      "support_bits": "['010', '101']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_double_23",
+      "representation": "spinor",
+      "family": "Sd",
+      "support": "[1, 6]",
+      "support_bits": "['001', '110']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_single_1",
+      "representation": "spinor",
+      "family": "Sd",
+      "support": "[1, 6]",
+      "support_bits": "['001', '110']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_single_2",
+      "representation": "spinor",
+      "family": "Sd",
+      "support": "[2, 5]",
+      "support_bits": "['010', '101']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_single_3",
+      "representation": "spinor",
+      "family": "Sd",
+      "support": "[3, 4]",
+      "support_bits": "['011', '100']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_triple_dual_electron",
+      "representation": "spinor",
+      "family": "Sd",
+      "support": "[0, 7]",
+      "support_bits": "['111']",
+      "u1_charge_proxy": 8,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_vacuum_omega_dag",
+      "representation": "spinor",
+      "family": "Sd",
+      "support": "[0, 7]",
+      "support_bits": "['111']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_double_12",
+      "representation": "spinor",
+      "family": "Su",
+      "support": "[3, 4]",
+      "support_bits": "['011', '100']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_double_13",
+      "representation": "spinor",
+      "family": "Su",
+      "support": "[2, 5]",
+      "support_bits": "['010', '101']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_double_23",
+      "representation": "spinor",
+      "family": "Su",
+      "support": "[1, 6]",
+      "support_bits": "['001', '110']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_single_1",
+      "representation": "spinor",
+      "family": "Su",
+      "support": "[1, 6]",
+      "support_bits": "['001', '110']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_single_2",
+      "representation": "spinor",
+      "family": "Su",
+      "support": "[2, 5]",
+      "support_bits": "['010', '101']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_single_3",
+      "representation": "spinor",
+      "family": "Su",
+      "support": "[3, 4]",
+      "support_bits": "['011', '100']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_triple_electron",
+      "representation": "spinor",
+      "family": "Su",
+      "support": "[0, 7]",
+      "support_bits": "['111']",
+      "u1_charge_proxy": -8,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_vacuum_omega",
+      "representation": "spinor",
+      "family": "Su",
+      "support": "[0, 7]",
+      "support_bits": "['111']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "vector_electron_favored",
+      "representation": "vector",
+      "family": "named_alias",
+      "support": "[1, 2, 3]",
+      "support_bits": "['001', '010', '011']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "vector_fano_line_l1",
+      "representation": "vector",
+      "family": "fano_line",
+      "support": "[1, 2, 3]",
+      "support_bits": "['001', '010', '011']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "vector_fano_line_l2",
+      "representation": "vector",
+      "family": "fano_line",
+      "support": "[1, 4, 5]",
+      "support_bits": "['001', '100', '101']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "vector_fano_line_l3",
+      "representation": "vector",
+      "family": "fano_line",
+      "support": "[1, 6, 7]",
+      "support_bits": "['001', '110', '111']",
+      "u1_charge_proxy": 1,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "vector_fano_line_l4",
+      "representation": "vector",
+      "family": "fano_line",
+      "support": "[2, 4, 6]",
+      "support_bits": "['010', '100', '110']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "vector_fano_line_l5",
+      "representation": "vector",
+      "family": "fano_line",
+      "support": "[2, 5, 7]",
+      "support_bits": "['010', '101', '111']",
+      "u1_charge_proxy": 1,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "vector_fano_line_l6",
+      "representation": "vector",
+      "family": "fano_line",
+      "support": "[3, 4, 7]",
+      "support_bits": "['011', '100', '111']",
+      "u1_charge_proxy": 1,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "vector_fano_line_l7",
+      "representation": "vector",
+      "family": "fano_line",
+      "support": "[3, 5, 6]",
+      "support_bits": "['011', '101', '110']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "vector_proton_proto_t124",
+      "representation": "vector",
+      "family": "named_alias",
+      "support": "[1, 2, 4]",
+      "support_bits": "['001', '010', '100']",
+      "u1_charge_proxy": 0,
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    }
+  ],
+  "notes": [
+    "Canonical registry for deterministic motif seeding in XOR simulations.",
+    "u1_charge_proxy is an internal model observable (not direct SI calibration)."
+  ]
+}

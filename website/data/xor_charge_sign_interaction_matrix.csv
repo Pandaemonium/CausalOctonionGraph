@@ -1,0 +1,17 @@
+row_label,col_label,kind,row_charge,col_charge
+vector_electron_favored,vector_electron_favored,neutral,0,0
+vector_electron_favored,left_spinor_electron_ideal,neutral,0,-8
+vector_electron_favored,right_spinor_electron_ideal,neutral,0,8
+vector_electron_favored,vacuum_doubled,neutral,0,0
+left_spinor_electron_ideal,vector_electron_favored,neutral,-8,0
+left_spinor_electron_ideal,left_spinor_electron_ideal,repulsive,-8,-8
+left_spinor_electron_ideal,right_spinor_electron_ideal,attractive,-8,8
+left_spinor_electron_ideal,vacuum_doubled,neutral,-8,0
+right_spinor_electron_ideal,vector_electron_favored,neutral,8,0
+right_spinor_electron_ideal,left_spinor_electron_ideal,attractive,8,-8
+right_spinor_electron_ideal,right_spinor_electron_ideal,repulsive,8,8
+right_spinor_electron_ideal,vacuum_doubled,neutral,8,0
+vacuum_doubled,vector_electron_favored,neutral,0,0
+vacuum_doubled,left_spinor_electron_ideal,neutral,0,-8
+vacuum_doubled,right_spinor_electron_ideal,neutral,0,8
+vacuum_doubled,vacuum_doubled,neutral,0,0

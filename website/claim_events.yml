@@ -1,0 +1,287 @@
+schema_version: "1.1.0"
+generated_at_utc: "2026-02-27T06:20:00Z"
+events:
+  - event_id: "EVT-20260225-0001"
+    claim_id: "ALG-001"
+    from_status: "stub"
+    to_status: "partial"
+    promoted_at_utc: "2026-02-25T18:05:00Z"
+    headlines:
+      layman: "The core math engine behind COG time ticks was formally locked."
+      student: "Alternativity and non-associative witness moved into validated core stack."
+      physicist: "ALG-001 promoted to partial with alternativity and explicit non-associative witness artifacts."
+    significance_summaries:
+      layman: "This is the foundation that makes the model evolve step-by-step instead of all at once."
+      student: "It secures the algebraic reason update ordering matters in COG."
+      physicist: "Locks the alternativity substrate required for deterministic non-associative update semantics."
+    not_claimed:
+      - "This does not yet derive measured particle masses by itself."
+    evidence:
+      claim_file: "claims/octonion_alternativity.yml"
+      owner_rfc: "rfc/MASTER_IMPLEMENTATION_PLAN_V2.md"
+      lean_artifacts:
+        - "CausalGraphTheory/OctonionAlt.lean"
+        - "left_alternative"
+        - "non_associative_witness"
+      battery_artifacts:
+        - "calc/test_octonion.py::test_alternativity"
+    tags:
+      - "algebra"
+      - "foundations"
+    verified_by: "Clerk Qwen-3"
+    verification_run_id: "battery_v2_20260225_1805Z"
+
+  - event_id: "EVT-20260226-0001"
+    claim_id: "DIST-001"
+    from_status: "active_hypothesis"
+    to_status: "partial"
+    promoted_at_utc: "2026-02-26T22:29:10Z"
+    headlines:
+      layman: "Distance in the causal graph now has machine-checked triangle behavior."
+      student: "Graph-distance triangle semantics moved to partial."
+      physicist: "DIST-001 promoted to partial via formal DAG distance constraints."
+    significance_summaries:
+      layman: "It gives the project a trustworthy notion of 'how far apart' two events are."
+      student: "This is required before any larger spacetime interpretation can be taken seriously."
+      physicist: "Locks a geometric primitive needed for causal metric interpretation work."
+    not_claimed:
+      - "This is not yet a full relativistic spacetime derivation."
+    evidence:
+      claim_file: "claims/dag_distance_triangle.yml"
+      owner_rfc: "rfc/MASTER_IMPLEMENTATION_PLAN_V2.md"
+      lean_artifacts:
+        - "CausalGraph.dist_triangle"
+      battery_artifacts:
+        - "calc/test_graph.py::test_distance_triangle"
+    tags:
+      - "geometry"
+      - "causal-graph"
+    verified_by: "Clerk Qwen-3"
+    verification_run_id: "battery_v2_20260226_2230Z"
+
+  - event_id: "EVT-20260226-0002"
+    claim_id: "RACE-001"
+    from_status: "active_hypothesis"
+    to_status: "partial"
+    promoted_at_utc: "2026-02-26T22:29:12Z"
+    headlines:
+      layman: "The lab proved its update rules can avoid race-condition chaos."
+      student: "Confluence-oriented race-condition controls reached partial."
+      physicist: "RACE-001 promoted to partial with confluence and classification artifacts."
+    significance_summaries:
+      layman: "This helps ensure repeated runs produce consistent science."
+      student: "Deterministic replay reliability improved through formal race controls."
+      physicist: "Strengthens scheduler determinism assumptions used by kernel-level claims."
+    not_claimed:
+      - "Many-body stress coverage is still in progress."
+    evidence:
+      claim_file: "claims/race_condition.yml"
+      owner_rfc: "rfc/MASTER_IMPLEMENTATION_PLAN_V2.md"
+      lean_artifacts:
+        - "RaceCondition.confluence"
+      battery_artifacts:
+        - "calc/test_tick.py::TestClassify"
+    tags:
+      - "runtime"
+      - "determinism"
+    verified_by: "Clerk Qwen-3"
+    verification_run_id: "battery_v2_20260226_2231Z"
+
+  - event_id: "EVT-20260226-0003"
+    claim_id: "MASS-001"
+    from_status: "active_hypothesis"
+    to_status: "partial"
+    promoted_at_utc: "2026-02-26T22:29:14Z"
+    headlines:
+      layman: "Mass-as-computational-drag moved from idea to validated model component."
+      student: "Tick-overhead mass observables reached partial."
+      physicist: "MASS-001 promoted to partial with monotonic tick-mass artifact stack."
+    significance_summaries:
+      layman: "It gives a concrete way to measure mass from the graph's own update work."
+      student: "Mass proxies are now tied to explicit kernel observables instead of prose."
+      physicist: "Provides formal monotonicity hooks for energy/mass observable unification."
+    not_claimed:
+      - "SI calibration is not closed yet."
+    evidence:
+      claim_file: "claims/mass_tick_frequency.yml"
+      owner_rfc: "rfc/RFC-045_Energy_Mass_Observable_Unification.md"
+      lean_artifacts:
+        - "CausalGraph.tickMass_mono"
+        - "CausalGraph.step_tickMass_nondecreasing"
+      battery_artifacts:
+        - "calc/test_koide.py"
+        - "calc/mass_ratios.py"
+    tags:
+      - "mass"
+      - "observables"
+    verified_by: "Clerk Qwen-3"
+    verification_run_id: "battery_v2_20260226_2232Z"
+
+  - event_id: "EVT-20260226-0004"
+    claim_id: "PHOTON-001"
+    from_status: "stub"
+    to_status: "partial"
+    promoted_at_utc: "2026-02-26T22:29:16Z"
+    headlines:
+      layman: "Photon-vacuum behavior now has a formal color-exclusion proof path."
+      student: "Photon vacuum-orbit color-sector exclusion reached partial."
+      physicist: "PHOTON-001 promoted to partial via vacuum-orbit color-sector-zero artifacts."
+    significance_summaries:
+      layman: "It explains why one interaction channel stays 'clean' in the model."
+      student: "A sharp selection rule now exists for photon-vacuum propagation."
+      physicist: "Locks color-sector exclusion constraints for current photon/vacuum semantics."
+    not_claimed:
+      - "Energy-scale calibration remains open."
+    evidence:
+      claim_file: "claims/PHOTON-001.yml"
+      owner_rfc: "rfc/RFC-015_Photon_Energy_COG.md"
+      lean_artifacts:
+        - "CausalGraph.vacuum_orbit_colorSector_zero"
+      battery_artifacts:
+        - "CausalGraphTheory/PhotonMasslessness.lean"
+    tags:
+      - "photon"
+      - "selection-rules"
+    verified_by: "Clerk Qwen-3"
+    verification_run_id: "battery_v2_20260226_2233Z"
+
+  - event_id: "EVT-20260226-0005"
+    claim_id: "STRONG-001"
+    from_status: "active_hypothesis"
+    to_status: "partial"
+    promoted_at_utc: "2026-02-26T22:29:18Z"
+    headlines:
+      layman: "A structured strong-force baseline is now reproducible in the model."
+      student: "Strong-coupling proxy advanced to partial with fixed-ratio baseline."
+      physicist: "STRONG-001 promoted to partial with 24/168 baseline and battery checks."
+    significance_summaries:
+      layman: "This gives a concrete number to test instead of hand-wavy force language."
+      student: "The model now has a stable strong-coupling proxy with a quantified gap."
+      physicist: "Locks a discrete symmetry-ratio baseline for alpha_s closure work."
+    not_claimed:
+      - "Running-corrected closure at physical scale remains open."
+    evidence:
+      claim_file: "claims/STRONG-001.yml"
+      owner_rfc: "rfc/STRONG-001_Closure_Tasklist.md"
+      battery_artifacts:
+        - "calc/test_constants.py::TestAlphaStrong::test_alpha_strong_candidate_is_stab_ratio"
+        - "calc/estimate_alpha_strong.py"
+    tags:
+      - "strong-force"
+      - "constants"
+    verified_by: "Clerk Qwen-3"
+    verification_run_id: "battery_v2_20260226_2234Z"
+
+  - event_id: "EVT-20260226-0006"
+    claim_id: "GAUGE-001"
+    from_status: "active_hypothesis"
+    to_status: "partial"
+    promoted_at_utc: "2026-02-26T22:29:20Z"
+    headlines:
+      layman: "The vacuum symmetry backbone was reconciled into one coherent gauge profile."
+      student: "Gauge stabilizer structure advanced to partial with S4-compatible stack."
+      physicist: "GAUGE-001 promoted to partial with vacuum-stabilizer action artifacts."
+    significance_summaries:
+      layman: "This is a foundational symmetry lock that later force and constant results depend on."
+      student: "It reduces gauge-structure ambiguity in downstream derivations."
+      physicist: "Constrains downstream electroweak/strong derivations to a fixed stabilizer profile."
+    not_claimed:
+      - "This does not by itself derive all Standard Model couplings."
+    evidence:
+      claim_file: "claims/gauge_group.yml"
+      owner_rfc: "rfc/RFC-017_Vacuum_Stabilizer_Reconciliation.md"
+      lean_artifacts:
+        - "GaugeGroup.fano_aut_count"
+        - "GaugeGroup.vacuum_stabilizer_count"
+      battery_artifacts:
+        - "calc/test_gauge.py"
+        - "calc/gauge_check.py"
+    tags:
+      - "gauge"
+      - "symmetry"
+    verified_by: "Clerk Qwen-3"
+    verification_run_id: "battery_v2_20260226_2315Z"
+
+  - event_id: "EVT-20260226-0007"
+    claim_id: "LEPTON-001"
+    from_status: "stub"
+    to_status: "active_hypothesis"
+    promoted_at_utc: "2026-02-26T22:29:22Z"
+    headlines:
+      layman: "Lepton phase-clock structure entered active testing."
+      student: "Lepton orbit program moved from stub to active hypothesis."
+      physicist: "LEPTON-001 promoted to active_hypothesis on period-4 orbit backbone."
+    significance_summaries:
+      layman: "The model now has a concrete path for explaining lepton family structure."
+      student: "Period-4 algebraic orbit results now drive a focused lepton-closure track."
+      physicist: "Transitions lepton-mass work into a live, test-backed hypothesis lane."
+    not_claimed:
+      - "Muon-electron mass-ratio closure is still open."
+    evidence:
+      claim_file: "claims/muon_mass.yml"
+      owner_rfc: "rfc/RFC-034_Electron_Mass_Mechanism.md"
+      lean_artifacts:
+        - "CausalGraph.universal_Ce_period_four"
+      battery_artifacts:
+        - "calc/test_furey_electron_orbit.py"
+    tags:
+      - "leptons"
+      - "phase-clock"
+    verified_by: "Clerk Qwen-3"
+    verification_run_id: "battery_v2_20260226_2330Z"
+
+  - event_id: "EVT-20260227-0001"
+    claim_id: "WEINBERG-001"
+    from_status: "active_hypothesis"
+    to_status: "partial"
+    promoted_at_utc: "2026-02-27T00:24:34Z"
+    headlines:
+      layman: "The Weinberg-angle program entered a constrained, testable phase."
+      student: "WEINBERG-001 moved to partial with locked policy tests."
+      physicist: "WEINBERG-001 promoted to partial with governance-constrained H2 battery artifacts."
+    significance_summaries:
+      layman: "This keeps the project honest by separating what is proven from what is still open."
+      student: "The claim now has explicit batteries and anti-retrofitting controls."
+      physicist: "Formalizes gap-closure workflow without allowing post-hoc tuning."
+    not_claimed:
+      - "No final measurement-scale closure is claimed here."
+    evidence:
+      claim_file: "claims/weinberg_angle.yml"
+      owner_rfc: "rfc/RFC-029_Weinberg_Angle_Gap_Closure.md"
+      battery_artifacts:
+        - "calc/test_weinberg_h2_governance.py"
+        - "sources/weinberg_h2_ablation_results.md"
+    tags:
+      - "electroweak"
+      - "governance"
+    verified_by: "Clerk Qwen-3"
+    verification_run_id: "battery_v2_20260227_0024Z"
+
+  - event_id: "EVT-20260227-0002"
+    claim_id: "WEINBERG-UV-001"
+    from_status: "partial"
+    to_status: "supported"
+    promoted_at_utc: "2026-02-27T00:26:05Z"
+    headlines:
+      layman: "A key electroweak UV structure was upgraded to publicly verifiable support."
+      student: "Exclusive-U1 UV weak-mixing invariant promoted to supported."
+      physicist: "WEINBERG-UV-001 promoted to supported with invariant theorem stack."
+    significance_summaries:
+      layman: "This is one of the strongest current pillars in the whole program."
+      student: "The UV electroweak structural value is now backed by formal invariance evidence."
+      physicist: "Locks a high-value UV structural invariant used as a prerequisite in electroweak closure."
+    not_claimed:
+      - "This does not claim final Z-pole value derivation."
+    evidence:
+      claim_file: "claims/WEINBERG-UV-001.yml"
+      owner_rfc: "rfc/RFC-029_Weinberg_Angle_Gap_Closure.md"
+      lean_artifacts:
+        - "CausalGraph.sin2ThetaWObs_exclusive_u1_eq_one_four"
+        - "CausalGraph.sin2ThetaWObs_exclusive_u1_stabilizer_invariant_bool"
+      battery_artifacts:
+        - "calc/test_weinberg_h2_governance.py::test_expected_baseline_values"
+    tags:
+      - "electroweak"
+      - "supported"
+    verified_by: "Clerk Qwen-3"
+    verification_run_id: "battery_v2_20260227_0022Z"

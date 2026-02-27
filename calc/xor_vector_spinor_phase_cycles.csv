@@ -1,0 +1,13 @@
+label,hand,sequence_id,cycle_found,cycle_start,period,steps_recorded
+vector_electron_favored,left,vacuum_pass_e7,True,0,4,5
+vector_electron_favored,left,interaction_pass_123,True,0,3,4
+vector_electron_favored,right,vacuum_pass_e7,True,0,4,5
+vector_electron_favored,right,interaction_pass_123,True,0,6,7
+left_spinor_electron_ideal,left,vacuum_pass_e7,True,0,4,5
+left_spinor_electron_ideal,left,interaction_pass_123,True,0,6,7
+left_spinor_electron_ideal,right,vacuum_pass_e7,True,0,4,5
+left_spinor_electron_ideal,right,interaction_pass_123,True,0,6,7
+right_spinor_electron_ideal,left,vacuum_pass_e7,True,0,4,5
+right_spinor_electron_ideal,left,interaction_pass_123,True,0,6,7
+right_spinor_electron_ideal,right,vacuum_pass_e7,True,0,4,5
+right_spinor_electron_ideal,right,interaction_pass_123,True,0,6,7

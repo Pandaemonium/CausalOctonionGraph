@@ -14,7 +14,7 @@ statement: |
   CâŠ—O algebra.  It is not a free parameter but a fixed geometric ratio
   of the discrete shadow of the gauge group within the causal graph.
 
-status: active_hypothesis
+status: partial
 pi_obs_profile: minimal
 pi_obs_profile_version: v1
 projection_sensitivity: sensitive
@@ -24,7 +24,7 @@ lean_file: CausalGraphTheory/Constants.lean
 lean_theorems:
   - CausalGraph.alpha_candidate_def
   - CausalGraph.alpha_fano_bound
-python_test: calc/test_constants.py::TestAlphaFineStructure::test_alpha_target_value
+python_test: calc/test_alpha001_fano.py
 depends_on:
   - GAUGE-001
   - FANO-001
@@ -52,6 +52,11 @@ notes: |
     1/168        â‰ˆ 0.00595            (too small by factor ~1.2)
     7/(168*pi^2) â‰ˆ 0.00423            (too small)
     7/168        = 1/24 â‰ˆ 0.04167    (too large by factor ~5.7)
+
+  GATE 1 PROXIES (2026-02-27):
+    alpha_proxy_v1 = 1/49  â‰ˆ 0.020408  (rel err â‰ˆ 179%)
+    alpha_proxy_v2 = 1/153 â‰ˆ 0.006536  (rel err â‰ˆ 10.4%)
+    alpha_proxy_v3 = 1/145 â‰ˆ 0.006897  (rel err â‰ˆ 5.5%)  [closest]
 
   RESEARCH DIRECTION:
     The correct formula is expected to involve the volume or phase-space

@@ -1,0 +1,577 @@
+{
+  "schema_version": "xor_furey_ideal_cycles_v1",
+  "generated_at_utc": "2026-02-27T10:21:06.705572Z",
+  "notation": {
+    "basis": "e0..e7",
+    "imag_channels_bits": {
+      "1": "001",
+      "2": "010",
+      "3": "011",
+      "4": "100",
+      "5": "101",
+      "6": "110",
+      "7": "111"
+    },
+    "mul_rule": "e_i * e_j uses XOR index channel for distinct imaginaries, with Fano sign channel"
+  },
+  "witt_pairs_one_indexed": [
+    [
+      6,
+      1
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "motif_count": 16,
+  "stable_period4_count": 16,
+  "motifs": [
+    {
+      "motif_id": "su_vacuum_omega",
+      "family": "Su",
+      "support": [
+        0,
+        7
+      ],
+      "support_bits": [
+        "111"
+      ],
+      "state_sparse": {
+        "e0": {
+          "re": 1,
+          "im": 0
+        },
+        "e7": {
+          "re": 0,
+          "im": 1
+        }
+      },
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_single_1",
+      "family": "Su",
+      "support": [
+        1,
+        6
+      ],
+      "support_bits": [
+        "001",
+        "110"
+      ],
+      "state_sparse": {
+        "e1": {
+          "re": 0,
+          "im": 2
+        },
+        "e6": {
+          "re": -2,
+          "im": 0
+        }
+      },
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_single_2",
+      "family": "Su",
+      "support": [
+        2,
+        5
+      ],
+      "support_bits": [
+        "010",
+        "101"
+      ],
+      "state_sparse": {
+        "e2": {
+          "re": -2,
+          "im": 0
+        },
+        "e5": {
+          "re": 0,
+          "im": 2
+        }
+      },
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_single_3",
+      "family": "Su",
+      "support": [
+        3,
+        4
+      ],
+      "support_bits": [
+        "011",
+        "100"
+      ],
+      "state_sparse": {
+        "e3": {
+          "re": -2,
+          "im": 0
+        },
+        "e4": {
+          "re": 0,
+          "im": 2
+        }
+      },
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_double_12",
+      "family": "Su",
+      "support": [
+        3,
+        4
+      ],
+      "support_bits": [
+        "011",
+        "100"
+      ],
+      "state_sparse": {
+        "e3": {
+          "re": 0,
+          "im": -4
+        },
+        "e4": {
+          "re": 4,
+          "im": 0
+        }
+      },
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_double_13",
+      "family": "Su",
+      "support": [
+        2,
+        5
+      ],
+      "support_bits": [
+        "010",
+        "101"
+      ],
+      "state_sparse": {
+        "e2": {
+          "re": 0,
+          "im": 4
+        },
+        "e5": {
+          "re": -4,
+          "im": 0
+        }
+      },
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_double_23",
+      "family": "Su",
+      "support": [
+        1,
+        6
+      ],
+      "support_bits": [
+        "001",
+        "110"
+      ],
+      "state_sparse": {
+        "e1": {
+          "re": 4,
+          "im": 0
+        },
+        "e6": {
+          "re": 0,
+          "im": -4
+        }
+      },
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_triple_electron",
+      "family": "Su",
+      "support": [
+        0,
+        7
+      ],
+      "support_bits": [
+        "111"
+      ],
+      "state_sparse": {
+        "e0": {
+          "re": 0,
+          "im": -8
+        },
+        "e7": {
+          "re": -8,
+          "im": 0
+        }
+      },
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_vacuum_omega_dag",
+      "family": "Sd",
+      "support": [
+        0,
+        7
+      ],
+      "support_bits": [
+        "111"
+      ],
+      "state_sparse": {
+        "e0": {
+          "re": 1,
+          "im": 0
+        },
+        "e7": {
+          "re": 0,
+          "im": -1
+        }
+      },
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_single_1",
+      "family": "Sd",
+      "support": [
+        1,
+        6
+      ],
+      "support_bits": [
+        "001",
+        "110"
+      ],
+      "state_sparse": {
+        "e1": {
+          "re": 0,
+          "im": 2
+        },
+        "e6": {
+          "re": 2,
+          "im": 0
+        }
+      },
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_single_2",
+      "family": "Sd",
+      "support": [
+        2,
+        5
+      ],
+      "support_bits": [
+        "010",
+        "101"
+      ],
+      "state_sparse": {
+        "e2": {
+          "re": 2,
+          "im": 0
+        },
+        "e5": {
+          "re": 0,
+          "im": 2
+        }
+      },
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_single_3",
+      "family": "Sd",
+      "support": [
+        3,
+        4
+      ],
+      "support_bits": [
+        "011",
+        "100"
+      ],
+      "state_sparse": {
+        "e3": {
+          "re": 2,
+          "im": 0
+        },
+        "e4": {
+          "re": 0,
+          "im": 2
+        }
+      },
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_double_12",
+      "family": "Sd",
+      "support": [
+        3,
+        4
+      ],
+      "support_bits": [
+        "011",
+        "100"
+      ],
+      "state_sparse": {
+        "e3": {
+          "re": 0,
+          "im": 4
+        },
+        "e4": {
+          "re": 4,
+          "im": 0
+        }
+      },
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_double_13",
+      "family": "Sd",
+      "support": [
+        2,
+        5
+      ],
+      "support_bits": [
+        "010",
+        "101"
+      ],
+      "state_sparse": {
+        "e2": {
+          "re": 0,
+          "im": -4
+        },
+        "e5": {
+          "re": -4,
+          "im": 0
+        }
+      },
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_double_23",
+      "family": "Sd",
+      "support": [
+        1,
+        6
+      ],
+      "support_bits": [
+        "001",
+        "110"
+      ],
+      "state_sparse": {
+        "e1": {
+          "re": 4,
+          "im": 0
+        },
+        "e6": {
+          "re": 0,
+          "im": 4
+        }
+      },
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_triple_dual_electron",
+      "family": "Sd",
+      "support": [
+        0,
+        7
+      ],
+      "support_bits": [
+        "111"
+      ],
+      "state_sparse": {
+        "e0": {
+          "re": 0,
+          "im": -8
+        },
+        "e7": {
+          "re": 8,
+          "im": 0
+        }
+      },
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    }
+  ],
+  "csv_rows": [
+    {
+      "motif_id": "su_vacuum_omega",
+      "family": "Su",
+      "support": "[0, 7]",
+      "support_bits": "['111']",
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_single_1",
+      "family": "Su",
+      "support": "[1, 6]",
+      "support_bits": "['001', '110']",
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_single_2",
+      "family": "Su",
+      "support": "[2, 5]",
+      "support_bits": "['010', '101']",
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_single_3",
+      "family": "Su",
+      "support": "[3, 4]",
+      "support_bits": "['011', '100']",
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_double_12",
+      "family": "Su",
+      "support": "[3, 4]",
+      "support_bits": "['011', '100']",
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_double_13",
+      "family": "Su",
+      "support": "[2, 5]",
+      "support_bits": "['010', '101']",
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_double_23",
+      "family": "Su",
+      "support": "[1, 6]",
+      "support_bits": "['001', '110']",
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "su_triple_electron",
+      "family": "Su",
+      "support": "[0, 7]",
+      "support_bits": "['111']",
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_vacuum_omega_dag",
+      "family": "Sd",
+      "support": "[0, 7]",
+      "support_bits": "['111']",
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_single_1",
+      "family": "Sd",
+      "support": "[1, 6]",
+      "support_bits": "['001', '110']",
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_single_2",
+      "family": "Sd",
+      "support": "[2, 5]",
+      "support_bits": "['010', '101']",
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_single_3",
+      "family": "Sd",
+      "support": "[3, 4]",
+      "support_bits": "['011', '100']",
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_double_12",
+      "family": "Sd",
+      "support": "[3, 4]",
+      "support_bits": "['011', '100']",
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_double_13",
+      "family": "Sd",
+      "support": "[2, 5]",
+      "support_bits": "['010', '101']",
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_double_23",
+      "family": "Sd",
+      "support": "[1, 6]",
+      "support_bits": "['001', '110']",
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    },
+    {
+      "motif_id": "sd_triple_dual_electron",
+      "family": "Sd",
+      "support": "[0, 7]",
+      "support_bits": "['111']",
+      "period_left_e7": 4,
+      "period_right_e7": 4,
+      "stable_period4": true
+    }
+  ]
+}
