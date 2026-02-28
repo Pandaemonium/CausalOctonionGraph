@@ -83,6 +83,37 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
     if "falsification_attempts" not in doc:
         issues.append(Issue(claim_id, "error", f"{claim_id}: missing falsification_attempts field"))
 
+    continuum_contract = doc.get("continuum_identification_contract")
+    if not isinstance(continuum_contract, dict):
+        issues.append(Issue(claim_id, "error", f"{claim_id}: continuum_identification_contract must be an object"))
+    else:
+        if str(continuum_contract.get("rfc_id", "")).strip() != "RFC-003":
+            issues.append(Issue(claim_id, "error", f"{claim_id}: continuum_identification_contract.rfc_id must be RFC-003"))
+        if str(continuum_contract.get("policy_id", "")).strip() != "theta_continuum_linear_identification_v1":
+            issues.append(
+                Issue(
+                    claim_id,
+                    "error",
+                    f"{claim_id}: continuum_identification_contract.policy_id must be theta_continuum_linear_identification_v1",
+                )
+            )
+        if str(continuum_contract.get("map_id", "")).strip() != "linear_scale_1_v1":
+            issues.append(
+                Issue(
+                    claim_id,
+                    "error",
+                    f"{claim_id}: continuum_identification_contract.map_id must be linear_scale_1_v1",
+                )
+            )
+        if not _is_nonempty_str(continuum_contract.get("coarse_grain_operator")):
+            issues.append(
+                Issue(
+                    claim_id,
+                    "error",
+                    f"{claim_id}: continuum_identification_contract.coarse_grain_operator required",
+                )
+            )
+
     bridge_map_policy = doc.get("bridge_map_policy")
     if not isinstance(bridge_map_policy, dict):
         issues.append(Issue(claim_id, "error", f"{claim_id}: bridge_map_policy must be an object"))
@@ -175,12 +206,27 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
                     f"{claim_id}: lean_theorems must include direct/linear/affine bridge theorems",
                 )
             )
+        required_continuum = {
+            "CausalGraphV2.discreteTopologicalCharge_v1_zero",
+            "CausalGraphV2.thetaContinuumCoeff_linear_v1_zero",
+            "CausalGraphV2.fTildeFCoeff_proxy_linear_v1_zero",
+            "CausalGraphV2.theta_qcd_zero_under_locked_identification_v1",
+        }
+        if not required_continuum.issubset(set(str(x) for x in lean_theorems)):
+            issues.append(
+                Issue(
+                    claim_id,
+                    "error",
+                    f"{claim_id}: lean_theorems must include RFC-003 locked continuum identification theorem set",
+                )
+            )
 
     for key in (
         "weak_leakage_artifact",
         "eft_bridge_artifact",
         "eft_map_artifact",
         "continuum_bridge_artifact",
+        "triplet_leakage_artifact",
         "skeptic_review_artifact",
     ):
         value = rfc083.get(key)
@@ -196,6 +242,7 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
         weak_bridge_payload: Dict[str, Any] | None = None
         eft_map_payload: Dict[str, Any] | None = None
         continuum_bridge_payload: Dict[str, Any] | None = None
+        triplet_payload: Dict[str, Any] | None = None
 
         if status == "proved_core" and closure_scope == "structure_first":
             issues.append(Issue(claim_id, "error", f"{claim_id}: structure_first claims cannot be proved_core"))
@@ -337,6 +384,85 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
                                 f"{claim_id}: continuum_bridge_readiness.normalized_residual_stable_zero must be true",
                             )
                         )
+                contract_payload = payload.get("continuum_identification_contract")
+                if not isinstance(contract_payload, dict):
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: continuum_bridge_artifact missing continuum_identification_contract",
+                        )
+                    )
+                else:
+                    if str(contract_payload.get("rfc_id", "")).strip() != "RFC-003":
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: continuum_bridge_artifact continuum_identification_contract.rfc_id must be RFC-003",
+                            )
+                        )
+                    if str(contract_payload.get("policy_id", "")).strip() != "theta_continuum_linear_identification_v1":
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: continuum_bridge_artifact policy_id must be theta_continuum_linear_identification_v1",
+                            )
+                        )
+                    if str(contract_payload.get("locked_map_policy", "")).strip() != "linear_scale_1_v1":
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: continuum_bridge_artifact locked_map_policy must be linear_scale_1_v1",
+                            )
+                        )
+
+        triplet_art = rfc083.get("triplet_leakage_artifact")
+        if _is_nonempty_str(triplet_art):
+            payload = _read_json(root / str(triplet_art))
+            if not payload:
+                issues.append(Issue(claim_id, "error", f"{claim_id}: triplet_leakage_artifact must be valid JSON"))
+            else:
+                triplet_payload = payload
+                if str(payload.get("schema_version", "")).strip() != "triplet_coherence_e0_leakage_v1":
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: triplet_leakage_artifact schema_version must be triplet_coherence_e0_leakage_v1",
+                        )
+                    )
+                ax = payload.get("axiom_profile")
+                if not isinstance(ax, dict):
+                    issues.append(Issue(claim_id, "error", f"{claim_id}: triplet_leakage_artifact missing axiom_profile"))
+                else:
+                    if str(ax.get("kernel_profile", "")).strip() != "cog_v2_projective_unity_v1":
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: triplet_leakage_artifact kernel_profile must be cog_v2_projective_unity_v1",
+                            )
+                        )
+                checks = payload.get("hypothesis_checks")
+                if not isinstance(checks, dict) or not checks:
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: triplet_leakage_artifact hypothesis_checks must be non-empty object",
+                        )
+                    )
+                if payload.get("all_checks_pass") is not True:
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: triplet_leakage_artifact all_checks_pass must be true",
+                        )
+                    )
 
         if isinstance(bridge_map_policy, dict):
             primary_lane = bridge_map_policy.get("primary_lane", {})

@@ -6,6 +6,7 @@ Owner: COG Core
 Depends on: `cog_v2/rfc/RFC-001_Canonical_Axiom_Profile.md`
 Related:
 - `cog_v2/rfc/Targeted_Branching_Policy_for_Computational_Efficiency_and_Statistical_Integrity.md`
+- `cog_v2/rfc/RFC-003_Theta_Continuum_Identification_Contract.md`
 
 ## 1. Executive Decision
 
