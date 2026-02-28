@@ -1,0 +1,52 @@
+# v2 lane migration manifest (template)
+# Status values: todo | in_progress | ported | verified | blocked
+
+artifacts:
+  - id: kernel_projective_unity
+    source_path: world_code/Python_code/minimal_world_kernel_projective_unity.py
+    target_path: cog_v2/python/kernel_projective_unity.py
+    owner: core
+    status: verified
+    verification:
+      - pytest cog_v2/python/tests/test_kernel_projective_unity.py -q
+    notes: "v2 kernel adds optional pre-registered event_order."
+
+  - id: theta_qcd_lean_lane
+    source_path: CausalGraphTheory/ThetaQCD.lean
+    target_path: cog_v2/lean/CausalGraphV2/ThetaQCD.lean
+    owner: core
+    status: verified
+    verification:
+      - cd cog_v2/lean && lake build CausalGraphV2.ThetaQCD
+      - cd cog_v2/lean && lake build
+    notes: "Port verified on Lean v2 package with Std-only dependency profile."
+
+  - id: theta_claim_v2_stub
+    source_path: claims/THETA-001.yml
+    target_path: cog_v2/claims/THETA-001.yml
+    owner: core
+    status: verified
+    verification:
+      - python -m cog_v2.calc.build_theta001_bridge_closure_v2 --write-sources
+      - cd cog_v2/lean && lake build
+      - python cog_v2/scripts/validate_claim_contracts_v2.py --root . --claims-dir cog_v2/claims
+    notes: "THETA-001 v2 promoted to supported_bridge with PASS_WITH_LIMITS skeptic artifact."
+
+  - id: theta_skeptic_v2_artifact
+    source_path: sources/theta001_skeptic_review.json
+    target_path: cog_v2/sources/theta001_skeptic_review_v2.json
+    owner: core
+    status: verified
+    verification:
+      - python cog_v2/scripts/validate_claim_contracts_v2.py --root . --claims-dir cog_v2/claims
+    notes: "Model-family-diverse skeptic artifact attached (PASS_WITH_LIMITS, structure_first limits explicit)."
+
+  - id: theta_eft_bridge_v2_lane
+    source_path: CausalGraphTheory/ThetaEFTBridge.lean
+    target_path: cog_v2/lean/CausalGraphV2/ThetaEFTBridge.lean
+    owner: core
+    status: verified
+    verification:
+      - cd cog_v2/lean && lake build CausalGraphV2.ThetaEFTBridge
+      - cd cog_v2/lean && lake build
+    notes: "Bridge theorem lane verified; includes zero-anchored bridge theorem for generic map contracts."

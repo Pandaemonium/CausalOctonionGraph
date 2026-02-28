@@ -1,6 +1,6 @@
 # RFC-086: Projective Universe Axiom and Projective-Unity Kernel
 
-Status: Active Draft (Exploratory, Non-Canonical)
+Status: Active Draft (Canonical Axiom Profile, Migration in Progress)
 Date: 2026-02-28
 Owner: Research Director + Kernel Team
 Depends on:
@@ -15,20 +15,20 @@ Depends on:
 
 ## 1. Executive Summary
 
-This RFC formalizes a compact exploratory kernel profile:
+This RFC formalizes the projective-unity kernel profile:
 1. Universe model: directed acyclic graph (DAG),
 2. node state space: `C x O` over a discrete unity alphabet,
 3. local evolution: lightcone projection update.
 
-The goal is to provide a bounded, deterministic phase-profile pathway for simulation experiments without replacing the canonical integer kernel.
+The goal is to provide a bounded, deterministic phase-profile pathway as the canonical simulation profile.
 
 Decision:
-1. `minimal_world_kernel_projective_unity.py` is accepted as an exploratory profile implementation.
-2. Canonical claim promotion remains on integer-kernel pathway unless explicit closure gates are passed in a future RFC.
+1. `minimal_world_kernel_projective_unity.py` is accepted as canonical profile implementation.
+2. Integer-kernel profile is retained as a legacy/sensitivity profile.
 
 ---
 
-## 2. Axiom Profile (Exploratory)
+## 2. Axiom Profile (Canonical)
 
 For this profile only:
 1. world state is a DAG with fixed parent map,
@@ -36,7 +36,7 @@ For this profile only:
 3. each coefficient is constrained to `U5 = {0, +1, -1, +i, -i}`,
 4. each tick computes a deterministic projected update from the node's past lightcone.
 
-This RFC defines computational semantics, not a proved continuum equivalence.
+This RFC defines canonical computational semantics, not a proved continuum equivalence.
 
 ---
 
@@ -121,13 +121,13 @@ If used for physics-facing claims:
 ## 8. Governance Boundary
 
 Locked by this RFC:
-1. projective-unity kernel is an approved exploratory pathway,
-2. integer kernel remains canonical for promotion unless separately upgraded.
+1. projective-unity kernel is canonical for new claim-grade simulation pathways,
+2. integer/unity legacy profiles are sensitivity pathways.
 
 Explicit non-goals:
 1. no claim here that projective-unity profile is physically complete,
 2. no claim here that it is equivalent to continuum EFT,
-3. no claim here that it supersedes integer-kernel derivations.
+3. no claim here that continuum EFT closure is complete.
 
 ---
 
@@ -155,5 +155,4 @@ Gate P5: profile disclosure
 
 1. Add dedicated tests for `minimal_world_kernel_projective_unity.py`.
 2. Add profile mention to `world_code/Python_code/README.md`.
-3. Add profile validator hooks in promotion pipeline so exploratory outputs cannot be mislabeled as canonical.
-
+3. Add profile validator hooks in promotion pipeline so mixed-profile outputs cannot be mislabeled as single-lane canonical evidence.

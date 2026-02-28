@@ -4,6 +4,7 @@ This is the live public ledger of claim upgrades in COG Lab.
 
 See also:
 - `/web/pages/sm_parameter_derivation_table`
+- `/web/pages/phenomena_full_coverage_matrix`
 
 Default mode is **Layman**.
 

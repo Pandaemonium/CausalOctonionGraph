@@ -2,7 +2,9 @@
 *For onboarding and public reference. Covers all locked architecture decisions through RFC-028.*
 *Written 2026-02-27. Last updated 2026-02-27.*
 
-See also: [Standard Model Free Parameters: First-Principles Derivation Table](/web/pages/sm_parameter_derivation_table)
+See also:
+- [Standard Model Free Parameters: First-Principles Derivation Table](/web/pages/sm_parameter_derivation_table)
+- [COG Full Phenomena Coverage Matrix](/web/pages/phenomena_full_coverage_matrix)
 
 ---
 

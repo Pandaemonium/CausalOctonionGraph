@@ -1,6 +1,6 @@
 # RFC-077: CxO Unity Profile and Projection Update Rule
 
-Status: Active Draft (Non-Canonical Research Profile)
+Status: Superseded by RFC-088 (Historical Record)
 Date: 2026-02-27
 Owner: Research Director + Kernel Team
 Depends on:
@@ -14,6 +14,11 @@ Depends on:
 ---
 
 ## 1. Executive Summary
+
+Historical note:
+1. This RFC captured an earlier governance position where integer profile was canonical and unity-projection was exploratory.
+2. Canonical-profile governance has since migrated to projective-unity under `rfc/RFC-088_Canonical_Axiom_Migration_to_Projective_Unity.md`.
+3. Keep this RFC as historical rationale and A/B context.
 
 Question:
 Can we replace the current `CxO` integer-coefficient kernel with a unity-only coefficient model?
@@ -183,4 +188,3 @@ Forbidden:
 1. Add explicit profile metadata checks to claim validators for simulation-backed claims.
 2. Add A/B battery script to compare integer vs unity across standard benchmark scenarios.
 3. Add fail-fast guard in promotion pipeline: unity-only artifacts cannot promote without baseline pair.
-

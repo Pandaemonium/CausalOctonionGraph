@@ -2,6 +2,10 @@
 
 Last updated: 2026-02-28
 
+See also:
+- [COG Full Phenomena Coverage Matrix](/web/pages/phenomena_full_coverage_matrix)
+- [COG Primer](/web/pages/cog_primer)
+
 This page is the execution-facing map: every Standard Model free parameter on the left, and our first-principles COG derivation strategy on the right.
 
 Conventions:

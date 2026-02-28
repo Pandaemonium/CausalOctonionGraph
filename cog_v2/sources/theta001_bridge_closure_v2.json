@@ -1,0 +1,4074 @@
+{
+  "bridge_ready_supported_bridge": true,
+  "ckm_like_weak_leakage_suite": {
+    "all_zero": true,
+    "case_count": 3,
+    "max_abs_residual": 0,
+    "rows": [
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 3,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 5,
+        "strong_residual": 0,
+        "transport_period": 4,
+        "weak_kick": 7
+      }
+    ]
+  },
+  "claim_id": "THETA-001",
+  "closure_scope": "structure_first",
+  "continuum_bridge_contract": {
+    "bridge_mode": "conditional_linear_map_v1",
+    "conditional_conclusion_theta_zero": true,
+    "lean_theorems": [
+      "CausalGraphV2.discreteCpResidual_zero",
+      "CausalGraphV2.theta_zero_if_direct_bridge",
+      "CausalGraphV2.theta_zero_if_linear_bridge",
+      "CausalGraphV2.theta_zero_if_affine_bridge",
+      "CausalGraphV2.theta_zero_if_zero_anchored_bridge"
+    ],
+    "linear_map_lane": {
+      "cp_odd_all_hold": true,
+      "promotion_blocking": true,
+      "rows": [
+        {
+          "cp_odd_holds": true,
+          "residual": -7,
+          "scale": -2,
+          "theta": 14,
+          "theta_dual": -14,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": -3,
+          "scale": -2,
+          "theta": 6,
+          "theta_dual": -6,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": -1,
+          "scale": -2,
+          "theta": 2,
+          "theta_dual": -2,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": 0,
+          "scale": -2,
+          "theta": 0,
+          "theta_dual": 0,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": 1,
+          "scale": -2,
+          "theta": -2,
+          "theta_dual": 2,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": 3,
+          "scale": -2,
+          "theta": -6,
+          "theta_dual": 6,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": 7,
+          "scale": -2,
+          "theta": -14,
+          "theta_dual": 14,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": -7,
+          "scale": -1,
+          "theta": 7,
+          "theta_dual": -7,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": -3,
+          "scale": -1,
+          "theta": 3,
+          "theta_dual": -3,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": -1,
+          "scale": -1,
+          "theta": 1,
+          "theta_dual": -1,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": 0,
+          "scale": -1,
+          "theta": 0,
+          "theta_dual": 0,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": 1,
+          "scale": -1,
+          "theta": -1,
+          "theta_dual": 1,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": 3,
+          "scale": -1,
+          "theta": -3,
+          "theta_dual": 3,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": 7,
+          "scale": -1,
+          "theta": -7,
+          "theta_dual": 7,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": -7,
+          "scale": 1,
+          "theta": -7,
+          "theta_dual": 7,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": -3,
+          "scale": 1,
+          "theta": -3,
+          "theta_dual": 3,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": -1,
+          "scale": 1,
+          "theta": -1,
+          "theta_dual": 1,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": 0,
+          "scale": 1,
+          "theta": 0,
+          "theta_dual": 0,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": 1,
+          "scale": 1,
+          "theta": 1,
+          "theta_dual": -1,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": 3,
+          "scale": 1,
+          "theta": 3,
+          "theta_dual": -3,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": 7,
+          "scale": 1,
+          "theta": 7,
+          "theta_dual": -7,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": -7,
+          "scale": 2,
+          "theta": -14,
+          "theta_dual": 14,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": -3,
+          "scale": 2,
+          "theta": -6,
+          "theta_dual": 6,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": -1,
+          "scale": 2,
+          "theta": -2,
+          "theta_dual": 2,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": 0,
+          "scale": 2,
+          "theta": 0,
+          "theta_dual": 0,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": 1,
+          "scale": 2,
+          "theta": 2,
+          "theta_dual": -2,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": 3,
+          "scale": 2,
+          "theta": 6,
+          "theta_dual": -6,
+          "zero_anchor_holds": true
+        },
+        {
+          "cp_odd_holds": true,
+          "residual": 7,
+          "scale": 2,
+          "theta": 14,
+          "theta_dual": -14,
+          "zero_anchor_holds": true
+        }
+      ],
+      "status": "primary_blocking",
+      "zero_anchor_all_hold": true
+    }
+  },
+  "fano_sign_balance": {
+    "negative_count": 21,
+    "positive_count": 21,
+    "signed_sum": 0
+  },
+  "lean_bridge_file": "cog_v2/lean/CausalGraphV2/ThetaEFTBridge.lean",
+  "lean_bridge_file_sha256": "6ccbcbb361b711c8670dbbbe9de92a444f922fc776f46f142cd7b9ab106674dc",
+  "orientation_reversal_closed_on_fano_lines": true,
+  "periodic_angle_lane": {
+    "cp_odd_mod_2pi_all_hold": true,
+    "promotion_blocking": false,
+    "rows": [
+      {
+        "odd_mod_2pi_holds": true,
+        "residual": -3.0,
+        "theta_dual_wrapped": 3.0,
+        "theta_wrapped": -3.0
+      },
+      {
+        "odd_mod_2pi_holds": true,
+        "residual": -1.0,
+        "theta_dual_wrapped": 1.0,
+        "theta_wrapped": -1.0
+      },
+      {
+        "odd_mod_2pi_holds": true,
+        "residual": 0.0,
+        "theta_dual_wrapped": 0.0,
+        "theta_wrapped": 0.0
+      },
+      {
+        "odd_mod_2pi_holds": true,
+        "residual": 1.0,
+        "theta_dual_wrapped": -1.0,
+        "theta_wrapped": 1.0
+      },
+      {
+        "odd_mod_2pi_holds": true,
+        "residual": 3.0,
+        "theta_dual_wrapped": -3.0,
+        "theta_wrapped": 3.0
+      }
+    ],
+    "status": "stub_non_blocking"
+  },
+  "replay_hash": "c737a82b2754553ca641e9712448736b5195ea790c9b856497ae8aaf441c80e0",
+  "schema_version": "theta001_bridge_closure_v2",
+  "source_script": "cog_v2/calc/build_theta001_bridge_closure_v2.py",
+  "source_script_sha256": "6649d655b1b2dae9b7bf819b59c6eef73df56de55264a88de641fdeb7759c037",
+  "trace_suite": [
+    {
+      "case_id": "base_lane_v2",
+      "cp_dual_relation_holds": true,
+      "weighted_trace_delta": 0
+    },
+    {
+      "case_id": "alt_lane_a_v2",
+      "cp_dual_relation_holds": true,
+      "weighted_trace_delta": 0
+    },
+    {
+      "case_id": "alt_lane_b_v2",
+      "cp_dual_relation_holds": true,
+      "weighted_trace_delta": 0
+    }
+  ],
+  "weak_leakage_suite": {
+    "all_zero": true,
+    "case_count": 3,
+    "max_abs_residual": 0,
+    "rows": [
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "base_lane_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_a_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 1,
+        "strong_residual": 0,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 2,
+        "strong_residual": 0,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 3,
+        "strong_residual": 0,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 4,
+        "strong_residual": 0,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "phase_shift": 5,
+        "strong_residual": 0,
+        "weak_kick": 7
+      }
+    ]
+  },
+  "witness_module": "cog_v2/calc/theta001_cp_invariant_v2.py",
+  "witness_module_sha256": "6b65c30f4ae3ce584a01c1c38f8eef562716491b5396a923f99034d1d235f67e"
+}

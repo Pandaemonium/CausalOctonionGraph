@@ -1,0 +1,10 @@
+name = "cogv2"
+version = "0.1.0"
+defaultTargets = ["cogv2"]
+
+[[lean_lib]]
+name = "CausalGraphV2"
+
+[[lean_exe]]
+name = "cogv2"
+root = "Main"

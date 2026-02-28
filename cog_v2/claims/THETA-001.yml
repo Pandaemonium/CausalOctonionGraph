@@ -1,0 +1,78 @@
+id: THETA-001
+title: Theta_QCD Structural CP Invariance (v2 Lane)
+status: supported_bridge
+closure_scope: structure_first
+canonical_profile:
+  axioms:
+    - dag
+    - cxo_over_unity
+    - projective_lightcone_update
+  kernel_profile: cog_v2_projective_unity_v1
+  projector_id: pi_unity_axis_dominance_v1
+
+statement: >
+  Under the v2 canonical profile, Fano orientation-flip and exact sign-balance
+  provide a structural CP-invariance witness for a zero strong-sector CP-odd
+  residual at the discrete level.
+
+contract_gates:
+  required:
+    - rfc083
+  rfc083:
+    closure_scope: structure_first
+    bridge_contract_id: theta_cp_bridge_v2
+    bridge_observable_id: theta_cp_odd_residual_v2
+    weak_leakage_artifact: cog_v2/sources/theta001_bridge_closure_v2.json
+    eft_bridge_artifact: cog_v2/sources/theta001_bridge_closure_v2.json
+    skeptic_review_artifact: cog_v2/sources/theta001_skeptic_review_v2.json
+    skeptic_verdict: PASS_WITH_LIMITS
+
+lean_file: cog_v2/lean/CausalGraphV2/ThetaQCD.lean
+lean_theorems:
+  - CausalGraphV2.cpMap_involution
+  - CausalGraphV2.orientationFlip_preserves_incidence
+  - CausalGraphV2.fano_sign_pos_count_eq_21
+  - CausalGraphV2.fano_sign_neg_count_eq_21
+  - CausalGraphV2.fanoSignOrderedSum_zero
+  - CausalGraphV2.discreteCpResidual_zero
+  - CausalGraphV2.theta_zero_if_direct_bridge
+  - CausalGraphV2.theta_zero_if_linear_bridge
+  - CausalGraphV2.theta_zero_if_affine_bridge
+  - CausalGraphV2.theta_zero_if_zero_anchored_bridge
+
+python_test:
+  - cog_v2/python/tests/test_kernel_projective_unity.py
+  - cog_v2/calc/test_theta001_cp_invariant_v2.py
+  - cog_v2/calc/test_theta001_bridge_closure_v2.py
+python_check:
+  - python -m cog_v2.calc.build_theta001_bridge_closure_v2 --write-sources
+  - python cog_v2/scripts/validate_claim_contracts_v2.py --root . --claims-dir cog_v2/claims
+
+bridge_assumptions:
+  - "Discrete CP residual witness corresponds to the continuum theta_QCD term."
+  - "Weak-sector CP violation does not leak into strong-sector residual under canonical update."
+
+falsification_condition: >
+  Claim is falsified if a deterministic v2 weak-leakage test shows a non-zero
+  strong-sector CP-odd residual under declared CP-asymmetric perturbations.
+
+falsification_attempts:
+  - id: theta_v2_weak_leakage_grid_v1
+    artifact: cog_v2/sources/theta001_bridge_closure_v2.json
+    method: "deep-cone weak-kick x phase-shift grid"
+    outcome: "no strong-sector CP-odd residual detected"
+  - id: theta_v2_ckm_like_grid_v1
+    artifact: cog_v2/sources/theta001_bridge_closure_v2.json
+    method: "deep-cone CKM-like transport injection grid"
+    outcome: "no strong-sector CP-odd residual detected"
+
+gates:
+  - id: gate_1
+    description: Lean structural witnesses compile in v2 lane.
+    done: true
+  - id: gate_2
+    description: Python deterministic witness and replay tests pass in v2 lane.
+    done: true
+  - id: gate_3
+    description: Independent skeptic review with model-family diversity attached.
+    done: true
