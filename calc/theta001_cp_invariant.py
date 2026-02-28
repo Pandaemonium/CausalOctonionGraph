@@ -102,6 +102,75 @@ def run_update_trace(initial: State8, op_sequence: Sequence[int], sign_table: Si
     return trace
 
 
+def ckm_like_transport(state: State8, *, phase: int, step: int) -> State8:
+    """
+    Deterministic CKM-like weak-sector transport surrogate.
+
+    This transport does two things:
+    1. Cyclicly permutes generation-like channels (e1, e2, e3) based on step.
+    2. Injects a signed weak-phase tag on e7.
+
+    The dual CP run should use the conjugate phase (`-phase`).
+    """
+    out = list(state)
+    a, b, c = out[1], out[2], out[3]
+
+    # Phase sign selects forward/backward generation transport orientation.
+    phase_int = int(phase)
+    mode = int(step) % 3
+    forward = phase_int >= 0
+    if forward:
+        if mode == 0:
+            out[1], out[2], out[3] = b, c, a
+        elif mode == 1:
+            out[1], out[2], out[3] = c, a, b
+        else:
+            out[1], out[2], out[3] = a, b, c
+    else:
+        if mode == 0:
+            out[1], out[2], out[3] = c, a, b
+        elif mode == 1:
+            out[1], out[2], out[3] = b, c, a
+        else:
+            out[1], out[2], out[3] = a, b, c
+
+    # Magnitude-preserving sign masks as a discrete phase surrogate.
+    if abs(phase_int) % 2 == 1:
+        out[1] = -out[1]
+        out[3] = -out[3]
+        out[7] = -out[7]
+    if abs(phase_int) % 3 == 2:
+        out[2] = -out[2]
+        out[7] = -out[7]
+
+    return tuple(out)  # type: ignore[return-value]
+
+
+def run_update_trace_ckm_transport(
+    initial: State8,
+    op_sequence: Sequence[int],
+    sign_table: SignTable,
+    *,
+    ckm_phase: int,
+    transport_period: int,
+) -> List[State8]:
+    """
+    Deterministic trace with periodic CKM-like transport injections.
+    """
+    if int(transport_period) <= 0:
+        raise ValueError("transport_period must be > 0")
+
+    cur = initial
+    trace = [cur]
+    period = int(transport_period)
+    for step, op_idx in enumerate(op_sequence, start=1):
+        if step % period == 0:
+            cur = ckm_like_transport(cur, phase=int(ckm_phase), step=step)
+        cur = left_mul_basis(op_idx, cur, sign_table)
+        trace.append(cur)
+    return trace
+
+
 def flipped_sign_table() -> SignTable:
     """Orientation-reversed sign table for distinct imaginaries."""
     return {(i, j): -s for (i, j), s in FANO_SIGN.items()}
@@ -191,3 +260,49 @@ def weak_leakage_strong_residual(
     perturbed[7] += int(weak_kick)
     ops_shifted = rotate_ops(op_sequence, int(phase_shift))
     return cp_weighted_trace_delta(tuple(perturbed), ops_shifted, strong_weights)
+
+
+def weak_leakage_ckm_like_strong_residual(
+    initial: State8,
+    op_sequence: Sequence[int],
+    *,
+    weak_kick: int,
+    ckm_phase: int,
+    transport_period: int = 3,
+    strong_weights: Sequence[int] = STRONG_SECTOR_WEIGHTS,
+) -> int:
+    """
+    Deep-cone weak-leakage stress with CKM-like transport injection.
+
+    Both orig and dual lanes receive the same CKM-like transport schedule.
+    In this structure-first lane, we are stress-testing non-commutative weak
+    routing while keeping the transport family matched between CP-dual runs.
+    """
+    if len(op_sequence) <= 10:
+        raise ValueError("weak-leakage stress requires deep cone: len(op_sequence) > 10")
+    if int(transport_period) <= 0:
+        raise ValueError("transport_period must be > 0")
+
+    perturbed = list(initial)
+    perturbed[7] += int(weak_kick)
+    init = tuple(perturbed)
+
+    orig_trace = run_update_trace_ckm_transport(
+        init,
+        op_sequence,
+        FANO_SIGN,
+        ckm_phase=int(ckm_phase),
+        transport_period=int(transport_period),
+    )
+    dual_trace = run_update_trace_ckm_transport(
+        cp_map(init),
+        op_sequence,
+        flipped_sign_table(),
+        ckm_phase=int(ckm_phase),
+        transport_period=int(transport_period),
+    )
+
+    delta = 0
+    for s1, s2 in zip(orig_trace, dual_trace):
+        delta += _weighted_action(s1, strong_weights) - _weighted_action(s2, strong_weights)
+    return delta

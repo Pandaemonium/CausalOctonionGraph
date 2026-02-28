@@ -28,6 +28,8 @@ def test_bridge_closure_payload_has_expected_properties() -> None:
     assert payload["discrete_cp_residual"]["is_zero"] is True
     assert payload["weak_leakage_suite"]["all_zero"] is True
     assert payload["weak_leakage_suite"]["max_abs_residual"] == 0
+    assert payload["ckm_like_weak_leakage_suite"]["all_zero"] is True
+    assert payload["ckm_like_weak_leakage_suite"]["max_abs_residual"] == 0
     assert payload["bridge_ready_supported_bridge"] is True
     assert "CausalGraph.theta_zero_if_linear_bridge" in payload["continuum_bridge_contract"]["lean_theorems"]
 

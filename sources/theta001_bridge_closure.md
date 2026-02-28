@@ -2,7 +2,7 @@
 
 - Claim: `THETA-001`
 - Policy: `theta001_bridge_closure_v1`
-- Replay hash: `fb91dd494109d21543e924f62621ccef1c25a6bfa4b7951bdc53a10eb3be2305`
+- Replay hash: `69c00eb2b951f9b4aa24e3303b772dcc60d39116ec8f1fdf6b93c83bb87fe20e`
 
 ## Discrete Residual
 - Positive count: 21
@@ -12,6 +12,12 @@
 
 ## Weak Leakage Suite
 - Cases: 40
+- Deep-cone length: 18
+- Max abs strong residual: 0
+- All zero: `True`
+
+## CKM-Like Weak Leakage Suite
+- Cases: 144
 - Deep-cone length: 18
 - Max abs strong residual: 0
 - All zero: `True`

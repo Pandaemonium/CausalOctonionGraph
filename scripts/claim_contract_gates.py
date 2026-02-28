@@ -390,6 +390,13 @@ def _validate_rfc083(
                 errs.append(f"{claim_id}: weak_leakage_artifact missing weak_leakage_suite object")
             elif suite.get("all_zero") is not True:
                 errs.append(f"{claim_id}: promoted THETA claim requires weak_leakage_suite.all_zero=true")
+            ckm_suite = weak_payload.get("ckm_like_weak_leakage_suite", {})
+            if not isinstance(ckm_suite, dict):
+                errs.append(f"{claim_id}: weak_leakage_artifact missing ckm_like_weak_leakage_suite object")
+            elif ckm_suite.get("all_zero") is not True:
+                errs.append(
+                    f"{claim_id}: promoted THETA claim requires ckm_like_weak_leakage_suite.all_zero=true"
+                )
         if eft_payload:
             contract = eft_payload.get("continuum_bridge_contract", {})
             if not isinstance(contract, dict):

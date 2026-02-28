@@ -8,7 +8,11 @@ import json
 from pathlib import Path
 from typing import Any, Dict, List, Sequence, Tuple
 
-from calc.theta001_cp_invariant import fano_sign_balance_counts, weak_leakage_strong_residual
+from calc.theta001_cp_invariant import (
+    fano_sign_balance_counts,
+    weak_leakage_ckm_like_strong_residual,
+    weak_leakage_strong_residual,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT_JSON = ROOT / "sources" / "theta001_bridge_closure.json"
@@ -22,6 +26,8 @@ INITIAL_STATE: Tuple[int, ...] = (1, -2, 3, -4, 5, -6, 7, -1)
 OP_SEQUENCE: Tuple[int, ...] = (7, 1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 6, 7, 1, 2, 3, 4, 5)
 WEAK_KICKS: Tuple[int, ...] = (-7, -5, -3, -1, 1, 3, 5, 7)
 PHASE_SHIFTS: Tuple[int, ...] = (1, 2, 3, 4, 5)
+CKM_PHASES: Tuple[int, ...] = (-5, -3, -1, 1, 3, 5)
+CKM_TRANSPORT_PERIODS: Tuple[int, ...] = (2, 3, 4)
 
 
 def _sha_file(path: Path) -> str:
@@ -57,6 +63,29 @@ def _weak_leakage_grid() -> List[Dict[str, int]]:
     return rows
 
 
+def _ckm_like_weak_leakage_grid() -> List[Dict[str, int]]:
+    rows: List[Dict[str, int]] = []
+    for weak_kick in WEAK_KICKS:
+        for ckm_phase in CKM_PHASES:
+            for period in CKM_TRANSPORT_PERIODS:
+                residual = weak_leakage_ckm_like_strong_residual(
+                    INITIAL_STATE,
+                    OP_SEQUENCE,
+                    weak_kick=weak_kick,
+                    ckm_phase=ckm_phase,
+                    transport_period=period,
+                )
+                rows.append(
+                    {
+                        "weak_kick": int(weak_kick),
+                        "ckm_phase": int(ckm_phase),
+                        "transport_period": int(period),
+                        "strong_residual": int(residual),
+                    }
+                )
+    return rows
+
+
 def build_bridge_closure_payload(
     *,
     policy_id: str = "theta001_bridge_closure_v1",
@@ -68,6 +97,8 @@ def build_bridge_closure_payload(
     pos_count, neg_count, signed_sum = fano_sign_balance_counts()
     weak_grid = _weak_leakage_grid()
     max_abs_residual = max(abs(int(row["strong_residual"])) for row in weak_grid)
+    ckm_grid = _ckm_like_weak_leakage_grid()
+    ckm_max_abs_residual = max(abs(int(row["strong_residual"])) for row in ckm_grid)
 
     payload: Dict[str, Any] = {
         "schema_version": "theta001_bridge_closure_v1",
@@ -94,6 +125,16 @@ def build_bridge_closure_payload(
             "max_abs_residual": int(max_abs_residual),
             "all_zero": int(max_abs_residual) == 0,
         },
+        "ckm_like_weak_leakage_suite": {
+            "initial_state": list(INITIAL_STATE),
+            "op_sequence": list(OP_SEQUENCE),
+            "weak_kicks": list(WEAK_KICKS),
+            "ckm_phases": list(CKM_PHASES),
+            "transport_periods": list(CKM_TRANSPORT_PERIODS),
+            "rows": ckm_grid,
+            "max_abs_residual": int(ckm_max_abs_residual),
+            "all_zero": int(ckm_max_abs_residual) == 0,
+        },
         "continuum_bridge_contract": {
             "bridge_mode": "conditional_linear_map_v1",
             "map_form": "theta_continuum = scale * discrete_cp_residual",
@@ -111,7 +152,9 @@ def build_bridge_closure_payload(
         },
     }
     payload["bridge_ready_supported_bridge"] = bool(
-        payload["discrete_cp_residual"]["is_zero"] and payload["weak_leakage_suite"]["all_zero"]
+        payload["discrete_cp_residual"]["is_zero"]
+        and payload["weak_leakage_suite"]["all_zero"]
+        and payload["ckm_like_weak_leakage_suite"]["all_zero"]
     )
     payload["replay_hash"] = _sha_payload(payload)
     return payload
@@ -120,6 +163,7 @@ def build_bridge_closure_payload(
 def render_markdown(payload: Dict[str, Any]) -> str:
     disc = payload["discrete_cp_residual"]
     wl = payload["weak_leakage_suite"]
+    ckm = payload["ckm_like_weak_leakage_suite"]
     bridge = payload["continuum_bridge_contract"]
     lines = [
         "# THETA-001 Bridge Closure Artifact",
@@ -139,6 +183,12 @@ def render_markdown(payload: Dict[str, Any]) -> str:
         f"- Deep-cone length: {len(wl['op_sequence'])}",
         f"- Max abs strong residual: {wl['max_abs_residual']}",
         f"- All zero: `{wl['all_zero']}`",
+        "",
+        "## CKM-Like Weak Leakage Suite",
+        f"- Cases: {len(ckm['rows'])}",
+        f"- Deep-cone length: {len(ckm['op_sequence'])}",
+        f"- Max abs strong residual: {ckm['max_abs_residual']}",
+        f"- All zero: `{ckm['all_zero']}`",
         "",
         "## Continuum Bridge Contract",
         f"- Mode: `{bridge['bridge_mode']}`",

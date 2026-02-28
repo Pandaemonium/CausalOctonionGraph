@@ -110,6 +110,9 @@ def build_witness_payload(
         "schema_version": "theta001_cp_witness_v1",
         "claim_id": "THETA-001",
         "policy_id": policy_id,
+        "closure_scope": "structure_first",
+        "continuum_value_derivation": False,
+        "validation_scale": "reduced_scale",
         "source_script": SCRIPT_REPO_PATH,
         "source_script_sha256": _sha_file(script_path),
         "witness_module": WITNESS_MODULE_REPO_PATH,
@@ -131,7 +134,7 @@ def build_witness_payload(
             "weak_leakage_strong_residual_zero": int(weak_leakage_delta) == 0,
             "max_abs_weighted_trace_delta": int(max_abs_weighted_delta),
             "fano_signed_sum_zero": int(signed_sum) == 0,
-            "theta_cp_odd_residual_forced_zero": bool(
+            "discrete_fano_cp_residual_zero": bool(
                 all_cp_dual_hold
                 and all_weighted_zero
                 and int(weak_leakage_delta) == 0
@@ -140,6 +143,10 @@ def build_witness_payload(
             ),
         },
     }
+    # Backward-compatibility key for existing downstream consumers.
+    payload["theta_residual_summary"]["theta_cp_odd_residual_forced_zero"] = payload[
+        "theta_residual_summary"
+    ]["discrete_fano_cp_residual_zero"]
     payload["replay_hash"] = _sha_payload(payload)
     return payload
 
@@ -155,6 +162,15 @@ def render_markdown(payload: Dict[str, Any]) -> str:
         f"- Replay hash: `{payload['replay_hash']}`",
         f"- Source script: `{payload['source_script']}`",
         f"- Witness module: `{payload['witness_module']}`",
+        "",
+        "## Scope And Scale",
+        f"- Closure scope: `{payload['closure_scope']}`",
+        f"- Continuum value derivation: `{payload['continuum_value_derivation']}`",
+        f"- Validation scale: `{payload['validation_scale']}`",
+        f"- Trace case count: `{len(payload['trace_suite'])}`",
+        "",
+        "## Replay Verification",
+        "Run `python -m calc.build_theta001_witness --write-sources` and verify the replay hash in the JSON output is unchanged.",
         "",
         "## Fano Sign Balance",
         f"- Positive count: {bal['positive_count']}",
@@ -185,7 +201,8 @@ def render_markdown(payload: Dict[str, Any]) -> str:
             f"- Weak-leakage strong residual value: `{payload['weak_leakage_strong_residual']}`",
             f"- Max abs weighted trace delta: {res['max_abs_weighted_trace_delta']}",
             f"- Fano signed sum zero: `{res['fano_signed_sum_zero']}`",
-            f"- `theta_cp_odd_residual_forced_zero`: `{res['theta_cp_odd_residual_forced_zero']}`",
+            f"- `discrete_fano_cp_residual_zero`: `{res['discrete_fano_cp_residual_zero']}`",
+            f"- Legacy alias `theta_cp_odd_residual_forced_zero`: `{res['theta_cp_odd_residual_forced_zero']}`",
             "",
             "## Governance Notes",
             "- Witness cases and weights are predeclared constants in this script.",
@@ -241,7 +258,7 @@ def main() -> None:
 
     print(
         "theta001_cp_witness: "
-        f"residual_zero={payload['theta_residual_summary']['theta_cp_odd_residual_forced_zero']}, "
+        f"residual_zero={payload['theta_residual_summary']['discrete_fano_cp_residual_zero']}, "
         f"replay_hash={payload['replay_hash'][:16]}..."
     )
 

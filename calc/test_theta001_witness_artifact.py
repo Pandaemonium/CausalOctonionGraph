@@ -25,12 +25,16 @@ def test_payload_has_expected_schema_and_zero_residual() -> None:
     payload = build_witness_payload()
     assert payload["schema_version"] == "theta001_cp_witness_v1"
     assert payload["claim_id"] == "THETA-001"
+    assert payload["closure_scope"] == "structure_first"
+    assert payload["continuum_value_derivation"] is False
+    assert payload["validation_scale"] == "reduced_scale"
     assert payload["fano_sign_balance"]["positive_count"] == 21
     assert payload["fano_sign_balance"]["negative_count"] == 21
     assert payload["fano_sign_balance"]["signed_sum"] == 0
     assert payload["orientation_reversal_closed_on_fano_lines"] is True
     assert payload["weak_leakage_strong_residual"] == 0
     assert payload["theta_residual_summary"]["weak_leakage_strong_residual_zero"] is True
+    assert payload["theta_residual_summary"]["discrete_fano_cp_residual_zero"] is True
     assert payload["theta_residual_summary"]["theta_cp_odd_residual_forced_zero"] is True
     assert all(row["cp_dual_relation_holds"] is True for row in payload["trace_suite"])
     assert all(int(row["weighted_trace_delta"]) == 0 for row in payload["trace_suite"])
@@ -57,4 +61,4 @@ def test_write_artifacts_emits_json_and_markdown(tmp_path: Path) -> None:
     assert loaded["replay_hash"] == payload["replay_hash"]
     md = md_path.read_text(encoding="utf-8")
     assert "THETA-001 CP-Invariance Witness" in md
-    assert "theta_cp_odd_residual_forced_zero" in md
+    assert "discrete_fano_cp_residual_zero" in md

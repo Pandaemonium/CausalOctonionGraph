@@ -27,6 +27,15 @@ def _theta_claim_doc(tmp_path: Path, *, verdict: str, gate3_done: bool) -> dict:
             "reviewer_model_family": "gemini",
             "builder_model_family": "openai_gpt",
             "independent_from_builder": True,
+            "timestamp": "2026-02-28T00:00:00Z",
+            "review_summary": (
+                "Deterministic structural witnesses pass and bridge assumptions are explicit. "
+                "This review confirms no hidden assumption laundering in the current THETA lane. "
+                "Weak-leakage and bridge artifacts are present and consistent with the declared scope."
+            ),
+            "bridge_comment": "Bridge assumptions are explicit and scoped to supported_bridge.",
+            "falsification_comment": "Structural and bridge falsification conditions are both present.",
+            "limits": ["Continuum EFT bridge is not yet proved core."],
         },
     )
     _write_json(
@@ -35,6 +44,7 @@ def _theta_claim_doc(tmp_path: Path, *, verdict: str, gate3_done: bool) -> dict:
             "schema_version": "theta001_bridge_closure_v1",
             "claim_id": "THETA-001",
             "weak_leakage_suite": {"all_zero": True},
+            "ckm_like_weak_leakage_suite": {"all_zero": True},
             "continuum_bridge_contract": {
                 "conditional_conclusion_theta_zero": True,
                 "lean_theorems": ["CausalGraph.theta_zero_if_linear_bridge"],
@@ -65,6 +75,7 @@ def _theta_claim_doc(tmp_path: Path, *, verdict: str, gate3_done: bool) -> dict:
             "Claim is falsified if a CP-violating weak-sector perturbation induces non-zero "
             "strong-sector CP-odd residual after deterministic deep-cone updates."
         ),
+        "falsification_attempts": [],
     }
 
 
@@ -143,6 +154,7 @@ def test_theta_promoted_blocks_when_weak_leakage_not_zero(tmp_path: Path) -> Non
             "schema_version": "theta001_bridge_closure_v1",
             "claim_id": "THETA-001",
             "weak_leakage_suite": {"all_zero": False},
+            "ckm_like_weak_leakage_suite": {"all_zero": True},
             "continuum_bridge_contract": {
                 "conditional_conclusion_theta_zero": True,
                 "lean_theorems": ["CausalGraph.theta_zero_if_linear_bridge"],
@@ -157,3 +169,29 @@ def test_theta_promoted_blocks_when_weak_leakage_not_zero(tmp_path: Path) -> Non
     )
     errors = [i.message for i in issues if i.severity == "error"]
     assert any("requires weak_leakage_suite.all_zero=true" in e for e in errors)
+
+
+def test_theta_promoted_blocks_when_ckm_like_weak_leakage_not_zero(tmp_path: Path) -> None:
+    rows = {"THETA-001": {"status": "supported_bridge"}}
+    doc = _theta_claim_doc(tmp_path, verdict="PASS", gate3_done=True)
+    _write_json(
+        tmp_path / "sources" / "theta001_bridge_closure.json",
+        {
+            "schema_version": "theta001_bridge_closure_v1",
+            "claim_id": "THETA-001",
+            "weak_leakage_suite": {"all_zero": True},
+            "ckm_like_weak_leakage_suite": {"all_zero": False},
+            "continuum_bridge_contract": {
+                "conditional_conclusion_theta_zero": True,
+                "lean_theorems": ["CausalGraph.theta_zero_if_linear_bridge"],
+            },
+        },
+    )
+    issues = evaluate_contract_gates(
+        rows=rows,
+        claim_docs={"THETA-001": doc},
+        root=tmp_path,
+        enforce_for_statuses={"supported_bridge"},
+    )
+    errors = [i.message for i in issues if i.severity == "error"]
+    assert any("requires ckm_like_weak_leakage_suite.all_zero=true" in e for e in errors)

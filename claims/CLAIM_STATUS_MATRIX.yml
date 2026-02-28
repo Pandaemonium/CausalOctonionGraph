@@ -1,5 +1,5 @@
 schema_version: 2.1.0
-generated_at_utc: '2026-02-28T01:45:41.424076Z'
+generated_at_utc: '2026-02-28T01:56:31.244240Z'
 row_count: 37
 rows:
   ALG:
@@ -1756,22 +1756,21 @@ rows:
     - CausalGraph.theta_qcd_forced_zero_if_cp_invariant
     python_artifacts:
     - calc/test_theta001_cp_invariant.py
-    - calc/test_theta001_witness_artifact.py
+    - calc/test_theta001_bridge_closure.py
     - sources/theta001_cp_witness.json
     - sources/theta001_cp_witness.md
+    - sources/theta001_bridge_closure.json
+    - sources/theta001_bridge_closure.md
     battery_artifacts:
-    - CausalGraph.cpMap_involution
-    - CausalGraph.fanoSignOrderedSum_zero
-    - CausalGraph.fano_sign_neg_count_eq_21
-    - CausalGraph.fano_sign_pos_count_eq_21
-    - CausalGraph.orientationFlip_preserves_incidence
-    - CausalGraph.theta_qcd_forced_zero_if_cp_invariant
     - CausalGraphTheory/ThetaQCD.lean
+    - CausalGraphTheory/ThetaEFTBridge.lean
     - calc/test_theta001_cp_invariant.py
     - calc/test_theta001_witness_artifact.py
+    - calc/test_theta001_bridge_closure.py
     - sources/theta001_cp_witness.json
-    - sources/theta001_cp_witness.md
-    motif_id: unassigned
+    - sources/theta001_bridge_closure.json
+    - sources/theta001_skeptic_review.json
+    motif_id: cp_invariance_theta_structural_v1
     rule_profile: default_multiplicative_markov
     pi_obs_profile: with_sector
     projection_sensitivity: sensitive
@@ -1791,9 +1790,9 @@ rows:
       color traces after N > 10 deterministic updates. Bridge falsification: a peer-reviewed argument or explicit construction
       demonstrating that discrete Fano sign-balance does NOT imply theta_QCD = 0 in the continuum limit, or that the COG CP
       map fails to correspond to the SM CP operator under any valid group-theoretic identification.'
-    last_verified_at: '2026-02-28T01:45:09.257165Z'
-    owner_rfc: rfc/RFC-070.md
-    notes: source=THETA-001.yml
+    last_verified_at: '2026-02-28T01:49:12.669864Z'
+    owner_rfc: rfc/RFC-083_THETA_Structure_First_Bridge_Contract.md
+    notes: source=THETA-001.yml | backfill=priority_v1
     confinement_relevant: false
     confinement_gate_status: not_applicable
     confinement_artifact: ''

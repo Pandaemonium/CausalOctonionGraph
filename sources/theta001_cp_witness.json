@@ -1,5 +1,7 @@
 {
   "claim_id": "THETA-001",
+  "closure_scope": "structure_first",
+  "continuum_value_derivation": false,
   "fano_sign_balance": {
     "negative_count": 21,
     "positive_count": 21,
@@ -8,12 +10,13 @@
   "orientation_reversal_closed_on_fano_lines": true,
   "orientation_triple_count": 7,
   "policy_id": "theta001_cp_invariance_v1",
-  "replay_hash": "69436c707324b788f7e33c1473a67492688dfe7d9301cc106760130ecf7b42bd",
+  "replay_hash": "0482e9f6c058108b5be7f4726e72fd8fcbe364b37d8fe9176930a0b5c8fd76d6",
   "schema_version": "theta001_cp_witness_v1",
   "source_script": "calc/build_theta001_witness.py",
-  "source_script_sha256": "dcc0030ae8c3eb5634ab38885d15bdd1c8f197b4f2d0dda96a1c4d0bee42775c",
+  "source_script_sha256": "8cad74f05da4b5604d47c50c5c2e1daa93608c696778d701553129f37d040c56",
   "theta_residual_summary": {
     "cp_dual_all_hold": true,
+    "discrete_fano_cp_residual_zero": true,
     "fano_signed_sum_zero": true,
     "max_abs_weighted_trace_delta": 0,
     "theta_cp_odd_residual_forced_zero": true,
@@ -103,6 +106,7 @@
       "weighted_trace_delta": 0
     }
   ],
+  "validation_scale": "reduced_scale",
   "weak_leakage_case": {
     "case_id": "theta_weak_leakage_001",
     "initial_state": [

@@ -29,6 +29,10 @@ Not allowed in this phase:
 1. full hadronic phenomenology closure,
 2. `proved_core` status while bridge assumptions remain open.
 
+Language constraint in this phase:
+1. THETA statements may assert structural consistency and conditional bridge implications,
+   but may not assert unconditional physical-value derivation of `theta_QCD`.
+
 ## 3. Locked Observable Boundary
 
 In-scope (required):
@@ -56,19 +60,30 @@ THETA claims under this contract must declare:
 8. `skeptic_model_diversity_required`,
 9. `skeptic_verdict`,
 10. `bridge_assumptions`,
-11. `falsification_condition`.
+11. `falsification_condition`,
+12. `falsification_attempts` (list; may be empty but must be present).
 
 ## 5. Skeptic Gate Policy (Normative)
 
 1. At least one independent skeptic artifact is required.
-2. Skeptic must be model-family-diverse from builder.
+2. Skeptic must be model-family-diverse from builder:
+   reviewer model family must differ from builder model family.
 3. Promotable verdicts: `PASS` or `PASS_WITH_LIMITS`.
 4. `pending` or `FAIL` blocks promotion.
+5. Skeptic JSON artifact must include:
+   `timestamp`,
+   `review_summary` (>= 200 characters),
+   `bridge_comment`,
+   `falsification_comment`,
+   `reviewer_model_family`,
+   `builder_model_family`,
+   `independent_from_builder`.
+6. `PASS_WITH_LIMITS` verdict must include a non-empty `limits` list.
 
 ## 6. Promotion Rules
 
 `partial -> supported_bridge` for THETA requires:
-1. deterministic replayable witnesses,
+1. deterministic and replayable witnesses,
 2. bridge assumptions explicitly declared,
 3. weak-leakage artifact reports `all_zero = true`,
 4. EFT bridge artifact includes explicit conditional-map assumptions and theorem refs,

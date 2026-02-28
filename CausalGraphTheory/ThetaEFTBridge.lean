@@ -1,7 +1,7 @@
 import CausalGraphTheory.ThetaQCD
 import Mathlib.Tactic
 
-/--
+/-
   CausalGraphTheory/ThetaEFTBridge.lean
 
   Conditional continuum-bridge primitives for THETA-001.
