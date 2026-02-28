@@ -16,6 +16,10 @@ Experimental alternate profile:
    - `round_order` (node update order),
    - `parent_order` (message fold order per node),
    - `projection_policy` (projector checkpoint policy).
+4. `minimal_world_kernel_projective_unity.py` locks the projective-unity axiom profile:
+   - strict unity alphabet input (or opt-in compatibility projection),
+   - deterministic projector `pi_unity_axis_dominance_v1`,
+   - output metadata including `kernel_profile` and `projector_id`.
 
 ## Input format
 
@@ -46,6 +50,16 @@ python world_code/Python_code/minimal_world_kernel_preregistered_unity.py \
   --input world_code/Python_code/lightcone_example_preregistered_unity.json \
   --steps 4 \
   --output world_code/Python_code/out_preregistered_unity.json
+```
+
+Projective-unity run:
+
+```bash
+python world_code/Python_code/minimal_world_kernel_projective_unity.py \
+  --input world_code/Python_code/lightcone_example.json \
+  --steps 4 \
+  --output world_code/Python_code/out_projective_unity.json \
+  --allow-nonunity-input
 ```
 
 ## Interactive Visualizer
