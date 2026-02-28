@@ -6,6 +6,7 @@ Owner: COG Core
 
 Interpretation/Resolution Extension:
 - `cog_v2/rfc/RFC-002_Event_Resolution_Modes_and_Interpretation_Layer.md`
+- `cog_v2/rfc/RTargeted_Branching_Policy_for_Computational_Efficiency_and_Statistical_Integrity.md`
 
 ## 1. Decision
 

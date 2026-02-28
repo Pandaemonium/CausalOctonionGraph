@@ -13,7 +13,18 @@ canonical_profile:
 statement: >
   Under the v2 canonical profile, Fano orientation-flip and exact sign-balance
   provide a structural CP-invariance witness for a zero strong-sector CP-odd
-  residual at the discrete level.
+  residual at the discrete level. This claim is explicitly scoped to
+  structure-first derivation under a locked linear bridge-map policy; it does
+  not assert full continuum value closure in this stage.
+
+target_tonight:
+  objective: strengthen_supported_bridge
+  excludes:
+    - proved_core_promotion
+    - full_value_closure_claim
+  success_condition: >
+    Expanded weak-leakage stress lanes and continuum-bridge diagnostics remain
+    replay-stable and all required THETA-001 contract gates stay green.
 
 contract_gates:
   required:
@@ -24,8 +35,21 @@ contract_gates:
     bridge_observable_id: theta_cp_odd_residual_v2
     weak_leakage_artifact: cog_v2/sources/theta001_bridge_closure_v2.json
     eft_bridge_artifact: cog_v2/sources/theta001_bridge_closure_v2.json
+    eft_map_artifact: cog_v2/sources/theta001_eft_bridge_v2.json
+    continuum_bridge_artifact: cog_v2/sources/theta001_continuum_bridge_v2.json
     skeptic_review_artifact: cog_v2/sources/theta001_skeptic_review_v2.json
     skeptic_verdict: PASS_WITH_LIMITS
+
+bridge_map_policy:
+  primary_lane:
+    mode: linear
+    map_id: linear_scale_1_v1
+    cp_odd_all_hold_required: true
+    zero_anchor_all_hold_required: true
+  periodic_stub_lane:
+    source_artifact: cog_v2/sources/theta001_bridge_closure_v2.json
+    status_required: stub_non_blocking
+    promotion_blocking_required: false
 
 lean_file: cog_v2/lean/CausalGraphV2/ThetaQCD.lean
 lean_theorems:
@@ -39,13 +63,19 @@ lean_theorems:
   - CausalGraphV2.theta_zero_if_linear_bridge
   - CausalGraphV2.theta_zero_if_affine_bridge
   - CausalGraphV2.theta_zero_if_zero_anchored_bridge
+  - CausalGraphV2.theta_zero_if_continuum_identification_hyp
+  - CausalGraphV2.theta_zero_if_continuum_bridge_and_no_leakage
 
 python_test:
   - cog_v2/python/tests/test_kernel_projective_unity.py
   - cog_v2/calc/test_theta001_cp_invariant_v2.py
   - cog_v2/calc/test_theta001_bridge_closure_v2.py
+  - cog_v2/calc/test_theta_eft_map_v2.py
+  - cog_v2/calc/test_theta001_continuum_bridge_v2.py
 python_check:
   - python -m cog_v2.calc.build_theta001_bridge_closure_v2 --write-sources
+  - python cog_v2/scripts/run_theta_eft_sweep_v2.py --write-sources
+  - python -m cog_v2.calc.build_theta001_continuum_bridge_v2 --write-sources
   - python cog_v2/scripts/validate_claim_contracts_v2.py --root . --claims-dir cog_v2/claims
 
 bridge_assumptions:
@@ -65,6 +95,14 @@ falsification_attempts:
     artifact: cog_v2/sources/theta001_bridge_closure_v2.json
     method: "deep-cone CKM-like transport injection grid"
     outcome: "no strong-sector CP-odd residual detected"
+  - id: theta_v2_eft_map_probe_v1
+    artifact: cog_v2/sources/theta001_eft_bridge_v2.json
+    method: "continuum bridge map sweep + q_top proxy cp-odd diagnostics"
+    outcome: "cp-odd proxy consistency and bridge-map contract diagnostics recorded"
+  - id: theta_v2_continuum_scaling_probe_v1
+    artifact: cog_v2/sources/theta001_continuum_bridge_v2.json
+    method: "finite-size depth sweep and normalized residual convergence diagnostics"
+    outcome: "extended depth lanes remain zero-residual with stable convergence diagnostics"
 
 gates:
   - id: gate_1

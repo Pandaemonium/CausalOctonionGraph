@@ -4,6 +4,8 @@ Status: Active
 Date: 2026-02-28  
 Owner: COG Core  
 Depends on: `cog_v2/rfc/RFC-001_Canonical_Axiom_Profile.md`
+Related:
+- `cog_v2/rfc/Targeted_Branching_Policy_for_Computational_Efficiency_and_Statistical_Integrity.md`
 
 ## 1. Executive Decision
 

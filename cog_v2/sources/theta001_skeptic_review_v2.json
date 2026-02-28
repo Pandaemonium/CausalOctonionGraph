@@ -5,13 +5,13 @@
   "reviewer_model_family": "anthropic_claude",
   "builder_model_family": "openai_gpt",
   "independent_from_builder": true,
-  "timestamp": "2026-02-27T21:30:00-08:00",
-  "review_summary": "The v2 structure-first package is coherent and reproducible: discrete sign-balance is exact, orientation closure holds, weak-leakage grids are all-zero under preregistered lanes, and Lean bridge-form theorems compile in the v2 lane. The claim is supportable as a structural CP-invariance witness under declared assumptions, but not as a full continuum value derivation. The remaining risk is bridge semantics: correspondence between the discrete residual and continuum theta_QCD coefficient is still assumed rather than derived from full EFT matching.",
-  "bridge_comment": "Bridge map remains conditional. Linear/affine/zero-anchored forms are theoremized, but selecting a physically unique bridge and proving UV->IR EFT correspondence is still open.",
-  "falsification_comment": "Primary falsifier lanes (weak-kick/phase-shift and CKM-like transport) report zero strong-sector residual across declared grids. No blocking falsification found within declared structure-first scope.",
+  "timestamp": "2026-02-28T00:32:00-08:00",
+  "review_summary": "The v2 structure-first package remains coherent and reproducible after extension. Discrete sign-balance is exact, orientation closure holds, and expanded weak-leakage stress lanes stay all-zero (weak grid 324, CKM-like grid 1440 at depth 72). The new finite-size continuum diagnostics remain zero over depths 12..72 with normalized residual stability and deterministic replay hashes. Lean bridge theorems now include continuum-hypothesis skeleton forms. The claim remains supportable for supported_bridge, but full continuum value closure is still conditional on discharging the EFT identification hypothesis.",
+  "bridge_comment": "Linear bridge policy is now operationally locked and validated against map-policy gates, with periodic lane held as non-blocking stub. Continuum identification remains hypothesis-level rather than first-principles proved_core closure.",
+  "falsification_comment": "Expanded weak-kick/phase-shift and CKM-like transport grids remain zero in strong-sector residual, and depth-sweep continuum diagnostics stay zero under normalization. No blocking falsification was found within the declared structure-first scope.",
   "limits": [
-    "Continuum EFT matching from discrete residual to theta_QCD remains open.",
-    "Current evidence is structure-first and does not yet establish proved_core value closure.",
-    "Promotion to proved_core requires an explicit EFT identification theorem and stronger weak-sector leakage bridge proof."
+    "Continuum EFT matching from discrete residual to theta_QCD remains open at hypothesis level.",
+    "Current evidence is structure-first and does not establish proved_core value closure.",
+    "Promotion to proved_core requires a fully discharged EFT identification theorem."
   ]
 }

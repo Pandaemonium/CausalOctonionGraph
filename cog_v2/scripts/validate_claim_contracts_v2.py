@@ -83,6 +83,64 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
     if "falsification_attempts" not in doc:
         issues.append(Issue(claim_id, "error", f"{claim_id}: missing falsification_attempts field"))
 
+    bridge_map_policy = doc.get("bridge_map_policy")
+    if not isinstance(bridge_map_policy, dict):
+        issues.append(Issue(claim_id, "error", f"{claim_id}: bridge_map_policy must be an object"))
+    else:
+        primary_lane = bridge_map_policy.get("primary_lane")
+        if not isinstance(primary_lane, dict):
+            issues.append(Issue(claim_id, "error", f"{claim_id}: bridge_map_policy.primary_lane must be an object"))
+        else:
+            if str(primary_lane.get("mode", "")).strip() != "linear":
+                issues.append(Issue(claim_id, "error", f"{claim_id}: bridge_map_policy.primary_lane.mode must be linear"))
+            if not _is_nonempty_str(primary_lane.get("map_id")):
+                issues.append(Issue(claim_id, "error", f"{claim_id}: bridge_map_policy.primary_lane.map_id required"))
+            if not isinstance(primary_lane.get("cp_odd_all_hold_required"), bool):
+                issues.append(
+                    Issue(
+                        claim_id,
+                        "error",
+                        f"{claim_id}: bridge_map_policy.primary_lane.cp_odd_all_hold_required must be boolean",
+                    )
+                )
+            if not isinstance(primary_lane.get("zero_anchor_all_hold_required"), bool):
+                issues.append(
+                    Issue(
+                        claim_id,
+                        "error",
+                        f"{claim_id}: bridge_map_policy.primary_lane.zero_anchor_all_hold_required must be boolean",
+                    )
+                )
+
+        periodic_lane = bridge_map_policy.get("periodic_stub_lane")
+        if not isinstance(periodic_lane, dict):
+            issues.append(Issue(claim_id, "error", f"{claim_id}: bridge_map_policy.periodic_stub_lane must be an object"))
+        else:
+            if not _is_nonempty_str(periodic_lane.get("source_artifact")):
+                issues.append(
+                    Issue(
+                        claim_id,
+                        "error",
+                        f"{claim_id}: bridge_map_policy.periodic_stub_lane.source_artifact required",
+                    )
+                )
+            if not _is_nonempty_str(periodic_lane.get("status_required")):
+                issues.append(
+                    Issue(
+                        claim_id,
+                        "error",
+                        f"{claim_id}: bridge_map_policy.periodic_stub_lane.status_required required",
+                    )
+                )
+            if not isinstance(periodic_lane.get("promotion_blocking_required"), bool):
+                issues.append(
+                    Issue(
+                        claim_id,
+                        "error",
+                        f"{claim_id}: bridge_map_policy.periodic_stub_lane.promotion_blocking_required must be boolean",
+                    )
+                )
+
     contract = doc.get("contract_gates", {})
     rfc083 = contract.get("rfc083", {}) if isinstance(contract, dict) else {}
     if not isinstance(rfc083, dict):
@@ -118,7 +176,13 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
                 )
             )
 
-    for key in ("weak_leakage_artifact", "eft_bridge_artifact", "skeptic_review_artifact"):
+    for key in (
+        "weak_leakage_artifact",
+        "eft_bridge_artifact",
+        "eft_map_artifact",
+        "continuum_bridge_artifact",
+        "skeptic_review_artifact",
+    ):
         value = rfc083.get(key)
         if not _is_nonempty_str(value):
             issues.append(Issue(claim_id, "error", f"{claim_id}: rfc083.{key} required"))
@@ -129,6 +193,10 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
 
     status = str(doc.get("status", "")).strip()
     if status in PROMOTED_STATUSES:
+        weak_bridge_payload: Dict[str, Any] | None = None
+        eft_map_payload: Dict[str, Any] | None = None
+        continuum_bridge_payload: Dict[str, Any] | None = None
+
         if status == "proved_core" and closure_scope == "structure_first":
             issues.append(Issue(claim_id, "error", f"{claim_id}: structure_first claims cannot be proved_core"))
 
@@ -138,6 +206,7 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
             if not payload:
                 issues.append(Issue(claim_id, "error", f"{claim_id}: weak_leakage_artifact must be valid JSON"))
             else:
+                weak_bridge_payload = payload
                 if payload.get("bridge_ready_supported_bridge") is not True:
                     issues.append(Issue(claim_id, "error", f"{claim_id}: bridge_ready_supported_bridge must be true"))
                 contract = payload.get("continuum_bridge_contract", {})
@@ -155,6 +224,225 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
                                 f"{claim_id}: bridge artifact must reference theta_zero_if_linear_bridge theorem",
                             )
                         )
+
+        eft_map_art = rfc083.get("eft_map_artifact")
+        if _is_nonempty_str(eft_map_art):
+            payload = _read_json(root / str(eft_map_art))
+            if not payload:
+                issues.append(Issue(claim_id, "error", f"{claim_id}: eft_map_artifact must be valid JSON"))
+            else:
+                eft_map_payload = payload
+                if str(payload.get("schema_version", "")).strip() != "theta001_eft_bridge_v2":
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: eft_map_artifact schema_version must be theta001_eft_bridge_v2",
+                        )
+                    )
+                if str(payload.get("claim_id", "")).strip() != claim_id:
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: eft_map_artifact claim_id must match {claim_id}",
+                        )
+                    )
+                map_suite = payload.get("map_suite")
+                if not isinstance(map_suite, dict):
+                    issues.append(Issue(claim_id, "error", f"{claim_id}: eft_map_artifact missing map_suite object"))
+                else:
+                    if not isinstance(map_suite.get("rows"), list) or not map_suite.get("rows"):
+                        issues.append(Issue(claim_id, "error", f"{claim_id}: eft_map_artifact map_suite.rows must be non-empty list"))
+
+                q_top_proxy_suite = payload.get("q_top_proxy_suite")
+                if not isinstance(q_top_proxy_suite, dict):
+                    issues.append(Issue(claim_id, "error", f"{claim_id}: eft_map_artifact missing q_top_proxy_suite object"))
+
+                readiness = payload.get("continuum_eft_bridge_readiness")
+                if not isinstance(readiness, dict):
+                    issues.append(Issue(claim_id, "error", f"{claim_id}: eft_map_artifact missing continuum_eft_bridge_readiness"))
+                else:
+                    if readiness.get("cp_odd_proxy_consistent") is not True:
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: eft_map_artifact continuum_eft_bridge_readiness.cp_odd_proxy_consistent must be true",
+                            )
+                        )
+                    if "map_suite_has_cp_odd_candidate" not in readiness:
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: eft_map_artifact continuum_eft_bridge_readiness.map_suite_has_cp_odd_candidate required",
+                            )
+                        )
+
+        continuum_art = rfc083.get("continuum_bridge_artifact")
+        if _is_nonempty_str(continuum_art):
+            payload = _read_json(root / str(continuum_art))
+            if not payload:
+                issues.append(Issue(claim_id, "error", f"{claim_id}: continuum_bridge_artifact must be valid JSON"))
+            else:
+                continuum_bridge_payload = payload
+                if str(payload.get("schema_version", "")).strip() != "theta001_continuum_bridge_v2":
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: continuum_bridge_artifact schema_version must be theta001_continuum_bridge_v2",
+                        )
+                    )
+                if str(payload.get("claim_id", "")).strip() != claim_id:
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: continuum_bridge_artifact claim_id must match {claim_id}",
+                        )
+                    )
+                if not isinstance(payload.get("depth_rows"), list) or not payload.get("depth_rows"):
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: continuum_bridge_artifact depth_rows must be non-empty list",
+                        )
+                    )
+                readiness = payload.get("continuum_bridge_readiness")
+                if not isinstance(readiness, dict):
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: continuum_bridge_artifact missing continuum_bridge_readiness",
+                        )
+                    )
+                else:
+                    if readiness.get("finite_size_residual_stable_zero") is not True:
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: continuum_bridge_readiness.finite_size_residual_stable_zero must be true",
+                            )
+                        )
+                    if readiness.get("normalized_residual_stable_zero") is not True:
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: continuum_bridge_readiness.normalized_residual_stable_zero must be true",
+                            )
+                        )
+
+        if isinstance(bridge_map_policy, dict):
+            primary_lane = bridge_map_policy.get("primary_lane", {})
+            if isinstance(primary_lane, dict) and isinstance(eft_map_payload, dict):
+                target_map_id = str(primary_lane.get("map_id", "")).strip()
+                map_suite = eft_map_payload.get("map_suite", {})
+                rows = map_suite.get("rows", []) if isinstance(map_suite, dict) else []
+                selected = None
+                if isinstance(rows, list):
+                    for row in rows:
+                        if isinstance(row, dict) and str(row.get("map_id", "")).strip() == target_map_id:
+                            selected = row
+                            break
+                if selected is None:
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: bridge_map_policy primary map_id not found in eft_map_artifact ({target_map_id})",
+                        )
+                    )
+                else:
+                    expected_mode = str(primary_lane.get("mode", "")).strip()
+                    if expected_mode and str(selected.get("mode", "")).strip() != expected_mode:
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: bridge_map_policy primary mode mismatch (expected {expected_mode})",
+                            )
+                        )
+                    if primary_lane.get("cp_odd_all_hold_required") is True and selected.get("cp_odd_all_hold") is not True:
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: bridge_map_policy primary lane requires cp_odd_all_hold=true",
+                            )
+                        )
+                    if (
+                        primary_lane.get("zero_anchor_all_hold_required") is True
+                        and selected.get("zero_anchor_all_hold") is not True
+                    ):
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: bridge_map_policy primary lane requires zero_anchor_all_hold=true",
+                            )
+                        )
+
+            periodic_lane = bridge_map_policy.get("periodic_stub_lane", {})
+            if isinstance(periodic_lane, dict):
+                periodic_source = str(periodic_lane.get("source_artifact", "")).strip()
+                periodic_payload = weak_bridge_payload
+                if periodic_source:
+                    source_path = root / periodic_source
+                    if not source_path.exists():
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: bridge_map_policy periodic source artifact not found ({periodic_source})",
+                            )
+                        )
+                        periodic_payload = None
+                    else:
+                        periodic_payload = _read_json(source_path)
+                        if not periodic_payload:
+                            issues.append(
+                                Issue(
+                                    claim_id,
+                                    "error",
+                                    f"{claim_id}: bridge_map_policy periodic source artifact must be valid JSON ({periodic_source})",
+                                )
+                            )
+                if isinstance(periodic_payload, dict):
+                    periodic_lane_payload = periodic_payload.get("periodic_angle_lane")
+                    if not isinstance(periodic_lane_payload, dict):
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: bridge_map_policy periodic lane missing periodic_angle_lane in source artifact",
+                            )
+                        )
+                    else:
+                        required_status = str(periodic_lane.get("status_required", "")).strip()
+                        if required_status and str(periodic_lane_payload.get("status", "")).strip() != required_status:
+                            issues.append(
+                                Issue(
+                                    claim_id,
+                                    "error",
+                                    f"{claim_id}: bridge_map_policy periodic status mismatch (expected {required_status})",
+                                )
+                            )
+                        required_blocking = periodic_lane.get("promotion_blocking_required")
+                        if isinstance(required_blocking, bool):
+                            if periodic_lane_payload.get("promotion_blocking") is not required_blocking:
+                                issues.append(
+                                    Issue(
+                                        claim_id,
+                                        "error",
+                                        f"{claim_id}: bridge_map_policy periodic promotion_blocking mismatch",
+                                    )
+                                )
 
         skeptic_art = rfc083.get("skeptic_review_artifact")
         if _is_nonempty_str(skeptic_art):

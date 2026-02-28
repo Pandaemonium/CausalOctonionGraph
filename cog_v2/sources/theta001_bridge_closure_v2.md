@@ -1,7 +1,7 @@
 # THETA-001 Bridge Closure Artifact (v2)
 
 - Claim: `THETA-001`
-- Replay hash: `c737a82b2754553ca641e9712448736b5195ea790c9b856497ae8aaf441c80e0`
+- Replay hash: `744d5ab2aade7c178cefac7e22a3e58f160c418be3b6c3382f037db7376a6849`
 - Source script: `cog_v2/calc/build_theta001_bridge_closure_v2.py`
 
 ## Structural Residual
@@ -10,6 +10,9 @@
 - Orientation closed: `True`
 
 ## Weak Leakage
+- Stress profile depth: min 72 / max 72
+- Weak grid size: 324
+- CKM-like grid size: 1440
 - Weak lane all zero: `True` (max abs 0)
 - CKM-like lane all zero: `True` (max abs 0)
 

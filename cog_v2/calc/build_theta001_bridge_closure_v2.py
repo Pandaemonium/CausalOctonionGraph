@@ -32,23 +32,38 @@ CASE_DEFINITIONS: Tuple[Dict[str, Any], ...] = (
     {
         "case_id": "base_lane_v2",
         "initial_state": (1, -2, 3, -4, 5, -6, 7, -1),
-        "op_sequence": (7, 1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 6, 7, 1, 2, 3, 4, 5),
+        "op_sequence": (
+            7, 1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 6, 7, 1, 2, 3, 4, 5,
+            7, 1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 6, 7, 1, 2, 3, 4, 5,
+            7, 1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 6, 7, 1, 2, 3, 4, 5,
+            7, 1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 6, 7, 1, 2, 3, 4, 5,
+        ),
     },
     {
         "case_id": "alt_lane_a_v2",
         "initial_state": (2, 1, -3, 4, -5, 6, -7, 2),
-        "op_sequence": (1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 6, 7, 1, 2, 3, 4, 5, 6),
+        "op_sequence": (
+            1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 6, 7, 1, 2, 3, 4, 5, 6,
+            1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 6, 7, 1, 2, 3, 4, 5, 6,
+            1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 6, 7, 1, 2, 3, 4, 5, 6,
+            1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 6, 7, 1, 2, 3, 4, 5, 6,
+        ),
     },
     {
         "case_id": "alt_lane_b_v2",
         "initial_state": (-3, 5, -7, 9, -11, 13, -15, 4),
-        "op_sequence": (7, 6, 7, 5, 7, 4, 7, 3, 7, 2, 7, 1, 6, 5, 4, 3, 2, 1),
+        "op_sequence": (
+            7, 6, 7, 5, 7, 4, 7, 3, 7, 2, 7, 1, 6, 5, 4, 3, 2, 1,
+            7, 6, 7, 5, 7, 4, 7, 3, 7, 2, 7, 1, 6, 5, 4, 3, 2, 1,
+            7, 6, 7, 5, 7, 4, 7, 3, 7, 2, 7, 1, 6, 5, 4, 3, 2, 1,
+            7, 6, 7, 5, 7, 4, 7, 3, 7, 2, 7, 1, 6, 5, 4, 3, 2, 1,
+        ),
     },
 )
-WEAK_KICKS: Tuple[int, ...] = (-7, -5, -3, -1, 1, 3, 5, 7)
-PHASE_SHIFTS: Tuple[int, ...] = (1, 2, 3, 4, 5)
-CKM_PHASES: Tuple[int, ...] = (-5, -3, -1, 1, 3, 5)
-CKM_TRANSPORT_PERIODS: Tuple[int, ...] = (2, 3, 4)
+WEAK_KICKS: Tuple[int, ...] = (-11, -9, -7, -5, -3, -1, 1, 3, 5, 7, 9, 11)
+PHASE_SHIFTS: Tuple[int, ...] = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+CKM_PHASES: Tuple[int, ...] = (-7, -5, -3, -1, 1, 3, 5, 7)
+CKM_TRANSPORT_PERIODS: Tuple[int, ...] = (2, 3, 4, 5, 6)
 PERIODIC_PROBE_RESIDUALS: Tuple[int, ...] = (-3, -1, 0, 1, 3)
 LINEAR_PROBE_RESIDUALS: Tuple[int, ...] = (-7, -3, -1, 0, 1, 3, 7)
 LINEAR_PROBE_SCALES: Tuple[int, ...] = (-2, -1, 1, 2)
@@ -203,6 +218,7 @@ def build_bridge_closure_payload() -> Dict[str, Any]:
     trace_suite = _trace_suite(weights=DEFAULT_WEIGHTS)
     weak_grid = _weak_leakage_grid()
     ckm_grid = _ckm_like_grid()
+    case_depths = [len(op_sequence) for (_, _, op_sequence) in _iter_cases()]
     weak_max = max(abs(int(row["strong_residual"])) for row in weak_grid)
     ckm_max = max(abs(int(row["strong_residual"])) for row in ckm_grid)
     linear_lane = _linear_map_lane()
@@ -225,6 +241,17 @@ def build_bridge_closure_payload() -> Dict[str, Any]:
             "signed_sum": int(signed_sum),
         },
         "orientation_reversal_closed_on_fano_lines": bool(orientation_closed),
+        "stress_lane_profile": {
+            "case_count": len(CASE_DEFINITIONS),
+            "op_depth_min": int(min(case_depths)),
+            "op_depth_max": int(max(case_depths)),
+            "weak_kicks": list(WEAK_KICKS),
+            "phase_shifts": list(PHASE_SHIFTS),
+            "ckm_phases": list(CKM_PHASES),
+            "ckm_transport_periods": list(CKM_TRANSPORT_PERIODS),
+            "weak_grid_size": int(len(weak_grid)),
+            "ckm_grid_size": int(len(ckm_grid)),
+        },
         "weak_leakage_suite": {
             "case_count": len(CASE_DEFINITIONS),
             "rows": weak_grid,
@@ -276,6 +303,9 @@ def render_markdown(payload: Dict[str, Any]) -> str:
         f"- Orientation closed: `{payload['orientation_reversal_closed_on_fano_lines']}`",
         "",
         "## Weak Leakage",
+        f"- Stress profile depth: min {payload['stress_lane_profile']['op_depth_min']} / max {payload['stress_lane_profile']['op_depth_max']}",
+        f"- Weak grid size: {payload['stress_lane_profile']['weak_grid_size']}",
+        f"- CKM-like grid size: {payload['stress_lane_profile']['ckm_grid_size']}",
         f"- Weak lane all zero: `{payload['weak_leakage_suite']['all_zero']}` (max abs {payload['weak_leakage_suite']['max_abs_residual']})",
         f"- CKM-like lane all zero: `{payload['ckm_like_weak_leakage_suite']['all_zero']}` (max abs {payload['ckm_like_weak_leakage_suite']['max_abs_residual']})",
         "",

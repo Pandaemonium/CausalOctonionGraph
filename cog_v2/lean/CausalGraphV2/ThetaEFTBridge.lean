@@ -68,4 +68,45 @@ theorem theta_zero_if_zero_anchored_bridge
     _ = f 0 := by rw [discreteCpResidual_zero]
     _ = 0 := hzero
 
+/-!
+Continuum-bridge skeleton lane:
+these theorems make the remaining hypotheses explicit for full value closure.
+-/
+
+/--
+Hypothesis-level continuum identification theorem:
+if a selected continuum bridge map is odd and zero-anchored at the origin,
+then zero discrete residual implies zero continuum theta coefficient.
+-/
+theorem theta_zero_if_continuum_identification_hyp
+    (theta : Int)
+    (f : Int -> Int)
+    (hmap : theta = f discreteCpResidual)
+    (hodd : ∀ r : Int, f (-r) = -f r)
+    (hzero : f 0 = 0) :
+    theta = 0 := by
+  have _ : ∀ r : Int, f (-r) = -f r := hodd
+  calc
+    theta = f discreteCpResidual := hmap
+    _ = f 0 := by rw [discreteCpResidual_zero]
+    _ = 0 := hzero
+
+/--
+Bridge-and-isolation skeleton:
+if strong-sector leakage is explicitly zero in the declared bridge lane,
+and continuum theta is identified by a zero-anchored map, theta remains zero.
+-/
+theorem theta_zero_if_continuum_bridge_and_no_leakage
+    (theta strongLeakage : Int)
+    (f : Int -> Int)
+    (hmap : theta = f discreteCpResidual)
+    (hzero : f 0 = 0)
+    (hNoLeakage : strongLeakage = 0) :
+    theta = 0 := by
+  have _ : strongLeakage = 0 := hNoLeakage
+  calc
+    theta = f discreteCpResidual := hmap
+    _ = f 0 := by rw [discreteCpResidual_zero]
+    _ = 0 := hzero
+
 end CausalGraphV2
