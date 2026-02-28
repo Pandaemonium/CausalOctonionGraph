@@ -44,6 +44,7 @@ RESIDUAL_PROBES: Tuple[int, ...] = (-21, -13, -7, -3, -1, 0, 1, 3, 7, 13, 21)
 LINEAR_SCALES: Tuple[float, ...] = (-2.0, -1.0, 1.0, 2.0)
 AFFINE_OFFSETS: Tuple[float, ...] = (0.0, 0.25)
 ZERO_ANCHORED_CUBIC_SCALES: Tuple[float, ...] = (0.0, 0.01, 0.05)
+MAP_IDENTIFICATION_POLICY_ID = "theta_map_identification_linear_unit_v1"
 
 
 @dataclass(frozen=True)
@@ -125,13 +126,13 @@ def evaluate_map_symmetry(
 def q_density_proxy(state: Sequence[int]) -> int:
     """Coarse CP-odd density proxy.
 
-    Uses e7 sign channel times quadratic strong-sector activity:
-      q ~ e7 * sum_i i * e_i^2
-    Under cp_map: e7 -> -e7, e_i^2 invariant => q -> -q.
+    Uses e111 sign channel times quadratic strong-sector activity:
+      q ~ e111 * sum_i i * channel_i^2  for i in {e001..e110}
+    Under cp_map: e111 -> -e111, channel_i^2 invariant => q -> -q.
     """
-    e7 = int(state[7])
+    e111 = int(state[7])
     strong_quad = sum((idx + 1) * (int(state[idx]) ** 2) for idx in range(1, 7))
-    return int(e7 * strong_quad)
+    return int(e111 * strong_quad)
 
 
 def q_top_proxy(trace: Iterable[Sequence[int]]) -> int:
@@ -186,6 +187,7 @@ def build_theta_eft_bridge_payload() -> Dict[str, Any]:
 
     map_rows = []
     for spec in map_specs:
+        map_fn = _build_map_fn(spec)
         result = evaluate_map_symmetry(RESIDUAL_PROBES, _build_map_fn(spec))
         map_rows.append(
             {
@@ -194,6 +196,8 @@ def build_theta_eft_bridge_payload() -> Dict[str, Any]:
                 "scale": float(spec.scale),
                 "offset": float(spec.offset),
                 "cubic_scale": float(spec.cubic_scale),
+                "theta_at_plus_one": float(map_fn(1)),
+                "theta_at_minus_one": float(map_fn(-1)),
                 "cp_odd_all_hold": bool(result["cp_odd_all_hold"]),
                 "zero_anchor_all_hold": bool(result["zero_anchor_all_hold"]),
                 "max_cp_odd_violation": float(result["max_cp_odd_violation"]),
@@ -202,6 +206,22 @@ def build_theta_eft_bridge_payload() -> Dict[str, Any]:
         )
 
     qtop_suite = run_qtop_proxy_suite(TRACE_CASES)
+
+    eligible_map_ids: List[str] = []
+    for row in map_rows:
+        if row["mode"] != "linear":
+            continue
+        if row["cp_odd_all_hold"] is not True:
+            continue
+        if row["zero_anchor_all_hold"] is not True:
+            continue
+        if abs(float(row["theta_at_plus_one"]) - 1.0) > 1e-12:
+            continue
+        if abs(float(row["theta_at_minus_one"]) + 1.0) > 1e-12:
+            continue
+        eligible_map_ids.append(str(row["map_id"]))
+    eligible_map_ids = sorted(set(eligible_map_ids))
+    selected_map_id = eligible_map_ids[0] if len(eligible_map_ids) == 1 else ""
 
     payload: Dict[str, Any] = {
         "schema_version": "theta001_eft_bridge_v2",
@@ -215,9 +235,23 @@ def build_theta_eft_bridge_payload() -> Dict[str, Any]:
             "cp_odd_all_hold": all(bool(r["cp_odd_all_hold"]) for r in map_rows),
             "zero_anchor_all_hold": all(bool(r["zero_anchor_all_hold"]) for r in map_rows),
             "notes": [
-                "Map-form consistency probe only; no unique physical map selected.",
+                "Map-form consistency probe with an operational identification policy.",
                 "Affine non-zero offset probes intentionally test zero-anchor failure behavior.",
             ],
+        },
+        "map_identification": {
+            "policy_id": MAP_IDENTIFICATION_POLICY_ID,
+            "constraints": [
+                "mode == linear",
+                "cp_odd_all_hold == true",
+                "zero_anchor_all_hold == true",
+                "theta_at_plus_one == +1",
+                "theta_at_minus_one == -1",
+            ],
+            "eligible_map_ids": eligible_map_ids,
+            "selected_map_id": selected_map_id,
+            "selected_unique": len(eligible_map_ids) == 1,
+            "selection_ready": bool(selected_map_id),
         },
         "q_top_proxy_suite": qtop_suite,
         "continuum_eft_bridge_readiness": {
@@ -225,6 +259,7 @@ def build_theta_eft_bridge_payload() -> Dict[str, Any]:
             "map_suite_has_cp_odd_candidate": any(
                 bool(r["cp_odd_all_hold"]) and bool(r["zero_anchor_all_hold"]) for r in map_rows
             ),
+            "map_identification_locked": bool(selected_map_id == "linear_scale_1_v1"),
             "full_value_closure_ready": False,
         },
         "lean_bridge_theorems": [

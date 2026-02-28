@@ -15,6 +15,8 @@ COG v2 separates:
 1. **Dynamics layer (axiomatic):**
    - DAG causal structure,
    - `C x O` over unity state domain,
+   - binary basis channels `e000..e111`,
+   - XOR index-channel multiplication with oriented-sign table,
    - projector-based lightcone update rule.
 2. **Resolution layer (interpretive policy):**
    - how projector action order / branch realization is resolved at runtime.

@@ -7,7 +7,7 @@ Owner: COG Core
 Interpretation/Resolution Extension:
 - `cog_v2/rfc/RFC-002_Event_Resolution_Modes_and_Interpretation_Layer.md`
 - `cog_v2/rfc/RFC-003_Theta_Continuum_Identification_Contract.md`
-- `cog_v2/rfc/RFC-004_Triplet_Coherence_and_e0_Leakage_Hypothesis.md`
+- `cog_v2/rfc/RFC-004_Triplet_Coherence_and_e000_Leakage_Hypothesis.md`
 - `cog_v2/rfc/Targeted_Branching_Policy_for_Computational_Efficiency_and_Statistical_Integrity.md`
 
 ## 1. Decision
@@ -23,6 +23,22 @@ This RFC is the source-of-truth profile for all new work under `cog_v2/`.
 ## 2. Canonical State Contract
 
 Each node state is an 8-slot `C x O` tuple with Gaussian-integer coefficients.
+
+Canonical basis labels (index-locked):
+
+1. `e000` (scalar/identity channel)
+2. `e001`
+3. `e010`
+4. `e011`
+5. `e100`
+6. `e101`
+7. `e110`
+8. `e111` (vacuum-sign channel in current THETA probes)
+
+Alias policy:
+
+1. v2 documentation and code use binary labels (`e000..e111`) as canonical names.
+2. legacy `e0..e7` aliases are not normative in `cog_v2/`.
 
 Allowed canonical coefficients:
 
@@ -42,6 +58,8 @@ Input policy:
 For node `n` with current state `s_n` and parent states `P_n`:
 
 1. `payload_raw = fold(parent_states)` using fixed Fano multiplication.
+   - Runtime index channel is XOR for distinct imaginary basis pairs:
+     `k = i xor j` with orientation-sign table.
 2. `payload = Pi(payload_raw)` where `Pi` is deterministic unity projection.
 3. `s'_n = Pi(payload * s_n)`.
 

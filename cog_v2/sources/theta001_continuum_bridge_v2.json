@@ -1,15 +1,17 @@
 {
   "bridge_dependency_artifact": "cog_v2/sources/theta001_bridge_closure_v2.json",
-  "bridge_dependency_artifact_sha256": "23d124e21e1cbd90a137ad9ea87191dea089edabc7d1fe282c58a9119c466361",
+  "bridge_dependency_artifact_sha256": "64744a10ca1ec6b96ddae4b156ca1fae4eed6ccbf46c6b86a02c02f43ba0d062",
   "claim_id": "THETA-001",
   "closure_scope": "structure_first",
   "continuum_bridge_readiness": {
+    "discrete_correction_lane_ready": true,
     "finite_size_residual_stable_zero": true,
     "full_value_closure_ready": false,
     "normalized_residual_stable_zero": true
   },
   "continuum_identification_contract": {
     "continuum_target_operator": "F_tilde_F_coefficient",
+    "discrete_correction_envelope_id": "theta_discrete_correction_envelope_v1",
     "discrete_observable_id": "theta_cp_odd_residual_v2",
     "lean_theorem_targets": [
       "CausalGraphV2.discreteTopologicalCharge_v1_zero",
@@ -616,8 +618,26 @@
     64,
     72
   ],
-  "replay_hash": "461c0dcfb5de3781a50b1fcb465a2da4132631ec88e2f7967c74bedc3c6d6052",
+  "discrete_correction_envelope": {
+    "broken_correction_onset_d_E": 0,
+    "broken_near_high_order_fraction_E": 0.7,
+    "coherent_correction_onset_d_E": 16,
+    "coherent_far_high_order_fraction_E": 0.3793103448275862,
+    "coherent_near_first_order_fraction_E": 0.75,
+    "coherent_near_high_order_fraction_E": 0.25,
+    "correction_lane_ready": true,
+    "correction_mode": "higher_order_corrections_active",
+    "correction_onset_defined": true,
+    "distance_axis_id": "graph_distance_tick_index_v1",
+    "domain": "nonnegative_integers",
+    "envelope_id": "theta_discrete_correction_envelope_v1",
+    "near_field_mode": "first_order_dominant",
+    "source_model_id": "discrete_transfer_function_v1"
+  },
+  "replay_hash": "ad02458a2f0a7094782654eb82dce2a366ed74a8f4b9f6ce83974e3e213995a9",
   "schema_version": "theta001_continuum_bridge_v2",
   "source_script": "cog_v2/calc/build_theta001_continuum_bridge_v2.py",
-  "source_script_sha256": "860f5640adf9476939164fa5c95d09db4896b8fb8b53fcf3690006e296aa588a"
+  "source_script_sha256": "d6393c83c8d754016bfdd44333c611d5c4fde20d117072412160e853229f994f",
+  "triplet_dependency_artifact": "cog_v2/sources/triplet_coherence_e000_leakage_v1.json",
+  "triplet_dependency_artifact_sha256": "0ebe358de787c44be76a6dd2e6d194b524dd238ea100e204ee2faa905cc77e5a"
 }

@@ -10377,7 +10377,7 @@
     ],
     "status": "stub_non_blocking"
   },
-  "replay_hash": "744d5ab2aade7c178cefac7e22a3e58f160c418be3b6c3382f037db7376a6849",
+  "replay_hash": "791cebf3dfd26c15cd11b2895ef48219d8e11f63e6da70b77f9a83275ad182aa",
   "schema_version": "theta001_bridge_closure_v2",
   "source_script": "cog_v2/calc/build_theta001_bridge_closure_v2.py",
   "source_script_sha256": "83fe74c1ec5a417885933759aba532e03802f8fdc9499cf19cd6623addcc7db8",
@@ -12399,5 +12399,5 @@
     ]
   },
   "witness_module": "cog_v2/calc/theta001_cp_invariant_v2.py",
-  "witness_module_sha256": "6b65c30f4ae3ce584a01c1c38f8eef562716491b5396a923f99034d1d235f67e"
+  "witness_module_sha256": "4526ae9765fa0d16d06e4adb2f63674f6c46d7eab5674c5ea9554925cac9284e"
 }

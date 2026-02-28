@@ -97,12 +97,28 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
                     f"{claim_id}: continuum_identification_contract.policy_id must be theta_continuum_linear_identification_v1",
                 )
             )
+        if str(continuum_contract.get("selection_policy_id", "")).strip() != "theta_map_identification_linear_unit_v1":
+            issues.append(
+                Issue(
+                    claim_id,
+                    "error",
+                    f"{claim_id}: continuum_identification_contract.selection_policy_id must be theta_map_identification_linear_unit_v1",
+                )
+            )
         if str(continuum_contract.get("map_id", "")).strip() != "linear_scale_1_v1":
             issues.append(
                 Issue(
                     claim_id,
                     "error",
                     f"{claim_id}: continuum_identification_contract.map_id must be linear_scale_1_v1",
+                )
+            )
+        if str(continuum_contract.get("discrete_correction_envelope_id", "")).strip() != "theta_discrete_correction_envelope_v1":
+            issues.append(
+                Issue(
+                    claim_id,
+                    "error",
+                    f"{claim_id}: continuum_identification_contract.discrete_correction_envelope_id must be theta_discrete_correction_envelope_v1",
                 )
             )
         if not _is_nonempty_str(continuum_contract.get("coarse_grain_operator")):
@@ -302,6 +318,43 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
                     if not isinstance(map_suite.get("rows"), list) or not map_suite.get("rows"):
                         issues.append(Issue(claim_id, "error", f"{claim_id}: eft_map_artifact map_suite.rows must be non-empty list"))
 
+                map_identification = payload.get("map_identification")
+                if not isinstance(map_identification, dict):
+                    issues.append(Issue(claim_id, "error", f"{claim_id}: eft_map_artifact missing map_identification object"))
+                else:
+                    if str(map_identification.get("policy_id", "")).strip() != "theta_map_identification_linear_unit_v1":
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: eft_map_artifact map_identification.policy_id must be theta_map_identification_linear_unit_v1",
+                            )
+                        )
+                    if not isinstance(map_identification.get("eligible_map_ids"), list) or not map_identification.get("eligible_map_ids"):
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: eft_map_artifact map_identification.eligible_map_ids must be non-empty list",
+                            )
+                        )
+                    if map_identification.get("selected_unique") is not True:
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: eft_map_artifact map_identification.selected_unique must be true",
+                            )
+                        )
+                    if not _is_nonempty_str(map_identification.get("selected_map_id")):
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: eft_map_artifact map_identification.selected_map_id required",
+                            )
+                        )
+
                 q_top_proxy_suite = payload.get("q_top_proxy_suite")
                 if not isinstance(q_top_proxy_suite, dict):
                     issues.append(Issue(claim_id, "error", f"{claim_id}: eft_map_artifact missing q_top_proxy_suite object"))
@@ -316,6 +369,14 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
                                 claim_id,
                                 "error",
                                 f"{claim_id}: eft_map_artifact continuum_eft_bridge_readiness.cp_odd_proxy_consistent must be true",
+                            )
+                        )
+                    if readiness.get("map_identification_locked") is not True:
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: eft_map_artifact continuum_eft_bridge_readiness.map_identification_locked must be true",
                             )
                         )
                     if "map_suite_has_cp_odd_candidate" not in readiness:
@@ -384,6 +445,48 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
                                 f"{claim_id}: continuum_bridge_readiness.normalized_residual_stable_zero must be true",
                             )
                         )
+                    if readiness.get("discrete_correction_lane_ready") is not True:
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: continuum_bridge_readiness.discrete_correction_lane_ready must be true",
+                            )
+                        )
+                envelope = payload.get("discrete_correction_envelope")
+                if not isinstance(envelope, dict):
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: continuum_bridge_artifact missing discrete_correction_envelope",
+                        )
+                    )
+                else:
+                    if str(envelope.get("envelope_id", "")).strip() != "theta_discrete_correction_envelope_v1":
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: continuum_bridge_artifact envelope_id must be theta_discrete_correction_envelope_v1",
+                            )
+                        )
+                    if str(envelope.get("distance_axis_id", "")).strip() != "graph_distance_tick_index_v1":
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: continuum_bridge_artifact distance_axis_id must be graph_distance_tick_index_v1",
+                            )
+                        )
+                    if envelope.get("correction_lane_ready") is not True:
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: continuum_bridge_artifact discrete_correction_envelope.correction_lane_ready must be true",
+                            )
+                        )
                 contract_payload = payload.get("continuum_identification_contract")
                 if not isinstance(contract_payload, dict):
                     issues.append(
@@ -418,6 +521,17 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
                                 f"{claim_id}: continuum_bridge_artifact locked_map_policy must be linear_scale_1_v1",
                             )
                         )
+                    if (
+                        str(contract_payload.get("discrete_correction_envelope_id", "")).strip()
+                        != "theta_discrete_correction_envelope_v1"
+                    ):
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: continuum_bridge_artifact discrete_correction_envelope_id must be theta_discrete_correction_envelope_v1",
+                            )
+                        )
 
         triplet_art = rfc083.get("triplet_leakage_artifact")
         if _is_nonempty_str(triplet_art):
@@ -426,12 +540,14 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
                 issues.append(Issue(claim_id, "error", f"{claim_id}: triplet_leakage_artifact must be valid JSON"))
             else:
                 triplet_payload = payload
-                if str(payload.get("schema_version", "")).strip() != "triplet_coherence_e0_leakage_v1":
+                schema_version = str(payload.get("schema_version", "")).strip()
+                accepted_triplet_schemas = {"triplet_coherence_e000_leakage_v1"}
+                if schema_version not in accepted_triplet_schemas:
                     issues.append(
                         Issue(
                             claim_id,
                             "error",
-                            f"{claim_id}: triplet_leakage_artifact schema_version must be triplet_coherence_e0_leakage_v1",
+                            f"{claim_id}: triplet_leakage_artifact schema_version must be one of {sorted(accepted_triplet_schemas)}",
                         )
                     )
                 ax = payload.get("axiom_profile")
@@ -455,6 +571,34 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
                             f"{claim_id}: triplet_leakage_artifact hypothesis_checks must be non-empty object",
                         )
                     )
+                distance_contract = payload.get("distance_contract")
+                if not isinstance(distance_contract, dict):
+                    issues.append(Issue(claim_id, "error", f"{claim_id}: triplet_leakage_artifact missing distance_contract"))
+                else:
+                    if str(distance_contract.get("distance_axis_id", "")).strip() != "graph_distance_tick_index_v1":
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: triplet_leakage_artifact distance_axis_id must be graph_distance_tick_index_v1",
+                            )
+                        )
+                    if str(distance_contract.get("domain", "")).strip() != "nonnegative_integers":
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: triplet_leakage_artifact distance_contract.domain must be nonnegative_integers",
+                            )
+                        )
+                    if distance_contract.get("contiguous_from_zero") is not True:
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: triplet_leakage_artifact distance_contract.contiguous_from_zero must be true",
+                            )
+                        )
                 if payload.get("all_checks_pass") is not True:
                     issues.append(
                         Issue(
@@ -468,6 +612,17 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
             primary_lane = bridge_map_policy.get("primary_lane", {})
             if isinstance(primary_lane, dict) and isinstance(eft_map_payload, dict):
                 target_map_id = str(primary_lane.get("map_id", "")).strip()
+                map_identification = eft_map_payload.get("map_identification", {})
+                if isinstance(map_identification, dict):
+                    selected_map_id = str(map_identification.get("selected_map_id", "")).strip()
+                    if selected_map_id and target_map_id and selected_map_id != target_map_id:
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: bridge_map_policy primary map_id ({target_map_id}) does not match eft_map selected_map_id ({selected_map_id})",
+                            )
+                        )
                 map_suite = eft_map_payload.get("map_suite", {})
                 rows = map_suite.get("rows", []) if isinstance(map_suite, dict) else []
                 selected = None

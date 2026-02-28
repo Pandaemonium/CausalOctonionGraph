@@ -9,35 +9,28 @@ Triple = Tuple[int, int, int]
 SignTable = Dict[Tuple[int, int], int]
 STRONG_SECTOR_WEIGHTS: Tuple[int, int, int, int, int, int, int, int] = (0, 1, 1, 1, 1, 1, 1, 0)
 
-# 0-indexed Fano lines (CONVENTIONS canonical ordering).
+# 0-indexed Fano lines over binary channels e001..e111 (XOR-closed orientation).
 FANO_CYCLES: Tuple[Tuple[int, int, int], ...] = (
     (0, 1, 2),
     (0, 3, 4),
-    (0, 6, 5),
+    (0, 5, 6),
     (1, 3, 5),
     (1, 4, 6),
     (2, 3, 6),
-    (2, 5, 4),
+    (2, 4, 5),
 )
 
 # 1-indexed directed triples for readability in docs/artifacts.
 FANO_TRIPLES: Tuple[Triple, ...] = tuple((a + 1, b + 1, c + 1) for (a, b, c) in FANO_CYCLES)
 
 FANO_SIGN: SignTable = {}
-FANO_THIRD: Dict[Tuple[int, int], int] = {}
 for a, b, c in FANO_CYCLES:
     FANO_SIGN[(a, b)] = +1
-    FANO_THIRD[(a, b)] = c
     FANO_SIGN[(b, c)] = +1
-    FANO_THIRD[(b, c)] = a
     FANO_SIGN[(c, a)] = +1
-    FANO_THIRD[(c, a)] = b
     FANO_SIGN[(b, a)] = -1
-    FANO_THIRD[(b, a)] = c
     FANO_SIGN[(c, b)] = -1
-    FANO_THIRD[(c, b)] = a
     FANO_SIGN[(a, c)] = -1
-    FANO_THIRD[(a, c)] = b
 
 
 def cp_map(state: State8) -> State8:
@@ -89,7 +82,7 @@ def _basis_mul(i: int, j: int, sign_table: SignTable) -> Tuple[int, int]:
         return 1, i
     if i == j:
         return -1, 0
-    return sign_table[(i - 1, j - 1)], FANO_THIRD[(i - 1, j - 1)] + 1
+    return sign_table[(i - 1, j - 1)], (i ^ j)
 
 
 def left_mul_basis(op_idx: int, state: State8, sign_table: SignTable) -> State8:

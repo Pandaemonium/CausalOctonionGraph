@@ -30,6 +30,7 @@ def _to_repo_path(path: Path) -> str:
 
 def render_markdown(payload: Dict[str, Any]) -> str:
     map_suite = payload["map_suite"]
+    map_identification = payload.get("map_identification", {})
     qtop = payload["q_top_proxy_suite"]
     readiness = payload["continuum_eft_bridge_readiness"]
     lines = [
@@ -56,6 +57,17 @@ def render_markdown(payload: Dict[str, Any]) -> str:
     lines.extend(
         [
             "",
+            "## Map Identification",
+            f"- Policy ID: `{map_identification.get('policy_id', '')}`",
+            f"- Eligible maps: `{map_identification.get('eligible_map_ids', [])}`",
+            f"- Selected map: `{map_identification.get('selected_map_id', '')}`",
+            f"- Selected unique: `{map_identification.get('selected_unique', False)}`",
+        ]
+    )
+
+    lines.extend(
+        [
+            "",
             "## Q_top Proxy Suite",
             f"- CP-odd all hold: `{qtop['cp_odd_all_hold']}`",
             f"- Max abs Q_top proxy: {qtop['max_abs_q_top_proxy']}",
@@ -75,6 +87,7 @@ def render_markdown(payload: Dict[str, Any]) -> str:
             "## Readiness",
             f"- cp_odd_proxy_consistent: `{readiness['cp_odd_proxy_consistent']}`",
             f"- map_suite_has_cp_odd_candidate: `{readiness['map_suite_has_cp_odd_candidate']}`",
+            f"- map_identification_locked: `{readiness.get('map_identification_locked', False)}`",
             f"- full_value_closure_ready: `{readiness['full_value_closure_ready']}`",
             "",
             "## Notes",

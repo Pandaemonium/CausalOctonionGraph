@@ -4,6 +4,7 @@
   "continuum_eft_bridge_readiness": {
     "cp_odd_proxy_consistent": true,
     "full_value_closure_ready": false,
+    "map_identification_locked": true,
     "map_suite_has_cp_odd_candidate": true
   },
   "lean_bridge_theorems": [
@@ -13,10 +14,26 @@
     "CausalGraphV2.theta_zero_if_affine_bridge",
     "CausalGraphV2.theta_zero_if_zero_anchored_bridge"
   ],
+  "map_identification": {
+    "constraints": [
+      "mode == linear",
+      "cp_odd_all_hold == true",
+      "zero_anchor_all_hold == true",
+      "theta_at_plus_one == +1",
+      "theta_at_minus_one == -1"
+    ],
+    "eligible_map_ids": [
+      "linear_scale_1_v1"
+    ],
+    "policy_id": "theta_map_identification_linear_unit_v1",
+    "selected_map_id": "linear_scale_1_v1",
+    "selected_unique": true,
+    "selection_ready": true
+  },
   "map_suite": {
     "cp_odd_all_hold": false,
     "notes": [
-      "Map-form consistency probe only; no unique physical map selected.",
+      "Map-form consistency probe with an operational identification policy.",
       "Affine non-zero offset probes intentionally test zero-anchor failure behavior."
     ],
     "rows": [
@@ -107,6 +124,8 @@
           }
         ],
         "scale": 1.0,
+        "theta_at_minus_one": -1.0,
+        "theta_at_plus_one": 1.0,
         "zero_anchor_all_hold": true
       },
       {
@@ -196,6 +215,8 @@
           }
         ],
         "scale": -2.0,
+        "theta_at_minus_one": 2.0,
+        "theta_at_plus_one": -2.0,
         "zero_anchor_all_hold": true
       },
       {
@@ -285,6 +306,8 @@
           }
         ],
         "scale": -1.0,
+        "theta_at_minus_one": 1.0,
+        "theta_at_plus_one": -1.0,
         "zero_anchor_all_hold": true
       },
       {
@@ -374,6 +397,8 @@
           }
         ],
         "scale": 1.0,
+        "theta_at_minus_one": -1.0,
+        "theta_at_plus_one": 1.0,
         "zero_anchor_all_hold": true
       },
       {
@@ -463,6 +488,8 @@
           }
         ],
         "scale": 2.0,
+        "theta_at_minus_one": -2.0,
+        "theta_at_plus_one": 2.0,
         "zero_anchor_all_hold": true
       },
       {
@@ -552,6 +579,8 @@
           }
         ],
         "scale": 1.0,
+        "theta_at_minus_one": -1.0,
+        "theta_at_plus_one": 1.0,
         "zero_anchor_all_hold": true
       },
       {
@@ -641,6 +670,8 @@
           }
         ],
         "scale": 1.0,
+        "theta_at_minus_one": -0.75,
+        "theta_at_plus_one": 1.25,
         "zero_anchor_all_hold": false
       },
       {
@@ -730,6 +761,8 @@
           }
         ],
         "scale": 1.0,
+        "theta_at_minus_one": -1.0,
+        "theta_at_plus_one": 1.0,
         "zero_anchor_all_hold": true
       },
       {
@@ -819,6 +852,8 @@
           }
         ],
         "scale": 1.0,
+        "theta_at_minus_one": -1.01,
+        "theta_at_plus_one": 1.01,
         "zero_anchor_all_hold": true
       },
       {
@@ -908,6 +943,8 @@
           }
         ],
         "scale": 1.0,
+        "theta_at_minus_one": -1.05,
+        "theta_at_plus_one": 1.05,
         "zero_anchor_all_hold": true
       }
     ],
@@ -928,33 +965,33 @@
   ],
   "q_top_proxy_suite": {
     "cp_odd_all_hold": true,
-    "max_abs_q_top_proxy": 6852,
+    "max_abs_q_top_proxy": 29872,
     "rows": [
       {
         "case_id": "eft_case_001",
         "cp_odd_holds": true,
-        "q_top_proxy": 5346,
-        "q_top_proxy_cp_dual": -5346,
+        "q_top_proxy": 9144,
+        "q_top_proxy_cp_dual": -9144,
         "trace_len": 17
       },
       {
         "case_id": "eft_case_002",
         "cp_odd_holds": true,
-        "q_top_proxy": -1929,
-        "q_top_proxy_cp_dual": 1929,
+        "q_top_proxy": -597,
+        "q_top_proxy_cp_dual": 597,
         "trace_len": 17
       },
       {
         "case_id": "eft_case_003",
         "cp_odd_holds": true,
-        "q_top_proxy": 6852,
-        "q_top_proxy_cp_dual": -6852,
+        "q_top_proxy": 29872,
+        "q_top_proxy_cp_dual": -29872,
         "trace_len": 17
       }
     ]
   },
-  "replay_hash": "fe5b9274ad56277eafe07814ca1b4ebc9a87c535113cf46b393994cb919f1439",
+  "replay_hash": "50e31b49986ddb2f42f57761c4316a6b48b38b0a631b77bae2fe80324d0f2639",
   "schema_version": "theta001_eft_bridge_v2",
   "source_module": "cog_v2/calc/theta_eft_map_v2.py",
-  "source_module_sha256": "d6b7d8dad6931dfbb66156e4977778f3830c3d26203569aa41cd9e22dc08498b"
+  "source_module_sha256": "dfcb2eb84627257b3cd36ceee3ed2bc6aaf3d545b8d68f4aa2497119cbf0366a"
 }

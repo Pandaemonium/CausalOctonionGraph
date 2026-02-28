@@ -37,14 +37,16 @@ contract_gates:
     eft_bridge_artifact: cog_v2/sources/theta001_bridge_closure_v2.json
     eft_map_artifact: cog_v2/sources/theta001_eft_bridge_v2.json
     continuum_bridge_artifact: cog_v2/sources/theta001_continuum_bridge_v2.json
-    triplet_leakage_artifact: cog_v2/sources/triplet_coherence_e0_leakage_v1.json
+    triplet_leakage_artifact: cog_v2/sources/triplet_coherence_e000_leakage_v1.json
     skeptic_review_artifact: cog_v2/sources/theta001_skeptic_review_v2.json
     skeptic_verdict: PASS_WITH_LIMITS
 
 continuum_identification_contract:
   rfc_id: RFC-003
   policy_id: theta_continuum_linear_identification_v1
+  selection_policy_id: theta_map_identification_linear_unit_v1
   map_id: linear_scale_1_v1
+  discrete_correction_envelope_id: theta_discrete_correction_envelope_v1
   coarse_grain_operator: depth_normalized_residual_mean_v1
 
 bridge_map_policy:
@@ -83,18 +85,18 @@ python_test:
   - cog_v2/calc/test_theta001_bridge_closure_v2.py
   - cog_v2/calc/test_theta_eft_map_v2.py
   - cog_v2/calc/test_theta001_continuum_bridge_v2.py
-  - cog_v2/calc/test_triplet_coherence_e0_leakage_v1.py
+  - cog_v2/calc/test_triplet_coherence_e000_leakage_v1.py
 python_check:
   - python -m cog_v2.calc.build_theta001_bridge_closure_v2 --write-sources
   - python cog_v2/scripts/run_theta_eft_sweep_v2.py --write-sources
   - python -m cog_v2.calc.build_theta001_continuum_bridge_v2 --write-sources
-  - python -m cog_v2.calc.build_triplet_coherence_e0_leakage_v1 --write-sources
+  - python -m cog_v2.calc.build_triplet_coherence_e000_leakage_v1 --write-sources
   - python cog_v2/scripts/validate_claim_contracts_v2.py --root . --claims-dir cog_v2/claims
 
 bridge_assumptions:
   - "Discrete CP residual witness corresponds to the continuum theta_QCD term."
   - "Weak-sector CP violation does not leak into strong-sector residual under canonical update."
-  - "Triplet coherence vs e0 leakage probe captures relevant structure-first non-e0 stability effects."
+  - "Triplet coherence vs e000 leakage probe captures relevant structure-first non-e000 stability effects."
 
 falsification_condition: >
   Claim is falsified if a deterministic v2 weak-leakage test shows a non-zero
@@ -117,9 +119,9 @@ falsification_attempts:
     artifact: cog_v2/sources/theta001_continuum_bridge_v2.json
     method: "finite-size depth sweep and normalized residual convergence diagnostics"
     outcome: "extended depth lanes remain zero-residual with stable convergence diagnostics"
-  - id: theta_v2_triplet_e0_probe_v1
-    artifact: cog_v2/sources/triplet_coherence_e0_leakage_v1.json
-    method: "triplet coherence vs e0 leakage directional hypothesis probe"
+  - id: theta_v2_triplet_e000_probe_v1
+    artifact: cog_v2/sources/triplet_coherence_e000_leakage_v1.json
+    method: "triplet coherence vs e000 leakage directional hypothesis probe"
     outcome: "coherent-triplet and broken-state scenarios separate with preregistered directional checks"
 
 gates:

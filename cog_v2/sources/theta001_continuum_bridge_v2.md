@@ -2,7 +2,7 @@
 
 - Claim: `THETA-001`
 - Scope: `structure_first`
-- Replay hash: `461c0dcfb5de3781a50b1fcb465a2da4132631ec88e2f7967c74bedc3c6d6052`
+- Replay hash: `ad02458a2f0a7094782654eb82dce2a366ed74a8f4b9f6ce83974e3e213995a9`
 
 ## Depth Sweep
 - Depth schedule: [12, 16, 20, 24, 32, 40, 48, 56, 64, 72]
@@ -26,9 +26,18 @@
 - zero_plateau_depth: `12`
 - finite_size_fit(mean_abs vs 1/depth): `{'slope': 0.0, 'intercept': 0.0, 'r2': 1.0}`
 
+## Discrete Correction Envelope
+- envelope_id: `theta_discrete_correction_envelope_v1`
+- near_field_mode: `first_order_dominant`
+- correction_mode: `higher_order_corrections_active`
+- coherent_correction_onset_d_E: `16`
+- broken_correction_onset_d_E: `0`
+- correction_lane_ready: `True`
+
 ## Readiness
 - finite_size_residual_stable_zero: `True`
 - normalized_residual_stable_zero: `True`
+- discrete_correction_lane_ready: `True`
 - full_value_closure_ready: `False`
 
 ## Notes

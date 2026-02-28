@@ -27,6 +27,18 @@ Policy ID: `theta_continuum_linear_identification_v1`
    - `fTildeFCoeff_proxy_linear_v1 := thetaContinuumCoeff_linear_v1`
 4. Coarse-grain operator:
    - `depth_normalized_residual_mean_v1`
+5. Operational map-identification policy:
+   - `theta_map_identification_linear_unit_v1`
+   - constraints:
+     - mode is `linear`,
+     - CP-odd and zero-anchor checks pass,
+     - unit normalization (`theta(+1)=+1`, `theta(-1)=-1`).
+   - selected map id must be `linear_scale_1_v1`.
+6. Discrete leakage compatibility:
+   - leakage/isolation diagnostics are treated as depth-binned observables over integer distance `d`.
+   - bridge acceptance consumes coarse-grained summaries from the discrete ladder, not continuous interpolation.
+7. Discrete correction envelope id:
+   - `theta_discrete_correction_envelope_v1`.
 
 ## 3. Lean Targets
 
@@ -57,3 +69,4 @@ This RFC does not:
 1. derive full QCD continuum EFT from external first principles,
 2. claim hadronic phenomenology closure,
 3. relax deterministic replay requirements.
+4. imply that leakage dynamics are continuous in distance.

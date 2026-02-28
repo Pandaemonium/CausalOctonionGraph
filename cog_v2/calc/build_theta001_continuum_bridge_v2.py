@@ -20,6 +20,9 @@ from cog_v2.calc.build_theta001_bridge_closure_v2 import (
     PHASE_SHIFTS,
     WEAK_KICKS,
 )
+from cog_v2.calc.build_triplet_coherence_e000_leakage_v1 import (
+    build_payload as build_triplet_payload,
+)
 from cog_v2.calc.theta001_cp_invariant_v2 import (
     weak_leakage_ckm_like_strong_residual,
     weak_leakage_strong_residual,
@@ -31,6 +34,7 @@ OUT_MD = ROOT / "cog_v2" / "sources" / "theta001_continuum_bridge_v2.md"
 
 SCRIPT_REPO_PATH = "cog_v2/calc/build_theta001_continuum_bridge_v2.py"
 BRIDGE_ARTIFACT_REPO_PATH = "cog_v2/sources/theta001_bridge_closure_v2.json"
+TRIPLET_ARTIFACT_REPO_PATH = "cog_v2/sources/triplet_coherence_e000_leakage_v1.json"
 
 
 def _sha_file(path: Path) -> str:
@@ -40,6 +44,14 @@ def _sha_file(path: Path) -> str:
 def _sha_payload(payload: Any) -> str:
     blob = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
     return hashlib.sha256(blob).hexdigest()
+
+
+def _load_json(path: Path) -> Dict[str, Any]:
+    try:
+        loaded = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+    return loaded if isinstance(loaded, dict) else {}
 
 
 def _to_repo_path(path: Path) -> str:
@@ -57,6 +69,44 @@ def _iter_cases() -> List[Tuple[str, Tuple[int, ...], Tuple[int, ...]]]:
             )
         )
     return rows
+
+
+def _build_discrete_correction_envelope(triplet_payload: Dict[str, Any]) -> Dict[str, Any]:
+    dtf = triplet_payload.get("discrete_transfer_function", {}) if isinstance(triplet_payload, dict) else {}
+    coherent = dtf.get("coherent_triplet_v1", {}) if isinstance(dtf, dict) else {}
+    broken = dtf.get("broken_off_cycle_v1", {}) if isinstance(dtf, dict) else {}
+    coherent_onset = coherent.get("correction_onset_d_E")
+    broken_onset = broken.get("correction_onset_d_E")
+
+    coherent_near_first = float(coherent.get("near_field_first_order_fraction_E", 0.0))
+    coherent_near_high = float(coherent.get("near_field_high_order_fraction_E", 0.0))
+    coherent_far_high = float(coherent.get("far_field_high_order_fraction_E", 0.0))
+    broken_near_high = float(broken.get("near_field_high_order_fraction_E", 0.0))
+
+    near_mode = "first_order_dominant" if coherent_near_first >= 0.6 else "mixed"
+    correction_mode = "higher_order_corrections_active" if coherent_far_high > coherent_near_high else "weak_correction_growth"
+
+    return {
+        "envelope_id": "theta_discrete_correction_envelope_v1",
+        "distance_axis_id": "graph_distance_tick_index_v1",
+        "domain": "nonnegative_integers",
+        "source_model_id": str(dtf.get("model_id", "")),
+        "near_field_mode": near_mode,
+        "correction_mode": correction_mode,
+        "coherent_near_first_order_fraction_E": coherent_near_first,
+        "coherent_near_high_order_fraction_E": coherent_near_high,
+        "coherent_far_high_order_fraction_E": coherent_far_high,
+        "broken_near_high_order_fraction_E": broken_near_high,
+        "coherent_correction_onset_d_E": coherent_onset,
+        "broken_correction_onset_d_E": broken_onset,
+        "correction_onset_defined": coherent_onset is not None and broken_onset is not None,
+        "correction_lane_ready": (
+            coherent_near_first >= 0.6
+            and coherent_far_high > coherent_near_high
+            and coherent_onset is not None
+            and broken_onset is not None
+        ),
+    }
 
 
 def _depth_schedule(max_depth: int) -> List[int]:
@@ -166,6 +216,7 @@ def _ckm_values_for_depth(initial: Tuple[int, ...], ops: Tuple[int, ...]) -> Lis
 def build_continuum_bridge_payload() -> Dict[str, Any]:
     script_path = ROOT / SCRIPT_REPO_PATH
     bridge_path = ROOT / BRIDGE_ARTIFACT_REPO_PATH
+    triplet_path = ROOT / TRIPLET_ARTIFACT_REPO_PATH
     cases = _iter_cases()
     max_depth = min(len(op_sequence) for (_, _, op_sequence) in cases)
     depths = _depth_schedule(max_depth)
@@ -218,6 +269,11 @@ def build_continuum_bridge_payload() -> Dict[str, Any]:
         "finite_size_fit_mean_abs_vs_inv_depth": _linear_fit(inv_depth_series, mean_abs_series),
     }
 
+    triplet_payload = _load_json(triplet_path) if triplet_path.exists() else {}
+    if not isinstance(triplet_payload.get("discrete_transfer_function"), dict):
+        triplet_payload = build_triplet_payload()
+    correction_envelope = _build_discrete_correction_envelope(triplet_payload)
+
     payload: Dict[str, Any] = {
         "schema_version": "theta001_continuum_bridge_v2",
         "claim_id": "THETA-001",
@@ -226,15 +282,19 @@ def build_continuum_bridge_payload() -> Dict[str, Any]:
         "source_script_sha256": _sha_file(script_path),
         "bridge_dependency_artifact": BRIDGE_ARTIFACT_REPO_PATH,
         "bridge_dependency_artifact_sha256": _sha_file(bridge_path) if bridge_path.exists() else "",
+        "triplet_dependency_artifact": TRIPLET_ARTIFACT_REPO_PATH,
+        "triplet_dependency_artifact_sha256": _sha_file(triplet_path) if triplet_path.exists() else "",
         "depth_schedule": depths,
         "depth_rows": depth_rows,
         "convergence_diagnostics": convergence,
+        "discrete_correction_envelope": correction_envelope,
         "continuum_identification_contract": {
             "rfc_id": "RFC-003",
             "policy_id": "theta_continuum_linear_identification_v1",
             "discrete_observable_id": "theta_cp_odd_residual_v2",
             "continuum_target_operator": "F_tilde_F_coefficient",
             "locked_map_policy": "linear_scale_1_v1",
+            "discrete_correction_envelope_id": "theta_discrete_correction_envelope_v1",
             "lean_theorem_targets": [
                 "CausalGraphV2.discreteTopologicalCharge_v1_zero",
                 "CausalGraphV2.thetaContinuumCoeff_linear_v1_zero",
@@ -248,6 +308,7 @@ def build_continuum_bridge_payload() -> Dict[str, Any]:
             "normalized_residual_stable_zero": all(
                 float(row["combined_normalized_by_depth"]["max_abs"]) == 0.0 for row in depth_rows
             ),
+            "discrete_correction_lane_ready": bool(correction_envelope["correction_lane_ready"]),
             "full_value_closure_ready": False,
         },
     }
@@ -285,9 +346,18 @@ def render_markdown(payload: Dict[str, Any]) -> str:
             f"- zero_plateau_depth: `{conv['zero_plateau_depth']}`",
             f"- finite_size_fit(mean_abs vs 1/depth): `{conv['finite_size_fit_mean_abs_vs_inv_depth']}`",
             "",
+            "## Discrete Correction Envelope",
+            f"- envelope_id: `{payload['discrete_correction_envelope']['envelope_id']}`",
+            f"- near_field_mode: `{payload['discrete_correction_envelope']['near_field_mode']}`",
+            f"- correction_mode: `{payload['discrete_correction_envelope']['correction_mode']}`",
+            f"- coherent_correction_onset_d_E: `{payload['discrete_correction_envelope']['coherent_correction_onset_d_E']}`",
+            f"- broken_correction_onset_d_E: `{payload['discrete_correction_envelope']['broken_correction_onset_d_E']}`",
+            f"- correction_lane_ready: `{payload['discrete_correction_envelope']['correction_lane_ready']}`",
+            "",
             "## Readiness",
             f"- finite_size_residual_stable_zero: `{payload['continuum_bridge_readiness']['finite_size_residual_stable_zero']}`",
             f"- normalized_residual_stable_zero: `{payload['continuum_bridge_readiness']['normalized_residual_stable_zero']}`",
+            f"- discrete_correction_lane_ready: `{payload['continuum_bridge_readiness']['discrete_correction_lane_ready']}`",
             f"- full_value_closure_ready: `{payload['continuum_bridge_readiness']['full_value_closure_ready']}`",
             "",
             "## Notes",

@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from cog_v2.calc.build_triplet_coherence_e0_leakage_v1 import (
+from cog_v2.calc.build_triplet_coherence_e000_leakage_v1 import (
     OUT_JSON,
     OUT_MD,
     build_payload,
@@ -22,11 +22,19 @@ def test_payload_deterministic() -> None:
 
 def test_payload_expected_structure_and_directionality() -> None:
     payload = build_payload()
-    assert payload["schema_version"] == "triplet_coherence_e0_leakage_v1"
+    assert payload["schema_version"] == "triplet_coherence_e000_leakage_v1"
     assert payload["axiom_profile"]["kernel_profile"] == "cog_v2_projective_unity_v1"
     assert payload["axiom_profile"]["projector_id"] == "pi_unity_axis_dominance_v1"
     assert "coherent_triplet_v1" in payload["scenarios"]
     assert "broken_off_cycle_v1" in payload["scenarios"]
+    assert payload["distance_contract"]["distance_axis_id"] == "graph_distance_tick_index_v1"
+    assert payload["distance_contract"]["domain"] == "nonnegative_integers"
+    assert payload["distance_contract"]["contiguous_from_zero"] is True
+    assert payload["distance_comparison"]["abs_leakage_nonstrict_fraction_broken_ge_coherent"] >= 0.75
+    assert payload["discrete_transfer_function"]["model_id"] == "discrete_transfer_function_v1"
+    assert "coherent_triplet_v1" in payload["discrete_transfer_function"]
+    assert "broken_off_cycle_v1" in payload["discrete_transfer_function"]
+    assert payload["discrete_transfer_function"]["coherent_triplet_v1"]["near_field_first_order_fraction_E"] >= 0.6
     assert payload["all_checks_pass"] is True
     for key, value in payload["hypothesis_checks"].items():
         assert isinstance(key, str)
@@ -44,5 +52,7 @@ def test_write_artifacts(tmp_path: Path) -> None:
     loaded = json.loads(json_path.read_text(encoding="utf-8"))
     assert loaded["replay_hash"] == payload["replay_hash"]
     md = md_path.read_text(encoding="utf-8")
-    assert "Triplet Coherence vs e0 Leakage Probe (v1)" in md
+    assert "Triplet Coherence vs e000 Leakage Probe (v1)" in md
+    assert "Discrete Distance Contract" in md
+    assert "Discrete Transfer Shape (E_d)" in md
     assert "Hypothesis Checks" in md

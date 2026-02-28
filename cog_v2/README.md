@@ -5,6 +5,8 @@
 1. Universe is a DAG.
 2. Node states are `C x O` over a unity alphabet.
 3. Update rule is projection across the incoming light cone.
+4. Basis channels are binary-labeled: `e000..e111`.
+5. Runtime multiplication uses XOR index channel with oriented sign table.
 
 This directory is intentionally isolated from legacy kernels and legacy claim plumbing.
 

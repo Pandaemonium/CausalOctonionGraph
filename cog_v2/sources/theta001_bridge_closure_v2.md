@@ -1,7 +1,7 @@
 # THETA-001 Bridge Closure Artifact (v2)
 
 - Claim: `THETA-001`
-- Replay hash: `744d5ab2aade7c178cefac7e22a3e58f160c418be3b6c3382f037db7376a6849`
+- Replay hash: `791cebf3dfd26c15cd11b2895ef48219d8e11f63e6da70b77f9a83275ad182aa`
 - Source script: `cog_v2/calc/build_theta001_bridge_closure_v2.py`
 
 ## Structural Residual

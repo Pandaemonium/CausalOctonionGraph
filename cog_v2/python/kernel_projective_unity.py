@@ -1,4 +1,9 @@
-"""Canonical COG v2 kernel: DAG + CxO over unity + projective lightcone update."""
+"""Canonical COG v2 kernel: DAG + CxO(unity) + projective lightcone update.
+
+Basis channels are indexed in binary order:
+e000, e001, e010, e011, e100, e101, e110, e111.
+Runtime multiplication uses XOR index-channel with oriented-sign lookup.
+"""
 
 from __future__ import annotations
 
@@ -8,14 +13,27 @@ from dataclasses import dataclass
 from typing import Dict, List, Tuple
 
 
-FANO_CYCLES: Tuple[Tuple[int, int, int], ...] = (
-    (1, 2, 4),
-    (2, 3, 5),
-    (3, 4, 6),
-    (4, 5, 7),
-    (5, 6, 1),
-    (6, 7, 2),
-    (7, 1, 3),
+BASIS_LABELS: Tuple[str, ...] = (
+    "e000",
+    "e001",
+    "e010",
+    "e011",
+    "e100",
+    "e101",
+    "e110",
+    "e111",
+)
+
+# Oriented Fano triples in one-indexed imaginary basis {1..7}.
+# They are locked to XOR-channel closure: for each (a,b,c), c = a xor b.
+XOR_ORIENTED_TRIPLES: Tuple[Tuple[int, int, int], ...] = (
+    (1, 2, 3),
+    (1, 4, 5),
+    (1, 6, 7),
+    (2, 4, 6),
+    (2, 5, 7),
+    (3, 4, 7),
+    (3, 5, 6),
 )
 
 
@@ -95,19 +113,23 @@ def project_cxo_to_unity(state: CxO) -> CxO:
     return (vals[0], vals[1], vals[2], vals[3], vals[4], vals[5], vals[6], vals[7])
 
 
-def _pair_table() -> Dict[Tuple[int, int], Tuple[int, int]]:
-    table: Dict[Tuple[int, int], Tuple[int, int]] = {}
-    for a, b, c in FANO_CYCLES:
-        table[(a, b)] = (1, c)
-        table[(b, c)] = (1, a)
-        table[(c, a)] = (1, b)
-        table[(b, a)] = (-1, c)
-        table[(c, b)] = (-1, a)
-        table[(a, c)] = (-1, b)
+def _xor_sign_table() -> Dict[Tuple[int, int], int]:
+    table: Dict[Tuple[int, int], int] = {}
+    for a, b, c in XOR_ORIENTED_TRIPLES:
+        if (a ^ b) != c:
+            raise ValueError(
+                f"Invalid XOR oriented triple {(a, b, c)}: expected c == (a xor b)"
+            )
+        table[(a, b)] = 1
+        table[(b, c)] = 1
+        table[(c, a)] = 1
+        table[(b, a)] = -1
+        table[(c, b)] = -1
+        table[(a, c)] = -1
     return table
 
 
-PAIR_TABLE = _pair_table()
+XOR_SIGN_TABLE = _xor_sign_table()
 
 
 def basis_mul(i: int, j: int) -> Tuple[int, int]:
@@ -117,8 +139,9 @@ def basis_mul(i: int, j: int) -> Tuple[int, int]:
         return 1, i
     if i == j:
         return -1, 0
+    k = i ^ j
     try:
-        return PAIR_TABLE[(i, j)]
+        return XOR_SIGN_TABLE[(i, j)], k
     except KeyError as exc:
         raise ValueError(f"Invalid basis pair ({i}, {j})") from exc
 
@@ -291,6 +314,9 @@ def save_world(path: str, world: World) -> None:
         "kernel_profile": KERNEL_PROFILE,
         "projector_id": PROJECTOR_ID,
         "unity_alphabet": [[z.re, z.im] for z in UNITY_ALPHABET],
+        "basis_labels": list(BASIS_LABELS),
+        "index_channel": "xor",
+        "sign_table_profile": "fano_oriented_triples_xor_v1",
         "event_order": world.event_order,
     }
     with open(path, "w", encoding="utf-8") as f:

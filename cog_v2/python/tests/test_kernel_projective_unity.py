@@ -115,4 +115,7 @@ def test_replay_determinism_and_metadata(tmp_path: Path) -> None:
     assert raw_a == raw_b
     assert raw_a["kernel_profile"] == k.KERNEL_PROFILE
     assert raw_a["projector_id"] == k.PROJECTOR_ID
+    assert raw_a["basis_labels"] == list(k.BASIS_LABELS)
+    assert raw_a["index_channel"] == "xor"
+    assert raw_a["sign_table_profile"] == "fano_oriented_triples_xor_v1"
     assert raw_a["event_order"] == ["n1", "n0", "n2"]

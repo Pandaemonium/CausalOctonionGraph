@@ -306,7 +306,15 @@ Tracked per person, visible on the dashboard.
 | Explanations published | Educator output that passed accuracy review |
 | Audiences reached | Explainers at each level (general, student, technical) |
 | Pipeline roles | Distribution across theorist, skeptic, coder, analyst, educator |
-| Notable moments | Entries in the lab log |
+| Notable moments | Entries in the lab log |Derive every free parameter of the Standard Model of particle physics from first principles, using only:
+
+A directed acyclic graph
+
+Nodes carrying states in ℂ⊗𝕆 over unity
+
+A projective update rule on the past light cone
+
+No continuous fields. No infinite divisibility. No probability. No free parameters smuggled in through the back door.
 
 The leaderboard is a record, not a competition. A skeptic who blocks a flawed derivation contributes as much as the person who later derives it correctly. An educator who makes a hard result genuinely accessible contributes as much as the person who produced the result.
 
