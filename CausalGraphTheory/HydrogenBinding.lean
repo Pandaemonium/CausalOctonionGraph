@@ -20,9 +20,11 @@ abbrev FanoPoint := Fin 7
 
 /-- The 7 lines of the Fano plane as ordered triples (a function Fin 3 → Fin 7).
     Following rfc/CONVENTIONS.md §2 directed cycle convention (0-indexed):
-    (0,1,3), (1,2,4), (2,3,5), (3,4,6), (4,5,0), (5,6,1), (6,0,2). -/
+    (0,1,3), (1,2,4), (2,3,5), (3,4,6), (4,5,0), (5,6,1), (6,0,2).
+    Note: uses explicit fun-lambdas to remain evaluable by native_decide. -/
 def fanoLines : List (Fin 3 → Fin 7) :=
-  let mk (a b c : Fin 7) : Fin 3 → Fin 7 := ![a, b, c]
+  let mk (a b c : Fin 7) : Fin 3 → Fin 7 :=
+    fun i => if i = 0 then a else if i = 1 then b else c
   [ mk ⟨0,by omega⟩ ⟨1,by omega⟩ ⟨3,by omega⟩
   , mk ⟨1,by omega⟩ ⟨2,by omega⟩ ⟨4,by omega⟩
   , mk ⟨2,by omega⟩ ⟨3,by omega⟩ ⟨5,by omega⟩

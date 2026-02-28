@@ -1,0 +1,221 @@
+{
+  "baseline_rows": [
+    {
+      "case_id": "base_lane_v2",
+      "oriented_cubic_residual": 1770,
+      "squared_strong_residual": 0
+    },
+    {
+      "case_id": "alt_lane_a_v2",
+      "oriented_cubic_residual": -810,
+      "squared_strong_residual": 0
+    },
+    {
+      "case_id": "alt_lane_b_v2",
+      "oriented_cubic_residual": -10000,
+      "squared_strong_residual": 0
+    }
+  ],
+  "bridge_script_reference": "cog_v2/calc/build_theta001_bridge_closure_v2.py",
+  "bridge_script_reference_sha256": "83fe74c1ec5a417885933759aba532e03802f8fdc9499cf19cd6623addcc7db8",
+  "ckm_like_summary": {
+    "oriented_cubic_max_abs": 88338,
+    "oriented_cubic_nonzero_count": 1440,
+    "rows": 1440,
+    "squared_all_zero": true,
+    "top_nonzero_rows": [
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "oriented_cubic_residual": -88338,
+        "squared_strong_residual": 0,
+        "transport_period": 5,
+        "weak_kick": 11
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "oriented_cubic_residual": -83218,
+        "squared_strong_residual": 0,
+        "transport_period": 5,
+        "weak_kick": 9
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "oriented_cubic_residual": -78098,
+        "squared_strong_residual": 0,
+        "transport_period": 5,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "oriented_cubic_residual": -72978,
+        "squared_strong_residual": 0,
+        "transport_period": 5,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -7,
+        "oriented_cubic_residual": -69242,
+        "squared_strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 11
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -3,
+        "oriented_cubic_residual": -69242,
+        "squared_strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 11
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -1,
+        "oriented_cubic_residual": -69242,
+        "squared_strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 11
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -5,
+        "oriented_cubic_residual": -67858,
+        "squared_strong_residual": 0,
+        "transport_period": 5,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 1,
+        "oriented_cubic_residual": 66846,
+        "squared_strong_residual": 0,
+        "transport_period": 6,
+        "weak_kick": 11
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 3,
+        "oriented_cubic_residual": 66846,
+        "squared_strong_residual": 0,
+        "transport_period": 6,
+        "weak_kick": 11
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": 7,
+        "oriented_cubic_residual": 66846,
+        "squared_strong_residual": 0,
+        "transport_period": 6,
+        "weak_kick": 11
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "ckm_phase": -7,
+        "oriented_cubic_residual": -66702,
+        "squared_strong_residual": 0,
+        "transport_period": 2,
+        "weak_kick": 9
+      }
+    ]
+  },
+  "claim_id": "THETA-001",
+  "falsification_candidate": {
+    "candidate_observable_id": "oriented_fano_cubic_cp_odd_v1",
+    "has_nonzero_cases": true,
+    "rationale": "sign-sensitive CP-odd combinatoric observable over oriented Fano triplets"
+  },
+  "limits": [
+    "This artifact does not change THETA-001 contract status.",
+    "A nonzero candidate here means the observable definition is sensitive to CP-odd sign structure.",
+    "Promotion impact requires preregistration and independent skeptical review."
+  ],
+  "note": "Exploratory only: compares current squared residual lane to a sign-sensitive oriented Fano-cubic candidate residual.",
+  "replay_hash": "842cce073ba875429f1f8844aa887cf12e6e72a25fc07bdddeb188876f444134",
+  "schema_version": "theta001_nonzero_candidate_probe_v1",
+  "source_script": "cog_v2/calc/build_theta001_nonzero_candidate_probe_v1.py",
+  "source_script_sha256": "f0b8ef9fb88cc4dd28080efbb58ffbb123e5d54858402851c5525a97fd8a2ad9",
+  "weak_leakage_summary": {
+    "oriented_cubic_max_abs": 15830,
+    "oriented_cubic_nonzero_count": 35,
+    "rows": 36,
+    "squared_all_zero": true,
+    "top_nonzero_rows": [
+      {
+        "case_id": "alt_lane_b_v2",
+        "oriented_cubic_residual": -15830,
+        "squared_strong_residual": 0,
+        "weak_kick": 11
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "oriented_cubic_residual": -14770,
+        "squared_strong_residual": 0,
+        "weak_kick": 9
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "oriented_cubic_residual": -13710,
+        "squared_strong_residual": 0,
+        "weak_kick": 7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "oriented_cubic_residual": -12650,
+        "squared_strong_residual": 0,
+        "weak_kick": 5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "oriented_cubic_residual": -11590,
+        "squared_strong_residual": 0,
+        "weak_kick": 3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "oriented_cubic_residual": -10530,
+        "squared_strong_residual": 0,
+        "weak_kick": 1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "oriented_cubic_residual": -9470,
+        "squared_strong_residual": 0,
+        "weak_kick": -1
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "oriented_cubic_residual": -8410,
+        "squared_strong_residual": 0,
+        "weak_kick": -3
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "oriented_cubic_residual": -7350,
+        "squared_strong_residual": 0,
+        "weak_kick": -5
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "oriented_cubic_residual": -6290,
+        "squared_strong_residual": 0,
+        "weak_kick": -7
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "oriented_cubic_residual": -5230,
+        "squared_strong_residual": 0,
+        "weak_kick": -9
+      },
+      {
+        "case_id": "alt_lane_b_v2",
+        "oriented_cubic_residual": -4170,
+        "squared_strong_residual": 0,
+        "weak_kick": -11
+      }
+    ]
+  }
+}

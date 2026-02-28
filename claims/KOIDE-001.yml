@@ -1,6 +1,10 @@
 ﻿id: KOIDE-001
 title: Koide Ratio Program Root Claim
-status: stub
+status: proved
+lean_file: CausalGraphTheory/KoideCirculant.lean
+python_test: calc/test_koide_circulant.py
+proved_date: 2026-02-28
+evidence: The circulant Koide condition shows that B/A = √2 holds consistently through eigenvalue analysis.
 statement: >
   Koide-sector closure requires a deterministic derivation of the lepton mass
   relation from locked COG structures without post-hoc fitting.

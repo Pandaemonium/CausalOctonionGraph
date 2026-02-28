@@ -6,6 +6,9 @@ Claim: `THETA-001`
 Scope: `structure_first`  
 Promotion target: `supported_bridge` (not `proved_core`)
 
+Companion exact-case manuscript:
+1. `cog_v2/sources/theta002_exact_case_manuscript_v1.md`
+
 ## 1. Decision Requested
 
 Approve `THETA-001` as the first statistical constant candidate at
@@ -70,17 +73,21 @@ Not approved in this memo:
 1. Continuum EFT identification remains hypothesis-level (`structure_first` contract).
 2. Weak-leakage realism boundary remains open beyond current synthetic stress families.
 3. Claim scope is policy-locked to `structure_first`; scope migration is required before `proved_core`.
+4. Projector-family universality is not proved; current closure is under
+   `pi_unity_axis_dominance_v1`.
 
 ## 6. Required Next Actions Before Proved-Core Attempt
 
 1. Discharge continuum-identification theorem chain from discrete residual to continuum operator coefficient.
 2. Add and pass a preregistered realism-expanded weak leakage suite acceptable to independent skeptic review.
 3. Submit scope-transition packet (`structure_first -> full_value_closure`) and rerun full gate stack.
+4. Add projector-sensitivity lane (at minimum one preregistered alternative projector policy)
+   and report invariance/non-invariance of the theta-zero result.
 
 ## 7. Recommendation
 
 1. Promote/retain `THETA-001` at `supported_bridge` now.
-2. Keep `proved_core` blocked until the three blockers above are discharged.
+2. Keep `proved_core` blocked until the blockers above are discharged.
 
 ## 8. Skeptic Note (High-School First, Then Technical)
 
@@ -103,9 +110,9 @@ Each node stores an 8-slot state (`e000` to `e111`), and each slot has a tiny ph
 At each tick, a node looks backward at its parent nodes (its local past light cone), combines those messages, and then projects back to the allowed alphabet above. So the system stays discrete and deterministic.
 
 The THETA result in this lane is:
-1. the strong-sector CP-odd residual keeps coming out exactly zero in the tested families,
-2. this zero survives weak-side perturbation stress lanes in our current package,
-3. and therefore the current bridge contract keeps the theta proxy at zero (for `supported_bridge` scope).
+1. this network has a mirror-balance in the strong-sector traces,
+2. even when we add controlled weak-side "wobbles" in current stress lanes, the strong trace keeps cancelling to zero,
+3. so under our locked bridge contract, the theta proxy stays at zero in `supported_bridge` scope.
 
 ### 8.2 Time Cone in This Kernel
 
@@ -123,6 +130,14 @@ So:
 2. update is deterministic under fixed graph + initial state + ordering,
 3. "cone" means the backward-reachable causal neighborhood feeding the node.
 
+Exact projector rule used here (`pi_unity_axis_dominance_v1`) for each Gaussian-integer
+coefficient `a + bi`:
+1. if `a=b=0`, output `0`,
+2. else if `|a| >= |b|`, output `+1` if `a>=0` else `-1`,
+3. else output `+i` if `b>=0` else `-i`.
+
+This is deterministic and idempotent. Axis ties (`|a|=|b|`) resolve to the real axis by rule.
+
 ### 8.3 Bitwise/XOR Structure of the Basis
 
 The v2 runtime basis is named in binary:
@@ -139,6 +154,10 @@ For imaginary basis multiplication (indices 1..7), channel closure is:
 1. `k = i XOR j`
 
 Sign is not from XOR alone. Sign comes from the oriented Fano triples (antisymmetry).
+
+Important identity channel rule:
+1. `e000` is multiplicative identity and does not perform XOR remapping.
+2. XOR channel routing is only for distinct imaginary channels (`e001..e111`).
 
 Concrete examples:
 1. `e001 * e010 = +e011` because `1 XOR 2 = 3` and orientation is positive on that order.
@@ -169,7 +188,7 @@ Off-motif does not break physics; it changes local phase-routing under the same 
 
 Mechanically:
 1. off-cycle interactions produce different raw coefficients in local channels,
-2. projector snaps each coefficient back to `{0, +-1, +-i}` by dominant-axis rule,
+2. projector snaps each coefficient back to `{0, +-1, +-i}` by the exact axis-dominance rule in 8.2,
 3. this changes the local phase pattern and often increases `e000` share in broken families.
 
 In the current artifact package, broken families are expected (and observed in acceptance checks) to trend toward:
@@ -198,6 +217,8 @@ What is genuinely strong right now:
 
 What is still open:
 1. first-principles continuum identification closure,
-2. broader realism closure on cross-sector leakage.
+2. broader realism closure on cross-sector leakage,
+3. proof that weak-sector CP asymmetry can remain realistic while strong-sector residual stays zero
+   in the required continuum identification regime.
 
 That is exactly why this is promoted at `supported_bridge`, not `proved_core`.

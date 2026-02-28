@@ -9,6 +9,8 @@ Interpretation/Resolution Extension:
 - `cog_v2/rfc/RFC-003_Theta_Continuum_Identification_Contract.md`
 - `cog_v2/rfc/RFC-004_Triplet_Coherence_and_e000_Leakage_Hypothesis.md`
 - `cog_v2/rfc/RFC-005_Black_Hole_Horizon_Projection_Kernel_Contract.md`
+- `cog_v2/rfc/RFC-006_Bridge_Construction_from_CxO_Combinatorics.md`
+- `cog_v2/rfc/RFC-007_UV_Exact_Closure_and_Bridge_Applicability_Boundary.md`
 - `cog_v2/rfc/Targeted_Branching_Policy_for_Computational_Efficiency_and_Statistical_Integrity.md`
 
 ## 1. Decision

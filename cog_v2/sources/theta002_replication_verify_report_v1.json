@@ -1,0 +1,47 @@
+{
+  "claim_id": "THETA-002",
+  "pack_replay_hash_expected": "05166766d01a1c6df342a51b29e79016f44f893d94f6f652d348988243402d37",
+  "pack_replay_hash_match": true,
+  "pack_replay_hash_submitted": "05166766d01a1c6df342a51b29e79016f44f893d94f6f652d348988243402d37",
+  "scenario_results": [
+    {
+      "found_in_submission": true,
+      "mismatches": [],
+      "output_match": true,
+      "scenario_hash": "448d02ecb8c8f22d287caf8ca12453d26595d5739cbec730743f61b5e59eb867",
+      "scenario_hash_match": true,
+      "scenario_id": "theta002_replica_weak_01_sample234"
+    },
+    {
+      "found_in_submission": true,
+      "mismatches": [],
+      "output_match": true,
+      "scenario_hash": "27e186da2b974e5cc2d0c1ab79946f77410e889f6bddce838972ab3f5b1844ef",
+      "scenario_hash_match": true,
+      "scenario_id": "theta002_replica_weak_02_sample166"
+    },
+    {
+      "found_in_submission": true,
+      "mismatches": [],
+      "output_match": true,
+      "scenario_hash": "2fb90d4ddac62a6bf815b4428e982c83bb8f53c9d8096e8cb2902c035c77e6a9",
+      "scenario_hash_match": true,
+      "scenario_id": "theta002_replica_ckm_03_sample340"
+    },
+    {
+      "found_in_submission": true,
+      "mismatches": [],
+      "output_match": true,
+      "scenario_hash": "5cd321d2c3411ab698e6f1a31decb55ed4af0efde6129e731b248be1c7836b6c",
+      "scenario_hash_match": true,
+      "scenario_id": "theta002_replica_ckm_04_sample206"
+    }
+  ],
+  "schema_version": "theta002_replication_verify_report_v1",
+  "summary": {
+    "all_outputs_match": true,
+    "passed_scenarios": 4,
+    "total_scenarios": 4,
+    "verified": true
+  }
+}

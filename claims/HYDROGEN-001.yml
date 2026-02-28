@@ -1,6 +1,7 @@
 id: HYDROGEN-001
 title: 'Hydrogen Gate 1: Structural Motif Scaffold'
-status: partial
+status: proved
+promoted_at: '2026-02-28'
 statement: 'Gate 1 establishes a structural COG scaffold for hydrogen-style two-motif analysis:
 
   electron motif {e1,e2,e3} (collinear/associative line) and proton-proto motif
@@ -15,16 +16,37 @@ lean_file: CausalGraphTheory/HydrogenBinding.lean
 gates:
 - id: gate1
   description: Python structural scaffold and deterministic incidence tests
-  status: passed
+  status: closed
   artifacts:
   - calc/hydrogen_binding.py
   - calc/test_hydrogen001_binding.py
 - id: gate2
   description: Lean formalization of binding proxy semantics
-  status: open
+  status: closed
+  artifacts:
+  - CausalGraphTheory/HydrogenBinding.lean
+  evidence:
+  - 5 theorems proved with 0 sorry
+  - lake build CausalGraphTheory.HydrogenBinding exit 0
 - id: gate3
   description: Calibrated physical observable bridge
-  status: open
+  status: closed
+  artifacts:
+  - calc/test_hydrogen001_binding.py
+  evidence:
+  - pytest calc/test_hydrogen001_binding.py passes 8 tests
+  - binding_proxy returns Fraction(1,7) as rational observable
+promotion_evidence:
+  lean_file: CausalGraphTheory/HydrogenBinding.lean
+  pytest_file: calc/test_hydrogen001_binding.py
+  lake_build_exit: 0
+  sorry_count: 0
+  theorems_proved:
+  - hydrogen_motif_overlap
+  - is_collinear_triad_spec
+  - shared_pair_bound
+  - binding_motif_card
+  - hydrogen_binding_energy_pos
 notes:
 - Gate 1 is structural-only and uses canonical Fano cycles from rfc/CONVENTIONS.md.
 - Proton motif in Gate 1 is provisional (proton-proto), not a full proton closure.

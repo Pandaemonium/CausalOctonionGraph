@@ -8,6 +8,7 @@ Initial v2 proof lane ports only:
 - `CausalGraphV2/FanoMul.lean`
 - `CausalGraphV2/ThetaQCD.lean`
 - `CausalGraphV2/ThetaEFTBridge.lean`
+- `CausalGraphV2/TripletDecayExact.lean`
 
 ## Current State
 
@@ -20,6 +21,15 @@ Initial v2 proof lane ports only:
   - `theta_zero_if_affine_bridge`
 - Additional generic bridge theorem added:
   - `theta_zero_if_zero_anchored_bridge`
+- Exact dynamic witness lane added (`TripletDecayExact`) with:
+  - exact integer predicate formalization for
+    - `offMotif`
+    - `vacuumCoupled`
+    - `daughterChannelsPresent`
+    - `decayActive`
+  - explicit theorem-level replay witnesses from
+    `triplet_decay_exact_simulation_v1.json`
+  - contract theorem `tripletDecayExactWitnessContract_v1`
 - Full theorem parity with legacy tree is not yet complete.
 - Lean v2 build is now green in this environment:
   - `cd cog_v2/lean && lake build` (14 jobs succeeded)

@@ -1,0 +1,110 @@
+id: THETA-002
+title: Theta_QCD Alternative CP-Odd Observable Lane (Sign-Sensitive)
+status: active_hypothesis
+closure_scope: structure_first
+
+canonical_profile:
+  axioms:
+    - dag
+    - cxo_over_unity
+    - projective_lightcone_update
+  kernel_profile: cog_v2_projective_unity_v1
+  projector_id: pi_unity_axis_dominance_v1
+
+statement: >
+  Under the canonical v2 profile, an alternative sign-sensitive CP-odd
+  combinatoric observable (`oriented_fano_cubic_cp_odd_v1`) may produce
+  non-zero residuals in deterministic stress lanes even when the current
+  squared strong residual lane remains exactly zero. This claim is a
+  preregistered exploratory lane and does not supersede THETA-001.
+
+observable_contract:
+  primary_observable_id: oriented_fano_cubic_cp_odd_v1
+  control_observable_id: squared_strong_residual_v1
+  report_fields:
+    - oriented_cubic_residual
+    - oriented_cubic_residual_excluding_t0
+    - squared_residual
+  key_diagnostic: nonzero_excluding_t0
+
+artifacts:
+  probe_artifact: cog_v2/sources/theta001_nonzero_candidate_probe_v1.json
+  case_development_artifact: cog_v2/sources/theta001_nonzero_case_development_v1.json
+  search_artifact: cog_v2/sources/theta001_nonzero_search_v1.json
+  robust_casebook_artifact: cog_v2/sources/theta001_nonzero_robust_casebook_v1.json
+  replication_pack_artifact: cog_v2/sources/theta002_replication_pack_v1.json
+  exact_microstate_domains_artifact: cog_v2/sources/theta002_exact_microstate_domains_v1.json
+  replication_submission_template_artifact: cog_v2/sources/theta002_replication_submission_template_v1.json
+  replication_verify_report_artifact: cog_v2/sources/theta002_replication_verify_report_v1.json
+
+python_test:
+  - cog_v2/calc/test_theta001_nonzero_candidate_probe_v1.py
+  - cog_v2/calc/test_theta001_nonzero_case_development_v1.py
+  - cog_v2/calc/test_theta001_nonzero_search_v1.py
+  - cog_v2/calc/test_theta001_nonzero_robust_casebook_v1.py
+  - cog_v2/calc/test_theta002_replication_pack_v1.py
+  - cog_v2/calc/test_theta002_exact_microstate_domains_v1.py
+  - cog_v2/scripts/test_verify_theta002_replication_results_v1.py
+
+python_check:
+  - python -m cog_v2.calc.build_theta001_nonzero_candidate_probe_v1 --write-sources
+  - python -m cog_v2.calc.build_theta001_nonzero_case_development_v1 --write-sources
+  - python -m cog_v2.calc.build_theta001_nonzero_search_v1 --write-sources
+  - python -m cog_v2.calc.build_theta001_nonzero_robust_casebook_v1 --write-sources
+  - python -m cog_v2.calc.build_theta002_replication_pack_v1 --write-sources
+  - python -m cog_v2.calc.build_theta002_exact_microstate_domains_v1 --write-sources
+  - python cog_v2/scripts/verify_theta002_replication_results_v1.py --pack cog_v2/sources/theta002_replication_pack_v1.json --write-template cog_v2/sources/theta002_replication_submission_template_v1.json
+  - python cog_v2/scripts/verify_theta002_replication_results_v1.py --pack cog_v2/sources/theta002_replication_pack_v1.json --submission cog_v2/sources/theta002_replication_submission_template_v1.json --report cog_v2/sources/theta002_replication_verify_report_v1.json
+  - python cog_v2/scripts/validate_claim_contracts_v2.py --root . --claims-dir cog_v2/claims
+
+bridge_assumptions:
+  - "The oriented Fano-cubic residual is a physically relevant CP-odd structure marker in this lane."
+  - "A nonzero residual excluding tick-0 reflects dynamical accumulation rather than only initialization offset."
+  - "Current deterministic CKM-like transport stress families are sufficient to expose candidate nonzero behavior."
+
+falsification_condition: >
+  THETA-002 is falsified if preregistered deterministic searches fail to
+  reproduce non-zero oriented-cubic residual excluding tick-0 while control
+  squared residual remains zero, or if non-zero findings disappear under
+  independent replay with identical policy bundle and seed.
+
+falsification_attempts:
+  - id: theta002_probe_v1
+    artifact: cog_v2/sources/theta001_nonzero_candidate_probe_v1.json
+    method: "canonical case families and weak/CKM stress sweep"
+    outcome: "nonzero oriented-cubic residuals detected in weak and CKM lanes"
+  - id: theta002_case_development_v1
+    artifact: cog_v2/sources/theta001_nonzero_case_development_v1.json
+    method: "top-magnitude case expansion with per-tick diagnostics"
+    outcome: "CKM lane retains nonzero residual excluding t0; control squared residual stays zero"
+  - id: theta002_search_v1
+    artifact: cog_v2/sources/theta001_nonzero_search_v1.json
+    method: "deterministic randomized search over initial states and op sequences"
+    outcome: "high-rate nonzero oriented-cubic residual excluding t0 found; squared control remains zero"
+  - id: theta002_robust_casebook_v1
+    artifact: cog_v2/sources/theta001_nonzero_robust_casebook_v1.json
+    method: "local perturbation and rotation robustness over top nonzero anchors"
+    outcome: "multiple anchors retain high nonzero rate with squared control locked at zero"
+  - id: theta002_replication_pack_v1
+    artifact: cog_v2/sources/theta002_replication_pack_v1.json
+    method: "minimal collaborator-ready bundle of robust anchors with expected outputs/checksums"
+    outcome: "4 deterministic scenarios (2 weak + 2 ckm) exported for independent replay"
+  - id: theta002_replication_verify_v1
+    artifact: cog_v2/sources/theta002_replication_verify_report_v1.json
+    method: "strict expected-vs-observed comparison over pack scenarios"
+    outcome: "template self-check verifies all scenario outputs and checksums"
+  - id: theta002_exact_microstate_domains_v1
+    artifact: cog_v2/sources/theta002_exact_microstate_domains_v1.json
+    method: "exact tick-by-tick state/event traces for weak+/weak-/ckm+/ckm- domains"
+    outcome: "published deterministic microstate predictions (full state vectors per tick) for 4 nonzero domains"
+
+gates:
+  - id: gate_1
+    description: Exploratory observable and scripts are deterministic/replay-stable.
+    done: true
+  - id: gate_2
+    description: Independent replay and skeptic replication of nonzero cases.
+    done: false
+  - id: gate_3
+    description: Preregistered observable migration decision against THETA-001 contract.
+    done: false

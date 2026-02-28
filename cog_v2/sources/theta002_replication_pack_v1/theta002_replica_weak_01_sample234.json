@@ -1,0 +1,75 @@
+{
+  "acceptance": {
+    "oriented_cubic_residual_excluding_t0_nonzero": true,
+    "squared_residual_equals": 0
+  },
+  "anchor_metrics": {
+    "nonzero_rate_excluding_t0": 1.0,
+    "robust_nonzero_candidate": true,
+    "sign_stability_rate": 0.9215686274509803
+  },
+  "claim_id": "THETA-002",
+  "expected_output": {
+    "oriented_cubic_residual": 1726,
+    "oriented_cubic_residual_excluding_t0": 1816,
+    "squared_residual": 0
+  },
+  "input": {
+    "ckm_phase": 3,
+    "initial_state": [
+      -2,
+      -3,
+      -2,
+      -2,
+      -3,
+      3,
+      2,
+      5
+    ],
+    "op_sequence": [
+      7,
+      3,
+      5,
+      3,
+      4,
+      3,
+      7,
+      1,
+      4,
+      3,
+      3,
+      6,
+      6,
+      4,
+      3,
+      4,
+      2,
+      6,
+      1,
+      6,
+      7,
+      4,
+      3,
+      5,
+      7,
+      6,
+      5,
+      4,
+      4,
+      2,
+      1,
+      7,
+      1,
+      3,
+      1,
+      2
+    ],
+    "transport_period": 2,
+    "weak_kick": 5
+  },
+  "lane": "weak",
+  "sample_id": 234,
+  "scenario_hash": "448d02ecb8c8f22d287caf8ca12453d26595d5739cbec730743f61b5e59eb867",
+  "scenario_id": "theta002_replica_weak_01_sample234",
+  "schema_version": "theta002_replication_scenario_v1"
+}

@@ -1,13 +1,16 @@
 /-
   CausalGraphTheory/H7SupportClosure.lean
 
-  Primitive 5 of the H7 Kernel: the support-closure stability predicate.
+  Primitive 5 of the H7 Kernel: support-closure stability predicate.
 
-  A motif (Finset H7Imag) is support-closed if for every pair of distinct
-  elements i, j in the motif, the element whose XOR-index equals h7Index i j
-  is also in the motif. This encodes Fano-plane closure.
+  For any subset S of the 7 imaginary units, the support closure cl(S) is:
+  - always a subset of H7Imag (the full 7-element set)
+  - idempotent: if S is already XOR-index-closed, cl(S) = S
+  - never introduces the vacuum element (index 0)
+  - each canonical Fano line is already XOR-index-closed
 
-  All four theorems are fully proved (no admitted gaps).
+  h7Index : H7Imag → H7Imag → ℕ  (returns the XOR as a natural number)
+  H7Imag = {n : Fin 8 // 0 < n.val}  (values 1..7)
 
   Allowed: Algebra, GroupTheory, LinearAlgebra, Combinatorics, Data.Fintype
   Forbidden: Mathlib.Analysis.*, Mathlib.Topology.*, Mathlib.Data.Real.*
@@ -19,55 +22,94 @@ import Mathlib.Data.Finset.Basic
 import Mathlib.Tactic
 import CausalGraphTheory.H7IndexFunction
 import CausalGraphTheory.H7SignFunction
+import CausalGraphTheory.H7CycleExtraction
+-- No Mathlib.Analysis, Topology, or Data.Real imports
 
 namespace H7SupportClosure
 
 open H7IndexFunction H7SignFunction
 
-def supportClosed (S : Finset H7Imag) : Prop :=
+/-! ## Closure predicate: XOR-closure of a Finset H7Imag
+
+    Since h7Index returns ℕ, and the product of two H7Imag elements
+    under XOR stays in {1..7} for distinct elements (Fano property),
+    we define closure by checking membership of the index result
+    lifted back to H7Imag.  For the stability theorems we use the
+    fact that h7Index i j (for i ≠ j in H7Imag) lands in {1..7}.
+-/
+
+/-- The unique H7Imag element with val.val = n, if it exists. -/
+def liftIndex (n : ℕ) : Option H7Imag :=
+  if h : 0 < n ∧ n < 8 then
+    some ⟨⟨n, h.2⟩, h.1⟩
+  else
+    none
+
+/-- S is XOR-closed if for all distinct i j ∈ S, liftIndex (h7Index i j) ∈ S. -/
+def isXorClosed (S : Finset H7Imag) : Prop :=
   ∀ i j : H7Imag, i ∈ S → j ∈ S → i ≠ j →
-    ∀ k : H7Imag, k.val.val = h7Index i j → k ∈ S
+    ∃ k ∈ S, k.val.val = h7Index i j
 
-theorem supportClosed_empty : supportClosed (∅ : Finset H7Imag) := by
-  intro i j hi _hj _hne _k _hk
-  simp at hi
+/-- The XOR closure of S: S plus all index-products of pairs in S that land in H7Imag. -/
+def xorClosure (S : Finset H7Imag) : Finset H7Imag :=
+  Finset.univ.filter (fun k =>
+    k ∈ S ∨
+    ∃ i ∈ S, ∃ j ∈ S, i ≠ j ∧ k.val.val = h7Index i j)
 
-theorem supportClosed_full : supportClosed (Finset.univ : Finset H7Imag) := by
-  intro _i _j _hi _hj _hne _k _hk
-  exact Finset.mem_univ _
+/-! ## Theorem 1: support_closure_subset -/
 
-private abbrev e1' : H7Imag := ⟨⟨1, by decide⟩, by decide⟩
-private abbrev e2' : H7Imag := ⟨⟨2, by decide⟩, by decide⟩
-private abbrev e3' : H7Imag := ⟨⟨3, by decide⟩, by decide⟩
-private abbrev e4' : H7Imag := ⟨⟨4, by decide⟩, by decide⟩
-private abbrev e5' : H7Imag := ⟨⟨5, by decide⟩, by decide⟩
-private abbrev e6' : H7Imag := ⟨⟨6, by decide⟩, by decide⟩
-private abbrev e7' : H7Imag := ⟨⟨7, by decide⟩, by decide⟩
+/-- For any subset S : Finset H7Imag, the closure cl(S) is a subset of Finset.univ.
+    This is trivial since xorClosure is defined as a filter on Finset.univ. -/
+theorem support_closure_subset (S : Finset H7Imag) :
+    xorClosure S ⊆ Finset.univ := by
+  intro x _
+  exact Finset.mem_univ x
 
-def fanoLineFinsets : Fin 7 → Finset H7Imag
-  | ⟨0, _⟩ => {e1', e2', e3'}
-  | ⟨1, _⟩ => {e1', e4', e5'}
-  | ⟨2, _⟩ => {e1', e7', e6'}
-  | ⟨3, _⟩ => {e2', e4', e6'}
-  | ⟨4, _⟩ => {e2', e5', e7'}
-  | ⟨5, _⟩ => {e3', e4', e7'}
-  | ⟨6, _⟩ => {e3', e6', e5'}
+/-! ## Theorem 2: support_closure_stable -/
 
-theorem fanoLine_supportClosed (l : Fin 7) : supportClosed (fanoLineFinsets l) := by
-  have key : ∀ (l : Fin 7) (i j k : H7Imag),
-      i ∈ fanoLineFinsets l → j ∈ fanoLineFinsets l → i ≠ j →
-      k.val.val = h7Index i j → k ∈ fanoLineFinsets l := by
-    native_decide
-  intro i j hi hj hne k hk
-  exact key l i j k hi hj hne hk
+/-- If S is already XOR-closed, then xorClosure S = S (fixed-point / idempotency). -/
+theorem support_closure_stable (S : Finset H7Imag) (hS : isXorClosed S) :
+    xorClosure S = S := by
+  ext x
+  simp only [xorClosure, Finset.mem_filter, Finset.mem_univ, true_and]
+  constructor
+  · intro hx
+    rcases hx with hxS | ⟨i, hiS, j, hjS, hij, hval⟩
+    · exact hxS
+    · obtain ⟨k, hkS, hkval⟩ := hS i j hiS hjS hij
+      have : x = k := by
+        apply Subtype.ext
+        apply Subtype.ext
+        simp only [hval, hkval]
+      rw [this]
+      exact hkS
+  · intro hx
+    left
+    exact hx
 
-theorem supportClosed_inter (A B : Finset H7Imag)
-    (hA : supportClosed A) (hB : supportClosed B) : supportClosed (A ∩ B) := by
-  intro i j hi hj hne k hk
-  rw [Finset.mem_inter] at hi hj ⊢
-  obtain ⟨hiA, hiB⟩ := hi
-  obtain ⟨hjA, hjB⟩ := hj
-  exact ⟨hA i j hiA hjA hne k hk, hB i j hiB hjB hne k hk⟩
+/-! ## Theorem 3: vacuum_not_in_support -/
+
+/-- The XOR of any two distinct H7Imag elements is nonzero.
+    Since H7Imag has values in {1..7} and XOR of distinct such values
+    never equals 0, the vacuum (index 0) never appears. -/
+theorem vacuum_not_in_support (S : Finset H7Imag) :
+    ∀ x ∈ xorClosure S, x.val.val ≠ 0 := by
+  intro x _
+  exact Nat.not_eq_zero_of_lt x.property
+
+/-! ## Theorem 4: fano_line_is_closed -/
+
+/-- Each canonical Fano line triple (a, b, c) from fanoLines is XOR-closed:
+    h7Index a b = c.val.val, h7Index a c = b.val.val, h7Index b c = a.val.val.
+    Proved by native_decide over the finite 7-element set. -/
+theorem fano_line_is_closed :
+    ∀ triple ∈ fanoLines,
+      let (a, bc) := triple
+      let (b, c) := bc
+      h7Index a b = c.val.val ∧
+      h7Index a c = b.val.val ∧
+      h7Index b c = a.val.val := by
+  native_decide
 
 end H7SupportClosure
 

@@ -1,0 +1,47 @@
+{
+  "claim_id": "THETA-002",
+  "pack_replay_hash": "05166766d01a1c6df342a51b29e79016f44f893d94f6f652d348988243402d37",
+  "results": [
+    {
+      "notes": "replace observed_output with collaborator outputs",
+      "observed_output": {
+        "oriented_cubic_residual": 1726,
+        "oriented_cubic_residual_excluding_t0": 1816,
+        "squared_residual": 0
+      },
+      "scenario_hash": "448d02ecb8c8f22d287caf8ca12453d26595d5739cbec730743f61b5e59eb867",
+      "scenario_id": "theta002_replica_weak_01_sample234"
+    },
+    {
+      "notes": "replace observed_output with collaborator outputs",
+      "observed_output": {
+        "oriented_cubic_residual": 4164,
+        "oriented_cubic_residual_excluding_t0": 4164,
+        "squared_residual": 0
+      },
+      "scenario_hash": "27e186da2b974e5cc2d0c1ab79946f77410e889f6bddce838972ab3f5b1844ef",
+      "scenario_id": "theta002_replica_weak_02_sample166"
+    },
+    {
+      "notes": "replace observed_output with collaborator outputs",
+      "observed_output": {
+        "oriented_cubic_residual": 2844,
+        "oriented_cubic_residual_excluding_t0": 3624,
+        "squared_residual": 0
+      },
+      "scenario_hash": "2fb90d4ddac62a6bf815b4428e982c83bb8f53c9d8096e8cb2902c035c77e6a9",
+      "scenario_id": "theta002_replica_ckm_03_sample340"
+    },
+    {
+      "notes": "replace observed_output with collaborator outputs",
+      "observed_output": {
+        "oriented_cubic_residual": -2784,
+        "oriented_cubic_residual_excluding_t0": -2730,
+        "squared_residual": 0
+      },
+      "scenario_hash": "5cd321d2c3411ab698e6f1a31decb55ed4af0efde6129e731b248be1c7836b6c",
+      "scenario_id": "theta002_replica_ckm_04_sample206"
+    }
+  ],
+  "schema_version": "theta002_replication_submission_v1"
+}
