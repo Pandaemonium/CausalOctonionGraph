@@ -1,0 +1,218 @@
+{
+  "claim_id": "THETA-001",
+  "closure_scope": "structure_first",
+  "event_semantics": {
+    "event_definition": "event_at_tick_t_is_exact_microstate_state_t",
+    "lightcone_scope": "parents_only_per_tick_update",
+    "states_are_events": true,
+    "time_definition": "tick_depth_in_dag"
+  },
+  "global_checks": {
+    "all_lanes_all_ticks_hold": true,
+    "all_lanes_full_exhaustive": true
+  },
+  "kernel_module": "cog_v2/python/kernel_projective_unity.py",
+  "kernel_module_sha256": "936d1e8fb5f36c11a05133e67907203fe9fd78db2e8dd433bba4ea8835cbda27",
+  "limits": [
+    "UV witness is exact and exhaustive over a finite microstate lattice for short tick horizons.",
+    "This extends structure-first evidence; it does not alone discharge full continuum EFT identification."
+  ],
+  "replay_hash": "c95c81d96001b72e768788fb6855e086cbea718bdbe08d342be56f9e1b56184f",
+  "schema_version": "theta001_uv_exhaustive_microstates_v1",
+  "source_script": "cog_v2/calc/build_theta001_uv_exhaustive_microstates_v1.py",
+  "source_script_sha256": "bfe7d0c248256f1a6861ee80c9f6e43dba390caf74dbaaec4fefcf76cc3dfae3",
+  "state_space": {
+    "basis_labels": [
+      "e000",
+      "e001",
+      "e010",
+      "e011",
+      "e100",
+      "e101",
+      "e110",
+      "e111"
+    ],
+    "channels": 8,
+    "enumeration_mode": "full_exhaustive",
+    "max_states_override": null,
+    "microstates_total": 390625,
+    "unity_alphabet": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        -1
+      ]
+    ]
+  },
+  "uv_lanes": [
+    {
+      "enumerated_microstates": 390625,
+      "full_exhaustive": true,
+      "lane_all_ticks_hold": true,
+      "lane_id": "uv_lane_a",
+      "op_sequence": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "tick_rows": [
+        {
+          "cp_dual_exact_count": 390625,
+          "cp_dual_neg_count": 1,
+          "cp_dual_parity_holds_all": true,
+          "cp_dual_parity_holds_count": 390625,
+          "event_count": 390625,
+          "expected_mode": "cp_equals_dual",
+          "expected_mode_holds_all": true,
+          "strong_cp_delta_sum": 0,
+          "strong_dual_delta_sum": 0,
+          "tick": 0
+        },
+        {
+          "cp_dual_exact_count": 1,
+          "cp_dual_neg_count": 390625,
+          "cp_dual_parity_holds_all": true,
+          "cp_dual_parity_holds_count": 390625,
+          "event_count": 390625,
+          "expected_mode": "cp_equals_neg_dual",
+          "expected_mode_holds_all": true,
+          "strong_cp_delta_sum": 0,
+          "strong_dual_delta_sum": 0,
+          "tick": 1
+        },
+        {
+          "cp_dual_exact_count": 390625,
+          "cp_dual_neg_count": 1,
+          "cp_dual_parity_holds_all": true,
+          "cp_dual_parity_holds_count": 390625,
+          "event_count": 390625,
+          "expected_mode": "cp_equals_dual",
+          "expected_mode_holds_all": true,
+          "strong_cp_delta_sum": 0,
+          "strong_dual_delta_sum": 0,
+          "tick": 2
+        },
+        {
+          "cp_dual_exact_count": 1,
+          "cp_dual_neg_count": 390625,
+          "cp_dual_parity_holds_all": true,
+          "cp_dual_parity_holds_count": 390625,
+          "event_count": 390625,
+          "expected_mode": "cp_equals_neg_dual",
+          "expected_mode_holds_all": true,
+          "strong_cp_delta_sum": 0,
+          "strong_dual_delta_sum": 0,
+          "tick": 3
+        },
+        {
+          "cp_dual_exact_count": 390625,
+          "cp_dual_neg_count": 1,
+          "cp_dual_parity_holds_all": true,
+          "cp_dual_parity_holds_count": 390625,
+          "event_count": 390625,
+          "expected_mode": "cp_equals_dual",
+          "expected_mode_holds_all": true,
+          "strong_cp_delta_sum": 0,
+          "strong_dual_delta_sum": 0,
+          "tick": 4
+        }
+      ],
+      "ticks": 4,
+      "total_microstates": 390625,
+      "witness_failure": null
+    },
+    {
+      "enumerated_microstates": 390625,
+      "full_exhaustive": true,
+      "lane_all_ticks_hold": true,
+      "lane_id": "uv_lane_b",
+      "op_sequence": [
+        7,
+        1,
+        7,
+        2
+      ],
+      "tick_rows": [
+        {
+          "cp_dual_exact_count": 390625,
+          "cp_dual_neg_count": 1,
+          "cp_dual_parity_holds_all": true,
+          "cp_dual_parity_holds_count": 390625,
+          "event_count": 390625,
+          "expected_mode": "cp_equals_dual",
+          "expected_mode_holds_all": true,
+          "strong_cp_delta_sum": 0,
+          "strong_dual_delta_sum": 0,
+          "tick": 0
+        },
+        {
+          "cp_dual_exact_count": 1,
+          "cp_dual_neg_count": 390625,
+          "cp_dual_parity_holds_all": true,
+          "cp_dual_parity_holds_count": 390625,
+          "event_count": 390625,
+          "expected_mode": "cp_equals_neg_dual",
+          "expected_mode_holds_all": true,
+          "strong_cp_delta_sum": 0,
+          "strong_dual_delta_sum": 0,
+          "tick": 1
+        },
+        {
+          "cp_dual_exact_count": 390625,
+          "cp_dual_neg_count": 1,
+          "cp_dual_parity_holds_all": true,
+          "cp_dual_parity_holds_count": 390625,
+          "event_count": 390625,
+          "expected_mode": "cp_equals_dual",
+          "expected_mode_holds_all": true,
+          "strong_cp_delta_sum": 0,
+          "strong_dual_delta_sum": 0,
+          "tick": 2
+        },
+        {
+          "cp_dual_exact_count": 1,
+          "cp_dual_neg_count": 390625,
+          "cp_dual_parity_holds_all": true,
+          "cp_dual_parity_holds_count": 390625,
+          "event_count": 390625,
+          "expected_mode": "cp_equals_neg_dual",
+          "expected_mode_holds_all": true,
+          "strong_cp_delta_sum": 0,
+          "strong_dual_delta_sum": 0,
+          "tick": 3
+        },
+        {
+          "cp_dual_exact_count": 390625,
+          "cp_dual_neg_count": 1,
+          "cp_dual_parity_holds_all": true,
+          "cp_dual_parity_holds_count": 390625,
+          "event_count": 390625,
+          "expected_mode": "cp_equals_dual",
+          "expected_mode_holds_all": true,
+          "strong_cp_delta_sum": 0,
+          "strong_dual_delta_sum": 0,
+          "tick": 4
+        }
+      ],
+      "ticks": 4,
+      "total_microstates": 390625,
+      "witness_failure": null
+    }
+  ]
+}

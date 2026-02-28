@@ -121,6 +121,17 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
                     f"{claim_id}: continuum_identification_contract.discrete_correction_envelope_id must be theta_discrete_correction_envelope_v1",
                 )
             )
+        if (
+            str(continuum_contract.get("discrete_correction_robustness_id", "")).strip()
+            != "theta_discrete_correction_envelope_robustness_v1"
+        ):
+            issues.append(
+                Issue(
+                    claim_id,
+                    "error",
+                    f"{claim_id}: continuum_identification_contract.discrete_correction_robustness_id must be theta_discrete_correction_envelope_robustness_v1",
+                )
+            )
         if not _is_nonempty_str(continuum_contract.get("coarse_grain_operator")):
             issues.append(
                 Issue(
@@ -243,6 +254,8 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
         "eft_map_artifact",
         "continuum_bridge_artifact",
         "triplet_leakage_artifact",
+        "triplet_robustness_artifact",
+        "closure_packet_artifact",
         "skeptic_review_artifact",
     ):
         value = rfc083.get(key)
@@ -453,6 +466,14 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
                                 f"{claim_id}: continuum_bridge_readiness.discrete_correction_lane_ready must be true",
                             )
                         )
+                    if readiness.get("discrete_correction_robustness_ready") is not True:
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: continuum_bridge_readiness.discrete_correction_robustness_ready must be true",
+                            )
+                        )
                 envelope = payload.get("discrete_correction_envelope")
                 if not isinstance(envelope, dict):
                     issues.append(
@@ -485,6 +506,22 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
                                 claim_id,
                                 "error",
                                 f"{claim_id}: continuum_bridge_artifact discrete_correction_envelope.correction_lane_ready must be true",
+                            )
+                        )
+                    if str(envelope.get("robustness_envelope_id", "")).strip() != "theta_discrete_correction_envelope_robustness_v1":
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: continuum_bridge_artifact robustness_envelope_id must be theta_discrete_correction_envelope_robustness_v1",
+                            )
+                        )
+                    if envelope.get("robustness_lane_ready") is not True:
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: continuum_bridge_artifact discrete_correction_envelope.robustness_lane_ready must be true",
                             )
                         )
                 contract_payload = payload.get("continuum_identification_contract")
@@ -530,6 +567,17 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
                                 claim_id,
                                 "error",
                                 f"{claim_id}: continuum_bridge_artifact discrete_correction_envelope_id must be theta_discrete_correction_envelope_v1",
+                            )
+                        )
+                    if (
+                        str(contract_payload.get("discrete_correction_robustness_id", "")).strip()
+                        != "theta_discrete_correction_envelope_robustness_v1"
+                    ):
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: continuum_bridge_artifact discrete_correction_robustness_id must be theta_discrete_correction_envelope_robustness_v1",
                             )
                         )
 
@@ -605,6 +653,175 @@ def _validate_theta_claim(root: Path, claim_id: str, doc: Dict[str, Any], issues
                             claim_id,
                             "error",
                             f"{claim_id}: triplet_leakage_artifact all_checks_pass must be true",
+                        )
+                    )
+
+        triplet_robustness_art = rfc083.get("triplet_robustness_artifact")
+        if _is_nonempty_str(triplet_robustness_art):
+            payload = _read_json(root / str(triplet_robustness_art))
+            if not payload:
+                issues.append(
+                    Issue(
+                        claim_id,
+                        "error",
+                        f"{claim_id}: triplet_robustness_artifact must be valid JSON",
+                    )
+                )
+            else:
+                if str(payload.get("schema_version", "")).strip() != "triplet_coherence_e000_robustness_v1":
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: triplet_robustness_artifact schema_version must be triplet_coherence_e000_robustness_v1",
+                        )
+                    )
+                ax = payload.get("axiom_profile")
+                if not isinstance(ax, dict):
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: triplet_robustness_artifact missing axiom_profile",
+                        )
+                    )
+                else:
+                    if str(ax.get("kernel_profile", "")).strip() != "cog_v2_projective_unity_v1":
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: triplet_robustness_artifact kernel_profile must be cog_v2_projective_unity_v1",
+                            )
+                        )
+                if not isinstance(payload.get("pair_rows"), list) or not payload.get("pair_rows"):
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: triplet_robustness_artifact pair_rows must be non-empty list",
+                        )
+                    )
+                envelope = payload.get("discrete_correction_envelope_robustness")
+                if not isinstance(envelope, dict):
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: triplet_robustness_artifact missing discrete_correction_envelope_robustness",
+                        )
+                    )
+                else:
+                    if str(envelope.get("envelope_id", "")).strip() != "theta_discrete_correction_envelope_robustness_v1":
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: triplet_robustness_artifact envelope_id must be theta_discrete_correction_envelope_robustness_v1",
+                            )
+                        )
+                    if str(envelope.get("distance_axis_id", "")).strip() != "graph_distance_tick_index_v1":
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: triplet_robustness_artifact distance_axis_id must be graph_distance_tick_index_v1",
+                            )
+                        )
+                    if envelope.get("robustness_lane_ready") is not True:
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: triplet_robustness_artifact robustness_lane_ready must be true",
+                            )
+                        )
+                    if int(envelope.get("topology_family_count", 0)) < 2:
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: triplet_robustness_artifact topology_family_count must be >= 2",
+                            )
+                        )
+                if payload.get("robustness_lane_ready") is not True:
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: triplet_robustness_artifact robustness_lane_ready must be true",
+                        )
+                    )
+
+        closure_packet_art = rfc083.get("closure_packet_artifact")
+        if _is_nonempty_str(closure_packet_art):
+            payload = _read_json(root / str(closure_packet_art))
+            if not payload:
+                issues.append(
+                    Issue(
+                        claim_id,
+                        "error",
+                        f"{claim_id}: closure_packet_artifact must be valid JSON",
+                    )
+                )
+            else:
+                if str(payload.get("schema_version", "")).strip() != "theta001_supported_bridge_closure_packet_v2":
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: closure_packet_artifact schema_version must be theta001_supported_bridge_closure_packet_v2",
+                        )
+                    )
+                if str(payload.get("claim_id", "")).strip() != claim_id:
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: closure_packet_artifact claim_id must match {claim_id}",
+                        )
+                    )
+                if payload.get("all_gates_done") is not True:
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: closure_packet_artifact all_gates_done must be true",
+                        )
+                    )
+                recommendation = payload.get("recommendation")
+                if not isinstance(recommendation, dict):
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: closure_packet_artifact missing recommendation object",
+                        )
+                    )
+                else:
+                    if recommendation.get("supported_bridge_now") is not True:
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: closure_packet_artifact recommendation.supported_bridge_now must be true",
+                            )
+                        )
+                    if recommendation.get("proved_core_now") is not False:
+                        issues.append(
+                            Issue(
+                                claim_id,
+                                "error",
+                                f"{claim_id}: closure_packet_artifact recommendation.proved_core_now must be false",
+                            )
+                        )
+                blockers = payload.get("proved_core_blockers")
+                if not isinstance(blockers, list) or len(blockers) < 3:
+                    issues.append(
+                        Issue(
+                            claim_id,
+                            "error",
+                            f"{claim_id}: closure_packet_artifact proved_core_blockers must contain at least 3 entries",
                         )
                     )
 

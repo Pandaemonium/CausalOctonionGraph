@@ -38,6 +38,8 @@ contract_gates:
     eft_map_artifact: cog_v2/sources/theta001_eft_bridge_v2.json
     continuum_bridge_artifact: cog_v2/sources/theta001_continuum_bridge_v2.json
     triplet_leakage_artifact: cog_v2/sources/triplet_coherence_e000_leakage_v1.json
+    triplet_robustness_artifact: cog_v2/sources/triplet_coherence_e000_robustness_v1.json
+    closure_packet_artifact: cog_v2/sources/theta001_supported_bridge_closure_packet_v2.json
     skeptic_review_artifact: cog_v2/sources/theta001_skeptic_review_v2.json
     skeptic_verdict: PASS_WITH_LIMITS
 
@@ -47,6 +49,7 @@ continuum_identification_contract:
   selection_policy_id: theta_map_identification_linear_unit_v1
   map_id: linear_scale_1_v1
   discrete_correction_envelope_id: theta_discrete_correction_envelope_v1
+  discrete_correction_robustness_id: theta_discrete_correction_envelope_robustness_v1
   coarse_grain_operator: depth_normalized_residual_mean_v1
 
 bridge_map_policy:
@@ -78,6 +81,10 @@ lean_theorems:
   - CausalGraphV2.thetaContinuumCoeff_linear_v1_zero
   - CausalGraphV2.fTildeFCoeff_proxy_linear_v1_zero
   - CausalGraphV2.theta_qcd_zero_under_locked_identification_v1
+  - CausalGraphV2.depthIndexedResidual_v1_zero
+  - CausalGraphV2.depthNormalizedResidual_v1_zero
+  - CausalGraphV2.discreteCorrectionEnvelopeReady_v1_holds
+  - CausalGraphV2.theta_zero_if_depth_contract_holds
 
 python_test:
   - cog_v2/python/tests/test_kernel_projective_unity.py
@@ -86,11 +93,15 @@ python_test:
   - cog_v2/calc/test_theta_eft_map_v2.py
   - cog_v2/calc/test_theta001_continuum_bridge_v2.py
   - cog_v2/calc/test_triplet_coherence_e000_leakage_v1.py
+  - cog_v2/calc/test_triplet_coherence_e000_robustness_v1.py
+  - cog_v2/calc/test_theta001_supported_bridge_closure_packet_v2.py
 python_check:
   - python -m cog_v2.calc.build_theta001_bridge_closure_v2 --write-sources
   - python cog_v2/scripts/run_theta_eft_sweep_v2.py --write-sources
   - python -m cog_v2.calc.build_theta001_continuum_bridge_v2 --write-sources
   - python -m cog_v2.calc.build_triplet_coherence_e000_leakage_v1 --write-sources
+  - python -m cog_v2.calc.build_triplet_coherence_e000_robustness_v1 --write-sources
+  - python -m cog_v2.calc.build_theta001_supported_bridge_closure_packet_v2 --write-sources
   - python cog_v2/scripts/validate_claim_contracts_v2.py --root . --claims-dir cog_v2/claims
 
 bridge_assumptions:
@@ -123,6 +134,10 @@ falsification_attempts:
     artifact: cog_v2/sources/triplet_coherence_e000_leakage_v1.json
     method: "triplet coherence vs e000 leakage directional hypothesis probe"
     outcome: "coherent-triplet and broken-state scenarios separate with preregistered directional checks"
+  - id: theta_v2_triplet_e000_robustness_probe_v1
+    artifact: cog_v2/sources/triplet_coherence_e000_robustness_v1.json
+    method: "multi-pair deterministic robustness sweep over triplet coherence and e000 leakage checks"
+    outcome: "critical checks hold across all pairs; supporting checks hold by majority with robustness lane ready"
 
 gates:
   - id: gate_1

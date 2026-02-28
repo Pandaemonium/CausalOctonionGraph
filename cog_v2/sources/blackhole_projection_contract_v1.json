@@ -1,0 +1,100 @@
+{
+  "axiom_profile": {
+    "index_channel": "xor",
+    "kernel_profile": "cog_v2_projective_unity_v1",
+    "projector_id": "pi_unity_axis_dominance_v1",
+    "state_domain": "cxo_over_unity"
+  },
+  "contract_id": "BH-PRJ-001",
+  "contract_pass": true,
+  "contract_rfc": "cog_v2/rfc/RFC-005_Black_Hole_Horizon_Projection_Kernel_Contract.md",
+  "contract_rfc_sha256": "30dc6299bb077a461f68f31c944930da693d5f721546c81c0898ec4517497aff",
+  "graph_contract": {
+    "black_hole_region": [
+      "c0",
+      "c1",
+      "h0",
+      "h1"
+    ],
+    "edge_count": 10,
+    "exterior_region": [
+      "o0",
+      "o1",
+      "o2"
+    ],
+    "horizon_count": 2,
+    "horizon_nodes": [
+      "h0",
+      "h1"
+    ],
+    "node_count": 7
+  },
+  "kernel_module": "cog_v2/python/kernel_projective_unity.py",
+  "kernel_module_sha256": "936d1e8fb5f36c11a05133e67907203fe9fd78db2e8dd433bba4ea8835cbda27",
+  "replay_hash": "c690c91f7121ea10bf5324b702c735d9e421271efaba6e6ad4c4496e84181451",
+  "schema_version": "blackhole_projection_contract_v1",
+  "source_script": "cog_v2/calc/build_blackhole_projection_contract_v1.py",
+  "source_script_sha256": "1dc2ed8926484972a330d24a0b0b822633073b9ff5e40a63fa75f891c996fb87",
+  "summary": [
+    "Black-hole region is defined as one-way topological sink (no outgoing edges).",
+    "Horizon is ingress boundary from exterior into sink.",
+    "Projection-kernel witness shows exterior independence from interior initialization.",
+    "Unity closure remains bounded for all ticks under dense interior update flow."
+  ],
+  "tests": {
+    "T1_topological_one_way_isolation": {
+      "crossing_outgoing_edge_count": 0,
+      "crossing_outgoing_edges": [],
+      "pass": true
+    },
+    "T2_horizon_ingress_non_empty": {
+      "horizon_node_count": 2,
+      "horizon_nodes": [
+        "h0",
+        "h1"
+      ],
+      "pass": true
+    },
+    "T3_exterior_independence_from_interior_init": {
+      "exterior_equal_by_tick": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "pass": true
+    },
+    "T4_exterior_to_interior_influence_exists": {
+      "interior_diff_by_tick": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "pass": true
+    },
+    "T5_unity_boundedness_under_dense_interior": {
+      "pass": true,
+      "ticks": 12,
+      "unity_closed_all_nodes_all_ticks": true
+    }
+  }
+}

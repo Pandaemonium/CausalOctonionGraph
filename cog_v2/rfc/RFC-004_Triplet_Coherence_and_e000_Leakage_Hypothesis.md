@@ -43,6 +43,8 @@ Artifact builder:
 Artifacts:
 - `cog_v2/sources/triplet_coherence_e000_leakage_v1.json`
 - `cog_v2/sources/triplet_coherence_e000_leakage_v1.md`
+- `cog_v2/sources/triplet_coherence_e000_robustness_v1.json`
+- `cog_v2/sources/triplet_coherence_e000_robustness_v1.md`
 
 Scenarios:
 1. `coherent_triplet_v1`
@@ -85,3 +87,19 @@ This RFC does not:
 1. claim continuum EFT closure,
 2. claim full quark mass derivation,
 3. replace THETA-001 bridge contracts.
+
+## 7. Robustness Lane (v1)
+
+Robustness sweep artifact:
+1. `cog_v2/calc/build_triplet_coherence_e000_robustness_v1.py`
+2. scenario family: 4 coherent/broken deterministic pairs
+3. topology coverage: at least 2 parent-topology families
+
+Acceptance semantics:
+1. critical checks must pass for all pairs,
+2. supporting checks must pass for a majority of pairs,
+3. robustness envelope must retain:
+   - coherent near-field first-order dominance,
+   - coherent far-field higher-order growth over near-field,
+   - `topology_family_count >= 2`,
+   - `robustness_lane_ready = true`.

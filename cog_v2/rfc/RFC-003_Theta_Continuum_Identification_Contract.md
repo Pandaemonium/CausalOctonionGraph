@@ -39,6 +39,8 @@ Policy ID: `theta_continuum_linear_identification_v1`
    - bridge acceptance consumes coarse-grained summaries from the discrete ladder, not continuous interpolation.
 7. Discrete correction envelope id:
    - `theta_discrete_correction_envelope_v1`.
+8. Discrete correction robustness envelope id:
+   - `theta_discrete_correction_envelope_robustness_v1`.
 
 ## 3. Lean Targets
 
@@ -49,11 +51,19 @@ Required theorem targets:
 3. `CausalGraphV2.fTildeFCoeff_proxy_linear_v1_zero`
 4. `CausalGraphV2.theta_qcd_zero_under_locked_identification_v1`
 
+Supporting discrete-depth scaffold targets:
+5. `CausalGraphV2.depthIndexedResidual_v1_zero`
+6. `CausalGraphV2.depthNormalizedResidual_v1_zero`
+7. `CausalGraphV2.discreteCorrectionEnvelopeReady_v1_holds`
+8. `CausalGraphV2.theta_zero_if_depth_contract_holds`
+
 ## 4. Required Artifacts
 
 1. `cog_v2/sources/theta001_bridge_closure_v2.json`
 2. `cog_v2/sources/theta001_eft_bridge_v2.json`
 3. `cog_v2/sources/theta001_continuum_bridge_v2.json`
+4. `cog_v2/sources/triplet_coherence_e000_robustness_v1.json`
+5. `cog_v2/sources/theta001_supported_bridge_closure_packet_v2.json`
 
 ## 5. Promotion Semantics
 
@@ -61,6 +71,31 @@ Required theorem targets:
    gate checks pass.
 2. `proved_core` remains blocked until a stronger continuum EFT derivation
    discharges remaining hypothesis-level bridge assumptions.
+
+### 5.1 Supported-Bridge Acceptance Checklist (normative)
+
+The following must all hold in one replay-consistent package:
+
+1. `theta001_continuum_bridge_v2.json`:
+   - `continuum_bridge_readiness.finite_size_residual_stable_zero = true`,
+   - `continuum_bridge_readiness.normalized_residual_stable_zero = true`,
+   - `continuum_bridge_readiness.discrete_correction_lane_ready = true`,
+   - `continuum_bridge_readiness.discrete_correction_robustness_ready = true`.
+2. locked map policy consistency:
+   - selected map id is `linear_scale_1_v1`,
+   - contract ids match `theta_continuum_linear_identification_v1`,
+   - correction envelope ids match both
+     `theta_discrete_correction_envelope_v1` and
+     `theta_discrete_correction_envelope_robustness_v1`.
+3. discrete-depth theorem scaffold present in Lean target set:
+   - `depthIndexedResidual_v1_zero`,
+   - `depthNormalizedResidual_v1_zero`,
+   - `discreteCorrectionEnvelopeReady_v1_holds`,
+   - `theta_zero_if_depth_contract_holds`.
+4. robustness artifact:
+   - `triplet_coherence_e000_robustness_v1.json` exists,
+   - `robustness_lane_ready = true`,
+   - `topology_family_count >= 2`.
 
 ## 6. Non-Goals
 

@@ -5,6 +5,7 @@
   "closure_scope": "structure_first",
   "continuum_bridge_readiness": {
     "discrete_correction_lane_ready": true,
+    "discrete_correction_robustness_ready": true,
     "finite_size_residual_stable_zero": true,
     "full_value_closure_ready": false,
     "normalized_residual_stable_zero": true
@@ -12,6 +13,7 @@
   "continuum_identification_contract": {
     "continuum_target_operator": "F_tilde_F_coefficient",
     "discrete_correction_envelope_id": "theta_discrete_correction_envelope_v1",
+    "discrete_correction_robustness_id": "theta_discrete_correction_envelope_robustness_v1",
     "discrete_observable_id": "theta_cp_odd_residual_v2",
     "lean_theorem_targets": [
       "CausalGraphV2.discreteTopologicalCharge_v1_zero",
@@ -619,6 +621,7 @@
     72
   ],
   "discrete_correction_envelope": {
+    "base_correction_lane_ready": true,
     "broken_correction_onset_d_E": 0,
     "broken_near_high_order_fraction_E": 0.7,
     "coherent_correction_onset_d_E": 16,
@@ -632,12 +635,19 @@
     "domain": "nonnegative_integers",
     "envelope_id": "theta_discrete_correction_envelope_v1",
     "near_field_mode": "first_order_dominant",
+    "robust_coherent_far_high_order_fraction_mean_E": 0.5344827586206896,
+    "robust_coherent_near_first_order_fraction_mean_E": 0.6625,
+    "robust_coherent_near_high_order_fraction_mean_E": 0.3375,
+    "robustness_envelope_id": "theta_discrete_correction_envelope_robustness_v1",
+    "robustness_lane_ready": true,
     "source_model_id": "discrete_transfer_function_v1"
   },
-  "replay_hash": "ad02458a2f0a7094782654eb82dce2a366ed74a8f4b9f6ce83974e3e213995a9",
+  "replay_hash": "4c7312e3c2fa44e70cdd4511afb7b9f31aca876fa117b2322b3fcd814464940c",
   "schema_version": "theta001_continuum_bridge_v2",
   "source_script": "cog_v2/calc/build_theta001_continuum_bridge_v2.py",
-  "source_script_sha256": "d6393c83c8d754016bfdd44333c611d5c4fde20d117072412160e853229f994f",
+  "source_script_sha256": "2fbbf41d0471eabcc6da01621cb04c8ab458133bbf9b3a59596ef6fc0ee3762c",
   "triplet_dependency_artifact": "cog_v2/sources/triplet_coherence_e000_leakage_v1.json",
-  "triplet_dependency_artifact_sha256": "0ebe358de787c44be76a6dd2e6d194b524dd238ea100e204ee2faa905cc77e5a"
+  "triplet_dependency_artifact_sha256": "0ebe358de787c44be76a6dd2e6d194b524dd238ea100e204ee2faa905cc77e5a",
+  "triplet_robustness_dependency_artifact": "cog_v2/sources/triplet_coherence_e000_robustness_v1.json",
+  "triplet_robustness_dependency_artifact_sha256": "4f2268c2710905b691df11d64b6739b89e2eba073f1d37ca2db5235b0fbf5a08"
 }

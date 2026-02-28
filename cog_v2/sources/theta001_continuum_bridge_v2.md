@@ -2,7 +2,7 @@
 
 - Claim: `THETA-001`
 - Scope: `structure_first`
-- Replay hash: `ad02458a2f0a7094782654eb82dce2a366ed74a8f4b9f6ce83974e3e213995a9`
+- Replay hash: `4c7312e3c2fa44e70cdd4511afb7b9f31aca876fa117b2322b3fcd814464940c`
 
 ## Depth Sweep
 - Depth schedule: [12, 16, 20, 24, 32, 40, 48, 56, 64, 72]
@@ -32,12 +32,16 @@
 - correction_mode: `higher_order_corrections_active`
 - coherent_correction_onset_d_E: `16`
 - broken_correction_onset_d_E: `0`
+- robustness_envelope_id: `theta_discrete_correction_envelope_robustness_v1`
+- base_correction_lane_ready: `True`
+- robustness_lane_ready: `True`
 - correction_lane_ready: `True`
 
 ## Readiness
 - finite_size_residual_stable_zero: `True`
 - normalized_residual_stable_zero: `True`
 - discrete_correction_lane_ready: `True`
+- discrete_correction_robustness_ready: `True`
 - full_value_closure_ready: `False`
 
 ## Notes

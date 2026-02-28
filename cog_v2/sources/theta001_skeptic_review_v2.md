@@ -15,8 +15,10 @@ The v2 canonical lane shows deterministic structure-first closure for THETA-001:
    (`weak_grid_size=324`, `ckm_grid_size=1440`, depth 72),
 4. finite-size continuum bridge diagnostics remain zero across depth schedule
    `[12, 16, 20, 24, 32, 40, 48, 56, 64, 72]`,
-5. Lean bridge-form theorem lane compiles (direct, linear, affine, zero-anchored,
-   and explicit continuum-hypothesis skeleton theorems).
+5. triplet/e000 robustness lane remains ready with multiple topology families
+   (`topology_family_count >= 2`),
+6. Lean bridge-form theorem lane compiles (direct, linear, affine, zero-anchored,
+   explicit continuum-hypothesis skeleton theorems, and depth-contract scaffold theorems).
 
 Given these checks, `supported_bridge` is justified. The evidence does not yet close full continuum value semantics.
 
@@ -29,5 +31,5 @@ Given these checks, `supported_bridge` is justified. The evidence does not yet c
 ## Required for Promotion
 
 1. Replace hypothesis-level continuum bridge theorem with a fully discharged EFT identification theorem from discrete residual to continuum `F \tilde{F}` coefficient.
-2. Preserve all-zero results under any further stress-lane expansion used for the promotion package.
+2. Preserve all-zero results under any further stress-lane expansion used for the promotion package, including any added topology families.
 3. Re-run independent skeptic review against the final full-value closure scope.

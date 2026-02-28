@@ -1,0 +1,170 @@
+{
+  "all_gates_done": true,
+  "claim_id": "THETA-001",
+  "claim_status": "supported_bridge",
+  "closure_scope": "structure_first",
+  "dependencies": {
+    "cog_v2/claims/THETA-001.yml": "1b47f6478e51532483484a1cb24f3828680b25eed71d3a70a00165316144fb19",
+    "cog_v2/sources/theta001_bridge_closure_v2.json": "64744a10ca1ec6b96ddae4b156ca1fae4eed6ccbf46c6b86a02c02f43ba0d062",
+    "cog_v2/sources/theta001_continuum_bridge_v2.json": "5071914057417cc27d7c8c98d9d0a04adbcc259b87f08f208de28c9c9d70e34e",
+    "cog_v2/sources/theta001_eft_bridge_v2.json": "faca45ccfb2b2f498b5eae0afddbc6948b7055aefc7a2c278da395470c824443",
+    "cog_v2/sources/theta001_skeptic_review_v2.json": "7656661f9c4682ef64acd1e93eec090b823a1077708036debc83c553fb96c1e1",
+    "cog_v2/sources/theta001_uv_exhaustive_microstates_v1.json": "a385e9b4b3a25a84741d80eb90aec6a8154f3a398ea51939bb79cf5717fec1ed",
+    "cog_v2/sources/triplet_coherence_e000_leakage_v1.json": "0ebe358de787c44be76a6dd2e6d194b524dd238ea100e204ee2faa905cc77e5a",
+    "cog_v2/sources/triplet_coherence_e000_robustness_v1.json": "4f2268c2710905b691df11d64b6739b89e2eba073f1d37ca2db5235b0fbf5a08"
+  },
+  "gate_matrix": [
+    {
+      "description": "Lean structural witnesses compile in v2 lane.",
+      "done": true,
+      "gate_id": "gate_1"
+    },
+    {
+      "description": "Python deterministic witness and replay tests pass in v2 lane.",
+      "done": true,
+      "gate_id": "gate_2"
+    },
+    {
+      "description": "Independent skeptic review with model-family diversity attached.",
+      "done": true,
+      "gate_id": "gate_3"
+    }
+  ],
+  "proved_core_blockers": [
+    {
+      "blocker_id": "B1_continuum_eft_identification_not_discharged",
+      "description": "Continuum EFT identification remains structure-first/diagnostic. Current contract still reports non-proved-core status.",
+      "evidence_refs": [
+        "cog_v2/sources/theta001_continuum_bridge_v2.json#continuum_identification_contract.status",
+        "cog_v2/sources/theta001_skeptic_review_v2.json#limits"
+      ],
+      "exit_criteria": [
+        "Replace hypothesis-level continuum mapping assumption with a discharged theorem-level identification chain.",
+        "Update skeptic verdict package with explicit closure of this bridge assumption."
+      ],
+      "severity": "critical"
+    },
+    {
+      "blocker_id": "B2_cross_sector_weak_leakage_realism_boundary",
+      "description": "Stress lanes are strong and all-zero, but still scoped to structure-first synthetic families rather than a full physically anchored cross-sector realism closure.",
+      "evidence_refs": [
+        "cog_v2/sources/theta001_bridge_closure_v2.json#weak_leakage_suite",
+        "cog_v2/sources/theta001_bridge_closure_v2.json#ckm_like_weak_leakage_suite",
+        "cog_v2/sources/theta001_skeptic_review_v2.json#limits"
+      ],
+      "exit_criteria": [
+        "Define and execute a preregistered realism expansion lane for weak-to-strong leakage that is accepted by skeptic review.",
+        "Either preserve all-zero strong residual or formally falsify and revise the bridge."
+      ],
+      "severity": "high"
+    },
+    {
+      "blocker_id": "B3_scope_lock_structure_first",
+      "description": "Claim is explicitly `closure_scope = structure_first`; proved_core is policy-blocked until scope migration criteria are satisfied.",
+      "evidence_refs": [
+        "cog_v2/claims/THETA-001.yml#closure_scope",
+        "cog_v2/rfc/RFC-003_Theta_Continuum_Identification_Contract.md#5.1"
+      ],
+      "exit_criteria": [
+        "Create and approve a full-value closure scope update for THETA-001.",
+        "Re-run full gate stack and independent skeptic review under the upgraded scope."
+      ],
+      "severity": "policy"
+    }
+  ],
+  "recommendation": {
+    "decision": "retain_supported_bridge_continue_blocker_discharge",
+    "proved_core_now": false,
+    "rationale": "All supported-bridge gates and diagnostics are green, but proved_core blockers remain explicit and unresolved under current structure-first scope.",
+    "supported_bridge_now": true
+  },
+  "replay_hash": "cd9ba438a66fe51264fb3d6161044fd931e5486aa934137fc7922e3b23705859",
+  "required_next_steps": [
+    {
+      "deliverables": [
+        "New RFC addendum defining theorem statement and admissible assumptions.",
+        "Lean target list for final identification chain beyond conditional bridge form."
+      ],
+      "description": "Draft exact theorem plan to discharge continuum identification assumption.",
+      "id": "N1_continuum_id_theorem_plan",
+      "priority": 1
+    },
+    {
+      "deliverables": [
+        "New stress-lane artifact with deterministic replay hash.",
+        "Updated skeptic review comment on realism boundary closure."
+      ],
+      "description": "Add realism-focused weak leakage suite with preregistered acceptance criteria.",
+      "id": "N2_weak_leakage_realism_lane",
+      "priority": 2
+    },
+    {
+      "deliverables": [
+        "Claim YAML scope update proposal.",
+        "Promotion memo with explicit go/no-go checklist for proved_core attempt."
+      ],
+      "description": "Prepare scope transition packet from structure-first to full-value closure lane.",
+      "id": "N3_scope_transition_packet",
+      "priority": 3
+    }
+  ],
+  "schema_version": "theta001_supported_bridge_closure_packet_v2",
+  "source_script": "cog_v2/calc/build_theta001_supported_bridge_closure_packet_v2.py",
+  "source_script_sha256": "9e8555163a481b72f125511ef8e1d2414c41900646d561a21021a374450332fb",
+  "supported_bridge_evidence": {
+    "ckm_like_weak_leakage_suite": {
+      "all_zero": true,
+      "case_count": 3,
+      "max_abs_residual": 0,
+      "row_count": 1440
+    },
+    "continuum_bridge_diagnostics": {
+      "discrete_correction_lane_ready": true,
+      "discrete_correction_robustness_ready": true,
+      "finite_size_residual_stable_zero": true,
+      "normalized_residual_stable_zero": true,
+      "zero_plateau_depth": 12
+    },
+    "fano_sign_balance": {
+      "neg_count": 21,
+      "pos_count": 21,
+      "signed_sum": 0,
+      "signed_sum_zero": true
+    },
+    "map_identification": {
+      "map_identification_locked": true,
+      "policy_id": "theta_map_identification_linear_unit_v1",
+      "selected_map_id": "linear_scale_1_v1",
+      "selected_unique": true,
+      "selection_ready": true
+    },
+    "skeptic_review": {
+      "builder_model_family": "openai_gpt",
+      "independent_from_builder": true,
+      "reviewer_model_family": "anthropic_claude",
+      "verdict": "PASS_WITH_LIMITS"
+    },
+    "triplet_robustness_lane": {
+      "pair_count": 4,
+      "robustness_lane_ready": true,
+      "topology_family_count": 2,
+      "topology_ids": [
+        "alt_branch_v1",
+        "baseline_v1"
+      ]
+    },
+    "uv_exhaustive_microstate_witness": {
+      "all_lanes_all_ticks_hold": true,
+      "all_lanes_full_exhaustive": true,
+      "artifact_present": true,
+      "lane_count": 2,
+      "microstates_total": 390625
+    },
+    "weak_leakage_suite": {
+      "all_zero": true,
+      "case_count": 3,
+      "max_abs_residual": 0,
+      "row_count": 324
+    }
+  }
+}
