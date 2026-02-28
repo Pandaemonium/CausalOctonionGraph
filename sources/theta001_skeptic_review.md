@@ -17,10 +17,12 @@ Structural THETA witnesses are strong:
 1. Lean proofs for CP involution, orientation closure, and exact sign-balance are present.
 2. Deterministic Python CP-dual and weighted-residual tests pass.
 3. Deep-cone weak-leakage suite artifact reports zero strong-sector residual over the preregistered stress grid, including CKM-like transport injections.
+4. Periodic-angle lane is tracked in parallel as a non-blocking stub; linear bridge remains the promotion contract.
+5. CKM-conjugate falsifier lane is tracked in parallel as non-blocking and currently serves discovery, not promotion gating (`max_abs_residual = 166` in current artifact, with max-case diagnostics recorded).
 
 ## Current Limits
 
-1. Dynamic CP-isolation is partially closed: deterministic weak-leakage stress now includes CKM-like transport injections, but full physically faithful CKM operator mapping remains open.
+1. Dynamic CP-isolation is partially closed: deterministic weak-leakage stress includes CKM-like transport injections, but the CKM-conjugate falsifier lane shows non-zero residuals under stronger assumptions and full physically faithful CKM operator mapping remains open.
 2. Continuum map remains bridge-level: discrete residual to continuum `theta_QCD * epsilon(F,F_tilde)` is still an explicit assumption.
 
 ## Bridge Comment

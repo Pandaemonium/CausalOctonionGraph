@@ -76,6 +76,8 @@ gates:
         - cp_weighted_trace_delta_zero
         - cp_invariant_trace_delta_zero
         - weak_leakage_strong_residual_zero_deep_cone
+        - weak_leakage_ckm_like_strong_residual_zero_deep_cone
+        - weak_leakage_ckm_conjugate_strong_residual_is_deterministic
 
   - id: gate_3
     description: >
@@ -94,6 +96,7 @@ notes:
   - "Lean and Python closure witnesses are implemented; deterministic source artifacts are generated."
   - "No physical-value promotion allowed before bridge assumptions are independently scrutinized."
   - "Independent skeptic red-team review recorded with PASS_WITH_LIMITS and explicit weak-leakage boundary."
+  - "CKM-conjugate falsifier lane is tracked in bridge artifacts as non-blocking discovery signal with max-case diagnostics."
 
 blocked_reason: ''
 

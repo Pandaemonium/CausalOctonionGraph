@@ -321,6 +321,7 @@ def _validate_rfc083(
     if "falsification_attempts" not in claim_doc:
         errs.append(f"{claim_id}: missing falsification_attempts field (RFC-075 §4.1 — list, may be empty)")
 
+    artifact_verdict: str | None = None
     if skeptic_payload:
         # Bug fix: empty string is NOT a valid claim_id — must match exactly or key must be absent
         artifact_claim_id = skeptic_payload.get("claim_id")
@@ -390,6 +391,13 @@ def _validate_rfc083(
                 errs.append(f"{claim_id}: weak_leakage_artifact missing weak_leakage_suite object")
             elif suite.get("all_zero") is not True:
                 errs.append(f"{claim_id}: promoted THETA claim requires weak_leakage_suite.all_zero=true")
+            if isinstance(suite, dict):
+                case_count = int(suite.get("case_count", 0))
+                if case_count < 3:
+                    errs.append(
+                        f"{claim_id}: promoted THETA claim requires weak_leakage_suite.case_count >= 3 "
+                        f"(preregistered multi-case deep-cone coverage)"
+                    )
             ckm_suite = weak_payload.get("ckm_like_weak_leakage_suite", {})
             if not isinstance(ckm_suite, dict):
                 errs.append(f"{claim_id}: weak_leakage_artifact missing ckm_like_weak_leakage_suite object")
@@ -397,6 +405,80 @@ def _validate_rfc083(
                 errs.append(
                     f"{claim_id}: promoted THETA claim requires ckm_like_weak_leakage_suite.all_zero=true"
                 )
+            if isinstance(ckm_suite, dict):
+                case_count = int(ckm_suite.get("case_count", 0))
+                if case_count < 3:
+                    errs.append(
+                        f"{claim_id}: promoted THETA claim requires ckm_like_weak_leakage_suite.case_count >= 3 "
+                        f"(preregistered multi-case deep-cone coverage)"
+                    )
+            periodic_lane = weak_payload.get("periodic_angle_lane")
+            if periodic_lane is not None:
+                if not isinstance(periodic_lane, dict):
+                    errs.append(f"{claim_id}: periodic_angle_lane must be a JSON object when present")
+                else:
+                    if periodic_lane.get("promotion_blocking") is not False:
+                        errs.append(
+                            f"{claim_id}: periodic_angle_lane must be non-blocking "
+                            f"(promotion_blocking=false)"
+                        )
+                    if not _is_nonempty_str(periodic_lane.get("status")):
+                        errs.append(f"{claim_id}: periodic_angle_lane.status is required when lane is present")
+            conjugate_lane = weak_payload.get("ckm_conjugate_falsifier_lane")
+            if conjugate_lane is not None:
+                if not isinstance(conjugate_lane, dict):
+                    errs.append(f"{claim_id}: ckm_conjugate_falsifier_lane must be a JSON object when present")
+                else:
+                    if conjugate_lane.get("promotion_blocking") is not False:
+                        errs.append(
+                            f"{claim_id}: ckm_conjugate_falsifier_lane must be non-blocking "
+                            f"(promotion_blocking=false)"
+                        )
+                    if not _is_nonempty_str(conjugate_lane.get("status")):
+                        errs.append(
+                            f"{claim_id}: ckm_conjugate_falsifier_lane.status is required when lane is present"
+                        )
+                    diag = conjugate_lane.get("max_case_diagnostics")
+                    if not isinstance(diag, dict):
+                        errs.append(
+                            f"{claim_id}: ckm_conjugate_falsifier_lane.max_case_diagnostics "
+                            f"is required as a JSON object"
+                        )
+                    any_nonzero = conjugate_lane.get("any_nonzero") is True
+                    if any_nonzero and isinstance(diag, dict):
+                        if diag.get("first_nonzero_tick") is None:
+                            errs.append(
+                                f"{claim_id}: conjugate falsifier any_nonzero=true requires "
+                                f"first_nonzero_tick in diagnostics"
+                            )
+                        if int(diag.get("max_abs_tick_delta", 0)) <= 0:
+                            errs.append(
+                                f"{claim_id}: conjugate falsifier any_nonzero=true requires "
+                                f"max_abs_tick_delta > 0 in diagnostics"
+                            )
+                        ranked = diag.get("strong_channel_ranked")
+                        if not isinstance(ranked, list) or not ranked:
+                            errs.append(
+                                f"{claim_id}: conjugate falsifier any_nonzero=true requires "
+                                f"non-empty strong_channel_ranked diagnostics"
+                            )
+                    if conjugate_lane.get("any_nonzero") is True:
+                        if skeptic_verdict != "PASS_WITH_LIMITS":
+                            errs.append(
+                                f"{claim_id}: ckm_conjugate_falsifier_lane.any_nonzero=true "
+                                f"requires skeptic_verdict=PASS_WITH_LIMITS"
+                            )
+                        if skeptic_payload:
+                            limits = skeptic_payload.get("limits")
+                            if not isinstance(limits, list) or not any(
+                                isinstance(x, str)
+                                and ("conjugate" in x.lower() or "ckm" in x.lower())
+                                for x in limits
+                            ):
+                                errs.append(
+                                    f"{claim_id}: skeptic limits must mention CKM-conjugate falsifier signal "
+                                    f"when any_nonzero=true"
+                                )
         if eft_payload:
             contract = eft_payload.get("continuum_bridge_contract", {})
             if not isinstance(contract, dict):
@@ -413,6 +495,23 @@ def _validate_rfc083(
                     errs.append(
                         f"{claim_id}: eft_bridge_artifact must reference theta_zero_if_linear_bridge theorem"
                     )
+                linear_lane = contract.get("linear_map_lane")
+                if not isinstance(linear_lane, dict):
+                    errs.append(f"{claim_id}: continuum_bridge_contract.linear_map_lane is required")
+                else:
+                    if linear_lane.get("promotion_blocking") is not True:
+                        errs.append(
+                            f"{claim_id}: continuum_bridge_contract.linear_map_lane must be promotion-blocking "
+                            f"(promotion_blocking=true)"
+                        )
+                    if linear_lane.get("cp_odd_all_hold") is not True:
+                        errs.append(
+                            f"{claim_id}: continuum_bridge_contract.linear_map_lane requires cp_odd_all_hold=true"
+                        )
+                    if linear_lane.get("zero_anchor_all_hold") is not True:
+                        errs.append(
+                            f"{claim_id}: continuum_bridge_contract.linear_map_lane requires zero_anchor_all_hold=true"
+                        )
 
     return errs
 

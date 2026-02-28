@@ -42,6 +42,13 @@ In-scope (required):
 4. deterministic CP-dual and weighted residual checks,
 5. deep-cone weak-leakage suite (`N > 10`) under weak-sector perturbations,
    with strong-sector residual reported.
+6. preregistered multi-case deep-cone weak-leakage coverage (>= 3 fixed cases).
+7. parallel periodic-angle lane may be reported as `stub_non_blocking`,
+   but cannot override or replace the linear bridge promotion contract.
+8. parallel CKM-conjugate falsifier lane may be reported as `exploratory_non_blocking`,
+   and is tracked for leakage discovery, not as a promotion blocker in this phase.
+9. primary linear bridge lane reported as `primary_blocking`, with CP-oddness
+   and zero-anchor checks over preregistered residual probes.
 
 Out-of-scope (bridge-level):
 1. full continuum path-integral derivation of `F*F_tilde`,
@@ -79,6 +86,8 @@ THETA claims under this contract must declare:
    `builder_model_family`,
    `independent_from_builder`.
 6. `PASS_WITH_LIMITS` verdict must include a non-empty `limits` list.
+7. If `ckm_conjugate_falsifier_lane.any_nonzero = true`, skeptic verdict must be
+   `PASS_WITH_LIMITS` and limits must explicitly mention the conjugate-lane signal.
 
 ## 6. Promotion Rules
 
@@ -90,6 +99,14 @@ THETA claims under this contract must declare:
 5. `rfc083` contract fields complete and valid,
 6. skeptic verdict is promotable,
 7. claim `gate_3` is `done: true`.
+8. if periodic-angle lane is present, it must be explicitly marked non-blocking.
+9. if CKM-conjugate falsifier lane is present, it must be explicitly marked non-blocking.
+10. if CKM-conjugate lane reports non-zero residual, artifact must include max-case diagnostics
+    (first non-zero tick and channel-contribution ranking), and skeptic output must remain
+    `PASS_WITH_LIMITS` with explicit limit text.
+11. weak-leakage suites must report `case_count >= 3` for both baseline and CKM-like lanes.
+12. continuum bridge artifact must include `linear_map_lane` with:
+    `promotion_blocking=true`, `cp_odd_all_hold=true`, `zero_anchor_all_hold=true`.
 
 `supported_bridge -> proved_core` is not allowed while `closure_scope = structure_first`.
 

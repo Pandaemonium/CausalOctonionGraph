@@ -64,7 +64,7 @@ lean_theorems:
 - CausalGraph.electroweakMaskUnder_stabilizer_card_four
 - CausalGraph.overlapMaskUnder_stabilizer_card_one
 - CausalGraph.sin2ThetaWObsNat_weakBoost_eq_one_third
-python_test: calc/test_constants.py::TestWeinbergAngle::test_weinberg_target_value
+python_test: calc/test_weinberg001.py
 depends_on:
 - GAUGE-001
 - FANO-001

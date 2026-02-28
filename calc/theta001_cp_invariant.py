@@ -306,3 +306,120 @@ def weak_leakage_ckm_like_strong_residual(
     for s1, s2 in zip(orig_trace, dual_trace):
         delta += _weighted_action(s1, strong_weights) - _weighted_action(s2, strong_weights)
     return delta
+
+
+def weak_leakage_ckm_conjugate_strong_residual(
+    initial: State8,
+    op_sequence: Sequence[int],
+    *,
+    weak_kick: int,
+    ckm_phase: int,
+    transport_period: int = 3,
+    strong_weights: Sequence[int] = STRONG_SECTOR_WEIGHTS,
+) -> int:
+    """
+    Deep-cone CKM-conjugate falsifier lane.
+
+    Unlike the matched-lane gate witness, the dual CP run receives explicit
+    conjugate phase `-ckm_phase`. This is tracked as a non-blocking falsifier
+    probe to detect potential cross-sector leakage under stronger assumptions.
+    """
+    if len(op_sequence) <= 10:
+        raise ValueError("weak-leakage stress requires deep cone: len(op_sequence) > 10")
+    if int(transport_period) <= 0:
+        raise ValueError("transport_period must be > 0")
+
+    perturbed = list(initial)
+    perturbed[7] += int(weak_kick)
+    init = tuple(perturbed)
+
+    orig_trace = run_update_trace_ckm_transport(
+        init,
+        op_sequence,
+        FANO_SIGN,
+        ckm_phase=int(ckm_phase),
+        transport_period=int(transport_period),
+    )
+    dual_trace = run_update_trace_ckm_transport(
+        cp_map(init),
+        op_sequence,
+        flipped_sign_table(),
+        ckm_phase=-int(ckm_phase),
+        transport_period=int(transport_period),
+    )
+
+    delta = 0
+    for s1, s2 in zip(orig_trace, dual_trace):
+        delta += _weighted_action(s1, strong_weights) - _weighted_action(s2, strong_weights)
+    return delta
+
+
+def weak_leakage_ckm_conjugate_diagnostics(
+    initial: State8,
+    op_sequence: Sequence[int],
+    *,
+    weak_kick: int,
+    ckm_phase: int,
+    transport_period: int = 3,
+    strong_weights: Sequence[int] = STRONG_SECTOR_WEIGHTS,
+) -> Dict[str, object]:
+    """
+    Detailed diagnostics for the CKM-conjugate falsifier lane.
+
+    Returns deterministic trace-level metadata that helps localize where and how
+    CP-dual leakage appears under conjugate CKM transport assumptions.
+    """
+    if len(op_sequence) <= 10:
+        raise ValueError("weak-leakage stress requires deep cone: len(op_sequence) > 10")
+    if int(transport_period) <= 0:
+        raise ValueError("transport_period must be > 0")
+
+    perturbed = list(initial)
+    perturbed[7] += int(weak_kick)
+    init = tuple(perturbed)
+
+    orig_trace = run_update_trace_ckm_transport(
+        init,
+        op_sequence,
+        FANO_SIGN,
+        ckm_phase=int(ckm_phase),
+        transport_period=int(transport_period),
+    )
+    dual_trace = run_update_trace_ckm_transport(
+        cp_map(init),
+        op_sequence,
+        flipped_sign_table(),
+        ckm_phase=-int(ckm_phase),
+        transport_period=int(transport_period),
+    )
+
+    tick_deltas: List[int] = []
+    component_deltas = [0] * 8
+    for s1, s2 in zip(orig_trace, dual_trace):
+        tick_delta = _weighted_action(s1, strong_weights) - _weighted_action(s2, strong_weights)
+        tick_deltas.append(int(tick_delta))
+        for idx in range(8):
+            component_deltas[idx] += int(strong_weights[idx]) * (s1[idx] * s1[idx] - s2[idx] * s2[idx])
+
+    first_nonzero_tick = next((t for t, d in enumerate(tick_deltas) if d != 0), None)
+    max_abs_tick_delta = max((abs(d) for d in tick_deltas), default=0)
+
+    strong_channel_deltas = {f"e{idx}": int(component_deltas[idx]) for idx in range(1, 7)}
+    strong_channel_ranked = sorted(
+        strong_channel_deltas.items(),
+        key=lambda kv: abs(kv[1]),
+        reverse=True,
+    )
+
+    return {
+        "strong_residual": int(sum(tick_deltas)),
+        "tick_count": len(tick_deltas),
+        "first_nonzero_tick": first_nonzero_tick,
+        "max_abs_tick_delta": int(max_abs_tick_delta),
+        "tick_deltas": tick_deltas,
+        "strong_channel_deltas": strong_channel_deltas,
+        "strong_channel_ranked": [[k, v] for (k, v) in strong_channel_ranked],
+        "weak_kick": int(weak_kick),
+        "ckm_phase": int(ckm_phase),
+        "transport_period": int(transport_period),
+    }

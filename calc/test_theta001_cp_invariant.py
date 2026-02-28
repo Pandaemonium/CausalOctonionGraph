@@ -8,6 +8,8 @@ from calc.theta001_cp_invariant import (
     cp_weighted_trace_delta,
     fano_sign_balance_counts,
     orientation_reversal_closed_on_fano_lines,
+    weak_leakage_ckm_conjugate_strong_residual,
+    weak_leakage_ckm_conjugate_diagnostics,
     weak_leakage_ckm_like_strong_residual,
     weak_leakage_strong_residual,
 )
@@ -74,3 +76,47 @@ def test_weak_leakage_ckm_like_strong_residual_zero_deep_cone() -> None:
         transport_period=3,
     )
     assert residual == 0
+
+
+def test_weak_leakage_ckm_conjugate_strong_residual_is_deterministic() -> None:
+    initial = (1, -2, 3, -4, 5, -6, 7, -1)
+    ops = (7, 1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 6, 7, 1, 2, 3, 4, 5)
+    a = weak_leakage_ckm_conjugate_strong_residual(
+        initial,
+        ops,
+        weak_kick=5,
+        ckm_phase=3,
+        transport_period=3,
+    )
+    b = weak_leakage_ckm_conjugate_strong_residual(
+        initial,
+        ops,
+        weak_kick=5,
+        ckm_phase=3,
+        transport_period=3,
+    )
+    assert isinstance(a, int)
+    assert a == b
+
+
+def test_weak_leakage_ckm_conjugate_diagnostics_consistent_with_residual() -> None:
+    initial = (1, -2, 3, -4, 5, -6, 7, -1)
+    ops = (7, 1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 6, 7, 1, 2, 3, 4, 5)
+    residual = weak_leakage_ckm_conjugate_strong_residual(
+        initial,
+        ops,
+        weak_kick=5,
+        ckm_phase=3,
+        transport_period=3,
+    )
+    diag = weak_leakage_ckm_conjugate_diagnostics(
+        initial,
+        ops,
+        weak_kick=5,
+        ckm_phase=3,
+        transport_period=3,
+    )
+    assert diag["strong_residual"] == residual
+    assert isinstance(diag["tick_deltas"], list)
+    assert sum(diag["tick_deltas"]) == residual
+    assert isinstance(diag["strong_channel_ranked"], list)

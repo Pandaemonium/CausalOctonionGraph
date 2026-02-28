@@ -43,11 +43,27 @@ def _theta_claim_doc(tmp_path: Path, *, verdict: str, gate3_done: bool) -> dict:
         {
             "schema_version": "theta001_bridge_closure_v1",
             "claim_id": "THETA-001",
-            "weak_leakage_suite": {"all_zero": True},
-            "ckm_like_weak_leakage_suite": {"all_zero": True},
+            "weak_leakage_suite": {"all_zero": True, "case_count": 3},
+            "ckm_like_weak_leakage_suite": {"all_zero": True, "case_count": 3},
+            "ckm_conjugate_falsifier_lane": {
+                "status": "exploratory_non_blocking",
+                "promotion_blocking": False,
+                "any_nonzero": False,
+                "max_case_diagnostics": {
+                    "first_nonzero_tick": None,
+                    "max_abs_tick_delta": 0,
+                    "strong_channel_ranked": [],
+                },
+            },
             "continuum_bridge_contract": {
                 "conditional_conclusion_theta_zero": True,
                 "lean_theorems": ["CausalGraph.theta_zero_if_linear_bridge"],
+                "linear_map_lane": {
+                    "status": "primary_blocking",
+                    "promotion_blocking": True,
+                    "cp_odd_all_hold": True,
+                    "zero_anchor_all_hold": True,
+                },
             },
         },
     )
@@ -153,11 +169,17 @@ def test_theta_promoted_blocks_when_weak_leakage_not_zero(tmp_path: Path) -> Non
         {
             "schema_version": "theta001_bridge_closure_v1",
             "claim_id": "THETA-001",
-            "weak_leakage_suite": {"all_zero": False},
-            "ckm_like_weak_leakage_suite": {"all_zero": True},
+            "weak_leakage_suite": {"all_zero": False, "case_count": 3},
+            "ckm_like_weak_leakage_suite": {"all_zero": True, "case_count": 3},
             "continuum_bridge_contract": {
                 "conditional_conclusion_theta_zero": True,
                 "lean_theorems": ["CausalGraph.theta_zero_if_linear_bridge"],
+                "linear_map_lane": {
+                    "status": "primary_blocking",
+                    "promotion_blocking": True,
+                    "cp_odd_all_hold": True,
+                    "zero_anchor_all_hold": True,
+                },
             },
         },
     )
@@ -179,8 +201,289 @@ def test_theta_promoted_blocks_when_ckm_like_weak_leakage_not_zero(tmp_path: Pat
         {
             "schema_version": "theta001_bridge_closure_v1",
             "claim_id": "THETA-001",
-            "weak_leakage_suite": {"all_zero": True},
-            "ckm_like_weak_leakage_suite": {"all_zero": False},
+            "weak_leakage_suite": {"all_zero": True, "case_count": 3},
+            "ckm_like_weak_leakage_suite": {"all_zero": False, "case_count": 3},
+            "continuum_bridge_contract": {
+                "conditional_conclusion_theta_zero": True,
+                "lean_theorems": ["CausalGraph.theta_zero_if_linear_bridge"],
+                "linear_map_lane": {
+                    "status": "primary_blocking",
+                    "promotion_blocking": True,
+                    "cp_odd_all_hold": True,
+                    "zero_anchor_all_hold": True,
+                },
+            },
+        },
+    )
+    issues = evaluate_contract_gates(
+        rows=rows,
+        claim_docs={"THETA-001": doc},
+        root=tmp_path,
+        enforce_for_statuses={"supported_bridge"},
+    )
+    errors = [i.message for i in issues if i.severity == "error"]
+    assert any("requires ckm_like_weak_leakage_suite.all_zero=true" in e for e in errors)
+
+
+def test_theta_promoted_blocks_when_periodic_lane_is_marked_blocking(tmp_path: Path) -> None:
+    rows = {"THETA-001": {"status": "supported_bridge"}}
+    doc = _theta_claim_doc(tmp_path, verdict="PASS", gate3_done=True)
+    _write_json(
+        tmp_path / "sources" / "theta001_bridge_closure.json",
+        {
+            "schema_version": "theta001_bridge_closure_v1",
+            "claim_id": "THETA-001",
+            "weak_leakage_suite": {"all_zero": True, "case_count": 3},
+            "ckm_like_weak_leakage_suite": {"all_zero": True, "case_count": 3},
+            "periodic_angle_lane": {"status": "stub_non_blocking", "promotion_blocking": True},
+            "continuum_bridge_contract": {
+                "conditional_conclusion_theta_zero": True,
+                "lean_theorems": ["CausalGraph.theta_zero_if_linear_bridge"],
+                "linear_map_lane": {
+                    "status": "primary_blocking",
+                    "promotion_blocking": True,
+                    "cp_odd_all_hold": True,
+                    "zero_anchor_all_hold": True,
+                },
+            },
+        },
+    )
+    issues = evaluate_contract_gates(
+        rows=rows,
+        claim_docs={"THETA-001": doc},
+        root=tmp_path,
+        enforce_for_statuses={"supported_bridge"},
+    )
+    errors = [i.message for i in issues if i.severity == "error"]
+    assert any("periodic_angle_lane must be non-blocking" in e for e in errors)
+
+
+def test_theta_promoted_blocks_when_conjugate_lane_is_marked_blocking(tmp_path: Path) -> None:
+    rows = {"THETA-001": {"status": "supported_bridge"}}
+    doc = _theta_claim_doc(tmp_path, verdict="PASS", gate3_done=True)
+    _write_json(
+        tmp_path / "sources" / "theta001_bridge_closure.json",
+        {
+            "schema_version": "theta001_bridge_closure_v1",
+            "claim_id": "THETA-001",
+            "weak_leakage_suite": {"all_zero": True, "case_count": 3},
+            "ckm_like_weak_leakage_suite": {"all_zero": True, "case_count": 3},
+            "ckm_conjugate_falsifier_lane": {
+                "status": "exploratory_non_blocking",
+                "promotion_blocking": True,
+                "any_nonzero": False,
+                "max_case_diagnostics": {
+                    "first_nonzero_tick": None,
+                    "max_abs_tick_delta": 0,
+                    "strong_channel_ranked": [],
+                },
+            },
+            "continuum_bridge_contract": {
+                "conditional_conclusion_theta_zero": True,
+                "lean_theorems": ["CausalGraph.theta_zero_if_linear_bridge"],
+                "linear_map_lane": {
+                    "status": "primary_blocking",
+                    "promotion_blocking": True,
+                    "cp_odd_all_hold": True,
+                    "zero_anchor_all_hold": True,
+                },
+            },
+        },
+    )
+    issues = evaluate_contract_gates(
+        rows=rows,
+        claim_docs={"THETA-001": doc},
+        root=tmp_path,
+        enforce_for_statuses={"supported_bridge"},
+    )
+    errors = [i.message for i in issues if i.severity == "error"]
+    assert any("ckm_conjugate_falsifier_lane must be non-blocking" in e for e in errors)
+
+
+def test_theta_promoted_requires_pass_with_limits_when_conjugate_any_nonzero(tmp_path: Path) -> None:
+    rows = {"THETA-001": {"status": "supported_bridge"}}
+    doc = _theta_claim_doc(tmp_path, verdict="PASS", gate3_done=True)
+    _write_json(
+        tmp_path / "sources" / "theta001_bridge_closure.json",
+        {
+            "schema_version": "theta001_bridge_closure_v1",
+            "claim_id": "THETA-001",
+            "weak_leakage_suite": {"all_zero": True, "case_count": 3},
+            "ckm_like_weak_leakage_suite": {"all_zero": True, "case_count": 3},
+            "ckm_conjugate_falsifier_lane": {
+                "status": "exploratory_non_blocking",
+                "promotion_blocking": False,
+                "any_nonzero": True,
+                "max_case_diagnostics": {
+                    "first_nonzero_tick": 2,
+                    "max_abs_tick_delta": 3,
+                    "strong_channel_ranked": [["e1", 3]],
+                },
+            },
+            "continuum_bridge_contract": {
+                "conditional_conclusion_theta_zero": True,
+                "lean_theorems": ["CausalGraph.theta_zero_if_linear_bridge"],
+                "linear_map_lane": {
+                    "status": "primary_blocking",
+                    "promotion_blocking": True,
+                    "cp_odd_all_hold": True,
+                    "zero_anchor_all_hold": True,
+                },
+            },
+        },
+    )
+    issues = evaluate_contract_gates(
+        rows=rows,
+        claim_docs={"THETA-001": doc},
+        root=tmp_path,
+        enforce_for_statuses={"supported_bridge"},
+    )
+    errors = [i.message for i in issues if i.severity == "error"]
+    assert any("requires skeptic_verdict=PASS_WITH_LIMITS" in e for e in errors)
+
+
+def test_theta_promoted_requires_conjugate_limit_annotation_when_any_nonzero(tmp_path: Path) -> None:
+    rows = {"THETA-001": {"status": "supported_bridge"}}
+    doc = _theta_claim_doc(tmp_path, verdict="PASS_WITH_LIMITS", gate3_done=True)
+    # Keep default skeptic artifact limits (no CKM/conjugate text) to trigger governance check.
+    _write_json(
+        tmp_path / "sources" / "theta001_bridge_closure.json",
+        {
+            "schema_version": "theta001_bridge_closure_v1",
+            "claim_id": "THETA-001",
+            "weak_leakage_suite": {"all_zero": True, "case_count": 3},
+            "ckm_like_weak_leakage_suite": {"all_zero": True, "case_count": 3},
+            "ckm_conjugate_falsifier_lane": {
+                "status": "exploratory_non_blocking",
+                "promotion_blocking": False,
+                "any_nonzero": True,
+                "max_case_diagnostics": {
+                    "first_nonzero_tick": 2,
+                    "max_abs_tick_delta": 3,
+                    "strong_channel_ranked": [["e1", 3]],
+                },
+            },
+            "continuum_bridge_contract": {
+                "conditional_conclusion_theta_zero": True,
+                "lean_theorems": ["CausalGraph.theta_zero_if_linear_bridge"],
+                "linear_map_lane": {
+                    "status": "primary_blocking",
+                    "promotion_blocking": True,
+                    "cp_odd_all_hold": True,
+                    "zero_anchor_all_hold": True,
+                },
+            },
+        },
+    )
+    issues = evaluate_contract_gates(
+        rows=rows,
+        claim_docs={"THETA-001": doc},
+        root=tmp_path,
+        enforce_for_statuses={"supported_bridge"},
+    )
+    errors = [i.message for i in issues if i.severity == "error"]
+    assert any("skeptic limits must mention CKM-conjugate falsifier signal" in e for e in errors)
+
+
+def test_theta_promoted_requires_conjugate_diagnostics_when_any_nonzero(tmp_path: Path) -> None:
+    rows = {"THETA-001": {"status": "supported_bridge"}}
+    doc = _theta_claim_doc(tmp_path, verdict="PASS_WITH_LIMITS", gate3_done=True)
+    _write_json(
+        tmp_path / "sources" / "theta001_bridge_closure.json",
+        {
+            "schema_version": "theta001_bridge_closure_v1",
+            "claim_id": "THETA-001",
+            "weak_leakage_suite": {"all_zero": True, "case_count": 3},
+            "ckm_like_weak_leakage_suite": {"all_zero": True, "case_count": 3},
+            "ckm_conjugate_falsifier_lane": {
+                "status": "exploratory_non_blocking",
+                "promotion_blocking": False,
+                "any_nonzero": True,
+            },
+            "continuum_bridge_contract": {
+                "conditional_conclusion_theta_zero": True,
+                "lean_theorems": ["CausalGraph.theta_zero_if_linear_bridge"],
+                "linear_map_lane": {
+                    "status": "primary_blocking",
+                    "promotion_blocking": True,
+                    "cp_odd_all_hold": True,
+                    "zero_anchor_all_hold": True,
+                },
+            },
+        },
+    )
+    issues = evaluate_contract_gates(
+        rows=rows,
+        claim_docs={"THETA-001": doc},
+        root=tmp_path,
+        enforce_for_statuses={"supported_bridge"},
+    )
+    errors = [i.message for i in issues if i.severity == "error"]
+    assert any("max_case_diagnostics is required" in e for e in errors)
+
+
+def test_theta_promoted_requires_multicase_weak_leakage_coverage(tmp_path: Path) -> None:
+    rows = {"THETA-001": {"status": "supported_bridge"}}
+    doc = _theta_claim_doc(tmp_path, verdict="PASS_WITH_LIMITS", gate3_done=True)
+    _write_json(
+        tmp_path / "sources" / "theta001_bridge_closure.json",
+        {
+            "schema_version": "theta001_bridge_closure_v1",
+            "claim_id": "THETA-001",
+            "weak_leakage_suite": {"all_zero": True, "case_count": 1},
+            "ckm_like_weak_leakage_suite": {"all_zero": True, "case_count": 3},
+            "ckm_conjugate_falsifier_lane": {
+                "status": "exploratory_non_blocking",
+                "promotion_blocking": False,
+                "any_nonzero": False,
+                "max_case_diagnostics": {
+                    "first_nonzero_tick": None,
+                    "max_abs_tick_delta": 0,
+                    "strong_channel_ranked": [],
+                },
+            },
+            "continuum_bridge_contract": {
+                "conditional_conclusion_theta_zero": True,
+                "lean_theorems": ["CausalGraph.theta_zero_if_linear_bridge"],
+                "linear_map_lane": {
+                    "status": "primary_blocking",
+                    "promotion_blocking": True,
+                    "cp_odd_all_hold": True,
+                    "zero_anchor_all_hold": True,
+                },
+            },
+        },
+    )
+    issues = evaluate_contract_gates(
+        rows=rows,
+        claim_docs={"THETA-001": doc},
+        root=tmp_path,
+        enforce_for_statuses={"supported_bridge"},
+    )
+    errors = [i.message for i in issues if i.severity == "error"]
+    assert any("weak_leakage_suite.case_count >= 3" in e for e in errors)
+
+
+def test_theta_promoted_requires_primary_linear_map_lane(tmp_path: Path) -> None:
+    rows = {"THETA-001": {"status": "supported_bridge"}}
+    doc = _theta_claim_doc(tmp_path, verdict="PASS_WITH_LIMITS", gate3_done=True)
+    _write_json(
+        tmp_path / "sources" / "theta001_bridge_closure.json",
+        {
+            "schema_version": "theta001_bridge_closure_v1",
+            "claim_id": "THETA-001",
+            "weak_leakage_suite": {"all_zero": True, "case_count": 3},
+            "ckm_like_weak_leakage_suite": {"all_zero": True, "case_count": 3},
+            "ckm_conjugate_falsifier_lane": {
+                "status": "exploratory_non_blocking",
+                "promotion_blocking": False,
+                "any_nonzero": False,
+                "max_case_diagnostics": {
+                    "first_nonzero_tick": None,
+                    "max_abs_tick_delta": 0,
+                    "strong_channel_ranked": [],
+                },
+            },
             "continuum_bridge_contract": {
                 "conditional_conclusion_theta_zero": True,
                 "lean_theorems": ["CausalGraph.theta_zero_if_linear_bridge"],
@@ -194,4 +497,4 @@ def test_theta_promoted_blocks_when_ckm_like_weak_leakage_not_zero(tmp_path: Pat
         enforce_for_statuses={"supported_bridge"},
     )
     errors = [i.message for i in issues if i.severity == "error"]
-    assert any("requires ckm_like_weak_leakage_suite.all_zero=true" in e for e in errors)
+    assert any("continuum_bridge_contract.linear_map_lane is required" in e for e in errors)
