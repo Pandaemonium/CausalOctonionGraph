@@ -28,6 +28,7 @@ def test_run_all_structure() -> None:
     assert payload["rfc"] == "RFC-037"
     assert payload["avenue"] == "A13-ensemble"
     assert payload["ticks"] == 24
+    assert payload["observable_bounds"] == {"sin2_min": 0.0, "sin2_max": 0.5}
     assert len(payload["rows"]) == 3
 
 
@@ -50,3 +51,13 @@ def test_mixed_conditions_show_negative_drift() -> None:
         assert s["summary_tickwise_avg"]["delta_sin2_assoc_exclusive"] < 0.0
         assert s["summary_hist_avg"]["delta_sin2_assoc_exclusive"] < 0.0
         assert s["fraction_negative_delta"] > 0.5
+
+
+def test_condition_outputs_within_preregistered_bounds() -> None:
+    payload = run_all()
+    lo = float(payload["observable_bounds"]["sin2_min"])
+    hi = float(payload["observable_bounds"]["sin2_max"])
+    for row in payload["rows"]:
+        summary = row["summary"]
+        assert lo <= float(summary["summary_tickwise_avg"]["final_sin2_assoc_exclusive"]) <= hi
+        assert lo <= float(summary["summary_hist_avg"]["final_sin2_assoc_exclusive"]) <= hi

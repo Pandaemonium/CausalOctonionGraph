@@ -1,0 +1,15 @@
+case_id,edge_distance,steps,phase_offset,preconditioning_ticks,overlap_start_tick,stage,stage_tick,global_tick,overlap_started,overlap_node_count,phase_jump_sum,photon_coupling_rate
+alpha_case_01,4,14,1,0,2,measure,1,1,False,0,0,0.0
+alpha_case_01,4,14,1,0,2,measure,2,2,True,1,0,0.0
+alpha_case_01,4,14,1,0,2,measure,3,3,True,3,8,0.3333333333333333
+alpha_case_01,4,14,1,0,2,measure,4,4,True,5,8,0.2
+alpha_case_01,4,14,1,0,2,measure,5,5,True,7,0,0.0
+alpha_case_01,4,14,1,0,2,measure,6,6,True,9,8,0.1111111111111111
+alpha_case_01,4,14,1,0,2,measure,7,7,True,11,16,0.18181818181818182
+alpha_case_01,4,14,1,0,2,measure,8,8,True,13,8,0.07692307692307693
+alpha_case_01,4,14,1,0,2,measure,9,9,True,15,0,0.0
+alpha_case_01,4,14,1,0,2,measure,10,10,True,17,16,0.11764705882352941
+alpha_case_01,4,14,1,0,2,measure,11,11,True,19,16,0.10526315789473684
+alpha_case_01,4,14,1,0,2,measure,12,12,True,21,24,0.14285714285714285
+alpha_case_01,4,14,1,0,2,measure,13,13,True,23,4,0.021739130434782608
+alpha_case_01,4,14,1,0,2,measure,14,14,True,25,24,0.12

@@ -6,14 +6,15 @@ Pipeline:
 1. sync matrix
 2. validate matrix
 3. validate claim epistemic schema fields
-4. rebuild + validate quantum-number claim ledger
-5. run oracle prediction checks
-6. build manager context package (includes oracle block)
-7. validate claim events
-8. validate public accomplishments
-9. run battery checks for selected statuses
-10. build proof-ledger artifacts
-11. optionally enforce matrix/ledger are committed and up-to-date
+4. validate contract gates (RFC-080/081/082/083)
+5. rebuild + validate quantum-number claim ledger
+6. run oracle prediction checks
+7. build manager context package (includes oracle block)
+8. validate claim events
+9. validate public accomplishments
+10. run battery checks for selected statuses
+11. build proof-ledger artifacts
+12. optionally enforce matrix/ledger are committed and up-to-date
 """
 
 from __future__ import annotations
@@ -55,6 +56,7 @@ def main() -> int:
         [sys.executable, "scripts/sync_claim_status_matrix.py"],
         [sys.executable, "scripts/validate_claim_status_matrix.py"],
         [sys.executable, "scripts/validate_claim_epistemic_fields.py"],
+        [sys.executable, "scripts/validate_claim_contract_gates.py"],
         [sys.executable, "-m", "calc.derive_sm_quantum_numbers"],
         [
             sys.executable,

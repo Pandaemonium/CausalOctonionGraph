@@ -1,0 +1,215 @@
+{
+  "case_id": "alpha_case_11",
+  "edge_distance": 8,
+  "steps": 22,
+  "phase_offset": 3,
+  "preconditioning_ticks": 0,
+  "overlap_start_tick": 4,
+  "summary": {
+    "mean_coupling_rate_post_overlap_measurement": 0.12584472661244303,
+    "max_coupling_rate_post_overlap_measurement": 0.5,
+    "mean_coupling_rate_post_overlap_all": 0.12584472661244303,
+    "max_coupling_rate_post_overlap_all": 0.5
+  },
+  "preconditioning_rows": [],
+  "step_rows": [
+    {
+      "global_tick": 1,
+      "overlap_started": false,
+      "overlap_node_count": 0,
+      "phase_jump_sum": 0,
+      "photon_coupling_rate": 0.0,
+      "stage": "measure",
+      "stage_tick": 1
+    },
+    {
+      "global_tick": 2,
+      "overlap_started": false,
+      "overlap_node_count": 0,
+      "phase_jump_sum": 0,
+      "photon_coupling_rate": 0.0,
+      "stage": "measure",
+      "stage_tick": 2
+    },
+    {
+      "global_tick": 3,
+      "overlap_started": false,
+      "overlap_node_count": 0,
+      "phase_jump_sum": 0,
+      "photon_coupling_rate": 0.0,
+      "stage": "measure",
+      "stage_tick": 3
+    },
+    {
+      "global_tick": 4,
+      "overlap_started": true,
+      "overlap_node_count": 1,
+      "phase_jump_sum": 4,
+      "photon_coupling_rate": 0.5,
+      "stage": "measure",
+      "stage_tick": 4
+    },
+    {
+      "global_tick": 5,
+      "overlap_started": true,
+      "overlap_node_count": 3,
+      "phase_jump_sum": 8,
+      "photon_coupling_rate": 0.3333333333333333,
+      "stage": "measure",
+      "stage_tick": 5
+    },
+    {
+      "global_tick": 6,
+      "overlap_started": true,
+      "overlap_node_count": 5,
+      "phase_jump_sum": 8,
+      "photon_coupling_rate": 0.2,
+      "stage": "measure",
+      "stage_tick": 6
+    },
+    {
+      "global_tick": 7,
+      "overlap_started": true,
+      "overlap_node_count": 7,
+      "phase_jump_sum": 12,
+      "photon_coupling_rate": 0.21428571428571427,
+      "stage": "measure",
+      "stage_tick": 7
+    },
+    {
+      "global_tick": 8,
+      "overlap_started": true,
+      "overlap_node_count": 9,
+      "phase_jump_sum": 8,
+      "photon_coupling_rate": 0.1111111111111111,
+      "stage": "measure",
+      "stage_tick": 8
+    },
+    {
+      "global_tick": 9,
+      "overlap_started": true,
+      "overlap_node_count": 11,
+      "phase_jump_sum": 0,
+      "photon_coupling_rate": 0.0,
+      "stage": "measure",
+      "stage_tick": 9
+    },
+    {
+      "global_tick": 10,
+      "overlap_started": true,
+      "overlap_node_count": 13,
+      "phase_jump_sum": 0,
+      "photon_coupling_rate": 0.0,
+      "stage": "measure",
+      "stage_tick": 10
+    },
+    {
+      "global_tick": 11,
+      "overlap_started": true,
+      "overlap_node_count": 15,
+      "phase_jump_sum": 0,
+      "photon_coupling_rate": 0.0,
+      "stage": "measure",
+      "stage_tick": 11
+    },
+    {
+      "global_tick": 12,
+      "overlap_started": true,
+      "overlap_node_count": 17,
+      "phase_jump_sum": 0,
+      "photon_coupling_rate": 0.0,
+      "stage": "measure",
+      "stage_tick": 12
+    },
+    {
+      "global_tick": 13,
+      "overlap_started": true,
+      "overlap_node_count": 19,
+      "phase_jump_sum": 12,
+      "photon_coupling_rate": 0.07894736842105263,
+      "stage": "measure",
+      "stage_tick": 13
+    },
+    {
+      "global_tick": 14,
+      "overlap_started": true,
+      "overlap_node_count": 21,
+      "phase_jump_sum": 24,
+      "photon_coupling_rate": 0.14285714285714285,
+      "stage": "measure",
+      "stage_tick": 14
+    },
+    {
+      "global_tick": 15,
+      "overlap_started": true,
+      "overlap_node_count": 23,
+      "phase_jump_sum": 36,
+      "photon_coupling_rate": 0.1956521739130435,
+      "stage": "measure",
+      "stage_tick": 15
+    },
+    {
+      "global_tick": 16,
+      "overlap_started": true,
+      "overlap_node_count": 25,
+      "phase_jump_sum": 24,
+      "photon_coupling_rate": 0.12,
+      "stage": "measure",
+      "stage_tick": 16
+    },
+    {
+      "global_tick": 17,
+      "overlap_started": true,
+      "overlap_node_count": 27,
+      "phase_jump_sum": 12,
+      "photon_coupling_rate": 0.05555555555555555,
+      "stage": "measure",
+      "stage_tick": 17
+    },
+    {
+      "global_tick": 18,
+      "overlap_started": true,
+      "overlap_node_count": 29,
+      "phase_jump_sum": 12,
+      "photon_coupling_rate": 0.05172413793103448,
+      "stage": "measure",
+      "stage_tick": 18
+    },
+    {
+      "global_tick": 19,
+      "overlap_started": true,
+      "overlap_node_count": 31,
+      "phase_jump_sum": 20,
+      "photon_coupling_rate": 0.08064516129032258,
+      "stage": "measure",
+      "stage_tick": 19
+    },
+    {
+      "global_tick": 20,
+      "overlap_started": true,
+      "overlap_node_count": 33,
+      "phase_jump_sum": 16,
+      "photon_coupling_rate": 0.06060606060606061,
+      "stage": "measure",
+      "stage_tick": 20
+    },
+    {
+      "global_tick": 21,
+      "overlap_started": true,
+      "overlap_node_count": 35,
+      "phase_jump_sum": 16,
+      "photon_coupling_rate": 0.05714285714285714,
+      "stage": "measure",
+      "stage_tick": 21
+    },
+    {
+      "global_tick": 22,
+      "overlap_started": true,
+      "overlap_node_count": 37,
+      "phase_jump_sum": 56,
+      "photon_coupling_rate": 0.1891891891891892,
+      "stage": "measure",
+      "stage_tick": 22
+    }
+  ]
+}

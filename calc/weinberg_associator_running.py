@@ -22,6 +22,8 @@ ROOT = Path(__file__).resolve().parents[1]
 POLICY_FILE_DEFAULT = Path(__file__).with_name("weinberg_associator_policies.json")
 OUT_JSON = ROOT / "sources" / "weinberg_associator_running_results.json"
 OUT_MD = ROOT / "sources" / "weinberg_associator_running_results.md"
+DEFAULT_SIN2_MIN = 0.0
+DEFAULT_SIN2_MAX = 0.5
 
 IDX_E0 = 0
 IDX_E1 = 1
@@ -138,7 +140,26 @@ def _policy_checksum(policy: RolloutPolicy) -> str:
 def load_policy_bundle(policy_file: Path | None = None) -> Dict[str, object]:
     path = policy_file or POLICY_FILE_DEFAULT
     with path.open("r", encoding="utf-8") as f:
-        return json.load(f)
+        bundle: Dict[str, object] = json.load(f)
+    _validate_policy_bundle(bundle)
+    return bundle
+
+
+def _validate_policy_bundle(bundle: Dict[str, object]) -> None:
+    gov = bundle.get("governance")
+    if not isinstance(gov, dict):
+        raise ValueError("policy bundle governance block is required")
+    if gov.get("predeclared_only") is not True:
+        raise ValueError("governance.predeclared_only must be true")
+    if gov.get("no_output_driven_selection") is not True:
+        raise ValueError("governance.no_output_driven_selection must be true")
+    bounds = gov.get("observable_bounds")
+    if not isinstance(bounds, dict):
+        raise ValueError("governance.observable_bounds mapping is required")
+    lo = float(bounds.get("sin2_min", DEFAULT_SIN2_MIN))
+    hi = float(bounds.get("sin2_max", DEFAULT_SIN2_MAX))
+    if not (0.0 <= lo < hi <= 1.0):
+        raise ValueError(f"invalid sin2 bounds: min={lo}, max={hi}")
 
 
 def _parse_policies(bundle: Dict[str, object]) -> List[RolloutPolicy]:
@@ -322,10 +343,20 @@ def summary_from_series(series: Sequence[Dict[str, float]]) -> Dict[str, float |
     return _summary(series)
 
 
+def _assert_series_in_bounds(series: Sequence[Dict[str, float]], *, sin2_min: float, sin2_max: float) -> None:
+    for row in series:
+        for k in ("sin2_assoc_exclusive", "sin2_assoc_inclusive"):
+            v = float(row[k])
+            if not (sin2_min <= v <= sin2_max):
+                raise ValueError(f"{k} out of bounds [{sin2_min}, {sin2_max}]: {v}")
+
+
 def simulate_policy(
     policy: RolloutPolicy,
     ticks: int,
     *,
+    sin2_min: float = DEFAULT_SIN2_MIN,
+    sin2_max: float = DEFAULT_SIN2_MAX,
     basis_selector_override: str | None = None,
     source_order_override: str | None = None,
     init_mode_override: str | None = None,
@@ -351,6 +382,8 @@ def simulate_policy(
     else:
         avg_ex = avg_inc = avg_w = 0.0
     empirical_series = _series_from_load_sequence([(avg_ex, avg_inc, avg_w)] * ticks)
+    _assert_series_in_bounds(seq_series, sin2_min=sin2_min, sin2_max=sin2_max)
+    _assert_series_in_bounds(empirical_series, sin2_min=sin2_min, sin2_max=sin2_max)
 
     tick_load_rows = [
         {
@@ -388,8 +421,11 @@ def simulate_policy(
 def run_all(policy_file: Path | None = None) -> Dict[str, object]:
     bundle = load_policy_bundle(policy_file)
     ticks = int(bundle["ticks"])
+    bounds = bundle["governance"]["observable_bounds"]
+    sin2_min = float(bounds["sin2_min"])
+    sin2_max = float(bounds["sin2_max"])
     policies = _parse_policies(bundle)
-    rows = [simulate_policy(p, ticks=ticks) for p in policies]
+    rows = [simulate_policy(p, ticks=ticks, sin2_min=sin2_min, sin2_max=sin2_max) for p in policies]
     return {
         "rfc": "RFC-037",
         "avenue": "A13",
@@ -397,6 +433,7 @@ def run_all(policy_file: Path | None = None) -> Dict[str, object]:
         "target_sin2_theta_w": float(bundle["target"]["sin2_theta_w"]),
         "initial_state": str(bundle["initial_state"]),
         "ticks": ticks,
+        "observable_bounds": {"sin2_min": sin2_min, "sin2_max": sin2_max},
         "rows": rows,
     }
 

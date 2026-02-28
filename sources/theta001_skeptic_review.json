@@ -1,0 +1,18 @@
+{
+  "schema_version": "theta001_skeptic_review_v2",
+  "claim_id": "THETA-001",
+  "review_role": "skeptic",
+  "review_type": "independent_model_family_claim_review",
+  "reviewer_model_family": "gemini",
+  "builder_model_family": "claude",
+  "independent_from_builder": true,
+  "timestamp": "2026-02-28T00:00:00Z",
+  "verdict": "PASS_WITH_LIMITS",
+  "limits": [
+    "Dynamic CP-isolation is partially closed: deterministic deep-cone weak-leakage suites pass, but physically faithful CKM-sector transport coupling tests are still open.",
+    "Continuum EFT mapping from discrete Fano sign-balance to the F*F_tilde theta coefficient remains an explicit bridge assumption and is not yet formally closed."
+  ],
+  "bridge_comment": "Bridge assumptions are explicit and scoped correctly for supported_bridge: intra-sector CP isolation under weak coupling and continuum correspondence remain open and are not hidden inside implementation details.",
+  "falsification_comment": "Falsification conditions now cover structural and bridge scenarios; structural falsifier is deterministic and executable while bridge falsifier remains theory-level.",
+  "review_summary": "Structural THETA witnesses are sound: Lean proofs for cpMap involution, orientation closure, and exact sign-balance are present, deterministic Python traces pass, and deep-cone weak-leakage suite artifact reports zero strong residual over the preregistered stress grid. Remaining limits are bridge-level (continuum EFT correspondence and higher-fidelity weak-sector coupling realism), so PASS_WITH_LIMITS is appropriate for supported_bridge."
+}

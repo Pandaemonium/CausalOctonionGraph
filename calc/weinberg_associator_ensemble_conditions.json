@@ -6,6 +6,14 @@
     "scale": "M_Z",
     "sin2_theta_w": 0.23122
   },
+  "governance": {
+    "predeclared_only": true,
+    "no_output_driven_selection": true,
+    "observable_bounds": {
+      "sin2_min": 0.0,
+      "sin2_max": 0.5
+    }
+  },
   "ticks": 24,
   "conditions": [
     {

@@ -57,3 +57,17 @@ def test_signal_event_counts_present(tmp_path: Path) -> None:
     p.write_text(json.dumps(cond, indent=2), encoding="utf-8")
     out = run_alpha_photon_running(p)
     assert all(int(r["phase_valid_count"]) >= 0 for r in out["rows"])
+
+
+def test_alpha_observable_is_bounded_unit_interval(tmp_path: Path) -> None:
+    cond = _small_conditions()
+    p = tmp_path / "cond.json"
+    p.write_text(json.dumps(cond, indent=2), encoding="utf-8")
+    out = run_alpha_photon_running(p)
+
+    for row in out["rows"]:
+        for phase_row in row["phase_results"]:
+            alpha_em = phase_row["alpha_em"]
+            if alpha_em is None:
+                continue
+            assert 0.0 <= float(alpha_em) < 1.0

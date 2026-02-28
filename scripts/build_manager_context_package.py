@@ -13,6 +13,11 @@ from typing import Any
 
 import yaml
 
+try:
+    from scripts.claim_contract_gates import evaluate_contract_gates, load_claim_docs
+except ModuleNotFoundError:
+    from claim_contract_gates import evaluate_contract_gates, load_claim_docs
+
 
 ROOT = Path(__file__).resolve().parents[1]
 CLAIMS_DIR = ROOT / "claims"
@@ -104,6 +109,7 @@ def build_package(top_n: int = 10) -> dict[str, Any]:
     if not isinstance(rows, dict):
         rows = {}
     deps_by_claim = _load_dependencies(set(rows.keys()))
+    claim_docs = load_claim_docs(CLAIMS_DIR)
 
     counts = Counter()
     open_claims: list[dict[str, Any]] = []
@@ -227,6 +233,19 @@ def build_package(top_n: int = 10) -> dict[str, Any]:
             f"Oracle generated {oracle_block['action_event_count']} action event(s); prioritize prediction_review/falsification follow-ups."
         )
 
+    contract_gate_issues = evaluate_contract_gates(
+        rows=rows,
+        claim_docs=claim_docs,
+        root=ROOT,
+        enforce_for_statuses={"partial", "supported_bridge", "proved_core"},
+    )
+    contract_gate_errors = [x for x in contract_gate_issues if x.severity == "error"]
+    contract_gate_warnings = [x for x in contract_gate_issues if x.severity == "warn"]
+    if contract_gate_errors:
+        semantic_digest.append(
+            f"{len(contract_gate_errors)} contract-gate blocker(s) detected for RFC-080/081/082/083."
+        )
+
     return {
         "schema_version": "manager_context_package_v2",
         "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
@@ -236,10 +255,14 @@ def build_package(top_n: int = 10) -> dict[str, Any]:
             "top_open_claim_count": len(top_open_claims),
             "contradiction_count": len(contradictions),
             "blocked_promotion_count": len(blocked_promotions),
+            "contract_gate_error_count": len(contract_gate_errors),
+            "contract_gate_warning_count": len(contract_gate_warnings),
         },
         "top_open_claims": top_open_claims,
         "contradictions": contradictions[:20],
         "blocked_promotions": blocked_promotions[:20],
+        "contract_gate_blockers": [i.message for i in contract_gate_errors[:20]],
+        "contract_gate_warnings": [i.message for i in contract_gate_warnings[:20]],
         "oracle": oracle_block,
         "qn_assumption_density": assumption_density,
         "semantic_digest": semantic_digest,

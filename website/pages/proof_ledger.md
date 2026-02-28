@@ -2,6 +2,9 @@
 
 This is the live public ledger of claim upgrades in COG Lab.
 
+See also:
+- `/web/pages/sm_parameter_derivation_table`
+
 Default mode is **Layman**.
 
 Want to contribute runs? See:

@@ -107,6 +107,7 @@ behind the discrete time tick.
 ## Follow Along
 
 - **Primer** — the full mathematical primer, from first principles to open frontier: [/web/pages/cog_primer](/web/pages/cog_primer)
+- **SM Parameter Table** — every SM free parameter with COG derivation strategy, open gaps, and rigor gates: [/web/pages/sm_parameter_derivation_table](/web/pages/sm_parameter_derivation_table)
 - **Cycle Atlas** — interactive motif rhythm explorer (single + coupled periods): [/web/pages/cycle_atlas](/web/pages/cycle_atlas)
 - **Proof Ledger** — live upgrades in plain language (with timestamps): [/web/proof_ledger](/web/proof_ledger)
 - **Results** — live proof registry: [/web/results](/web/results)

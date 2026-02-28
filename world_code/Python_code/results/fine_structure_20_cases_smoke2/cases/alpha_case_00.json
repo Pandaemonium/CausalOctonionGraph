@@ -1,0 +1,53 @@
+{
+  "case_id": "alpha_case_00",
+  "edge_distance": 4,
+  "steps": 4,
+  "phase_offset": 0,
+  "preconditioning_ticks": 0,
+  "overlap_start_tick": 2,
+  "summary": {
+    "mean_coupling_rate_post_overlap_measurement": 0.0,
+    "max_coupling_rate_post_overlap_measurement": 0.0,
+    "mean_coupling_rate_post_overlap_all": 0.0,
+    "max_coupling_rate_post_overlap_all": 0.0
+  },
+  "preconditioning_rows": [],
+  "step_rows": [
+    {
+      "global_tick": 1,
+      "overlap_started": false,
+      "overlap_node_count": 0,
+      "phase_jump_sum": 0,
+      "photon_coupling_rate": 0.0,
+      "stage": "measure",
+      "stage_tick": 1
+    },
+    {
+      "global_tick": 2,
+      "overlap_started": true,
+      "overlap_node_count": 1,
+      "phase_jump_sum": 0,
+      "photon_coupling_rate": 0.0,
+      "stage": "measure",
+      "stage_tick": 2
+    },
+    {
+      "global_tick": 3,
+      "overlap_started": true,
+      "overlap_node_count": 3,
+      "phase_jump_sum": 0,
+      "photon_coupling_rate": 0.0,
+      "stage": "measure",
+      "stage_tick": 3
+    },
+    {
+      "global_tick": 4,
+      "overlap_started": true,
+      "overlap_node_count": 5,
+      "phase_jump_sum": 0,
+      "photon_coupling_rate": 0.0,
+      "stage": "measure",
+      "stage_tick": 4
+    }
+  ]
+}

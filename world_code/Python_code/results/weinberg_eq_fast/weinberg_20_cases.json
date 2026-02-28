@@ -1,0 +1,158 @@
+{
+  "schema_version": "weinberg_20_cases_v1",
+  "generated_at_utc": "2026-02-27T22:30:58.388572+00:00",
+  "kernel": "world_code/Python_code/minimal_world_kernel.py",
+  "kernel_profile": "integer",
+  "definition": {
+    "signal": "sin2(theta_W)=g'^2/(g'^2+g^2) from overlap-channel loads",
+    "overlap_rule": "lightcone overlap when abs(x-left)<=t and abs(x-right)<=t",
+    "phase_offset_rule": "right electroweak seed receives P temporal commits before tick 0",
+    "mask_contract": {
+      "u1_inclusive": [
+        0,
+        7
+      ],
+      "weak_inclusive": [
+        1,
+        6,
+        7
+      ],
+      "weak_exclusive": [
+        1,
+        6
+      ],
+      "electroweak": [
+        0,
+        1,
+        6,
+        7
+      ],
+      "exclusive_u1": [
+        0
+      ]
+    },
+    "preconditioning_rule": "warm start applies deterministic update ticks before measurement so vacuum dressing and early exchange are present at measurement tick 1",
+    "target_values": {
+      "sin2_theta_w_mz": 0.23122,
+      "sin2_theta_w_uv_exclusive": 0.25
+    },
+    "unity_profile_note": "kernel_profile=unity is non-canonical; coefficients are projected to {0,+1,-1,+i,-i} after fold/update."
+  },
+  "preconditioning_ticks": 1,
+  "include_cold_baseline": false,
+  "max_steps_cap": 4,
+  "case_count": 1,
+  "cases": [
+    {
+      "case_id": "weinberg_case_00",
+      "edge_distance": 4,
+      "steps": 4,
+      "phase_offset": 0,
+      "preconditioning_ticks": 1,
+      "overlap_start_tick": 2,
+      "summary": {
+        "mean_sin2_raw_post_overlap_measurement": 0.7497866588540474,
+        "mean_sin2_exclusive_post_overlap_measurement": 0.3748933294270237,
+        "mean_sin2_raw_post_overlap_all": 0.7497866588540474,
+        "mean_sin2_exclusive_post_overlap_all": 0.3748933294270237,
+        "final_sin2_raw": 0.6666937911953653,
+        "final_sin2_exclusive_u1": 0.33334689559768266,
+        "final_gap_exclusive_vs_mz_target": 0.10212689559768265
+      },
+      "preconditioning_rows": [
+        {
+          "global_tick": 1,
+          "overlap_started": false,
+          "overlap_node_count": 0,
+          "u1_inclusive_load": 0,
+          "weak_inclusive_load": 0,
+          "weak_exclusive_load": 0,
+          "ew_load": 0,
+          "exclusive_u1_load": 0,
+          "sin2_theta_w_raw": 0.0,
+          "sin2_theta_w_exclusive_u1": 0.0,
+          "sin2_theta_w_from_couplings": 0.0,
+          "gap_raw_vs_mz_target": -0.23122,
+          "gap_exclusive_vs_mz_target": -0.23122,
+          "gap_exclusive_vs_uv_quarter": -0.25,
+          "stage": "precondition",
+          "stage_tick": 1
+        }
+      ],
+      "step_rows": [
+        {
+          "global_tick": 2,
+          "overlap_started": true,
+          "overlap_node_count": 1,
+          "u1_inclusive_load": 8,
+          "weak_inclusive_load": 4,
+          "weak_exclusive_load": 0,
+          "ew_load": 8,
+          "exclusive_u1_load": 4,
+          "sin2_theta_w_raw": 1.0,
+          "sin2_theta_w_exclusive_u1": 0.5,
+          "sin2_theta_w_from_couplings": 1.0,
+          "gap_raw_vs_mz_target": 0.76878,
+          "gap_exclusive_vs_mz_target": 0.26878,
+          "gap_exclusive_vs_uv_quarter": 0.25,
+          "stage": "measure",
+          "stage_tick": 1
+        },
+        {
+          "global_tick": 3,
+          "overlap_started": true,
+          "overlap_node_count": 3,
+          "u1_inclusive_load": 4294967296,
+          "weak_inclusive_load": 4303355904,
+          "weak_exclusive_load": 2155872256,
+          "ew_load": 6450839552,
+          "exclusive_u1_load": 2147483648,
+          "sin2_theta_w_raw": 0.6657997399219766,
+          "sin2_theta_w_exclusive_u1": 0.3328998699609883,
+          "sin2_theta_w_from_couplings": 0.6657997399219766,
+          "gap_raw_vs_mz_target": 0.4345797399219766,
+          "gap_exclusive_vs_mz_target": 0.1016798699609883,
+          "gap_exclusive_vs_uv_quarter": 0.0828998699609883,
+          "stage": "measure",
+          "stage_tick": 2
+        },
+        {
+          "global_tick": 4,
+          "overlap_started": true,
+          "overlap_node_count": 5,
+          "u1_inclusive_load": 5575526584595725153114806757034770309316608,
+          "weak_inclusive_load": 5575696727077259836980245351471110275727360,
+          "weak_exclusive_load": 2787933434779397260422841972953725121069056,
+          "ew_load": 8363460019375122413537648729988495430385664,
+          "exclusive_u1_load": 2787763292297862576557403378517385154658304,
+          "sin2_theta_w_raw": 0.6666531042988476,
+          "sin2_theta_w_exclusive_u1": 0.3333265521494238,
+          "sin2_theta_w_from_couplings": 0.6666531042988476,
+          "gap_raw_vs_mz_target": 0.43543310429884763,
+          "gap_exclusive_vs_mz_target": 0.1021065521494238,
+          "gap_exclusive_vs_uv_quarter": 0.0833265521494238,
+          "stage": "measure",
+          "stage_tick": 3
+        },
+        {
+          "global_tick": 5,
+          "overlap_started": true,
+          "overlap_node_count": 7,
+          "u1_inclusive_load": 54925085185009849018404993405161079402211881517101967652251378374922754931521971973965637748302495756015831232150940007346247076166082058203383425855880429568,
+          "weak_inclusive_load": 54921733233028924243405257895027218739294908258799693852978279970137254068994266273090847162538014183210440470171973299299094341006826795548736461586282053632,
+          "weak_exclusive_load": 27459190640523999734202761192446679038188967500248710026852590782675876603233280286108028288386766305202524854096503295625970802923785766447044748658341838848,
+          "ew_load": 82384275825533848752607754597607758440400849017350677679103969157598631534755252260073666036689262061218356086247443302972217879089867824650428174514222268416,
+          "exclusive_u1_load": 27462542592504924509202496702580539701105940758550983826125689187461377465760985986982818874151247878007915616075470003673123538083041029101691712927940214784,
+          "sin2_theta_w_raw": 0.6666937911953653,
+          "sin2_theta_w_exclusive_u1": 0.33334689559768266,
+          "sin2_theta_w_from_couplings": 0.6666937911953653,
+          "gap_raw_vs_mz_target": 0.43547379119536533,
+          "gap_exclusive_vs_mz_target": 0.10212689559768265,
+          "gap_exclusive_vs_uv_quarter": 0.08334689559768266,
+          "stage": "measure",
+          "stage_tick": 4
+        }
+      ]
+    }
+  ]
+}

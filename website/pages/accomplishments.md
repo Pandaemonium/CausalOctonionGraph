@@ -2,6 +2,9 @@
 
 This page is the public-facing accomplishments list for COG Lab.
 
+See also:
+- `/web/pages/sm_parameter_derivation_table`
+
 For live, timestamped upgrades with Layman/Student/Physicist summaries, see:
 - `/web/proof_ledger`
 

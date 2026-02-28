@@ -32,6 +32,7 @@ import CausalGraphTheory.GaugeGroup
 import CausalGraphTheory.GaugeObservables
 import CausalGraphTheory.WeakMixingObservable
 import CausalGraphTheory.Koide
+import CausalGraphTheory.ThetaEFTBridge
 
 -- Phase 2: Graph structure (V1 causal DAG, legacy path; non-canonical for active physics claims)
 import CausalGraphTheory.State

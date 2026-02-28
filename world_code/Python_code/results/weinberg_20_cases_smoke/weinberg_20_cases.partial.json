@@ -1,0 +1,44 @@
+{
+  "schema_version": "weinberg_20_cases_partial_v1",
+  "updated_at_utc": "2026-02-27T22:28:25.333654+00:00",
+  "settings": {
+    "preconditioning_ticks": 0,
+    "include_cold_baseline": false,
+    "case_limit": 2,
+    "max_steps": 4,
+    "kernel_profile": "integer"
+  },
+  "completed_case_count": 2,
+  "case_summaries": [
+    {
+      "case_id": "weinberg_case_00",
+      "edge_distance": 4,
+      "steps": 4,
+      "phase_offset": 0,
+      "summary": {
+        "mean_sin2_raw_post_overlap_measurement": 0.7774842814069415,
+        "mean_sin2_exclusive_post_overlap_measurement": 0.38874214070347074,
+        "mean_sin2_raw_post_overlap_all": 0.7774842814069415,
+        "mean_sin2_exclusive_post_overlap_all": 0.38874214070347074,
+        "final_sin2_raw": 0.6666531042988476,
+        "final_sin2_exclusive_u1": 0.3333265521494238,
+        "final_gap_exclusive_vs_mz_target": 0.1021065521494238
+      }
+    },
+    {
+      "case_id": "weinberg_case_01",
+      "edge_distance": 4,
+      "steps": 4,
+      "phase_offset": 1,
+      "summary": {
+        "mean_sin2_raw_post_overlap_measurement": 0.7774842814069415,
+        "mean_sin2_exclusive_post_overlap_measurement": 0.38874214070347074,
+        "mean_sin2_raw_post_overlap_all": 0.7774842814069415,
+        "mean_sin2_exclusive_post_overlap_all": 0.38874214070347074,
+        "final_sin2_raw": 0.6666531042988476,
+        "final_sin2_exclusive_u1": 0.3333265521494238,
+        "final_gap_exclusive_vs_mz_target": 0.1021065521494238
+      }
+    }
+  ]
+}

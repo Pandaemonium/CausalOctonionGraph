@@ -14,6 +14,7 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1]
 CLAIMS_DIR = ROOT / "claims"
 MATRIX_PATH = CLAIMS_DIR / "CLAIM_STATUS_MATRIX.yml"
+MALFORMED_CLAIMS: dict[str, str] = {}
 
 ALLOWED_STATUS = {
     "stub",
@@ -82,7 +83,7 @@ def _read_yaml(path: Path) -> dict[str, Any]:
     try:
         loaded = yaml.safe_load(path.read_text(encoding="utf-8"))
     except yaml.YAMLError as exc:
-        print(f"WARN: skipping malformed claim YAML: {path.name} ({exc})")
+        MALFORMED_CLAIMS[path.name] = str(exc)
         return {}
     if not isinstance(loaded, dict):
         return {}
@@ -298,6 +299,10 @@ def _validate_semantics(
 
 def validate_matrix(matrix: dict[str, Any]) -> list[str]:
     errors: list[str] = []
+
+    if MALFORMED_CLAIMS:
+        for name, err in sorted(MALFORMED_CLAIMS.items()):
+            errors.append(f"malformed claim YAML: {name} ({err})")
 
     rows = matrix.get("rows")
     if not isinstance(rows, dict):

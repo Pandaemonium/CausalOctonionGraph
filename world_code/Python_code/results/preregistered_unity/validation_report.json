@@ -1,0 +1,11 @@
+{
+  "schema_version": "preregistered_unity_validation_v1",
+  "input": "world_code\\Python_code\\lightcone_example_preregistered_unity.json",
+  "steps": 4,
+  "output": "world_code\\Python_code\\results\\preregistered_unity\\out.json",
+  "state_hash_a": "250b48d7877f530564659d628783aba37762046a958b28d5db571459cb9bfbee",
+  "state_hash_b": "250b48d7877f530564659d628783aba37762046a958b28d5db571459cb9bfbee",
+  "replay_equal": true,
+  "unity_closed": true,
+  "passed": true
+}

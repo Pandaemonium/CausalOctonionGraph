@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-02-27T19:27:53.483567Z",
-  "node_count": 34,
-  "edge_count": 37,
+  "generated_at_utc": "2026-02-28T00:58:45.423087Z",
+  "node_count": 37,
+  "edge_count": 42,
   "nodes": [
     {
       "id": "ALG",
@@ -45,17 +45,17 @@
     },
     {
       "id": "ALPHA-001",
-      "status": "stub",
-      "public_status_label": "Queued",
-      "status_color_token": "queued",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
       "latest_event_id": "",
       "unlocks_count": 0
     },
     {
       "id": "ANOM-001",
-      "status": "stub",
-      "public_status_label": "Queued",
-      "status_color_token": "queued",
+      "status": "partial",
+      "public_status_label": "In Progress",
+      "status_color_token": "progress",
       "latest_event_id": "",
       "unlocks_count": 0
     },
@@ -92,6 +92,14 @@
       "unlocks_count": 0
     },
     {
+      "id": "CHARGE-DERIVATION-001",
+      "status": "active_hypothesis",
+      "public_status_label": "Hypothesis",
+      "status_color_token": "hypothesis",
+      "latest_event_id": "",
+      "unlocks_count": 0
+    },
+    {
       "id": "DAG-001",
       "status": "partial",
       "public_status_label": "In Progress",
@@ -113,7 +121,7 @@
       "public_status_label": "In Progress",
       "status_color_token": "progress",
       "latest_event_id": "",
-      "unlocks_count": 6
+      "unlocks_count": 8
     },
     {
       "id": "GAUGE-001",
@@ -121,7 +129,7 @@
       "public_status_label": "In Progress",
       "status_color_token": "progress",
       "latest_event_id": "EVT-20260226-0006",
-      "unlocks_count": 11
+      "unlocks_count": 12
     },
     {
       "id": "GAUGE-001-LEGACY",
@@ -161,7 +169,15 @@
       "public_status_label": "Queued",
       "status_color_token": "queued",
       "latest_event_id": "",
-      "unlocks_count": 1
+      "unlocks_count": 2
+    },
+    {
+      "id": "KOIDE-HEAWOOD-001",
+      "status": "active_hypothesis",
+      "public_status_label": "Hypothesis",
+      "status_color_token": "hypothesis",
+      "latest_event_id": "",
+      "unlocks_count": 0
     },
     {
       "id": "KOIDE_EXACTNESS",
@@ -177,7 +193,7 @@
       "public_status_label": "Hypothesis",
       "status_color_token": "hypothesis",
       "latest_event_id": "EVT-20260226-0007",
-      "unlocks_count": 1
+      "unlocks_count": 2
     },
     {
       "id": "MASS-001",
@@ -240,6 +256,14 @@
       "status": "superseded",
       "public_status_label": "Superseded",
       "status_color_token": "superseded",
+      "latest_event_id": "",
+      "unlocks_count": 0
+    },
+    {
+      "id": "THETA-001",
+      "status": "active_hypothesis",
+      "public_status_label": "Hypothesis",
+      "status_color_token": "hypothesis",
       "latest_event_id": "",
       "unlocks_count": 0
     },
@@ -339,6 +363,14 @@
     },
     {
       "from": "FANO-001",
+      "to": "KOIDE-HEAWOOD-001"
+    },
+    {
+      "from": "FANO-001",
+      "to": "THETA-001"
+    },
+    {
+      "from": "FANO-001",
       "to": "WEINBERG-001"
     },
     {
@@ -347,11 +379,11 @@
     },
     {
       "from": "GAUGE-001",
-      "to": "ANOM-001"
+      "to": "CFS-003"
     },
     {
       "from": "GAUGE-001",
-      "to": "CFS-003"
+      "to": "CHARGE-DERIVATION-001"
     },
     {
       "from": "GAUGE-001",
@@ -375,6 +407,10 @@
     },
     {
       "from": "GAUGE-001",
+      "to": "THETA-001"
+    },
+    {
+      "from": "GAUGE-001",
       "to": "VAC-001"
     },
     {
@@ -395,7 +431,15 @@
     },
     {
       "from": "KOIDE-001",
+      "to": "KOIDE-HEAWOOD-001"
+    },
+    {
+      "from": "KOIDE-001",
       "to": "LEPTON-001"
+    },
+    {
+      "from": "LEPTON-001",
+      "to": "CHARGE-DERIVATION-001"
     },
     {
       "from": "LEPTON-001",

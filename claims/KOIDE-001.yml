@@ -1,1 +1,32 @@
-- "Gate 2 (2026-02-26): Circulant B/A = sqrt(2) derivation complete. All tests passed successfully."
+﻿id: KOIDE-001
+title: Koide Ratio Program Root Claim
+status: stub
+statement: >
+  Koide-sector closure requires a deterministic derivation of the lepton mass
+  relation from locked COG structures without post-hoc fitting.
+gates:
+  - id: gate_1
+    description: Python Koide sum rule verification.
+    status: proved
+    file: calc/koide.py
+  - id: gate_2
+    description: Circulant B/A = sqrt(2) derivation.
+    status: proved
+    file: calc/koide_circulant_derivation.py
+  - id: gate_3
+    description: Lean formalization of circulant Koide condition.
+    status: proved
+    lean_theorem: koide_circulant_iff
+    file: CausalGraphTheory/KoideCirculant.lean
+  - id: gate_4
+    description: Lean formalization of rational Koide ratio from circulant constraints.
+    status: proved
+    lean_theorem: koide_q_equals_two_thirds
+    file: CausalGraphTheory/KoideGate4.lean
+notes:
+  - "Gate 2 completed on 2026-02-26 with all tests passing."
+derivation_status: untested
+bridge_assumptions: []
+falsification_condition: >
+  Claim is falsified if deterministic reruns fail to reproduce declared Koide algebra
+  gates under locked conventions.

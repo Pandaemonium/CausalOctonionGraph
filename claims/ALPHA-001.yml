@@ -45,7 +45,7 @@ gates:
       proved via norm_num (no sorry).
 
   - id: gate-4
-    description: claims/ALPHA-001.yml exists with status: proved
+    description: "claims/ALPHA-001.yml exists with status: proved"
     done: true
     note: this file
 
@@ -67,3 +67,9 @@ proxies:
     value_approx: 0.006897
     above_physical_alpha: false
     role: "approximation only; NOT a valid upper bound on alpha"
+
+derivation_status: bridge_assumed
+bridge_assumptions:
+  - "The 1/49 result is an upper-bound proxy, not a closed IR derivation of physical alpha."
+  - "Bridge from UV combinatorics to IR measured alpha requires a separate running mechanism."
+falsification_condition: "Claim is falsified if the proved 1/49 upper bound or replayable verification artifacts fail."

@@ -19,6 +19,11 @@
     "policy_id": "unit_reduced_mass_proxy_v1",
     "mu_eff": 1.0
   },
+  "observable_contract": {
+    "control_subtraction_rule": "nonnegative_subtraction",
+    "bounded_map": "x_over_one_plus_x",
+    "require_unit_interval": true
+  },
   "signal_channel": {
     "channel_id": "electron_electron",
     "left_motif_id": "furey_electron_doubled",
@@ -30,11 +35,7 @@
     "left_motif_id": "furey_electron_doubled",
     "right_motif_id": "identity_e0"
   },
-  "initial_edge_distances": [
-    1,
-    3,
-    5
-  ],
+  "initial_edge_distances": [1, 3, 5, 7],
   "depth_horizon_rule": {
     "type": "linear",
     "slope": 1,
@@ -47,15 +48,11 @@
       "e7"
     ]
   },
-  "phase_offsets": [
-    0,
-    1,
-    2,
-    3
-  ],
+  "phase_offsets": [0, 1, 2, 3, 4, 5, 6, 7],
   "governance": {
     "predeclared_only": true,
     "no_fitted_attenuation": true,
-    "no_output_driven_selection": true
+    "no_output_driven_selection": true,
+    "require_bounded_observable": true
   }
 }

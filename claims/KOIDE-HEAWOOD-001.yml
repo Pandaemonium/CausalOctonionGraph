@@ -1,0 +1,37 @@
+id: KOIDE-HEAWOOD-001
+title: Heawood Secondary Eigenvalue as a Koide sqrt(2) Spectral Witness
+statement: >
+  The Heawood graph built from Fano point-line incidence has adjacency spectrum
+  {+3, -3, +sqrt(2) x 6, -sqrt(2) x 6}. The positive secondary mode sqrt(2)
+  provides a structural spectral witness aligned with the Koide B/A = sqrt(2)
+  ratio used in Koide parametrizations.
+status: active_hypothesis
+pi_obs_profile: minimal
+pi_obs_profile_version: v1
+projection_sensitivity: insensitive
+profile_contrast_run: ''
+equivalence_mode: none
+lean_file: ''
+lean_theorems: []
+python_test: calc/test_koide_heawood.py
+depends_on:
+  - FANO-001
+  - KOIDE-001
+  - RFC-076
+literature:
+  - "Heawood graph / PG(2,2) incidence spectral facts"
+  - "Koide ratio context from existing KOIDE claims and RFC notes"
+notes: >
+  This claim is a structural witness, not yet a full mass derivation. The bridge
+  from spectral mode to charged-lepton masses remains open and requires an
+  observable-map theorem.
+blocked_reason: >
+  Missing theorem-level map from Heawood spectral mode to physical mass operator
+  and full uncertainty/replay contract for numeric mass extraction.
+derivation_status: bridge_assumed
+bridge_assumptions:
+  - Secondary Heawood mode can be interpreted as the Koide B/A spectral scale.
+falsification_condition: >
+  Falsified if the canonical Heawood construction from locked Fano incidence
+  does not produce the expected {+/-3, +/-sqrt(2)} spectrum, or if the claimed
+  Koide bridge cannot be made gauge/observable-map consistent.

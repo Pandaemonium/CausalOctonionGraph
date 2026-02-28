@@ -1,0 +1,115 @@
+id: THETA-001
+title: Theta_QCD from COG Orientation and CP Symmetry
+status: supported_bridge
+pi_obs_profile: with_sector
+pi_obs_profile_version: v1
+projection_sensitivity: sensitive
+profile_contrast_run: ''
+equivalence_mode: none
+contract_gates:
+  required:
+    - rfc083
+  rfc083:
+    closure_scope: structure_first
+    bridge_contract_id: theta_cp_bridge_v1
+    bridge_observable_id: theta_cp_odd_residual_v1
+    discrete_residual_artifact: sources/theta001_cp_witness.json
+    weak_leakage_artifact: sources/theta001_bridge_closure.json
+    eft_bridge_artifact: sources/theta001_bridge_closure.json
+    skeptic_review_artifact: sources/theta001_skeptic_review.json
+    skeptic_model_diversity_required: true
+    skeptic_verdict: PASS_WITH_LIMITS
+statement: >
+  Define a COG CP map as orientation reversal plus complex conjugation on C x O.
+  The Fano sign table is structurally balanced (21 positive / 21 negative over all
+  ordered distinct pairs; signed sum = 0), and the update-rule action functional is
+  invariant under this map. This structural result is consistent with theta_QCD = 0
+  and provides a symmetry-forcing argument; it does not constitute a full continuum
+  EFT derivation of the theta_QCD value. This claim is scoped as structure_first.
+closure_scope: structure_first
+
+lean_file: CausalGraphTheory/ThetaQCD.lean
+lean_theorems:
+  - CausalGraph.cpMap_involution
+  - CausalGraph.orientationFlip_preserves_incidence
+  - CausalGraph.fano_sign_pos_count_eq_21
+  - CausalGraph.fano_sign_neg_count_eq_21
+  - CausalGraph.fanoSignOrderedSum_zero
+  - CausalGraph.theta_qcd_forced_zero_if_cp_invariant
+python_test: calc/test_theta001_cp_invariant.py
+python_check: calc/test_theta001_bridge_closure.py
+simulation_records:
+  - sources/theta001_cp_witness.json
+  - sources/theta001_cp_witness.md
+  - sources/theta001_bridge_closure.json
+  - sources/theta001_bridge_closure.md
+
+gates:
+  - id: gate_1
+    description: >
+      Lean file CausalGraphTheory/ThetaQCD.lean defines CP map primitives,
+      orientation reversal closure, and exact Fano sign-balance theorems for invariance witnesses.
+    done: true
+    lean_target:
+      file: CausalGraphTheory/ThetaQCD.lean
+      theorems:
+        - CausalGraph.cpMap_involution
+        - CausalGraph.orientationFlip_preserves_incidence
+        - CausalGraph.fano_sign_pos_count_eq_21
+        - CausalGraph.fano_sign_neg_count_eq_21
+        - CausalGraph.fanoSignOrderedSum_zero
+        - CausalGraph.theta_qcd_forced_zero_if_cp_invariant
+
+  - id: gate_2
+    description: >
+      Python verifier calc/test_theta001_cp_invariant.py checks deterministic
+      invariance witnesses on predeclared Fano triples and update-rule traces.
+      Artifact witness is emitted by calc/build_theta001_witness.py.
+    done: true
+    python_target:
+      file: calc/test_theta001_cp_invariant.py
+      checks:
+        - cp_involution_true
+        - orientation_reversal_closed_on_fano_triples
+        - fano_sign_balance_is_exactly_21_21
+        - cp_dual_trace_relation_holds
+        - cp_weighted_trace_delta_zero
+        - cp_invariant_trace_delta_zero
+        - weak_leakage_strong_residual_zero_deep_cone
+
+  - id: gate_3
+    description: >
+      Claim promotion requires preregistered falsification conditions and at
+      least one independent skeptic review report.
+    done: true
+
+depends_on:
+  - FANO-001
+  - GAUGE-001
+  - RFC-070
+  - RFC-078
+  - RFC-083
+
+notes:
+  - "Lean and Python closure witnesses are implemented; deterministic source artifacts are generated."
+  - "No physical-value promotion allowed before bridge assumptions are independently scrutinized."
+  - "Independent skeptic red-team review recorded with PASS_WITH_LIMITS and explicit weak-leakage boundary."
+
+blocked_reason: ''
+
+derivation_status: bridge_assumed
+bridge_assumptions:
+  - "The exact CP-invariance of the purely strong-sector (color plane) update traces survives coupling to weak-sector (vacuum-axis) projections without generating a non-zero CP-odd residual."
+  - "The discrete CP-odd residual is hypothesized to serve as a structural proxy for the continuum theta_QCD * epsilon(F,F_tilde) topological term in the macroscopic limit. This correspondence is a bridge assumption and has NOT been proved. Closing the bridge requires: (a) a locked map from the COG CP map to the SM CP transformation via explicit group-theoretic identification, and (b) a UV-to-IR RG argument that the discrete symmetry survives the integration producing F*F_tilde."
+
+falsification_condition: >
+  Structural falsification: introducing a known CP-violating weak-sector motif
+  (for example a phase-shifted CKM transport operator) into the lightcone
+  microstate generates a non-zero CP-odd residual in purely strong-sector
+  color traces after N > 10 deterministic updates.
+  Bridge falsification: a peer-reviewed argument or explicit construction
+  demonstrating that discrete Fano sign-balance does NOT imply theta_QCD = 0
+  in the continuum limit, or that the COG CP map fails to correspond to the
+  SM CP operator under any valid group-theoretic identification.
+
+falsification_attempts: []

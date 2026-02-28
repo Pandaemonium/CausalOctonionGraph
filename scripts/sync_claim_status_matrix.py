@@ -152,6 +152,21 @@ CLAIM_BACKFILL: dict[str, dict[str, Any]] = {
             "CausalGraphTheory/GaugeGroup.lean",
         ],
     },
+    "THETA-001": {
+        "motif_id": "cp_invariance_theta_structural_v1",
+        "owner_rfc": "rfc/RFC-083_THETA_Structure_First_Bridge_Contract.md",
+        "projection_sensitivity": "sensitive",
+        "battery_artifacts": [
+            "CausalGraphTheory/ThetaQCD.lean",
+            "CausalGraphTheory/ThetaEFTBridge.lean",
+            "calc/test_theta001_cp_invariant.py",
+            "calc/test_theta001_witness_artifact.py",
+            "calc/test_theta001_bridge_closure.py",
+            "sources/theta001_cp_witness.json",
+            "sources/theta001_bridge_closure.json",
+            "sources/theta001_skeptic_review.json",
+        ],
+    },
 }
 
 

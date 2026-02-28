@@ -2,6 +2,8 @@
 
 You can directly help COG by running deterministic world-code simulations and sharing outputs.
 
+See also: [Standard Model Free Parameters: First-Principles Derivation Table](/web/pages/sm_parameter_derivation_table)
+
 This page gives the shortest path to:
 1. download `Python_code` and/or `Lean_code`,
 2. generate canonical full-lightcone microstates,

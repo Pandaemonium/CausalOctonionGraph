@@ -1,6 +1,6 @@
 schema_version: 2.1.0
-generated_at_utc: '2026-02-27T19:27:46.828042Z'
-row_count: 34
+generated_at_utc: '2026-02-28T01:45:41.424076Z'
+row_count: 37
 rows:
   ALG:
     claim_id: ALG
@@ -266,7 +266,7 @@ rows:
     - co_witt_basis.yml
   ALPHA-001:
     claim_id: ALPHA-001
-    status: stub
+    status: partial
     lean_artifacts: []
     python_artifacts: []
     battery_artifacts:
@@ -279,10 +279,12 @@ rows:
     equivalence_mode: none
     equivalence_artifact: ''
     evidence_level: hypothesis
-    derivation_status: untested
-    bridge_assumptions: []
-    falsification_condition: Claim is falsified if deterministic replayable evidence contradicts the stated prediction/constraint.
-    last_verified_at: '2026-02-27T18:26:50.641648Z'
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - The 1/49 result is an upper-bound proxy, not a closed IR derivation of physical alpha.
+    - Bridge from UV combinatorics to IR measured alpha requires a separate running mechanism.
+    falsification_condition: Claim is falsified if the proved 1/49 upper bound or replayable verification artifacts fail.
+    last_verified_at: '2026-02-28T00:21:40.225974Z'
     owner_rfc: rfc/ALPHA-001_Closure_Tasklist.md
     notes: source=ALPHA-001.yml | aliases=ALPHA-001.yml,alpha_fine_structure.yml | backfill=priority_v1
     confinement_relevant: false
@@ -311,23 +313,34 @@ rows:
     - alpha_fine_structure.yml
   ANOM-001:
     claim_id: ANOM-001
-    status: stub
-    lean_artifacts: []
+    status: partial
+    lean_artifacts:
+    - CausalGraphTheory/AnomalyCancellation.lean
+    - linear_anomaly_cancels
+    - cubic_anomaly_cancels
+    - anomaly_free
     python_artifacts:
-    - calc/test_anomaly.py
+    - calc/test_anomaly_check.py
     battery_artifacts:
-    - calc/test_anomaly.py
+    - CausalGraphTheory/AnomalyCancellation.lean
+    - anomaly_free
+    - calc/test_anomaly_check.py
+    - cubic_anomaly_cancels
+    - linear_anomaly_cancels
     motif_id: unassigned
     rule_profile: default_multiplicative_markov
     pi_obs_profile: with_sector
     projection_sensitivity: unknown
     equivalence_mode: none
     equivalence_artifact: ''
-    evidence_level: python_verified
-    derivation_status: untested
-    bridge_assumptions: []
-    falsification_condition: Claim is falsified if deterministic tests contradict the stated claim conditions.
-    last_verified_at: '2026-02-27T18:47:58.878658Z'
+    evidence_level: mixed:lean_proved+python_verified
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - Q_num assignment is declared input, not inferred from Q_proj or raw state coefficients.
+    - Cubic cancellation requires inclusion of the dual ideal sector.
+    falsification_condition: Claim is falsified if deterministic replay fails to reproduce Tr[Q_num]=0 on the primary ideal
+      or fails to reproduce combined cubic cancellation across primary + dual sectors.
+    last_verified_at: '2026-02-28T00:32:44.137980Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=anomaly_cancellation.yml
     confinement_relevant: false
@@ -564,6 +577,51 @@ rows:
     source_files:
     - CFS-003.yml
     - vacuum_symmetry_from_octonions.yml
+  CHARGE-DERIVATION-001:
+    claim_id: CHARGE-DERIVATION-001
+    status: active_hypothesis
+    lean_artifacts: []
+    python_artifacts:
+    - calc/test_anomaly.py
+    battery_artifacts:
+    - calc/test_anomaly.py
+    motif_id: unassigned
+    rule_profile: default_multiplicative_markov
+    pi_obs_profile: with_sector
+    projection_sensitivity: unknown
+    equivalence_mode: none
+    equivalence_artifact: ''
+    evidence_level: python_verified
+    derivation_status: untested
+    bridge_assumptions: []
+    falsification_condition: Claim is falsified if no deterministic gauge-invariant mapping from COG state data to the full
+      RH+dual charge pattern can satisfy preregistered acceptance tests.
+    last_verified_at: '2026-02-28T00:32:53.912557Z'
+    owner_rfc: rfc/RFC-041.md
+    notes: source=CHARGE-DERIVATION-001.yml
+    confinement_relevant: false
+    confinement_gate_status: not_applicable
+    confinement_artifact: ''
+    ensemble_policy_id: ''
+    spin_sensitive: false
+    spin_mode: none
+    spin_artifact: ''
+    spin_sensitivity: unknown
+    scheduler_mode: snapshot_sync_v1
+    scheduler_profile_version: v1
+    many_body_relevant: false
+    pair_extraction_mode: not_applicable
+    reduction_mode: none
+    reduction_horizon: 0
+    reduction_artifact_ref: ''
+    physical_units_relevant: false
+    calibration_mode: native_only
+    scale_profile_id: ''
+    uncertainty_relevant: false
+    entropy_functional_id: ''
+    entropy_artifact_ref: ''
+    source_files:
+    - CHARGE-DERIVATION-001.yml
   DAG-001:
     claim_id: DAG-001
     status: partial
@@ -1104,8 +1162,9 @@ rows:
     evidence_level: hypothesis
     derivation_status: untested
     bridge_assumptions: []
-    falsification_condition: Claim is falsified if deterministic replayable evidence contradicts the stated prediction/constraint.
-    last_verified_at: '2026-02-26T23:53:24.976518Z'
+    falsification_condition: Claim is falsified if deterministic reruns fail to reproduce declared Koide algebra gates under
+      locked conventions.
+    last_verified_at: '2026-02-28T00:22:14.850296Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=KOIDE-001.yml
     confinement_relevant: false
@@ -1131,6 +1190,52 @@ rows:
     entropy_artifact_ref: ''
     source_files:
     - KOIDE-001.yml
+  KOIDE-HEAWOOD-001:
+    claim_id: KOIDE-HEAWOOD-001
+    status: active_hypothesis
+    lean_artifacts: []
+    python_artifacts:
+    - calc/test_koide_heawood.py
+    battery_artifacts:
+    - calc/test_koide_heawood.py
+    motif_id: unassigned
+    rule_profile: default_multiplicative_markov
+    pi_obs_profile: minimal
+    projection_sensitivity: insensitive
+    equivalence_mode: none
+    equivalence_artifact: ''
+    evidence_level: python_verified
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - Secondary Heawood mode can be interpreted as the Koide B/A spectral scale.
+    falsification_condition: Falsified if the canonical Heawood construction from locked Fano incidence does not produce the
+      expected {+/-3, +/-sqrt(2)} spectrum, or if the claimed Koide bridge cannot be made gauge/observable-map consistent.
+    last_verified_at: '2026-02-28T00:52:06.061535Z'
+    owner_rfc: rfc/RFC-076.md
+    notes: source=KOIDE-HEAWOOD-001.yml
+    confinement_relevant: false
+    confinement_gate_status: not_applicable
+    confinement_artifact: ''
+    ensemble_policy_id: ''
+    spin_sensitive: false
+    spin_mode: none
+    spin_artifact: ''
+    spin_sensitivity: unknown
+    scheduler_mode: snapshot_sync_v1
+    scheduler_profile_version: v1
+    many_body_relevant: false
+    pair_extraction_mode: not_applicable
+    reduction_mode: none
+    reduction_horizon: 0
+    reduction_artifact_ref: ''
+    physical_units_relevant: false
+    calibration_mode: native_only
+    scale_profile_id: ''
+    uncertainty_relevant: false
+    entropy_functional_id: ''
+    entropy_artifact_ref: ''
+    source_files:
+    - KOIDE-HEAWOOD-001.yml
   KOIDE_EXACTNESS:
     claim_id: KOIDE_EXACTNESS
     status: stub
@@ -1146,8 +1251,8 @@ rows:
     evidence_level: hypothesis
     derivation_status: untested
     bridge_assumptions: []
-    falsification_condition: Claim is falsified if deterministic replayable evidence contradicts the stated prediction/constraint.
-    last_verified_at: '2026-02-27T02:51:51.812789Z'
+    falsification_condition: Claim is falsified if any listed exactness gate is not replayable or deterministic.
+    last_verified_at: '2026-02-28T00:22:14.887490Z'
     owner_rfc: rfc/MASTER_IMPLEMENTATION_PLAN_V2.md
     notes: source=koide_exactness.yml
     confinement_relevant: false
@@ -1177,7 +1282,8 @@ rows:
     claim_id: LEPTON-001
     status: active_hypothesis
     lean_artifacts: []
-    python_artifacts: []
+    python_artifacts:
+    - calc/furey_electron_orbit.py
     battery_artifacts:
     - calc/test_furey_electron_orbit.py
     - CausalGraphTheory/LeptonOrbits.lean
@@ -1187,11 +1293,12 @@ rows:
     projection_sensitivity: unknown
     equivalence_mode: none
     equivalence_artifact: ''
-    evidence_level: hypothesis
+    evidence_level: python_verified
     derivation_status: untested
     bridge_assumptions: []
-    falsification_condition: Claim is falsified if deterministic replayable evidence contradicts the stated prediction/constraint.
-    last_verified_at: '2026-02-27T06:50:29.597913Z'
+    falsification_condition: Claim is falsified if deterministic replay of the 1-3-3 orbit partition or C_e=4 checks fails
+      under locked conventions.
+    last_verified_at: '2026-02-28T00:22:02.130992Z'
     owner_rfc: rfc/RFC-034_Electron_Mass_Mechanism.md
     notes: source=LEPTON-001.yml | aliases=LEPTON-001.yml,muon_mass.yml | backfill=priority_v1
     confinement_relevant: false
@@ -1248,7 +1355,7 @@ rows:
     - not_yet_documented_bridge_assumption
     falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
       stated prediction or constraint.
-    last_verified_at: '2026-02-27T18:47:58.941943Z'
+    last_verified_at: '2026-02-28T00:44:01.944719Z'
     owner_rfc: rfc/RFC-045_Energy_Mass_Observable_Unification.md
     notes: source=mass_tick_frequency.yml | backfill=priority_v1
     confinement_relevant: false
@@ -1567,7 +1674,7 @@ rows:
     - not_yet_documented_bridge_assumption
     falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
       stated prediction or constraint.
-    last_verified_at: '2026-02-27T18:47:59.027921Z'
+    last_verified_at: '2026-02-28T00:43:58.625009Z'
     owner_rfc: rfc/STRONG-001_Closure_Tasklist.md
     notes: source=STRONG-001.yml | backfill=priority_v1
     confinement_relevant: false
@@ -1636,6 +1743,80 @@ rows:
     entropy_artifact_ref: ''
     source_files:
     - alpha_strong.yml
+  THETA-001:
+    claim_id: THETA-001
+    status: supported_bridge
+    lean_artifacts:
+    - CausalGraphTheory/ThetaQCD.lean
+    - CausalGraph.cpMap_involution
+    - CausalGraph.orientationFlip_preserves_incidence
+    - CausalGraph.fano_sign_pos_count_eq_21
+    - CausalGraph.fano_sign_neg_count_eq_21
+    - CausalGraph.fanoSignOrderedSum_zero
+    - CausalGraph.theta_qcd_forced_zero_if_cp_invariant
+    python_artifacts:
+    - calc/test_theta001_cp_invariant.py
+    - calc/test_theta001_witness_artifact.py
+    - sources/theta001_cp_witness.json
+    - sources/theta001_cp_witness.md
+    battery_artifacts:
+    - CausalGraph.cpMap_involution
+    - CausalGraph.fanoSignOrderedSum_zero
+    - CausalGraph.fano_sign_neg_count_eq_21
+    - CausalGraph.fano_sign_pos_count_eq_21
+    - CausalGraph.orientationFlip_preserves_incidence
+    - CausalGraph.theta_qcd_forced_zero_if_cp_invariant
+    - CausalGraphTheory/ThetaQCD.lean
+    - calc/test_theta001_cp_invariant.py
+    - calc/test_theta001_witness_artifact.py
+    - sources/theta001_cp_witness.json
+    - sources/theta001_cp_witness.md
+    motif_id: unassigned
+    rule_profile: default_multiplicative_markov
+    pi_obs_profile: with_sector
+    projection_sensitivity: sensitive
+    equivalence_mode: none
+    equivalence_artifact: ''
+    evidence_level: mixed:lean_proved+python_verified
+    derivation_status: bridge_assumed
+    bridge_assumptions:
+    - The exact CP-invariance of the purely strong-sector (color plane) update traces survives coupling to weak-sector (vacuum-axis)
+      projections without generating a non-zero CP-odd residual.
+    - 'The discrete CP-odd residual is hypothesized to serve as a structural proxy for the continuum theta_QCD * epsilon(F,F_tilde)
+      topological term in the macroscopic limit. This correspondence is a bridge assumption and has NOT been proved. Closing
+      the bridge requires: (a) a locked map from the COG CP map to the SM CP transformation via explicit group-theoretic identification,
+      and (b) a UV-to-IR RG argument that the discrete symmetry survives the integration producing F*F_tilde.'
+    falsification_condition: 'Structural falsification: introducing a known CP-violating weak-sector motif (for example a
+      phase-shifted CKM transport operator) into the lightcone microstate generates a non-zero CP-odd residual in purely strong-sector
+      color traces after N > 10 deterministic updates. Bridge falsification: a peer-reviewed argument or explicit construction
+      demonstrating that discrete Fano sign-balance does NOT imply theta_QCD = 0 in the continuum limit, or that the COG CP
+      map fails to correspond to the SM CP operator under any valid group-theoretic identification.'
+    last_verified_at: '2026-02-28T01:45:09.257165Z'
+    owner_rfc: rfc/RFC-070.md
+    notes: source=THETA-001.yml
+    confinement_relevant: false
+    confinement_gate_status: not_applicable
+    confinement_artifact: ''
+    ensemble_policy_id: ''
+    spin_sensitive: false
+    spin_mode: none
+    spin_artifact: ''
+    spin_sensitivity: unknown
+    scheduler_mode: snapshot_sync_v1
+    scheduler_profile_version: v1
+    many_body_relevant: false
+    pair_extraction_mode: not_applicable
+    reduction_mode: none
+    reduction_horizon: 0
+    reduction_artifact_ref: ''
+    physical_units_relevant: false
+    calibration_mode: native_only
+    scale_profile_id: ''
+    uncertainty_relevant: false
+    entropy_functional_id: ''
+    entropy_artifact_ref: ''
+    source_files:
+    - THETA-001.yml
   TICK-001:
     claim_id: TICK-001
     status: partial
@@ -1791,7 +1972,7 @@ rows:
     - not_yet_documented_bridge_assumption
     falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
       stated prediction or constraint.
-    last_verified_at: '2026-02-27T18:47:59.091638Z'
+    last_verified_at: '2026-02-28T01:24:37.897459Z'
     owner_rfc: rfc/RFC-029_Weinberg_Angle_Gap_Closure.md
     notes: source=weinberg_angle.yml | backfill=priority_v1
     confinement_relevant: false

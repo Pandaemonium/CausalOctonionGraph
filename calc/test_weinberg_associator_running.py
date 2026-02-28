@@ -38,6 +38,7 @@ def test_associator_sanity_examples() -> None:
 
 def test_control_vs_mixed_seq_signature() -> None:
     payload = run_all()
+    assert payload["observable_bounds"] == {"sin2_min": 0.0, "sin2_max": 0.5}
     rows = {row["policy_id"]: row for row in payload["rows"]}
 
     control = rows["a13_associative_control_rollout"]["summary_seq"]
@@ -81,3 +82,14 @@ def test_source_order_perturbation_on_mixed_policy() -> None:
 
     assert asc["summary_seq"]["delta_sin2_assoc_exclusive"] < 0.0
     assert desc["summary_seq"]["delta_sin2_assoc_exclusive"] < 0.0
+
+
+def test_all_series_values_stay_in_preregistered_bounds() -> None:
+    payload = run_all()
+    lo = float(payload["observable_bounds"]["sin2_min"])
+    hi = float(payload["observable_bounds"]["sin2_max"])
+    for row in payload["rows"]:
+        for series_name in ("series_seq", "series_empirical_avg"):
+            for point in row[series_name]:
+                assert lo <= float(point["sin2_assoc_exclusive"]) <= hi
+                assert lo <= float(point["sin2_assoc_inclusive"]) <= hi

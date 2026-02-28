@@ -1,6 +1,6 @@
 {
   "schema_version": "qn_claim_ledger_v1",
-  "generated_at_utc": "2026-02-27T19:27:47.411937Z",
+  "generated_at_utc": "2026-02-28T00:58:41.337438Z",
   "generated_by": "calc.derive_sm_quantum_numbers",
   "source_script": "calc\\derive_sm_quantum_numbers.py",
   "source_script_sha256": "a121e9e00f17e4310a806f0a2d1e3da503ec68fbb52331db25c31f056baa38a2",

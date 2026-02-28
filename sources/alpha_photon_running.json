@@ -1,23 +1,33 @@
 {
-  "conditions_checksum": "3c4cd3b4dc19b37e2b61a97ee1d6bc73bd2e85a12e7c5db45afe781c6bf00c18",
-  "generated_at_utc": "2026-02-27T14:41:50.669847Z",
-  "replay_hash": "c910e0216b1f0b44f16722fb5758d6d14395f29d2cf851886d1e094665e78d01",
+  "conditions_checksum": "8eefb1917b595031c68850ec49b0bc2a3fa2f809a2edc9f823b9ac9d4cea26b6",
+  "generated_at_utc": "2026-02-28T00:25:41.884617Z",
+  "observable_contract": {
+    "bounded_map": "x_over_one_plus_x",
+    "control_subtraction_rule": "nonnegative_subtraction",
+    "require_unit_interval": true
+  },
+  "replay_hash": "975f2fbee7003529161f06af7704a14101888a4470fe7863f3a21a3a0f6982a0",
   "rows": [
     {
-      "alpha_em_mad": 0.625,
-      "alpha_em_median": 2.0,
+      "alpha_em_mad": 0.06060606060606066,
+      "alpha_em_median": 0.6666666666666666,
       "depth_horizon": 8,
       "initial_edge_distance": 1,
       "phase_offsets": [
         0,
         1,
         2,
-        3
+        3,
+        4,
+        5,
+        6,
+        7
       ],
       "phase_results": [
         {
           "alpha_control": null,
           "alpha_em": null,
+          "alpha_em_raw_delta": null,
           "alpha_signal": null,
           "phase_offset": 0,
           "signal_alpha_sample_count": 0,
@@ -26,7 +36,8 @@
         },
         {
           "alpha_control": null,
-          "alpha_em": 2.0,
+          "alpha_em": 0.6666666666666666,
+          "alpha_em_raw_delta": 2.0,
           "alpha_signal": 2.0,
           "phase_offset": 1,
           "signal_alpha_sample_count": 1,
@@ -35,7 +46,8 @@
         },
         {
           "alpha_control": null,
-          "alpha_em": 2.6666666666666665,
+          "alpha_em": 0.7272727272727273,
+          "alpha_em_raw_delta": 2.6666666666666665,
           "alpha_signal": 2.6666666666666665,
           "phase_offset": 2,
           "signal_alpha_sample_count": 1,
@@ -44,37 +56,87 @@
         },
         {
           "alpha_control": 0.625,
-          "alpha_em": 1.375,
+          "alpha_em": 0.5789473684210527,
+          "alpha_em_raw_delta": 1.375,
           "alpha_signal": 2.0,
           "phase_offset": 3,
           "signal_alpha_sample_count": 1,
           "signal_event_count": 1,
           "signal_replay_hash": "9196190f121f110fdc18ec4c5572bdd174f2f4aad32ebebde2df7d98f44c47d3"
+        },
+        {
+          "alpha_control": null,
+          "alpha_em": null,
+          "alpha_em_raw_delta": null,
+          "alpha_signal": null,
+          "phase_offset": 4,
+          "signal_alpha_sample_count": 0,
+          "signal_event_count": 0,
+          "signal_replay_hash": "4c2b869c00abc3444bed527a4aeed31f9f53336c6c8c9a3c96b1e17c98652177"
+        },
+        {
+          "alpha_control": null,
+          "alpha_em": 0.6666666666666666,
+          "alpha_em_raw_delta": 2.0,
+          "alpha_signal": 2.0,
+          "phase_offset": 5,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "c6a679d09857f4656064f2834653779eda88d004b6c77334133b4e6524aa98f0"
+        },
+        {
+          "alpha_control": null,
+          "alpha_em": 0.7272727272727273,
+          "alpha_em_raw_delta": 2.6666666666666665,
+          "alpha_signal": 2.6666666666666665,
+          "phase_offset": 6,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "e4d5e6f357be2e825e979539ad241db2bfcd60947e152be5757ac47f62a2cf7f"
+        },
+        {
+          "alpha_control": 0.625,
+          "alpha_em": 0.5789473684210527,
+          "alpha_em_raw_delta": 1.375,
+          "alpha_signal": 2.0,
+          "phase_offset": 7,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "a76ed859b2b4226c1eeaa53a8ca3c4a1bee6ffd698665db7256355179c4c9fa2"
         }
       ],
-      "phase_valid_count": 3,
+      "phase_valid_count": 6,
       "signal_replay_hashes": [
         "add8d7a67ff8420437f387d5747d261fc50551e1d71baa910f90fb0d0c5aa376",
         "91576d8c8e829b0a1682f85e75cd55203e3e8f52643ef7945a45fa950f9ace3c",
         "764bb03f95e2f9c114e2ad27b6237cc071443fba60baff537816a9b360c4e5a2",
-        "9196190f121f110fdc18ec4c5572bdd174f2f4aad32ebebde2df7d98f44c47d3"
+        "9196190f121f110fdc18ec4c5572bdd174f2f4aad32ebebde2df7d98f44c47d3",
+        "4c2b869c00abc3444bed527a4aeed31f9f53336c6c8c9a3c96b1e17c98652177",
+        "c6a679d09857f4656064f2834653779eda88d004b6c77334133b4e6524aa98f0",
+        "e4d5e6f357be2e825e979539ad241db2bfcd60947e152be5757ac47f62a2cf7f",
+        "a76ed859b2b4226c1eeaa53a8ca3c4a1bee6ffd698665db7256355179c4c9fa2"
       ]
     },
     {
-      "alpha_em_mad": 0.28000000000000025,
-      "alpha_em_median": -5.88,
+      "alpha_em_mad": 0.0,
+      "alpha_em_median": 0.0,
       "depth_horizon": 9,
       "initial_edge_distance": 3,
       "phase_offsets": [
         0,
         1,
         2,
-        3
+        3,
+        4,
+        5,
+        6,
+        7
       ],
       "phase_results": [
         {
           "alpha_control": 7.0,
           "alpha_em": null,
+          "alpha_em_raw_delta": null,
           "alpha_signal": null,
           "phase_offset": 0,
           "signal_alpha_sample_count": 0,
@@ -83,7 +145,8 @@
         },
         {
           "alpha_control": 7.0,
-          "alpha_em": -6.16,
+          "alpha_em": 0.0,
+          "alpha_em_raw_delta": 0.0,
           "alpha_signal": 0.84,
           "phase_offset": 1,
           "signal_alpha_sample_count": 1,
@@ -92,7 +155,8 @@
         },
         {
           "alpha_control": 7.0,
-          "alpha_em": -5.88,
+          "alpha_em": 0.0,
+          "alpha_em_raw_delta": 0.0,
           "alpha_signal": 1.12,
           "phase_offset": 2,
           "signal_alpha_sample_count": 1,
@@ -101,37 +165,87 @@
         },
         {
           "alpha_control": null,
-          "alpha_em": 0.84,
+          "alpha_em": 0.4565217391304348,
+          "alpha_em_raw_delta": 0.84,
           "alpha_signal": 0.84,
           "phase_offset": 3,
           "signal_alpha_sample_count": 1,
           "signal_event_count": 1,
           "signal_replay_hash": "ead8ab6a4f612ddf0651eb14e78170d12b3195d55a59defd6ba4bbeb11f98c84"
+        },
+        {
+          "alpha_control": 7.0,
+          "alpha_em": null,
+          "alpha_em_raw_delta": null,
+          "alpha_signal": null,
+          "phase_offset": 4,
+          "signal_alpha_sample_count": 0,
+          "signal_event_count": 0,
+          "signal_replay_hash": "9fc14c5e955abf45fee0cb6dd383b52df0a4f8d3b323e8d72340e282424cb43c"
+        },
+        {
+          "alpha_control": 7.0,
+          "alpha_em": 0.0,
+          "alpha_em_raw_delta": 0.0,
+          "alpha_signal": 0.84,
+          "phase_offset": 5,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "76eaa150afec5214dbd6286c7abf589ad000fec0ef495d3b75bc404bc2f90d28"
+        },
+        {
+          "alpha_control": 7.0,
+          "alpha_em": 0.0,
+          "alpha_em_raw_delta": 0.0,
+          "alpha_signal": 1.12,
+          "phase_offset": 6,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "157fe445d5b11b9157b41a912ab737695380bcf2f60eb879305b4b6e333b4cb0"
+        },
+        {
+          "alpha_control": null,
+          "alpha_em": 0.4565217391304348,
+          "alpha_em_raw_delta": 0.84,
+          "alpha_signal": 0.84,
+          "phase_offset": 7,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "1b82a1d00b6dbf664da6c326a771fc581fb54e539b45bc6344f47e696181ca22"
         }
       ],
-      "phase_valid_count": 3,
+      "phase_valid_count": 6,
       "signal_replay_hashes": [
         "ef875993d69a49c076502f18e613674c867a82d5ca27814198a56d4f93116713",
         "4ccede16406e5d276684b5a19c639d8490eaa3f5e000a1212083bd42e25ec24c",
         "2ec09c0f67a1c11d3d8eb5f5a7b1329d2b9f3a691518bc00ea6d6895f9783335",
-        "ead8ab6a4f612ddf0651eb14e78170d12b3195d55a59defd6ba4bbeb11f98c84"
+        "ead8ab6a4f612ddf0651eb14e78170d12b3195d55a59defd6ba4bbeb11f98c84",
+        "9fc14c5e955abf45fee0cb6dd383b52df0a4f8d3b323e8d72340e282424cb43c",
+        "76eaa150afec5214dbd6286c7abf589ad000fec0ef495d3b75bc404bc2f90d28",
+        "157fe445d5b11b9157b41a912ab737695380bcf2f60eb879305b4b6e333b4cb0",
+        "1b82a1d00b6dbf664da6c326a771fc581fb54e539b45bc6344f47e696181ca22"
       ]
     },
     {
-      "alpha_em_mad": 0.18367346938775597,
-      "alpha_em_median": -8.26530612244898,
+      "alpha_em_mad": 0.0,
+      "alpha_em_median": 0.0,
       "depth_horizon": 11,
       "initial_edge_distance": 5,
       "phase_offsets": [
         0,
         1,
         2,
-        3
+        3,
+        4,
+        5,
+        6,
+        7
       ],
       "phase_results": [
         {
           "alpha_control": 9.0,
           "alpha_em": null,
+          "alpha_em_raw_delta": null,
           "alpha_signal": null,
           "phase_offset": 0,
           "signal_alpha_sample_count": 0,
@@ -140,7 +254,8 @@
         },
         {
           "alpha_control": 9.0,
-          "alpha_em": -8.448979591836736,
+          "alpha_em": 0.0,
+          "alpha_em_raw_delta": 0.0,
           "alpha_signal": 0.5510204081632653,
           "phase_offset": 1,
           "signal_alpha_sample_count": 1,
@@ -149,7 +264,8 @@
         },
         {
           "alpha_control": 9.0,
-          "alpha_em": -8.26530612244898,
+          "alpha_em": 0.0,
+          "alpha_em_raw_delta": 0.0,
           "alpha_signal": 0.7346938775510204,
           "phase_offset": 2,
           "signal_alpha_sample_count": 1,
@@ -158,33 +274,187 @@
         },
         {
           "alpha_control": null,
-          "alpha_em": 0.5510204081632653,
+          "alpha_em": 0.35526315789473684,
+          "alpha_em_raw_delta": 0.5510204081632653,
           "alpha_signal": 0.5510204081632653,
           "phase_offset": 3,
           "signal_alpha_sample_count": 1,
           "signal_event_count": 1,
           "signal_replay_hash": "4f2b99e0e7337196fa5048942e9731686967651b481b6e0e4ef4117f60b50e7b"
+        },
+        {
+          "alpha_control": 9.0,
+          "alpha_em": null,
+          "alpha_em_raw_delta": null,
+          "alpha_signal": null,
+          "phase_offset": 4,
+          "signal_alpha_sample_count": 0,
+          "signal_event_count": 0,
+          "signal_replay_hash": "21957af38feb4c2b637af49fffd3d35ee685ea226b727cdc8eda843929e44aa2"
+        },
+        {
+          "alpha_control": 9.0,
+          "alpha_em": 0.0,
+          "alpha_em_raw_delta": 0.0,
+          "alpha_signal": 0.5510204081632653,
+          "phase_offset": 5,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "062b1c80a22640a70f46e40228d18fedffcafe47e7a22c4a8e627daa10df14a9"
+        },
+        {
+          "alpha_control": 9.0,
+          "alpha_em": 0.0,
+          "alpha_em_raw_delta": 0.0,
+          "alpha_signal": 0.7346938775510204,
+          "phase_offset": 6,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "4ed84c4c4602275d12ac679b3e6ae6445b8873e2139060ba6caaef088b5330c0"
+        },
+        {
+          "alpha_control": null,
+          "alpha_em": 0.35526315789473684,
+          "alpha_em_raw_delta": 0.5510204081632653,
+          "alpha_signal": 0.5510204081632653,
+          "phase_offset": 7,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "3ec4ccff24486f15b7405f73e5651b26c219592f4329547bd1ef0b336ddd045c"
         }
       ],
-      "phase_valid_count": 3,
+      "phase_valid_count": 6,
       "signal_replay_hashes": [
         "2b55b9b10abfcb91f60efb60cd896721e8b5004ce228c849b1c1bc37ad260ce0",
         "10f7b7c5ed398ce71c0df49e362cb16ab1402c80364fa89d8ac5983da2e03165",
         "789acb129fac0372e4fe07155c40a0590ea755e4b123465be7528286ef17864a",
-        "4f2b99e0e7337196fa5048942e9731686967651b481b6e0e4ef4117f60b50e7b"
+        "4f2b99e0e7337196fa5048942e9731686967651b481b6e0e4ef4117f60b50e7b",
+        "21957af38feb4c2b637af49fffd3d35ee685ea226b727cdc8eda843929e44aa2",
+        "062b1c80a22640a70f46e40228d18fedffcafe47e7a22c4a8e627daa10df14a9",
+        "4ed84c4c4602275d12ac679b3e6ae6445b8873e2139060ba6caaef088b5330c0",
+        "3ec4ccff24486f15b7405f73e5651b26c219592f4329547bd1ef0b336ddd045c"
+      ]
+    },
+    {
+      "alpha_em_mad": 0.0,
+      "alpha_em_median": 0.0,
+      "depth_horizon": 13,
+      "initial_edge_distance": 7,
+      "phase_offsets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "phase_results": [
+        {
+          "alpha_control": 11.0,
+          "alpha_em": null,
+          "alpha_em_raw_delta": null,
+          "alpha_signal": null,
+          "phase_offset": 0,
+          "signal_alpha_sample_count": 0,
+          "signal_event_count": 0,
+          "signal_replay_hash": "00535f33f923aa5e3cd93601aba2f1644a50255b2419436baf820e2fbd57c916"
+        },
+        {
+          "alpha_control": 11.0,
+          "alpha_em": 0.0,
+          "alpha_em_raw_delta": 0.0,
+          "alpha_signal": 0.4074074074074074,
+          "phase_offset": 1,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "4951d9df3c6357d1cd6efe239c3ea3145e18cd877f5577a32702e78c19162c5f"
+        },
+        {
+          "alpha_control": 11.0,
+          "alpha_em": 0.0,
+          "alpha_em_raw_delta": 0.0,
+          "alpha_signal": 0.5432098765432098,
+          "phase_offset": 2,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "8a77ecb849f9a8260cfa2a07521c3cbd8fceaefbe7bf66896a6ec834e7b8bbcd"
+        },
+        {
+          "alpha_control": null,
+          "alpha_em": 0.28947368421052627,
+          "alpha_em_raw_delta": 0.4074074074074074,
+          "alpha_signal": 0.4074074074074074,
+          "phase_offset": 3,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "ef771616d47b38970f428df564a8a66189f3ae0d3e4dff5881bd78c01441df4a"
+        },
+        {
+          "alpha_control": 11.0,
+          "alpha_em": null,
+          "alpha_em_raw_delta": null,
+          "alpha_signal": null,
+          "phase_offset": 4,
+          "signal_alpha_sample_count": 0,
+          "signal_event_count": 0,
+          "signal_replay_hash": "f47393d97413ab17cb3aef05dea22a133ee2ba7d796ccc9b13d3f62f8b798cc5"
+        },
+        {
+          "alpha_control": 11.0,
+          "alpha_em": 0.0,
+          "alpha_em_raw_delta": 0.0,
+          "alpha_signal": 0.4074074074074074,
+          "phase_offset": 5,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "f01fbdc71ff95899ba6f494d320cc7a751027067912ae6f316af77b0c25689b6"
+        },
+        {
+          "alpha_control": 11.0,
+          "alpha_em": 0.0,
+          "alpha_em_raw_delta": 0.0,
+          "alpha_signal": 0.5432098765432098,
+          "phase_offset": 6,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "f536af32e15d94165961c89f270b8f25d21fa44c690280871aaeed5e140db292"
+        },
+        {
+          "alpha_control": null,
+          "alpha_em": 0.28947368421052627,
+          "alpha_em_raw_delta": 0.4074074074074074,
+          "alpha_signal": 0.4074074074074074,
+          "phase_offset": 7,
+          "signal_alpha_sample_count": 1,
+          "signal_event_count": 1,
+          "signal_replay_hash": "ae8e4bed445b827317e7217d45bb85b4f22cf25f81a0950e10d07a843bb2fe96"
+        }
+      ],
+      "phase_valid_count": 6,
+      "signal_replay_hashes": [
+        "00535f33f923aa5e3cd93601aba2f1644a50255b2419436baf820e2fbd57c916",
+        "4951d9df3c6357d1cd6efe239c3ea3145e18cd877f5577a32702e78c19162c5f",
+        "8a77ecb849f9a8260cfa2a07521c3cbd8fceaefbe7bf66896a6ec834e7b8bbcd",
+        "ef771616d47b38970f428df564a8a66189f3ae0d3e4dff5881bd78c01441df4a",
+        "f47393d97413ab17cb3aef05dea22a133ee2ba7d796ccc9b13d3f62f8b798cc5",
+        "f01fbdc71ff95899ba6f494d320cc7a751027067912ae6f316af77b0c25689b6",
+        "f536af32e15d94165961c89f270b8f25d21fa44c690280871aaeed5e140db292",
+        "ae8e4bed445b827317e7217d45bb85b4f22cf25f81a0950e10d07a843bb2fe96"
       ]
     }
   ],
   "schema_version": "alpha_photon_running_v1",
   "summary": {
-    "ir_alpha_em": -8.26530612244898,
-    "ir_distance": 5,
+    "ir_alpha_em": 0.0,
+    "ir_distance": 7,
     "mu_eff": 1.0,
-    "pooled_alpha_em_mad": 2.1156462585034013,
-    "pooled_alpha_em_median": 0.5510204081632653,
-    "pooled_relative_gap_to_target": 74.5096321481589,
+    "pooled_alpha_em_mad": 0.14473684210526314,
+    "pooled_alpha_em_median": 0.14473684210526314,
+    "pooled_relative_gap_to_target": 18.83415776211386,
     "target_alpha": 0.0072973525693,
-    "uv_alpha_em": 2.0,
+    "uv_alpha_em": 0.6666666666666666,
     "uv_distance": 1
   }
 }

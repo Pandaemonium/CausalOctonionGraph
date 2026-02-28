@@ -1,1 +1,24 @@
-id: LEPTON-001\nstatus: proved\ntitle: Lepton Orbit Partition — 1-3-3 Fano Structure\nstatement: The 7 Fano lines partition into a 1-3-3 orbit structure under the stabilizer of the electron quaternion subalgebra H⊂O, yielding exactly 3 lepton generations.\ngates:\n  - Gate A:\n      done: true\n      evidence: calc/furey_electron_orbit.py\n      description: C_e = 4 electron state gap, 26 tests passing\n  - Gate B:\n      done: true\n      evidence: CausalGraphTheory/LeptonOrbits.lean\n      description: 1-3-3 orbit partition proved\nlean_proof: CausalGraphTheory/LeptonOrbits.lean\npython_test: calc/furey_electron_orbit.py\nnotes:\n  - Goals A and B completed 2026-02-26. C_e = 4 universally confirmed. 1-3-3 Fano partition proved without sorry.\n
+﻿id: LEPTON-001
+title: Lepton Orbit Partition - 1-3-3 Fano Structure
+status: active_hypothesis
+statement: >
+  The 7 Fano lines partition into a 1-3-3 orbit structure under the stabilizer
+  of the electron quaternion subalgebra H subset O, yielding exactly 3 lepton generations.
+gates:
+  - id: gate_a
+    done: true
+    evidence: calc/furey_electron_orbit.py
+    description: C_e = 4 electron state gap, 26 tests passing.
+  - id: gate_b
+    done: true
+    evidence: CausalGraphTheory/LeptonOrbits.lean
+    description: 1-3-3 orbit partition proved.
+lean_proof: CausalGraphTheory/LeptonOrbits.lean
+python_test: calc/furey_electron_orbit.py
+notes:
+  - "Goals A and B completed on 2026-02-26: C_e = 4 and 1-3-3 partition proved."
+derivation_status: untested
+bridge_assumptions: []
+falsification_condition: >
+  Claim is falsified if deterministic replay of the 1-3-3 orbit partition or C_e=4
+  checks fails under locked conventions.

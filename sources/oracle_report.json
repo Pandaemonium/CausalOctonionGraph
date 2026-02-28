@@ -1,6 +1,6 @@
 {
   "schema_version": "oracle_report_v2",
-  "generated_at_utc": "2026-02-27T19:27:47.602359Z",
+  "generated_at_utc": "2026-02-28T00:58:41.525294Z",
   "comparison_count": 1,
   "hard_pass_count": 0,
   "soft_pass_count": 1,
@@ -25,9 +25,9 @@
   ],
   "action_events": [
     {
-      "event_id": "oracle_soft_pass_2026-02-27T19:27:47.602359Z_0",
+      "event_id": "oracle_soft_pass_2026-02-28T00:58:41.525294Z_0",
       "event_type": "oracle_soft_pass",
-      "created_at_utc": "2026-02-27T19:27:47.602359Z",
+      "created_at_utc": "2026-02-28T00:58:41.525294Z",
       "claim_id": "QN-006",
       "quantity": "sin2_theta_W_MZ",
       "expected": 0.23122,

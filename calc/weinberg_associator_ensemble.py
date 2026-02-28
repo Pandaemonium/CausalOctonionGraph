@@ -46,7 +46,26 @@ class EnsembleCondition:
 def load_condition_bundle(path: Path | None = None) -> Dict[str, object]:
     p = path or CONDITION_FILE_DEFAULT
     with p.open("r", encoding="utf-8") as f:
-        return json.load(f)
+        bundle: Dict[str, object] = json.load(f)
+    _validate_condition_bundle(bundle)
+    return bundle
+
+
+def _validate_condition_bundle(bundle: Dict[str, object]) -> None:
+    gov = bundle.get("governance")
+    if not isinstance(gov, dict):
+        raise ValueError("condition bundle governance block is required")
+    if gov.get("predeclared_only") is not True:
+        raise ValueError("governance.predeclared_only must be true")
+    if gov.get("no_output_driven_selection") is not True:
+        raise ValueError("governance.no_output_driven_selection must be true")
+    bounds = gov.get("observable_bounds")
+    if not isinstance(bounds, dict):
+        raise ValueError("governance.observable_bounds mapping is required")
+    lo = float(bounds.get("sin2_min", 0.0))
+    hi = float(bounds.get("sin2_max", 0.5))
+    if not (0.0 <= lo < hi <= 1.0):
+        raise ValueError(f"invalid sin2 bounds: min={lo}, max={hi}")
 
 
 def bundle_checksum(bundle: Dict[str, object]) -> str:
@@ -180,9 +199,9 @@ def _condition_summary(member_rows: Sequence[Dict[str, object]], ticks: int) -> 
     }
 
 
-def evaluate_condition(condition: EnsembleCondition, ticks: int) -> Dict[str, object]:
+def evaluate_condition(condition: EnsembleCondition, ticks: int, *, sin2_min: float, sin2_max: float) -> Dict[str, object]:
     members = _condition_members(condition)
-    rows = [simulate_policy(m, ticks=ticks) for m in members]
+    rows = [simulate_policy(m, ticks=ticks, sin2_min=sin2_min, sin2_max=sin2_max) for m in members]
     summary = _condition_summary(rows, ticks)
     return {
         "condition_id": condition.condition_id,
@@ -195,14 +214,18 @@ def evaluate_condition(condition: EnsembleCondition, ticks: int) -> Dict[str, ob
 def run_all(path: Path | None = None) -> Dict[str, object]:
     bundle = load_condition_bundle(path)
     ticks = int(bundle["ticks"])
+    bounds = bundle["governance"]["observable_bounds"]
+    sin2_min = float(bounds["sin2_min"])
+    sin2_max = float(bounds["sin2_max"])
     conditions = _parse_conditions(bundle)
-    rows = [evaluate_condition(c, ticks) for c in conditions]
+    rows = [evaluate_condition(c, ticks, sin2_min=sin2_min, sin2_max=sin2_max) for c in conditions]
     return {
         "rfc": str(bundle["rfc"]),
         "avenue": str(bundle["avenue"]),
         "target_scale": bundle["target"]["scale"],
         "target_sin2_theta_w": float(bundle["target"]["sin2_theta_w"]),
         "ticks": ticks,
+        "observable_bounds": {"sin2_min": sin2_min, "sin2_max": sin2_max},
         "condition_file": str((path or CONDITION_FILE_DEFAULT).name),
         "condition_checksum": bundle_checksum(bundle),
         "rows": rows,

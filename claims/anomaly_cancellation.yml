@@ -1,34 +1,43 @@
 id: ANOM-001
-title: Automatic Anomaly Cancellation
-statement: 'The algebraic structure of the 16-dimensional representation C x O
-
-  automatically satisfies the condition sum(Q_i) = 0 and sum(Q_i^3) = 0
-
-  for all gauge generators, cancelling the chiral anomalies.
-
-  '
-status: stub
+title: Anomaly Consistency Under Declared Q_num Assignment
+statement: >
+  Given the declared Witt-occupation charge assignment Q_num
+  (N=0 -> 0, N=1 -> +2/3, N=2 -> -1/3, N=3 -> -1),
+  the anomaly sums satisfy:
+    1) Tr[Q_num] = 0 on the primary 8-state ideal,
+    2) Tr[Q_num^3]_primary + Tr[Q_num^3]_dual = 0 on the combined theory.
+  This is a consistency result for the declared assignment, not a derivation
+  of quark/lepton charges from raw COG state coefficients.
+status: partial
 pi_obs_profile: with_sector
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
 profile_contrast_run: ''
 equivalence_mode: none
-lean_file: ''
-lean_theorems: []
-python_test: calc/test_anomaly.py
+lean_file: CausalGraphTheory/AnomalyCancellation.lean
+lean_theorems:
+  - linear_anomaly_cancels
+  - cubic_anomaly_cancels
+  - anomaly_free
+python_test: calc/test_anomaly_check.py
 depends_on:
 - GAUGE-001
+ - RFC-041
 literature:
 - 'Todorov (2019): Exceptional quantum algebra...'
 - 'Furey (2018): Generational structure...'
 notes: 'Standard Model anomaly cancellation usually requires careful balancing of
 
-  hypercharges. Here it should be a geometric identity.
-
-  Lean formalization file/theorems are not implemented yet.
+  hypercharges. The current closure is assignment-consistency only.
+  Charge derivation from state vectors is tracked separately in CHARGE-DERIVATION-001.
 
   '
 blocked_reason: ''
-derivation_status: untested
-bridge_assumptions: []
-falsification_condition: Claim is falsified if deterministic tests contradict the stated claim conditions.
+derivation_status: bridge_assumed
+bridge_assumptions:
+  - Q_num assignment is declared input, not inferred from Q_proj or raw state coefficients.
+  - Cubic cancellation requires inclusion of the dual ideal sector.
+falsification_condition: >
+  Claim is falsified if deterministic replay fails to reproduce Tr[Q_num]=0 on
+  the primary ideal or fails to reproduce combined cubic cancellation across
+  primary + dual sectors.

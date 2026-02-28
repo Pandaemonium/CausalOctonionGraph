@@ -2,6 +2,8 @@
 
 This page tracks repeating time patterns ("cycles") in XOR-octonion motif dynamics.
 
+See also: [Standard Model Free Parameters: First-Principles Derivation Table](/web/pages/sm_parameter_derivation_table)
+
 Default view is **Layman**. Switch to **Physicist** for raw policy/trace details.
 
 <div id="cycle-atlas-app" class="atlas-shell">

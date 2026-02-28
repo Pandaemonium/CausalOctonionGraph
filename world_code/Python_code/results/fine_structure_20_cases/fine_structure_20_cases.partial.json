@@ -1,0 +1,254 @@
+{
+  "schema_version": "fine_structure_20_cases_partial_v1",
+  "updated_at_utc": "2026-02-27T23:55:24.010178+00:00",
+  "settings": {
+    "preconditioning_ticks": 0,
+    "include_cold_baseline": false,
+    "case_limit": 20,
+    "max_steps": null,
+    "kernel_profile": "unity"
+  },
+  "completed_case_count": 20,
+  "case_summaries": [
+    {
+      "case_id": "alpha_case_00",
+      "edge_distance": 4,
+      "steps": 12,
+      "phase_offset": 0,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.06283355447442135,
+        "max_coupling_rate_post_overlap_measurement": 0.2631578947368421,
+        "mean_coupling_rate_post_overlap_all": 0.06283355447442135,
+        "max_coupling_rate_post_overlap_all": 0.2631578947368421
+      }
+    },
+    {
+      "case_id": "alpha_case_01",
+      "edge_distance": 4,
+      "steps": 14,
+      "phase_offset": 1,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.10851478409199192,
+        "max_coupling_rate_post_overlap_measurement": 0.3333333333333333,
+        "mean_coupling_rate_post_overlap_all": 0.10851478409199192,
+        "max_coupling_rate_post_overlap_all": 0.3333333333333333
+      }
+    },
+    {
+      "case_id": "alpha_case_02",
+      "edge_distance": 4,
+      "steps": 16,
+      "phase_offset": 2,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.023394772121040568,
+        "max_coupling_rate_post_overlap_measurement": 0.1111111111111111,
+        "mean_coupling_rate_post_overlap_all": 0.023394772121040568,
+        "max_coupling_rate_post_overlap_all": 0.1111111111111111
+      }
+    },
+    {
+      "case_id": "alpha_case_03",
+      "edge_distance": 4,
+      "steps": 18,
+      "phase_offset": 3,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.11747285344360765,
+        "max_coupling_rate_post_overlap_measurement": 0.5,
+        "mean_coupling_rate_post_overlap_all": 0.11747285344360765,
+        "max_coupling_rate_post_overlap_all": 0.5
+      }
+    },
+    {
+      "case_id": "alpha_case_04",
+      "edge_distance": 6,
+      "steps": 14,
+      "phase_offset": 0,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.016239981881387183,
+        "max_coupling_rate_post_overlap_measurement": 0.06521739130434782,
+        "mean_coupling_rate_post_overlap_all": 0.016239981881387183,
+        "max_coupling_rate_post_overlap_all": 0.06521739130434782
+      }
+    },
+    {
+      "case_id": "alpha_case_05",
+      "edge_distance": 6,
+      "steps": 16,
+      "phase_offset": 1,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.08095000069232325,
+        "max_coupling_rate_post_overlap_measurement": 0.2222222222222222,
+        "mean_coupling_rate_post_overlap_all": 0.08095000069232325,
+        "max_coupling_rate_post_overlap_all": 0.2222222222222222
+      }
+    },
+    {
+      "case_id": "alpha_case_06",
+      "edge_distance": 6,
+      "steps": 18,
+      "phase_offset": 2,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.02740304291018853,
+        "max_coupling_rate_post_overlap_measurement": 0.12,
+        "mean_coupling_rate_post_overlap_all": 0.02740304291018853,
+        "max_coupling_rate_post_overlap_all": 0.12
+      }
+    },
+    {
+      "case_id": "alpha_case_07",
+      "edge_distance": 6,
+      "steps": 20,
+      "phase_offset": 3,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.091456577860022,
+        "max_coupling_rate_post_overlap_measurement": 0.5,
+        "mean_coupling_rate_post_overlap_all": 0.091456577860022,
+        "max_coupling_rate_post_overlap_all": 0.5
+      }
+    },
+    {
+      "case_id": "alpha_case_08",
+      "edge_distance": 8,
+      "steps": 16,
+      "phase_offset": 0,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.010277198011751788,
+        "max_coupling_rate_post_overlap_measurement": 0.043478260869565216,
+        "mean_coupling_rate_post_overlap_all": 0.010277198011751788,
+        "max_coupling_rate_post_overlap_all": 0.043478260869565216
+      }
+    },
+    {
+      "case_id": "alpha_case_09",
+      "edge_distance": 8,
+      "steps": 18,
+      "phase_offset": 1,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.10819753620167655,
+        "max_coupling_rate_post_overlap_measurement": 0.21739130434782608,
+        "mean_coupling_rate_post_overlap_all": 0.10819753620167655,
+        "max_coupling_rate_post_overlap_all": 0.21739130434782608
+      }
+    },
+    {
+      "case_id": "alpha_case_10",
+      "edge_distance": 8,
+      "steps": 20,
+      "phase_offset": 2,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.022611886512611673,
+        "max_coupling_rate_post_overlap_measurement": 0.08064516129032258,
+        "mean_coupling_rate_post_overlap_all": 0.022611886512611673,
+        "max_coupling_rate_post_overlap_all": 0.08064516129032258
+      }
+    },
+    {
+      "case_id": "alpha_case_11",
+      "edge_distance": 8,
+      "steps": 22,
+      "phase_offset": 3,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.12584472661244303,
+        "max_coupling_rate_post_overlap_measurement": 0.5,
+        "mean_coupling_rate_post_overlap_all": 0.12584472661244303,
+        "max_coupling_rate_post_overlap_all": 0.5
+      }
+    },
+    {
+      "case_id": "alpha_case_12",
+      "edge_distance": 10,
+      "steps": 18,
+      "phase_offset": 0,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.017636465214104967,
+        "max_coupling_rate_post_overlap_measurement": 0.07407407407407407,
+        "mean_coupling_rate_post_overlap_all": 0.017636465214104967,
+        "max_coupling_rate_post_overlap_all": 0.07407407407407407
+      }
+    },
+    {
+      "case_id": "alpha_case_13",
+      "edge_distance": 10,
+      "steps": 20,
+      "phase_offset": 1,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.053286258930731835,
+        "max_coupling_rate_post_overlap_measurement": 0.15217391304347827,
+        "mean_coupling_rate_post_overlap_all": 0.053286258930731835,
+        "max_coupling_rate_post_overlap_all": 0.15217391304347827
+      }
+    },
+    {
+      "case_id": "alpha_case_14",
+      "edge_distance": 10,
+      "steps": 22,
+      "phase_offset": 2,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.009844699444254505,
+        "max_coupling_rate_post_overlap_measurement": 0.06896551724137931,
+        "mean_coupling_rate_post_overlap_all": 0.009844699444254505,
+        "max_coupling_rate_post_overlap_all": 0.06896551724137931
+      }
+    },
+    {
+      "case_id": "alpha_case_15",
+      "edge_distance": 10,
+      "steps": 24,
+      "phase_offset": 3,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.09251173250178067,
+        "max_coupling_rate_post_overlap_measurement": 0.5,
+        "mean_coupling_rate_post_overlap_all": 0.09251173250178067,
+        "max_coupling_rate_post_overlap_all": 0.5
+      }
+    },
+    {
+      "case_id": "alpha_case_16",
+      "edge_distance": 12,
+      "steps": 20,
+      "phase_offset": 0,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.008999870435152794,
+        "max_coupling_rate_post_overlap_measurement": 0.043478260869565216,
+        "mean_coupling_rate_post_overlap_all": 0.008999870435152794,
+        "max_coupling_rate_post_overlap_all": 0.043478260869565216
+      }
+    },
+    {
+      "case_id": "alpha_case_17",
+      "edge_distance": 12,
+      "steps": 22,
+      "phase_offset": 1,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.09116761956194021,
+        "max_coupling_rate_post_overlap_measurement": 0.3333333333333333,
+        "mean_coupling_rate_post_overlap_all": 0.09116761956194021,
+        "max_coupling_rate_post_overlap_all": 0.3333333333333333
+      }
+    },
+    {
+      "case_id": "alpha_case_18",
+      "edge_distance": 12,
+      "steps": 24,
+      "phase_offset": 2,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.011824706262971002,
+        "max_coupling_rate_post_overlap_measurement": 0.05714285714285714,
+        "mean_coupling_rate_post_overlap_all": 0.011824706262971002,
+        "max_coupling_rate_post_overlap_all": 0.05714285714285714
+      }
+    },
+    {
+      "case_id": "alpha_case_19",
+      "edge_distance": 12,
+      "steps": 26,
+      "phase_offset": 3,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.06913329982384066,
+        "max_coupling_rate_post_overlap_measurement": 0.5,
+        "mean_coupling_rate_post_overlap_all": 0.06913329982384066,
+        "max_coupling_rate_post_overlap_all": 0.5
+      }
+    }
+  ]
+}

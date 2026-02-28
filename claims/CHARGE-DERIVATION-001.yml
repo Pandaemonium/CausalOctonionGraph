@@ -1,0 +1,33 @@
+﻿id: CHARGE-DERIVATION-001
+title: Derive EM Charges from COG State Data
+statement: >
+  Derive the right-handed charge pattern {0, +2/3, -1/3, -1} and dual-sector signs
+  from locked COG state observables without manually injecting SM charge values.
+  This claim is distinct from ANOM-001 (consistency of a declared assignment).
+status: active_hypothesis
+pi_obs_profile: with_sector
+pi_obs_profile_version: v1
+projection_sensitivity: unknown
+profile_contrast_run: ''
+equivalence_mode: none
+lean_file: ''
+lean_theorems: []
+python_test: calc/test_anomaly.py
+depends_on:
+  - RFC-041
+  - GAUGE-001
+  - LEPTON-001
+literature:
+  - 'Furey (2016, 2018): Number-operator framing for charge assignments'
+  - 'RFC-041: Charge operator reconciliation (Q_proj vs Q_num)'
+notes: >
+  This claim remains open. Current Q_proj observable does not recover quark EM charges,
+  and no unique Q_num-from-state derivation is locked yet.
+blocked_reason: >
+  Need a theorem-level map from raw state coefficients (or invariants thereof) to charge,
+  with gauge/phase invariance and deterministic replay tests.
+derivation_status: untested
+bridge_assumptions: []
+falsification_condition: >
+  Claim is falsified if no deterministic gauge-invariant mapping from COG state data to
+  the full RH+dual charge pattern can satisfy preregistered acceptance tests.

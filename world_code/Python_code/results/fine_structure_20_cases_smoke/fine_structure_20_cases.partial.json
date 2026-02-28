@@ -1,0 +1,40 @@
+{
+  "schema_version": "fine_structure_20_cases_partial_v1",
+  "updated_at_utc": "2026-02-27T22:18:41.172980+00:00",
+  "settings": {
+    "preconditioning_ticks": 0,
+    "include_cold_baseline": false,
+    "case_limit": 2,
+    "max_steps": 4,
+    "kernel_profile": "integer",
+    "use_fast_step": true,
+    "verify_fast_step": true
+  },
+  "completed_case_count": 2,
+  "case_summaries": [
+    {
+      "case_id": "alpha_case_00",
+      "edge_distance": 4,
+      "steps": 4,
+      "phase_offset": 0,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.03571428571428571,
+        "max_coupling_rate_post_overlap_measurement": 0.14285714285714285,
+        "mean_coupling_rate_post_overlap_all": 0.03571428571428571,
+        "max_coupling_rate_post_overlap_all": 0.14285714285714285
+      }
+    },
+    {
+      "case_id": "alpha_case_01",
+      "edge_distance": 4,
+      "steps": 4,
+      "phase_offset": 1,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.16904761904761906,
+        "max_coupling_rate_post_overlap_measurement": 0.3333333333333333,
+        "mean_coupling_rate_post_overlap_all": 0.16904761904761906,
+        "max_coupling_rate_post_overlap_all": 0.3333333333333333
+      }
+    }
+  ]
+}

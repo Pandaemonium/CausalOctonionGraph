@@ -1,7 +1,11 @@
 {
   "avenue": "A13-ensemble",
-  "condition_checksum": "fe688073f3d2b4713ebe657aa178230700e4e2122101aa03d2fbad7a11e6a744",
+  "condition_checksum": "051d7ce54dd2cee5ac260837068fcdc986279526b1cc9f729df5df5f5fefd04f",
   "condition_file": "weinberg_associator_ensemble_conditions.json",
+  "observable_bounds": {
+    "sin2_max": 0.5,
+    "sin2_min": 0.0
+  },
   "rfc": "RFC-037",
   "rows": [
     {

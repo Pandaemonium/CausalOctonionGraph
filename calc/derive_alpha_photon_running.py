@@ -111,6 +111,8 @@ def validate_conditions(data: dict[str, Any]) -> None:
         raise ValueError("depth_horizon_rule is required")
     if "phase_offsets" not in data or not isinstance(data["phase_offsets"], list) or not data["phase_offsets"]:
         raise ValueError("phase_offsets non-empty list is required")
+    if "observable_contract" not in data or not isinstance(data["observable_contract"], dict):
+        raise ValueError("observable_contract mapping is required")
     _assert_no_forbidden_keys(data)
 
     kernel = data.get("kernel", {})
@@ -138,6 +140,16 @@ def validate_conditions(data: dict[str, Any]) -> None:
     mu_eff = float(data["mass_normalization"]["mu_eff"])
     if mu_eff <= 0:
         raise ValueError("mu_eff must be > 0")
+
+    contract = data["observable_contract"]
+    if contract.get("control_subtraction_rule") != "nonnegative_subtraction":
+        raise ValueError("observable_contract.control_subtraction_rule must be nonnegative_subtraction")
+    if contract.get("bounded_map") != "x_over_one_plus_x":
+        raise ValueError("observable_contract.bounded_map must be x_over_one_plus_x")
+    if contract.get("require_unit_interval") is not True:
+        raise ValueError("observable_contract.require_unit_interval must be true")
+    if data.get("governance", {}).get("require_bounded_observable") is not True:
+        raise ValueError("governance.require_bounded_observable must be true")
 
 
 def depth_horizon_for_distance(data: dict[str, Any], d0: int) -> int:
@@ -265,6 +277,13 @@ def _alpha_samples_from_events(
     return out
 
 
+def _bounded_alpha_from_nonnegative_delta(delta: float) -> float:
+    """Bounded monotone map from [0, inf) -> [0, 1)."""
+    if delta < 0:
+        raise ValueError("delta must be nonnegative")
+    return float(delta / (1.0 + delta))
+
+
 def _run_channel(
     *,
     channel_id: str,
@@ -354,6 +373,7 @@ def run_alpha_photon_running(path: Path | None = None) -> dict[str, Any]:
     signal_cfg = conditions["signal_channel"]
     control_cfg = conditions.get("control_channel", {})
     control_enabled = bool(control_cfg.get("enabled", False))
+    contract = dict(conditions["observable_contract"])
 
     rows: List[Dict[str, Any]] = []
     all_alpha_em: List[float] = []
@@ -405,13 +425,18 @@ def run_alpha_photon_running(path: Path | None = None) -> dict[str, Any]:
                     depth_horizon=horizon,
                 )
                 alpha_control = _median([float(r["alpha_hat"]) for r in alpha_control_samples])
+            alpha_em_raw_delta: Optional[float]
             alpha_em: Optional[float]
             if alpha_signal is None:
+                alpha_em_raw_delta = None
                 alpha_em = None
-            elif alpha_control is None:
-                alpha_em = alpha_signal
             else:
-                alpha_em = alpha_signal - alpha_control
+                ctl = 0.0 if alpha_control is None else float(alpha_control)
+                # Locked contract: nonnegative subtraction before bounded mapping.
+                alpha_em_raw_delta = max(0.0, float(alpha_signal) - ctl)
+                alpha_em = _bounded_alpha_from_nonnegative_delta(alpha_em_raw_delta)
+                if contract.get("require_unit_interval", False) and not (0.0 <= alpha_em < 1.0):
+                    raise ValueError(f"alpha_em out of [0,1): {alpha_em}")
 
             if alpha_em is not None:
                 alpha_em_phase_samples.append(alpha_em)
@@ -425,6 +450,7 @@ def run_alpha_photon_running(path: Path | None = None) -> dict[str, Any]:
                     "signal_alpha_sample_count": len(alpha_sig_samples),
                     "alpha_signal": alpha_signal,
                     "alpha_control": alpha_control,
+                    "alpha_em_raw_delta": alpha_em_raw_delta,
                     "alpha_em": alpha_em,
                     "signal_replay_hash": signal["run_payload"]["replay_hash"],
                 }
@@ -479,6 +505,7 @@ def run_alpha_photon_running(path: Path | None = None) -> dict[str, Any]:
         "schema_version": "alpha_photon_running_v1",
         "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "conditions_checksum": deterministic_payload["conditions_checksum"],
+        "observable_contract": contract,
         "rows": rows,
         "summary": deterministic_payload["summary"],
         "replay_hash": replay_hash,

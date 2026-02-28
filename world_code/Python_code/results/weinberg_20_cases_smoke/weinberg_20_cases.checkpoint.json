@@ -1,0 +1,21 @@
+{
+  "schema_version": "weinberg_20_cases_checkpoint_v1",
+  "updated_at_utc": "2026-02-27T22:30:52.093109+00:00",
+  "settings": {
+    "preconditioning_ticks": 0,
+    "include_cold_baseline": false,
+    "case_limit": 2,
+    "max_steps": 4,
+    "kernel_profile": "integer"
+  },
+  "case_order": [
+    "weinberg_case_00",
+    "weinberg_case_01"
+  ],
+  "completed_case_ids": [
+    "weinberg_case_00",
+    "weinberg_case_01"
+  ],
+  "completed_case_count": 2,
+  "finalized": true
+}

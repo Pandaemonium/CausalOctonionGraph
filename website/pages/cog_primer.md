@@ -2,6 +2,8 @@
 *For onboarding and public reference. Covers all locked architecture decisions through RFC-028.*
 *Written 2026-02-27. Last updated 2026-02-27.*
 
+See also: [Standard Model Free Parameters: First-Principles Derivation Table](/web/pages/sm_parameter_derivation_table)
+
 ---
 
 ## Part I: The Universe as a Growing Crystal
@@ -653,7 +655,7 @@ verified by `lake build` with no `sorry`, using only discrete mathematics (no
 | FANO-001 | Fano.lean | Fano plane has 7 points, 7 lines (7,3,1)-design |
 | DAG-001 | CausalOrder.lean | Reachability is a strict partial order |
 | TICK-001 | Tick.lean | Phase-only vs energy-exchange is decidable |
-| ANOM-001 | AnomalyCancellation.lean | All anomalies cancel: linear + cubic |
+| ANOM-001 | AnomalyCancellation.lean | Declared Q_num assignment is anomaly-consistent (linear + cubic); charge derivation remains open |
 | MU-001 | MassRatio.lean | k_gate = 21, first-order mass ratio = 22 |
 | LEPTON-001 | LeptonOrbits.lean | Electron gap C_e = 4; 1-3-3 orbit partition |
 | KOIDE-001 | KoideCirculant.lean | Koide rule ↔ B/A = √2 for circulant mass matrix |

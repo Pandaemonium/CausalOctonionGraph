@@ -1,0 +1,5 @@
+case_id,edge_distance,steps,phase_offset,preconditioning_ticks,overlap_start_tick,stage,stage_tick,global_tick,overlap_started,overlap_node_count,phase_jump_sum,photon_coupling_rate
+alpha_case_01,4,4,1,0,2,measure,1,2,True,1,0,0.0
+alpha_case_01,4,4,1,0,2,measure,2,3,True,3,8,0.3333333333333333
+alpha_case_01,4,4,1,0,2,measure,3,4,True,5,8,0.2
+alpha_case_01,4,4,1,0,2,measure,4,5,True,7,8,0.14285714285714285

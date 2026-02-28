@@ -1,0 +1,29 @@
+{
+  "schema_version": "weinberg_20_cases_partial_v1",
+  "updated_at_utc": "2026-02-27T22:30:58.388138+00:00",
+  "settings": {
+    "preconditioning_ticks": 1,
+    "include_cold_baseline": false,
+    "case_limit": 1,
+    "max_steps": 4,
+    "kernel_profile": "integer"
+  },
+  "completed_case_count": 1,
+  "case_summaries": [
+    {
+      "case_id": "weinberg_case_00",
+      "edge_distance": 4,
+      "steps": 4,
+      "phase_offset": 0,
+      "summary": {
+        "mean_sin2_raw_post_overlap_measurement": 0.7497866588540474,
+        "mean_sin2_exclusive_post_overlap_measurement": 0.3748933294270237,
+        "mean_sin2_raw_post_overlap_all": 0.7497866588540474,
+        "mean_sin2_exclusive_post_overlap_all": 0.3748933294270237,
+        "final_sin2_raw": 0.6666937911953653,
+        "final_sin2_exclusive_u1": 0.33334689559768266,
+        "final_gap_exclusive_vs_mz_target": 0.10212689559768265
+      }
+    }
+  ]
+}

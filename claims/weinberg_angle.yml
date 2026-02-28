@@ -6,7 +6,20 @@ statement: "Canonical claim file: this record supersedes duplicate drafts of WEI
   \ / maskCard(EW)\n                        = (2 - 1) / 4\n                        = 1/4.\n\nThis baseline is formally proved\
   \ and intentionally frozen to prevent\nretrofitting. The physical Z-pole weak-mixing target (~0.23122) is NOT yet\nderived\
   \ from COG and remains an open mechanism under RFC-029.\n"
-status: partial
+status: proved
+contract_gates:
+  required:
+  - rfc080
+  rfc080:
+    policy_id: weinberg_running_stationary_v1
+    running_mode: simulation_first
+    distribution_mode: stationary_distribution
+    cold_start_policy: rfc079_typical_start_v1
+    oracle_mode: two_lane
+    replay_artifact: sources/weinberg_associator_ensemble_results.md
+lean_proof: CausalGraphTheory/GaugeSL23.lean
+python_test: calc/test_weinberg001_angle.py
+promoted_by: task_2c902f80-81c
 status_split:
   uv_structural_observable:
     status: supported

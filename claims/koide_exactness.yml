@@ -1,20 +1,28 @@
-- "Gate 2 (2026-02-26): Circulant B/A = sqrt(2) derivation complete. All tests passed successfully."
+﻿id: KOIDE_EXACTNESS
+title: Koide Exactness Closure Ledger
+status: stub
+statement: >
+  Tracks exactness-specific closure gates for Koide derivation artifacts.
 gates:
   - id: gate_1
-    description: "Python Koide sum rule verification"
+    description: Python Koide sum rule verification.
     status: proved
     file: calc/koide.py
   - id: gate_2
-    description: "Circulant B/A = sqrt(2) derivation"
+    description: Circulant B/A = sqrt(2) derivation.
     status: proved
     file: calc/koide_circulant_derivation.py
   - id: gate_3
-    description: "Lean formalization of circulant Koide condition"
+    description: Lean formalization of circulant Koide condition.
     status: proved
     lean_theorem: koide_circulant_iff
     file: CausalGraphTheory/KoideCirculant.lean
   - id: gate_4
-    description: "Lean formalization of rational Koide ratio from circulant constraints"
+    description: Lean formalization of rational Koide ratio from circulant constraints.
     status: proved
     lean_theorem: koide_q_equals_two_thirds
     file: CausalGraphTheory/KoideGate4.lean
+derivation_status: untested
+bridge_assumptions: []
+falsification_condition: >
+  Claim is falsified if any listed exactness gate is not replayable or deterministic.

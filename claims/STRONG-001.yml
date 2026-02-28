@@ -1,4 +1,14 @@
 status: proved
+contract_gates:
+  required:
+  - rfc080
+  rfc080:
+    policy_id: strong_running_stationary_v1
+    running_mode: simulation_first
+    distribution_mode: stationary_distribution
+    cold_start_policy: rfc079_typical_start_v1
+    oracle_mode: two_lane
+    replay_artifact: calc/estimate_alpha_strong.py
 name: STRONG-001
 title: Strong Coupling Constant alpha_s
 description: The leading-order estimate for the strong coupling constant is alpha_s_proxy = 1/7, derived from the Fano plane

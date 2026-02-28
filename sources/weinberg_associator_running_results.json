@@ -1,6 +1,10 @@
 {
   "avenue": "A13",
   "initial_state": "uniform_ew_unit",
+  "observable_bounds": {
+    "sin2_max": 0.5,
+    "sin2_min": 0.0
+  },
   "rfc": "RFC-037",
   "rows": [
     {

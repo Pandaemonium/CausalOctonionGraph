@@ -1,0 +1,159 @@
+{
+  "schema_version": "fine_structure_20_cases_v2",
+  "generated_at_utc": "2026-02-27T21:43:50.343673+00:00",
+  "kernel": "world_code/Python_code/minimal_world_kernel_unity.py",
+  "kernel_profile": "unity",
+  "definition": {
+    "signal": "photon_coupling_rate = mean phase-jump(e7 channel) over overlap nodes / 8",
+    "overlap_rule": "lightcone overlap when abs(x-left)<=t and abs(x-right)<=t",
+    "phase_offset_rule": "right electron receives P temporal commits before tick 0",
+    "preconditioning_rule": "warm start applies deterministic update ticks before measurement so vacuum dressing and early exchange are present at measurement tick 1",
+    "unity_profile_note": "kernel_profile=unity is non-canonical; coefficients are projected to {0,+1,-1,+i,-i} after fold/update."
+  },
+  "preconditioning_ticks": 1,
+  "include_cold_baseline": true,
+  "max_steps_cap": 4,
+  "case_count": 2,
+  "cases": [
+    {
+      "case_id": "alpha_case_00",
+      "edge_distance": 4,
+      "steps": 4,
+      "phase_offset": 0,
+      "preconditioning_ticks": 1,
+      "overlap_start_tick": 2,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.03571428571428571,
+        "max_coupling_rate_post_overlap_measurement": 0.14285714285714285,
+        "mean_coupling_rate_post_overlap_all": 0.03571428571428571,
+        "max_coupling_rate_post_overlap_all": 0.14285714285714285,
+        "delta_mean_vs_cold_measurement": 0.03571428571428571
+      },
+      "preconditioning_rows": [
+        {
+          "global_tick": 1,
+          "overlap_started": false,
+          "overlap_node_count": 0,
+          "phase_jump_sum": 0,
+          "photon_coupling_rate": 0.0,
+          "stage": "precondition",
+          "stage_tick": 1
+        }
+      ],
+      "step_rows": [
+        {
+          "global_tick": 2,
+          "overlap_started": true,
+          "overlap_node_count": 1,
+          "phase_jump_sum": 0,
+          "photon_coupling_rate": 0.0,
+          "stage": "measure",
+          "stage_tick": 1
+        },
+        {
+          "global_tick": 3,
+          "overlap_started": true,
+          "overlap_node_count": 3,
+          "phase_jump_sum": 0,
+          "photon_coupling_rate": 0.0,
+          "stage": "measure",
+          "stage_tick": 2
+        },
+        {
+          "global_tick": 4,
+          "overlap_started": true,
+          "overlap_node_count": 5,
+          "phase_jump_sum": 0,
+          "photon_coupling_rate": 0.0,
+          "stage": "measure",
+          "stage_tick": 3
+        },
+        {
+          "global_tick": 5,
+          "overlap_started": true,
+          "overlap_node_count": 7,
+          "phase_jump_sum": 8,
+          "photon_coupling_rate": 0.14285714285714285,
+          "stage": "measure",
+          "stage_tick": 4
+        }
+      ],
+      "cold_baseline_summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.0,
+        "max_coupling_rate_post_overlap_measurement": 0.0,
+        "mean_coupling_rate_post_overlap_all": 0.0,
+        "max_coupling_rate_post_overlap_all": 0.0
+      }
+    },
+    {
+      "case_id": "alpha_case_01",
+      "edge_distance": 4,
+      "steps": 4,
+      "phase_offset": 1,
+      "preconditioning_ticks": 1,
+      "overlap_start_tick": 2,
+      "summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.16904761904761906,
+        "max_coupling_rate_post_overlap_measurement": 0.3333333333333333,
+        "mean_coupling_rate_post_overlap_all": 0.16904761904761906,
+        "max_coupling_rate_post_overlap_all": 0.3333333333333333,
+        "delta_mean_vs_cold_measurement": -0.008730158730158727
+      },
+      "preconditioning_rows": [
+        {
+          "global_tick": 1,
+          "overlap_started": false,
+          "overlap_node_count": 0,
+          "phase_jump_sum": 0,
+          "photon_coupling_rate": 0.0,
+          "stage": "precondition",
+          "stage_tick": 1
+        }
+      ],
+      "step_rows": [
+        {
+          "global_tick": 2,
+          "overlap_started": true,
+          "overlap_node_count": 1,
+          "phase_jump_sum": 0,
+          "photon_coupling_rate": 0.0,
+          "stage": "measure",
+          "stage_tick": 1
+        },
+        {
+          "global_tick": 3,
+          "overlap_started": true,
+          "overlap_node_count": 3,
+          "phase_jump_sum": 8,
+          "photon_coupling_rate": 0.3333333333333333,
+          "stage": "measure",
+          "stage_tick": 2
+        },
+        {
+          "global_tick": 4,
+          "overlap_started": true,
+          "overlap_node_count": 5,
+          "phase_jump_sum": 8,
+          "photon_coupling_rate": 0.2,
+          "stage": "measure",
+          "stage_tick": 3
+        },
+        {
+          "global_tick": 5,
+          "overlap_started": true,
+          "overlap_node_count": 7,
+          "phase_jump_sum": 8,
+          "photon_coupling_rate": 0.14285714285714285,
+          "stage": "measure",
+          "stage_tick": 4
+        }
+      ],
+      "cold_baseline_summary": {
+        "mean_coupling_rate_post_overlap_measurement": 0.17777777777777778,
+        "max_coupling_rate_post_overlap_measurement": 0.3333333333333333,
+        "mean_coupling_rate_post_overlap_all": 0.17777777777777778,
+        "max_coupling_rate_post_overlap_all": 0.3333333333333333
+      }
+    }
+  ]
+}
