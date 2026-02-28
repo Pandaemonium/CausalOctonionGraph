@@ -9,6 +9,7 @@ Initial v2 proof lane ports only:
 - `CausalGraphV2/ThetaQCD.lean`
 - `CausalGraphV2/ThetaEFTBridge.lean`
 - `CausalGraphV2/TripletDecayExact.lean`
+- `CausalGraphV2/LayeredCausality.lean`
 
 ## Current State
 
@@ -30,9 +31,13 @@ Initial v2 proof lane ports only:
   - explicit theorem-level replay witnesses from
     `triplet_decay_exact_simulation_v1.json`
   - contract theorem `tripletDecayExactWitnessContract_v1`
+- Layered geometry theorem lane added (`LayeredCausality`) with:
+  - `path_depth_eq`
+  - `path_length_unique`
+  - `no_path_length_spread`
 - Full theorem parity with legacy tree is not yet complete.
 - Lean v2 build is now green in this environment:
-  - `cd cog_v2/lean && lake build` (14 jobs succeeded)
+  - `cd cog_v2/lean && lake build` (22 jobs succeeded)
 - THETA v2 claim lane status:
   - gate_1: done (Lean lane compiled),
   - gate_2: done (Python witness/tests),

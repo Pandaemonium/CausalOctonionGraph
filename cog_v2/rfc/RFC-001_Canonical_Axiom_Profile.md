@@ -11,6 +11,9 @@ Interpretation/Resolution Extension:
 - `cog_v2/rfc/RFC-005_Black_Hole_Horizon_Projection_Kernel_Contract.md`
 - `cog_v2/rfc/RFC-006_Bridge_Construction_from_CxO_Combinatorics.md`
 - `cog_v2/rfc/RFC-007_UV_Exact_Closure_and_Bridge_Applicability_Boundary.md`
+- `cog_v2/rfc/RFC-008_Layered_Causality_and_Defect_Falsification_Contract.md`
+- `cog_v2/rfc/RFC-009_F2^3_Index_Geometry_and_Unique_Causal_Length.md`
+- `cog_v2/rfc/RFC-010_Octonion_Cube_Phase_Fiber_and_Fano_Orientation.md`
 - `cog_v2/rfc/Targeted_Branching_Policy_for_Computational_Efficiency_and_Statistical_Integrity.md`
 
 ## 1. Decision
@@ -20,6 +23,7 @@ COG v2 adopts a single canonical model:
 1. Spacetime is a directed acyclic graph (DAG).
 2. Each node carries a `C x O` state over a unity alphabet.
 3. Node evolution is a deterministic projection update over the incoming light cone.
+4. Canonical geometry is strictly layered (`depth(dst) = depth(src) + 1` for every edge).
 
 This RFC is the source-of-truth profile for all new work under `cog_v2/`.
 
