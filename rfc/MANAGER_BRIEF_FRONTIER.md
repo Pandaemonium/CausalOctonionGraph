@@ -195,13 +195,14 @@ one has at least a falsifiable Python test and a Lean stub claim.
 | Python tests (calc/) | **667+ passing, 0 failing** (incl. `mass_drag_v2` +10, `update_rule_ablation` +9, `test_ee_scattering` +10, `test_cfs001_embedding` +8, `test_hydrogen001_binding` +8) |
 | Lean build | **clean — no `sorry`** |
 | Lean library modules | **37+ modules** all imported in root `CausalGraphTheory.lean` |
-| Claims proved | **20 proved** (ALG-001–004, ANOM-001, CAUS-001, CFS-001, CFS-002, CFS-003, DAG-001, DIST-001, FANO-001, GAUGE-001, GEN-001, GEN-002, LEPTON-001, MASS-001, MU-001, PHOTON-001, PROTON-001, RACE-001, REL-001, STRONG-001, TICK-001, WEINBERG-001) per ground-truth YAML |
-| Claims partial | **3 partial** (ALPHA-001, HYDROGEN-001, WEINBERG-001) per ground-truth YAML |
-| Claims active_hypothesis | **1** (MU-001) per ground-truth YAML |
+| Claims proved | **19 proved** (ALG-001–004, ANOM-001, CAUS-001, CFS-001, CFS-002, CFS-003, DAG-001, DIST-001, FANO-001, GAUGE-001, GEN-001, GEN-002, LEPTON-001, MASS-001, MU-001, PHOTON-001, PROTON-001, RACE-001, REL-001, STRONG-001, TICK-001, WEINBERG-001) per ground-truth YAML |
+| Claims partial | **5 partial** (ALPHA-001, HYDROGEN-001, PROTON-001, ANOM-001, CFS-002, GEN-002, CFS-003) per ground-truth YAML |
+| Claims active_hypothesis | **4** (CHARGE-DERIVATION-001, KOIDE-HEAWOOD-001, LEPTON-001, MU-001) per ground-truth YAML |
 | Claims open | **1 open** (LEPTON-001) per ground-truth YAML |
-| Claims stub | **2 stub** (ANOM-001, GEN-001) per ground-truth YAML |
+| Claims stub | **3 stub** (KOIDE-001, KOIDE_EXACTNESS, GEN-001) per ground-truth YAML |
 | Claims superseded | **3 superseded** (GAUGE-001-LEGACY, STRONG-001-LEGACY, VAC-001) per ground-truth YAML |
 | Claims supported | **1 supported** (WEINBERG-UV-001) |
+| Claims supported_bridge | **1 supported_bridge** (THETA-001) |
 | Claims unknown | **1 unknown** (CLAIM_STATUS_MATRIX) |
 ---
 
@@ -389,6 +390,36 @@ Next action:
 
 ---
 
+### 🔴 P4 · KOIDE-001 · `stub` — Advance through Gates
+
+**Ground-truth status is `stub`. Gates 1–3 have been delivered (circulant derivation, Lean formalization). YAML promotion is still pending.**
+
+Next action:
+- Read `claims/KOIDE-001.yml` to confirm current gate status.
+- Promote `claims/KOIDE-001.yml` to `proved` if all gates are satisfied.
+
+---
+
+### 🔴 P5 · CHARGE-DERIVATION-001 · `active_hypothesis` — Investigate
+
+**Ground-truth status is `active_hypothesis`.**
+
+Next action:
+- Read `claims/CHARGE-DERIVATION-001.yml` to identify required gates.
+- Begin Python scaffold and Lean formalization per standard pattern.
+
+---
+
+### 🔴 P6 · KOIDE-HEAWOOD-001 · `active_hypothesis` — Investigate
+
+**Ground-truth status is `active_hypothesis`.**
+
+Next action:
+- Read `claims/KOIDE-HEAWOOD-001.yml` to identify required gates.
+- Begin Python scaffold and Lean formalization per standard pattern.
+
+---
+
 ### ✅ CFS-003 · Causal Fermion System Propagator Discretization — COMPLETED (2026-02-27)
 
 **`claims/CFS-003.yml` is promoted to `proved`. DO NOT reassign.**
@@ -559,30 +590,6 @@ What was delivered (task 85ae513c-924):
 What was delivered (task 8c65e5a4-810):
 - `CausalGraphTheory/KoideCirculant.lean` establishing that for circulant mass matrix `Circ(a, b, b)`, the Koide sum rule holds if and only if `b² = 2a²`.
 - Gate 3 cleared.
-
-**Anti-Loop Rule:** Do NOT recreate `KoideCirculant.lean` or re-derive the circulant B/A ratio. Gate 3 is complete.
-
----
-
-### ✅ KOIDE-001 · Circulant B/A = √2 Derivation — Gate 2 — COMPLETED (2026-02-26)
-
-**`calc/koide_circulant_derivation.py` is fully implemented. DO NOT reassign.**
-
-What was delivered (task d31047e5-ec0):
-- `calc/koide_circulant_derivation.py` with required exports and passing tests.
-- Circulant B/A = √2 derivation from COG graph dynamics confirmed numerically.
-- Gate 2 cleared.
-
-**Anti-Loop Rule:** Do NOT recreate `koide_circulant_derivation.py` or re-derive the circulant B/A ratio. Gate 2 is complete.
-
----
-
-### ✅ KOIDE-001 · Diophantine Search — Gate 1 — COMPLETED (2026-02-26)
-
-**`calc/test_koide_diophantine.py` exists and passes. DO NOT recreate.**
-
-**Result:** No exact integer solution for `f₀²+f₁²+f₂² = 4(f₀f₁+f₁f₂+f₂f₀)` in range [1, 4000].
-Best near-miss: (255, 736, 4000) with
 ## Hard Constraints (enforce strictly)
 
 - **No continuum:** `Mathlib.Analysis.*`, `Mathlib.Topology.*`, `Mathlib.Data.Real.*`
