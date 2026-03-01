@@ -5,6 +5,7 @@
 See also:
 - [Standard Model Free Parameters: First-Principles Derivation Table](/web/pages/sm_parameter_derivation_table)
 - [COG Full Phenomena Coverage Matrix](/web/pages/phenomena_full_coverage_matrix)
+- [How To Visualize The Octonion Cube and Fano Orientation](/web/pages/octonion_cube_visual_guide)
 
 ---
 

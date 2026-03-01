@@ -1,0 +1,103 @@
+{
+  "claim_id": "WEINBERG-001",
+  "claim_status": "supported_bridge",
+  "contract_gate_snapshot": {
+    "required": [
+      "rfc080"
+    ],
+    "rfc080": {
+      "cold_start_policy": "rfc079_typical_start_v1",
+      "distribution_mode": "stationary_distribution",
+      "oracle_mode": "two_lane",
+      "policy_id": "weinberg_ir_bridge_combinatoric_exact_v2",
+      "replay_artifact": "cog_v2/sources/weinberg_ir_bridge_combinatoric_exact_v2.md",
+      "running_mode": "simulation_first"
+    }
+  },
+  "dependencies": {
+    "CausalGraphTheory/WeinbergCombinatoricBridge.lean": "56e374ba83bab558ae9249d0e901346b5213edd7d2d494802433fd1c7aecf9f5",
+    "claims/weinberg_angle.yml": "023462c7bba6bd9bb727ea529c780ac1cd2f7f8fe63d932e13d8f92e3ff637c8",
+    "cog_v2/rfc/RFC-011_Weinberg_Combinatoric_Bridge_Contract.md": "562d2e5339446e86ed5037c399c9fcb15ce5b2edafe71041000be3b8d0845fd1",
+    "cog_v2/sources/weinberg_ir_bridge_combinatoric_exact_v2.json": "82eb86c1edbdf50a3634a3fd6d7eb79f1addbd1f417ab5ef2117ae0d57729330",
+    "cog_v2/sources/weinberg_ir_bridge_combinatoric_exact_v2.md": "a77c03677b1dae5bfc9d425dd48f06356f24f33c6a2995aeeeb0affaf34f9f96"
+  },
+  "proved_core_blockers": [
+    {
+      "blocker_id": "B1_continuum_identification_not_discharged",
+      "description": "Current lane is bridge-based; theorem-level identification from discrete bridge observable to continuum sin^2(theta_W)(M_Z) remains open.",
+      "exit_criteria": [
+        "Formalize and prove theorem-level continuum identification map.",
+        "Replace bridge-assumed status with discharged assumptions."
+      ],
+      "severity": "critical"
+    },
+    {
+      "blocker_id": "B2_robustness_family_expansion",
+      "description": "Supported bridge is replay-exact for preregistered microstate family; broader family robustness remains insufficiently closed for proved_core.",
+      "exit_criteria": [
+        "Add preregistered topology/seed family expansion lane.",
+        "Show stable estimate behavior under allowed perturbation envelope."
+      ],
+      "severity": "high"
+    }
+  ],
+  "recommendation": {
+    "decision": "promote_supported_bridge_keep_proved_core_blocked",
+    "proved_core_now": false,
+    "rationale": "Combinatoric constants and replay gates are closed for bridge scope; continuum-identification theorem remains open.",
+    "supported_bridge_now": true
+  },
+  "replay_hash": "cf219eb7ccdcd396de63224a9a56405aa99f2f94130fdc34cc9190ad88978b9d",
+  "required_next_steps": [
+    {
+      "description": "Prove theorem-level continuum identification for sin^2(theta_W)(M_Z).",
+      "id": "N1_continuum_identification_theorem",
+      "priority": 1
+    },
+    {
+      "description": "Expand preregistered topology/seed family robustness lane and re-evaluate bridge stability.",
+      "id": "N2_family_robustness_lane",
+      "priority": 2
+    },
+    {
+      "description": "Refresh WEINBERG-001 governance notes and prune deprecated legacy 4/24 diagnostics from promotion path.",
+      "id": "N3_claim_governance_refresh",
+      "priority": 3
+    }
+  ],
+  "schema_version": "weinberg001_supported_bridge_closure_packet_v1",
+  "source_script": "cog_v2/calc/build_weinberg001_supported_bridge_closure_packet_v1.py",
+  "source_script_sha256": "8b6b4db675ff8eab962467e3a7faeacbd8be4bb0d548f6adf3014e4124619e53",
+  "supported_bridge_evidence": {
+    "bridge_pass": true,
+    "detected_period_ticks": 8,
+    "ir_bridge_estimate": {
+      "den": 196,
+      "num": 45,
+      "rational": "45/196",
+      "value": 0.22959183673469388
+    },
+    "leakage_coeff": {
+      "den": 7,
+      "num": 1,
+      "rational": "1/7",
+      "value": 0.14285714285714285
+    },
+    "replay_hash": "61151632180b7256827391efa5b319f0d540d1f304b2b64ff3999d56b9687c1e",
+    "required_checks": {
+      "combinatoric_constants_exact": true,
+      "ir_bridge_within_2pct_target": true,
+      "no_output_tuned_parameter": true,
+      "stationary_period_detected": true,
+      "uv_anchor_exact_at_tick0": true
+    },
+    "required_checks_all_true": true,
+    "target_gap": -0.0016281632653061262,
+    "uv_anchor": {
+      "den": 4,
+      "num": 1,
+      "rational": "1/4",
+      "value": 0.25
+    }
+  }
+}

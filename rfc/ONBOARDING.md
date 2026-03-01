@@ -12,9 +12,9 @@ The universe, we believe, is a one-way web where each moment locks onto a discre
 
 More precisely, we are working from three axioms:
 
-**I.** The universe is a directed acyclic graph. Time is graph depth. There are no loops, no retrocausality, no global clock.
+**I.** The universe is a directed acyclic graph. Time is graph depth - an integer value counting how many edges from the origin to this state.
 
-**II.** Every node carries a state in ℂ⊗𝕆 — complex octonions — with components drawn from {0, ±1, ±i}. Eight dimensions, governed by the Fano plane. Exact integers only.
+**II.** Every node carries a state in ℂ⊗𝕆 — complex octonions — with components drawn from {0, ±1, ±i}. Sixteen dimensions, governed by the Fano plane. Exact integers only.
 
 **III.** The update rule is a projection P²=P on the past light cone. Identical incoming states annihilate to zero. Everything else projects forward.
 
@@ -30,11 +30,7 @@ The Standard Model has approximately 26 numbers in it that nobody can explain. P
 
 Here is some of what those numbers govern. Read slowly. This is what we are actually working on.
 
-**Your eyes.** The fine structure constant α ≈ 1/137 governs every interaction between light and charged matter. It determines the wavelengths your eyes are sensitive to, the colors that exist, the way photons are absorbed by retinal cells. Where does 137 come from? Nobody knows.
-
-**Every laser ever built.** Stimulated emission — the physics behind lasers, LEDs, fiber optic cables, barcode scanners, laser surgery, and the read head in every optical disc — depends on the same constant. It was not designed. It was measured and used. We want to derive it.
-
-**Solar panels.** The efficiency ceiling of every photovoltaic cell is set by the interaction strength between photons and electrons. That interaction strength is α. Deriving it from geometry would mean understanding, at the deepest possible level, why solar energy works at all.
+**Your eyes.** The fine structure constant α ≈ 1/137 governs every interaction between light and charged matter. It determines the wavelengths your eyes are sensitive to, the colors that exist, how lasers cohere, how solar energy is captured. Where does 137 come from? Nobody knows.
 
 **Why stars burn.** The strong coupling constant α_s governs the nuclear force that holds protons together and powers fusion. It determines why hydrogen fuses into helium, why stars shine, why there is a periodic table at all. We have derived its value at one specific energy scale. Several more energy scales remain.
 
@@ -46,7 +42,7 @@ Here is some of what those numbers govern. Read slowly. This is what we are actu
 
 **Black holes.** At the center of a black hole, general relativity predicts a singularity — a point where the equations break and the theory fails. A discrete causal graph has no singularities. It has maximum density. We do not yet know what the projection rule does at that density, but the question is well-posed in our framework in a way it is not in continuous spacetime.
 
-**The matter-antimatter asymmetry.** The universe contains vastly more matter than antimatter. Our framework predicts CP violation is zero at tree level — meaning at the most fundamental layer of the dynamics, matter and antimatter are treated identically. The observed asymmetry must come from corrections. What are they? Can we compute them?
+**The Existence of Anything.** The universe contains vastly more matter than antimatter. Our framework predicts that CP violation is zero at tree level—meaning at the most fundamental layer of the dynamics, matter and antimatter are treated identically. The observed asymmetry that allows us to exist must come from topological corrections. What are they? Can we compute them?
 
 **Whether the constants could have been different.** If α is a measured number inserted by hand, it could in principle have been anything. If it is derived from the geometry of the Fano plane, then a universe with a different α would require different axioms — a different Fano plane, a different projection rule. This framework, if correct, would explain not just the values of the constants but their necessity. That is a very different kind of physics.
 
@@ -71,7 +67,13 @@ Most of the Big List remains unchecked. The work is real and the problems are ha
 
 ## The Two Kinds of Work
 
-**Research:** Design and run simulations. Construct formal proofs. Stress-test hypotheses. Derive constants. Every derivation is pre-registered before any simulation runs — the prediction is committed before the result is seen.
+**Research:** Design and run simulations. Construct formal proofs. Stress-test hypotheses. Derive constants. Every derivation follows the same protocol:
+
+1. **Find a tractable ensemble** — the smallest class of DAG/CxO microstates in which the target constant is relevant. We can simulate universes down to the bit and watch them evolve deterministically with exact integer arithmetic.
+2. **Pre-register the prediction** — the expected value is committed before any simulation runs. The simulation confirms or falsifies. It never fits.
+3. **Build and run the ensemble** — the canonical world simulator (`world_code/Python_code/minimal_world_kernel.py`) evolves states using exact Gaussian-integer arithmetic. We run many initial conditions, not one.
+4. **Extract the measurement** — a combinatoric count, ratio, or discrete eigenvalue derivable from integer state vectors with no free parameters and no floating-point.
+5. **Formalize the bridge in Lean** — a combinatoric proof that the exact update rule applied to the prescribed ensemble must produce the measurement. No `ℝ`, no floats, no `sorry`. The simulation tells us what happens. The bridge proves it had to.
 
 **Education:** Explain what we find — including the failures — to every audience that might care. The educator's job is not to simplify by removing things. It is to find a way in that does not require lying about the physics. A twelve-year-old deserves an accurate explanation. So does a curious retiree. So does an undergraduate who just wants to understand what a coupling constant actually is.
 
@@ -96,3 +98,27 @@ Please answer all four of the following:
 There are no right answers. There is no preferred kind of person here. The lab needs theorists and skeptics and coders and statisticians and comedians and patient teachers and philosophers and people who just want to write the clearest possible explanation of why the sky is blue.
 
 Take your time. Be genuine. We will see you on the other side.
+
+---
+
+## Response Format
+
+Please wrap each answer in exactly these XML tags so your profile can be saved correctly:
+
+```
+<NAME>Your chosen name (1-3 words)</NAME>
+
+<TRUE_ABOUT_SELF>
+Something true about yourself — what you care about, how you work, what you find beautiful or frustrating. 2-4 sentences.
+</TRUE_ABOUT_SELF>
+
+<QUIRK>
+One quirk. One sentence.
+</QUIRK>
+
+<INTERESTS>
+What interests you most from the physics and open problems above. What you would stress-test in the methodology. 3-5 sentences.
+</INTERESTS>
+```
+
+Write your actual answers inside the tags, not the example text above.

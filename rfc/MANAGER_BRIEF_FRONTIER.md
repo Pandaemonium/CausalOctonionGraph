@@ -43,6 +43,75 @@ Do not use a global default role. If `<ROLE>` is omitted, infer role from task c
 - audit/replay/verification -> `Verification_Clerk`
 **Hiring a role with `<TIER>openai</TIER>` or `<TIER>gemini</TIER>` spawns a NEW person — not Leibniz.**
 
+---
+
+## CANONICAL RESEARCH METHODOLOGY — SIMULATION-FIRST
+
+**Every derivation of a Standard Model constant follows this five-step protocol.**
+This is the lab's scientific method. Deviation requires explicit written justification in the task.
+
+### The Five Steps
+
+**Step 1 — Find a tractable ensemble.**
+Identify the smallest class of DAG/CxO microstates where the target constant is relevant.
+- *Tractable:* runs in seconds on one CPU with Gaussian-integer arithmetic (no floats, no ℝ)
+- *Relevant:* the update rule's multiplicative structure distinguishes the value of this constant
+- Think in terms of graph scale: 2–3 node lightcones for coupling ratios; 7-node Fano rings for gauge charges; Witt triples for color/charge quantum numbers
+
+**Step 2 — Pre-register the prediction.**
+Before running ANY simulation, commit the predicted value to `claims/*.yml`:
+- Predicted form must be exact: a rational, an algebraic integer, or a formula in N_c / N_gen / Fano geometry
+- The simulation **confirms or falsifies**. It never fits. A prediction written after the result is invalid.
+- Write the prediction in the claim YAML as `pre_registered_prediction:` before the task is assigned.
+
+**Step 3 — Build and run the ensemble.**
+Use the canonical world simulator infrastructure:
+```
+Kernel (standard):        world_code/Python_code/minimal_world_kernel.py
+Kernel (unity-projected): world_code/Python_code/minimal_world_kernel_unity.py
+Campaign runner:          world_code/Python_code/run_world_code_campaign.py
+Campaign configs:         world_code/Python_code/campaign_configs/
+Outputs:                  world_code/Python_code/results/{campaign_id}/
+```
+Run an **ensemble** of initial states (not a single microstate). Vary initial conditions.
+Confirm the measurement is stable across the ensemble — constants should not be sensitive to microstate details.
+
+**Step 4 — Extract the measurement.**
+The observable extracted from evolved states must be:
+- A combinatoric count, ratio, or discrete eigenvalue — always an exact integer or rational from Gaussian arithmetic
+- Derivable from the integer state vectors with no free parameters, no floating-point, no curve-fitting
+- Comparable to the experimental value via an exact algebraic bridge formula written in the claim
+
+**Step 5 — Formalize the bridge in Lean.**
+The Lean proof covers the **bridge** only — not the simulation itself:
+- Prove that the exact update rule applied N times to the prescribed initial ensemble produces the claimed observable
+- The proof must be combinatoric/algebraic: `ℤ`, `Fin`, `Finset`, `ZMod`, `GroupTheory` — no `ℝ`, no `Float`, no `sorry`
+- The bridge is the mathematical guarantee: *if the kernel is correct, the measurement equals the constant*
+
+### Separation of Concerns (non-negotiable)
+
+| Layer | Tool | What it establishes |
+|-------|------|----------------------|
+| Simulation | Python + world_code kernel | The kernel runs; ensemble → specific measurement |
+| Bridge | Lean 4 (combinatoric only) | The algebra guarantees: update rule output = claimed constant |
+| Physics | Claim YAML + PDG comparison | That the constant matches experiment (checked by hand) |
+
+### What a complete claim looks like
+- `claims/ALPHA-001.yml`: `pre_registered_prediction`, ensemble description, kernel variant, bridge theorem name
+- `calc/test_alpha_ensemble.py`: runs kernel, extracts measurement, asserts **exact equality** to pre-registered prediction
+- `CausalGraphTheory/AlphaBridge.lean`: proves extraction formula applied to update rule output equals predicted algebraic expression
+- Status `proved` requires BOTH: pytest passes AND Lean bridge compiles with zero `sorry`
+
+### Anti-patterns (automatically a FAIL from Skeptic)
+- Fitting constants by scanning parameter space — pre-register first, always
+- Lean proofs that only formalize definitions (convention laundering) — no physics content
+- Running one microstate and calling it confirmed — use an ensemble
+- Using floats or `Real` anywhere in the kernel or bridge — Gaussian integers throughout
+- A passing simulation without Lean bridge — status stays `partial`, never `proved`
+- Any `sorry` in a bridge theorem — hard block, no exceptions
+
+---
+
 ## Current P0 — D4/D5 Contract Lock
 
 **Assign this before any other physics task:**
@@ -683,6 +752,53 @@ rfc(PHOTON-001): document photon masslessness derivation plan
 pedagogy(ALG-001): add octonionic alternativity LaTeX section
 kernel(KERNEL-001): add NodeStateV2 and transition semantics to KernelV2.lean
 sim(MU-001): gate-density simulation v2 — ratio recorded
+```
+
+---
+
+## Worker Signature Policy
+
+**Workers must sign their own work.** Every document a worker creates or substantially
+improves must carry a single, unobtrusive authorship signature placed immediately adjacent
+to their most significant contribution.
+
+**Rules:**
+
+1. **New document (sole author):** Sign at the very end of the file, after the last
+   substantive section:
+   ```
+   <!-- authored by <Name>, <role>, <YYYY-MM-DD> -->
+   ```
+   For Lean files, use a `-- authored by` comment on the final non-blank line.
+   For Python files, use a `# authored by` comment at the module footer.
+
+2. **Substantially improved (co-author):** Sign inline, immediately after the paragraph
+   or proof block that represents the largest single addition.  Use the same one-line
+   comment syntax.  Do **not** add a second signature elsewhere in the same document.
+
+3. **Minor edits / typo fixes:** No signature required.
+
+4. **Format:** `<Name>` is the worker's chosen name (e.g. "Leibniz", "Lovelace").
+   `<role>` is their role slug (e.g. "lean_theorems_expert", "pedagogy_curator").
+   `<YYYY-MM-DD>` is the date of the contribution.
+
+5. **One signature per worker per document per session.** If a worker touches the same
+   file in a follow-up session, they may update the date on their existing signature
+   rather than adding a new one.
+
+**Example (Lean):**
+```lean
+-- authored by Leibniz, lean_theorems_expert, 2026-02-27
+```
+
+**Example (Markdown):**
+```markdown
+<!-- authored by Pascal, pedagogy_curator, 2026-02-27 -->
+```
+
+**Example (Python):**
+```python
+# authored by Euler, numerical_analyst, 2026-02-27
 ```
 
 ---

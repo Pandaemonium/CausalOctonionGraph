@@ -1,0 +1,82 @@
+{
+  "results": {
+    "layered_ok": {
+      "canonical_profile_id": "layered_strict_v1",
+      "defect_pair_examples": [],
+      "layer_violations_examples": [],
+      "notes": [
+        "Delta(A,B)=Lmax-Lmin over directed A->B paths.",
+        "Canonical strict layering expects no edge-depth violations and max_delta=0.",
+        "If transitive shortcut edges are present in input, defect metrics can be inflated."
+      ],
+      "schema_version": "layered_causality_validation_v1",
+      "summary": {
+        "canonical_layered_verdict": "pass",
+        "defect_pair_count": 0,
+        "edge_count": 5,
+        "has_multi_length_paths": false,
+        "is_dag": true,
+        "layer_violation_count": 0,
+        "max_delta": 0,
+        "node_count": 5,
+        "sampled_pair_count": 9,
+        "sampled_source_count": 5,
+        "strict_layering_holds": true
+      }
+    },
+    "shortcut_defect": {
+      "canonical_profile_id": "layered_strict_v1",
+      "defect_pair_examples": [
+        {
+          "delta": 1,
+          "depth_diff": 2,
+          "depth_dst": 2,
+          "depth_src": 0,
+          "dst": "C2",
+          "lmax": 2,
+          "lmin": 1,
+          "src": "A0"
+        },
+        {
+          "delta": 1,
+          "depth_diff": 3,
+          "depth_dst": 3,
+          "depth_src": 0,
+          "dst": "D3",
+          "lmax": 3,
+          "lmin": 2,
+          "src": "A0"
+        }
+      ],
+      "layer_violations_examples": [
+        {
+          "depth_delta": 2,
+          "depth_dst": 2,
+          "depth_src": 0,
+          "dst": "C2",
+          "src": "A0"
+        }
+      ],
+      "notes": [
+        "Delta(A,B)=Lmax-Lmin over directed A->B paths.",
+        "Canonical strict layering expects no edge-depth violations and max_delta=0.",
+        "If transitive shortcut edges are present in input, defect metrics can be inflated."
+      ],
+      "schema_version": "layered_causality_validation_v1",
+      "summary": {
+        "canonical_layered_verdict": "fail",
+        "defect_pair_count": 2,
+        "edge_count": 4,
+        "has_multi_length_paths": true,
+        "is_dag": true,
+        "layer_violation_count": 1,
+        "max_delta": 1,
+        "node_count": 4,
+        "sampled_pair_count": 6,
+        "sampled_source_count": 4,
+        "strict_layering_holds": false
+      }
+    }
+  },
+  "schema_version": "layered_causality_validation_demo_v1"
+}

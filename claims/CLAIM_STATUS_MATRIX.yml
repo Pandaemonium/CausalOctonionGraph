@@ -1921,9 +1921,10 @@ rows:
     - vacuum_stability.yml
   WEINBERG-001:
     claim_id: WEINBERG-001
-    status: partial
+    status: supported_bridge
     lean_artifacts:
     - CausalGraphTheory/WeakMixingObservable.lean
+    - CausalGraphTheory/WeinbergCombinatoricBridge.lean
     - GaugeGroup.vacuumStabilizer_iso_S4
     - CausalGraph.inducedNonVacLinePerms_count
     - CausalGraph.inducedNonVacLinePerms_perm_S4
@@ -1953,27 +1954,35 @@ rows:
     - CausalGraph.electroweakMaskUnder_stabilizer_card_four
     - CausalGraph.overlapMaskUnder_stabilizer_card_one
     - CausalGraph.sin2ThetaWObsNat_weakBoost_eq_one_third
+    - CausalGraph.uvAnchorCombinatoric_eq_one_four
+    - CausalGraph.leakageCoeffCombinatoric_eq_one_seven
+    - CausalGraph.sin2ThetaWBridgeCombinatoric_zero_share
+    - CausalGraph.sin2ThetaWBridgeCombinatoric_antitone
     python_artifacts:
-    - calc/test_constants.py::TestWeinbergAngle::test_weinberg_target_value
+    - cog_v2/calc/test_weinberg_ir_bridge_combinatoric_exact_v2.py
     battery_artifacts:
     - calc/test_weinberg_h2_governance.py
     - sources/weinberg_h2_ablation_results.md
     - sources/weinberg_associator_ensemble_results.md
+    - cog_v2/sources/weinberg_ir_bridge_combinatoric_exact_v2.json
+    - cog_v2/sources/weinberg_ir_bridge_combinatoric_exact_v2.md
     motif_id: ew_mixing_projector_v1
     rule_profile: default_multiplicative_markov
     pi_obs_profile: with_sector
     projection_sensitivity: sensitive
     equivalence_mode: none
     equivalence_artifact: ''
-    evidence_level: mixed:lean_proved+python_verified
+    evidence_level: mixed:lean_proved+python_verified+replay_exact
     derivation_status: bridge_assumed
     bridge_assumptions:
-    - not_yet_documented_bridge_assumption
-    falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the
-      stated prediction or constraint.
-    last_verified_at: '2026-02-28T01:24:37.897459Z'
+    - The bridge form sin2_ir = uv_anchor - leakage_coeff * mean_e000_share_stationary captures the intended coarse-grained IR observable at M_Z for this lane.
+    - The preregistered exact microstate family used in the closure packet is representative within supported_bridge scope.
+    falsification_condition: Claim is falsified if deterministic replay fails for the exact-combinatoric bridge artifact, if
+      1/4 and 1/7 are not reproducible as locked combinatoric constants, or if preregistered robustness reruns fail to preserve
+      stable bridge direction/magnitude under allowed profile perturbations.
+    last_verified_at: '2026-02-28T23:59:00.000000Z'
     owner_rfc: rfc/RFC-029_Weinberg_Angle_Gap_Closure.md
-    notes: source=weinberg_angle.yml | backfill=priority_v1
+    notes: source=weinberg_angle.yml | supported_bridge closure packet uses RFC-011 combinatoric constants lane
     confinement_relevant: false
     confinement_gate_status: not_applicable
     confinement_artifact: ''

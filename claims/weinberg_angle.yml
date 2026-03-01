@@ -1,39 +1,40 @@
 id: WEINBERG-001
-title: Weinberg angle from C x O projector observables (baseline and H2 ceiling locked, mechanism open)
+title: Weinberg angle from C x O projector observables (supported_bridge closure packet)
 statement: "Canonical claim file: this record supersedes duplicate drafts of WEINBERG-001.\n\nIn the current COG Lean formalization,\
   \ the locked projector baseline is:\n    sin2ThetaWRaw = maskCard(U1) / maskCard(EW) = 1/2.\n\nA derived candidate from\
   \ the same locked masks is the exclusive-U(1) ratio:\n    sin2ThetaWExclusive = (maskCard(U1) - maskCard(U1 intersect Weak))\
   \ / maskCard(EW)\n                        = (2 - 1) / 4\n                        = 1/4.\n\nThis baseline is formally proved\
   \ and intentionally frozen to prevent\nretrofitting. The physical Z-pole weak-mixing target (~0.23122) is NOT yet\nderived\
   \ from COG and remains an open mechanism under RFC-029.\n"
-status: proved
+status: supported_bridge
 contract_gates:
   required:
   - rfc080
   rfc080:
-    policy_id: weinberg_running_stationary_v1
+    policy_id: weinberg_ir_bridge_combinatoric_exact_v2
     running_mode: simulation_first
     distribution_mode: stationary_distribution
     cold_start_policy: rfc079_typical_start_v1
     oracle_mode: two_lane
-    replay_artifact: sources/weinberg_associator_ensemble_results.md
-lean_proof: CausalGraphTheory/GaugeSL23.lean
-python_test: calc/test_weinberg001_angle.py
-promoted_by: task_2c902f80-81c
+    replay_artifact: cog_v2/sources/weinberg_ir_bridge_combinatoric_exact_v2.md
+lean_proof: CausalGraphTheory/WeinbergCombinatoricBridge.lean
+python_test: cog_v2/calc/test_weinberg_ir_bridge_combinatoric_exact_v2.py
+promoted_by: codex_supported_bridge_packet_2026_02_28
+closure_packet_artifact: cog_v2/sources/weinberg001_supported_bridge_closure_packet_v1.json
 status_split:
   uv_structural_observable:
     status: supported
     claim_id: WEINBERG-UV-001
     statement: The exclusive-U(1) observable is 1/4 and stabilizer-invariant in the locked S4 transport frame.
   ir_physical_running:
-    status: open
-    statement: The scale-running bridge from the UV 1/4 observable to Z-pole ~0.23122 remains unclosed.
+    status: supported_bridge
+    statement: A preregistered simulation-first bridge with exact combinatoric constants (1/4, 1/7) is replay-closed; proved_core continuum identification remains open.
 pi_obs_profile: with_sector
 pi_obs_profile_version: v1
 projection_sensitivity: unknown
 profile_contrast_run: ''
 equivalence_mode: none
-lean_file: CausalGraphTheory/WeakMixingObservable.lean
+lean_file: CausalGraphTheory/WeinbergCombinatoricBridge.lean
 lean_theorems:
 - GaugeGroup.vacuumStabilizer_iso_S4
 - CausalGraph.inducedNonVacLinePerms_count
@@ -64,7 +65,10 @@ lean_theorems:
 - CausalGraph.electroweakMaskUnder_stabilizer_card_four
 - CausalGraph.overlapMaskUnder_stabilizer_card_one
 - CausalGraph.sin2ThetaWObsNat_weakBoost_eq_one_third
-python_test: calc/test_weinberg001.py
+- CausalGraph.uvAnchorCombinatoric_eq_one_four
+- CausalGraph.leakageCoeffCombinatoric_eq_one_seven
+- CausalGraph.sin2ThetaWBridgeCombinatoric_zero_share
+- CausalGraph.sin2ThetaWBridgeCombinatoric_antitone
 depends_on:
 - GAUGE-001
 - FANO-001
@@ -117,21 +121,23 @@ notes: "S4 RECONCILIATION (Lean, 2026-02-26):\n  The vacuum stabilizer of e7 is 
   \ transport-invariance evidence (2026-02-26):\n    - `sin2ThetaWObs_exclusive_u1_stabilizer_invariant_bool` proves the\n\
   \      exclusive-U1 1/4 observable is unchanged across all 24 vacuum-stabilizer\n      permutations under transported weak-pair\
   \ coordinates.\n"
-blocked_reason: 'The physical weak-mixing mechanism is still open:
+blocked_reason: 'Proved-core closure remains open:
 
-  1) weighted projector/coupling observable not fully locked, and/or
+  1) continuum EFT identification from the discrete bridge observable to physical
+     sin^2(theta_W)(M_Z) is still bridge-assumed;
 
-  2) explicit scale-running bridge not yet closed.
+  2) robustness across broader preregistered topology/initial-state families is
+     not yet promoted to theorem-level closure.
 
-  S4 stabilizer reconciliation is closed; subgroup-to-observable mapping is still open.
-
-  The exclusive-U(1) 1/4 candidate is promising but not sufficient by itself.
-
-  Keep status partial until RFC-029 gates pass.
+  This claim is promoted to supported_bridge only.
 
   '
 derivation_status: bridge_assumed
 bridge_assumptions:
-- not_yet_documented_bridge_assumption
-falsification_condition: Claim is falsified if replayable evidence and deterministic verification fail to reproduce the stated
-  prediction or constraint.
+- 'The bridge form sin2_ir = uv_anchor - leakage_coeff * mean_e000_share_stationary
+  captures the relevant coarse-grained IR observable at M_Z for this claim scope.'
+- 'The preregistered microstate family used in the closure artifact is representative
+  of the intended electroweak running lane within supported_bridge scope.'
+falsification_condition: Claim is falsified if deterministic replay fails for the exact-combinatoric bridge artifact, if the
+  locked constants cease to be derivable as 1/4 and 1/7 from the declared combinatorics, or if preregistered robustness reruns
+  show unstable direction/magnitude of the bridge estimate under allowed profile perturbations.
