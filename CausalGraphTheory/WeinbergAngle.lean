@@ -14,7 +14,7 @@
 import Mathlib.Data.Fintype.Card
 import Mathlib.GroupTheory.Perm.Basic
 import Mathlib.Data.Fin.Basic
-import Mathlib.Data.Rat.Basic
+import Mathlib
 
 namespace WeinbergAngle
 

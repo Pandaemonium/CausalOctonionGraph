@@ -1,3 +1,5 @@
+import Mathlib
+
 /-!
 # AlphaFano — Gate 3 for ALPHA-001
 
@@ -18,9 +20,6 @@ proxy is a valid (loose) upper bound.
 CODATA 2018 recommended value: α⁻¹ = 137.035999084
 Mohr, Newell, Taylor, Tiesinga, Rev. Mod. Phys. 93, 025010 (2021).
 -/
-
-import Mathlib.Data.Rat.Basic
-import Mathlib.Tactic.NormNum
 
 namespace CausalGraphTheory.Alpha
 

@@ -32,6 +32,7 @@ import CausalGraphTheory.GaugeGroup
 import CausalGraphTheory.GaugeObservables
 import CausalGraphTheory.WeakMixingObservable
 import CausalGraphTheory.WeinbergCombinatoricBridge
+import CausalGraphTheory.AlphaCombinatoricBridge
 import CausalGraphTheory.Koide
 import CausalGraphTheory.ThetaEFTBridge
 

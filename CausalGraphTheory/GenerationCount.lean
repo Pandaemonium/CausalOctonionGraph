@@ -1,3 +1,5 @@
+import CausalGraphTheory.LeptonOrbits
+
 /-!
 # GEN-002: Three-Generation Count from Fano Orbit Structure
 
@@ -25,8 +27,6 @@ explicit 1-3-3 partition proved by `native_decide`. We define `generationCount`
 as `stabOrbits0.length` and derive all results from the already-proved lemmas.
 -/
 
-import CausalGraphTheory.LeptonOrbits
-
 namespace GenerationCount
 
 open LeptonOrbits
@@ -46,7 +46,7 @@ theorem fano_line_count : fanoLines.card = 7 :=
 /-! ## Partition arithmetic -/
 
 /-- The 1-3-3 orbit sizes sum to 7 (= total number of Fano lines). -/
-theorem orbit_partition_sum : 1 + 3 + 3 = 7 := by norm_num
+theorem orbit_partition_sum : 1 + 3 + 3 = 7 := by native_decide
 
 /-! ## Generation count -/
 

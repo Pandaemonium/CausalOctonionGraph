@@ -1,0 +1,14 @@
+{
+  "nodes": {
+    "n1": {"state": "complex_octonion_initial_state_1"},
+    "n2": {"state": "complex_octonion_initial_state_2"},
+    "n3": {"state": {"real": 0, "imaginary": [0, 1, 0, 0, 0, 0, 0]}}
+  },
+  "edges": [
+    {"from": "n1", "to": "n2"},
+    {"from": "n2", "to": "n3"},
+    {"from": "n3", "to": "n1"}
+  ],
+  "projector_order": ["P1", "P2", "P3"],
+  "initial_condition": "stable_motif_without_perturbation"
+}

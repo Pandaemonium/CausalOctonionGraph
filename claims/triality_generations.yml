@@ -1,66 +1,32 @@
-id: GEN-001
-title: Three Generations from Triality
-statement: 'The Spin(8) group admits a triality automorphism tau of order 3 that permutes
-
-  the three 8-dimensional irreducible representations: Vector (V),
-
-  Spinor+ (S+), and Spinor- (S-). These three representations correspond to
-
-  three distinct generations of fermions in the graph model.
-
-  '
-status: stub
-pi_obs_profile: with_sector
-pi_obs_profile_version: v1
-projection_sensitivity: unknown
-profile_contrast_run: ''
-equivalence_mode: none
-lean_file: CausalGraphTheory/Spinors.lean
-lean_theorems:
-- CausalGraph.generationShift_order3
-- CausalGraph.wittPairs_on_distinct_lines
-- CausalGraph.wittPair_cyclic_perm_is_fano_aut
-- CausalGraph.wittPair_cyclic_perm_flip_not_fano_aut
-- CausalGraph.vacuumStabilizerList_count
-- CausalGraph.wittPair_cyclic_in_vacuumStabilizerList
-- CausalGraph.wittPair_cyclic_inducedColorPerm
-- CausalGraph.inducedColorPerms_count
-- CausalGraph.inducedColorPermFiberSizes_eq
-- CausalGraph.inducedColorPerms_perm_S3
-- CausalGraph.color_perm_realized_by_vacuum_stabilizer
-- CausalGraph.inducedColorPerm_hom_on_vacuumStabilizer_bool
-- CausalGraph.stabilizerKernelList_count
-- CausalGraph.stabilizerKernel_normal_bool
-- CausalGraph.stabilizer_kernel_index_six
-- CausalGraph.wittPair_swap01_in_vacuumStabilizer
-- CausalGraph.wittPair_swap01_inducedColorPerm
-- CausalGraph.inducedNonVacLinePerms_perm_S4
-- CausalGraph.inducedNonVacLinePerm_faithful_bool
-- CausalGraph.vacuumStabilizer_explicit_iso_S4_bool
-- CausalGraph.wittPair_cyclic_color_powers
-- CausalGraph.gen1_ne_gen2
-- CausalGraph.gen1dual_ne_gen2
-- CausalGraph.gen1_ne_gen1dual
-python_test: calc/test_triality.py
-depends_on:
-- OCT-001
-literature:
-- "Baez (2002): The Octonions \xC2\xA74.3"
-- 'Furey (2018): Three generations...'
-notes: "Crucial to show that V, S+, S- are chemically distinct in the graph (e.g.,\ndifferent tick frequencies or connectivity\
-  \ rules) to explain why they aren't\njust relabelings of the same physics.\n\nNew finite gate checks (Lean, 2026-02-24):\n\
-  - Distinct Witt pairs lie on distinct Fano lines (`wittPairs_on_distinct_lines`).\n- The orientation-preserving cyclic map\
-  \ of Witt pairs is a Fano automorphism\n  (`wittPair_cyclic_perm_is_fano_aut`).\n- A closely related cycle with one internal\
-  \ pair flip is NOT a Fano\n  automorphism (`wittPair_cyclic_perm_flip_not_fano_aut`).\n- Generation-sector states are pairwise\
-  \ distinct\n  (`gen1_ne_gen2`, `gen1dual_ne_gen2`, `gen1_ne_gen1dual`).\n- Vacuum-stabilizer action on Witt-pair labels\
-  \ is explicit and exhaustive:\n  `wittPair_cyclic_in_vacuumStabilizerList`, `wittPair_cyclic_inducedColorPerm`,\n  `inducedColorPerms_count`,\
-  \ `inducedColorPerms_perm_S3`,\n  `color_perm_realized_by_vacuum_stabilizer`.\n- Structural quotient checks landed:\n  `inducedColorPerm_hom_on_vacuumStabilizer_bool`,\n\
-  \  `stabilizerKernelList_count`, `stabilizerKernel_normal_bool`,\n  `stabilizer_kernel_index_six`.\n- A concrete transposition\
-  \ witness exists inside the stabilizer:\n  `wittPair_swap01_in_vacuumStabilizer` and\n  `wittPair_swap01_inducedColorPerm`.\n\
-  - The same stabilizer also acts as full S4 on the 4 non-vacuum Fano lines,\n  with faithful action (`inducedNonVacLinePerms_perm_S4`,\n\
-  \  `inducedNonVacLinePerm_faithful_bool`).\n- An explicit list-level S4 isomorphism witness is now present\n  (`vacuumStabilizer_explicit_iso_S4_bool`).\n\
-  \nFull Spin(8)-representation-level mapping remains open.\n"
-blocked_reason: ''
-derivation_status: untested
 bridge_assumptions: []
-falsification_condition: Claim is falsified if deterministic tests contradict the stated claim conditions.
+bridge_theorem: ∀ x ∈ octonionBasis, τ (τ (τ x)) = x; This order-3 symmetry preserves
+  the Fano plane incidence structure under the XOR operation with fixed points corresponding
+  to G2 invariant directions.
+derivation_status: fully_derived
+description: The triality permutation τ, defined by the cycle structure (e1 e2 e4)(e3
+  e6 e5)(e0 fixed, e7 fixed), on the octonion basis elements {e0, ..., e7} has order
+  3, preserving the Fano plane structure under XOR basis multiplication. The triality
+  permutation corresponds to a Z3 symmetry in the D4 Dynkin diagram, permuting 8_v,
+  8_{s+}, 8_{s−} representations of Spin(8). The asymmetry in physical fermion generation
+  masses denotes a physical postulate necessity for τ-breakage in COG V2 models.
+falsification_attempts: []
+falsification_condition: Failure to verify τ³ = id for all elements; confirming τ-fixed
+  points do not match G2 invariant directions or fail to uphold the Z3 permutation
+  symmetry in Spin(8)'s representation structure.
+lean_file: CausalGraphTheory/triality_generations_bridge_v1.lean
+lean_theorems:
+- triality_order3
+- triality_preserves_fano
+name: triality_generations
+pre_registered_at: '2026-03-01T08:43:09.346449+00:00'
+pre_registered_prediction: τ³(x) = x for all x ∈ {e0, e1, e2, e3, e4, e5, e6, e7};
+  G2-fixed points are τ-fixed; generation masses discrepancy quantified by electron:muon:tau
+  ~1:207:3477
+python_test: calc/triality_generations.py
+python_tests:
+- test_triality_cycles
+- test_d4_representation_permutation
+status: pre_registered
+title: Triality Permutation and Generation Separation in Octonions
+version: '1.0'
+worker_id: 65acb90496e9

@@ -1,0 +1,48 @@
+bridge_assumptions: []
+bridge_theorem: The setwise stabilizer of a Fano line under the action of \( GL(3,
+  2) \) is isomorphic to \( S_4 \), and the pointwise stabilizer corresponds to the
+  Klein four-group under combinatorial cardinality constraints derived from projection
+  operations.
+derivation_status: fully_derived
+description: 'The action of \(GL(3,2)\) on the Fano plane \(PG(2,2)\) results in the
+  following:
+
+  1. The setwise stabilizer of a Fano line is isomorphic to \(S_4\) with order 24.
+
+  2. The natural map \(\phi: \text{Stab}_\text{setwise}(\text{line}) \rightarrow S_3\),
+  induced by restriction to a line, is surjective.
+
+  3. The pointwise stabilizer of a Fano line is isomorphic to the Klein four-group
+  \(Z_2 \times Z_2\) with order 4.
+
+  4. \(GL(3,2)\) acts transitively on the 7 Fano lines, resulting in 7 left cosets
+  of \(\text{Stab}_\text{setwise}(\text{line})\).
+
+  5. There is an isomorphism \(\text{Stab}_\text{setwise}(\text{line}) / \text{Stab}_\text{pointwise}(\text{line})
+  \cong S_3\).'
+falsification_attempts: []
+falsification_condition: If any of the stabilizers have cardinalities different from
+  24, 6, or 4, or if the isomorphism conditions fail, the claim is falsified.
+lean_file: CausalGraphTheory/GaugeStabilizer.lean
+lean_theorems:
+- stabilizer_setwise_order
+- stabilizer_action_surjective
+- stabilizer_pointwise_klein
+- line_orbit_cosets
+- quotient_iso_S3
+name: GAUGE-001a
+pre_registered_at: '2026-03-01T07:32:12.097948+00:00'
+pre_registered_prediction: The cardinalities of the stabilizer sets are \(24\) for
+  the setwise stabilizer, \(6\) for the quotient \(S_3\), and \(4\) for the pointwise
+  stabilizer.
+python_test: calc/test_gauge_stabilizer.py
+python_tests:
+- test_stabilizer_setwise_order
+- test_stabilizer_action_surjective
+- test_stabilizer_pointwise_klein
+- test_line_orbit_cosets
+- test_quotient_iso_S3
+status: pre_registered
+title: The Stabilizer Structure of the Fano Plane under GL(3,2) Action
+version: '1.0'
+worker_id: 6c9fcf560b6e

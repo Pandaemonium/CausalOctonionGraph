@@ -1,0 +1,76 @@
+{
+  "bridge_pass": true,
+  "bridge_policy": {
+    "coefficients_source": "exact_combinatoric_cardinalities",
+    "formula": "alpha_bridge = 1 / (L^2 * P - D)",
+    "parameter_tuning": "none"
+  },
+  "checks": {
+    "bridge_formula_locked": true,
+    "combinatoric_constants_exact": true,
+    "denominator_identity_exact": true,
+    "no_output_tuned_parameter": true,
+    "value_within_6pct_target": true
+  },
+  "claim_id": "ALPHA-001",
+  "combinatoric_constants": {
+    "alpha_denominator": 145,
+    "degeneracy_subtract_cardinality": 2,
+    "fano_line_cardinality": 7,
+    "points_per_fano_line": 3,
+    "uv_anchor": {
+      "den": 49,
+      "num": 1,
+      "rational": "1/49",
+      "value": 0.02040816326530612
+    }
+  },
+  "contract_ref": "cog_v2/rfc/RFC-012_Alpha_Combinatoric_Bridge_Contract.md",
+  "contract_ref_sha256": "78805a8f509f4222cac3549311729a771f1372fe718d25874227202f1f83581d",
+  "kernel_module": "cog_v2/python/kernel_projective_unity.py",
+  "kernel_module_sha256": "936d1e8fb5f36c11a05133e67907203fe9fd78db2e8dd433bba4ea8835cbda27",
+  "kernel_profile_id": "cog_v2_projective_unity_v1",
+  "lean_bridge_file": "CausalGraphTheory/AlphaCombinatoricBridge.lean",
+  "lean_bridge_file_sha256": "cbcc1b1a6bffba97a9c1ca81bd6695525c0d3df29c3e0da1f934d0ad9438b168",
+  "mode": "simulation_first_structure_first_combinatoric_exact",
+  "observables": {
+    "absolute_gap": {
+      "den": 290000000000000,
+      "num": -116232245097,
+      "rational": "-116232245097/290000000000000",
+      "value": -0.00040080084516206895
+    },
+    "alpha_bridge": {
+      "den": 145,
+      "num": 1,
+      "rational": "1/145",
+      "value": 0.006896551724137931
+    },
+    "alpha_target_codata2018": {
+      "den": 10000000000000,
+      "num": 72973525693,
+      "rational": "72973525693/10000000000000",
+      "value": 0.0072973525693
+    },
+    "relative_error": 0.05492414425037378,
+    "structure_match": true,
+    "value_match": true
+  },
+  "preregistered_inputs": {
+    "bridge_origin": "cxo_combinatoric",
+    "free_parameter_count": 0,
+    "map_family_id": "alpha_denominator_fano_cubic_minus_degeneracy_v1",
+    "policy_id": "alpha_ir_bridge_combinatoric_exact_v1",
+    "posthoc_parameter_update": false,
+    "primitive_set": [
+      "fano_line_cardinality",
+      "points_per_fano_line",
+      "degeneracy_subtract_cardinality"
+    ]
+  },
+  "projector_id": "pi_unity_axis_dominance_v1",
+  "replay_hash": "3653f2d59a05c5dbeccb6956d9ad29f78a41d32b960720756a73118f83ab7972",
+  "schema_version": "alpha_ir_bridge_combinatoric_exact_v1",
+  "source_script": "cog_v2/calc/build_alpha_ir_bridge_combinatoric_exact_v1.py",
+  "source_script_sha256": "3b9b93d1406581ae4b623e1d37a3d6864297f42297575d496bd31c19da2e9490"
+}

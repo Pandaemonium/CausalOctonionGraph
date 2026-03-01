@@ -1,0 +1,23 @@
+{
+  "decision": "FAIL",
+  "from_replay_hash": "7236d61991cbb4c5d2b98de969965f591218d81192fd39433970928b44056725",
+  "from_schema": "ee_dimensional_leakage_benchmark_v1",
+  "lane_leakage_means": {
+    "full_2d": 0.9333333333333333,
+    "full_3d": 0.9904761904761904,
+    "line_1d": 0.0,
+    "strip_2d": 0.8
+  },
+  "notes": [
+    "1D proxy is valid only if higher-dimensional lanes remain near-zero leakage.",
+    "If 2D/3D leakage is nontrivial, 1D over-constrains mediator transport."
+  ],
+  "one_d_proxy_valid": false,
+  "schema_version": "ee_dimensional_1d_validity_report_v1",
+  "thresholds": {
+    "max_full2_leak_for_1d_valid": 0.05,
+    "max_full3_leak_for_1d_valid": 0.05,
+    "max_strip_leak_for_1d_valid": 0.05,
+    "one_d_zero_leakage_eps": 1e-12
+  }
+}

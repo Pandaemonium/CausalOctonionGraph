@@ -111,15 +111,21 @@ A bridge lane is falsified (or downgraded) if any hold:
 
 1. `THETA-001`:
    keep CP/sign combinatoric lane primary; continuum identification remains explicit bridge work.
-2. `WEINBERG-001`:
+2. `ALPHA-001`:
+   lock exact map family and constants under:
+   - `cog_v2/rfc/RFC-012_Alpha_Combinatoric_Bridge_Contract.md`
+   - `cog_v2/sources/alpha_ir_bridge_combinatoric_exact_v1.json`
+   - `CausalGraphTheory/AlphaCombinatoricBridge.lean`
+   keep `structure_match` and `value_match` explicitly separated.
+3. `WEINBERG-001`:
    enforce one discrete-RGE policy bundle; no policy-shopping across seeds/horizons.
    current supported-bridge lane is locked under:
    - `cog_v2/rfc/RFC-011_Weinberg_Combinatoric_Bridge_Contract.md`
    - `cog_v2/sources/weinberg_ir_bridge_combinatoric_exact_v2.json`
    - `cog_v2/sources/weinberg001_supported_bridge_closure_packet_v1.json`
-3. `STRONG-001`:
+4. `STRONG-001`:
    treat scale-running bridge as separate combinatoric map closure task.
-4. Mass lanes:
+5. Mass lanes:
    freeze mass observable and anchor policy before absolute claims.
 
 ## 9. Immediate Implementation Tasks

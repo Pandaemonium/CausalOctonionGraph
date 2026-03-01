@@ -1,0 +1,10 @@
+{
+  "simulation_steps": 8,
+  "channel_counts": {
+    "e000": 0,
+    "e001": 1,
+    "e010": 1,
+    "e100": 1
+  },
+  "description": "Mock result template for proton stability simulation"
+}

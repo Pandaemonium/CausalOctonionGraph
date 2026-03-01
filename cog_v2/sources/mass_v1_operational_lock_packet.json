@@ -1,0 +1,37 @@
+{
+  "schema_version": "mass_v1_operational_lock_packet",
+  "status": "locked_domain_qualified",
+  "date": "2026-03-01",
+  "rfc": "cog_v2/rfc/RFC-016_Operational_Mass_Definition_v1.md",
+  "definition": {
+    "impulse_hamming": "exact init-state hamming distance case vs control",
+    "delta_v_impulse": "mean(v_case-v_control) on preregistered early impulse window",
+    "mass_estimator": "I_h / |delta_v_impulse| for |delta_v_impulse| > eps"
+  },
+  "implementation": "cog_v2/calc/build_operational_mass_targeted_lock_v1.py",
+  "evidence_artifacts": [
+    "cog_v2/sources/operational_kinematics_mass_energy_v1.json",
+    "cog_v2/sources/operational_mass_targeted_lock_v1.json"
+  ],
+  "lock_ready_lanes": [
+    {
+      "particle_id": "left_spinor_muon_motif",
+      "energy_id": "E2_center_plus_shell1"
+    },
+    {
+      "particle_id": "left_spinor_tau_motif",
+      "energy_id": "E2_center_plus_shell1"
+    }
+  ],
+  "primary_profile_policy": {
+    "require_large_offaxis_primary_profile": true,
+    "criterion": "size_y >= 11 and size_z >= 11",
+    "diagnostic_profiles_allowed": true
+  },
+  "non_claims": [
+    "not universal across all motif and energy lanes",
+    "not an absolute SI unit calibration",
+    "does not lock kinetic energy definition"
+  ],
+  "next_registry": "cog_v2/sources/operational_kinematics_extension_registry_v1.md"
+}

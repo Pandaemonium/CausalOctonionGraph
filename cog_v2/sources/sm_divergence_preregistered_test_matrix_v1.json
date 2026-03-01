@@ -1,0 +1,109 @@
+{
+  "schema_version": "sm_divergence_preregistered_test_matrix_v1",
+  "date": "2026-03-01",
+  "rfc": "cog_v2/rfc/RFC-017_SM_Divergence_Prerigistered_Test_Matrix_v1.md",
+  "prereg_rules": [
+    "freeze hypothesis and observable",
+    "freeze cuts and sample definitions",
+    "freeze SM null and COG alternative model forms",
+    "freeze primary statistic and threshold",
+    "forbid post hoc model/cut/statistic changes"
+  ],
+  "tests": [
+    {
+      "id": "A1",
+      "title": "CP topology conditioning in heavy flavor",
+      "accessibility": "high",
+      "priority": 1,
+      "sm_null": "CKM-driven smooth asymmetry pattern after known systematics",
+      "cog_prediction": "class-conditioned asymmetry offsets correlated with motif decoherence class",
+      "primary_statistic": "out-of-sample delta_log_likelihood for preregistered COG class term",
+      "pass_criterion": "significant stable gain over SM baseline under prereg robustness checks",
+      "falsification": "no gain or unstable sign under prereg checks"
+    },
+    {
+      "id": "A2",
+      "title": "Running-coupling shape reanalysis",
+      "accessibility": "high",
+      "priority": 2,
+      "sm_null": "smooth logarithmic running",
+      "cog_prediction": "piecewise or staircase effective running in preregistered windows",
+      "primary_statistic": "AIC/BIC delta between smooth and prereg staircase models",
+      "pass_criterion": "staircase wins with prereg penalties and CV stability",
+      "falsification": "smooth model consistently preferred"
+    },
+    {
+      "id": "A3",
+      "title": "Sidereal anisotropy residual search",
+      "accessibility": "medium_high",
+      "priority": 3,
+      "sm_null": "no sidereal modulation beyond systematics",
+      "cog_prediction": "small harmonic modulation from residual axis anisotropy leakage",
+      "primary_statistic": "harmonic amplitudes and phase consistency",
+      "pass_criterion": "nonzero prereg amplitude with stable phase across independent runs",
+      "falsification": "null-compatible amplitudes after controls"
+    },
+    {
+      "id": "A4",
+      "title": "EDM regime-conditioned map",
+      "accessibility": "medium",
+      "priority": 4,
+      "sm_null": "near-zero EDM in current reach",
+      "cog_prediction": "regime-conditioned nonzero CP leakage contribution",
+      "primary_statistic": "bounded effect-size inference in prereg regime bins",
+      "pass_criterion": "coherent nonzero term across channels",
+      "falsification": "all channels null-compatible at prereg sensitivity"
+    },
+    {
+      "id": "A5",
+      "title": "Neutrino waveform-shape deformation",
+      "accessibility": "medium",
+      "priority": 5,
+      "sm_null": "PMNS sinusoidal form with standard matter effects",
+      "cog_prediction": "small non-sinusoidal deformation basis coefficients",
+      "primary_statistic": "likelihood ratio for fixed deformation basis",
+      "pass_criterion": "nonzero stable coefficient pattern",
+      "falsification": "coefficients compatible with zero"
+    },
+    {
+      "id": "B1",
+      "title": "Proton-decay channel hierarchy bias",
+      "accessibility": "low",
+      "priority": 6,
+      "sm_null": "no observed proton decay or model-dependent BSM channel expectations",
+      "cog_prediction": "channel ranking from motif-break pathway combinatorics",
+      "primary_statistic": "channel-rank concordance with prereg ordering",
+      "pass_criterion": "concordant observed ranking if signal exists",
+      "falsification": "discordant ranking or no support"
+    },
+    {
+      "id": "B2",
+      "title": "Regime-dependent strong-CP map",
+      "accessibility": "low_medium",
+      "priority": 7,
+      "sm_null": "single tiny effective theta behavior",
+      "cog_prediction": "near-zero in coherent domains and nonzero in specific decohered classes",
+      "primary_statistic": "class-conditioned CP-odd residual consistency",
+      "pass_criterion": "stable class map across independent analyses",
+      "falsification": "no class dependence beyond noise/systematics"
+    },
+    {
+      "id": "B3",
+      "title": "Quantized transport plateaus",
+      "accessibility": "low_experimental_high_simulation",
+      "priority": 8,
+      "sm_null": "smooth effective transport",
+      "cog_prediction": "rational plateau families in motif-stable regimes",
+      "primary_statistic": "plateau occupancy significance versus smooth model",
+      "pass_criterion": "significant plateau structure in prereg windows",
+      "falsification": "smooth model sufficient under prereg thresholds"
+    }
+  ],
+  "required_outputs_per_test": [
+    "prereg_spec",
+    "analysis_script_hash",
+    "dataset_manifest_hash",
+    "result_packet",
+    "skeptic_review_note"
+  ]
+}

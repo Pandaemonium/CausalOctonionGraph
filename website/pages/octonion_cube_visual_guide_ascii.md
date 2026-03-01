@@ -4,6 +4,7 @@ Use this page when you want a plain-text, copy-paste diagram for notes, slides, 
 
 See also:
 - [How To Visualize The Octonion Cube, Phase Clocks, and Fano Orientation](/web/pages/octonion_cube_visual_guide)
+- [Particle Motif GIF Atlas](/web/pages/particle_motif_cycle_gif_atlas)
 
 ---
 
@@ -108,4 +109,3 @@ Fano orientation tells you sign/handedness.
 2. Pick any listed triad `(a,b,c)`; verify `a xor b xor c = 0`.
 3. Reverse a product order and confirm sign flips by orientation convention.
 4. Advance a channel phase 4 steps and confirm it returns to start.
-

@@ -5,6 +5,7 @@ This is a public-facing visual guide for the COG v2 geometry.
 ASCII companion:
 
 1. [Octonion Cube Visual Guide (ASCII Companion)](/web/pages/octonion_cube_visual_guide_ascii)
+2. [Particle Motif GIF Atlas](/web/pages/particle_motif_cycle_gif_atlas)
 
 Use this page when you want a concrete picture in your head of:
 

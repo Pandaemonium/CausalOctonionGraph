@@ -1,0 +1,176 @@
+{
+  "schema_version": "particle_motif_cycle_gifs_v1",
+  "source_script": "cog_v2/calc/build_particle_motif_cycle_gifs_v1.py",
+  "source_script_sha256": "3d68138cafa9019fc25d121213a61976b87c2d18146227c36df7ce7449924333",
+  "operator_label": "e111",
+  "hand": "left",
+  "max_period_scan": 64,
+  "generated_count": 10,
+  "motif_ids": [
+    "left_spinor_electron_ideal",
+    "left_spinor_muon_motif",
+    "left_spinor_tau_motif",
+    "right_spinor_electron_ideal",
+    "sd_triple_dual_electron",
+    "sd_vacuum_omega_dag",
+    "su_triple_electron",
+    "su_vacuum_omega",
+    "vector_electron_favored",
+    "vector_proton_proto_t124"
+  ],
+  "artifacts": [
+    {
+      "motif_id": "left_spinor_electron_ideal",
+      "motif_label": "Electron (left spinor ideal)",
+      "hand": "left",
+      "period_ticks": 4,
+      "tick_frame_count": 4,
+      "support_labels_initial": [
+        "e000",
+        "e111"
+      ],
+      "gif_repo_path": "website/data/visuals/motif_gifs/left_spinor_electron_ideal_e111_left_cycle.gif",
+      "gif_web_path": "/web/data/visuals/motif_gifs/left_spinor_electron_ideal_e111_left_cycle.gif",
+      "gif_sha256": "d0c7fc1c6ea6e6363f626389416a2a02352ffa9eb20084928e651042609e5195",
+      "operator_label": "e111"
+    },
+    {
+      "motif_id": "left_spinor_muon_motif",
+      "motif_label": "Muon Motif (left spinor)",
+      "hand": "left",
+      "period_ticks": 4,
+      "tick_frame_count": 4,
+      "support_labels_initial": [
+        "e011",
+        "e100"
+      ],
+      "gif_repo_path": "website/data/visuals/motif_gifs/left_spinor_muon_motif_e111_left_cycle.gif",
+      "gif_web_path": "/web/data/visuals/motif_gifs/left_spinor_muon_motif_e111_left_cycle.gif",
+      "gif_sha256": "2b64c14a0f4ecc5c190a267c7a7c66846abaa98165d63e0b5ae3722fca7328ae",
+      "operator_label": "e111"
+    },
+    {
+      "motif_id": "left_spinor_tau_motif",
+      "motif_label": "Tau Motif (left spinor)",
+      "hand": "left",
+      "period_ticks": 4,
+      "tick_frame_count": 4,
+      "support_labels_initial": [
+        "e001",
+        "e110"
+      ],
+      "gif_repo_path": "website/data/visuals/motif_gifs/left_spinor_tau_motif_e111_left_cycle.gif",
+      "gif_web_path": "/web/data/visuals/motif_gifs/left_spinor_tau_motif_e111_left_cycle.gif",
+      "gif_sha256": "80d410fc008281732ec5ecb3e04630d3d88371843dd641c171a8ef6b77c9e35d",
+      "operator_label": "e111"
+    },
+    {
+      "motif_id": "right_spinor_electron_ideal",
+      "motif_label": "Dual Electron (right spinor ideal)",
+      "hand": "left",
+      "period_ticks": 4,
+      "tick_frame_count": 4,
+      "support_labels_initial": [
+        "e000",
+        "e111"
+      ],
+      "gif_repo_path": "website/data/visuals/motif_gifs/right_spinor_electron_ideal_e111_left_cycle.gif",
+      "gif_web_path": "/web/data/visuals/motif_gifs/right_spinor_electron_ideal_e111_left_cycle.gif",
+      "gif_sha256": "95304dd47a19d6a5740e3e3c43bf7c2b41302549fcaf7f23078def79332f8502",
+      "operator_label": "e111"
+    },
+    {
+      "motif_id": "sd_triple_dual_electron",
+      "motif_label": "Dual Electron Triple (Sd)",
+      "hand": "left",
+      "period_ticks": 4,
+      "tick_frame_count": 4,
+      "support_labels_initial": [
+        "e000",
+        "e111"
+      ],
+      "gif_repo_path": "website/data/visuals/motif_gifs/sd_triple_dual_electron_e111_left_cycle.gif",
+      "gif_web_path": "/web/data/visuals/motif_gifs/sd_triple_dual_electron_e111_left_cycle.gif",
+      "gif_sha256": "c42696dc45df733bc0673d6f01166033de08d8ab8a6d47f7aaac1c4bff12a8f9",
+      "operator_label": "e111"
+    },
+    {
+      "motif_id": "sd_vacuum_omega_dag",
+      "motif_label": "Vacuum Omega Dagger (Sd)",
+      "hand": "left",
+      "period_ticks": 4,
+      "tick_frame_count": 4,
+      "support_labels_initial": [
+        "e000",
+        "e111"
+      ],
+      "gif_repo_path": "website/data/visuals/motif_gifs/sd_vacuum_omega_dag_e111_left_cycle.gif",
+      "gif_web_path": "/web/data/visuals/motif_gifs/sd_vacuum_omega_dag_e111_left_cycle.gif",
+      "gif_sha256": "1500d5c2c763fe172adbde998128d2f79d3263a7d9bf0d26740adbe1283d7152",
+      "operator_label": "e111"
+    },
+    {
+      "motif_id": "su_triple_electron",
+      "motif_label": "Electron Triple (Su)",
+      "hand": "left",
+      "period_ticks": 4,
+      "tick_frame_count": 4,
+      "support_labels_initial": [
+        "e000",
+        "e111"
+      ],
+      "gif_repo_path": "website/data/visuals/motif_gifs/su_triple_electron_e111_left_cycle.gif",
+      "gif_web_path": "/web/data/visuals/motif_gifs/su_triple_electron_e111_left_cycle.gif",
+      "gif_sha256": "6481d522197ada0d113ebc38c37815a78f5604d4648dfb1a028a63a064e5f29c",
+      "operator_label": "e111"
+    },
+    {
+      "motif_id": "su_vacuum_omega",
+      "motif_label": "Vacuum Omega (Su)",
+      "hand": "left",
+      "period_ticks": 4,
+      "tick_frame_count": 4,
+      "support_labels_initial": [
+        "e000",
+        "e111"
+      ],
+      "gif_repo_path": "website/data/visuals/motif_gifs/su_vacuum_omega_e111_left_cycle.gif",
+      "gif_web_path": "/web/data/visuals/motif_gifs/su_vacuum_omega_e111_left_cycle.gif",
+      "gif_sha256": "6143c40461aa08fb8c4e7b9098adc63a3ed02a05c0508d77c39e9e601be73b03",
+      "operator_label": "e111"
+    },
+    {
+      "motif_id": "vector_electron_favored",
+      "motif_label": "Electron-Favored Vector Motif",
+      "hand": "left",
+      "period_ticks": 4,
+      "tick_frame_count": 4,
+      "support_labels_initial": [
+        "e001",
+        "e010",
+        "e011"
+      ],
+      "gif_repo_path": "website/data/visuals/motif_gifs/vector_electron_favored_e111_left_cycle.gif",
+      "gif_web_path": "/web/data/visuals/motif_gifs/vector_electron_favored_e111_left_cycle.gif",
+      "gif_sha256": "fb5a36dc41c8c90770cf5bb04c5e48fcc20d05823016d504b1f6c80b2ef4da32",
+      "operator_label": "e111"
+    },
+    {
+      "motif_id": "vector_proton_proto_t124",
+      "motif_label": "Proton-Proto Vector Motif",
+      "hand": "left",
+      "period_ticks": 4,
+      "tick_frame_count": 4,
+      "support_labels_initial": [
+        "e001",
+        "e010",
+        "e100"
+      ],
+      "gif_repo_path": "website/data/visuals/motif_gifs/vector_proton_proto_t124_e111_left_cycle.gif",
+      "gif_web_path": "/web/data/visuals/motif_gifs/vector_proton_proto_t124_e111_left_cycle.gif",
+      "gif_sha256": "93d6b5159f0cbc06d8250213a3dde49e4a117fa4b066330a8aa5fe79d95a6d92",
+      "operator_label": "e111"
+    }
+  ],
+  "replay_hash": "92f12addf5014afd106369eda8e5160df081b00205547acd7b59881bfebab51f"
+}

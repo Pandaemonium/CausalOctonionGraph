@@ -3,6 +3,7 @@
 This page tracks repeating time patterns ("cycles") in XOR-octonion motif dynamics.
 
 See also: [Standard Model Free Parameters: First-Principles Derivation Table](/web/pages/sm_parameter_derivation_table)
+See also: [Particle Motif GIF Atlas](/web/pages/particle_motif_cycle_gif_atlas)
 
 Default view is **Layman**. Switch to **Physicist** for raw policy/trace details.
 

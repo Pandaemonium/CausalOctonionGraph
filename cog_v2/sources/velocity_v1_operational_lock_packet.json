@@ -1,0 +1,34 @@
+{
+  "schema_version": "velocity_v1_operational_lock_packet",
+  "status": "locked_domain_qualified",
+  "date": "2026-03-01",
+  "rfc": "cog_v2/rfc/RFC-015_Operational_Velocity_Definition_v1.md",
+  "definition": {
+    "rho_nonvac": "sum_{k=1..7} |psi_k|^2",
+    "x_mod": "weighted circular centroid on periodic x",
+    "x_unwrap": "nearest-lift continuity",
+    "v_x": "X_unwrap(t+1)-X_unwrap(t)",
+    "v_mean": "window mean on preregistered interval"
+  },
+  "implementation": "cog_v2/calc/build_operational_kinematics_mass_energy_v1.py",
+  "evidence_artifacts": [
+    "cog_v2/sources/operational_kinematics_mass_energy_v1.json",
+    "cog_v2/sources/operational_kinematics_targeted_lock_v1.json"
+  ],
+  "lock_ready_lanes": [
+    {
+      "particle_id": "left_spinor_muon_motif",
+      "energy_id": "E2_center_plus_shell1"
+    },
+    {
+      "particle_id": "left_spinor_tau_motif",
+      "energy_id": "E2_center_plus_shell1"
+    }
+  ],
+  "non_claims": [
+    "not universal across all motif and energy lanes",
+    "not an absolute physical-unit calibration",
+    "does not lock mass or kinetic definitions"
+  ],
+  "next_registry": "cog_v2/sources/operational_kinematics_extension_registry_v1.md"
+}

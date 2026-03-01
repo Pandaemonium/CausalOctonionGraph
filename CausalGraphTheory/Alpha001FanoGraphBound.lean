@@ -1,12 +1,11 @@
+import Mathlib
+
 /-!
 # Alpha001FanoGraphBound — Gate 3 for ALPHA-001
 
 Formalizes the Fano-plane proxy bound on the fine-structure constant.
 Conventions follow rfc/CONVENTIONS.md.
 -/
-
-import Mathlib.Data.Rat.Basic
-import Mathlib.Tactic.NormNum
 
 namespace CausalGraphTheory.Alpha001FanoGraphBound
 

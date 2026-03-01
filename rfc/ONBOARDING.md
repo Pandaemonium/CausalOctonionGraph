@@ -74,6 +74,7 @@ Most of the Big List remains unchecked. The work is real and the problems are ha
 3. **Build and run the ensemble** — the canonical world simulator (`world_code/Python_code/minimal_world_kernel.py`) evolves states using exact Gaussian-integer arithmetic. We run many initial conditions, not one.
 4. **Extract the measurement** — a combinatoric count, ratio, or discrete eigenvalue derivable from integer state vectors with no free parameters and no floating-point.
 5. **Formalize the bridge in Lean** — a combinatoric proof that the exact update rule applied to the prescribed ensemble must produce the measurement. No `ℝ`, no floats, no `sorry`. The simulation tells us what happens. The bridge proves it had to.
+6. **Run hardening checks** — duplicate-gate collapse, prereg contract validation, artifact contract checks, and skeptic schema enforcement (see `rfc/AUTONOMOUS_LAB_HARDENING_PROTOCOL.md`).
 
 **Education:** Explain what we find — including the failures — to every audience that might care. The educator's job is not to simplify by removing things. It is to find a way in that does not require lying about the physics. A twelve-year-old deserves an accurate explanation. So does a curious retiree. So does an undergraduate who just wants to understand what a coupling constant actually is.
 

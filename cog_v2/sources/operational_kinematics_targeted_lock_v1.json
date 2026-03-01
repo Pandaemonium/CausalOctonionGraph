@@ -1,0 +1,343 @@
+{
+  "base_suite_script": "cog_v2/calc/build_operational_kinematics_mass_energy_v1.py",
+  "base_suite_script_sha256": "9f266ba8aec5be8e9b77d45b46b85c9538fa1122d0bb047a2e6a25f085e21eb1",
+  "checks": {
+    "all_lock_ready": true,
+    "any_lock_ready": true,
+    "target_count": 2
+  },
+  "claim_id": "KINEMATICS-MASS-ENERGY-001a",
+  "kernel_module": "cog_v2/python/kernel_projective_unity.py",
+  "kernel_module_sha256": "936d1e8fb5f36c11a05133e67907203fe9fd78db2e8dd433bba4ea8835cbda27",
+  "kernel_profile": "cog_v2_projective_unity_v1",
+  "mode": "targeted_lock_campaign",
+  "params": {
+    "burn_in_ticks": 56,
+    "cycle_error_tol": 0.02,
+    "measure_ticks": 120,
+    "min_burn_ticks_for_stabilization": 48,
+    "min_stable_cycles": 4,
+    "period_max": 24,
+    "period_min": 2,
+    "post_transient_fold_span_tol": 0.08,
+    "post_transient_profile_gap_tol": 0.35,
+    "stabilization_confirm_windows": 3,
+    "stabilization_e000_tol": 0.02,
+    "stabilization_velocity_tol": 0.02,
+    "stabilization_window": 18,
+    "targets": [
+      {
+        "energy_id": "E2_center_plus_shell1",
+        "particle_id": "left_spinor_muon_motif"
+      },
+      {
+        "energy_id": "E2_center_plus_shell1",
+        "particle_id": "left_spinor_tau_motif"
+      }
+    ],
+    "ticks": 220
+  },
+  "previous_suite_path": "cog_v2\\sources\\operational_kinematics_mass_energy_v1.json",
+  "previous_suite_replay_hash": "d9dd717d8edfb4b43567457f80a3cac4fbdd63ac3c58d8f47d5cf050791b3e7d",
+  "projector_id": "pi_unity_axis_dominance_v1",
+  "replay_hash": "d7e57d24addb726e83bb1454465f83f7d6f3a619d1ab6a355d3e07527eb4e1e0",
+  "schema_version": "operational_kinematics_targeted_lock_v1",
+  "source_script": "cog_v2/calc/build_operational_kinematics_targeted_lock_v1.py",
+  "source_script_sha256": "4310f9179d514b2f37c4d9fb81c88d526c979b9db988aa75a29974c861318269",
+  "targets": [
+    {
+      "all_runs_pass": true,
+      "energy_id": "E2_center_plus_shell1",
+      "fold_span_post_transient_ok": true,
+      "lock_ready": true,
+      "particle_id": "left_spinor_muon_motif",
+      "profile_gap_post_transient_ok": true,
+      "run_count": 8,
+      "runs": [
+        {
+          "fold_order_id": "canonical_xyz",
+          "pass_run": true,
+          "period_error": 0.0,
+          "period_estimate": 2,
+          "profile_id": "elongated_1d_x41",
+          "selected_op_idx": 1,
+          "size_xyz": [
+            41,
+            1,
+            1
+          ],
+          "stable_cycles_count": 85,
+          "tail_mean_e000_share": 0.0,
+          "tail_mean_velocity_x": 0.0,
+          "transient_end_tick": 48
+        },
+        {
+          "fold_order_id": "reverse_xyz",
+          "pass_run": true,
+          "period_error": 0.0,
+          "period_estimate": 2,
+          "profile_id": "elongated_1d_x41",
+          "selected_op_idx": 1,
+          "size_xyz": [
+            41,
+            1,
+            1
+          ],
+          "stable_cycles_count": 85,
+          "tail_mean_e000_share": 0.0,
+          "tail_mean_velocity_x": 0.0,
+          "transient_end_tick": 48
+        },
+        {
+          "fold_order_id": "axis_cycle_yzx",
+          "pass_run": true,
+          "period_error": 0.0,
+          "period_estimate": 2,
+          "profile_id": "elongated_1d_x41",
+          "selected_op_idx": 1,
+          "size_xyz": [
+            41,
+            1,
+            1
+          ],
+          "stable_cycles_count": 85,
+          "tail_mean_e000_share": 0.0,
+          "tail_mean_velocity_x": 0.0,
+          "transient_end_tick": 48
+        },
+        {
+          "fold_order_id": "plus_first",
+          "pass_run": true,
+          "period_error": 0.0,
+          "period_estimate": 2,
+          "profile_id": "elongated_1d_x41",
+          "selected_op_idx": 1,
+          "size_xyz": [
+            41,
+            1,
+            1
+          ],
+          "stable_cycles_count": 85,
+          "tail_mean_e000_share": 0.0,
+          "tail_mean_velocity_x": 0.0,
+          "transient_end_tick": 48
+        },
+        {
+          "fold_order_id": "canonical_xyz",
+          "pass_run": true,
+          "period_error": 0.0,
+          "period_estimate": 2,
+          "profile_id": "elongated_3d_offaxis_x41_y11_z11",
+          "selected_op_idx": 1,
+          "size_xyz": [
+            41,
+            11,
+            11
+          ],
+          "stable_cycles_count": 85,
+          "tail_mean_e000_share": 0.0,
+          "tail_mean_velocity_x": 0.0,
+          "transient_end_tick": 48
+        },
+        {
+          "fold_order_id": "reverse_xyz",
+          "pass_run": true,
+          "period_error": 0.0,
+          "period_estimate": 2,
+          "profile_id": "elongated_3d_offaxis_x41_y11_z11",
+          "selected_op_idx": 1,
+          "size_xyz": [
+            41,
+            11,
+            11
+          ],
+          "stable_cycles_count": 85,
+          "tail_mean_e000_share": 0.0,
+          "tail_mean_velocity_x": 0.0,
+          "transient_end_tick": 48
+        },
+        {
+          "fold_order_id": "axis_cycle_yzx",
+          "pass_run": true,
+          "period_error": 0.0,
+          "period_estimate": 2,
+          "profile_id": "elongated_3d_offaxis_x41_y11_z11",
+          "selected_op_idx": 1,
+          "size_xyz": [
+            41,
+            11,
+            11
+          ],
+          "stable_cycles_count": 85,
+          "tail_mean_e000_share": 0.0,
+          "tail_mean_velocity_x": 0.0,
+          "transient_end_tick": 48
+        },
+        {
+          "fold_order_id": "plus_first",
+          "pass_run": true,
+          "period_error": 0.0,
+          "period_estimate": 2,
+          "profile_id": "elongated_3d_offaxis_x41_y11_z11",
+          "selected_op_idx": 1,
+          "size_xyz": [
+            41,
+            11,
+            11
+          ],
+          "stable_cycles_count": 85,
+          "tail_mean_e000_share": 0.0,
+          "tail_mean_velocity_x": 0.0,
+          "transient_end_tick": 48
+        }
+      ]
+    },
+    {
+      "all_runs_pass": true,
+      "energy_id": "E2_center_plus_shell1",
+      "fold_span_post_transient_ok": true,
+      "lock_ready": true,
+      "particle_id": "left_spinor_tau_motif",
+      "profile_gap_post_transient_ok": true,
+      "run_count": 8,
+      "runs": [
+        {
+          "fold_order_id": "canonical_xyz",
+          "pass_run": true,
+          "period_error": 0.0,
+          "period_estimate": 2,
+          "profile_id": "elongated_1d_x41",
+          "selected_op_idx": 2,
+          "size_xyz": [
+            41,
+            1,
+            1
+          ],
+          "stable_cycles_count": 85,
+          "tail_mean_e000_share": 0.0,
+          "tail_mean_velocity_x": 0.0,
+          "transient_end_tick": 48
+        },
+        {
+          "fold_order_id": "reverse_xyz",
+          "pass_run": true,
+          "period_error": 0.0,
+          "period_estimate": 2,
+          "profile_id": "elongated_1d_x41",
+          "selected_op_idx": 2,
+          "size_xyz": [
+            41,
+            1,
+            1
+          ],
+          "stable_cycles_count": 85,
+          "tail_mean_e000_share": 0.0,
+          "tail_mean_velocity_x": 0.0,
+          "transient_end_tick": 48
+        },
+        {
+          "fold_order_id": "axis_cycle_yzx",
+          "pass_run": true,
+          "period_error": 0.0,
+          "period_estimate": 2,
+          "profile_id": "elongated_1d_x41",
+          "selected_op_idx": 2,
+          "size_xyz": [
+            41,
+            1,
+            1
+          ],
+          "stable_cycles_count": 85,
+          "tail_mean_e000_share": 0.0,
+          "tail_mean_velocity_x": 0.0,
+          "transient_end_tick": 48
+        },
+        {
+          "fold_order_id": "plus_first",
+          "pass_run": true,
+          "period_error": 0.0,
+          "period_estimate": 2,
+          "profile_id": "elongated_1d_x41",
+          "selected_op_idx": 2,
+          "size_xyz": [
+            41,
+            1,
+            1
+          ],
+          "stable_cycles_count": 85,
+          "tail_mean_e000_share": 0.0,
+          "tail_mean_velocity_x": 0.0,
+          "transient_end_tick": 48
+        },
+        {
+          "fold_order_id": "canonical_xyz",
+          "pass_run": true,
+          "period_error": 0.0,
+          "period_estimate": 2,
+          "profile_id": "elongated_3d_offaxis_x41_y11_z11",
+          "selected_op_idx": 2,
+          "size_xyz": [
+            41,
+            11,
+            11
+          ],
+          "stable_cycles_count": 85,
+          "tail_mean_e000_share": 0.0,
+          "tail_mean_velocity_x": 0.0,
+          "transient_end_tick": 48
+        },
+        {
+          "fold_order_id": "reverse_xyz",
+          "pass_run": true,
+          "period_error": 0.0,
+          "period_estimate": 2,
+          "profile_id": "elongated_3d_offaxis_x41_y11_z11",
+          "selected_op_idx": 2,
+          "size_xyz": [
+            41,
+            11,
+            11
+          ],
+          "stable_cycles_count": 85,
+          "tail_mean_e000_share": 0.0,
+          "tail_mean_velocity_x": 0.0,
+          "transient_end_tick": 48
+        },
+        {
+          "fold_order_id": "axis_cycle_yzx",
+          "pass_run": true,
+          "period_error": 0.0,
+          "period_estimate": 2,
+          "profile_id": "elongated_3d_offaxis_x41_y11_z11",
+          "selected_op_idx": 2,
+          "size_xyz": [
+            41,
+            11,
+            11
+          ],
+          "stable_cycles_count": 85,
+          "tail_mean_e000_share": 0.0,
+          "tail_mean_velocity_x": 0.0,
+          "transient_end_tick": 48
+        },
+        {
+          "fold_order_id": "plus_first",
+          "pass_run": true,
+          "period_error": 0.0,
+          "period_estimate": 2,
+          "profile_id": "elongated_3d_offaxis_x41_y11_z11",
+          "selected_op_idx": 2,
+          "size_xyz": [
+            41,
+            11,
+            11
+          ],
+          "stable_cycles_count": 85,
+          "tail_mean_e000_share": 0.0,
+          "tail_mean_velocity_x": 0.0,
+          "transient_end_tick": 48
+        }
+      ]
+    }
+  ]
+}

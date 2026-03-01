@@ -1,0 +1,346 @@
+{
+  "base_suite_script": "cog_v2/calc/build_operational_kinematics_mass_energy_v1.py",
+  "base_suite_script_sha256": "9f266ba8aec5be8e9b77d45b46b85c9538fa1122d0bb047a2e6a25f085e21eb1",
+  "checks": {
+    "all_mass_lock_ready": true,
+    "any_mass_lock_ready": true,
+    "target_count": 2
+  },
+  "claim_id": "KINEMATICS-MASS-ENERGY-001b",
+  "kernel_module": "cog_v2/python/kernel_projective_unity.py",
+  "kernel_module_sha256": "936d1e8fb5f36c11a05133e67907203fe9fd78db2e8dd433bba4ea8835cbda27",
+  "kernel_profile": "cog_v2_projective_unity_v1",
+  "mode": "targeted_mass_lock_campaign",
+  "params": {
+    "burn_in_ticks": 56,
+    "delta_v_eps": 1e-06,
+    "fold_mass_span_tol": 0.4,
+    "impulse_window_len": 24,
+    "impulse_window_start": 6,
+    "measure_ticks": 120,
+    "profile_mass_gap_tol": 0.5,
+    "require_large_offaxis_primary_profile": true,
+    "targets": [
+      {
+        "energy_id": "E2_center_plus_shell1",
+        "particle_id": "left_spinor_muon_motif"
+      },
+      {
+        "energy_id": "E2_center_plus_shell1",
+        "particle_id": "left_spinor_tau_motif"
+      }
+    ],
+    "ticks": 220
+  },
+  "previous_suite_path": "cog_v2\\sources\\operational_kinematics_mass_energy_v1.json",
+  "previous_suite_replay_hash": "d9dd717d8edfb4b43567457f80a3cac4fbdd63ac3c58d8f47d5cf050791b3e7d",
+  "projector_id": "pi_unity_axis_dominance_v1",
+  "replay_hash": "6c425d66996e7c100f0c595698d86eeca2598e35301778759c7a60e32b31a8d6",
+  "schema_version": "operational_mass_targeted_lock_v1",
+  "source_script": "cog_v2/calc/build_operational_mass_targeted_lock_v1.py",
+  "source_script_sha256": "762154023c8c4fd83d6eaf43447b8f8cc959a37ff42eaf48e0fa620058952edc",
+  "targets": [
+    {
+      "all_runs_pass": true,
+      "energy_id": "E2_center_plus_shell1",
+      "fold_span_mass_ok": true,
+      "mass_lock_ready": true,
+      "particle_id": "left_spinor_muon_motif",
+      "primary_profile_ids": [
+        "elongated_3d_offaxis_x41_y11_z11"
+      ],
+      "profile_gap_mass_applicable": false,
+      "profile_gap_mass_ok": true,
+      "run_count": 8,
+      "runs": [
+        {
+          "delta_v_impulse": -0.02083333333333341,
+          "fold_order_id": "canonical_xyz",
+          "impulse_hamming": 7,
+          "mass_estimator": 335.9999999999988,
+          "pass_run": true,
+          "profile_id": "elongated_1d_x41",
+          "selected_op_idx": 1,
+          "size_xyz": [
+            41,
+            1,
+            1
+          ],
+          "window_end_exclusive": 30,
+          "window_len": 24,
+          "window_start": 6
+        },
+        {
+          "delta_v_impulse": -0.020833333333333332,
+          "fold_order_id": "reverse_xyz",
+          "impulse_hamming": 7,
+          "mass_estimator": 336.0,
+          "pass_run": true,
+          "profile_id": "elongated_1d_x41",
+          "selected_op_idx": 1,
+          "size_xyz": [
+            41,
+            1,
+            1
+          ],
+          "window_end_exclusive": 30,
+          "window_len": 24,
+          "window_start": 6
+        },
+        {
+          "delta_v_impulse": -0.020833333333333332,
+          "fold_order_id": "axis_cycle_yzx",
+          "impulse_hamming": 7,
+          "mass_estimator": 336.0,
+          "pass_run": true,
+          "profile_id": "elongated_1d_x41",
+          "selected_op_idx": 1,
+          "size_xyz": [
+            41,
+            1,
+            1
+          ],
+          "window_end_exclusive": 30,
+          "window_len": 24,
+          "window_start": 6
+        },
+        {
+          "delta_v_impulse": 0.0886620104735013,
+          "fold_order_id": "plus_first",
+          "impulse_hamming": 7,
+          "mass_estimator": 78.9515144379916,
+          "pass_run": true,
+          "profile_id": "elongated_1d_x41",
+          "selected_op_idx": 1,
+          "size_xyz": [
+            41,
+            1,
+            1
+          ],
+          "window_end_exclusive": 30,
+          "window_len": 24,
+          "window_start": 6
+        },
+        {
+          "delta_v_impulse": -0.02083333333333341,
+          "fold_order_id": "canonical_xyz",
+          "impulse_hamming": 7,
+          "mass_estimator": 335.9999999999988,
+          "pass_run": true,
+          "profile_id": "elongated_3d_offaxis_x41_y11_z11",
+          "selected_op_idx": 1,
+          "size_xyz": [
+            41,
+            11,
+            11
+          ],
+          "window_end_exclusive": 30,
+          "window_len": 24,
+          "window_start": 6
+        },
+        {
+          "delta_v_impulse": -0.02083333333333341,
+          "fold_order_id": "reverse_xyz",
+          "impulse_hamming": 7,
+          "mass_estimator": 335.9999999999988,
+          "pass_run": true,
+          "profile_id": "elongated_3d_offaxis_x41_y11_z11",
+          "selected_op_idx": 1,
+          "size_xyz": [
+            41,
+            11,
+            11
+          ],
+          "window_end_exclusive": 30,
+          "window_len": 24,
+          "window_start": 6
+        },
+        {
+          "delta_v_impulse": -0.02083333333333341,
+          "fold_order_id": "axis_cycle_yzx",
+          "impulse_hamming": 7,
+          "mass_estimator": 335.9999999999988,
+          "pass_run": true,
+          "profile_id": "elongated_3d_offaxis_x41_y11_z11",
+          "selected_op_idx": 1,
+          "size_xyz": [
+            41,
+            11,
+            11
+          ],
+          "window_end_exclusive": 30,
+          "window_len": 24,
+          "window_start": 6
+        },
+        {
+          "delta_v_impulse": -0.02083333333333341,
+          "fold_order_id": "plus_first",
+          "impulse_hamming": 7,
+          "mass_estimator": 335.9999999999988,
+          "pass_run": true,
+          "profile_id": "elongated_3d_offaxis_x41_y11_z11",
+          "selected_op_idx": 1,
+          "size_xyz": [
+            41,
+            11,
+            11
+          ],
+          "window_end_exclusive": 30,
+          "window_len": 24,
+          "window_start": 6
+        }
+      ]
+    },
+    {
+      "all_runs_pass": true,
+      "energy_id": "E2_center_plus_shell1",
+      "fold_span_mass_ok": true,
+      "mass_lock_ready": true,
+      "particle_id": "left_spinor_tau_motif",
+      "primary_profile_ids": [
+        "elongated_3d_offaxis_x41_y11_z11"
+      ],
+      "profile_gap_mass_applicable": false,
+      "profile_gap_mass_ok": true,
+      "run_count": 8,
+      "runs": [
+        {
+          "delta_v_impulse": -0.02083333333333341,
+          "fold_order_id": "canonical_xyz",
+          "impulse_hamming": 7,
+          "mass_estimator": 335.9999999999988,
+          "pass_run": true,
+          "profile_id": "elongated_1d_x41",
+          "selected_op_idx": 2,
+          "size_xyz": [
+            41,
+            1,
+            1
+          ],
+          "window_end_exclusive": 30,
+          "window_len": 24,
+          "window_start": 6
+        },
+        {
+          "delta_v_impulse": -0.020833333333333332,
+          "fold_order_id": "reverse_xyz",
+          "impulse_hamming": 7,
+          "mass_estimator": 336.0,
+          "pass_run": true,
+          "profile_id": "elongated_1d_x41",
+          "selected_op_idx": 2,
+          "size_xyz": [
+            41,
+            1,
+            1
+          ],
+          "window_end_exclusive": 30,
+          "window_len": 24,
+          "window_start": 6
+        },
+        {
+          "delta_v_impulse": -0.020833333333333332,
+          "fold_order_id": "axis_cycle_yzx",
+          "impulse_hamming": 7,
+          "mass_estimator": 336.0,
+          "pass_run": true,
+          "profile_id": "elongated_1d_x41",
+          "selected_op_idx": 2,
+          "size_xyz": [
+            41,
+            1,
+            1
+          ],
+          "window_end_exclusive": 30,
+          "window_len": 24,
+          "window_start": 6
+        },
+        {
+          "delta_v_impulse": 0.0886620104735013,
+          "fold_order_id": "plus_first",
+          "impulse_hamming": 7,
+          "mass_estimator": 78.9515144379916,
+          "pass_run": true,
+          "profile_id": "elongated_1d_x41",
+          "selected_op_idx": 2,
+          "size_xyz": [
+            41,
+            1,
+            1
+          ],
+          "window_end_exclusive": 30,
+          "window_len": 24,
+          "window_start": 6
+        },
+        {
+          "delta_v_impulse": -0.02083333333333341,
+          "fold_order_id": "canonical_xyz",
+          "impulse_hamming": 7,
+          "mass_estimator": 335.9999999999988,
+          "pass_run": true,
+          "profile_id": "elongated_3d_offaxis_x41_y11_z11",
+          "selected_op_idx": 2,
+          "size_xyz": [
+            41,
+            11,
+            11
+          ],
+          "window_end_exclusive": 30,
+          "window_len": 24,
+          "window_start": 6
+        },
+        {
+          "delta_v_impulse": -0.02083333333333341,
+          "fold_order_id": "reverse_xyz",
+          "impulse_hamming": 7,
+          "mass_estimator": 335.9999999999988,
+          "pass_run": true,
+          "profile_id": "elongated_3d_offaxis_x41_y11_z11",
+          "selected_op_idx": 2,
+          "size_xyz": [
+            41,
+            11,
+            11
+          ],
+          "window_end_exclusive": 30,
+          "window_len": 24,
+          "window_start": 6
+        },
+        {
+          "delta_v_impulse": -0.02083333333333341,
+          "fold_order_id": "axis_cycle_yzx",
+          "impulse_hamming": 7,
+          "mass_estimator": 335.9999999999988,
+          "pass_run": true,
+          "profile_id": "elongated_3d_offaxis_x41_y11_z11",
+          "selected_op_idx": 2,
+          "size_xyz": [
+            41,
+            11,
+            11
+          ],
+          "window_end_exclusive": 30,
+          "window_len": 24,
+          "window_start": 6
+        },
+        {
+          "delta_v_impulse": -0.02083333333333341,
+          "fold_order_id": "plus_first",
+          "impulse_hamming": 7,
+          "mass_estimator": 335.9999999999988,
+          "pass_run": true,
+          "profile_id": "elongated_3d_offaxis_x41_y11_z11",
+          "selected_op_idx": 2,
+          "size_xyz": [
+            41,
+            11,
+            11
+          ],
+          "window_end_exclusive": 30,
+          "window_len": 24,
+          "window_start": 6
+        }
+      ]
+    }
+  ]
+}

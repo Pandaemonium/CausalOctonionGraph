@@ -14,6 +14,11 @@ Interpretation/Resolution Extension:
 - `cog_v2/rfc/RFC-008_Layered_Causality_and_Defect_Falsification_Contract.md`
 - `cog_v2/rfc/RFC-009_F2^3_Index_Geometry_and_Unique_Causal_Length.md`
 - `cog_v2/rfc/RFC-010_Octonion_Cube_Phase_Fiber_and_Fano_Orientation.md`
+- `cog_v2/rfc/RFC-013_Mass_Rephasing_Latency_and_Vacuum_Drag_Contract.md`
+- `cog_v2/rfc/RFC-014_Operational_Kinematics_Mass_and_Kinetic_Energy_Contract.md`
+- `cog_v2/rfc/RFC-015_Operational_Velocity_Definition_v1.md`
+- `cog_v2/rfc/RFC-016_Operational_Mass_Definition_v1.md`
+- `cog_v2/rfc/RFC-017_SM_Divergence_Prerigistered_Test_Matrix_v1.md`
 - `cog_v2/rfc/Targeted_Branching_Policy_for_Computational_Efficiency_and_Statistical_Integrity.md`
 
 ## 1. Decision
