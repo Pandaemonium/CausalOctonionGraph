@@ -1,0 +1,17 @@
+{
+  "description": "Koide triple search result: 3-node COG motif with Fano-weighted channels",
+  "nodes": [
+    {"id": "n1", "channel": "e001", "f_value": 1},
+    {"id": "n2", "channel": "e010", "f_value": 4},
+    {"id": "n3", "channel": "e100", "f_value": 9}
+  ],
+  "koide_ratio": 0.6666666666666666,
+  "triple": [1, 4, 9],
+  "simulation_steps": 8,
+  "channel_counts": {
+    "e001": 1,
+    "e010": 4,
+    "e100": 9,
+    "e000": 0
+  }
+}

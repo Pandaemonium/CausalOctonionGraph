@@ -1,36 +1,9 @@
-﻿id: KOIDE-001
-title: Koide Ratio Program Root Claim
-status: proved
-lean_file: CausalGraphTheory/KoideCirculant.lean
-python_test: calc/test_koide_circulant.py
-proved_date: 2026-02-28
-evidence: The circulant Koide condition shows that B/A = √2 holds consistently through eigenvalue analysis.
-statement: >
-  Koide-sector closure requires a deterministic derivation of the lepton mass
-  relation from locked COG structures without post-hoc fitting.
-gates:
-  - id: gate_1
-    description: Python Koide sum rule verification.
-    status: proved
-    file: calc/koide.py
-  - id: gate_2
-    description: Circulant B/A = sqrt(2) derivation.
-    status: proved
-    file: calc/koide_circulant_derivation.py
-  - id: gate_3
-    description: Lean formalization of circulant Koide condition.
-    status: proved
-    lean_theorem: koide_circulant_iff
-    file: CausalGraphTheory/KoideCirculant.lean
-  - id: gate_4
-    description: Lean formalization of rational Koide ratio from circulant constraints.
-    status: proved
-    lean_theorem: koide_q_equals_two_thirds
-    file: CausalGraphTheory/KoideGate4.lean
-notes:
-  - "Gate 2 completed on 2026-02-26 with all tests passing."
-derivation_status: untested
-bridge_assumptions: []
-falsification_condition: >
-  Claim is falsified if deterministic reruns fail to reproduce declared Koide algebra
-  gates under locked conventions.
+hypothesis: "Integer triples satisfying Koide ratio near 2/3 exist in [1,4000]"
+method: "exhaustive Diophantine search"
+target_ratio: 0.666516
+tolerance: 1e-4
+search_bounds: [1, 4000]
+gate_1:
+  status: pending
+top_5_results: []python_test: calc/test_koide_search.py
+status: pre_registered
