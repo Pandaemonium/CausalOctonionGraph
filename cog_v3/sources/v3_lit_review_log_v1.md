@@ -4076,3 +4076,740 @@ Use one block per literature cycle:
 7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
 8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
 
+### Entry 2026-03-02T19:48:20Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T19:49:36Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T19:50:22Z
+
+1. `focus_type`: `blocker`
+2. `question`: Long plateau in kernel selection score. What immediate pivot should be applied?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Rotate seed basin and keep matrix comparison active to avoid local attractor overfitting.
+5. `confidence`: `high`
+6. `immediate_action`: `apply`
+7. `reason`: Observed prolonged no-improvement streak.
+8. `follow_up_test`: Check next 20 batches for gate pass-rate change.
+
+### Entry 2026-03-02T19:50:44Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T19:51:52Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T19:53:01Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T19:54:17Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T19:55:25Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T19:56:33Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T19:57:41Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T19:58:51Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T19:59:58Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:01:06Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:02:13Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:03:23Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:04:30Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:05:37Z
+
+1. `focus_type`: `blocker`
+2. `question`: Long plateau in kernel selection score. What immediate pivot should be applied?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Rotate seed basin and keep matrix comparison active to avoid local attractor overfitting.
+5. `confidence`: `high`
+6. `immediate_action`: `apply`
+7. `reason`: Observed prolonged no-improvement streak.
+8. `follow_up_test`: Check next 20 batches for gate pass-rate change.
+
+### Entry 2026-03-02T20:05:37Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:06:44Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:07:52Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:09:02Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:10:09Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:11:17Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:12:25Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:13:35Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:14:43Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:15:51Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:16:59Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:18:51Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:20:38Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:22:33Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:23:13Z
+
+1. `focus_type`: `blocker`
+2. `question`: Long plateau in kernel selection score. What immediate pivot should be applied?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Rotate seed basin and keep matrix comparison active to avoid local attractor overfitting.
+5. `confidence`: `high`
+6. `immediate_action`: `apply`
+7. `reason`: Observed prolonged no-improvement streak.
+8. `follow_up_test`: Check next 20 batches for gate pass-rate change.
+
+### Entry 2026-03-02T20:24:26Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:26:16Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:28:08Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:30:05Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:32:04Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:33:59Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:35:58Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:38:01Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:39:55Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:42:01Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:43:46Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:45:34Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:47:29Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:48:50Z
+
+1. `focus_type`: `blocker`
+2. `question`: Long plateau in kernel selection score. What immediate pivot should be applied?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Rotate seed basin and keep matrix comparison active to avoid local attractor overfitting.
+5. `confidence`: `high`
+6. `immediate_action`: `apply`
+7. `reason`: Observed prolonged no-improvement streak.
+8. `follow_up_test`: Check next 20 batches for gate pass-rate change.
+
+### Entry 2026-03-02T20:49:28Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:51:22Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:53:35Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:55:30Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:57:28Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T20:59:30Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T21:01:21Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T21:03:17Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T21:05:10Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T21:06:51Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T21:08:30Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T21:10:09Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T21:11:47Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T21:13:32Z
+
+1. `focus_type`: `blocker`
+2. `question`: Long plateau in kernel selection score. What immediate pivot should be applied?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Rotate seed basin and keep matrix comparison active to avoid local attractor overfitting.
+5. `confidence`: `high`
+6. `immediate_action`: `apply`
+7. `reason`: Observed prolonged no-improvement streak.
+8. `follow_up_test`: Check next 20 batches for gate pass-rate change.
+
+### Entry 2026-03-02T21:13:32Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T21:15:17Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T21:17:03Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T21:18:54Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T21:20:44Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T21:22:36Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+
+### Entry 2026-03-02T21:24:28Z
+
+1. `focus_type`: `blocker`
+2. `question`: Photon lane shows limited improvement. Which search policy change has highest expected value?
+3. `sources_checked`: internal-run-evidence
+4. `key_finding`: Increase exploration pressure while keeping cube26 primary; use sparse axial6 control sweeps only.
+5. `confidence`: `medium`
+6. `immediate_action`: `apply`
+7. `reason`: Current lane may be overfitting a narrow seed manifold or stencil-specific artifact.
+8. `follow_up_test`: Compare top-k yield over next 6 batches with expanded search breadth.
+

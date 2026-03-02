@@ -7,6 +7,9 @@ Depends on:
 - `cog_v3/rfc/RFC-001_Ideal_Structure_and_Stable_Motif_Search_in_Octavian240_SharedPhase.md`
 - `cog_v3/rfc/RFC-002_Seeded_Event_Order_FailFast_and_Photon_Chirality_Hypotheses.md`
 - `cog_v3/rfc/RFC-003_e000_Anchor_Chirality_and_C_Asymmetry_Test_Contract.md`
+- `cog_v3/rfc/RFC-009_S960_Phase_Fibered_E8_Symmetry_Model.md`
+- `cog_v3/sources/v3_comprehensive_symmetry_kernel_lit_review_v2.md`
+- `cog_v3/sources/v3_s960_lit_action_backlog_v1.md`
 - `cog_v3/python/kernel_octavian240_multiplicative_v1.py`
 
 ## 1. Purpose
@@ -29,6 +32,35 @@ Current search results show persistent failure modes:
 
 We need a disciplined way to decide which kernel modifications are physically credible
 and worth compute.
+
+## 2.1 Symmetry Interpretation Layer (from RFC-009)
+
+For v3 kernel selection, adopt the `RFC-009` interpretation:
+
+1. `S960` has a useful point-set symmetry model (phase-fibered octavian shell),
+2. point-set symmetry and multiplication symmetry are not the same thing,
+3. geometric symmetry is used to generate candidates and panel tests,
+4. kernel claims must be validated by multiplication-respecting dynamics.
+
+Practical implication:
+
+1. passing a geometric mirror/rotation panel is supportive evidence,
+2. but promotion still requires Gate 0-5 performance in this RFC.
+
+## 2.2 Multi-Lane Objective Separation
+
+Problem:
+1. a single aggregate score can hide incompatible objectives (e.g., two-front photon transport vs one-front detector exclusivity).
+
+Policy:
+1. score and monitor at least three lanes separately:
+   - transport lane (`wave_transport_class`, isotropy, recurrence),
+   - detector lane (exclusivity, arrival asymmetry),
+   - chirality lane (mirror-panel asymmetry stability).
+2. do not promote a kernel on one lane by silently failing another lane's contract.
+
+Plain-English:
+One number is not enough. Different physics questions need different scoreboards.
 
 ## 3. Kernel Candidate Definition
 
@@ -183,6 +215,24 @@ Usage rule:
 1. do not treat this ladder as validated truth until repeated fits show stable `alpha`,
 2. report confidence intervals on fitted `alpha` and extrapolated `epsilon_LV` values.
 
+## 4.9 Clock-Aware Structural Viability (from RFC-009)
+
+Purpose:
+1. Use S960 cycle-class structure as an additional physics-grounded selection signal.
+
+Definitions:
+1. order classes: `1,2,3,4,6,12`,
+2. `clock_signature(t)`: normalized occupancy histogram over order classes at tick `t`,
+3. `clock_signature_drift`: windowed distance between post-transient signatures.
+
+Kernel relevance:
+1. good kernels should preserve nontrivial high-order lanes (`12/6`) long enough to support motif formation,
+2. avoid immediate sink collapse into one dominant class,
+3. avoid unstructured diffusion across all classes.
+
+Plain-English:
+If the kernel instantly kills all rich clocks, stable motifs are unlikely. If it keeps too much random clock chaos, motifs are also unlikely. We want a middle regime where clock structure stabilizes.
+
 ## 5. Selection Gates
 
 Kernel candidates are evaluated in ordered gates. Failing an earlier gate blocks later promotion.
@@ -261,6 +311,17 @@ Fail action:
 
 1. keep candidate for non-chiral lanes only.
 
+## 5.6 Gate 5: Clock-Structure Gate
+
+Must show (post-transient windows):
+1. bounded `clock_signature_drift`,
+2. no immediate single-class collapse,
+3. no persistent full-class noise plateau,
+4. at least one viable candidate with stable recurrence trend under this kernel.
+
+Fail action:
+1. demote kernel from motif-discovery priority even if earlier gates look acceptable.
+
 ## 6. Kernel Scoring Matrix
 
 For candidates that pass Gate 0, compute a comparison score:
@@ -269,8 +330,9 @@ For candidates that pass Gate 0, compute a comparison score:
 2. detector exclusivity quality (20 percent),
 3. isotropy quality (25 percent),
 4. chirality quality (15 percent),
-5. robustness under seed/scale perturbation (10 percent),
-6. compute efficiency (10 percent).
+5. clock-structure quality (10 percent),
+6. robustness under seed/scale perturbation (10 percent),
+7. compute efficiency (10 percent).
 
 Notes:
 
@@ -302,13 +364,13 @@ Reject if either holds:
 
 Provisional promotion (`supported_kernel_candidate`) requires:
 
-1. passing Gates 0-3,
+1. passing Gates 0-3 and Gate 5,
 2. clear improvement over current default in at least one primary lane,
 3. no major regression in other primary lanes.
 
 Default promotion (`default_kernel`) requires:
 
-1. passing Gates 0-4 with replicated results,
+1. passing Gates 0-5 with replicated results,
 2. stable artifact package and test reproducibility.
 
 ## 9. Artifact Contract
@@ -343,6 +405,10 @@ Required fields:
 16. `lorentz_fit_residual_summary`
 17. `lorentz_front_tensor_eigen_spread`
 18. `lorentz_scale_comparison`
+19. `clock_signature_series`
+20. `clock_signature_drift`
+21. `clock_collapse_flag`
+22. `clock_noise_plateau_flag`
 
 ## 10. Immediate Execution Plan
 
@@ -350,13 +416,67 @@ Required fields:
 2. implement `K1` deterministic channel-class schedules with 2-3 cadence variants,
 3. implement `K2` seeded stochastic gating with fixed probability grid,
 4. run mesoscale Lorentz battery on `K0-K2` using non-saturated distance sets,
-5. run kernel selection matrix and publish gate outcomes with Lorentz battery fields,
-6. select top surviving kernel family for deeper particle search.
+5. run lane-separated scoring (transport/detector/chirality) and publish all three leaderboards,
+6. run kernel selection matrix and publish gate outcomes with Lorentz + clock fields,
+7. select top surviving kernel family for deeper particle search.
 
 Execution ordering note:
 
 1. weak/chirality interpretation lanes are secondary until at least one kernel
    clears provisional mesoscale Lorentz closure.
+
+## 10.1 Distilled Backlog from Recent S960 Literature Reviews
+
+Scope:
+1. This subsection converts external review notes into testable kernel work.
+2. Only items with concrete measurement hooks are included.
+
+Sources:
+1. `sources/s960_particle_morphology_search.md`,
+2. `sources/s960_ca_lorentz_lit_review.md`,
+3. `sources/s960_chirality_emergence_lit_review.md`,
+4. `sources/s960_cyclic_loops_rotation_lit_review.md`,
+5. `sources/s960_complex_phase_octavian_lit_review.md`.
+
+### A. Promote immediately (high utility, low ambiguity)
+
+1. Replace chirality-only spatial proxy with algebra-aware panel metrics:
+   - add left-vs-right evolution comparison panel,
+   - add associator-activity summary over trajectory windows,
+   - keep existing spatial asymmetry metric as secondary.
+2. Keep lane separation hard:
+   - transport lane may show two-front occupancy,
+   - detector lane must still test exclusivity directly,
+   - no automatic photon rejection from occupancy shape alone.
+3. Prioritize seed-bank stratification by measured structure:
+   - order class,
+   - conjugation tier,
+   - family class.
+4. Run Lorentz battery only on non-saturated distance sets and report fit residuals.
+5. Add `effective C12` probe on order-12 motifs:
+   - test whether measured observables exhibit stable 12-step phase class structure.
+6. Add explicit automorphism-gap measurement:
+   - compute multiplication-preserving relabeling set for current convention,
+   - compare against geometric panel groups.
+
+### B. Keep as exploratory hypotheses (require explicit falsification tests)
+
+1. Causal-invariance-based Lorentz claims:
+   - treat as hypothesis until confluence-like macro tests pass repeatedly.
+2. Direct map from E6/F4/McKay interpretations to kernel truth:
+   - keep as symmetry prior, not as promotion evidence.
+3. Specific particle-identification claims from one-node motifs:
+   - keep as candidate labels only until replay and panel gates pass.
+4. Non-split phase-extension kernels:
+   - keep as exploratory branch only after baseline split-model diagnostics are mature.
+
+### C. Operational acceptance rule for literature-derived ideas
+
+An idea from literature is promotable to this RFC only if all hold:
+1. it defines a measurable observable,
+2. it can be computed with current artifacts,
+3. pass/fail criteria can be stated before running,
+4. it does not bypass Gate 0-5.
 
 ## 11. Non-Claims
 
@@ -436,6 +556,36 @@ Kernel implication:
 3. Kernel promotion requires both:
    - empirical gate success,
    - literature-consistent structural justification.
+
+## 12.6 Chirality No-Go Constraint (Practical)
+
+From Nielsen-Ninomiya/Ginsparg-Wilson/domain-wall/overlap literature:
+1. lattice chirality claims require explicit anti-artifact controls,
+2. mirror-pair and doubling checks are mandatory before labeling a lane as genuinely chiral.
+
+Kernel implication:
+1. treat chirality as an operationally fragile claim until replayed across controls.
+
+## 12.7 Coarse-Graining Constraint (Practical)
+
+From QCA/CA coarse-graining literature:
+1. mesoscale closure requires anisotropy to decay under block scale, not just look acceptable at one scale.
+
+Kernel implication:
+1. reject candidates where block-scale anisotropy does not improve monotonically in the tested range.
+
+## 12.8 Review-Hygiene Constraint (Practical)
+
+From recent internal review synthesis:
+1. use literature to generate testable priors, not closure claims,
+2. separate "mathematical analogy" from "validated kernel behavior",
+3. mark each imported idea as:
+   - `validated_in_kernel`,
+   - `test_ready`,
+   - `speculative`.
+
+Kernel implication:
+1. promotion decisions may use only `validated_in_kernel` evidence.
 
 ## 13. Primary Source Set
 
