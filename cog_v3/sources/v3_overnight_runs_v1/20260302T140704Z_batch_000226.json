@@ -1,0 +1,184 @@
+{
+  "a_c_proxy": 1.0,
+  "a_chi_proxy": 0.0,
+  "anisotropy_metrics": {
+    "anisotropy_ratio_max_over_min": 5.037037037037037,
+    "axis_rows": [
+      {
+        "axis": "x",
+        "detector_exclusivity": 0.0,
+        "front_balance": 0.0,
+        "kick_id": 182,
+        "mean_first_arrival_tick": 1.125
+      },
+      {
+        "axis": "y",
+        "detector_exclusivity": 0.0,
+        "front_balance": 0.0,
+        "kick_id": 149,
+        "mean_first_arrival_tick": 1.0
+      },
+      {
+        "axis": "z",
+        "detector_exclusivity": 0.0,
+        "front_balance": 0.0,
+        "kick_id": 123,
+        "mean_first_arrival_tick": 1.0
+      }
+    ],
+    "speed_proxy": {
+      "x": 15.11111111111111,
+      "y": 3.0,
+      "z": 3.0
+    }
+  },
+  "batch_index": 226,
+  "best_candidate": {
+    "classification": "candidate_lock",
+    "kick_label": "1*e011",
+    "mean_support_match_ratio": 0.020833333333333332,
+    "motion_class": "stationary",
+    "period_N": 48,
+    "score": 0.8713333333333334,
+    "seed_family": "blob3",
+    "seed_state_label": "1*e111",
+    "shift_dx": null,
+    "trial_id": "blob3_e111_kick_e011"
+  },
+  "best_score": 0.8713333333333334,
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "course_correction_level": 198,
+  "event_order_policy": "seeded_random_per_tick_v1_assumed_lane",
+  "global_seed": 1337,
+  "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "photon_probe": {
+    "backend": "numba_cpu",
+    "both_hit_fraction": 1.0,
+    "detector_exclusivity": 0.0,
+    "double_hit_rate": 1.0,
+    "front_balance": 0.0,
+    "left_hit_fraction": 1.0,
+    "mean_first_arrival_tick": 1.0,
+    "mean_first_hit_delta_ticks": 0.16666666666666666,
+    "neither_hit_fraction": 0.0,
+    "params": {
+      "axis": "x",
+      "detector_margin": 1,
+      "global_seed": 1798950,
+      "kick_id": 182,
+      "runs": 12,
+      "seed_state_id": 121,
+      "size_x": 39,
+      "size_y": 11,
+      "size_z": 11,
+      "ticks": 96,
+      "vacuum_noise_prob": 0.008
+    },
+    "right_hit_fraction": 1.0,
+    "runs": [
+      {
+        "left_first_tick": 1,
+        "left_seen": true,
+        "right_first_tick": 1,
+        "right_seen": true,
+        "run_id": 0
+      },
+      {
+        "left_first_tick": 1,
+        "left_seen": true,
+        "right_first_tick": 1,
+        "right_seen": true,
+        "run_id": 1
+      },
+      {
+        "left_first_tick": 1,
+        "left_seen": true,
+        "right_first_tick": 1,
+        "right_seen": true,
+        "run_id": 2
+      },
+      {
+        "left_first_tick": 1,
+        "left_seen": true,
+        "right_first_tick": 3,
+        "right_seen": true,
+        "run_id": 3
+      },
+      {
+        "left_first_tick": 1,
+        "left_seen": true,
+        "right_first_tick": 1,
+        "right_seen": true,
+        "run_id": 4
+      },
+      {
+        "left_first_tick": 1,
+        "left_seen": true,
+        "right_first_tick": 1,
+        "right_seen": true,
+        "run_id": 5
+      },
+      {
+        "left_first_tick": 1,
+        "left_seen": true,
+        "right_first_tick": 1,
+        "right_seen": true,
+        "run_id": 6
+      },
+      {
+        "left_first_tick": 1,
+        "left_seen": true,
+        "right_first_tick": 1,
+        "right_seen": true,
+        "run_id": 7
+      },
+      {
+        "left_first_tick": 1,
+        "left_seen": true,
+        "right_first_tick": 1,
+        "right_seen": true,
+        "run_id": 8
+      },
+      {
+        "left_first_tick": 1,
+        "left_seen": true,
+        "right_first_tick": 1,
+        "right_seen": true,
+        "run_id": 9
+      },
+      {
+        "left_first_tick": 1,
+        "left_seen": true,
+        "right_first_tick": 1,
+        "right_seen": true,
+        "run_id": 10
+      },
+      {
+        "left_first_tick": 1,
+        "left_seen": true,
+        "right_first_tick": 1,
+        "right_seen": true,
+        "run_id": 11
+      }
+    ],
+    "wave_transport_class": "two_front_balanced"
+  },
+  "scan_checks": {
+    "any_propagating": true,
+    "any_recurrence": true,
+    "best_score": 0.8713333333333334,
+    "trial_count": 4
+  },
+  "scan_elapsed_sec": 4.420565605163574,
+  "scan_params": {
+    "global_seed": 5196,
+    "max_trials": 4,
+    "size_x": 39,
+    "size_y": 11,
+    "size_z": 11,
+    "stencil_id": "cube26",
+    "thin_step": 4,
+    "ticks": 168
+  },
+  "timestamp_utc": "2026-03-02T14:07:04Z"
+}

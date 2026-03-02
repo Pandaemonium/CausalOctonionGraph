@@ -4,6 +4,7 @@ Date: 2026-03-02
 Owner: Codex (autonomous overnight run)  
 Kernel lane: `cog_v3_octavian240_multiplicative_v1`  
 Convention: `v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus`
+Default stencil: `cube26` (isotropy-first lane)
 
 ## 1. Mission
 
@@ -42,26 +43,38 @@ Use repeated batches. Each batch has four phases:
 
 No blind long run without intermediate scoring.
 
+Operational corrections now applied:
+
+1. detector panels use one-shot absorbing logic with deterministic tie handling,
+2. isotropy probes run on cubic boxes (equal axis distances),
+3. event-order label is explicit (`synchronous_parallel_v1`) for current accelerated lane,
+4. kernel selection is matrix-driven (`K0`, `K1`, `K2`) instead of single-policy looping,
+5. stall auto-pivot triggers every 40 non-improving batches (seed-basin rotation).
+
 ## 4. Batch Order
 
 ### Batch A: Photon-first baseline and front taxonomy
 
 1. run seeded-order motif scans with fail-fast on photon-oriented seeds,
-2. evaluate:
+2. default to `cube26` stencil for isotropy-first search,
+3. keep periodic `axial6` audits only as control checks (not primary),
+4. evaluate:
    - `v_group`,
    - `coh_dir`,
    - `vol_stab`,
    - `front_balance`,
    - `double_hit_rate`,
    - `detector_exclusivity`,
+   - directional isotropy score (`axis` vs `face-diagonal` vs `body-diagonal`),
    - recurrence confidence.
-3. keep top candidates by composite score.
+5. keep top candidates by composite score.
 
 Promotion gate from Batch A:
 
 1. at least one candidate with:
    - high directional coherence and bounded support variance, or
-   - two-front-balanced transport with high detector exclusivity.
+   - two-front-balanced transport with high detector exclusivity,
+2. and acceptable directional isotropy (no severe axis-locking).
 
 ### Batch B: Photon stress tests
 
@@ -123,7 +136,8 @@ Topic priority:
 
 1. discrete chirality implementations in lattice/automata,
 2. finite-size scaling and coarse-graining for intractable scales,
-3. coherent propagating packet stability criteria.
+3. coherent propagating packet stability criteria,
+4. discrete isotropy and emergent Lorentz-like behavior on cubic stencils.
 
 Long-horizon priority lanes (always active):
 
@@ -132,6 +146,7 @@ Long-horizon priority lanes (always active):
 3. surrogate modeling (cheap predictors) to reduce expensive full-kernel runs,
 4. symmetry-aware seed generation and equivalence-class pruning,
 5. uncertainty quantification and preregistration-friendly reporting patterns.
+6. multiplicative analogs of geometric weighting for face/edge/corner channels.
 
 Cadence split:
 
@@ -144,6 +159,45 @@ Documentation requirement per lit cycle:
 2. if a finding changes medium/long-term strategy, update
    `cog_v3/sources/v3_long_horizon_research_backlog_v1.md`,
 3. if a finding implies immediate implementation work, add to next batch notes.
+
+## 6.1 Lorentz-Like Recovery Program (cube26)
+
+Goal:
+
+1. maximize emergent isotropy so long-wavelength dynamics can approach Lorentz-like behavior.
+
+Core diagnostics:
+
+1. directional speed anisotropy:
+   - launch matched motifs along axis, face diagonal, body diagonal,
+   - compute `v_axis`, `v_face`, `v_body`,
+   - track anisotropy ratios `v_face/v_axis`, `v_body/v_axis`,
+2. wavefront sphericality proxy:
+   - compare second-moment tensor eigenvalues of active support,
+3. arrival-time linearity:
+   - detector panels at multiple distances, fit `t(d)` and residuals,
+4. dispersion consistency:
+   - compare group-velocity proxies across orientations for same seed family.
+
+Discrimination rules:
+
+1. reject hard axis-locked candidates even if recurrence is high,
+2. prioritize candidates with stable detector exclusivity and low directional anisotropy,
+3. treat anisotropy regressions as blockers requiring kernel/search adjustment.
+
+Multiplicative-weight analog options (no addition allowed):
+
+1. multiplicity scheduling:
+   - include face/edge/corner messages at different tick frequencies over a cycle,
+2. stochastic channel gating:
+   - probabilistically include edge/corner channels with fixed seed (reproducible),
+3. phase-gated masks:
+   - deterministic phase cycle that controls which channel classes are active.
+
+Selection policy:
+
+1. start with uniform cube26 inclusion,
+2. only introduce gating schedules if isotropy diagnostics stall.
 
 ## 7. Output Artifacts (Per Batch)
 
@@ -160,11 +214,13 @@ Required fields in every output:
 2. `convention_id`,
 3. `event_order_policy`,
 4. `global_seed`,
-5. `replay_hash`.
+5. `replay_hash`,
+6. `stencil_id`,
+7. `anisotropy_metrics`.
 
 ## 8. Decision Rules
 
-1. If photon lane repeatedly fails both directional robustness and detector exclusivity, pause and inspect kernel assumptions before scaling search.
+1. If photon lane repeatedly fails either detector exclusivity or isotropy checks, pause and inspect kernel assumptions before scaling search.
 2. If chiral variants produce asymmetry but kill stability, tune chirality gate strength before widening search.
 3. If no neutrino-like candidate emerges, continue photon and singleton-informed morphology search and defer electron lane.
 4. If strong neutrino candidate appears, allocate remaining compute to electron lane immediately.
@@ -174,9 +230,10 @@ Required fields in every output:
 1. ranked candidate table (photon, neutrino, electron lanes),
 2. strongest candidate traces with key metrics,
 3. photon front-taxonomy summary (`one_front_dominant` vs `two_front_balanced`) with detector exclusivity,
-4. chirality panel outcomes (`A_chi`, `A_C`),
-5. what changed in kernel/search settings and why,
-6. recommendation for next day:
+4. isotropy panel outcomes (`v_axis`, `v_face`, `v_body`, anisotropy ratios),
+5. chirality panel outcomes (`A_chi`, `A_C`),
+6. what changed in kernel/search settings and why,
+7. recommendation for next day:
    - continue,
    - pivot,
    - or tighten falsification.
@@ -201,7 +258,8 @@ prior, not a closure claim.
 1. A photon-like class should be propagation-first:
    - high directional coherence,
    - minimal or low-support core,
-   - low drag signatures.
+   - low drag signatures,
+   - weak directional anisotropy across equivalent launch orientations.
 2. I will treat "packet coherence despite local fluctuations" as more important than
    perfect voxel-by-voxel shape preservation.
 3. Symmetric two-front emissions are not automatic failures. I will classify them as
@@ -212,6 +270,8 @@ prior, not a closure claim.
    I will treat that as a viable photon lane and not force one-front assumptions.
 6. If neither one-front nor two-front-exclusive classes survive stress, I will treat
    this as evidence that the kernel may be missing a chirality/selection ingredient.
+7. If exclusivity survives but anisotropy remains high, I will treat that as an
+   isotropy problem (not a photon-null result) and prioritize cube26 gating studies.
 
 ### 10.3 Neutrino intuition
 
@@ -246,7 +306,7 @@ prior, not a closure claim.
 2. Event-order aliasing:
    motifs that "work" for one seed but collapse under minimal seed perturbation.
 3. Stencil overfitting:
-   motifs that exist only in axial6 but disappear in cube26 confirmation.
+   motifs that exist only in one stencil class and fail cross-stencil checks.
 4. Early transient mirage:
    motifs that seem coherent for short windows then wash out.
 

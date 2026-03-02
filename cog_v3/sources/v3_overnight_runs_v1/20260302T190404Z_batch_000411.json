@@ -1,0 +1,824 @@
+{
+  "a_c_proxy": 1.0,
+  "a_chi_proxy": 0.0,
+  "anisotropy_metrics": {
+    "anisotropy_ratio_max_over_min": 1.0,
+    "axis_rows": [
+      {
+        "axis": "x",
+        "detector_exclusivity": 0.375,
+        "front_balance": 0.5,
+        "kick_id": 182,
+        "mean_first_arrival_tick": 1.0
+      },
+      {
+        "axis": "y",
+        "detector_exclusivity": 0.125,
+        "front_balance": 0.25,
+        "kick_id": 149,
+        "mean_first_arrival_tick": 1.0
+      },
+      {
+        "axis": "z",
+        "detector_exclusivity": 0.375,
+        "front_balance": 0.25,
+        "kick_id": 123,
+        "mean_first_arrival_tick": 1.0
+      }
+    ],
+    "speed_proxy": {
+      "x": 7.0,
+      "y": 7.0,
+      "z": 7.0
+    }
+  },
+  "batch_index": 411,
+  "best_candidate": {
+    "classification": "candidate_lock",
+    "kick_label": "-1/2*e001 + 1/2*e011 + -1/2*e100 + 1/2*e110",
+    "mean_support_match_ratio": 0.020833333333333332,
+    "motion_class": "propagating",
+    "period_N": 48,
+    "score": 0.565625,
+    "seed_family": "sheet_z",
+    "seed_state_label": "-1/2*e011 + -1/2*e100 + -1/2*e101 + -1/2*e111",
+    "shift_dx": null,
+    "trial_id": "rand_12_sheet_z"
+  },
+  "best_score": 0.4774228328149523,
+  "channel_policy_id": "deterministic_cycle_v1",
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "course_correction_level": 160,
+  "event_order_policy": "synchronous_parallel_v1",
+  "gate_results": {
+    "gate0_contract": true,
+    "gate1_transport": true,
+    "gate2_detector": false,
+    "gate3_isotropy": true,
+    "gate4_chirality": false
+  },
+  "global_seed": 8001361,
+  "kernel_candidate_id": "K1_cube26_det_cycle_v1",
+  "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "kernel_selection_matrix": [
+    {
+      "a_c_proxy": 1.0,
+      "a_chi_proxy": 0.0,
+      "anisotropy_metrics": {
+        "anisotropy_ratio_max_over_min": 1.0,
+        "axis_rows": [
+          {
+            "axis": "x",
+            "detector_exclusivity": 0.375,
+            "front_balance": 0.5,
+            "kick_id": 182,
+            "mean_first_arrival_tick": 1.0
+          },
+          {
+            "axis": "y",
+            "detector_exclusivity": 0.125,
+            "front_balance": 0.25,
+            "kick_id": 149,
+            "mean_first_arrival_tick": 1.0
+          },
+          {
+            "axis": "z",
+            "detector_exclusivity": 0.375,
+            "front_balance": 0.25,
+            "kick_id": 123,
+            "mean_first_arrival_tick": 1.0
+          }
+        ],
+        "speed_proxy": {
+          "x": 7.0,
+          "y": 7.0,
+          "z": 7.0
+        }
+      },
+      "best_candidate": {
+        "classification": "candidate_lock",
+        "kick_label": "-1/2*e001 + 1/2*e011 + -1/2*e100 + 1/2*e110",
+        "mean_support_match_ratio": 0.020833333333333332,
+        "motion_class": "propagating",
+        "period_N": 48,
+        "score": 0.565625,
+        "seed_family": "sheet_z",
+        "seed_state_label": "-1/2*e011 + -1/2*e100 + -1/2*e101 + -1/2*e111",
+        "shift_dx": null,
+        "trial_id": "rand_12_sheet_z"
+      },
+      "channel_policy_id": "deterministic_cycle_v1",
+      "gate_results": {
+        "gate0_contract": true,
+        "gate1_transport": true,
+        "gate2_detector": false,
+        "gate3_isotropy": true,
+        "gate4_chirality": false
+      },
+      "kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "photon_probe": {
+        "backend": "numba_cpu",
+        "both_hit_fraction": 1.0,
+        "detector_exclusivity": 0.0,
+        "double_hit_rate": 1.0,
+        "front_balance": 0.0,
+        "left_hit_fraction": 0.5,
+        "mean_first_arrival_tick": 1.0,
+        "mean_first_hit_delta_ticks": 0.0,
+        "neither_hit_fraction": 0.0,
+        "params": {
+          "axis": "x",
+          "channel_policy_id": "deterministic_cycle_v1",
+          "detector_margin": 2,
+          "global_seed": 11263989,
+          "kick_id": 149,
+          "policy_seed": 12124245,
+          "runs": 16,
+          "seed_state_id": 121,
+          "size_x": 21,
+          "size_y": 21,
+          "size_z": 21,
+          "ticks": 96,
+          "vacuum_noise_prob": 0.005
+        },
+        "right_hit_fraction": 0.5,
+        "runs": [
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 0
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 1
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 2
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 3
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 4
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 5
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 6
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 7
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 8
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 9
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 10
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 11
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 12
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 13
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 14
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 15
+          }
+        ],
+        "wave_transport_class": "two_front_balanced"
+      },
+      "scan_checks": {
+        "any_propagating": true,
+        "any_recurrence": true,
+        "best_score": 0.565625,
+        "trial_count": 6
+      },
+      "scan_elapsed_sec": 6.994066953659058,
+      "scan_params": {
+        "channel_policy_id": "deterministic_cycle_v1",
+        "global_seed": 8008365,
+        "max_trials": 6,
+        "policy_seed": 9669549,
+        "size_x": 39,
+        "size_y": 11,
+        "size_z": 11,
+        "stencil_id": "cube26",
+        "thin_step": 4,
+        "ticks": 172
+      },
+      "scan_score": 0.565625,
+      "score_total": 0.4774228328149523,
+      "stencil_id": "cube26"
+    },
+    {
+      "a_c_proxy": 1.0,
+      "a_chi_proxy": 0.0,
+      "anisotropy_metrics": {
+        "anisotropy_ratio_max_over_min": 1.0,
+        "axis_rows": [
+          {
+            "axis": "x",
+            "detector_exclusivity": 0.25,
+            "front_balance": 0.25,
+            "kick_id": 182,
+            "mean_first_arrival_tick": 1.0
+          },
+          {
+            "axis": "y",
+            "detector_exclusivity": 0.25,
+            "front_balance": 0.25,
+            "kick_id": 149,
+            "mean_first_arrival_tick": 1.0
+          },
+          {
+            "axis": "z",
+            "detector_exclusivity": 0.0,
+            "front_balance": 0.0,
+            "kick_id": 123,
+            "mean_first_arrival_tick": 1.0
+          }
+        ],
+        "speed_proxy": {
+          "x": 7.0,
+          "y": 7.0,
+          "z": 7.0
+        }
+      },
+      "best_candidate": {
+        "classification": "candidate_lock",
+        "kick_label": "-1/2*e001 + 1/2*e011 + -1/2*e100 + 1/2*e110",
+        "mean_support_match_ratio": 0.020833333333333332,
+        "motion_class": "propagating",
+        "period_N": 48,
+        "score": 0.565625,
+        "seed_family": "sheet_z",
+        "seed_state_label": "-1/2*e011 + -1/2*e100 + -1/2*e101 + -1/2*e111",
+        "shift_dx": null,
+        "trial_id": "rand_12_sheet_z"
+      },
+      "channel_policy_id": "uniform_all",
+      "gate_results": {
+        "gate0_contract": true,
+        "gate1_transport": true,
+        "gate2_detector": false,
+        "gate3_isotropy": true,
+        "gate4_chirality": false
+      },
+      "kernel_candidate_id": "K0_cube26_uniform_v1",
+      "photon_probe": {
+        "backend": "numba_cpu",
+        "both_hit_fraction": 1.0,
+        "detector_exclusivity": 0.0,
+        "double_hit_rate": 1.0,
+        "front_balance": 0.0,
+        "left_hit_fraction": 0.5,
+        "mean_first_arrival_tick": 1.0,
+        "mean_first_hit_delta_ticks": 0.0,
+        "neither_hit_fraction": 0.0,
+        "params": {
+          "axis": "x",
+          "channel_policy_id": "uniform_all",
+          "detector_margin": 2,
+          "global_seed": 11263991,
+          "kick_id": 149,
+          "policy_seed": 12124247,
+          "runs": 16,
+          "seed_state_id": 121,
+          "size_x": 21,
+          "size_y": 21,
+          "size_z": 21,
+          "ticks": 96,
+          "vacuum_noise_prob": 0.005
+        },
+        "right_hit_fraction": 0.5,
+        "runs": [
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 0
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 1
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 2
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 3
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 4
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 5
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 6
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 7
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 8
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 9
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 10
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 11
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 12
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 13
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 14
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 15
+          }
+        ],
+        "wave_transport_class": "two_front_balanced"
+      },
+      "scan_checks": {
+        "any_propagating": true,
+        "any_recurrence": true,
+        "best_score": 0.565625,
+        "trial_count": 6
+      },
+      "scan_elapsed_sec": 7.277951240539551,
+      "scan_params": {
+        "channel_policy_id": "uniform_all",
+        "global_seed": 8008365,
+        "max_trials": 6,
+        "policy_seed": 9669583,
+        "size_x": 39,
+        "size_y": 11,
+        "size_z": 11,
+        "stencil_id": "cube26",
+        "thin_step": 4,
+        "ticks": 172
+      },
+      "scan_score": 0.565625,
+      "score_total": 0.4768651305250551,
+      "stencil_id": "cube26"
+    },
+    {
+      "a_c_proxy": 1.0,
+      "a_chi_proxy": 0.0,
+      "anisotropy_metrics": {
+        "anisotropy_ratio_max_over_min": 1.0,
+        "axis_rows": [
+          {
+            "axis": "x",
+            "detector_exclusivity": 0.125,
+            "front_balance": 0.25,
+            "kick_id": 182,
+            "mean_first_arrival_tick": 1.0
+          },
+          {
+            "axis": "y",
+            "detector_exclusivity": 0.0,
+            "front_balance": 0.0,
+            "kick_id": 149,
+            "mean_first_arrival_tick": 1.0
+          },
+          {
+            "axis": "z",
+            "detector_exclusivity": 0.125,
+            "front_balance": 0.0,
+            "kick_id": 123,
+            "mean_first_arrival_tick": 1.0
+          }
+        ],
+        "speed_proxy": {
+          "x": 7.0,
+          "y": 7.0,
+          "z": 7.0
+        }
+      },
+      "best_candidate": {
+        "classification": "no_lock",
+        "kick_label": "-1/2*e001 + 1/2*e011 + -1/2*e100 + 1/2*e110",
+        "mean_support_match_ratio": 0.0,
+        "motion_class": "propagating",
+        "period_N": null,
+        "score": 0.35,
+        "seed_family": "sheet_z",
+        "seed_state_label": "-1/2*e011 + -1/2*e100 + -1/2*e101 + -1/2*e111",
+        "shift_dx": null,
+        "trial_id": "rand_12_sheet_z"
+      },
+      "channel_policy_id": "stochastic_gating_v1",
+      "gate_results": {
+        "gate0_contract": true,
+        "gate1_transport": true,
+        "gate2_detector": false,
+        "gate3_isotropy": true,
+        "gate4_chirality": false
+      },
+      "kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "photon_probe": {
+        "backend": "numba_cpu",
+        "both_hit_fraction": 1.0,
+        "detector_exclusivity": 0.0,
+        "double_hit_rate": 1.0,
+        "front_balance": 0.0,
+        "left_hit_fraction": 0.5,
+        "mean_first_arrival_tick": 1.0,
+        "mean_first_hit_delta_ticks": 0.0,
+        "neither_hit_fraction": 0.0,
+        "params": {
+          "axis": "x",
+          "channel_policy_id": "stochastic_gating_v1",
+          "detector_margin": 2,
+          "global_seed": 11263990,
+          "kick_id": 149,
+          "policy_seed": 12124246,
+          "runs": 16,
+          "seed_state_id": 121,
+          "size_x": 21,
+          "size_y": 21,
+          "size_z": 21,
+          "ticks": 96,
+          "vacuum_noise_prob": 0.005
+        },
+        "right_hit_fraction": 0.5,
+        "runs": [
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 0
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 1
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 2
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 3
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 4
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 5
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 6
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 7
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 8
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 9
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 10
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 11
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 12
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 13
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 14
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 15
+          }
+        ],
+        "wave_transport_class": "two_front_balanced"
+      },
+      "scan_checks": {
+        "any_propagating": true,
+        "any_recurrence": false,
+        "best_score": 0.35,
+        "trial_count": 6
+      },
+      "scan_elapsed_sec": 8.288657188415527,
+      "scan_params": {
+        "channel_policy_id": "stochastic_gating_v1",
+        "global_seed": 8008365,
+        "max_trials": 6,
+        "policy_seed": 9669566,
+        "size_x": 39,
+        "size_y": 11,
+        "size_z": 11,
+        "stencil_id": "cube26",
+        "thin_step": 4,
+        "ticks": 172
+      },
+      "scan_score": 0.35,
+      "score_total": 0.43206468040924206,
+      "stencil_id": "cube26"
+    }
+  ],
+  "photon_probe": {
+    "backend": "numba_cpu",
+    "both_hit_fraction": 1.0,
+    "detector_exclusivity": 0.0,
+    "double_hit_rate": 1.0,
+    "front_balance": 0.0,
+    "left_hit_fraction": 0.5,
+    "mean_first_arrival_tick": 1.0,
+    "mean_first_hit_delta_ticks": 0.0,
+    "neither_hit_fraction": 0.0,
+    "params": {
+      "axis": "x",
+      "channel_policy_id": "deterministic_cycle_v1",
+      "detector_margin": 2,
+      "global_seed": 11263989,
+      "kick_id": 149,
+      "policy_seed": 12124245,
+      "runs": 16,
+      "seed_state_id": 121,
+      "size_x": 21,
+      "size_y": 21,
+      "size_z": 21,
+      "ticks": 96,
+      "vacuum_noise_prob": 0.005
+    },
+    "right_hit_fraction": 0.5,
+    "runs": [
+      {
+        "left_first_tick": 1,
+        "outcome": "right",
+        "right_first_tick": 1,
+        "run_id": 0
+      },
+      {
+        "left_first_tick": 1,
+        "outcome": "left",
+        "right_first_tick": 1,
+        "run_id": 1
+      },
+      {
+        "left_first_tick": 1,
+        "outcome": "right",
+        "right_first_tick": 1,
+        "run_id": 2
+      },
+      {
+        "left_first_tick": 1,
+        "outcome": "left",
+        "right_first_tick": 1,
+        "run_id": 3
+      },
+      {
+        "left_first_tick": 1,
+        "outcome": "right",
+        "right_first_tick": 1,
+        "run_id": 4
+      },
+      {
+        "left_first_tick": 1,
+        "outcome": "left",
+        "right_first_tick": 1,
+        "run_id": 5
+      },
+      {
+        "left_first_tick": 1,
+        "outcome": "right",
+        "right_first_tick": 1,
+        "run_id": 6
+      },
+      {
+        "left_first_tick": 1,
+        "outcome": "left",
+        "right_first_tick": 1,
+        "run_id": 7
+      },
+      {
+        "left_first_tick": 1,
+        "outcome": "right",
+        "right_first_tick": 1,
+        "run_id": 8
+      },
+      {
+        "left_first_tick": 1,
+        "outcome": "left",
+        "right_first_tick": 1,
+        "run_id": 9
+      },
+      {
+        "left_first_tick": 1,
+        "outcome": "right",
+        "right_first_tick": 1,
+        "run_id": 10
+      },
+      {
+        "left_first_tick": 1,
+        "outcome": "left",
+        "right_first_tick": 1,
+        "run_id": 11
+      },
+      {
+        "left_first_tick": 1,
+        "outcome": "right",
+        "right_first_tick": 1,
+        "run_id": 12
+      },
+      {
+        "left_first_tick": 1,
+        "outcome": "left",
+        "right_first_tick": 1,
+        "run_id": 13
+      },
+      {
+        "left_first_tick": 1,
+        "outcome": "right",
+        "right_first_tick": 1,
+        "run_id": 14
+      },
+      {
+        "left_first_tick": 1,
+        "outcome": "left",
+        "right_first_tick": 1,
+        "run_id": 15
+      }
+    ],
+    "wave_transport_class": "two_front_balanced"
+  },
+  "scan_checks": {
+    "any_propagating": true,
+    "any_recurrence": true,
+    "best_score": 0.565625,
+    "trial_count": 6
+  },
+  "scan_elapsed_sec": 25.679654359817505,
+  "scan_params": {
+    "channel_policy_id": "deterministic_cycle_v1",
+    "global_seed": 8008365,
+    "max_trials": 6,
+    "policy_seed": 9669549,
+    "size_x": 39,
+    "size_y": 11,
+    "size_z": 11,
+    "stencil_id": "cube26",
+    "thin_step": 4,
+    "ticks": 172
+  },
+  "stencil_id": "cube26",
+  "timestamp_utc": "2026-03-02T19:04:04Z"
+}

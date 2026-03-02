@@ -39,6 +39,12 @@ First experiments:
 
 1. scale-up stress tests on top motifs (box and boundary changes),
 2. descriptor invariance checks across seeds.
+3. anisotropy audits under cube26 and channel-gating variants.
+
+Isotropy note:
+
+1. In multiplication-only kernels, treat "weights" as channel-activation schedules
+   (deterministic masks or seeded stochastic gating) instead of additive coefficients.
 
 ## 1.3 Triplet-Scale Construction Strategy
 
