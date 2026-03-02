@@ -1,0 +1,342 @@
+{
+  "checks": {
+    "closure_pair_products_norm_one": false,
+    "family_states_constructed_norm_one": true,
+    "vacuum_fixed_point": true,
+    "world_evolution_preserves_norm_one": false
+  },
+  "claim_id": "KERNEL-NORM1-INTEGER-EXPLORATION-001",
+  "closure_probe": {
+    "all_products_norm_one": false,
+    "failed_pair_count": 144,
+    "first_counterexample": {
+      "a_index": 0,
+      "b_index": 5,
+      "product_coeff_linf": 16,
+      "product_norm": [
+        257,
+        0
+      ],
+      "product_norm_residual_linf": 0
+    },
+    "max_product_coeff_linf": 16,
+    "pair_count": 1296,
+    "sample_rows": [
+      {
+        "a_index": 0,
+        "b_index": 0,
+        "product_coeff_linf": 4,
+        "product_is_norm_one": true,
+        "product_norm": [
+          1,
+          0
+        ],
+        "product_norm_residual_linf": 0
+      },
+      {
+        "a_index": 0,
+        "b_index": 1,
+        "product_coeff_linf": 8,
+        "product_is_norm_one": true,
+        "product_norm": [
+          1,
+          0
+        ],
+        "product_norm_residual_linf": 0
+      },
+      {
+        "a_index": 0,
+        "b_index": 2,
+        "product_coeff_linf": 8,
+        "product_is_norm_one": true,
+        "product_norm": [
+          1,
+          0
+        ],
+        "product_norm_residual_linf": 0
+      },
+      {
+        "a_index": 1,
+        "b_index": 0,
+        "product_coeff_linf": 8,
+        "product_is_norm_one": true,
+        "product_norm": [
+          1,
+          0
+        ],
+        "product_norm_residual_linf": 0
+      },
+      {
+        "a_index": 1,
+        "b_index": 1,
+        "product_coeff_linf": 4,
+        "product_is_norm_one": true,
+        "product_norm": [
+          1,
+          0
+        ],
+        "product_norm_residual_linf": 0
+      },
+      {
+        "a_index": 1,
+        "b_index": 2,
+        "product_coeff_linf": 8,
+        "product_is_norm_one": true,
+        "product_norm": [
+          1,
+          0
+        ],
+        "product_norm_residual_linf": 0
+      },
+      {
+        "a_index": 2,
+        "b_index": 0,
+        "product_coeff_linf": 8,
+        "product_is_norm_one": true,
+        "product_norm": [
+          1,
+          0
+        ],
+        "product_norm_residual_linf": 0
+      },
+      {
+        "a_index": 2,
+        "b_index": 1,
+        "product_coeff_linf": 8,
+        "product_is_norm_one": true,
+        "product_norm": [
+          1,
+          0
+        ],
+        "product_norm_residual_linf": 0
+      },
+      {
+        "a_index": 2,
+        "b_index": 2,
+        "product_coeff_linf": 4,
+        "product_is_norm_one": true,
+        "product_norm": [
+          1,
+          0
+        ],
+        "product_norm_residual_linf": 0
+      }
+    ]
+  },
+  "family_summary": {
+    "seed_examples": [
+      [
+        [
+          1,
+          0
+        ],
+        [
+          -2,
+          -2
+        ],
+        [
+          -2,
+          2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          1,
+          0
+        ],
+        [
+          -2,
+          -2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          -2,
+          2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          -2,
+          -2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          -2,
+          2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    ],
+    "state_count": 36
+  },
+  "kernel_module": "cog_v2/python/kernel_norm1_integer_v1.py",
+  "kernel_module_sha256": "091ad03cc0c8f9ab2f5e7e547baa2081606eb26fa79e043b3bef487644637f2f",
+  "kernel_profile": "cog_v2_norm1_integer_multiplicative_v1",
+  "mode": "exploratory_parallel_kernel_lane",
+  "notes": [
+    "Norm definition is octonion composition norm N(x)=x*x_bar scalar component over Z[i].",
+    "This lane uses multiplicative updates only: payload fold then left multiply onto current state.",
+    "Coefficient growth is tracked because norm-one closure alone does not bound coefficient magnitudes."
+  ],
+  "params": {
+    "family_sample_cap": 36,
+    "range_limit": 2,
+    "thin_output_step": 1,
+    "ticks": 12
+  },
+  "replay_hash": "8d0c07237efe5f076c1806cb0c99bbbc55be1faee13c4153ec66d592e0c9dd7c",
+  "schema_version": "norm1_integer_kernel_probe_v1",
+  "source_script": "cog_v2/calc/build_norm1_integer_kernel_probe_v1.py",
+  "source_script_sha256": "df261c50a4d5bd242c33104295fef1c6b0695c670f4e0b3fd39fcb3fd556912a",
+  "vacuum_probe": {
+    "vacuum_fixed_point": true
+  },
+  "world_probe": {
+    "all_ticks_all_nodes_norm_one": false,
+    "detected_period": 7,
+    "growth_log10_est_vs_tick0": 455,
+    "max_coeff_linf_digits_any_tick": 456,
+    "max_norm_residual_linf_any_tick": 0,
+    "rows": [
+      {
+        "all_nodes_norm_one": true,
+        "max_coeff_linf_digits": 1,
+        "max_norm_residual_linf": 0,
+        "tick": 0
+      },
+      {
+        "all_nodes_norm_one": false,
+        "max_coeff_linf_digits": 3,
+        "max_norm_residual_linf": 0,
+        "tick": 1
+      },
+      {
+        "all_nodes_norm_one": false,
+        "max_coeff_linf_digits": 7,
+        "max_norm_residual_linf": 0,
+        "tick": 2
+      },
+      {
+        "all_nodes_norm_one": false,
+        "max_coeff_linf_digits": 16,
+        "max_norm_residual_linf": 0,
+        "tick": 3
+      },
+      {
+        "all_nodes_norm_one": false,
+        "max_coeff_linf_digits": 30,
+        "max_norm_residual_linf": 0,
+        "tick": 4
+      },
+      {
+        "all_nodes_norm_one": false,
+        "max_coeff_linf_digits": 49,
+        "max_norm_residual_linf": 0,
+        "tick": 5
+      },
+      {
+        "all_nodes_norm_one": false,
+        "max_coeff_linf_digits": 76,
+        "max_norm_residual_linf": 0,
+        "tick": 6
+      },
+      {
+        "all_nodes_norm_one": false,
+        "max_coeff_linf_digits": 111,
+        "max_norm_residual_linf": 0,
+        "tick": 7
+      },
+      {
+        "all_nodes_norm_one": false,
+        "max_coeff_linf_digits": 156,
+        "max_norm_residual_linf": 0,
+        "tick": 8
+      },
+      {
+        "all_nodes_norm_one": false,
+        "max_coeff_linf_digits": 212,
+        "max_norm_residual_linf": 0,
+        "tick": 9
+      },
+      {
+        "all_nodes_norm_one": false,
+        "max_coeff_linf_digits": 280,
+        "max_norm_residual_linf": 0,
+        "tick": 10
+      },
+      {
+        "all_nodes_norm_one": false,
+        "max_coeff_linf_digits": 361,
+        "max_norm_residual_linf": 0,
+        "tick": 11
+      },
+      {
+        "all_nodes_norm_one": false,
+        "max_coeff_linf_digits": 456,
+        "max_norm_residual_linf": 0,
+        "tick": 12
+      }
+    ]
+  }
+}

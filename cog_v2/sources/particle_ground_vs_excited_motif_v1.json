@@ -1,0 +1,52 @@
+{
+  "claim_id": "MOTIF-VIS-001",
+  "gif_repo_path": "website/data/visuals/motif_gifs/left_spinor_muon_motif_ground_vs_excited_v1.gif",
+  "kernel_module": "cog_v2/python/kernel_projective_unity.py",
+  "kernel_module_sha256": "936d1e8fb5f36c11a05133e67907203fe9fd78db2e8dd433bba4ea8835cbda27",
+  "kernel_profile": "cog_v2_projective_unity_v1",
+  "lanes": [
+    {
+      "energy_id": "E0_control",
+      "label": "Ground (E0 control)",
+      "period_ticks": 1,
+      "selected_op_idx": null
+    },
+    {
+      "energy_id": "E1_center_kick",
+      "label": "Excited #1 (E1_center_kick)",
+      "period_ticks": 2,
+      "selected_op_idx": 1
+    },
+    {
+      "energy_id": "E2_center_plus_shell1",
+      "label": "Excited #2 (E2_center_plus_shell1)",
+      "period_ticks": 2,
+      "selected_op_idx": 1
+    }
+  ],
+  "params": {
+    "burn_in_ground": 6,
+    "dpi": 120,
+    "fps": 2,
+    "max_period_ground": 12,
+    "render_gif": true,
+    "size_xyz_ground": 7,
+    "ticks_ground": 24
+  },
+  "particle_id": "left_spinor_muon_motif",
+  "projector_id": "pi_unity_axis_dominance_v1",
+  "render": {
+    "frame_count": 2,
+    "max_nonvac_power": 1.0,
+    "periods": [
+      1,
+      2,
+      2
+    ],
+    "x_len": 7
+  },
+  "replay_hash": "c3cca8cb99a9dd1ebe5686e35709fa3395b33bbe6415dcde6e2a5c4b63a3a663",
+  "schema_version": "particle_ground_vs_excited_visual_v1",
+  "source_script": "cog_v2/calc/build_particle_ground_vs_excited_visual_v1.py",
+  "source_script_sha256": "4f72bf2abcd8565c6ffe37321a8ec9082f1bd82fa7dee694fb18051c71371c8f"
+}

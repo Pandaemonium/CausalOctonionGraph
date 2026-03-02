@@ -1,0 +1,57 @@
+{
+  "channel16_gif_repo_path": "website/data/visuals/motif_gifs/left_spinor_muon_motif_excited1_channel16_v1.gif",
+  "channel16_render": {
+    "frame_count": 14,
+    "grid_size": 7,
+    "value_abs_max": 7.0
+  },
+  "claim_id": "MOTIF-VIS-3D-001",
+  "kernel_module": "cog_v2/python/kernel_projective_unity.py",
+  "kernel_module_sha256": "936d1e8fb5f36c11a05133e67907203fe9fd78db2e8dd433bba4ea8835cbda27",
+  "kernel_profile": "cog_v2_projective_unity_v1",
+  "lanes": [
+    {
+      "energy_id": "E0_control",
+      "label": "Ground (E0 control)",
+      "period_ticks": 1
+    },
+    {
+      "energy_id": "E1_center_kick",
+      "label": "Excited #1 (E1_center_kick, op 3)",
+      "period_ticks": 14
+    },
+    {
+      "energy_id": "E1_center_kick",
+      "label": "Excited #2 (E1_center_kick, op 4)",
+      "period_ticks": 7
+    }
+  ],
+  "library_source": "cog_v2/sources/particle_excited_propagation_cycle_library_v2.json",
+  "overview_gif_repo_path": "website/data/visuals/motif_gifs/left_spinor_muon_motif_ground_vs_excited_3d_overview_v1.gif",
+  "overview_render": {
+    "frame_count": 14,
+    "grid_size": 7,
+    "lane_modes": [
+      "nonvac",
+      "delta",
+      "delta"
+    ],
+    "max_nonvac_power": 2.0,
+    "periods": [
+      1,
+      14,
+      7
+    ]
+  },
+  "params": {
+    "dpi": 120,
+    "fps": 2,
+    "render_gif": true
+  },
+  "particle_id": "left_spinor_muon_motif",
+  "projector_id": "pi_unity_axis_dominance_v1",
+  "replay_hash": "b1948836d5ee6e61f41812c1074f69c4941dcb8edce6b7bd9b7fe8c125207b9b",
+  "schema_version": "particle_ground_vs_excited_3d_visual_v1",
+  "source_script": "cog_v2/calc/build_particle_ground_vs_excited_3d_visual_v1.py",
+  "source_script_sha256": "27f85a29777a16ceb7d9bd4ec1bd01b4ec8311b226e3bfdd20ef0fc4157bf0e0"
+}

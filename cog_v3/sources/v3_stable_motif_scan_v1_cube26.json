@@ -1,0 +1,307 @@
+{
+  "checks": {
+    "any_candidate_lock": true,
+    "any_propagating_candidate": false,
+    "any_stationary_candidate": true,
+    "any_strict_lock": false,
+    "trial_count": 3
+  },
+  "claim_id": "COG-V3-MOTIF-SCAN-001",
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "kernel_module": "cog_v3/python/kernel_octavian240_multiplicative_v1.py",
+  "kernel_module_sha256": "4d49033d24dcd1b3ec3cc4367175dc027bfecb8e5afa8710f0dd9856c01155a6",
+  "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "mode": "simulation_first_structure_first",
+  "notes": [
+    "Primary default is 3D fixed-vacuum with axial6 stencil (tractable baseline).",
+    "Broader stencils (cube26/cube124) are available to probe missed-physics risk.",
+    "Candidate locks are intentionally permissive to survive finite-box artifacts and residual transients."
+  ],
+  "params": {
+    "boundary_mode": "fixed_vacuum",
+    "max_period": 8,
+    "max_shift_x": 2,
+    "max_trials": 3,
+    "min_global_match_ratio": 0.6,
+    "min_period": 2,
+    "min_support_cells": 4,
+    "min_support_match_ratio": 0.8,
+    "repeat_checks": 2,
+    "size_x": 15,
+    "size_y": 7,
+    "size_z": 7,
+    "stencil_id": "cube26",
+    "stencil_size": 26,
+    "thin_output_step": 3,
+    "ticks": 24,
+    "warmup_ticks": 8
+  },
+  "replay_hash": "db91fdd237659b59af7b21032a24567708268ca4c61dae2a81bc5ece482ce982",
+  "schema_version": "v3_stable_motif_scan_v1",
+  "source_script": "cog_v3/calc/build_v3_stable_motif_scan_v1.py",
+  "source_script_sha256": "81a59b16048a3ccfe84c4a7ae0842cf38e681a6bb291a111841a98376d6c4494",
+  "trials": [
+    {
+      "candidate_count": 0,
+      "seed": {
+        "kick_applied": true,
+        "kick_id": 182,
+        "kick_label": "1*e001",
+        "seed_family": "photon_sheet_x",
+        "seed_state_id": 121,
+        "seed_state_label": "1*e111",
+        "seeded_cell_count": 9
+      },
+      "summary": {
+        "centroid_x_delta": 4.0,
+        "centroid_x_final": 7.0,
+        "centroid_x_initial": 3.0,
+        "final_nonvac_cells": 27,
+        "initial_nonvac_cells": 9,
+        "max_nonvac_cells": 260,
+        "nonvac_density_final": 0.036734693877551024,
+        "ticks": 24
+      },
+      "top_candidates": [],
+      "trace_thin": [
+        {
+          "nonvac_cells": 9,
+          "tick": 0
+        },
+        {
+          "nonvac_cells": 27,
+          "tick": 3
+        },
+        {
+          "nonvac_cells": 225,
+          "tick": 6
+        },
+        {
+          "nonvac_cells": 117,
+          "tick": 9
+        },
+        {
+          "nonvac_cells": 84,
+          "tick": 12
+        },
+        {
+          "nonvac_cells": 8,
+          "tick": 15
+        },
+        {
+          "nonvac_cells": 185,
+          "tick": 18
+        },
+        {
+          "nonvac_cells": 153,
+          "tick": 21
+        },
+        {
+          "nonvac_cells": 27,
+          "tick": 24
+        }
+      ],
+      "trial_id": "photon_sheet_e111_kick_e001"
+    },
+    {
+      "candidate_count": 0,
+      "seed": {
+        "kick_applied": true,
+        "kick_id": 149,
+        "kick_label": "1*e010",
+        "seed_family": "photon_sheet_x",
+        "seed_state_id": 121,
+        "seed_state_label": "1*e111",
+        "seeded_cell_count": 9
+      },
+      "summary": {
+        "centroid_x_delta": 4.0,
+        "centroid_x_final": 7.0,
+        "centroid_x_initial": 3.0,
+        "final_nonvac_cells": 27,
+        "initial_nonvac_cells": 9,
+        "max_nonvac_cells": 260,
+        "nonvac_density_final": 0.036734693877551024,
+        "ticks": 24
+      },
+      "top_candidates": [],
+      "trace_thin": [
+        {
+          "nonvac_cells": 9,
+          "tick": 0
+        },
+        {
+          "nonvac_cells": 27,
+          "tick": 3
+        },
+        {
+          "nonvac_cells": 225,
+          "tick": 6
+        },
+        {
+          "nonvac_cells": 117,
+          "tick": 9
+        },
+        {
+          "nonvac_cells": 84,
+          "tick": 12
+        },
+        {
+          "nonvac_cells": 8,
+          "tick": 15
+        },
+        {
+          "nonvac_cells": 185,
+          "tick": 18
+        },
+        {
+          "nonvac_cells": 153,
+          "tick": 21
+        },
+        {
+          "nonvac_cells": 27,
+          "tick": 24
+        }
+      ],
+      "trial_id": "photon_sheet_e111_kick_e010"
+    },
+    {
+      "candidate_count": 6,
+      "seed": {
+        "kick_applied": true,
+        "kick_id": 182,
+        "kick_label": "1*e001",
+        "seed_family": "single_unit",
+        "seed_state_id": 121,
+        "seed_state_label": "1*e111",
+        "seeded_cell_count": 1
+      },
+      "summary": {
+        "centroid_x_delta": 0.0,
+        "centroid_x_final": 7.0,
+        "centroid_x_initial": 7.0,
+        "final_nonvac_cells": 3,
+        "initial_nonvac_cells": 1,
+        "max_nonvac_cells": 375,
+        "nonvac_density_final": 0.004081632653061225,
+        "ticks": 24
+      },
+      "top_candidates": [
+        {
+          "classification": "candidate_lock",
+          "comparison_rows": [
+            {
+              "global_match_ratio": 0.998639455782313,
+              "nonvac_cells_current": 17,
+              "support_count": 17,
+              "support_match_ratio": 0.9411764705882353
+            },
+            {
+              "global_match_ratio": 0.998639455782313,
+              "nonvac_cells_current": 17,
+              "support_count": 17,
+              "support_match_ratio": 0.9411764705882353
+            }
+          ],
+          "comparisons": 2,
+          "mean_global_match_ratio": 0.998639455782313,
+          "mean_support_match_ratio": 0.9411764705882353,
+          "min_nonvac_cells_current": 17,
+          "min_support_count": 17,
+          "motion_class": "stationary",
+          "period_N": 8,
+          "score": 1.370700280112045,
+          "shift_dx": 0,
+          "t1": 12
+        },
+        {
+          "classification": "candidate_lock",
+          "comparison_rows": [
+            {
+              "global_match_ratio": 0.963265306122449,
+              "nonvac_cells_current": 315,
+              "support_count": 315,
+              "support_match_ratio": 0.9142857142857143
+            },
+            {
+              "global_match_ratio": 0.963265306122449,
+              "nonvac_cells_current": 315,
+              "support_count": 315,
+              "support_match_ratio": 0.9142857142857143
+            }
+          ],
+          "comparisons": 2,
+          "mean_global_match_ratio": 0.963265306122449,
+          "mean_support_match_ratio": 0.9142857142857143,
+          "min_nonvac_cells_current": 315,
+          "min_support_count": 315,
+          "motion_class": "stationary",
+          "period_N": 8,
+          "score": 1.3314285714285714,
+          "shift_dx": 0,
+          "t1": 13
+        },
+        {
+          "classification": "candidate_lock",
+          "comparison_rows": [
+            {
+              "global_match_ratio": 0.998639455782313,
+              "nonvac_cells_current": 17,
+              "support_count": 17,
+              "support_match_ratio": 0.9411764705882353
+            }
+          ],
+          "comparisons": 1,
+          "mean_global_match_ratio": 0.998639455782313,
+          "mean_support_match_ratio": 0.9411764705882353,
+          "min_nonvac_cells_current": 17,
+          "min_support_count": 17,
+          "motion_class": "stationary",
+          "period_N": 8,
+          "score": 1.3307002801120449,
+          "shift_dx": 0,
+          "t1": 20
+        }
+      ],
+      "trace_thin": [
+        {
+          "nonvac_cells": 1,
+          "tick": 0
+        },
+        {
+          "nonvac_cells": 275,
+          "tick": 3
+        },
+        {
+          "nonvac_cells": 177,
+          "tick": 6
+        },
+        {
+          "nonvac_cells": 81,
+          "tick": 9
+        },
+        {
+          "nonvac_cells": 17,
+          "tick": 12
+        },
+        {
+          "nonvac_cells": 275,
+          "tick": 15
+        },
+        {
+          "nonvac_cells": 81,
+          "tick": 18
+        },
+        {
+          "nonvac_cells": 315,
+          "tick": 21
+        },
+        {
+          "nonvac_cells": 3,
+          "tick": 24
+        }
+      ],
+      "trial_id": "single_e111_kick_e001"
+    }
+  ]
+}

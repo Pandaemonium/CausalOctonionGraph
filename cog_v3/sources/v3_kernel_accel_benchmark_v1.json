@@ -1,0 +1,220 @@
+{
+  "backend_availability": {
+    "numba_cpu": {
+      "available": true,
+      "reason": "available"
+    },
+    "numba_cuda": {
+      "available": false,
+      "reason": "CUDA device found but NVVM unavailable: libNVVM cannot be found. Do `conda install cudatoolkit`:\nCould not find module 'nvvm.dll' (or one of its dependencies). Try using the full path with constructor syntax."
+    },
+    "python": {
+      "available": true,
+      "reason": "reference"
+    }
+  },
+  "canonical_kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "cases": [
+    {
+      "benchmarks": [
+        {
+          "backend": "python",
+          "best_cells_per_sec": 476514.79673796165,
+          "best_multiplier": 4,
+          "best_sec": 0.07403757499560015,
+          "best_ticks_per_sec": 648.3194513441655,
+          "cells": 735,
+          "cells_updated": 35280,
+          "mean_sec": 0.0747826550010359,
+          "ok": true,
+          "output_hash_sha256": "64ae61ed45735ce5b2859721310758dde20bb351abfc49e005ef694ae453bdff",
+          "ticks": 48,
+          "timing_tick_multipliers": [
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "timings_sec": [
+            0.2971665000077337,
+            0.29917730001034215,
+            0.2961502999824006,
+            0.30520430000615306,
+            0.2979547000140883
+          ]
+        },
+        {
+          "backend": "numba_cpu",
+          "best_cells_per_sec": 70467044.0582964,
+          "best_multiplier": 1024,
+          "best_sec": 0.0005006595703207495,
+          "best_ticks_per_sec": 95873.52933101551,
+          "cells": 735,
+          "cells_updated": 35280,
+          "mean_sec": 0.0005543586132773726,
+          "ok": true,
+          "output_hash_sha256": "64ae61ed45735ce5b2859721310758dde20bb351abfc49e005ef694ae453bdff",
+          "ticks": 48,
+          "timing_tick_multipliers": [
+            512,
+            512,
+            512,
+            1024,
+            1024
+          ],
+          "timings_sec": [
+            0.296431599999778,
+            0.32029860001057386,
+            0.28585639997618273,
+            0.520467499998631,
+            0.5126754000084475
+          ]
+        }
+      ],
+      "case_id": "small_15x7x7",
+      "cells": 735,
+      "hash_consistent_across_backends": true,
+      "neighbors_per_cell": 6,
+      "size": [
+        15,
+        7,
+        7
+      ],
+      "stencil_id": "axial6",
+      "ticks": 48
+    },
+    {
+      "benchmarks": [
+        {
+          "backend": "python",
+          "best_cells_per_sec": 472512.3957644234,
+          "best_multiplier": 2,
+          "best_sec": 0.2396889499941608,
+          "best_ticks_per_sec": 100.1297723594879,
+          "cells": 4719,
+          "cells_updated": 113256,
+          "mean_sec": 0.24489097999758086,
+          "ok": true,
+          "output_hash_sha256": "d8b967ae29bfc71b1feab0f2915d474d8aa98ea496a01648069663414dcb6598",
+          "ticks": 24,
+          "timing_tick_multipliers": [
+            2,
+            1,
+            2,
+            2,
+            2
+          ],
+          "timings_sec": [
+            0.48321320000104606,
+            0.26189009999507107,
+            0.48227209999458864,
+            0.4802664000017103,
+            0.4793778999883216
+          ]
+        },
+        {
+          "backend": "numba_cpu",
+          "best_cells_per_sec": 344645508.04870147,
+          "best_multiplier": 1024,
+          "best_sec": 0.0003286159179651804,
+          "best_ticks_per_sec": 73033.58933009143,
+          "cells": 4719,
+          "cells_updated": 113256,
+          "mean_sec": 0.0003660918554714954,
+          "ok": true,
+          "output_hash_sha256": "d8b967ae29bfc71b1feab0f2915d474d8aa98ea496a01648069663414dcb6598",
+          "ticks": 24,
+          "timing_tick_multipliers": [
+            1024,
+            1024,
+            1024,
+            1024,
+            1024
+          ],
+          "timings_sec": [
+            0.3689462000038475,
+            0.38205630000447854,
+            0.4179941000184044,
+            0.36889099999098107,
+            0.33650269999634475
+          ]
+        }
+      ],
+      "case_id": "mid_39x11x11",
+      "cells": 4719,
+      "hash_consistent_across_backends": true,
+      "neighbors_per_cell": 6,
+      "size": [
+        39,
+        11,
+        11
+      ],
+      "stencil_id": "axial6",
+      "ticks": 24
+    },
+    {
+      "benchmarks": [
+        {
+          "backend": "numba_cpu",
+          "best_cells_per_sec": 739636672.415917,
+          "best_multiplier": 1024,
+          "best_sec": 0.00037682285153550765,
+          "best_ticks_per_sec": 21230.134975628378,
+          "cells": 34839,
+          "cells_updated": 278712,
+          "mean_sec": 0.0003866879101565246,
+          "ok": true,
+          "output_hash_sha256": "c9ecc492b65f7a176d8bbe2c31e1a0dba9ba8055ea68cc8140ee03dd55ae8ad5",
+          "ticks": 8,
+          "timing_tick_multipliers": [
+            1024,
+            1024,
+            1024,
+            1024,
+            1024
+          ],
+          "timings_sec": [
+            0.3925898000015877,
+            0.38586659997235984,
+            0.3905074000067543,
+            0.39931950002210215,
+            0.4115587999986019
+          ]
+        }
+      ],
+      "case_id": "wide_79x21x21",
+      "cells": 34839,
+      "hash_consistent_across_backends": true,
+      "neighbors_per_cell": 6,
+      "size": [
+        79,
+        21,
+        21
+      ],
+      "stencil_id": "axial6",
+      "ticks": 8
+    }
+  ],
+  "claim_id": "COG-V3-KERNEL-ACCEL-BENCH-001",
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "kernel_module": "cog_v3/python/kernel_octavian240_accel_v1.py",
+  "kernel_module_sha256": "013b6f6364758d297fce6c73bb4a3eb3e954fe9756807e079f6861eb80d8a618",
+  "mode": "simulation_first_structure_first",
+  "notes": [
+    "numba_cuda path is benchmarked only if runtime reports CUDA available.",
+    "All backends must produce the same output hash for each case.",
+    "Python reference backend is included for small/mid cases by default."
+  ],
+  "params": {
+    "include_python_for_all_cases": false,
+    "min_measure_sec": 0.25,
+    "reps": 5,
+    "threads_per_block": 256,
+    "warmup_reps": 2
+  },
+  "replay_hash": "1e76073851ff7030eadc1bd1ad16f6dc79bda97d465a17b8a5c3f14fa8a242d9",
+  "schema_version": "v3_kernel_accel_benchmark_v1",
+  "source_script": "cog_v3/calc/benchmark_v3_kernel_accel_v1.py",
+  "source_script_sha256": "4786e48d449dcfe017e9e44ac2c66d7c0fe16f0a83ec653f785e25eafe65e8a1"
+}

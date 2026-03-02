@@ -1,0 +1,2357 @@
+{
+  "checks": {
+    "all_lanes_causal_bound_ok": true,
+    "all_lanes_high_phase_alignment": true,
+    "all_lanes_lightcone_saturated": true
+  },
+  "claim_id": "PHOTON-CANDIDATE-001",
+  "kernel_module": "cog_v2/python/kernel_projective_unity.py",
+  "kernel_module_sha256": "936d1e8fb5f36c11a05133e67907203fe9fd78db2e8dd433bba4ea8835cbda27",
+  "kernel_profile": "cog_v2_projective_unity_v1",
+  "lanes": [
+    {
+      "rows": [
+        {
+          "disturbed_count": 5,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 126,
+          "right_front_x": 130,
+          "tick": 0
+        },
+        {
+          "disturbed_count": 7,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 125,
+          "right_front_x": 131,
+          "tick": 1
+        },
+        {
+          "disturbed_count": 9,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 124,
+          "right_front_x": 132,
+          "tick": 2
+        },
+        {
+          "disturbed_count": 11,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 123,
+          "right_front_x": 133,
+          "tick": 3
+        },
+        {
+          "disturbed_count": 13,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 122,
+          "right_front_x": 134,
+          "tick": 4
+        },
+        {
+          "disturbed_count": 15,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 121,
+          "right_front_x": 135,
+          "tick": 5
+        },
+        {
+          "disturbed_count": 17,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 120,
+          "right_front_x": 136,
+          "tick": 6
+        },
+        {
+          "disturbed_count": 19,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 119,
+          "right_front_x": 137,
+          "tick": 7
+        },
+        {
+          "disturbed_count": 21,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 118,
+          "right_front_x": 138,
+          "tick": 8
+        },
+        {
+          "disturbed_count": 23,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 117,
+          "right_front_x": 139,
+          "tick": 9
+        },
+        {
+          "disturbed_count": 25,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 116,
+          "right_front_x": 140,
+          "tick": 10
+        },
+        {
+          "disturbed_count": 27,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 115,
+          "right_front_x": 141,
+          "tick": 11
+        },
+        {
+          "disturbed_count": 29,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 114,
+          "right_front_x": 142,
+          "tick": 12
+        },
+        {
+          "disturbed_count": 31,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 113,
+          "right_front_x": 143,
+          "tick": 13
+        },
+        {
+          "disturbed_count": 33,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 112,
+          "right_front_x": 144,
+          "tick": 14
+        },
+        {
+          "disturbed_count": 35,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 111,
+          "right_front_x": 145,
+          "tick": 15
+        },
+        {
+          "disturbed_count": 37,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 110,
+          "right_front_x": 146,
+          "tick": 16
+        },
+        {
+          "disturbed_count": 39,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 109,
+          "right_front_x": 147,
+          "tick": 17
+        },
+        {
+          "disturbed_count": 41,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 108,
+          "right_front_x": 148,
+          "tick": 18
+        },
+        {
+          "disturbed_count": 43,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 107,
+          "right_front_x": 149,
+          "tick": 19
+        },
+        {
+          "disturbed_count": 45,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 106,
+          "right_front_x": 150,
+          "tick": 20
+        },
+        {
+          "disturbed_count": 47,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 105,
+          "right_front_x": 151,
+          "tick": 21
+        },
+        {
+          "disturbed_count": 49,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 104,
+          "right_front_x": 152,
+          "tick": 22
+        },
+        {
+          "disturbed_count": 51,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 103,
+          "right_front_x": 153,
+          "tick": 23
+        },
+        {
+          "disturbed_count": 53,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 102,
+          "right_front_x": 154,
+          "tick": 24
+        },
+        {
+          "disturbed_count": 55,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 101,
+          "right_front_x": 155,
+          "tick": 25
+        },
+        {
+          "disturbed_count": 57,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 100,
+          "right_front_x": 156,
+          "tick": 26
+        },
+        {
+          "disturbed_count": 59,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 99,
+          "right_front_x": 157,
+          "tick": 27
+        },
+        {
+          "disturbed_count": 61,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 98,
+          "right_front_x": 158,
+          "tick": 28
+        },
+        {
+          "disturbed_count": 63,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 97,
+          "right_front_x": 159,
+          "tick": 29
+        },
+        {
+          "disturbed_count": 65,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 96,
+          "right_front_x": 160,
+          "tick": 30
+        },
+        {
+          "disturbed_count": 67,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 95,
+          "right_front_x": 161,
+          "tick": 31
+        },
+        {
+          "disturbed_count": 69,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 94,
+          "right_front_x": 162,
+          "tick": 32
+        },
+        {
+          "disturbed_count": 71,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 93,
+          "right_front_x": 163,
+          "tick": 33
+        },
+        {
+          "disturbed_count": 73,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 92,
+          "right_front_x": 164,
+          "tick": 34
+        },
+        {
+          "disturbed_count": 75,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 91,
+          "right_front_x": 165,
+          "tick": 35
+        },
+        {
+          "disturbed_count": 77,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 90,
+          "right_front_x": 166,
+          "tick": 36
+        },
+        {
+          "disturbed_count": 79,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 89,
+          "right_front_x": 167,
+          "tick": 37
+        },
+        {
+          "disturbed_count": 81,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 88,
+          "right_front_x": 168,
+          "tick": 38
+        },
+        {
+          "disturbed_count": 83,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 87,
+          "right_front_x": 169,
+          "tick": 39
+        },
+        {
+          "disturbed_count": 85,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 86,
+          "right_front_x": 170,
+          "tick": 40
+        },
+        {
+          "disturbed_count": 87,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 85,
+          "right_front_x": 171,
+          "tick": 41
+        },
+        {
+          "disturbed_count": 89,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 84,
+          "right_front_x": 172,
+          "tick": 42
+        },
+        {
+          "disturbed_count": 91,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 83,
+          "right_front_x": 173,
+          "tick": 43
+        },
+        {
+          "disturbed_count": 93,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 82,
+          "right_front_x": 174,
+          "tick": 44
+        },
+        {
+          "disturbed_count": 95,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 81,
+          "right_front_x": 175,
+          "tick": 45
+        },
+        {
+          "disturbed_count": 97,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 80,
+          "right_front_x": 176,
+          "tick": 46
+        },
+        {
+          "disturbed_count": 99,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 79,
+          "right_front_x": 177,
+          "tick": 47
+        },
+        {
+          "disturbed_count": 101,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 78,
+          "right_front_x": 178,
+          "tick": 48
+        },
+        {
+          "disturbed_count": 103,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 77,
+          "right_front_x": 179,
+          "tick": 49
+        },
+        {
+          "disturbed_count": 105,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 76,
+          "right_front_x": 180,
+          "tick": 50
+        },
+        {
+          "disturbed_count": 107,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 75,
+          "right_front_x": 181,
+          "tick": 51
+        },
+        {
+          "disturbed_count": 109,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 74,
+          "right_front_x": 182,
+          "tick": 52
+        },
+        {
+          "disturbed_count": 111,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 73,
+          "right_front_x": 183,
+          "tick": 53
+        },
+        {
+          "disturbed_count": 113,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 72,
+          "right_front_x": 184,
+          "tick": 54
+        },
+        {
+          "disturbed_count": 115,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 71,
+          "right_front_x": 185,
+          "tick": 55
+        },
+        {
+          "disturbed_count": 117,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 70,
+          "right_front_x": 186,
+          "tick": 56
+        },
+        {
+          "disturbed_count": 119,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 69,
+          "right_front_x": 187,
+          "tick": 57
+        },
+        {
+          "disturbed_count": 121,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 68,
+          "right_front_x": 188,
+          "tick": 58
+        },
+        {
+          "disturbed_count": 123,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 67,
+          "right_front_x": 189,
+          "tick": 59
+        },
+        {
+          "disturbed_count": 125,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 66,
+          "right_front_x": 190,
+          "tick": 60
+        },
+        {
+          "disturbed_count": 127,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 65,
+          "right_front_x": 191,
+          "tick": 61
+        },
+        {
+          "disturbed_count": 129,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 64,
+          "right_front_x": 192,
+          "tick": 62
+        },
+        {
+          "disturbed_count": 131,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 63,
+          "right_front_x": 193,
+          "tick": 63
+        },
+        {
+          "disturbed_count": 133,
+          "dominant_e111": [
+            0,
+            1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              1
+            ]
+          ],
+          "left_front_x": 62,
+          "right_front_x": 194,
+          "tick": 64
+        }
+      ],
+      "summary": {
+        "causal_bound_front_speed_le_1": true,
+        "final_disturbed_count": 133,
+        "final_dominant_e111": [
+          0,
+          1
+        ],
+        "final_dominant_e111_share": 1.0,
+        "left_front_speed_mean_abs": 1.0,
+        "lightcone_saturated_front_speed_eq_1": true,
+        "max_front_step_speed_abs": 1.0,
+        "motif_id": "su_vacuum_omega",
+        "right_front_speed_mean_abs": 1.0,
+        "seed_interval_x": [
+          126,
+          130
+        ],
+        "seed_state_vector": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "rows": [
+        {
+          "disturbed_count": 5,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 126,
+          "right_front_x": 130,
+          "tick": 0
+        },
+        {
+          "disturbed_count": 7,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 125,
+          "right_front_x": 131,
+          "tick": 1
+        },
+        {
+          "disturbed_count": 9,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 124,
+          "right_front_x": 132,
+          "tick": 2
+        },
+        {
+          "disturbed_count": 11,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 123,
+          "right_front_x": 133,
+          "tick": 3
+        },
+        {
+          "disturbed_count": 13,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 122,
+          "right_front_x": 134,
+          "tick": 4
+        },
+        {
+          "disturbed_count": 15,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 121,
+          "right_front_x": 135,
+          "tick": 5
+        },
+        {
+          "disturbed_count": 17,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 120,
+          "right_front_x": 136,
+          "tick": 6
+        },
+        {
+          "disturbed_count": 19,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 119,
+          "right_front_x": 137,
+          "tick": 7
+        },
+        {
+          "disturbed_count": 21,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 118,
+          "right_front_x": 138,
+          "tick": 8
+        },
+        {
+          "disturbed_count": 23,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 117,
+          "right_front_x": 139,
+          "tick": 9
+        },
+        {
+          "disturbed_count": 25,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 116,
+          "right_front_x": 140,
+          "tick": 10
+        },
+        {
+          "disturbed_count": 27,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 115,
+          "right_front_x": 141,
+          "tick": 11
+        },
+        {
+          "disturbed_count": 29,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 114,
+          "right_front_x": 142,
+          "tick": 12
+        },
+        {
+          "disturbed_count": 31,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 113,
+          "right_front_x": 143,
+          "tick": 13
+        },
+        {
+          "disturbed_count": 33,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 112,
+          "right_front_x": 144,
+          "tick": 14
+        },
+        {
+          "disturbed_count": 35,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 111,
+          "right_front_x": 145,
+          "tick": 15
+        },
+        {
+          "disturbed_count": 37,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 110,
+          "right_front_x": 146,
+          "tick": 16
+        },
+        {
+          "disturbed_count": 39,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 109,
+          "right_front_x": 147,
+          "tick": 17
+        },
+        {
+          "disturbed_count": 41,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 108,
+          "right_front_x": 148,
+          "tick": 18
+        },
+        {
+          "disturbed_count": 43,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 107,
+          "right_front_x": 149,
+          "tick": 19
+        },
+        {
+          "disturbed_count": 45,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 106,
+          "right_front_x": 150,
+          "tick": 20
+        },
+        {
+          "disturbed_count": 47,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 105,
+          "right_front_x": 151,
+          "tick": 21
+        },
+        {
+          "disturbed_count": 49,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 104,
+          "right_front_x": 152,
+          "tick": 22
+        },
+        {
+          "disturbed_count": 51,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 103,
+          "right_front_x": 153,
+          "tick": 23
+        },
+        {
+          "disturbed_count": 53,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 102,
+          "right_front_x": 154,
+          "tick": 24
+        },
+        {
+          "disturbed_count": 55,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 101,
+          "right_front_x": 155,
+          "tick": 25
+        },
+        {
+          "disturbed_count": 57,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 100,
+          "right_front_x": 156,
+          "tick": 26
+        },
+        {
+          "disturbed_count": 59,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 99,
+          "right_front_x": 157,
+          "tick": 27
+        },
+        {
+          "disturbed_count": 61,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 98,
+          "right_front_x": 158,
+          "tick": 28
+        },
+        {
+          "disturbed_count": 63,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 97,
+          "right_front_x": 159,
+          "tick": 29
+        },
+        {
+          "disturbed_count": 65,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 96,
+          "right_front_x": 160,
+          "tick": 30
+        },
+        {
+          "disturbed_count": 67,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 95,
+          "right_front_x": 161,
+          "tick": 31
+        },
+        {
+          "disturbed_count": 69,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 94,
+          "right_front_x": 162,
+          "tick": 32
+        },
+        {
+          "disturbed_count": 71,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 93,
+          "right_front_x": 163,
+          "tick": 33
+        },
+        {
+          "disturbed_count": 73,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 92,
+          "right_front_x": 164,
+          "tick": 34
+        },
+        {
+          "disturbed_count": 75,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 91,
+          "right_front_x": 165,
+          "tick": 35
+        },
+        {
+          "disturbed_count": 77,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 90,
+          "right_front_x": 166,
+          "tick": 36
+        },
+        {
+          "disturbed_count": 79,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 89,
+          "right_front_x": 167,
+          "tick": 37
+        },
+        {
+          "disturbed_count": 81,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 88,
+          "right_front_x": 168,
+          "tick": 38
+        },
+        {
+          "disturbed_count": 83,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 87,
+          "right_front_x": 169,
+          "tick": 39
+        },
+        {
+          "disturbed_count": 85,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 86,
+          "right_front_x": 170,
+          "tick": 40
+        },
+        {
+          "disturbed_count": 87,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 85,
+          "right_front_x": 171,
+          "tick": 41
+        },
+        {
+          "disturbed_count": 89,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 84,
+          "right_front_x": 172,
+          "tick": 42
+        },
+        {
+          "disturbed_count": 91,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 83,
+          "right_front_x": 173,
+          "tick": 43
+        },
+        {
+          "disturbed_count": 93,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 82,
+          "right_front_x": 174,
+          "tick": 44
+        },
+        {
+          "disturbed_count": 95,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 81,
+          "right_front_x": 175,
+          "tick": 45
+        },
+        {
+          "disturbed_count": 97,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 80,
+          "right_front_x": 176,
+          "tick": 46
+        },
+        {
+          "disturbed_count": 99,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 79,
+          "right_front_x": 177,
+          "tick": 47
+        },
+        {
+          "disturbed_count": 101,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 78,
+          "right_front_x": 178,
+          "tick": 48
+        },
+        {
+          "disturbed_count": 103,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 77,
+          "right_front_x": 179,
+          "tick": 49
+        },
+        {
+          "disturbed_count": 105,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 76,
+          "right_front_x": 180,
+          "tick": 50
+        },
+        {
+          "disturbed_count": 107,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 75,
+          "right_front_x": 181,
+          "tick": 51
+        },
+        {
+          "disturbed_count": 109,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 74,
+          "right_front_x": 182,
+          "tick": 52
+        },
+        {
+          "disturbed_count": 111,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 73,
+          "right_front_x": 183,
+          "tick": 53
+        },
+        {
+          "disturbed_count": 113,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 72,
+          "right_front_x": 184,
+          "tick": 54
+        },
+        {
+          "disturbed_count": 115,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 71,
+          "right_front_x": 185,
+          "tick": 55
+        },
+        {
+          "disturbed_count": 117,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 70,
+          "right_front_x": 186,
+          "tick": 56
+        },
+        {
+          "disturbed_count": 119,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 69,
+          "right_front_x": 187,
+          "tick": 57
+        },
+        {
+          "disturbed_count": 121,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 68,
+          "right_front_x": 188,
+          "tick": 58
+        },
+        {
+          "disturbed_count": 123,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 67,
+          "right_front_x": 189,
+          "tick": 59
+        },
+        {
+          "disturbed_count": 125,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 66,
+          "right_front_x": 190,
+          "tick": 60
+        },
+        {
+          "disturbed_count": 127,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 65,
+          "right_front_x": 191,
+          "tick": 61
+        },
+        {
+          "disturbed_count": 129,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 64,
+          "right_front_x": 192,
+          "tick": 62
+        },
+        {
+          "disturbed_count": 131,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 63,
+          "right_front_x": 193,
+          "tick": 63
+        },
+        {
+          "disturbed_count": 133,
+          "dominant_e111": [
+            0,
+            -1
+          ],
+          "dominant_share": 1.0,
+          "e111_unique": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "left_front_x": 62,
+          "right_front_x": 194,
+          "tick": 64
+        }
+      ],
+      "summary": {
+        "causal_bound_front_speed_le_1": true,
+        "final_disturbed_count": 133,
+        "final_dominant_e111": [
+          0,
+          -1
+        ],
+        "final_dominant_e111_share": 1.0,
+        "left_front_speed_mean_abs": 1.0,
+        "lightcone_saturated_front_speed_eq_1": true,
+        "max_front_step_speed_abs": 1.0,
+        "motif_id": "sd_vacuum_omega_dag",
+        "right_front_speed_mean_abs": 1.0,
+        "seed_interval_x": [
+          126,
+          130
+        ],
+        "seed_state_vector": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            -1
+          ]
+        ]
+      }
+    }
+  ],
+  "mode": "simulation_first_structure_first",
+  "motif_source": "calc/xor_scenario_loader.py::canonical_motif_state_map",
+  "notes": [
+    "This lane models a photon-candidate as coherent vacuum-phase packet propagation.",
+    "Speed metric is front propagation (disturbance support edge) in 1D nearest-neighbor causal updates.",
+    "Orientation proxy is dominant e111 phase sign (+i vs -i)."
+  ],
+  "params": {
+    "motif_ids": [
+      "su_vacuum_omega",
+      "sd_vacuum_omega_dag"
+    ],
+    "packet_width": 5,
+    "thin_output_step": 1,
+    "ticks": 64,
+    "width": 257
+  },
+  "projector_id": "pi_unity_axis_dominance_v1",
+  "replay_hash": "218e895babafb1af24f199923b2cd49af118f52e8b9393149a0b6e4dc4c820cc",
+  "schema_version": "photon_candidate_vacuum_wave_v1",
+  "source_script": "cog_v2/calc/build_photon_candidate_vacuum_wave_v1.py",
+  "source_script_sha256": "c7e46f5ff914d7b43fbd11d2351742003e9d0fc7532c6419465cbd030d28431f"
+}

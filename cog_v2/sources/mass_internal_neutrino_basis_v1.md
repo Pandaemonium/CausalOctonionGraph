@@ -8,17 +8,17 @@
 
 ## Params
 
-- ticks: `160`
-- warmup_ticks: `80`
+- ticks: `64`
+- warmup_ticks: `32`
 - width: `96`
 - lambda_vacuum_drag: `1.0`
 - source_op_cycle: `[7, 7, 7, 7]`
 
 ## Derived Values
 
-- m_eff_neutrino_basis_raw: `5.841083009728585`
-- m_eff_electron_raw: `5.844852850998428`
-- m_electron_in_neutrino_units: `1.0006454010777734`
+- m_eff_neutrino_basis_raw: `1.393299621941782`
+- m_eff_electron_raw: `1.3962758124179724`
+- m_electron_in_neutrino_units: `1.0021360735546907`
 
 ## Checks
 

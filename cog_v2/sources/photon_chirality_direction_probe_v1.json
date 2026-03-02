@@ -1,0 +1,1229 @@
+{
+  "cases": [
+    {
+      "rows": [
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 124,
+          "left_power": 4.0,
+          "right_front_x": 132,
+          "right_power": 4.0,
+          "tick": 0
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 120,
+          "left_power": 8.0,
+          "right_front_x": 136,
+          "right_power": 8.0,
+          "tick": 4
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 116,
+          "left_power": 12.0,
+          "right_front_x": 140,
+          "right_power": 12.0,
+          "tick": 8
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 112,
+          "left_power": 16.0,
+          "right_front_x": 144,
+          "right_power": 16.0,
+          "tick": 12
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 108,
+          "left_power": 20.0,
+          "right_front_x": 148,
+          "right_power": 20.0,
+          "tick": 16
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 104,
+          "left_power": 24.0,
+          "right_front_x": 152,
+          "right_power": 24.0,
+          "tick": 20
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 100,
+          "left_power": 28.0,
+          "right_front_x": 156,
+          "right_power": 28.0,
+          "tick": 24
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 96,
+          "left_power": 32.0,
+          "right_front_x": 160,
+          "right_power": 32.0,
+          "tick": 28
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 92,
+          "left_power": 36.0,
+          "right_front_x": 164,
+          "right_power": 36.0,
+          "tick": 32
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 88,
+          "left_power": 40.0,
+          "right_front_x": 168,
+          "right_power": 40.0,
+          "tick": 36
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 84,
+          "left_power": 44.0,
+          "right_front_x": 172,
+          "right_power": 44.0,
+          "tick": 40
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 80,
+          "left_power": 48.0,
+          "right_front_x": 176,
+          "right_power": 48.0,
+          "tick": 44
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 76,
+          "left_power": 52.0,
+          "right_front_x": 180,
+          "right_power": 52.0,
+          "tick": 48
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 72,
+          "left_power": 56.0,
+          "right_front_x": 184,
+          "right_power": 56.0,
+          "tick": 52
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 68,
+          "left_power": 60.0,
+          "right_front_x": 188,
+          "right_power": 60.0,
+          "tick": 56
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 64,
+          "left_power": 64.0,
+          "right_front_x": 192,
+          "right_power": 64.0,
+          "tick": 60
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 60,
+          "left_power": 68.0,
+          "right_front_x": 196,
+          "right_power": 68.0,
+          "tick": 64
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 56,
+          "left_power": 72.0,
+          "right_front_x": 200,
+          "right_power": 72.0,
+          "tick": 68
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 52,
+          "left_power": 76.0,
+          "right_front_x": 204,
+          "right_power": 76.0,
+          "tick": 72
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 48,
+          "left_power": 80.0,
+          "right_front_x": 208,
+          "right_power": 80.0,
+          "tick": 76
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 44,
+          "left_power": 84.0,
+          "right_front_x": 212,
+          "right_power": 84.0,
+          "tick": 80
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 40,
+          "left_power": 88.0,
+          "right_front_x": 216,
+          "right_power": 88.0,
+          "tick": 84
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 36,
+          "left_power": 92.0,
+          "right_front_x": 220,
+          "right_power": 92.0,
+          "tick": 88
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 32,
+          "left_power": 96.0,
+          "right_front_x": 224,
+          "right_power": 96.0,
+          "tick": 92
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 28,
+          "left_power": 100.0,
+          "right_front_x": 228,
+          "right_power": 100.0,
+          "tick": 96
+        }
+      ],
+      "summary": {
+        "case_id": "flat_su",
+        "description": "Symmetric flat packet from su_vacuum_omega.",
+        "left_front_speed_mean_abs": 1.0,
+        "lightcone_saturated_both_fronts": true,
+        "max_front_step_speed_abs": 1.0,
+        "mean_centroid_velocity_x_tail": 0.0,
+        "mean_directionality_index_tail": 0.0,
+        "right_front_speed_mean_abs": 1.0
+      }
+    },
+    {
+      "rows": [
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 124,
+          "left_power": 4.0,
+          "right_front_x": 132,
+          "right_power": 4.0,
+          "tick": 0
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 120,
+          "left_power": 8.0,
+          "right_front_x": 136,
+          "right_power": 8.0,
+          "tick": 4
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 116,
+          "left_power": 12.0,
+          "right_front_x": 140,
+          "right_power": 12.0,
+          "tick": 8
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 112,
+          "left_power": 16.0,
+          "right_front_x": 144,
+          "right_power": 16.0,
+          "tick": 12
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 108,
+          "left_power": 20.0,
+          "right_front_x": 148,
+          "right_power": 20.0,
+          "tick": 16
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 104,
+          "left_power": 24.0,
+          "right_front_x": 152,
+          "right_power": 24.0,
+          "tick": 20
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 100,
+          "left_power": 28.0,
+          "right_front_x": 156,
+          "right_power": 28.0,
+          "tick": 24
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 96,
+          "left_power": 32.0,
+          "right_front_x": 160,
+          "right_power": 32.0,
+          "tick": 28
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 92,
+          "left_power": 36.0,
+          "right_front_x": 164,
+          "right_power": 36.0,
+          "tick": 32
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 88,
+          "left_power": 40.0,
+          "right_front_x": 168,
+          "right_power": 40.0,
+          "tick": 36
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 84,
+          "left_power": 44.0,
+          "right_front_x": 172,
+          "right_power": 44.0,
+          "tick": 40
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 80,
+          "left_power": 48.0,
+          "right_front_x": 176,
+          "right_power": 48.0,
+          "tick": 44
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 76,
+          "left_power": 52.0,
+          "right_front_x": 180,
+          "right_power": 52.0,
+          "tick": 48
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 72,
+          "left_power": 56.0,
+          "right_front_x": 184,
+          "right_power": 56.0,
+          "tick": 52
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 68,
+          "left_power": 60.0,
+          "right_front_x": 188,
+          "right_power": 60.0,
+          "tick": 56
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 64,
+          "left_power": 64.0,
+          "right_front_x": 192,
+          "right_power": 64.0,
+          "tick": 60
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 60,
+          "left_power": 68.0,
+          "right_front_x": 196,
+          "right_power": 68.0,
+          "tick": 64
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 56,
+          "left_power": 72.0,
+          "right_front_x": 200,
+          "right_power": 72.0,
+          "tick": 68
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 52,
+          "left_power": 76.0,
+          "right_front_x": 204,
+          "right_power": 76.0,
+          "tick": 72
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 48,
+          "left_power": 80.0,
+          "right_front_x": 208,
+          "right_power": 80.0,
+          "tick": 76
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 44,
+          "left_power": 84.0,
+          "right_front_x": 212,
+          "right_power": 84.0,
+          "tick": 80
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 40,
+          "left_power": 88.0,
+          "right_front_x": 216,
+          "right_power": 88.0,
+          "tick": 84
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 36,
+          "left_power": 92.0,
+          "right_front_x": 220,
+          "right_power": 92.0,
+          "tick": 88
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 32,
+          "left_power": 96.0,
+          "right_front_x": 224,
+          "right_power": 96.0,
+          "tick": 92
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 28,
+          "left_power": 100.0,
+          "right_front_x": 228,
+          "right_power": 100.0,
+          "tick": 96
+        }
+      ],
+      "summary": {
+        "case_id": "ramp_plus_su",
+        "description": "Phase ramp +k from su_vacuum_omega.",
+        "left_front_speed_mean_abs": 1.0,
+        "lightcone_saturated_both_fronts": true,
+        "max_front_step_speed_abs": 1.0,
+        "mean_centroid_velocity_x_tail": 0.0,
+        "mean_directionality_index_tail": 0.0,
+        "right_front_speed_mean_abs": 1.0
+      }
+    },
+    {
+      "rows": [
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 124,
+          "left_power": 4.0,
+          "right_front_x": 132,
+          "right_power": 4.0,
+          "tick": 0
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 120,
+          "left_power": 8.0,
+          "right_front_x": 136,
+          "right_power": 8.0,
+          "tick": 4
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 116,
+          "left_power": 12.0,
+          "right_front_x": 140,
+          "right_power": 12.0,
+          "tick": 8
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 112,
+          "left_power": 16.0,
+          "right_front_x": 144,
+          "right_power": 16.0,
+          "tick": 12
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 108,
+          "left_power": 20.0,
+          "right_front_x": 148,
+          "right_power": 20.0,
+          "tick": 16
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 104,
+          "left_power": 24.0,
+          "right_front_x": 152,
+          "right_power": 24.0,
+          "tick": 20
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 100,
+          "left_power": 28.0,
+          "right_front_x": 156,
+          "right_power": 28.0,
+          "tick": 24
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 96,
+          "left_power": 32.0,
+          "right_front_x": 160,
+          "right_power": 32.0,
+          "tick": 28
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 92,
+          "left_power": 36.0,
+          "right_front_x": 164,
+          "right_power": 36.0,
+          "tick": 32
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 88,
+          "left_power": 40.0,
+          "right_front_x": 168,
+          "right_power": 40.0,
+          "tick": 36
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 84,
+          "left_power": 44.0,
+          "right_front_x": 172,
+          "right_power": 44.0,
+          "tick": 40
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 80,
+          "left_power": 48.0,
+          "right_front_x": 176,
+          "right_power": 48.0,
+          "tick": 44
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 76,
+          "left_power": 52.0,
+          "right_front_x": 180,
+          "right_power": 52.0,
+          "tick": 48
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 72,
+          "left_power": 56.0,
+          "right_front_x": 184,
+          "right_power": 56.0,
+          "tick": 52
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 68,
+          "left_power": 60.0,
+          "right_front_x": 188,
+          "right_power": 60.0,
+          "tick": 56
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 64,
+          "left_power": 64.0,
+          "right_front_x": 192,
+          "right_power": 64.0,
+          "tick": 60
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 60,
+          "left_power": 68.0,
+          "right_front_x": 196,
+          "right_power": 68.0,
+          "tick": 64
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 56,
+          "left_power": 72.0,
+          "right_front_x": 200,
+          "right_power": 72.0,
+          "tick": 68
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 52,
+          "left_power": 76.0,
+          "right_front_x": 204,
+          "right_power": 76.0,
+          "tick": 72
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 48,
+          "left_power": 80.0,
+          "right_front_x": 208,
+          "right_power": 80.0,
+          "tick": 76
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 44,
+          "left_power": 84.0,
+          "right_front_x": 212,
+          "right_power": 84.0,
+          "tick": 80
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 40,
+          "left_power": 88.0,
+          "right_front_x": 216,
+          "right_power": 88.0,
+          "tick": 84
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 36,
+          "left_power": 92.0,
+          "right_front_x": 220,
+          "right_power": 92.0,
+          "tick": 88
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 32,
+          "left_power": 96.0,
+          "right_front_x": 224,
+          "right_power": 96.0,
+          "tick": 92
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 28,
+          "left_power": 100.0,
+          "right_front_x": 228,
+          "right_power": 100.0,
+          "tick": 96
+        }
+      ],
+      "summary": {
+        "case_id": "ramp_minus_su",
+        "description": "Phase ramp -k from su_vacuum_omega.",
+        "left_front_speed_mean_abs": 1.0,
+        "lightcone_saturated_both_fronts": true,
+        "max_front_step_speed_abs": 1.0,
+        "mean_centroid_velocity_x_tail": 0.0,
+        "mean_directionality_index_tail": 0.0,
+        "right_front_speed_mean_abs": 1.0
+      }
+    },
+    {
+      "rows": [
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 124,
+          "left_power": 4.0,
+          "right_front_x": 132,
+          "right_power": 4.0,
+          "tick": 0
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 120,
+          "left_power": 8.0,
+          "right_front_x": 136,
+          "right_power": 8.0,
+          "tick": 4
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 116,
+          "left_power": 12.0,
+          "right_front_x": 140,
+          "right_power": 12.0,
+          "tick": 8
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 112,
+          "left_power": 16.0,
+          "right_front_x": 144,
+          "right_power": 16.0,
+          "tick": 12
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 108,
+          "left_power": 20.0,
+          "right_front_x": 148,
+          "right_power": 20.0,
+          "tick": 16
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 104,
+          "left_power": 24.0,
+          "right_front_x": 152,
+          "right_power": 24.0,
+          "tick": 20
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 100,
+          "left_power": 28.0,
+          "right_front_x": 156,
+          "right_power": 28.0,
+          "tick": 24
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 96,
+          "left_power": 32.0,
+          "right_front_x": 160,
+          "right_power": 32.0,
+          "tick": 28
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 92,
+          "left_power": 36.0,
+          "right_front_x": 164,
+          "right_power": 36.0,
+          "tick": 32
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 88,
+          "left_power": 40.0,
+          "right_front_x": 168,
+          "right_power": 40.0,
+          "tick": 36
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 84,
+          "left_power": 44.0,
+          "right_front_x": 172,
+          "right_power": 44.0,
+          "tick": 40
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 80,
+          "left_power": 48.0,
+          "right_front_x": 176,
+          "right_power": 48.0,
+          "tick": 44
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 76,
+          "left_power": 52.0,
+          "right_front_x": 180,
+          "right_power": 52.0,
+          "tick": 48
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 72,
+          "left_power": 56.0,
+          "right_front_x": 184,
+          "right_power": 56.0,
+          "tick": 52
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 68,
+          "left_power": 60.0,
+          "right_front_x": 188,
+          "right_power": 60.0,
+          "tick": 56
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 64,
+          "left_power": 64.0,
+          "right_front_x": 192,
+          "right_power": 64.0,
+          "tick": 60
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 60,
+          "left_power": 68.0,
+          "right_front_x": 196,
+          "right_power": 68.0,
+          "tick": 64
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 56,
+          "left_power": 72.0,
+          "right_front_x": 200,
+          "right_power": 72.0,
+          "tick": 68
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 52,
+          "left_power": 76.0,
+          "right_front_x": 204,
+          "right_power": 76.0,
+          "tick": 72
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 48,
+          "left_power": 80.0,
+          "right_front_x": 208,
+          "right_power": 80.0,
+          "tick": 76
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 44,
+          "left_power": 84.0,
+          "right_front_x": 212,
+          "right_power": 84.0,
+          "tick": 80
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 40,
+          "left_power": 88.0,
+          "right_front_x": 216,
+          "right_power": 88.0,
+          "tick": 84
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 36,
+          "left_power": 92.0,
+          "right_front_x": 220,
+          "right_power": 92.0,
+          "tick": 88
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 32,
+          "left_power": 96.0,
+          "right_front_x": 224,
+          "right_power": 96.0,
+          "tick": 92
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 28,
+          "left_power": 100.0,
+          "right_front_x": 228,
+          "right_power": 100.0,
+          "tick": 96
+        }
+      ],
+      "summary": {
+        "case_id": "ramp_plus_sd",
+        "description": "Phase ramp +k from sd_vacuum_omega_dag.",
+        "left_front_speed_mean_abs": 1.0,
+        "lightcone_saturated_both_fronts": true,
+        "max_front_step_speed_abs": 1.0,
+        "mean_centroid_velocity_x_tail": 0.0,
+        "mean_directionality_index_tail": 0.0,
+        "right_front_speed_mean_abs": 1.0
+      }
+    },
+    {
+      "rows": [
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 124,
+          "left_power": 4.0,
+          "right_front_x": 132,
+          "right_power": 4.0,
+          "tick": 0
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 120,
+          "left_power": 8.0,
+          "right_front_x": 136,
+          "right_power": 8.0,
+          "tick": 4
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 116,
+          "left_power": 12.0,
+          "right_front_x": 140,
+          "right_power": 12.0,
+          "tick": 8
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 112,
+          "left_power": 16.0,
+          "right_front_x": 144,
+          "right_power": 16.0,
+          "tick": 12
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 108,
+          "left_power": 20.0,
+          "right_front_x": 148,
+          "right_power": 20.0,
+          "tick": 16
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 104,
+          "left_power": 24.0,
+          "right_front_x": 152,
+          "right_power": 24.0,
+          "tick": 20
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 100,
+          "left_power": 28.0,
+          "right_front_x": 156,
+          "right_power": 28.0,
+          "tick": 24
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 96,
+          "left_power": 32.0,
+          "right_front_x": 160,
+          "right_power": 32.0,
+          "tick": 28
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 92,
+          "left_power": 36.0,
+          "right_front_x": 164,
+          "right_power": 36.0,
+          "tick": 32
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 88,
+          "left_power": 40.0,
+          "right_front_x": 168,
+          "right_power": 40.0,
+          "tick": 36
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 84,
+          "left_power": 44.0,
+          "right_front_x": 172,
+          "right_power": 44.0,
+          "tick": 40
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 80,
+          "left_power": 48.0,
+          "right_front_x": 176,
+          "right_power": 48.0,
+          "tick": 44
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 76,
+          "left_power": 52.0,
+          "right_front_x": 180,
+          "right_power": 52.0,
+          "tick": 48
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 72,
+          "left_power": 56.0,
+          "right_front_x": 184,
+          "right_power": 56.0,
+          "tick": 52
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 68,
+          "left_power": 60.0,
+          "right_front_x": 188,
+          "right_power": 60.0,
+          "tick": 56
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 64,
+          "left_power": 64.0,
+          "right_front_x": 192,
+          "right_power": 64.0,
+          "tick": 60
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 60,
+          "left_power": 68.0,
+          "right_front_x": 196,
+          "right_power": 68.0,
+          "tick": 64
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 56,
+          "left_power": 72.0,
+          "right_front_x": 200,
+          "right_power": 72.0,
+          "tick": 68
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 52,
+          "left_power": 76.0,
+          "right_front_x": 204,
+          "right_power": 76.0,
+          "tick": 72
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 48,
+          "left_power": 80.0,
+          "right_front_x": 208,
+          "right_power": 80.0,
+          "tick": 76
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 44,
+          "left_power": 84.0,
+          "right_front_x": 212,
+          "right_power": 84.0,
+          "tick": 80
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 40,
+          "left_power": 88.0,
+          "right_front_x": 216,
+          "right_power": 88.0,
+          "tick": 84
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 36,
+          "left_power": 92.0,
+          "right_front_x": 220,
+          "right_power": 92.0,
+          "tick": 88
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 32,
+          "left_power": 96.0,
+          "right_front_x": 224,
+          "right_power": 96.0,
+          "tick": 92
+        },
+        {
+          "centroid_x": 128.0,
+          "directionality_index": 0.0,
+          "left_front_x": 28,
+          "left_power": 100.0,
+          "right_front_x": 228,
+          "right_power": 100.0,
+          "tick": 96
+        }
+      ],
+      "summary": {
+        "case_id": "ramp_minus_sd",
+        "description": "Phase ramp -k from sd_vacuum_omega_dag.",
+        "left_front_speed_mean_abs": 1.0,
+        "lightcone_saturated_both_fronts": true,
+        "max_front_step_speed_abs": 1.0,
+        "mean_centroid_velocity_x_tail": 0.0,
+        "mean_directionality_index_tail": 0.0,
+        "right_front_speed_mean_abs": 1.0
+      }
+    }
+  ],
+  "checks": {
+    "all_cases_lightcone_saturated_fronts": true,
+    "any_nonzero_group_drift": false,
+    "sd_ramp_has_signed_opposite_drift": false,
+    "su_ramp_has_signed_opposite_drift": false
+  },
+  "claim_id": "PHOTON-CANDIDATE-003",
+  "kernel_module": "cog_v2/python/kernel_projective_unity.py",
+  "kernel_module_sha256": "936d1e8fb5f36c11a05133e67907203fe9fd78db2e8dd433bba4ea8835cbda27",
+  "kernel_profile": "cog_v2_projective_unity_v1",
+  "mode": "simulation_first_structure_first",
+  "motif_source": "calc/xor_scenario_loader.py::canonical_motif_state_map",
+  "notes": [
+    "Phase ramps are built from repeated left-multiply by e111 over su/sd vacuum seeds.",
+    "Front propagation and group drift are measured separately.",
+    "If chirality-direction coupling is strong, +k and -k ramps should produce opposite signed centroid drifts."
+  ],
+  "params": {
+    "drift_sign_tol": 1e-06,
+    "packet_width": 9,
+    "thin_output_step": 4,
+    "ticks": 96,
+    "warmup_ticks": 24,
+    "width": 257
+  },
+  "projector_id": "pi_unity_axis_dominance_v1",
+  "replay_hash": "7a8504ae65f983423ef85e3b91735e62a4be9dc7df4053c4ed398f4ee1cc8c7e",
+  "schema_version": "photon_chirality_direction_probe_v1",
+  "source_script": "cog_v2/calc/build_photon_chirality_direction_probe_v1.py",
+  "source_script_sha256": "c8697d5fc9e9f9e4c4f58d82fe65c05f1c38146396bc9861a62f7bc5c90dbaef"
+}
