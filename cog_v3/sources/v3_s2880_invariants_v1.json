@@ -1,0 +1,49 @@
+{
+  "checks": {
+    "all_orders_positive": true,
+    "row_count_ok": true
+  },
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "kernel_module": "cog_v3/python/kernel_octavian240_multiplicative_v1.py",
+  "kernel_module_sha256": "4d49033d24dcd1b3ec3cc4367175dc027bfecb8e5afa8710f0dd9856c01155a6",
+  "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "params": {
+    "phase_count": 12,
+    "q_alphabet_size": 240
+  },
+  "replay_hash": "2ade6c397d042a34ce9e673605b1cd8250f2d2c0f4445eacabac803f06b2ad6e",
+  "schema_version": "v3_s2880_invariants_v1",
+  "source_script": "cog_v3/calc/build_v3_s2880_invariants_v1.py",
+  "source_script_sha256": "ae7c06850953a7005710d8dc88e3ce12491791cf7332e4729dce8925c224d475",
+  "summary": {
+    "distinct_orders": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      12
+    ],
+    "max_inner_conj_l_orbit_size": 46,
+    "max_inner_conj_r_orbit_size": 46,
+    "order_hist": {
+      "1": 1,
+      "12": 1688,
+      "2": 3,
+      "3": 170,
+      "4": 508,
+      "6": 510
+    },
+    "phase_sector_mod3_counts": {
+      "0": 960,
+      "1": 960,
+      "2": 960
+    },
+    "q_family_counts": {
+      "A16_basis_signed_unit": 192,
+      "B112_line_plus_e000_halfsum": 1344,
+      "C112_complement_halfsum": 1344
+    },
+    "s2880_size": 2880
+  }
+}

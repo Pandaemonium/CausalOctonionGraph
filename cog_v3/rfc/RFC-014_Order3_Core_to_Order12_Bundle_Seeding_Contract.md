@@ -115,3 +115,14 @@ Required fields:
 
 If this lane passes:
 1. it is a search-efficiency result, not a direct particle identification proof.
+
+## 11. First-pass artifact snapshot (2026-03-03)
+
+From `cog_v3/sources/v3_order3_order12_bundle_seed_bank_v1.json`:
+1. `order12_subgroup_count = 56`
+2. `unique_order3_core_count = 56`
+3. `bijection_ok = true`
+
+Status:
+1. structural seed-bank construction is now implemented and validated on S960,
+2. heavy ablation (`seed-budget=5000`) is running to test yield advantages against random controls.

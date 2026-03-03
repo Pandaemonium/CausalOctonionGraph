@@ -1,0 +1,28 @@
+{
+  "candidate_action_size": 56,
+  "closure_ok": false,
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "faithful_ok": false,
+  "kernel_module": "cog_v3/python/kernel_octavian240_multiplicative_v1.py",
+  "kernel_module_sha256": "4d49033d24dcd1b3ec3cc4367175dc027bfecb8e5afa8710f0dd9856c01155a6",
+  "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "orbit_partition": [
+    56,
+    56,
+    56
+  ],
+  "order6_set_size": 168,
+  "random_control_comparison": {
+    "mean_largest_orbit": 168.0,
+    "mean_orbit_count": 1.0,
+    "seed": 1337,
+    "trials": 24
+  },
+  "replay_hash": "2649cd820f9a521d0ecf186d9e7d14c4f00c2a50adf117d650d02a616f8fc09d",
+  "schema_version": "v3_order6_psl27_action_probe_v1",
+  "source_script": "cog_v3/calc/build_v3_order6_psl27_action_probe_v1.py",
+  "source_script_sha256": "4160c084e1abd268d003d60b994ea1e1259b413b471938399988591b4088e950",
+  "stabilizer_histogram": {
+    "2": 168
+  }
+}

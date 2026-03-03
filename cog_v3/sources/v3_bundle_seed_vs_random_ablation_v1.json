@@ -1,0 +1,100 @@
+{
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "effect_size_vs_control": {
+    "bundle4": {
+      "delta_candidate_lock_yield": 0.0,
+      "delta_propagating_yield": 0.0,
+      "delta_score_mean": 0.027792103546489755
+    },
+    "random4": {
+      "delta_candidate_lock_yield": 0.0,
+      "delta_propagating_yield": 0.0,
+      "delta_score_mean": 0.0
+    },
+    "single_order12": {
+      "delta_candidate_lock_yield": 0.0,
+      "delta_propagating_yield": 0.0,
+      "delta_score_mean": -0.025576338127187015
+    },
+    "single_order3": {
+      "delta_candidate_lock_yield": 0.0,
+      "delta_propagating_yield": 0.0,
+      "delta_score_mean": 0.294365352834912
+    }
+  },
+  "gate_results": {
+    "gate1_bundle_beats_random_lock": false,
+    "gate2_bundle_beats_random_prop": false,
+    "gate3_bundle_beats_random_score": true
+  },
+  "kernel_module": "cog_v3/python/kernel_octavian240_multiplicative_v1.py",
+  "kernel_module_sha256": "4d49033d24dcd1b3ec3cc4367175dc027bfecb8e5afa8710f0dd9856c01155a6",
+  "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "panel_id": "P0_s960_bundle_ablation",
+  "params": {
+    "boundary_mode": "fixed_vacuum",
+    "channel_policy_id": "uniform_all",
+    "global_seed": 1337,
+    "seed_budget": 40,
+    "size_x": 15,
+    "size_y": 7,
+    "size_z": 7,
+    "stencil_id": "cube26",
+    "ticks": 36,
+    "warmup_ticks": 8
+  },
+  "replay_hash": "a5d98eaf287bba79465963830ff9d02eddd6a7e6603a713ae78bebad5609b8f1",
+  "schema_version": "v3_bundle_seed_vs_random_ablation_v1",
+  "source_script": "cog_v3/calc/build_v3_bundle_seed_vs_random_ablation_v1.py",
+  "source_script_sha256": "6505184335b6a02a2ae65c9631293d222b49828a11fdf013c3e74263a5156469",
+  "strategy_summary": [
+    {
+      "candidate_lock_yield": 0.0,
+      "propagating_yield": 0.0,
+      "score_distribution": {
+        "mean": 0.30563464716508787,
+        "median_period": null,
+        "p50": 0.30732813628562683,
+        "p90": 0.3467754801717747
+      },
+      "seed_count": 10,
+      "seed_strategy_id": "random4"
+    },
+    {
+      "candidate_lock_yield": 0.0,
+      "propagating_yield": 0.0,
+      "score_distribution": {
+        "mean": 0.3334267507115776,
+        "median_period": null,
+        "p50": 0.3334267507115776,
+        "p90": 0.3334267507115776
+      },
+      "seed_count": 10,
+      "seed_strategy_id": "bundle4"
+    },
+    {
+      "candidate_lock_yield": 0.0,
+      "propagating_yield": 0.0,
+      "score_distribution": {
+        "mean": 0.28005830903790085,
+        "median_period": null,
+        "p50": 0.28005830903790085,
+        "p90": 0.28005830903790085
+      },
+      "seed_count": 10,
+      "seed_strategy_id": "single_order12"
+    },
+    {
+      "candidate_lock_yield": 0.0,
+      "propagating_yield": 0.0,
+      "score_distribution": {
+        "mean": 0.5999999999999999,
+        "median_period": null,
+        "p50": 0.6,
+        "p90": 0.6
+      },
+      "seed_count": 10,
+      "seed_strategy_id": "single_order3"
+    }
+  ]
+}

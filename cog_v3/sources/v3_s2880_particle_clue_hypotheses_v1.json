@@ -1,0 +1,3534 @@
+{
+  "checks": {
+    "catalog_nonempty": true,
+    "csv_rows_nonempty": true
+  },
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "kernel_module": "cog_v3/python/kernel_octavian240_multiplicative_v1.py",
+  "kernel_module_sha256": "4d49033d24dcd1b3ec3cc4367175dc027bfecb8e5afa8710f0dd9856c01155a6",
+  "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "params": {
+    "top_n_qids": 24,
+    "triad_top_n": 16
+  },
+  "photon_neutrino_separation": {
+    "exact_tie_count": 12,
+    "mean_abs_delta": 0.04134114583333334,
+    "top_neutrino_favored": [
+      {
+        "neutrino_score": 0.8,
+        "order": 2,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.45000000000000007,
+        "photon_score": 0.35,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 0,
+        "s_id": 0
+      },
+      {
+        "neutrino_score": 0.8,
+        "order": 4,
+        "phase_idx": 3,
+        "photon_minus_neutrino": -0.45000000000000007,
+        "photon_score": 0.35,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 0,
+        "s_id": 720
+      },
+      {
+        "neutrino_score": 0.8,
+        "order": 6,
+        "phase_idx": 4,
+        "photon_minus_neutrino": -0.45000000000000007,
+        "photon_score": 0.35,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 0,
+        "s_id": 960
+      },
+      {
+        "neutrino_score": 0.8,
+        "order": 2,
+        "phase_idx": 6,
+        "photon_minus_neutrino": -0.45000000000000007,
+        "photon_score": 0.35,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 0,
+        "s_id": 1440
+      },
+      {
+        "neutrino_score": 0.8,
+        "order": 6,
+        "phase_idx": 8,
+        "photon_minus_neutrino": -0.45000000000000007,
+        "photon_score": 0.35,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 0,
+        "s_id": 1920
+      },
+      {
+        "neutrino_score": 0.8,
+        "order": 4,
+        "phase_idx": 9,
+        "photon_minus_neutrino": -0.45000000000000007,
+        "photon_score": 0.35,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 0,
+        "s_id": 2160
+      },
+      {
+        "neutrino_score": 1.0,
+        "order": 12,
+        "phase_idx": 1,
+        "photon_minus_neutrino": -0.44999999999999996,
+        "photon_score": 0.55,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 0,
+        "s_id": 240
+      },
+      {
+        "neutrino_score": 1.0,
+        "order": 6,
+        "phase_idx": 2,
+        "photon_minus_neutrino": -0.44999999999999996,
+        "photon_score": 0.55,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 0,
+        "s_id": 480
+      },
+      {
+        "neutrino_score": 1.0,
+        "order": 12,
+        "phase_idx": 5,
+        "photon_minus_neutrino": -0.44999999999999996,
+        "photon_score": 0.55,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 0,
+        "s_id": 1200
+      },
+      {
+        "neutrino_score": 1.0,
+        "order": 12,
+        "phase_idx": 7,
+        "photon_minus_neutrino": -0.44999999999999996,
+        "photon_score": 0.55,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 0,
+        "s_id": 1680
+      },
+      {
+        "neutrino_score": 1.0,
+        "order": 6,
+        "phase_idx": 10,
+        "photon_minus_neutrino": -0.44999999999999996,
+        "photon_score": 0.55,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 0,
+        "s_id": 2400
+      },
+      {
+        "neutrino_score": 1.0,
+        "order": 12,
+        "phase_idx": 11,
+        "photon_minus_neutrino": -0.44999999999999996,
+        "photon_score": 0.55,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 0,
+        "s_id": 2640
+      },
+      {
+        "neutrino_score": 0.3859375,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.3328125,
+        "photon_score": 0.053125,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 57,
+        "s_id": 57
+      },
+      {
+        "neutrino_score": 0.3859375,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.3328125,
+        "photon_score": 0.053125,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 182,
+        "s_id": 182
+      },
+      {
+        "neutrino_score": 0.3859375,
+        "order": 4,
+        "phase_idx": 3,
+        "photon_minus_neutrino": -0.3328125,
+        "photon_score": 0.053125,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 57,
+        "s_id": 777
+      },
+      {
+        "neutrino_score": 0.3859375,
+        "order": 4,
+        "phase_idx": 3,
+        "photon_minus_neutrino": -0.3328125,
+        "photon_score": 0.053125,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 182,
+        "s_id": 902
+      },
+      {
+        "neutrino_score": 0.3859375,
+        "order": 12,
+        "phase_idx": 4,
+        "photon_minus_neutrino": -0.3328125,
+        "photon_score": 0.053125,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 57,
+        "s_id": 1017
+      },
+      {
+        "neutrino_score": 0.3859375,
+        "order": 12,
+        "phase_idx": 4,
+        "photon_minus_neutrino": -0.3328125,
+        "photon_score": 0.053125,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 182,
+        "s_id": 1142
+      },
+      {
+        "neutrino_score": 0.3859375,
+        "order": 4,
+        "phase_idx": 6,
+        "photon_minus_neutrino": -0.3328125,
+        "photon_score": 0.053125,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 57,
+        "s_id": 1497
+      },
+      {
+        "neutrino_score": 0.3859375,
+        "order": 4,
+        "phase_idx": 6,
+        "photon_minus_neutrino": -0.3328125,
+        "photon_score": 0.053125,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 182,
+        "s_id": 1622
+      },
+      {
+        "neutrino_score": 0.3859375,
+        "order": 12,
+        "phase_idx": 8,
+        "photon_minus_neutrino": -0.3328125,
+        "photon_score": 0.053125,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 57,
+        "s_id": 1977
+      },
+      {
+        "neutrino_score": 0.3859375,
+        "order": 12,
+        "phase_idx": 8,
+        "photon_minus_neutrino": -0.3328125,
+        "photon_score": 0.053125,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 182,
+        "s_id": 2102
+      },
+      {
+        "neutrino_score": 0.3859375,
+        "order": 4,
+        "phase_idx": 9,
+        "photon_minus_neutrino": -0.3328125,
+        "photon_score": 0.053125,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 57,
+        "s_id": 2217
+      },
+      {
+        "neutrino_score": 0.3859375,
+        "order": 4,
+        "phase_idx": 9,
+        "photon_minus_neutrino": -0.3328125,
+        "photon_score": 0.053125,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 182,
+        "s_id": 2342
+      },
+      {
+        "neutrino_score": 0.5859375,
+        "order": 12,
+        "phase_idx": 1,
+        "photon_minus_neutrino": -0.33281249999999996,
+        "photon_score": 0.25312500000000004,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 57,
+        "s_id": 297
+      },
+      {
+        "neutrino_score": 0.5859375,
+        "order": 12,
+        "phase_idx": 1,
+        "photon_minus_neutrino": -0.33281249999999996,
+        "photon_score": 0.25312500000000004,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 182,
+        "s_id": 422
+      },
+      {
+        "neutrino_score": 0.5859375,
+        "order": 12,
+        "phase_idx": 2,
+        "photon_minus_neutrino": -0.33281249999999996,
+        "photon_score": 0.25312500000000004,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 57,
+        "s_id": 537
+      },
+      {
+        "neutrino_score": 0.5859375,
+        "order": 12,
+        "phase_idx": 2,
+        "photon_minus_neutrino": -0.33281249999999996,
+        "photon_score": 0.25312500000000004,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 182,
+        "s_id": 662
+      },
+      {
+        "neutrino_score": 0.5859375,
+        "order": 12,
+        "phase_idx": 5,
+        "photon_minus_neutrino": -0.33281249999999996,
+        "photon_score": 0.25312500000000004,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 57,
+        "s_id": 1257
+      },
+      {
+        "neutrino_score": 0.5859375,
+        "order": 12,
+        "phase_idx": 5,
+        "photon_minus_neutrino": -0.33281249999999996,
+        "photon_score": 0.25312500000000004,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 182,
+        "s_id": 1382
+      },
+      {
+        "neutrino_score": 0.5859375,
+        "order": 12,
+        "phase_idx": 7,
+        "photon_minus_neutrino": -0.33281249999999996,
+        "photon_score": 0.25312500000000004,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 57,
+        "s_id": 1737
+      },
+      {
+        "neutrino_score": 0.5859375,
+        "order": 12,
+        "phase_idx": 7,
+        "photon_minus_neutrino": -0.33281249999999996,
+        "photon_score": 0.25312500000000004,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 182,
+        "s_id": 1862
+      },
+      {
+        "neutrino_score": 0.5859375,
+        "order": 12,
+        "phase_idx": 10,
+        "photon_minus_neutrino": -0.33281249999999996,
+        "photon_score": 0.25312500000000004,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 57,
+        "s_id": 2457
+      },
+      {
+        "neutrino_score": 0.5859375,
+        "order": 12,
+        "phase_idx": 10,
+        "photon_minus_neutrino": -0.33281249999999996,
+        "photon_score": 0.25312500000000004,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 182,
+        "s_id": 2582
+      },
+      {
+        "neutrino_score": 0.5859375,
+        "order": 12,
+        "phase_idx": 11,
+        "photon_minus_neutrino": -0.33281249999999996,
+        "photon_score": 0.25312500000000004,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 57,
+        "s_id": 2697
+      },
+      {
+        "neutrino_score": 0.5859375,
+        "order": 12,
+        "phase_idx": 11,
+        "photon_minus_neutrino": -0.33281249999999996,
+        "photon_score": 0.25312500000000004,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 182,
+        "s_id": 2822
+      },
+      {
+        "neutrino_score": 0.3703125,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.3265625,
+        "photon_score": 0.04375,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 107,
+        "s_id": 107
+      },
+      {
+        "neutrino_score": 0.3703125,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.3265625,
+        "photon_score": 0.04375,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 117,
+        "s_id": 117
+      },
+      {
+        "neutrino_score": 0.3703125,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.3265625,
+        "photon_score": 0.04375,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 118,
+        "s_id": 118
+      },
+      {
+        "neutrino_score": 0.3703125,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.3265625,
+        "photon_score": 0.04375,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 119,
+        "s_id": 119
+      }
+    ],
+    "top_photon_favored": [
+      {
+        "neutrino_score": 0.8,
+        "order": 1,
+        "phase_idx": 0,
+        "photon_minus_neutrino": 0.0,
+        "photon_score": 0.8,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 239,
+        "s_id": 239
+      },
+      {
+        "neutrino_score": 1.0,
+        "order": 12,
+        "phase_idx": 1,
+        "photon_minus_neutrino": 0.0,
+        "photon_score": 1.0,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 239,
+        "s_id": 479
+      },
+      {
+        "neutrino_score": 1.0,
+        "order": 6,
+        "phase_idx": 2,
+        "photon_minus_neutrino": 0.0,
+        "photon_score": 1.0,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 239,
+        "s_id": 719
+      },
+      {
+        "neutrino_score": 0.8,
+        "order": 4,
+        "phase_idx": 3,
+        "photon_minus_neutrino": 0.0,
+        "photon_score": 0.8,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 239,
+        "s_id": 959
+      },
+      {
+        "neutrino_score": 0.8,
+        "order": 3,
+        "phase_idx": 4,
+        "photon_minus_neutrino": 0.0,
+        "photon_score": 0.8,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 239,
+        "s_id": 1199
+      },
+      {
+        "neutrino_score": 1.0,
+        "order": 12,
+        "phase_idx": 5,
+        "photon_minus_neutrino": 0.0,
+        "photon_score": 1.0,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 239,
+        "s_id": 1439
+      },
+      {
+        "neutrino_score": 0.8,
+        "order": 2,
+        "phase_idx": 6,
+        "photon_minus_neutrino": 0.0,
+        "photon_score": 0.8,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 239,
+        "s_id": 1679
+      },
+      {
+        "neutrino_score": 1.0,
+        "order": 12,
+        "phase_idx": 7,
+        "photon_minus_neutrino": 0.0,
+        "photon_score": 1.0,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 239,
+        "s_id": 1919
+      },
+      {
+        "neutrino_score": 0.8,
+        "order": 3,
+        "phase_idx": 8,
+        "photon_minus_neutrino": 0.0,
+        "photon_score": 0.8,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 239,
+        "s_id": 2159
+      },
+      {
+        "neutrino_score": 0.8,
+        "order": 4,
+        "phase_idx": 9,
+        "photon_minus_neutrino": 0.0,
+        "photon_score": 0.8,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 239,
+        "s_id": 2399
+      },
+      {
+        "neutrino_score": 1.0,
+        "order": 6,
+        "phase_idx": 10,
+        "photon_minus_neutrino": 0.0,
+        "photon_score": 1.0,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 239,
+        "s_id": 2639
+      },
+      {
+        "neutrino_score": 1.0,
+        "order": 12,
+        "phase_idx": 11,
+        "photon_minus_neutrino": 0.0,
+        "photon_score": 1.0,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 239,
+        "s_id": 2879
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 60,
+        "s_id": 60
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 61,
+        "s_id": 61
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 63,
+        "s_id": 63
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 65,
+        "s_id": 65
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 69,
+        "s_id": 69
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 70,
+        "s_id": 70
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 71,
+        "s_id": 71
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 72,
+        "s_id": 72
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 74,
+        "s_id": 74
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 76,
+        "s_id": 76
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 77,
+        "s_id": 77
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 79,
+        "s_id": 79
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 80,
+        "s_id": 80
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 83,
+        "s_id": 83
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 84,
+        "s_id": 84
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 85,
+        "s_id": 85
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 86,
+        "s_id": 86
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 91,
+        "s_id": 91
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 93,
+        "s_id": 93
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 94,
+        "s_id": 94
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 95,
+        "s_id": 95
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 96,
+        "s_id": 96
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 97,
+        "s_id": 97
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 99,
+        "s_id": 99
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 100,
+        "s_id": 100
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 102,
+        "s_id": 102
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 103,
+        "s_id": 103
+      },
+      {
+        "neutrino_score": 0.03515625,
+        "order": 4,
+        "phase_idx": 0,
+        "photon_minus_neutrino": -0.013281250000000001,
+        "photon_score": 0.021875,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 104,
+        "s_id": 104
+      }
+    ]
+  },
+  "recommended_qcore_sets": {
+    "crossmix_lane": {
+      "q_ids": [
+        60,
+        61,
+        63,
+        65,
+        69,
+        70,
+        71,
+        72,
+        74,
+        76,
+        77,
+        79,
+        80,
+        83,
+        84,
+        85,
+        86,
+        91,
+        93,
+        94,
+        95,
+        96,
+        97,
+        99
+      ]
+    },
+    "electron_lane": {
+      "q_ids": [
+        186,
+        191,
+        204,
+        217,
+        230,
+        235,
+        184,
+        185,
+        187,
+        189,
+        190,
+        192,
+        193,
+        196,
+        225,
+        228,
+        229,
+        231,
+        232,
+        234
+      ]
+    },
+    "mediator_lane": {
+      "q_ids": [
+        16,
+        17,
+        19,
+        26,
+        31,
+        38,
+        40,
+        41,
+        60,
+        61,
+        63,
+        65,
+        69,
+        70,
+        71,
+        72,
+        74,
+        76,
+        77,
+        79,
+        80,
+        83,
+        84,
+        85
+      ]
+    },
+    "neutrino_lane": {
+      "q_ids": [
+        0,
+        239,
+        57,
+        182,
+        107,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        132
+      ]
+    },
+    "photon_lane": {
+      "q_ids": [
+        239,
+        0,
+        4,
+        9,
+        22,
+        35,
+        48,
+        53,
+        186,
+        191,
+        204,
+        217
+      ]
+    },
+    "quark_lane": {
+      "q_ids": [
+        16,
+        17,
+        19,
+        26,
+        31,
+        38,
+        40,
+        41,
+        1,
+        18,
+        20,
+        25,
+        27,
+        28,
+        29,
+        30,
+        32,
+        37,
+        39,
+        56,
+        6,
+        12,
+        13,
+        15
+      ]
+    }
+  },
+  "replay_hash": "981bf0a1d256bb042cfa81b0f7634fcba80fe828d1dc4d0398cb5916776f79e3",
+  "schema_version": "v3_s2880_particle_clue_hypotheses_v1",
+  "source_script": "cog_v3/calc/build_v3_s2880_particle_clue_hypotheses_v1.py",
+  "source_script_sha256": "9c98e922c3d4ed9ce68796d959d02a99c20c89cdfbc4f16a3638b1f52dd1c47d",
+  "top_qids_by_role": {
+    "electron_like": [
+      {
+        "best_s_id": 186,
+        "class_id": "SC0121",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 186,
+        "score": 0.6890625
+      },
+      {
+        "best_s_id": 191,
+        "class_id": "SC0121",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 191,
+        "score": 0.6890625
+      },
+      {
+        "best_s_id": 204,
+        "class_id": "SC0121",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 204,
+        "score": 0.6890625
+      },
+      {
+        "best_s_id": 217,
+        "class_id": "SC0121",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 217,
+        "score": 0.6890625
+      },
+      {
+        "best_s_id": 230,
+        "class_id": "SC0121",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 230,
+        "score": 0.6890625
+      },
+      {
+        "best_s_id": 235,
+        "class_id": "SC0121",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 235,
+        "score": 0.6890625
+      },
+      {
+        "best_s_id": 184,
+        "class_id": "SC0055",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 184,
+        "score": 0.6640625
+      },
+      {
+        "best_s_id": 185,
+        "class_id": "SC0055",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 185,
+        "score": 0.6640625
+      },
+      {
+        "best_s_id": 187,
+        "class_id": "SC0055",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 187,
+        "score": 0.6640625
+      },
+      {
+        "best_s_id": 189,
+        "class_id": "SC0055",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 189,
+        "score": 0.6640625
+      },
+      {
+        "best_s_id": 190,
+        "class_id": "SC0055",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 190,
+        "score": 0.6640625
+      },
+      {
+        "best_s_id": 192,
+        "class_id": "SC0055",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 192,
+        "score": 0.6640625
+      },
+      {
+        "best_s_id": 193,
+        "class_id": "SC0055",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 193,
+        "score": 0.6640625
+      },
+      {
+        "best_s_id": 196,
+        "class_id": "SC0055",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 196,
+        "score": 0.6640625
+      },
+      {
+        "best_s_id": 225,
+        "class_id": "SC0055",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 225,
+        "score": 0.6640625
+      },
+      {
+        "best_s_id": 228,
+        "class_id": "SC0055",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 228,
+        "score": 0.6640625
+      },
+      {
+        "best_s_id": 229,
+        "class_id": "SC0055",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 229,
+        "score": 0.6640625
+      },
+      {
+        "best_s_id": 231,
+        "class_id": "SC0055",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 231,
+        "score": 0.6640625
+      },
+      {
+        "best_s_id": 232,
+        "class_id": "SC0055",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 232,
+        "score": 0.6640625
+      },
+      {
+        "best_s_id": 234,
+        "class_id": "SC0055",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 234,
+        "score": 0.6640625
+      },
+      {
+        "best_s_id": 236,
+        "class_id": "SC0055",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 236,
+        "score": 0.6640625
+      },
+      {
+        "best_s_id": 237,
+        "class_id": "SC0055",
+        "order": 6,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 237,
+        "score": 0.6640625
+      },
+      {
+        "best_s_id": 4,
+        "class_id": "SC0118",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 4,
+        "score": 0.6619791666666667
+      },
+      {
+        "best_s_id": 9,
+        "class_id": "SC0118",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 9,
+        "score": 0.6619791666666667
+      }
+    ],
+    "mediator_w_like": [
+      {
+        "best_s_id": 1216,
+        "class_id": "SC0065",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 16,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1217,
+        "class_id": "SC0065",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 17,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1219,
+        "class_id": "SC0065",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 19,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1226,
+        "class_id": "SC0065",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 26,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1231,
+        "class_id": "SC0065",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 31,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1238,
+        "class_id": "SC0065",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 38,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1240,
+        "class_id": "SC0065",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 40,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1241,
+        "class_id": "SC0065",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 41,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1260,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 60,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1261,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 61,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1263,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 63,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1265,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 65,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1269,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 69,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1270,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 70,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1271,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 71,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1272,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 72,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1274,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 74,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1276,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 76,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1277,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 77,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1279,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 79,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1280,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 80,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1283,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 83,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1284,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 84,
+        "score": 0.9677083333333335
+      },
+      {
+        "best_s_id": 1285,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 85,
+        "score": 0.9677083333333335
+      }
+    ],
+    "neutrino_like": [
+      {
+        "best_s_id": 240,
+        "class_id": "SC0177",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 0,
+        "score": 1.0
+      },
+      {
+        "best_s_id": 479,
+        "class_id": "SC0177",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 239,
+        "score": 1.0
+      },
+      {
+        "best_s_id": 297,
+        "class_id": "SC0156",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 57,
+        "score": 0.5859375
+      },
+      {
+        "best_s_id": 422,
+        "class_id": "SC0156",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 182,
+        "score": 0.5859375
+      },
+      {
+        "best_s_id": 347,
+        "class_id": "SC0103",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 107,
+        "score": 0.5703125
+      },
+      {
+        "best_s_id": 357,
+        "class_id": "SC0103",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 117,
+        "score": 0.5703125
+      },
+      {
+        "best_s_id": 358,
+        "class_id": "SC0103",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 118,
+        "score": 0.5703125
+      },
+      {
+        "best_s_id": 359,
+        "class_id": "SC0103",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 119,
+        "score": 0.5703125
+      },
+      {
+        "best_s_id": 360,
+        "class_id": "SC0103",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 120,
+        "score": 0.5703125
+      },
+      {
+        "best_s_id": 361,
+        "class_id": "SC0103",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 121,
+        "score": 0.5703125
+      },
+      {
+        "best_s_id": 362,
+        "class_id": "SC0103",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 122,
+        "score": 0.5703125
+      },
+      {
+        "best_s_id": 372,
+        "class_id": "SC0103",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 132,
+        "score": 0.5703125
+      },
+      {
+        "best_s_id": 356,
+        "class_id": "SC0157",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 116,
+        "score": 0.5546875
+      },
+      {
+        "best_s_id": 363,
+        "class_id": "SC0157",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 123,
+        "score": 0.5546875
+      },
+      {
+        "best_s_id": 330,
+        "class_id": "SC0158",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 90,
+        "score": 0.5390625
+      },
+      {
+        "best_s_id": 389,
+        "class_id": "SC0158",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 149,
+        "score": 0.5390625
+      },
+      {
+        "best_s_id": 244,
+        "class_id": "SC0084",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 4,
+        "score": 0.30546875
+      },
+      {
+        "best_s_id": 249,
+        "class_id": "SC0084",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 9,
+        "score": 0.30546875
+      },
+      {
+        "best_s_id": 262,
+        "class_id": "SC0084",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 22,
+        "score": 0.30546875
+      },
+      {
+        "best_s_id": 275,
+        "class_id": "SC0084",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 35,
+        "score": 0.30546875
+      },
+      {
+        "best_s_id": 288,
+        "class_id": "SC0084",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 48,
+        "score": 0.30546875
+      },
+      {
+        "best_s_id": 293,
+        "class_id": "SC0084",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 53,
+        "score": 0.30546875
+      },
+      {
+        "best_s_id": 426,
+        "class_id": "SC0084",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 186,
+        "score": 0.30546875
+      },
+      {
+        "best_s_id": 431,
+        "class_id": "SC0084",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 191,
+        "score": 0.30546875
+      }
+    ],
+    "photon_like": [
+      {
+        "best_s_id": 479,
+        "class_id": "SC0177",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 239,
+        "score": 1.0
+      },
+      {
+        "best_s_id": 240,
+        "class_id": "SC0177",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "A16_basis_signed_unit",
+        "q_id": 0,
+        "score": 0.55
+      },
+      {
+        "best_s_id": 244,
+        "class_id": "SC0084",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 4,
+        "score": 0.265625
+      },
+      {
+        "best_s_id": 249,
+        "class_id": "SC0084",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 9,
+        "score": 0.265625
+      },
+      {
+        "best_s_id": 262,
+        "class_id": "SC0084",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 22,
+        "score": 0.265625
+      },
+      {
+        "best_s_id": 275,
+        "class_id": "SC0084",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 35,
+        "score": 0.265625
+      },
+      {
+        "best_s_id": 288,
+        "class_id": "SC0084",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 48,
+        "score": 0.265625
+      },
+      {
+        "best_s_id": 293,
+        "class_id": "SC0084",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 53,
+        "score": 0.265625
+      },
+      {
+        "best_s_id": 426,
+        "class_id": "SC0084",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 186,
+        "score": 0.265625
+      },
+      {
+        "best_s_id": 431,
+        "class_id": "SC0084",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 191,
+        "score": 0.265625
+      },
+      {
+        "best_s_id": 444,
+        "class_id": "SC0084",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 204,
+        "score": 0.265625
+      },
+      {
+        "best_s_id": 457,
+        "class_id": "SC0084",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 217,
+        "score": 0.265625
+      },
+      {
+        "best_s_id": 470,
+        "class_id": "SC0084",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 230,
+        "score": 0.265625
+      },
+      {
+        "best_s_id": 475,
+        "class_id": "SC0084",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 235,
+        "score": 0.265625
+      },
+      {
+        "best_s_id": 242,
+        "class_id": "SC0018",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 2,
+        "score": 0.25625
+      },
+      {
+        "best_s_id": 243,
+        "class_id": "SC0018",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 3,
+        "score": 0.25625
+      },
+      {
+        "best_s_id": 245,
+        "class_id": "SC0018",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 5,
+        "score": 0.25625
+      },
+      {
+        "best_s_id": 247,
+        "class_id": "SC0018",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 7,
+        "score": 0.25625
+      },
+      {
+        "best_s_id": 248,
+        "class_id": "SC0018",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 8,
+        "score": 0.25625
+      },
+      {
+        "best_s_id": 250,
+        "class_id": "SC0018",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 10,
+        "score": 0.25625
+      },
+      {
+        "best_s_id": 251,
+        "class_id": "SC0018",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 11,
+        "score": 0.25625
+      },
+      {
+        "best_s_id": 254,
+        "class_id": "SC0018",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 14,
+        "score": 0.25625
+      },
+      {
+        "best_s_id": 283,
+        "class_id": "SC0018",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 43,
+        "score": 0.25625
+      },
+      {
+        "best_s_id": 286,
+        "class_id": "SC0018",
+        "order": 12,
+        "phase_idx": 1,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 46,
+        "score": 0.25625
+      }
+    ],
+    "quark_core_like": [
+      {
+        "best_s_id": 16,
+        "class_id": "SC0088",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 16,
+        "score": 0.9593750000000001
+      },
+      {
+        "best_s_id": 17,
+        "class_id": "SC0088",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 17,
+        "score": 0.9593750000000001
+      },
+      {
+        "best_s_id": 19,
+        "class_id": "SC0088",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 19,
+        "score": 0.9593750000000001
+      },
+      {
+        "best_s_id": 26,
+        "class_id": "SC0088",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 26,
+        "score": 0.9593750000000001
+      },
+      {
+        "best_s_id": 31,
+        "class_id": "SC0088",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 31,
+        "score": 0.9593750000000001
+      },
+      {
+        "best_s_id": 38,
+        "class_id": "SC0088",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 38,
+        "score": 0.9593750000000001
+      },
+      {
+        "best_s_id": 40,
+        "class_id": "SC0088",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 40,
+        "score": 0.9593750000000001
+      },
+      {
+        "best_s_id": 41,
+        "class_id": "SC0088",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 41,
+        "score": 0.9593750000000001
+      },
+      {
+        "best_s_id": 1,
+        "class_id": "SC0073",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 1,
+        "score": 0.9437500000000001
+      },
+      {
+        "best_s_id": 18,
+        "class_id": "SC0073",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 18,
+        "score": 0.9437500000000001
+      },
+      {
+        "best_s_id": 20,
+        "class_id": "SC0073",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 20,
+        "score": 0.9437500000000001
+      },
+      {
+        "best_s_id": 25,
+        "class_id": "SC0073",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 25,
+        "score": 0.9437500000000001
+      },
+      {
+        "best_s_id": 27,
+        "class_id": "SC0073",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 27,
+        "score": 0.9437500000000001
+      },
+      {
+        "best_s_id": 28,
+        "class_id": "SC0073",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 28,
+        "score": 0.9437500000000001
+      },
+      {
+        "best_s_id": 29,
+        "class_id": "SC0073",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 29,
+        "score": 0.9437500000000001
+      },
+      {
+        "best_s_id": 30,
+        "class_id": "SC0073",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 30,
+        "score": 0.9437500000000001
+      },
+      {
+        "best_s_id": 32,
+        "class_id": "SC0073",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 32,
+        "score": 0.9437500000000001
+      },
+      {
+        "best_s_id": 37,
+        "class_id": "SC0073",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 37,
+        "score": 0.9437500000000001
+      },
+      {
+        "best_s_id": 39,
+        "class_id": "SC0073",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 39,
+        "score": 0.9437500000000001
+      },
+      {
+        "best_s_id": 56,
+        "class_id": "SC0073",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 56,
+        "score": 0.9437500000000001
+      },
+      {
+        "best_s_id": 6,
+        "class_id": "SC0067",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 6,
+        "score": 0.9281250000000001
+      },
+      {
+        "best_s_id": 12,
+        "class_id": "SC0067",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 12,
+        "score": 0.9281250000000001
+      },
+      {
+        "best_s_id": 13,
+        "class_id": "SC0067",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 13,
+        "score": 0.9281250000000001
+      },
+      {
+        "best_s_id": 15,
+        "class_id": "SC0067",
+        "order": 3,
+        "phase_idx": 0,
+        "q_family_tag": "B112_line_plus_e000_halfsum",
+        "q_id": 15,
+        "score": 0.9281250000000001
+      }
+    ],
+    "unstable_crossmix_like": [
+      {
+        "best_s_id": 1260,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 60,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1261,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 61,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1263,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 63,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1265,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 65,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1269,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 69,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1270,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 70,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1271,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 71,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1272,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 72,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1274,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 74,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1276,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 76,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1277,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 77,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1279,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 79,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1280,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 80,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1283,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 83,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1284,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 84,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1285,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 85,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1286,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 86,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1291,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 91,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1293,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 93,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1294,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 94,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1295,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 95,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1296,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 96,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1297,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 97,
+        "score": 0.8139534135726686
+      },
+      {
+        "best_s_id": 1299,
+        "class_id": "SC0010",
+        "order": 12,
+        "phase_idx": 5,
+        "q_family_tag": "C112_complement_halfsum",
+        "q_id": 99,
+        "score": 0.8139534135726686
+      }
+    ]
+  },
+  "triads": {
+    "electron_like": [
+      {
+        "coherence": 0.8125,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          6,
+          6
+        ],
+        "q_id": 186,
+        "score_mean": 0.5734374999999999,
+        "score_spread": 0.1875,
+        "scores": [
+          0.6890625,
+          0.5296875,
+          0.5015625
+        ],
+        "sids": [
+          186,
+          1146,
+          2106
+        ]
+      },
+      {
+        "coherence": 0.8125,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          6,
+          6
+        ],
+        "q_id": 191,
+        "score_mean": 0.5734374999999999,
+        "score_spread": 0.1875,
+        "scores": [
+          0.6890625,
+          0.5296875,
+          0.5015625
+        ],
+        "sids": [
+          191,
+          1151,
+          2111
+        ]
+      },
+      {
+        "coherence": 0.8125,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          6,
+          6
+        ],
+        "q_id": 204,
+        "score_mean": 0.5734374999999999,
+        "score_spread": 0.1875,
+        "scores": [
+          0.6890625,
+          0.5296875,
+          0.5015625
+        ],
+        "sids": [
+          204,
+          1164,
+          2124
+        ]
+      },
+      {
+        "coherence": 0.8125,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          6,
+          6
+        ],
+        "q_id": 217,
+        "score_mean": 0.5734374999999999,
+        "score_spread": 0.1875,
+        "scores": [
+          0.6890625,
+          0.5296875,
+          0.5015625
+        ],
+        "sids": [
+          217,
+          1177,
+          2137
+        ]
+      },
+      {
+        "coherence": 0.8125,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          6,
+          6
+        ],
+        "q_id": 230,
+        "score_mean": 0.5734374999999999,
+        "score_spread": 0.1875,
+        "scores": [
+          0.6890625,
+          0.5296875,
+          0.5015625
+        ],
+        "sids": [
+          230,
+          1190,
+          2150
+        ]
+      },
+      {
+        "coherence": 0.8125,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          6,
+          6
+        ],
+        "q_id": 235,
+        "score_mean": 0.5734374999999999,
+        "score_spread": 0.1875,
+        "scores": [
+          0.6890625,
+          0.5296875,
+          0.5015625
+        ],
+        "sids": [
+          235,
+          1195,
+          2155
+        ]
+      },
+      {
+        "coherence": 0.8125,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          6,
+          6
+        ],
+        "q_id": 184,
+        "score_mean": 0.5484375,
+        "score_spread": 0.1875,
+        "scores": [
+          0.6640625,
+          0.5046875,
+          0.4765625
+        ],
+        "sids": [
+          184,
+          1144,
+          2104
+        ]
+      },
+      {
+        "coherence": 0.8125,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          6,
+          6
+        ],
+        "q_id": 185,
+        "score_mean": 0.5484375,
+        "score_spread": 0.1875,
+        "scores": [
+          0.6640625,
+          0.5046875,
+          0.4765625
+        ],
+        "sids": [
+          185,
+          1145,
+          2105
+        ]
+      },
+      {
+        "coherence": 0.8125,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          6,
+          6
+        ],
+        "q_id": 187,
+        "score_mean": 0.5484375,
+        "score_spread": 0.1875,
+        "scores": [
+          0.6640625,
+          0.5046875,
+          0.4765625
+        ],
+        "sids": [
+          187,
+          1147,
+          2107
+        ]
+      },
+      {
+        "coherence": 0.8125,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          6,
+          6
+        ],
+        "q_id": 189,
+        "score_mean": 0.5484375,
+        "score_spread": 0.1875,
+        "scores": [
+          0.6640625,
+          0.5046875,
+          0.4765625
+        ],
+        "sids": [
+          189,
+          1149,
+          2109
+        ]
+      },
+      {
+        "coherence": 0.8125,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          6,
+          6
+        ],
+        "q_id": 190,
+        "score_mean": 0.5484375,
+        "score_spread": 0.1875,
+        "scores": [
+          0.6640625,
+          0.5046875,
+          0.4765625
+        ],
+        "sids": [
+          190,
+          1150,
+          2110
+        ]
+      },
+      {
+        "coherence": 0.8125,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          6,
+          6
+        ],
+        "q_id": 192,
+        "score_mean": 0.5484375,
+        "score_spread": 0.1875,
+        "scores": [
+          0.6640625,
+          0.5046875,
+          0.4765625
+        ],
+        "sids": [
+          192,
+          1152,
+          2112
+        ]
+      },
+      {
+        "coherence": 0.8125,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          6,
+          6
+        ],
+        "q_id": 193,
+        "score_mean": 0.5484375,
+        "score_spread": 0.1875,
+        "scores": [
+          0.6640625,
+          0.5046875,
+          0.4765625
+        ],
+        "sids": [
+          193,
+          1153,
+          2113
+        ]
+      },
+      {
+        "coherence": 0.8125,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          6,
+          6
+        ],
+        "q_id": 196,
+        "score_mean": 0.5484375,
+        "score_spread": 0.1875,
+        "scores": [
+          0.6640625,
+          0.5046875,
+          0.4765625
+        ],
+        "sids": [
+          196,
+          1156,
+          2116
+        ]
+      },
+      {
+        "coherence": 0.8125,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          6,
+          6
+        ],
+        "q_id": 225,
+        "score_mean": 0.5484375,
+        "score_spread": 0.1875,
+        "scores": [
+          0.6640625,
+          0.5046875,
+          0.4765625
+        ],
+        "sids": [
+          225,
+          1185,
+          2145
+        ]
+      },
+      {
+        "coherence": 0.8125,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          6,
+          6
+        ],
+        "q_id": 228,
+        "score_mean": 0.5484375,
+        "score_spread": 0.1875,
+        "scores": [
+          0.6640625,
+          0.5046875,
+          0.4765625
+        ],
+        "sids": [
+          228,
+          1188,
+          2148
+        ]
+      }
+    ],
+    "neutrino_like": [
+      {
+        "coherence": 0.8,
+        "families": [
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit"
+        ],
+        "orders": [
+          2,
+          12,
+          6
+        ],
+        "q_id": 0,
+        "score_mean": 0.9333333333333332,
+        "score_spread": 0.19999999999999996,
+        "scores": [
+          0.8,
+          1.0,
+          1.0
+        ],
+        "sids": [
+          0,
+          240,
+          480
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit"
+        ],
+        "orders": [
+          1,
+          12,
+          6
+        ],
+        "q_id": 239,
+        "score_mean": 0.9333333333333332,
+        "score_spread": 0.19999999999999996,
+        "scores": [
+          0.8,
+          1.0,
+          1.0
+        ],
+        "sids": [
+          239,
+          479,
+          719
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit"
+        ],
+        "orders": [
+          4,
+          12,
+          12
+        ],
+        "q_id": 57,
+        "score_mean": 0.5192708333333333,
+        "score_spread": 0.2,
+        "scores": [
+          0.3859375,
+          0.5859375,
+          0.5859375
+        ],
+        "sids": [
+          57,
+          297,
+          537
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit"
+        ],
+        "orders": [
+          4,
+          12,
+          12
+        ],
+        "q_id": 182,
+        "score_mean": 0.5192708333333333,
+        "score_spread": 0.2,
+        "scores": [
+          0.3859375,
+          0.5859375,
+          0.5859375
+        ],
+        "sids": [
+          182,
+          422,
+          662
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit"
+        ],
+        "orders": [
+          4,
+          12,
+          12
+        ],
+        "q_id": 107,
+        "score_mean": 0.5036458333333333,
+        "score_spread": 0.2,
+        "scores": [
+          0.3703125,
+          0.5703125,
+          0.5703125
+        ],
+        "sids": [
+          107,
+          347,
+          587
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit"
+        ],
+        "orders": [
+          4,
+          12,
+          12
+        ],
+        "q_id": 117,
+        "score_mean": 0.5036458333333333,
+        "score_spread": 0.2,
+        "scores": [
+          0.3703125,
+          0.5703125,
+          0.5703125
+        ],
+        "sids": [
+          117,
+          357,
+          597
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit"
+        ],
+        "orders": [
+          4,
+          12,
+          12
+        ],
+        "q_id": 118,
+        "score_mean": 0.5036458333333333,
+        "score_spread": 0.2,
+        "scores": [
+          0.3703125,
+          0.5703125,
+          0.5703125
+        ],
+        "sids": [
+          118,
+          358,
+          598
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit"
+        ],
+        "orders": [
+          4,
+          12,
+          12
+        ],
+        "q_id": 119,
+        "score_mean": 0.5036458333333333,
+        "score_spread": 0.2,
+        "scores": [
+          0.3703125,
+          0.5703125,
+          0.5703125
+        ],
+        "sids": [
+          119,
+          359,
+          599
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit"
+        ],
+        "orders": [
+          4,
+          12,
+          12
+        ],
+        "q_id": 120,
+        "score_mean": 0.5036458333333333,
+        "score_spread": 0.2,
+        "scores": [
+          0.3703125,
+          0.5703125,
+          0.5703125
+        ],
+        "sids": [
+          120,
+          360,
+          600
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit"
+        ],
+        "orders": [
+          4,
+          12,
+          12
+        ],
+        "q_id": 121,
+        "score_mean": 0.5036458333333333,
+        "score_spread": 0.2,
+        "scores": [
+          0.3703125,
+          0.5703125,
+          0.5703125
+        ],
+        "sids": [
+          121,
+          361,
+          601
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit"
+        ],
+        "orders": [
+          4,
+          12,
+          12
+        ],
+        "q_id": 122,
+        "score_mean": 0.5036458333333333,
+        "score_spread": 0.2,
+        "scores": [
+          0.3703125,
+          0.5703125,
+          0.5703125
+        ],
+        "sids": [
+          122,
+          362,
+          602
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit"
+        ],
+        "orders": [
+          4,
+          12,
+          12
+        ],
+        "q_id": 132,
+        "score_mean": 0.5036458333333333,
+        "score_spread": 0.2,
+        "scores": [
+          0.3703125,
+          0.5703125,
+          0.5703125
+        ],
+        "sids": [
+          132,
+          372,
+          612
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit"
+        ],
+        "orders": [
+          4,
+          12,
+          12
+        ],
+        "q_id": 116,
+        "score_mean": 0.48802083333333335,
+        "score_spread": 0.2,
+        "scores": [
+          0.3546875,
+          0.5546875,
+          0.5546875
+        ],
+        "sids": [
+          116,
+          356,
+          596
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit"
+        ],
+        "orders": [
+          4,
+          12,
+          12
+        ],
+        "q_id": 123,
+        "score_mean": 0.48802083333333335,
+        "score_spread": 0.2,
+        "scores": [
+          0.3546875,
+          0.5546875,
+          0.5546875
+        ],
+        "sids": [
+          123,
+          363,
+          603
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit"
+        ],
+        "orders": [
+          4,
+          12,
+          12
+        ],
+        "q_id": 90,
+        "score_mean": 0.47239583333333335,
+        "score_spread": 0.2,
+        "scores": [
+          0.3390625,
+          0.5390625,
+          0.5390625
+        ],
+        "sids": [
+          90,
+          330,
+          570
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit"
+        ],
+        "orders": [
+          4,
+          12,
+          12
+        ],
+        "q_id": 149,
+        "score_mean": 0.47239583333333335,
+        "score_spread": 0.2,
+        "scores": [
+          0.3390625,
+          0.5390625,
+          0.5390625
+        ],
+        "sids": [
+          149,
+          389,
+          629
+        ]
+      }
+    ],
+    "photon_like": [
+      {
+        "coherence": 0.8,
+        "families": [
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit"
+        ],
+        "orders": [
+          1,
+          12,
+          6
+        ],
+        "q_id": 239,
+        "score_mean": 0.9333333333333332,
+        "score_spread": 0.19999999999999996,
+        "scores": [
+          0.8,
+          1.0,
+          1.0
+        ],
+        "sids": [
+          239,
+          479,
+          719
+        ]
+      },
+      {
+        "coherence": 0.7999999999999999,
+        "families": [
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit",
+          "A16_basis_signed_unit"
+        ],
+        "orders": [
+          2,
+          12,
+          6
+        ],
+        "q_id": 0,
+        "score_mean": 0.4833333333333334,
+        "score_spread": 0.20000000000000007,
+        "scores": [
+          0.35,
+          0.55,
+          0.55
+        ],
+        "sids": [
+          0,
+          240,
+          480
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          3,
+          12,
+          6
+        ],
+        "q_id": 4,
+        "score_mean": 0.19895833333333335,
+        "score_spread": 0.2,
+        "scores": [
+          0.06562499999999999,
+          0.265625,
+          0.265625
+        ],
+        "sids": [
+          4,
+          244,
+          484
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          3,
+          12,
+          6
+        ],
+        "q_id": 9,
+        "score_mean": 0.19895833333333335,
+        "score_spread": 0.2,
+        "scores": [
+          0.06562499999999999,
+          0.265625,
+          0.265625
+        ],
+        "sids": [
+          9,
+          249,
+          489
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          3,
+          12,
+          6
+        ],
+        "q_id": 22,
+        "score_mean": 0.19895833333333335,
+        "score_spread": 0.2,
+        "scores": [
+          0.06562499999999999,
+          0.265625,
+          0.265625
+        ],
+        "sids": [
+          22,
+          262,
+          502
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          3,
+          12,
+          6
+        ],
+        "q_id": 35,
+        "score_mean": 0.19895833333333335,
+        "score_spread": 0.2,
+        "scores": [
+          0.06562499999999999,
+          0.265625,
+          0.265625
+        ],
+        "sids": [
+          35,
+          275,
+          515
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          3,
+          12,
+          6
+        ],
+        "q_id": 48,
+        "score_mean": 0.19895833333333335,
+        "score_spread": 0.2,
+        "scores": [
+          0.06562499999999999,
+          0.265625,
+          0.265625
+        ],
+        "sids": [
+          48,
+          288,
+          528
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          3,
+          12,
+          6
+        ],
+        "q_id": 53,
+        "score_mean": 0.19895833333333335,
+        "score_spread": 0.2,
+        "scores": [
+          0.06562499999999999,
+          0.265625,
+          0.265625
+        ],
+        "sids": [
+          53,
+          293,
+          533
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          12,
+          6
+        ],
+        "q_id": 186,
+        "score_mean": 0.19895833333333335,
+        "score_spread": 0.2,
+        "scores": [
+          0.06562499999999999,
+          0.265625,
+          0.265625
+        ],
+        "sids": [
+          186,
+          426,
+          666
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          12,
+          6
+        ],
+        "q_id": 191,
+        "score_mean": 0.19895833333333335,
+        "score_spread": 0.2,
+        "scores": [
+          0.06562499999999999,
+          0.265625,
+          0.265625
+        ],
+        "sids": [
+          191,
+          431,
+          671
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          12,
+          6
+        ],
+        "q_id": 204,
+        "score_mean": 0.19895833333333335,
+        "score_spread": 0.2,
+        "scores": [
+          0.06562499999999999,
+          0.265625,
+          0.265625
+        ],
+        "sids": [
+          204,
+          444,
+          684
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          12,
+          6
+        ],
+        "q_id": 217,
+        "score_mean": 0.19895833333333335,
+        "score_spread": 0.2,
+        "scores": [
+          0.06562499999999999,
+          0.265625,
+          0.265625
+        ],
+        "sids": [
+          217,
+          457,
+          697
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          12,
+          6
+        ],
+        "q_id": 230,
+        "score_mean": 0.19895833333333335,
+        "score_spread": 0.2,
+        "scores": [
+          0.06562499999999999,
+          0.265625,
+          0.265625
+        ],
+        "sids": [
+          230,
+          470,
+          710
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          6,
+          12,
+          6
+        ],
+        "q_id": 235,
+        "score_mean": 0.19895833333333335,
+        "score_spread": 0.2,
+        "scores": [
+          0.06562499999999999,
+          0.265625,
+          0.265625
+        ],
+        "sids": [
+          235,
+          475,
+          715
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          3,
+          12,
+          6
+        ],
+        "q_id": 2,
+        "score_mean": 0.18958333333333333,
+        "score_spread": 0.19999999999999998,
+        "scores": [
+          0.05625,
+          0.25625,
+          0.25625
+        ],
+        "sids": [
+          2,
+          242,
+          482
+        ]
+      },
+      {
+        "coherence": 0.8,
+        "families": [
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum",
+          "B112_line_plus_e000_halfsum"
+        ],
+        "orders": [
+          3,
+          12,
+          6
+        ],
+        "q_id": 3,
+        "score_mean": 0.18958333333333333,
+        "score_spread": 0.19999999999999998,
+        "scores": [
+          0.05625,
+          0.25625,
+          0.25625
+        ],
+        "sids": [
+          3,
+          243,
+          483
+        ]
+      }
+    ]
+  }
+}

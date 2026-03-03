@@ -1,0 +1,50 @@
+{
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "crossing": {
+    "found": false,
+    "tick": null
+  },
+  "kernel_module": "cog_v3/python/kernel_octavian240_multiplicative_v1.py",
+  "kernel_module_sha256": "4d49033d24dcd1b3ec3cc4367175dc027bfecb8e5afa8710f0dd9856c01155a6",
+  "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "params": {
+    "global_seed": 1337,
+    "horizons": [
+      100,
+      300,
+      600,
+      1000
+    ],
+    "runs_per_strategy": 12
+  },
+  "replay_hash": "021e26698c156a27e3dd59877057c56206e5498e297d4e3bd116698aa2efa796",
+  "rows": [
+    {
+      "delta_bundle12_minus_koide3": 0.049092969147621235,
+      "median_drift_bundle12": 0.5484688931436466,
+      "median_drift_koide3": 0.4993759239960253,
+      "ticks": 100
+    },
+    {
+      "delta_bundle12_minus_koide3": 0.11627925835746716,
+      "median_drift_bundle12": 0.5703107815102284,
+      "median_drift_koide3": 0.45403152315276124,
+      "ticks": 300
+    },
+    {
+      "delta_bundle12_minus_koide3": 0.1522203602848764,
+      "median_drift_bundle12": 0.5794826141600335,
+      "median_drift_koide3": 0.42726225387515715,
+      "ticks": 600
+    },
+    {
+      "delta_bundle12_minus_koide3": 0.020027992535323946,
+      "median_drift_bundle12": 0.5522821691993246,
+      "median_drift_koide3": 0.5322541766640007,
+      "ticks": 1000
+    }
+  ],
+  "schema_version": "v3_bundle12_vs_koide3_horizon_crossing_v1",
+  "source_script": "cog_v3/calc/build_v3_bundle12_vs_koide3_horizon_crossing_v1.py",
+  "source_script_sha256": "7fa8510878aa27a6caacb5a762a57e9a14da2758f8ffb791bf46073079dbacc5"
+}

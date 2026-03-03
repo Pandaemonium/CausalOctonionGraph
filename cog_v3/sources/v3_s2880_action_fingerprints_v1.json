@@ -1,0 +1,50 @@
+{
+  "checks": {
+    "anchor_count_positive": true,
+    "probe_count_positive": true,
+    "row_count_ok": true
+  },
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "kernel_module": "cog_v3/python/kernel_octavian240_multiplicative_v1.py",
+  "kernel_module_sha256": "4d49033d24dcd1b3ec3cc4367175dc027bfecb8e5afa8710f0dd9856c01155a6",
+  "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "params": {
+    "phase_count": 12,
+    "probe_phases": [
+      0,
+      1,
+      2
+    ]
+  },
+  "replay_hash": "c2f5ee987823362baa62964efc757517cbbd8478c5386edb3b63b4660117b5ff",
+  "schema_version": "v3_s2880_action_fingerprints_v1",
+  "source_script": "cog_v3/calc/build_v3_s2880_action_fingerprints_v1.py",
+  "source_script_sha256": "a0f1eafde82fd4162f8a70e4b140443419b28704fadc0bce205a785afbe5694a",
+  "summary": {
+    "anchor_count": 16,
+    "dominant_dg_hist": {
+      "0": 960,
+      "1": 960,
+      "2": 960
+    },
+    "dominant_dp_hist": {
+      "0": 240,
+      "1": 240,
+      "10": 240,
+      "11": 240,
+      "2": 240,
+      "3": 240,
+      "4": 240,
+      "5": 240,
+      "6": 240,
+      "7": 240,
+      "8": 240,
+      "9": 240
+    },
+    "element_count": 2880,
+    "mean_assoc_nonzero_rate": 0.7875,
+    "mean_commute_rate": 0.039322916666666666,
+    "mean_probe_order_preserve_rate": 0.3101779513888889,
+    "probe_count": 384
+  }
+}

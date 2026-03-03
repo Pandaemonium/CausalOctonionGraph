@@ -15,3 +15,5 @@ scratch/manager_feed.md
 scratch/search_feed.md
 # Lean safe-write backups (left by _exec_write_lean_safe cleanup on timeout)
 *.pre_rewrite
+cog_v3/sources/v3_overnight_runs_v1/*
+cog_v3/collab*

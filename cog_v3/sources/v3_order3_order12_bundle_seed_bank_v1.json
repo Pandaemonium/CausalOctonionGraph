@@ -1,0 +1,15 @@
+{
+  "bijection_ok": true,
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "kernel_module": "cog_v3/python/kernel_octavian240_multiplicative_v1.py",
+  "kernel_module_sha256": "4d49033d24dcd1b3ec3cc4367175dc027bfecb8e5afa8710f0dd9856c01155a6",
+  "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "order12_subgroup_count": 56,
+  "phase_count": 4,
+  "replay_hash": "3886e70f5dd7e1b56b6196e5cba87a8ace7339001ece7a8bbc46bb926042c71b",
+  "s960_size": 960,
+  "schema_version": "v3_order3_order12_bundle_seed_bank_v1",
+  "source_script": "cog_v3/calc/build_v3_order3_order12_bundle_seed_bank_v1.py",
+  "source_script_sha256": "8fdd8212950de8595f4ce4722c5607f9485fc089e56cc773fde07639596775e6",
+  "unique_order3_core_count": 56
+}

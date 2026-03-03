@@ -137,3 +137,20 @@ Required fields:
 
 1. This RFC does not import differential-geometry claims by analogy alone.
 2. Only reproducible associator-field observables count as evidence.
+
+## 11. First-pass artifact snapshot (2026-03-03)
+
+From `cog_v3/sources/v3_associator_field_probe_v1.json`:
+1. `A_bg = 0.0` on fixed-vacuum control.
+2. Gate status:
+   - `gate1_delta_peak = false`
+   - `gate2_radial_fit = true`
+   - `gate3_family_hierarchy = true`
+3. Family activity hierarchy reproduced:
+   - `A16_basis_signed_unit`: mean `0.809375`
+   - `B112_line_plus_e000_halfsum`: mean `0.8925`
+   - `C112_complement_halfsum`: mean `0.925`
+
+Interpretation boundary:
+1. this is a baseline structural pass for family hierarchy,
+2. it is not yet evidence for a robust radial associator field above control uncertainty.

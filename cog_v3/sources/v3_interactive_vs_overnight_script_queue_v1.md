@@ -48,6 +48,36 @@ Use this lane for:
 - Output target: `cog_v3/sources/v3_r3_zero_breakdown_v1.{csv,md}`.
 - Status: done (`2026-03-03`).
 
+4. `cog_v3/calc/build_v3_two_region_seed_r3_probe_v1.py`
+- Purpose: verify whether `d3` and odd hops can appear under sharp mixed-phase boundary seeds.
+- Runtime target: <5 minutes.
+- Output target: `cog_v3/sources/v3_two_region_seed_r3_probe_v1.{json,md}`.
+- Status: done (`2026-03-03`).
+
+5. `cog_v3/calc/build_v3_gate5_clock_oscillation_probe_v2.py`
+- Purpose: split gate-5 failures into `stable_in_sector` vs `coherent_oscillatory` vs `diffusive_or_decay`.
+- Runtime target: 2-5 minutes (quick mode), longer for full.
+- Output target: `cog_v3/sources/v3_gate5_clock_oscillation_probe_v2.{json,md}`.
+- Status: done (`2026-03-03`, quick pass).
+
+6. `cog_v3/calc/build_v3_r3_kick_phase_ablation_v1.py`
+- Purpose: validate whether trial-bank kick phase (`matched` vs `zero`) is the immediate cause of odd/d3 suppression.
+- Runtime target: <2 minutes.
+- Output target: `cog_v3/sources/v3_r3_kick_phase_ablation_v1.{json,md}`.
+- Status: done (`2026-03-03`).
+
+7. `cog_v3/calc/build_v3_bundle12_seed_vs_random_ablation_v1.py`
+- Purpose: compare random4 vs bundle4 vs bundle12 vs koide3 seed strategies in S2880 under a common scoring harness.
+- Runtime target: 1-5 minutes (quick mode), longer for full runs.
+- Output target: `cog_v3/sources/v3_bundle12_seed_vs_random_ablation_v1.{json,csv,md}`.
+- Status: done (`2026-03-03`, quick pass).
+
+8. `cog_v3/calc/build_v3_c12_phase_sector_metrics_kickphase_probe_v1.py`
+- Purpose: compare RFC-010 phase metrics under `kick_phase_mode` (`matched` vs `zero`) and optional odd-phase trial lane.
+- Runtime target: <2 minutes.
+- Output target: `cog_v3/sources/v3_c12_phase_sector_metrics_kickphase_probe_v1.{json,md}`.
+- Status: done (`2026-03-03`).
+
 ## 2) Overnight Write Queue
 
 Use this lane for:
@@ -55,13 +85,23 @@ Use this lane for:
 2. scripts required for next-day heavy runs.
 
 1. `cog_v3/calc/build_v3_associator_field_probe_v1.py` (RFC-012)
+- Status: done (`2026-03-03`).
 2. `cog_v3/calc/test_v3_associator_field_probe_v1.py`
+- Status: done (`2026-03-03`).
 3. `cog_v3/calc/build_v3_order6_psl27_action_probe_v1.py` (RFC-013)
+- Status: done (`2026-03-03`).
 4. `cog_v3/calc/test_v3_order6_psl27_action_probe_v1.py`
+- Status: done (`2026-03-03`).
 5. `cog_v3/calc/build_v3_order3_order12_bundle_seed_bank_v1.py` (RFC-014)
+- Status: done (`2026-03-03`).
 6. `cog_v3/calc/build_v3_bundle_seed_vs_random_ablation_v1.py`
+- Status: done (`2026-03-03`).
 7. `cog_v3/calc/test_v3_bundle_seed_vs_random_ablation_v1.py`
+- Status: done (`2026-03-03`).
 8. `cog_v3/calc/build_v3_fixed_manifest_kernel_gate_stack_seed_sweep_v1.py`
+- Status: done (`2026-03-03`).
+9. `cog_v3/calc/test_v3_fixed_manifest_kernel_gate_stack_seed_sweep_v1.py`
+- Status: done (`2026-03-03`).
 
 ## 3) Overnight Run Queue
 
@@ -80,14 +120,17 @@ Use this lane for:
 2. Gate-stack seed sweep (after script exists):
 - `python -m cog_v3.calc.build_v3_fixed_manifest_kernel_gate_stack_seed_sweep_v1 --backend numba_cpu --seed-count 64`
 - Purpose: robustness of `K1` vs `K2` ranking and gate pass rates.
+- Status: running in background (`2026-03-03` quick lane: `--quick`).
 
 3. Associator field scan (after script exists):
 - `python -m cog_v3.calc.build_v3_associator_field_probe_v1 --backend numba_cpu --seed-count 32 --ticks 256`
 - Purpose: RFC-012 Gate 1/2 evidence.
+- Status: baseline run complete (`2026-03-03`); extended lane pending.
 
 4. Bundle-vs-random ablation (after script exists):
 - `python -m cog_v3.calc.build_v3_bundle_seed_vs_random_ablation_v1 --backend numba_cpu --seed-budget 5000`
 - Purpose: RFC-014 effectiveness test.
+- Status: running in background (`2026-03-03`).
 
 ## 3.2 Medium priority overnight runs
 

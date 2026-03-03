@@ -1,0 +1,508 @@
+{
+  "backend": "numba_cpu",
+  "candidate_summary": [
+    {
+      "gate_pass_rate": {
+        "gate0": 1.0,
+        "gate1": 0.9375,
+        "gate2": 0.671875,
+        "gate3": 1.0,
+        "gate4": 0.59375,
+        "gate5": 0.0
+      },
+      "kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "mean_gates_passed": 4.203125,
+      "mean_score": 0.6069643908785813,
+      "top_count": 22
+    },
+    {
+      "gate_pass_rate": {
+        "gate0": 1.0,
+        "gate1": 0.9375,
+        "gate2": 0.546875,
+        "gate3": 1.0,
+        "gate4": 0.6875,
+        "gate5": 0.0
+      },
+      "kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "mean_gates_passed": 4.171875,
+      "mean_score": 0.6052201813852158,
+      "top_count": 21
+    },
+    {
+      "gate_pass_rate": {
+        "gate0": 1.0,
+        "gate1": 1.0,
+        "gate2": 0.515625,
+        "gate3": 1.0,
+        "gate4": 0.578125,
+        "gate5": 0.0
+      },
+      "kernel_candidate_id": "K0_cube26_uniform_v1",
+      "mean_gates_passed": 4.09375,
+      "mean_score": 0.5958382799479881,
+      "top_count": 21
+    }
+  ],
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "global_seed": 1337,
+  "kernel_module": "cog_v3/python/kernel_octavian240_multiplicative_v1.py",
+  "kernel_module_sha256": "4d49033d24dcd1b3ec3cc4367175dc027bfecb8e5afa8710f0dd9856c01155a6",
+  "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "quick": true,
+  "replay_hash": "454752d0230302baf267be846c22a766b9bbca2c02730207e80bcd92c6caf9e8",
+  "run_rows": [
+    {
+      "global_seed": 1337,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.6847358493924326
+    },
+    {
+      "global_seed": 106066,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 4,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.5632353484324628
+    },
+    {
+      "global_seed": 210795,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.6656117525370528
+    },
+    {
+      "global_seed": 315524,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 4,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.585457570654685
+    },
+    {
+      "global_seed": 420253,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.6767724385311574
+    },
+    {
+      "global_seed": 524982,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 4,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.6180691827257658
+    },
+    {
+      "global_seed": 629711,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.6875852800612121
+    },
+    {
+      "global_seed": 734440,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.6514025160590992
+    },
+    {
+      "global_seed": 839169,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.6767724385311574
+    },
+    {
+      "global_seed": 943898,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.7064753635440464
+    },
+    {
+      "global_seed": 1048627,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 4,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.5875852800612121
+    },
+    {
+      "global_seed": 1153356,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.7791167574505239
+    },
+    {
+      "global_seed": 1258085,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.6441254161549372
+    },
+    {
+      "global_seed": 1362814,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.6514025160590992
+    },
+    {
+      "global_seed": 1467543,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.6767724385311574
+    },
+    {
+      "global_seed": 1572272,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 4,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.5847358493924325
+    },
+    {
+      "global_seed": 1677001,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.6545321741405429
+    },
+    {
+      "global_seed": 1781730,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 4,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.5878835496422685
+    },
+    {
+      "global_seed": 1886459,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.6781869260080731
+    },
+    {
+      "global_seed": 1991188,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.6666741041483354
+    },
+    {
+      "global_seed": 2095917,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 4,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.6180691827257658
+    },
+    {
+      "global_seed": 2200646,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.7101057718644908
+    },
+    {
+      "global_seed": 2305375,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.6180691827257658
+    },
+    {
+      "global_seed": 2410104,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.6847358493924326
+    },
+    {
+      "global_seed": 2514833,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 4,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.5847358493924325
+    },
+    {
+      "global_seed": 2619562,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.7144112556486717
+    },
+    {
+      "global_seed": 2724291,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.6622298678405077
+    },
+    {
+      "global_seed": 2829020,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 4,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.6143191827257659
+    },
+    {
+      "global_seed": 2933749,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 4,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.5767724385311574
+    },
+    {
+      "global_seed": 3038478,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 4,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.6180691827257658
+    },
+    {
+      "global_seed": 3143207,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.6200796309723865
+    },
+    {
+      "global_seed": 3247936,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.6434391051978241
+    },
+    {
+      "global_seed": 3352665,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.6793634685597923
+    },
+    {
+      "global_seed": 3457394,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.6434391051978241
+    },
+    {
+      "global_seed": 3562123,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.6476525160590992
+    },
+    {
+      "global_seed": 3666852,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.6209186133945455
+    },
+    {
+      "global_seed": 3771581,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 4,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.6145015583871754
+    },
+    {
+      "global_seed": 3876310,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.6434391051978241
+    },
+    {
+      "global_seed": 3981039,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.6542519467278788
+    },
+    {
+      "global_seed": 4085768,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 4,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.5953689342167156
+    },
+    {
+      "global_seed": 4190497,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.6619126840713166
+    },
+    {
+      "global_seed": 4295226,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 4,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.5847358493924325
+    },
+    {
+      "global_seed": 4399955,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.6542519467278788
+    },
+    {
+      "global_seed": 4504684,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.6423231263760362
+    },
+    {
+      "global_seed": 4609413,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.6180691827257658
+    },
+    {
+      "global_seed": 4714142,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 4,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.5950026335017788
+    },
+    {
+      "global_seed": 4818871,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.6434391051978241
+    },
+    {
+      "global_seed": 4923600,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 4,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.6809858493924326
+    },
+    {
+      "global_seed": 5028329,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.6506987871746357
+    },
+    {
+      "global_seed": 5133058,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.6847358493924325
+    },
+    {
+      "global_seed": 5237787,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.6767724385311574
+    },
+    {
+      "global_seed": 5342516,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.6180691827257658
+    },
+    {
+      "global_seed": 5447245,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.6866087126932489
+    },
+    {
+      "global_seed": 5551974,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.6513245815660371
+    },
+    {
+      "global_seed": 5656703,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.6476525160590992
+    },
+    {
+      "global_seed": 5761432,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.6244090403916167
+    },
+    {
+      "global_seed": 5866161,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.6847358493924326
+    },
+    {
+      "global_seed": 5970890,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 4,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.6434391051978241
+    },
+    {
+      "global_seed": 6075619,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.6847358493924325
+    },
+    {
+      "global_seed": 6180348,
+      "top_channel_policy_id": "uniform_all",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K0_cube26_uniform_v1",
+      "top_score_total": 0.6180691827257658
+    },
+    {
+      "global_seed": 6285077,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.6767724385311574
+    },
+    {
+      "global_seed": 6389806,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 4,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.6101057718644908
+    },
+    {
+      "global_seed": 6494535,
+      "top_channel_policy_id": "deterministic_cycle_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "top_score_total": 0.6434391051978241
+    },
+    {
+      "global_seed": 6599264,
+      "top_channel_policy_id": "stochastic_gating_v1",
+      "top_gates_passed": 5,
+      "top_kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "top_score_total": 0.6605055625690764
+    }
+  ],
+  "schema_version": "v3_fixed_manifest_kernel_gate_stack_seed_sweep_v1",
+  "seed_count": 64,
+  "source_script": "cog_v3/calc/build_v3_fixed_manifest_kernel_gate_stack_seed_sweep_v1.py",
+  "source_script_sha256": "6809f34c34b94ffd62cce1ae94c8e3563708c1ae6c4eda72f726093c27d48ba9"
+}

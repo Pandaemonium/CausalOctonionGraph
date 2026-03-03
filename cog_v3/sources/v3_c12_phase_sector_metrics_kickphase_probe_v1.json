@@ -1,0 +1,153 @@
+{
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "global_seed": 1337,
+  "kernel_module": "cog_v3/python/kernel_octavian240_multiplicative_v1.py",
+  "kernel_module_sha256": "4d49033d24dcd1b3ec3cc4367175dc027bfecb8e5afa8710f0dd9856c01155a6",
+  "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "phase_metrics_script": "cog_v3/calc/build_v3_c12_phase_sector_metrics_v1.py",
+  "phase_metrics_script_sha256": "7a7ffeeb97226582995041154e2b7ca885e90a61bb74689d623430425bc26e6f",
+  "replay_hash": "0e85766d90d4258cb724d097836ce35a0fb21f3a8fc7cec26db2c6b4a13281f0",
+  "rows": [
+    {
+      "A1": 0.0,
+      "A2": -0.028992176714219973,
+      "C3": 0.576372349278315,
+      "L3": 2.3013273459684345,
+      "L3_null_baseline": 1.9740245800497311,
+      "R3": 0.0,
+      "T_counts": [
+        [
+          0,
+          3062,
+          3036
+        ],
+        [
+          2826,
+          0,
+          1506
+        ],
+        [
+          2904,
+          1429,
+          0
+        ]
+      ],
+      "add_odd_lane": false,
+      "d3_sum": 0,
+      "delta_counts": [
+        18504,
+        0,
+        1055,
+        0,
+        6354,
+        0,
+        1582,
+        0,
+        6236,
+        0,
+        1118,
+        0
+      ],
+      "kick_phase_mode": "matched",
+      "odd_sum": 0,
+      "panel_id": "P0_quick_matched_base",
+      "total_events": 34849,
+      "trial_count": 5
+    },
+    {
+      "A1": -0.035621198957428324,
+      "A2": 0.06002265005662514,
+      "C3": 0.576372349278315,
+      "L3": 2.3013273459684345,
+      "L3_null_baseline": 1.9740245800497311,
+      "R3": 0.08981491995003973,
+      "T_counts": [
+        [
+          0,
+          3036,
+          3062
+        ],
+        [
+          2904,
+          0,
+          1429
+        ],
+        [
+          2826,
+          1506,
+          0
+        ]
+      ],
+      "add_odd_lane": false,
+      "d3_sum": 1582,
+      "delta_counts": [
+        15653,
+        555,
+        1872,
+        824,
+        4576,
+        522,
+        2851,
+        500,
+        4482,
+        758,
+        1660,
+        596
+      ],
+      "kick_phase_mode": "zero",
+      "odd_sum": 3755,
+      "panel_id": "P0_quick_zero_base",
+      "total_events": 34849,
+      "trial_count": 5
+    },
+    {
+      "A1": -0.04623044096728307,
+      "A2": 0.037628682996095134,
+      "C3": 0.562450861267958,
+      "L3": 2.2205293020672143,
+      "L3_null_baseline": 1.9959200750518173,
+      "R3": 0.22031963470319635,
+      "T_counts": [
+        [
+          0,
+          5123,
+          5149
+        ],
+        [
+          4992,
+          0,
+          2116
+        ],
+        [
+          4914,
+          2193,
+          0
+        ]
+      ],
+      "add_odd_lane": true,
+      "d3_sum": 6948,
+      "delta_counts": [
+        17480,
+        1341,
+        2923,
+        3382,
+        6726,
+        1308,
+        7049,
+        1375,
+        6632,
+        3566,
+        2711,
+        1471
+      ],
+      "kick_phase_mode": "zero",
+      "odd_sum": 12443,
+      "panel_id": "P0_quick_zero_odd",
+      "total_events": 55964,
+      "trial_count": 8
+    }
+  ],
+  "schema_version": "v3_c12_phase_sector_metrics_kickphase_probe_v1",
+  "source_script": "cog_v3/calc/build_v3_c12_phase_sector_metrics_kickphase_probe_v1.py",
+  "source_script_sha256": "353169044fff2d771dc9678b824728f9141201ac066b338220146851ba86c542"
+}

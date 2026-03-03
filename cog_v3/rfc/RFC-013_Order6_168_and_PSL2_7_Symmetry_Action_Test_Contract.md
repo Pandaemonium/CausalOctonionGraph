@@ -103,3 +103,20 @@ Required fields:
 Even if supported:
 1. this does not automatically identify SM gauge bosons,
 2. it only justifies an order-6 symmetry-seeding lane.
+
+## 10. First-pass artifact snapshot (2026-03-03)
+
+From `cog_v3/sources/v3_order6_psl27_action_probe_v1.json`:
+1. `order6_set_size = 168` (as expected).
+2. Tested action family (left-associated inner-conjugation by order-6 elements):
+   - `candidate_action_size = 56`
+   - `closure_ok = false`
+   - `faithful_ok = false`
+3. Orbit/stabilizer signature for this family:
+   - `orbit_partition = [56,56,56]`
+   - `stabilizer_histogram = {2:168}`
+4. Random control baseline (same action count) is typically fully mixing (`mean_orbit_count=1`, `mean_largest_orbit=168`), so observed partitioning is structured but not yet the desired faithful 168-action.
+
+Immediate implication:
+1. size coincidence alone remains unresolved,
+2. stronger action-family constructions are required before promotion.

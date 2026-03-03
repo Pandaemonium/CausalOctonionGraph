@@ -1,0 +1,505 @@
+role,priority_rank,s_id,class_id,phase_idx,phase_sector_mod3,q_id,order,q_order,q_family_tag,dominant_dg_left,dominant_dp_left,score,rationale
+electron_like,1,186,SC0121,0,0,186,6,6,B112_line_plus_e000_halfsum,0,0,0.6890625,B-family stable nontrivial order candidate
+electron_like,2,191,SC0121,0,0,191,6,6,B112_line_plus_e000_halfsum,0,0,0.6890625,B-family stable nontrivial order candidate
+electron_like,3,204,SC0121,0,0,204,6,6,B112_line_plus_e000_halfsum,0,0,0.6890625,B-family stable nontrivial order candidate
+electron_like,4,217,SC0121,0,0,217,6,6,B112_line_plus_e000_halfsum,0,0,0.6890625,B-family stable nontrivial order candidate
+electron_like,5,230,SC0121,0,0,230,6,6,B112_line_plus_e000_halfsum,0,0,0.6890625,B-family stable nontrivial order candidate
+electron_like,6,235,SC0121,0,0,235,6,6,B112_line_plus_e000_halfsum,0,0,0.6890625,B-family stable nontrivial order candidate
+electron_like,7,184,SC0055,0,0,184,6,6,B112_line_plus_e000_halfsum,0,0,0.6640625,B-family stable nontrivial order candidate
+electron_like,8,185,SC0055,0,0,185,6,6,B112_line_plus_e000_halfsum,0,0,0.6640625,B-family stable nontrivial order candidate
+electron_like,9,187,SC0055,0,0,187,6,6,B112_line_plus_e000_halfsum,0,0,0.6640625,B-family stable nontrivial order candidate
+electron_like,10,189,SC0055,0,0,189,6,6,B112_line_plus_e000_halfsum,0,0,0.6640625,B-family stable nontrivial order candidate
+electron_like,11,190,SC0055,0,0,190,6,6,B112_line_plus_e000_halfsum,0,0,0.6640625,B-family stable nontrivial order candidate
+electron_like,12,192,SC0055,0,0,192,6,6,B112_line_plus_e000_halfsum,0,0,0.6640625,B-family stable nontrivial order candidate
+electron_like,13,193,SC0055,0,0,193,6,6,B112_line_plus_e000_halfsum,0,0,0.6640625,B-family stable nontrivial order candidate
+electron_like,14,196,SC0055,0,0,196,6,6,B112_line_plus_e000_halfsum,0,0,0.6640625,B-family stable nontrivial order candidate
+electron_like,15,225,SC0055,0,0,225,6,6,B112_line_plus_e000_halfsum,0,0,0.6640625,B-family stable nontrivial order candidate
+electron_like,16,228,SC0055,0,0,228,6,6,B112_line_plus_e000_halfsum,0,0,0.6640625,B-family stable nontrivial order candidate
+electron_like,17,229,SC0055,0,0,229,6,6,B112_line_plus_e000_halfsum,0,0,0.6640625,B-family stable nontrivial order candidate
+electron_like,18,231,SC0055,0,0,231,6,6,B112_line_plus_e000_halfsum,0,0,0.6640625,B-family stable nontrivial order candidate
+electron_like,19,232,SC0055,0,0,232,6,6,B112_line_plus_e000_halfsum,0,0,0.6640625,B-family stable nontrivial order candidate
+electron_like,20,234,SC0055,0,0,234,6,6,B112_line_plus_e000_halfsum,0,0,0.6640625,B-family stable nontrivial order candidate
+electron_like,21,236,SC0055,0,0,236,6,6,B112_line_plus_e000_halfsum,0,0,0.6640625,B-family stable nontrivial order candidate
+electron_like,22,237,SC0055,0,0,237,6,6,B112_line_plus_e000_halfsum,0,0,0.6640625,B-family stable nontrivial order candidate
+electron_like,23,4,SC0118,0,0,4,3,3,B112_line_plus_e000_halfsum,0,0,0.6619791666666667,B-family stable nontrivial order candidate
+electron_like,24,9,SC0118,0,0,9,3,3,B112_line_plus_e000_halfsum,0,0,0.6619791666666667,B-family stable nontrivial order candidate
+electron_like,25,22,SC0118,0,0,22,3,3,B112_line_plus_e000_halfsum,0,0,0.6619791666666667,B-family stable nontrivial order candidate
+electron_like,26,35,SC0118,0,0,35,3,3,B112_line_plus_e000_halfsum,0,0,0.6619791666666667,B-family stable nontrivial order candidate
+electron_like,27,48,SC0118,0,0,48,3,3,B112_line_plus_e000_halfsum,0,0,0.6619791666666667,B-family stable nontrivial order candidate
+electron_like,28,53,SC0118,0,0,53,3,3,B112_line_plus_e000_halfsum,0,0,0.6619791666666667,B-family stable nontrivial order candidate
+electron_like,29,1444,SC0077,6,0,4,6,3,B112_line_plus_e000_halfsum,0,6,0.6598958333333333,B-family stable nontrivial order candidate
+electron_like,30,1449,SC0077,6,0,9,6,3,B112_line_plus_e000_halfsum,0,6,0.6598958333333333,B-family stable nontrivial order candidate
+electron_like,31,1462,SC0077,6,0,22,6,3,B112_line_plus_e000_halfsum,0,6,0.6598958333333333,B-family stable nontrivial order candidate
+electron_like,32,1475,SC0077,6,0,35,6,3,B112_line_plus_e000_halfsum,0,6,0.6598958333333333,B-family stable nontrivial order candidate
+electron_like,33,1488,SC0077,6,0,48,6,3,B112_line_plus_e000_halfsum,0,6,0.6598958333333333,B-family stable nontrivial order candidate
+electron_like,34,1493,SC0077,6,0,53,6,3,B112_line_plus_e000_halfsum,0,6,0.6598958333333333,B-family stable nontrivial order candidate
+electron_like,35,1626,SC0077,6,0,186,6,6,B112_line_plus_e000_halfsum,0,6,0.6598958333333333,B-family stable nontrivial order candidate
+electron_like,36,1631,SC0077,6,0,191,6,6,B112_line_plus_e000_halfsum,0,6,0.6598958333333333,B-family stable nontrivial order candidate
+electron_like,37,1644,SC0077,6,0,204,6,6,B112_line_plus_e000_halfsum,0,6,0.6598958333333333,B-family stable nontrivial order candidate
+electron_like,38,1657,SC0077,6,0,217,6,6,B112_line_plus_e000_halfsum,0,6,0.6598958333333333,B-family stable nontrivial order candidate
+electron_like,39,1670,SC0077,6,0,230,6,6,B112_line_plus_e000_halfsum,0,6,0.6598958333333333,B-family stable nontrivial order candidate
+electron_like,40,1675,SC0077,6,0,235,6,6,B112_line_plus_e000_halfsum,0,6,0.6598958333333333,B-family stable nontrivial order candidate
+electron_like,41,188,SC0070,0,0,188,6,6,B112_line_plus_e000_halfsum,0,0,0.6390625,B-family stable nontrivial order candidate
+electron_like,42,194,SC0070,0,0,194,6,6,B112_line_plus_e000_halfsum,0,0,0.6390625,B-family stable nontrivial order candidate
+electron_like,43,195,SC0070,0,0,195,6,6,B112_line_plus_e000_halfsum,0,0,0.6390625,B-family stable nontrivial order candidate
+electron_like,44,197,SC0070,0,0,197,6,6,B112_line_plus_e000_halfsum,0,0,0.6390625,B-family stable nontrivial order candidate
+electron_like,45,203,SC0070,0,0,203,6,6,B112_line_plus_e000_halfsum,0,0,0.6390625,B-family stable nontrivial order candidate
+electron_like,46,205,SC0070,0,0,205,6,6,B112_line_plus_e000_halfsum,0,0,0.6390625,B-family stable nontrivial order candidate
+electron_like,47,206,SC0070,0,0,206,6,6,B112_line_plus_e000_halfsum,0,0,0.6390625,B-family stable nontrivial order candidate
+electron_like,48,215,SC0070,0,0,215,6,6,B112_line_plus_e000_halfsum,0,0,0.6390625,B-family stable nontrivial order candidate
+electron_like,49,216,SC0070,0,0,216,6,6,B112_line_plus_e000_halfsum,0,0,0.6390625,B-family stable nontrivial order candidate
+electron_like,50,218,SC0070,0,0,218,6,6,B112_line_plus_e000_halfsum,0,0,0.6390625,B-family stable nontrivial order candidate
+electron_like,51,224,SC0070,0,0,224,6,6,B112_line_plus_e000_halfsum,0,0,0.6390625,B-family stable nontrivial order candidate
+electron_like,52,226,SC0070,0,0,226,6,6,B112_line_plus_e000_halfsum,0,0,0.6390625,B-family stable nontrivial order candidate
+electron_like,53,227,SC0070,0,0,227,6,6,B112_line_plus_e000_halfsum,0,0,0.6390625,B-family stable nontrivial order candidate
+electron_like,54,233,SC0070,0,0,233,6,6,B112_line_plus_e000_halfsum,0,0,0.6390625,B-family stable nontrivial order candidate
+electron_like,55,2,SC0052,0,0,2,3,3,B112_line_plus_e000_halfsum,0,0,0.6369791666666667,B-family stable nontrivial order candidate
+electron_like,56,3,SC0052,0,0,3,3,3,B112_line_plus_e000_halfsum,0,0,0.6369791666666667,B-family stable nontrivial order candidate
+electron_like,57,5,SC0052,0,0,5,3,3,B112_line_plus_e000_halfsum,0,0,0.6369791666666667,B-family stable nontrivial order candidate
+electron_like,58,7,SC0052,0,0,7,3,3,B112_line_plus_e000_halfsum,0,0,0.6369791666666667,B-family stable nontrivial order candidate
+electron_like,59,8,SC0052,0,0,8,3,3,B112_line_plus_e000_halfsum,0,0,0.6369791666666667,B-family stable nontrivial order candidate
+electron_like,60,10,SC0052,0,0,10,3,3,B112_line_plus_e000_halfsum,0,0,0.6369791666666667,B-family stable nontrivial order candidate
+electron_like,61,11,SC0052,0,0,11,3,3,B112_line_plus_e000_halfsum,0,0,0.6369791666666667,B-family stable nontrivial order candidate
+electron_like,62,14,SC0052,0,0,14,3,3,B112_line_plus_e000_halfsum,0,0,0.6369791666666667,B-family stable nontrivial order candidate
+electron_like,63,43,SC0052,0,0,43,3,3,B112_line_plus_e000_halfsum,0,0,0.6369791666666667,B-family stable nontrivial order candidate
+electron_like,64,46,SC0052,0,0,46,3,3,B112_line_plus_e000_halfsum,0,0,0.6369791666666667,B-family stable nontrivial order candidate
+electron_like,65,47,SC0052,0,0,47,3,3,B112_line_plus_e000_halfsum,0,0,0.6369791666666667,B-family stable nontrivial order candidate
+electron_like,66,49,SC0052,0,0,49,3,3,B112_line_plus_e000_halfsum,0,0,0.6369791666666667,B-family stable nontrivial order candidate
+electron_like,67,50,SC0052,0,0,50,3,3,B112_line_plus_e000_halfsum,0,0,0.6369791666666667,B-family stable nontrivial order candidate
+electron_like,68,52,SC0052,0,0,52,3,3,B112_line_plus_e000_halfsum,0,0,0.6369791666666667,B-family stable nontrivial order candidate
+electron_like,69,54,SC0052,0,0,54,3,3,B112_line_plus_e000_halfsum,0,0,0.6369791666666667,B-family stable nontrivial order candidate
+electron_like,70,55,SC0052,0,0,55,3,3,B112_line_plus_e000_halfsum,0,0,0.6369791666666667,B-family stable nontrivial order candidate
+electron_like,71,1442,SC0013,6,0,2,6,3,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,72,1443,SC0013,6,0,3,6,3,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,73,1445,SC0013,6,0,5,6,3,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,74,1447,SC0013,6,0,7,6,3,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,75,1448,SC0013,6,0,8,6,3,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,76,1450,SC0013,6,0,10,6,3,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,77,1451,SC0013,6,0,11,6,3,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,78,1454,SC0013,6,0,14,6,3,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,79,1483,SC0013,6,0,43,6,3,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,80,1486,SC0013,6,0,46,6,3,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,81,1487,SC0013,6,0,47,6,3,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,82,1489,SC0013,6,0,49,6,3,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,83,1490,SC0013,6,0,50,6,3,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,84,1492,SC0013,6,0,52,6,3,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,85,1494,SC0013,6,0,54,6,3,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,86,1495,SC0013,6,0,55,6,3,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,87,1624,SC0013,6,0,184,6,6,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,88,1625,SC0013,6,0,185,6,6,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,89,1627,SC0013,6,0,187,6,6,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,90,1629,SC0013,6,0,189,6,6,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,91,1630,SC0013,6,0,190,6,6,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,92,1632,SC0013,6,0,192,6,6,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,93,1633,SC0013,6,0,193,6,6,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,94,1636,SC0013,6,0,196,6,6,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,95,1665,SC0013,6,0,225,6,6,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,96,1668,SC0013,6,0,228,6,6,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,97,1669,SC0013,6,0,229,6,6,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,98,1671,SC0013,6,0,231,6,6,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,99,1672,SC0013,6,0,232,6,6,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,100,1674,SC0013,6,0,234,6,6,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,101,1676,SC0013,6,0,236,6,6,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,102,1677,SC0013,6,0,237,6,6,B112_line_plus_e000_halfsum,0,6,0.6348958333333333,B-family stable nontrivial order candidate
+electron_like,103,183,SC0076,0,0,183,6,6,B112_line_plus_e000_halfsum,0,0,0.6140625,B-family stable nontrivial order candidate
+electron_like,104,200,SC0076,0,0,200,6,6,B112_line_plus_e000_halfsum,0,0,0.6140625,B-family stable nontrivial order candidate
+electron_like,105,202,SC0076,0,0,202,6,6,B112_line_plus_e000_halfsum,0,0,0.6140625,B-family stable nontrivial order candidate
+electron_like,106,207,SC0076,0,0,207,6,6,B112_line_plus_e000_halfsum,0,0,0.6140625,B-family stable nontrivial order candidate
+electron_like,107,209,SC0076,0,0,209,6,6,B112_line_plus_e000_halfsum,0,0,0.6140625,B-family stable nontrivial order candidate
+electron_like,108,210,SC0076,0,0,210,6,6,B112_line_plus_e000_halfsum,0,0,0.6140625,B-family stable nontrivial order candidate
+electron_like,109,211,SC0076,0,0,211,6,6,B112_line_plus_e000_halfsum,0,0,0.6140625,B-family stable nontrivial order candidate
+electron_like,110,212,SC0076,0,0,212,6,6,B112_line_plus_e000_halfsum,0,0,0.6140625,B-family stable nontrivial order candidate
+electron_like,111,214,SC0076,0,0,214,6,6,B112_line_plus_e000_halfsum,0,0,0.6140625,B-family stable nontrivial order candidate
+electron_like,112,219,SC0076,0,0,219,6,6,B112_line_plus_e000_halfsum,0,0,0.6140625,B-family stable nontrivial order candidate
+electron_like,113,221,SC0076,0,0,221,6,6,B112_line_plus_e000_halfsum,0,0,0.6140625,B-family stable nontrivial order candidate
+electron_like,114,238,SC0076,0,0,238,6,6,B112_line_plus_e000_halfsum,0,0,0.6140625,B-family stable nontrivial order candidate
+electron_like,115,6,SC0067,0,0,6,3,3,B112_line_plus_e000_halfsum,0,0,0.6119791666666666,B-family stable nontrivial order candidate
+electron_like,116,12,SC0067,0,0,12,3,3,B112_line_plus_e000_halfsum,0,0,0.6119791666666666,B-family stable nontrivial order candidate
+electron_like,117,13,SC0067,0,0,13,3,3,B112_line_plus_e000_halfsum,0,0,0.6119791666666666,B-family stable nontrivial order candidate
+electron_like,118,15,SC0067,0,0,15,3,3,B112_line_plus_e000_halfsum,0,0,0.6119791666666666,B-family stable nontrivial order candidate
+electron_like,119,21,SC0067,0,0,21,3,3,B112_line_plus_e000_halfsum,0,0,0.6119791666666666,B-family stable nontrivial order candidate
+electron_like,120,23,SC0067,0,0,23,3,3,B112_line_plus_e000_halfsum,0,0,0.6119791666666666,B-family stable nontrivial order candidate
+mediator_w_like,1,1216,SC0065,5,2,16,12,3,B112_line_plus_e000_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,2,1217,SC0065,5,2,17,12,3,B112_line_plus_e000_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,3,1219,SC0065,5,2,19,12,3,B112_line_plus_e000_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,4,1226,SC0065,5,2,26,12,3,B112_line_plus_e000_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,5,1231,SC0065,5,2,31,12,3,B112_line_plus_e000_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,6,1238,SC0065,5,2,38,12,3,B112_line_plus_e000_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,7,1240,SC0065,5,2,40,12,3,B112_line_plus_e000_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,8,1241,SC0065,5,2,41,12,3,B112_line_plus_e000_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,9,1260,SC0010,5,2,60,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,10,1261,SC0010,5,2,61,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,11,1263,SC0010,5,2,63,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,12,1265,SC0010,5,2,65,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,13,1269,SC0010,5,2,69,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,14,1270,SC0010,5,2,70,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,15,1271,SC0010,5,2,71,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,16,1272,SC0010,5,2,72,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,17,1274,SC0010,5,2,74,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,18,1276,SC0010,5,2,76,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,19,1277,SC0010,5,2,77,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,20,1279,SC0010,5,2,79,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,21,1280,SC0010,5,2,80,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,22,1283,SC0010,5,2,83,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,23,1284,SC0010,5,2,84,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,24,1285,SC0010,5,2,85,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,25,1286,SC0010,5,2,86,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,26,1290,SC0170,5,2,90,12,4,A16_basis_signed_unit,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,27,1291,SC0010,5,2,91,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,28,1293,SC0010,5,2,93,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,29,1294,SC0010,5,2,94,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,30,1295,SC0010,5,2,95,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,31,1296,SC0010,5,2,96,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,32,1297,SC0010,5,2,97,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,33,1299,SC0010,5,2,99,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,34,1300,SC0010,5,2,100,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,35,1302,SC0010,5,2,102,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,36,1303,SC0010,5,2,103,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,37,1304,SC0010,5,2,104,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,38,1305,SC0010,5,2,105,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,39,1308,SC0010,5,2,108,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,40,1309,SC0010,5,2,109,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,41,1310,SC0010,5,2,110,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,42,1311,SC0010,5,2,111,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,43,1312,SC0010,5,2,112,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,44,1313,SC0010,5,2,113,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,45,1314,SC0010,5,2,114,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,46,1325,SC0010,5,2,125,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,47,1326,SC0010,5,2,126,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,48,1327,SC0010,5,2,127,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,49,1328,SC0010,5,2,128,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,50,1329,SC0010,5,2,129,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,51,1330,SC0010,5,2,130,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,52,1331,SC0010,5,2,131,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,53,1334,SC0010,5,2,134,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,54,1335,SC0010,5,2,135,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,55,1336,SC0010,5,2,136,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,56,1337,SC0010,5,2,137,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,57,1339,SC0010,5,2,139,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,58,1340,SC0010,5,2,140,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,59,1342,SC0010,5,2,142,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,60,1343,SC0010,5,2,143,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,61,1344,SC0010,5,2,144,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,62,1345,SC0010,5,2,145,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,63,1346,SC0010,5,2,146,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,64,1348,SC0010,5,2,148,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,65,1349,SC0170,5,2,149,12,4,A16_basis_signed_unit,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,66,1353,SC0010,5,2,153,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,67,1354,SC0010,5,2,154,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,68,1355,SC0010,5,2,155,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,69,1356,SC0010,5,2,156,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,70,1359,SC0010,5,2,159,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,71,1360,SC0010,5,2,160,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,72,1362,SC0010,5,2,162,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,73,1363,SC0010,5,2,163,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,74,1365,SC0010,5,2,165,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,75,1367,SC0010,5,2,167,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,76,1368,SC0010,5,2,168,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,77,1369,SC0010,5,2,169,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,78,1370,SC0010,5,2,170,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,79,1374,SC0010,5,2,174,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,80,1376,SC0010,5,2,176,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,81,1378,SC0010,5,2,178,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,82,1379,SC0010,5,2,179,12,4,C112_complement_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,83,1398,SC0065,5,2,198,12,6,B112_line_plus_e000_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,84,1399,SC0065,5,2,199,12,6,B112_line_plus_e000_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,85,1401,SC0065,5,2,201,12,6,B112_line_plus_e000_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,86,1408,SC0065,5,2,208,12,6,B112_line_plus_e000_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,87,1413,SC0065,5,2,213,12,6,B112_line_plus_e000_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,88,1420,SC0065,5,2,220,12,6,B112_line_plus_e000_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,89,1422,SC0065,5,2,222,12,6,B112_line_plus_e000_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,90,1423,SC0065,5,2,223,12,6,B112_line_plus_e000_halfsum,2,5,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,91,2656,SC0066,11,2,16,12,3,B112_line_plus_e000_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,92,2657,SC0066,11,2,17,12,3,B112_line_plus_e000_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,93,2659,SC0066,11,2,19,12,3,B112_line_plus_e000_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,94,2666,SC0066,11,2,26,12,3,B112_line_plus_e000_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,95,2671,SC0066,11,2,31,12,3,B112_line_plus_e000_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,96,2678,SC0066,11,2,38,12,3,B112_line_plus_e000_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,97,2680,SC0066,11,2,40,12,3,B112_line_plus_e000_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,98,2681,SC0066,11,2,41,12,3,B112_line_plus_e000_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,99,2700,SC0012,11,2,60,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,100,2701,SC0012,11,2,61,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,101,2703,SC0012,11,2,63,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,102,2705,SC0012,11,2,65,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,103,2709,SC0012,11,2,69,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,104,2710,SC0012,11,2,70,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,105,2711,SC0012,11,2,71,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,106,2712,SC0012,11,2,72,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,107,2714,SC0012,11,2,74,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,108,2716,SC0012,11,2,76,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,109,2717,SC0012,11,2,77,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,110,2719,SC0012,11,2,79,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,111,2720,SC0012,11,2,80,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,112,2723,SC0012,11,2,83,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,113,2724,SC0012,11,2,84,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,114,2725,SC0012,11,2,85,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,115,2726,SC0012,11,2,86,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,116,2730,SC0176,11,2,90,12,4,A16_basis_signed_unit,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,117,2731,SC0012,11,2,91,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,118,2733,SC0012,11,2,93,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,119,2734,SC0012,11,2,94,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+mediator_w_like,120,2735,SC0012,11,2,95,12,4,C112_complement_halfsum,2,11,0.9677083333333335,nonzero generation-hop dominant_dg
+neutrino_like,1,479,SC0177,1,1,239,12,1,A16_basis_signed_unit,1,1,1.0,A-family identity-q with weakly interacting profile
+neutrino_like,2,719,SC0152,2,2,239,6,1,A16_basis_signed_unit,2,2,1.0,A-family identity-q with weakly interacting profile
+neutrino_like,3,1439,SC0179,5,2,239,12,1,A16_basis_signed_unit,2,5,1.0,A-family identity-q with weakly interacting profile
+neutrino_like,4,1919,SC0178,7,1,239,12,1,A16_basis_signed_unit,1,7,1.0,A-family identity-q with weakly interacting profile
+neutrino_like,5,2639,SC0151,10,1,239,6,1,A16_basis_signed_unit,1,10,1.0,A-family identity-q with weakly interacting profile
+neutrino_like,6,2879,SC0180,11,2,239,12,1,A16_basis_signed_unit,2,11,1.0,A-family identity-q with weakly interacting profile
+neutrino_like,7,239,SC0181,0,0,239,1,1,A16_basis_signed_unit,0,0,0.8,A-family identity-q with weakly interacting profile
+neutrino_like,8,959,SC0150,3,0,239,4,1,A16_basis_signed_unit,0,3,0.8,A-family identity-q with weakly interacting profile
+neutrino_like,9,1199,SC0183,4,1,239,3,1,A16_basis_signed_unit,1,4,0.8,A-family identity-q with weakly interacting profile
+neutrino_like,10,1679,SC0136,6,0,239,2,1,A16_basis_signed_unit,0,6,0.8,A-family identity-q with weakly interacting profile
+neutrino_like,11,2159,SC0184,8,2,239,3,1,A16_basis_signed_unit,2,8,0.8,A-family identity-q with weakly interacting profile
+neutrino_like,12,2399,SC0149,9,0,239,4,1,A16_basis_signed_unit,0,9,0.8,A-family identity-q with weakly interacting profile
+photon_like,1,479,SC0177,1,1,239,12,1,A16_basis_signed_unit,1,1,1.0,"identity-q, high phase transport candidate"
+photon_like,2,719,SC0152,2,2,239,6,1,A16_basis_signed_unit,2,2,1.0,"identity-q, high phase transport candidate"
+photon_like,3,1439,SC0179,5,2,239,12,1,A16_basis_signed_unit,2,5,1.0,"identity-q, high phase transport candidate"
+photon_like,4,1919,SC0178,7,1,239,12,1,A16_basis_signed_unit,1,7,1.0,"identity-q, high phase transport candidate"
+photon_like,5,2639,SC0151,10,1,239,6,1,A16_basis_signed_unit,1,10,1.0,"identity-q, high phase transport candidate"
+photon_like,6,2879,SC0180,11,2,239,12,1,A16_basis_signed_unit,2,11,1.0,"identity-q, high phase transport candidate"
+photon_like,7,239,SC0181,0,0,239,1,1,A16_basis_signed_unit,0,0,0.8,"identity-q, high phase transport candidate"
+photon_like,8,959,SC0150,3,0,239,4,1,A16_basis_signed_unit,0,3,0.8,"identity-q, high phase transport candidate"
+photon_like,9,1199,SC0183,4,1,239,3,1,A16_basis_signed_unit,1,4,0.8,"identity-q, high phase transport candidate"
+photon_like,10,1679,SC0136,6,0,239,2,1,A16_basis_signed_unit,0,6,0.8,"identity-q, high phase transport candidate"
+photon_like,11,2159,SC0184,8,2,239,3,1,A16_basis_signed_unit,2,8,0.8,"identity-q, high phase transport candidate"
+photon_like,12,2399,SC0149,9,0,239,4,1,A16_basis_signed_unit,0,9,0.8,"identity-q, high phase transport candidate"
+quark_core_like,1,16,SC0088,0,0,16,3,3,B112_line_plus_e000_halfsum,0,0,0.9593750000000001,order-3 q-core prior
+quark_core_like,2,17,SC0088,0,0,17,3,3,B112_line_plus_e000_halfsum,0,0,0.9593750000000001,order-3 q-core prior
+quark_core_like,3,19,SC0088,0,0,19,3,3,B112_line_plus_e000_halfsum,0,0,0.9593750000000001,order-3 q-core prior
+quark_core_like,4,26,SC0088,0,0,26,3,3,B112_line_plus_e000_halfsum,0,0,0.9593750000000001,order-3 q-core prior
+quark_core_like,5,31,SC0088,0,0,31,3,3,B112_line_plus_e000_halfsum,0,0,0.9593750000000001,order-3 q-core prior
+quark_core_like,6,38,SC0088,0,0,38,3,3,B112_line_plus_e000_halfsum,0,0,0.9593750000000001,order-3 q-core prior
+quark_core_like,7,40,SC0088,0,0,40,3,3,B112_line_plus_e000_halfsum,0,0,0.9593750000000001,order-3 q-core prior
+quark_core_like,8,41,SC0088,0,0,41,3,3,B112_line_plus_e000_halfsum,0,0,0.9593750000000001,order-3 q-core prior
+quark_core_like,9,256,SC0063,1,1,16,12,3,B112_line_plus_e000_halfsum,1,1,0.9593750000000001,order-3 q-core prior
+quark_core_like,10,257,SC0063,1,1,17,12,3,B112_line_plus_e000_halfsum,1,1,0.9593750000000001,order-3 q-core prior
+quark_core_like,11,259,SC0063,1,1,19,12,3,B112_line_plus_e000_halfsum,1,1,0.9593750000000001,order-3 q-core prior
+quark_core_like,12,266,SC0063,1,1,26,12,3,B112_line_plus_e000_halfsum,1,1,0.9593750000000001,order-3 q-core prior
+quark_core_like,13,271,SC0063,1,1,31,12,3,B112_line_plus_e000_halfsum,1,1,0.9593750000000001,order-3 q-core prior
+quark_core_like,14,278,SC0063,1,1,38,12,3,B112_line_plus_e000_halfsum,1,1,0.9593750000000001,order-3 q-core prior
+quark_core_like,15,280,SC0063,1,1,40,12,3,B112_line_plus_e000_halfsum,1,1,0.9593750000000001,order-3 q-core prior
+quark_core_like,16,281,SC0063,1,1,41,12,3,B112_line_plus_e000_halfsum,1,1,0.9593750000000001,order-3 q-core prior
+quark_core_like,17,496,SC0060,2,2,16,6,3,B112_line_plus_e000_halfsum,2,2,0.9593750000000001,order-3 q-core prior
+quark_core_like,18,497,SC0060,2,2,17,6,3,B112_line_plus_e000_halfsum,2,2,0.9593750000000001,order-3 q-core prior
+quark_core_like,19,499,SC0060,2,2,19,6,3,B112_line_plus_e000_halfsum,2,2,0.9593750000000001,order-3 q-core prior
+quark_core_like,20,506,SC0060,2,2,26,6,3,B112_line_plus_e000_halfsum,2,2,0.9593750000000001,order-3 q-core prior
+quark_core_like,21,511,SC0060,2,2,31,6,3,B112_line_plus_e000_halfsum,2,2,0.9593750000000001,order-3 q-core prior
+quark_core_like,22,518,SC0060,2,2,38,6,3,B112_line_plus_e000_halfsum,2,2,0.9593750000000001,order-3 q-core prior
+quark_core_like,23,520,SC0060,2,2,40,6,3,B112_line_plus_e000_halfsum,2,2,0.9593750000000001,order-3 q-core prior
+quark_core_like,24,521,SC0060,2,2,41,6,3,B112_line_plus_e000_halfsum,2,2,0.9593750000000001,order-3 q-core prior
+quark_core_like,25,736,SC0062,3,0,16,12,3,B112_line_plus_e000_halfsum,0,3,0.9593750000000001,order-3 q-core prior
+quark_core_like,26,737,SC0062,3,0,17,12,3,B112_line_plus_e000_halfsum,0,3,0.9593750000000001,order-3 q-core prior
+quark_core_like,27,739,SC0062,3,0,19,12,3,B112_line_plus_e000_halfsum,0,3,0.9593750000000001,order-3 q-core prior
+quark_core_like,28,746,SC0062,3,0,26,12,3,B112_line_plus_e000_halfsum,0,3,0.9593750000000001,order-3 q-core prior
+quark_core_like,29,751,SC0062,3,0,31,12,3,B112_line_plus_e000_halfsum,0,3,0.9593750000000001,order-3 q-core prior
+quark_core_like,30,758,SC0062,3,0,38,12,3,B112_line_plus_e000_halfsum,0,3,0.9593750000000001,order-3 q-core prior
+quark_core_like,31,760,SC0062,3,0,40,12,3,B112_line_plus_e000_halfsum,0,3,0.9593750000000001,order-3 q-core prior
+quark_core_like,32,761,SC0062,3,0,41,12,3,B112_line_plus_e000_halfsum,0,3,0.9593750000000001,order-3 q-core prior
+quark_core_like,33,976,SC0089,4,1,16,3,3,B112_line_plus_e000_halfsum,1,4,0.9593750000000001,order-3 q-core prior
+quark_core_like,34,977,SC0089,4,1,17,3,3,B112_line_plus_e000_halfsum,1,4,0.9593750000000001,order-3 q-core prior
+quark_core_like,35,979,SC0089,4,1,19,3,3,B112_line_plus_e000_halfsum,1,4,0.9593750000000001,order-3 q-core prior
+quark_core_like,36,986,SC0089,4,1,26,3,3,B112_line_plus_e000_halfsum,1,4,0.9593750000000001,order-3 q-core prior
+quark_core_like,37,991,SC0089,4,1,31,3,3,B112_line_plus_e000_halfsum,1,4,0.9593750000000001,order-3 q-core prior
+quark_core_like,38,998,SC0089,4,1,38,3,3,B112_line_plus_e000_halfsum,1,4,0.9593750000000001,order-3 q-core prior
+quark_core_like,39,1000,SC0089,4,1,40,3,3,B112_line_plus_e000_halfsum,1,4,0.9593750000000001,order-3 q-core prior
+quark_core_like,40,1001,SC0089,4,1,41,3,3,B112_line_plus_e000_halfsum,1,4,0.9593750000000001,order-3 q-core prior
+quark_core_like,41,1216,SC0065,5,2,16,12,3,B112_line_plus_e000_halfsum,2,5,0.9593750000000001,order-3 q-core prior
+quark_core_like,42,1217,SC0065,5,2,17,12,3,B112_line_plus_e000_halfsum,2,5,0.9593750000000001,order-3 q-core prior
+quark_core_like,43,1219,SC0065,5,2,19,12,3,B112_line_plus_e000_halfsum,2,5,0.9593750000000001,order-3 q-core prior
+quark_core_like,44,1226,SC0065,5,2,26,12,3,B112_line_plus_e000_halfsum,2,5,0.9593750000000001,order-3 q-core prior
+quark_core_like,45,1231,SC0065,5,2,31,12,3,B112_line_plus_e000_halfsum,2,5,0.9593750000000001,order-3 q-core prior
+quark_core_like,46,1238,SC0065,5,2,38,12,3,B112_line_plus_e000_halfsum,2,5,0.9593750000000001,order-3 q-core prior
+quark_core_like,47,1240,SC0065,5,2,40,12,3,B112_line_plus_e000_halfsum,2,5,0.9593750000000001,order-3 q-core prior
+quark_core_like,48,1241,SC0065,5,2,41,12,3,B112_line_plus_e000_halfsum,2,5,0.9593750000000001,order-3 q-core prior
+quark_core_like,49,1456,SC0056,6,0,16,6,3,B112_line_plus_e000_halfsum,0,6,0.9593750000000001,order-3 q-core prior
+quark_core_like,50,1457,SC0056,6,0,17,6,3,B112_line_plus_e000_halfsum,0,6,0.9593750000000001,order-3 q-core prior
+quark_core_like,51,1459,SC0056,6,0,19,6,3,B112_line_plus_e000_halfsum,0,6,0.9593750000000001,order-3 q-core prior
+quark_core_like,52,1466,SC0056,6,0,26,6,3,B112_line_plus_e000_halfsum,0,6,0.9593750000000001,order-3 q-core prior
+quark_core_like,53,1471,SC0056,6,0,31,6,3,B112_line_plus_e000_halfsum,0,6,0.9593750000000001,order-3 q-core prior
+quark_core_like,54,1478,SC0056,6,0,38,6,3,B112_line_plus_e000_halfsum,0,6,0.9593750000000001,order-3 q-core prior
+quark_core_like,55,1480,SC0056,6,0,40,6,3,B112_line_plus_e000_halfsum,0,6,0.9593750000000001,order-3 q-core prior
+quark_core_like,56,1481,SC0056,6,0,41,6,3,B112_line_plus_e000_halfsum,0,6,0.9593750000000001,order-3 q-core prior
+quark_core_like,57,1696,SC0064,7,1,16,12,3,B112_line_plus_e000_halfsum,1,7,0.9593750000000001,order-3 q-core prior
+quark_core_like,58,1697,SC0064,7,1,17,12,3,B112_line_plus_e000_halfsum,1,7,0.9593750000000001,order-3 q-core prior
+quark_core_like,59,1699,SC0064,7,1,19,12,3,B112_line_plus_e000_halfsum,1,7,0.9593750000000001,order-3 q-core prior
+quark_core_like,60,1706,SC0064,7,1,26,12,3,B112_line_plus_e000_halfsum,1,7,0.9593750000000001,order-3 q-core prior
+quark_core_like,61,1711,SC0064,7,1,31,12,3,B112_line_plus_e000_halfsum,1,7,0.9593750000000001,order-3 q-core prior
+quark_core_like,62,1718,SC0064,7,1,38,12,3,B112_line_plus_e000_halfsum,1,7,0.9593750000000001,order-3 q-core prior
+quark_core_like,63,1720,SC0064,7,1,40,12,3,B112_line_plus_e000_halfsum,1,7,0.9593750000000001,order-3 q-core prior
+quark_core_like,64,1721,SC0064,7,1,41,12,3,B112_line_plus_e000_halfsum,1,7,0.9593750000000001,order-3 q-core prior
+quark_core_like,65,1936,SC0090,8,2,16,3,3,B112_line_plus_e000_halfsum,2,8,0.9593750000000001,order-3 q-core prior
+quark_core_like,66,1937,SC0090,8,2,17,3,3,B112_line_plus_e000_halfsum,2,8,0.9593750000000001,order-3 q-core prior
+quark_core_like,67,1939,SC0090,8,2,19,3,3,B112_line_plus_e000_halfsum,2,8,0.9593750000000001,order-3 q-core prior
+quark_core_like,68,1946,SC0090,8,2,26,3,3,B112_line_plus_e000_halfsum,2,8,0.9593750000000001,order-3 q-core prior
+quark_core_like,69,1951,SC0090,8,2,31,3,3,B112_line_plus_e000_halfsum,2,8,0.9593750000000001,order-3 q-core prior
+quark_core_like,70,1958,SC0090,8,2,38,3,3,B112_line_plus_e000_halfsum,2,8,0.9593750000000001,order-3 q-core prior
+quark_core_like,71,1960,SC0090,8,2,40,3,3,B112_line_plus_e000_halfsum,2,8,0.9593750000000001,order-3 q-core prior
+quark_core_like,72,1961,SC0090,8,2,41,3,3,B112_line_plus_e000_halfsum,2,8,0.9593750000000001,order-3 q-core prior
+quark_core_like,73,2176,SC0061,9,0,16,12,3,B112_line_plus_e000_halfsum,0,9,0.9593750000000001,order-3 q-core prior
+quark_core_like,74,2177,SC0061,9,0,17,12,3,B112_line_plus_e000_halfsum,0,9,0.9593750000000001,order-3 q-core prior
+quark_core_like,75,2179,SC0061,9,0,19,12,3,B112_line_plus_e000_halfsum,0,9,0.9593750000000001,order-3 q-core prior
+quark_core_like,76,2186,SC0061,9,0,26,12,3,B112_line_plus_e000_halfsum,0,9,0.9593750000000001,order-3 q-core prior
+quark_core_like,77,2191,SC0061,9,0,31,12,3,B112_line_plus_e000_halfsum,0,9,0.9593750000000001,order-3 q-core prior
+quark_core_like,78,2198,SC0061,9,0,38,12,3,B112_line_plus_e000_halfsum,0,9,0.9593750000000001,order-3 q-core prior
+quark_core_like,79,2200,SC0061,9,0,40,12,3,B112_line_plus_e000_halfsum,0,9,0.9593750000000001,order-3 q-core prior
+quark_core_like,80,2201,SC0061,9,0,41,12,3,B112_line_plus_e000_halfsum,0,9,0.9593750000000001,order-3 q-core prior
+quark_core_like,81,2416,SC0058,10,1,16,6,3,B112_line_plus_e000_halfsum,1,10,0.9593750000000001,order-3 q-core prior
+quark_core_like,82,2417,SC0058,10,1,17,6,3,B112_line_plus_e000_halfsum,1,10,0.9593750000000001,order-3 q-core prior
+quark_core_like,83,2419,SC0058,10,1,19,6,3,B112_line_plus_e000_halfsum,1,10,0.9593750000000001,order-3 q-core prior
+quark_core_like,84,2426,SC0058,10,1,26,6,3,B112_line_plus_e000_halfsum,1,10,0.9593750000000001,order-3 q-core prior
+quark_core_like,85,2431,SC0058,10,1,31,6,3,B112_line_plus_e000_halfsum,1,10,0.9593750000000001,order-3 q-core prior
+quark_core_like,86,2438,SC0058,10,1,38,6,3,B112_line_plus_e000_halfsum,1,10,0.9593750000000001,order-3 q-core prior
+quark_core_like,87,2440,SC0058,10,1,40,6,3,B112_line_plus_e000_halfsum,1,10,0.9593750000000001,order-3 q-core prior
+quark_core_like,88,2441,SC0058,10,1,41,6,3,B112_line_plus_e000_halfsum,1,10,0.9593750000000001,order-3 q-core prior
+quark_core_like,89,2656,SC0066,11,2,16,12,3,B112_line_plus_e000_halfsum,2,11,0.9593750000000001,order-3 q-core prior
+quark_core_like,90,2657,SC0066,11,2,17,12,3,B112_line_plus_e000_halfsum,2,11,0.9593750000000001,order-3 q-core prior
+quark_core_like,91,2659,SC0066,11,2,19,12,3,B112_line_plus_e000_halfsum,2,11,0.9593750000000001,order-3 q-core prior
+quark_core_like,92,2666,SC0066,11,2,26,12,3,B112_line_plus_e000_halfsum,2,11,0.9593750000000001,order-3 q-core prior
+quark_core_like,93,2671,SC0066,11,2,31,12,3,B112_line_plus_e000_halfsum,2,11,0.9593750000000001,order-3 q-core prior
+quark_core_like,94,2678,SC0066,11,2,38,12,3,B112_line_plus_e000_halfsum,2,11,0.9593750000000001,order-3 q-core prior
+quark_core_like,95,2680,SC0066,11,2,40,12,3,B112_line_plus_e000_halfsum,2,11,0.9593750000000001,order-3 q-core prior
+quark_core_like,96,2681,SC0066,11,2,41,12,3,B112_line_plus_e000_halfsum,2,11,0.9593750000000001,order-3 q-core prior
+quark_core_like,97,1,SC0073,0,0,1,3,3,B112_line_plus_e000_halfsum,0,0,0.9437500000000001,order-3 q-core prior
+quark_core_like,98,18,SC0073,0,0,18,3,3,B112_line_plus_e000_halfsum,0,0,0.9437500000000001,order-3 q-core prior
+quark_core_like,99,20,SC0073,0,0,20,3,3,B112_line_plus_e000_halfsum,0,0,0.9437500000000001,order-3 q-core prior
+quark_core_like,100,25,SC0073,0,0,25,3,3,B112_line_plus_e000_halfsum,0,0,0.9437500000000001,order-3 q-core prior
+quark_core_like,101,27,SC0073,0,0,27,3,3,B112_line_plus_e000_halfsum,0,0,0.9437500000000001,order-3 q-core prior
+quark_core_like,102,28,SC0073,0,0,28,3,3,B112_line_plus_e000_halfsum,0,0,0.9437500000000001,order-3 q-core prior
+quark_core_like,103,29,SC0073,0,0,29,3,3,B112_line_plus_e000_halfsum,0,0,0.9437500000000001,order-3 q-core prior
+quark_core_like,104,30,SC0073,0,0,30,3,3,B112_line_plus_e000_halfsum,0,0,0.9437500000000001,order-3 q-core prior
+quark_core_like,105,32,SC0073,0,0,32,3,3,B112_line_plus_e000_halfsum,0,0,0.9437500000000001,order-3 q-core prior
+quark_core_like,106,37,SC0073,0,0,37,3,3,B112_line_plus_e000_halfsum,0,0,0.9437500000000001,order-3 q-core prior
+quark_core_like,107,39,SC0073,0,0,39,3,3,B112_line_plus_e000_halfsum,0,0,0.9437500000000001,order-3 q-core prior
+quark_core_like,108,56,SC0073,0,0,56,3,3,B112_line_plus_e000_halfsum,0,0,0.9437500000000001,order-3 q-core prior
+quark_core_like,109,241,SC0048,1,1,1,12,3,B112_line_plus_e000_halfsum,1,1,0.9437500000000001,order-3 q-core prior
+quark_core_like,110,258,SC0048,1,1,18,12,3,B112_line_plus_e000_halfsum,1,1,0.9437500000000001,order-3 q-core prior
+quark_core_like,111,260,SC0048,1,1,20,12,3,B112_line_plus_e000_halfsum,1,1,0.9437500000000001,order-3 q-core prior
+quark_core_like,112,265,SC0048,1,1,25,12,3,B112_line_plus_e000_halfsum,1,1,0.9437500000000001,order-3 q-core prior
+quark_core_like,113,267,SC0048,1,1,27,12,3,B112_line_plus_e000_halfsum,1,1,0.9437500000000001,order-3 q-core prior
+quark_core_like,114,268,SC0048,1,1,28,12,3,B112_line_plus_e000_halfsum,1,1,0.9437500000000001,order-3 q-core prior
+quark_core_like,115,269,SC0048,1,1,29,12,3,B112_line_plus_e000_halfsum,1,1,0.9437500000000001,order-3 q-core prior
+quark_core_like,116,270,SC0048,1,1,30,12,3,B112_line_plus_e000_halfsum,1,1,0.9437500000000001,order-3 q-core prior
+quark_core_like,117,272,SC0048,1,1,32,12,3,B112_line_plus_e000_halfsum,1,1,0.9437500000000001,order-3 q-core prior
+quark_core_like,118,277,SC0048,1,1,37,12,3,B112_line_plus_e000_halfsum,1,1,0.9437500000000001,order-3 q-core prior
+quark_core_like,119,279,SC0048,1,1,39,12,3,B112_line_plus_e000_halfsum,1,1,0.9437500000000001,order-3 q-core prior
+quark_core_like,120,296,SC0048,1,1,56,12,3,B112_line_plus_e000_halfsum,1,1,0.9437500000000001,order-3 q-core prior
+unstable_crossmix_like,1,1260,SC0010,5,2,60,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,2,1261,SC0010,5,2,61,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,3,1263,SC0010,5,2,63,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,4,1265,SC0010,5,2,65,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,5,1269,SC0010,5,2,69,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,6,1270,SC0010,5,2,70,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,7,1271,SC0010,5,2,71,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,8,1272,SC0010,5,2,72,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,9,1274,SC0010,5,2,74,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,10,1276,SC0010,5,2,76,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,11,1277,SC0010,5,2,77,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,12,1279,SC0010,5,2,79,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,13,1280,SC0010,5,2,80,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,14,1283,SC0010,5,2,83,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,15,1284,SC0010,5,2,84,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,16,1285,SC0010,5,2,85,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,17,1286,SC0010,5,2,86,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,18,1291,SC0010,5,2,91,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,19,1293,SC0010,5,2,93,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,20,1294,SC0010,5,2,94,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,21,1295,SC0010,5,2,95,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,22,1296,SC0010,5,2,96,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,23,1297,SC0010,5,2,97,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,24,1299,SC0010,5,2,99,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,25,1300,SC0010,5,2,100,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,26,1302,SC0010,5,2,102,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,27,1303,SC0010,5,2,103,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,28,1304,SC0010,5,2,104,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,29,1305,SC0010,5,2,105,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,30,1308,SC0010,5,2,108,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,31,1309,SC0010,5,2,109,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,32,1310,SC0010,5,2,110,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,33,1311,SC0010,5,2,111,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,34,1312,SC0010,5,2,112,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,35,1313,SC0010,5,2,113,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,36,1314,SC0010,5,2,114,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,37,1325,SC0010,5,2,125,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,38,1326,SC0010,5,2,126,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,39,1327,SC0010,5,2,127,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,40,1328,SC0010,5,2,128,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,41,1329,SC0010,5,2,129,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,42,1330,SC0010,5,2,130,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,43,1331,SC0010,5,2,131,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,44,1334,SC0010,5,2,134,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,45,1335,SC0010,5,2,135,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,46,1336,SC0010,5,2,136,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,47,1337,SC0010,5,2,137,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,48,1339,SC0010,5,2,139,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,49,1340,SC0010,5,2,140,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,50,1342,SC0010,5,2,142,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,51,1343,SC0010,5,2,143,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,52,1344,SC0010,5,2,144,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,53,1345,SC0010,5,2,145,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,54,1346,SC0010,5,2,146,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,55,1348,SC0010,5,2,148,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,56,1353,SC0010,5,2,153,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,57,1354,SC0010,5,2,154,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,58,1355,SC0010,5,2,155,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,59,1356,SC0010,5,2,156,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,60,1359,SC0010,5,2,159,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,61,1360,SC0010,5,2,160,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,62,1362,SC0010,5,2,162,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,63,1363,SC0010,5,2,163,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,64,1365,SC0010,5,2,165,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,65,1367,SC0010,5,2,167,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,66,1368,SC0010,5,2,168,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,67,1369,SC0010,5,2,169,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,68,1370,SC0010,5,2,170,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,69,1374,SC0010,5,2,174,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,70,1376,SC0010,5,2,176,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,71,1378,SC0010,5,2,178,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,72,1379,SC0010,5,2,179,12,4,C112_complement_halfsum,2,5,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,73,2700,SC0012,11,2,60,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,74,2701,SC0012,11,2,61,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,75,2703,SC0012,11,2,63,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,76,2705,SC0012,11,2,65,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,77,2709,SC0012,11,2,69,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,78,2710,SC0012,11,2,70,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,79,2711,SC0012,11,2,71,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,80,2712,SC0012,11,2,72,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,81,2714,SC0012,11,2,74,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,82,2716,SC0012,11,2,76,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,83,2717,SC0012,11,2,77,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,84,2719,SC0012,11,2,79,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,85,2720,SC0012,11,2,80,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,86,2723,SC0012,11,2,83,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,87,2724,SC0012,11,2,84,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,88,2725,SC0012,11,2,85,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,89,2726,SC0012,11,2,86,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,90,2731,SC0012,11,2,91,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,91,2733,SC0012,11,2,93,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,92,2734,SC0012,11,2,94,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,93,2735,SC0012,11,2,95,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,94,2736,SC0012,11,2,96,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,95,2737,SC0012,11,2,97,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,96,2739,SC0012,11,2,99,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,97,2740,SC0012,11,2,100,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,98,2742,SC0012,11,2,102,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,99,2743,SC0012,11,2,103,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,100,2744,SC0012,11,2,104,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,101,2745,SC0012,11,2,105,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,102,2748,SC0012,11,2,108,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,103,2749,SC0012,11,2,109,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,104,2750,SC0012,11,2,110,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,105,2751,SC0012,11,2,111,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,106,2752,SC0012,11,2,112,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,107,2753,SC0012,11,2,113,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,108,2754,SC0012,11,2,114,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,109,2765,SC0012,11,2,125,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,110,2766,SC0012,11,2,126,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,111,2767,SC0012,11,2,127,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,112,2768,SC0012,11,2,128,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,113,2769,SC0012,11,2,129,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,114,2770,SC0012,11,2,130,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,115,2771,SC0012,11,2,131,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,116,2774,SC0012,11,2,134,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,117,2775,SC0012,11,2,135,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,118,2776,SC0012,11,2,136,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,119,2777,SC0012,11,2,137,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy
+unstable_crossmix_like,120,2779,SC0012,11,2,139,12,4,C112_complement_halfsum,2,11,0.8139534135726686,high family-transition entropy

@@ -1,9 +1,9 @@
 {
   "backend": "numba_cpu",
-  "batch_index": 669,
-  "best_score_so_far": 0.5587865436094482,
-  "latest_output": "cog_v3\\sources\\v3_overnight_runs_v1\\20260302T212503Z_batch_000669.json",
-  "no_improve_streak": 419,
-  "seed_offset": 14000042,
-  "updated_utc": "2026-03-02T21:25:03Z"
+  "batch_index": 465,
+  "best_score_so_far": 0.5544930905918326,
+  "latest_output": "cog_v3\\sources\\v3_overnight_runs_v1\\20260303T071613Z_batch_000465.json",
+  "no_improve_streak": 215,
+  "seed_offset": 9000027,
+  "updated_utc": "2026-03-03T07:16:13Z"
 }

@@ -1,0 +1,201 @@
+{
+  "checks": {
+    "class_count_positive": true,
+    "map_row_count_ok": true
+  },
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "kernel_module": "cog_v3/python/kernel_octavian240_multiplicative_v1.py",
+  "kernel_module_sha256": "4d49033d24dcd1b3ec3cc4367175dc027bfecb8e5afa8710f0dd9856c01155a6",
+  "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "replay_hash": "a923508c176e496e39a0efabf8df89eb15f5924d4f0ad02f0d8e523a687f8333",
+  "schema_version": "v3_s2880_structural_classes_v1",
+  "source_script": "cog_v3/calc/build_v3_s2880_structural_classes_v1.py",
+  "source_script_sha256": "bda84de15953de68a2c4be019c1b07079c9641eb17aeecc5d1c46f87069fbee9",
+  "summary": {
+    "class_count": 186,
+    "element_count": 2880,
+    "largest_class_size": 72
+  },
+  "top_classes": [
+    {
+      "class_id": "SC0001",
+      "count": 72,
+      "dominant_dg_left": 0,
+      "dominant_dp_left": 0,
+      "order": 4,
+      "phase_sector_mod3": 0,
+      "q_family_tag": "C112_complement_halfsum"
+    },
+    {
+      "class_id": "SC0002",
+      "count": 72,
+      "dominant_dg_left": 0,
+      "dominant_dp_left": 9,
+      "order": 4,
+      "phase_sector_mod3": 0,
+      "q_family_tag": "C112_complement_halfsum"
+    },
+    {
+      "class_id": "SC0003",
+      "count": 72,
+      "dominant_dg_left": 0,
+      "dominant_dp_left": 6,
+      "order": 4,
+      "phase_sector_mod3": 0,
+      "q_family_tag": "C112_complement_halfsum"
+    },
+    {
+      "class_id": "SC0004",
+      "count": 72,
+      "dominant_dg_left": 0,
+      "dominant_dp_left": 3,
+      "order": 4,
+      "phase_sector_mod3": 0,
+      "q_family_tag": "C112_complement_halfsum"
+    },
+    {
+      "class_id": "SC0005",
+      "count": 72,
+      "dominant_dg_left": 1,
+      "dominant_dp_left": 4,
+      "order": 12,
+      "phase_sector_mod3": 1,
+      "q_family_tag": "C112_complement_halfsum"
+    },
+    {
+      "class_id": "SC0006",
+      "count": 72,
+      "dominant_dg_left": 1,
+      "dominant_dp_left": 1,
+      "order": 12,
+      "phase_sector_mod3": 1,
+      "q_family_tag": "C112_complement_halfsum"
+    },
+    {
+      "class_id": "SC0007",
+      "count": 72,
+      "dominant_dg_left": 1,
+      "dominant_dp_left": 10,
+      "order": 12,
+      "phase_sector_mod3": 1,
+      "q_family_tag": "C112_complement_halfsum"
+    },
+    {
+      "class_id": "SC0008",
+      "count": 72,
+      "dominant_dg_left": 1,
+      "dominant_dp_left": 7,
+      "order": 12,
+      "phase_sector_mod3": 1,
+      "q_family_tag": "C112_complement_halfsum"
+    },
+    {
+      "class_id": "SC0009",
+      "count": 72,
+      "dominant_dg_left": 2,
+      "dominant_dp_left": 8,
+      "order": 12,
+      "phase_sector_mod3": 2,
+      "q_family_tag": "C112_complement_halfsum"
+    },
+    {
+      "class_id": "SC0010",
+      "count": 72,
+      "dominant_dg_left": 2,
+      "dominant_dp_left": 5,
+      "order": 12,
+      "phase_sector_mod3": 2,
+      "q_family_tag": "C112_complement_halfsum"
+    },
+    {
+      "class_id": "SC0011",
+      "count": 72,
+      "dominant_dg_left": 2,
+      "dominant_dp_left": 2,
+      "order": 12,
+      "phase_sector_mod3": 2,
+      "q_family_tag": "C112_complement_halfsum"
+    },
+    {
+      "class_id": "SC0012",
+      "count": 72,
+      "dominant_dg_left": 2,
+      "dominant_dp_left": 11,
+      "order": 12,
+      "phase_sector_mod3": 2,
+      "q_family_tag": "C112_complement_halfsum"
+    },
+    {
+      "class_id": "SC0013",
+      "count": 32,
+      "dominant_dg_left": 0,
+      "dominant_dp_left": 6,
+      "order": 6,
+      "phase_sector_mod3": 0,
+      "q_family_tag": "B112_line_plus_e000_halfsum"
+    },
+    {
+      "class_id": "SC0014",
+      "count": 32,
+      "dominant_dg_left": 1,
+      "dominant_dp_left": 10,
+      "order": 6,
+      "phase_sector_mod3": 1,
+      "q_family_tag": "B112_line_plus_e000_halfsum"
+    },
+    {
+      "class_id": "SC0015",
+      "count": 32,
+      "dominant_dg_left": 2,
+      "dominant_dp_left": 2,
+      "order": 6,
+      "phase_sector_mod3": 2,
+      "q_family_tag": "B112_line_plus_e000_halfsum"
+    },
+    {
+      "class_id": "SC0016",
+      "count": 32,
+      "dominant_dg_left": 0,
+      "dominant_dp_left": 9,
+      "order": 12,
+      "phase_sector_mod3": 0,
+      "q_family_tag": "B112_line_plus_e000_halfsum"
+    },
+    {
+      "class_id": "SC0017",
+      "count": 32,
+      "dominant_dg_left": 0,
+      "dominant_dp_left": 3,
+      "order": 12,
+      "phase_sector_mod3": 0,
+      "q_family_tag": "B112_line_plus_e000_halfsum"
+    },
+    {
+      "class_id": "SC0018",
+      "count": 32,
+      "dominant_dg_left": 1,
+      "dominant_dp_left": 1,
+      "order": 12,
+      "phase_sector_mod3": 1,
+      "q_family_tag": "B112_line_plus_e000_halfsum"
+    },
+    {
+      "class_id": "SC0019",
+      "count": 32,
+      "dominant_dg_left": 1,
+      "dominant_dp_left": 7,
+      "order": 12,
+      "phase_sector_mod3": 1,
+      "q_family_tag": "B112_line_plus_e000_halfsum"
+    },
+    {
+      "class_id": "SC0020",
+      "count": 32,
+      "dominant_dg_left": 2,
+      "dominant_dp_left": 5,
+      "order": 12,
+      "phase_sector_mod3": 2,
+      "q_family_tag": "B112_line_plus_e000_halfsum"
+    }
+  ]
+}

@@ -1,0 +1,583 @@
+{
+  "A_bg": 0.0,
+  "A_bg_std": 0.0,
+  "A_shell_profile": [
+    {
+      "mean": 0.0,
+      "n": 1,
+      "r": 0
+    },
+    {
+      "mean": 0.0,
+      "n": 26,
+      "r": 1
+    },
+    {
+      "mean": 0.0,
+      "n": 66,
+      "r": 2
+    },
+    {
+      "mean": 0.0,
+      "n": 158,
+      "r": 3
+    },
+    {
+      "mean": 0.0,
+      "n": 234,
+      "r": 4
+    },
+    {
+      "mean": 0.0,
+      "n": 262,
+      "r": 5
+    },
+    {
+      "mean": 0.0,
+      "n": 194,
+      "r": 6
+    },
+    {
+      "mean": 0.0,
+      "n": 194,
+      "r": 7
+    },
+    {
+      "mean": 0.0,
+      "n": 170,
+      "r": 8
+    },
+    {
+      "mean": 0.0,
+      "n": 194,
+      "r": 9
+    },
+    {
+      "mean": 0.0,
+      "n": 178,
+      "r": 10
+    },
+    {
+      "mean": 0.0,
+      "n": 24,
+      "r": 11
+    }
+  ],
+  "A_var_profile": [
+    {
+      "n": 1,
+      "r": 0,
+      "var": 0.0
+    },
+    {
+      "n": 26,
+      "r": 1,
+      "var": 0.0
+    },
+    {
+      "n": 66,
+      "r": 2,
+      "var": 0.0
+    },
+    {
+      "n": 158,
+      "r": 3,
+      "var": 0.0
+    },
+    {
+      "n": 234,
+      "r": 4,
+      "var": 0.0
+    },
+    {
+      "n": 262,
+      "r": 5,
+      "var": 0.0
+    },
+    {
+      "n": 194,
+      "r": 6,
+      "var": 0.0
+    },
+    {
+      "n": 194,
+      "r": 7,
+      "var": 0.0
+    },
+    {
+      "n": 170,
+      "r": 8,
+      "var": 0.0
+    },
+    {
+      "n": 194,
+      "r": 9,
+      "var": 0.0
+    },
+    {
+      "n": 178,
+      "r": 10,
+      "var": 0.0
+    },
+    {
+      "n": 24,
+      "r": 11,
+      "var": 0.0
+    }
+  ],
+  "boundary_mode": "fixed_vacuum",
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "family_activity_summary": {
+    "A16_basis_signed_unit": {
+      "count": 16,
+      "max": 0.925,
+      "mean": 0.8093750000000001,
+      "min": 0.0
+    },
+    "B112_line_plus_e000_halfsum": {
+      "count": 112,
+      "max": 0.8925,
+      "mean": 0.8925,
+      "min": 0.8925
+    },
+    "C112_complement_halfsum": {
+      "count": 112,
+      "max": 0.925,
+      "mean": 0.9250000000000002,
+      "min": 0.925
+    }
+  },
+  "fit_scores": {
+    "rmse_exponential": 2.6253290925755273e-27,
+    "rmse_flat": 1e-12,
+    "rmse_power": 8.077935669463161e-27
+  },
+  "gate_results": {
+    "gate1_delta_peak": false,
+    "gate2_radial_fit": true,
+    "gate3_family_hierarchy": true
+  },
+  "kernel_module": "cog_v3/python/kernel_octavian240_multiplicative_v1.py",
+  "kernel_module_sha256": "4d49033d24dcd1b3ec3cc4367175dc027bfecb8e5afa8710f0dd9856c01155a6",
+  "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "params": {
+    "size_x": 21,
+    "size_y": 9,
+    "size_z": 9,
+    "ticks": 72,
+    "warmup_ticks": 18
+  },
+  "replay_hash": "ed2159894b50cd0f2400acbf6b5a922124667cedd9de5ef39dee1a1a9f00b0a9",
+  "schema_version": "v3_associator_field_probe_v1",
+  "seed_id": "seed_A16_basis_signed_unit_0",
+  "seed_profiles": [
+    {
+      "A_shell_profile": [
+        {
+          "mean": 0.0,
+          "n": 1,
+          "r": 0
+        },
+        {
+          "mean": 0.0,
+          "n": 26,
+          "r": 1
+        },
+        {
+          "mean": 0.0,
+          "n": 66,
+          "r": 2
+        },
+        {
+          "mean": 0.0,
+          "n": 158,
+          "r": 3
+        },
+        {
+          "mean": 0.0,
+          "n": 234,
+          "r": 4
+        },
+        {
+          "mean": 0.0,
+          "n": 262,
+          "r": 5
+        },
+        {
+          "mean": 0.0,
+          "n": 194,
+          "r": 6
+        },
+        {
+          "mean": 0.0,
+          "n": 194,
+          "r": 7
+        },
+        {
+          "mean": 0.0,
+          "n": 170,
+          "r": 8
+        },
+        {
+          "mean": 0.0,
+          "n": 194,
+          "r": 9
+        },
+        {
+          "mean": 0.0,
+          "n": 178,
+          "r": 10
+        },
+        {
+          "mean": 0.0,
+          "n": 24,
+          "r": 11
+        }
+      ],
+      "A_var_profile": [
+        {
+          "n": 1,
+          "r": 0,
+          "var": 0.0
+        },
+        {
+          "n": 26,
+          "r": 1,
+          "var": 0.0
+        },
+        {
+          "n": 66,
+          "r": 2,
+          "var": 0.0
+        },
+        {
+          "n": 158,
+          "r": 3,
+          "var": 0.0
+        },
+        {
+          "n": 234,
+          "r": 4,
+          "var": 0.0
+        },
+        {
+          "n": 262,
+          "r": 5,
+          "var": 0.0
+        },
+        {
+          "n": 194,
+          "r": 6,
+          "var": 0.0
+        },
+        {
+          "n": 194,
+          "r": 7,
+          "var": 0.0
+        },
+        {
+          "n": 170,
+          "r": 8,
+          "var": 0.0
+        },
+        {
+          "n": 194,
+          "r": 9,
+          "var": 0.0
+        },
+        {
+          "n": 178,
+          "r": 10,
+          "var": 0.0
+        },
+        {
+          "n": 24,
+          "r": 11,
+          "var": 0.0
+        }
+      ],
+      "DeltaA_peak": 0.0,
+      "family_tag": "A16_basis_signed_unit",
+      "fit_scores": {
+        "rmse_exponential": 2.6253290925755273e-27,
+        "rmse_flat": 1e-12,
+        "rmse_power": 8.077935669463161e-27
+      },
+      "seed_id": "seed_A16_basis_signed_unit_0",
+      "state_id": 0
+    },
+    {
+      "A_shell_profile": [
+        {
+          "mean": 0.0,
+          "n": 1,
+          "r": 0
+        },
+        {
+          "mean": 0.0,
+          "n": 26,
+          "r": 1
+        },
+        {
+          "mean": 0.0,
+          "n": 66,
+          "r": 2
+        },
+        {
+          "mean": 0.0,
+          "n": 158,
+          "r": 3
+        },
+        {
+          "mean": 0.0,
+          "n": 234,
+          "r": 4
+        },
+        {
+          "mean": 0.0,
+          "n": 262,
+          "r": 5
+        },
+        {
+          "mean": 0.0,
+          "n": 194,
+          "r": 6
+        },
+        {
+          "mean": 0.0,
+          "n": 194,
+          "r": 7
+        },
+        {
+          "mean": 0.0,
+          "n": 170,
+          "r": 8
+        },
+        {
+          "mean": 0.0,
+          "n": 194,
+          "r": 9
+        },
+        {
+          "mean": 0.0,
+          "n": 178,
+          "r": 10
+        },
+        {
+          "mean": 0.0,
+          "n": 24,
+          "r": 11
+        }
+      ],
+      "A_var_profile": [
+        {
+          "n": 1,
+          "r": 0,
+          "var": 0.0
+        },
+        {
+          "n": 26,
+          "r": 1,
+          "var": 0.0
+        },
+        {
+          "n": 66,
+          "r": 2,
+          "var": 0.0
+        },
+        {
+          "n": 158,
+          "r": 3,
+          "var": 0.0
+        },
+        {
+          "n": 234,
+          "r": 4,
+          "var": 0.0
+        },
+        {
+          "n": 262,
+          "r": 5,
+          "var": 0.0
+        },
+        {
+          "n": 194,
+          "r": 6,
+          "var": 0.0
+        },
+        {
+          "n": 194,
+          "r": 7,
+          "var": 0.0
+        },
+        {
+          "n": 170,
+          "r": 8,
+          "var": 0.0
+        },
+        {
+          "n": 194,
+          "r": 9,
+          "var": 0.0
+        },
+        {
+          "n": 178,
+          "r": 10,
+          "var": 0.0
+        },
+        {
+          "n": 24,
+          "r": 11,
+          "var": 0.0
+        }
+      ],
+      "DeltaA_peak": 0.0,
+      "family_tag": "B112_line_plus_e000_halfsum",
+      "fit_scores": {
+        "rmse_exponential": 2.6253290925755273e-27,
+        "rmse_flat": 1e-12,
+        "rmse_power": 8.077935669463161e-27
+      },
+      "seed_id": "seed_B112_line_plus_e000_halfsum_1",
+      "state_id": 1
+    },
+    {
+      "A_shell_profile": [
+        {
+          "mean": 0.0,
+          "n": 1,
+          "r": 0
+        },
+        {
+          "mean": 0.0,
+          "n": 26,
+          "r": 1
+        },
+        {
+          "mean": 0.0,
+          "n": 66,
+          "r": 2
+        },
+        {
+          "mean": 0.0,
+          "n": 158,
+          "r": 3
+        },
+        {
+          "mean": 0.0,
+          "n": 234,
+          "r": 4
+        },
+        {
+          "mean": 0.0,
+          "n": 262,
+          "r": 5
+        },
+        {
+          "mean": 0.0,
+          "n": 194,
+          "r": 6
+        },
+        {
+          "mean": 0.0,
+          "n": 194,
+          "r": 7
+        },
+        {
+          "mean": 0.0,
+          "n": 170,
+          "r": 8
+        },
+        {
+          "mean": 0.0,
+          "n": 194,
+          "r": 9
+        },
+        {
+          "mean": 0.0,
+          "n": 178,
+          "r": 10
+        },
+        {
+          "mean": 0.0,
+          "n": 24,
+          "r": 11
+        }
+      ],
+      "A_var_profile": [
+        {
+          "n": 1,
+          "r": 0,
+          "var": 0.0
+        },
+        {
+          "n": 26,
+          "r": 1,
+          "var": 0.0
+        },
+        {
+          "n": 66,
+          "r": 2,
+          "var": 0.0
+        },
+        {
+          "n": 158,
+          "r": 3,
+          "var": 0.0
+        },
+        {
+          "n": 234,
+          "r": 4,
+          "var": 0.0
+        },
+        {
+          "n": 262,
+          "r": 5,
+          "var": 0.0
+        },
+        {
+          "n": 194,
+          "r": 6,
+          "var": 0.0
+        },
+        {
+          "n": 194,
+          "r": 7,
+          "var": 0.0
+        },
+        {
+          "n": 170,
+          "r": 8,
+          "var": 0.0
+        },
+        {
+          "n": 194,
+          "r": 9,
+          "var": 0.0
+        },
+        {
+          "n": 178,
+          "r": 10,
+          "var": 0.0
+        },
+        {
+          "n": 24,
+          "r": 11,
+          "var": 0.0
+        }
+      ],
+      "DeltaA_peak": 0.0,
+      "family_tag": "C112_complement_halfsum",
+      "fit_scores": {
+        "rmse_exponential": 2.6253290925755273e-27,
+        "rmse_flat": 1e-12,
+        "rmse_power": 8.077935669463161e-27
+      },
+      "seed_id": "seed_C112_complement_halfsum_58",
+      "state_id": 58
+    }
+  ],
+  "source_script": "cog_v3/calc/build_v3_associator_field_probe_v1.py",
+  "source_script_sha256": "5301af710c0d13fecd551ba874a7704fec2fa8d77cbbd41dc3037fa2d5534a79",
+  "stencil_id": "cube26"
+}
