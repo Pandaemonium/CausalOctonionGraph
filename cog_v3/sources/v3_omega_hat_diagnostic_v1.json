@@ -1,0 +1,180 @@
+{
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "diagnostic_flags": {
+    "frequent_sign_inversion": false,
+    "omega_is_primary_driver": true,
+    "small_denominator_primary_cause": false
+  },
+  "global_seed": 1337,
+  "kernel_module": "cog_v3/python/kernel_octavian240_multiplicative_v1.py",
+  "kernel_module_sha256": "4d49033d24dcd1b3ec3cc4367175dc027bfecb8e5afa8710f0dd9856c01155a6",
+  "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "pair_breakdown": [
+    {
+      "count": 2,
+      "median_denominator": 0.18243612843036774,
+      "median_omega_abs_diff": 0.13134193088679358,
+      "median_omega_relative_delta": 0.7199337763677889,
+      "omega_dominant_rate": 1.0,
+      "pair_id": "P_baseline_e_uud_vs_mu_ccs",
+      "sign_flip_rate": 0.0
+    },
+    {
+      "count": 2,
+      "median_denominator": 0.18298037542630669,
+      "median_omega_abs_diff": 0.015465644509375681,
+      "median_omega_relative_delta": 0.0845207824792353,
+      "omega_dominant_rate": 1.0,
+      "pair_id": "P_desync_mu_uud_vs_tau_ccs",
+      "sign_flip_rate": 0.0
+    }
+  ],
+  "panel_artifact": "cog_v3\\sources\\v3_generation_aligned_equivalence_panel_v1.json",
+  "panel_artifact_sha256": "b83ffd667f4fb44342477a043a57e900a4ff7937d252bd9363c8e19ae0ce26db",
+  "panel_script": "cog_v3/calc/build_v3_generation_aligned_equivalence_panel_v1.py",
+  "panel_script_sha256": "7067505d5a227a0a99c253f44c1504efa2369f01fb7bf417109cac5524802cb6",
+  "replay_hash": "ef132289d98617a433e77eed958692c2765301c18b178ebe7e27aa362c701ddb",
+  "schema_version": "v3_omega_hat_diagnostic_v1",
+  "source_script": "cog_v3/calc/build_v3_omega_hat_diagnostic_v1.py",
+  "source_script_sha256": "ba414b7e58664e1aa87e6c69f0bfddbee35a64b54a76cc3e0914d9ac242722e6",
+  "summary": {
+    "delta_metric_medians": {
+      "Omega_hat": 0.4022272794235121,
+      "R_hat": 0.0014884320893548027,
+      "S_stab": 0.0,
+      "T_cycle": 0.0,
+      "V_hat": 0.17295895451860716
+    },
+    "denom_lt_1e2_rate": 0.0,
+    "denom_lt_1e3_rate": 0.0,
+    "denom_lt_5e2_rate": 0.0,
+    "denominator_quantiles": {
+      "p10": 0.18243612843036774,
+      "p50": 0.18243612843036774,
+      "p90": 0.18298037542630669
+    },
+    "median_omega_abs_diff": 0.07340378769808463,
+    "median_omega_denominator": 0.18270825192833723,
+    "median_omega_relative_delta": 0.4022272794235121,
+    "median_omega_share": 0.7527404123831591,
+    "omega_abs_quantiles": {
+      "p10": 0.015465644509375681,
+      "p50": 0.015465644509375681,
+      "p90": 0.13134193088679358
+    },
+    "omega_dominant_rate": 1.0,
+    "omega_relative_quantiles": {
+      "p10": 0.0845207824792353,
+      "p50": 0.0845207824792353,
+      "p90": 0.7199337763677889
+    },
+    "pair_row_count": 4,
+    "sign_flip_rate": 0.0
+  },
+  "top_cases": [
+    {
+      "boundary_mode": "fixed_vacuum",
+      "delta_metrics": {
+        "Omega_hat": 0.7199337763677889,
+        "R_hat": 0.0016947413116193976,
+        "S_stab": 0.0,
+        "T_cycle": 0.0,
+        "V_hat": 0.3286479591319724
+      },
+      "max_metric_name": "Omega_hat",
+      "omega_abs_diff": 0.13134193088679358,
+      "omega_denominator": 0.18243612843036774,
+      "omega_is_max_metric": true,
+      "omega_lhs": 0.051094197543574166,
+      "omega_relative_delta": 0.7199337763677889,
+      "omega_rhs": 0.18243612843036774,
+      "omega_share_of_total_delta": 0.6854707234360746,
+      "omega_symmetric_relative_delta": 0.5624191647873996,
+      "orientation": "x",
+      "pair_id": "P_baseline_e_uud_vs_mu_ccs",
+      "seed_id": 0,
+      "sign_flip": false,
+      "size_x": 15,
+      "size_y": 7,
+      "size_z": 7
+    },
+    {
+      "boundary_mode": "fixed_vacuum",
+      "delta_metrics": {
+        "Omega_hat": 0.7199337763677889,
+        "R_hat": 0.0016947413116193976,
+        "S_stab": 0.0,
+        "T_cycle": 0.0,
+        "V_hat": 0.3286479591319724
+      },
+      "max_metric_name": "Omega_hat",
+      "omega_abs_diff": 0.13134193088679358,
+      "omega_denominator": 0.18243612843036774,
+      "omega_is_max_metric": true,
+      "omega_lhs": 0.051094197543574166,
+      "omega_relative_delta": 0.7199337763677889,
+      "omega_rhs": 0.18243612843036774,
+      "omega_share_of_total_delta": 0.6854707234360746,
+      "omega_symmetric_relative_delta": 0.5624191647873996,
+      "orientation": "x",
+      "pair_id": "P_baseline_e_uud_vs_mu_ccs",
+      "seed_id": 1,
+      "sign_flip": false,
+      "size_x": 15,
+      "size_y": 7,
+      "size_z": 7
+    },
+    {
+      "boundary_mode": "fixed_vacuum",
+      "delta_metrics": {
+        "Omega_hat": 0.0845207824792353,
+        "R_hat": 0.0012821228670902075,
+        "S_stab": 0.0,
+        "T_cycle": 0.0,
+        "V_hat": 0.017269949905241867
+      },
+      "max_metric_name": "Omega_hat",
+      "omega_abs_diff": 0.015465644509375681,
+      "omega_denominator": 0.18298037542630669,
+      "omega_is_max_metric": true,
+      "omega_lhs": 0.18298037542630669,
+      "omega_relative_delta": 0.0845207824792353,
+      "omega_rhs": 0.167514730916931,
+      "omega_share_of_total_delta": 0.8200101013302437,
+      "omega_symmetric_relative_delta": 0.044125136783593984,
+      "orientation": "x",
+      "pair_id": "P_desync_mu_uud_vs_tau_ccs",
+      "seed_id": 0,
+      "sign_flip": false,
+      "size_x": 15,
+      "size_y": 7,
+      "size_z": 7
+    },
+    {
+      "boundary_mode": "fixed_vacuum",
+      "delta_metrics": {
+        "Omega_hat": 0.0845207824792353,
+        "R_hat": 0.0012821228670902075,
+        "S_stab": 0.0,
+        "T_cycle": 0.0,
+        "V_hat": 0.017269949905241867
+      },
+      "max_metric_name": "Omega_hat",
+      "omega_abs_diff": 0.015465644509375681,
+      "omega_denominator": 0.18298037542630669,
+      "omega_is_max_metric": true,
+      "omega_lhs": 0.18298037542630669,
+      "omega_relative_delta": 0.0845207824792353,
+      "omega_rhs": 0.167514730916931,
+      "omega_share_of_total_delta": 0.8200101013302437,
+      "omega_symmetric_relative_delta": 0.044125136783593984,
+      "orientation": "x",
+      "pair_id": "P_desync_mu_uud_vs_tau_ccs",
+      "seed_id": 1,
+      "sign_flip": false,
+      "size_x": 15,
+      "size_y": 7,
+      "size_z": 7
+    }
+  ]
+}

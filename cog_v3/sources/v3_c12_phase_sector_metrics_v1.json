@@ -1,0 +1,114 @@
+{
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "global_seed": 1337,
+  "kernel_module": "cog_v3/python/kernel_octavian240_multiplicative_v1.py",
+  "kernel_module_sha256": "4d49033d24dcd1b3ec3cc4367175dc027bfecb8e5afa8710f0dd9856c01155a6",
+  "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "panels": [
+    {
+      "config": {
+        "boundary_mode": "fixed_vacuum",
+        "channel_policy_id": "uniform_all",
+        "event_order_policy": "synchronous_parallel_v1",
+        "panel_id": "P0_quick_fixed_sync_axial6",
+        "runs_per_trial": 1,
+        "size_x": 11,
+        "size_y": 7,
+        "size_z": 7,
+        "stencil_id": "axial6",
+        "ticks": 24,
+        "warmup_ticks": 6
+      },
+      "metrics": {
+        "A1": 0.0,
+        "A2": -0.028992176714219973,
+        "C3": 0.576372349278315,
+        "L3": 2.3013273459684345,
+        "L3_null_baseline": 1.9740245800497311,
+        "R3": 0.0,
+        "T_counts": [
+          [
+            0,
+            3062,
+            3036
+          ],
+          [
+            2826,
+            0,
+            1506
+          ],
+          [
+            2904,
+            1429,
+            0
+          ]
+        ],
+        "T_probs": [
+          [
+            0.0,
+            0.5021318465070514,
+            0.4978681534929485
+          ],
+          [
+            0.6523545706371191,
+            0.0,
+            0.3476454293628809
+          ],
+          [
+            0.6702054004154165,
+            0.3297945995845834,
+            0.0
+          ]
+        ],
+        "boundary_mode": "fixed_vacuum",
+        "channel_policy_id": "uniform_all",
+        "delta_counts": {
+          "0": 18504,
+          "1": 0,
+          "10": 1118,
+          "11": 0,
+          "2": 1055,
+          "3": 0,
+          "4": 6354,
+          "5": 0,
+          "6": 1582,
+          "7": 0,
+          "8": 6236,
+          "9": 0
+        },
+        "event_order_policy": "synchronous_parallel_v1",
+        "gate_results": {
+          "gate1_dominance": false,
+          "gate2_sector_conservation": true,
+          "gate3_mixing_structure": false,
+          "gate4_signed_asymmetry": true
+        },
+        "mag_counts": {
+          "0": 18504,
+          "1": 0,
+          "2": 2173,
+          "3": 0,
+          "4": 12590,
+          "5": 0,
+          "6": 1582
+        },
+        "panel_id": "P0_quick_fixed_sync_axial6",
+        "runs_per_trial": 1,
+        "size": [
+          11,
+          7,
+          7
+        ],
+        "stencil_id": "axial6",
+        "ticks": 24,
+        "total_events": 34849,
+        "warmup_ticks": 6
+      }
+    }
+  ],
+  "phase_count": 12,
+  "replay_hash": "3bb91a6aa7a120f52faf5bd2e80a54810ebf5375158728f32422dff5688aff5d",
+  "schema_version": "v3_c12_phase_sector_metrics_v1",
+  "source_script": "cog_v3/calc/build_v3_c12_phase_sector_metrics_v1.py",
+  "source_script_sha256": "7a7ffeeb97226582995041154e2b7ca885e90a61bb74689d623430425bc26e6f"
+}

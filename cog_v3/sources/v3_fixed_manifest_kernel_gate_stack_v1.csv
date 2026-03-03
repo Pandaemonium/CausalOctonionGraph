@@ -1,0 +1,4 @@
+kernel_candidate_id,channel_policy_id,score_total,gate0,gate1,gate2,gate3,gate4,gate5,detector_exclusivity,anisotropy_ratio,lorentz_spread,A_chi,clock_signature_drift,clock_collapse_flag,clock_noise_plateau_flag
+K0_cube26_uniform_v1,uniform_all,0.6847358493924326,True,True,True,True,True,False,0.6666666666666667,1.0,0.0,-0.3333333333333333,0.5193081727423414,False,False
+K2_cube26_stochastic_v1,stochastic_gating_v1,0.6481962468857972,True,True,True,True,True,False,0.33333333333333337,1.0,0.0,-0.3333333333333333,0.21803753114202676,False,False
+K1_cube26_det_cycle_v1,deterministic_cycle_v1,0.5875852800612121,True,True,True,True,False,False,0.33333333333333337,1.0,0.0,0.0,0.26560894802175844,False,False

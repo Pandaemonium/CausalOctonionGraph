@@ -1,0 +1,10 @@
+panel_id,g_from,g_to,probability,count
+P0_quick_fixed_sync_axial6,0,0,0.0,0
+P0_quick_fixed_sync_axial6,0,1,0.5021318465070514,3062
+P0_quick_fixed_sync_axial6,0,2,0.4978681534929485,3036
+P0_quick_fixed_sync_axial6,1,0,0.6523545706371191,2826
+P0_quick_fixed_sync_axial6,1,1,0.0,0
+P0_quick_fixed_sync_axial6,1,2,0.3476454293628809,1506
+P0_quick_fixed_sync_axial6,2,0,0.6702054004154165,2904
+P0_quick_fixed_sync_axial6,2,1,0.3297945995845834,1429
+P0_quick_fixed_sync_axial6,2,2,0.0,0

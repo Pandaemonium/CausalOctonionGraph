@@ -1,0 +1,1395 @@
+{
+  "backend": "numba_cpu",
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "event_order_policy": "synchronous_parallel_v1",
+  "global_seed": 1337,
+  "kernel_module": "cog_v3/python/kernel_octavian240_multiplicative_v1.py",
+  "kernel_module_sha256": "4d49033d24dcd1b3ec3cc4367175dc027bfecb8e5afa8710f0dd9856c01155a6",
+  "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "replay_hash": "ff6e9f9478f655656b58f6769c559a55f0b1805bef6c73ac31f2d7aad8a3cb3b",
+  "rows": [
+    {
+      "A_C": 0.33333333333333326,
+      "A_chi": -0.3333333333333333,
+      "anisotropy_metrics": {
+        "anisotropy_ratio_max_over_min": 1.0,
+        "axis_rows": [
+          {
+            "axis": "x",
+            "detector_exclusivity": 0.125,
+            "front_balance": 0.0,
+            "kick_id": 182,
+            "mean_first_arrival_tick": 1.0
+          },
+          {
+            "axis": "y",
+            "detector_exclusivity": 0.0,
+            "front_balance": 0.0,
+            "kick_id": 149,
+            "mean_first_arrival_tick": 1.0
+          },
+          {
+            "axis": "z",
+            "detector_exclusivity": 0.125,
+            "front_balance": 0.0,
+            "kick_id": 123,
+            "mean_first_arrival_tick": 1.0
+          }
+        ],
+        "speed_proxy": {
+          "x": 7.0,
+          "y": 7.0,
+          "z": 7.0
+        }
+      },
+      "best_candidate": {
+        "classification": "no_lock",
+        "kick_label": "1*e001",
+        "mean_support_match_ratio": 0.0,
+        "motion_class": "propagating",
+        "period_N": null,
+        "score": 0.35,
+        "seed_family": "sheet_x",
+        "seed_state_label": "1*e111",
+        "shift_dx": null,
+        "trial_id": "photon_sheet_x_e111_kick_e001"
+      },
+      "channel_policy_id": "uniform_all",
+      "clock_metrics": {
+        "clock_collapse_flag": false,
+        "clock_noise_plateau_flag": false,
+        "clock_quality": 0.4806918272576586,
+        "clock_signature_drift": 0.5193081727423414,
+        "clock_signature_series": [
+          [
+            0.0,
+            0.6666666666666666,
+            0.0,
+            0.3333333333333333,
+            0.0
+          ],
+          [
+            0.0,
+            0.7272727272727273,
+            0.0,
+            0.2727272727272727,
+            0.0
+          ],
+          [
+            0.0,
+            0.48,
+            0.0,
+            0.52,
+            0.0
+          ],
+          [
+            0.0,
+            0.782608695652174,
+            0.0,
+            0.21739130434782608,
+            0.0
+          ],
+          [
+            0.0,
+            0.7272727272727273,
+            0.0,
+            0.2727272727272727,
+            0.0
+          ],
+          [
+            0.0,
+            0.7741935483870968,
+            0.0,
+            0.22580645161290322,
+            0.0
+          ],
+          [
+            0.0,
+            0.4444444444444444,
+            0.0,
+            0.5555555555555556,
+            0.0
+          ],
+          [
+            0.0,
+            0.6666666666666666,
+            0.0,
+            0.3333333333333333,
+            0.0
+          ],
+          [
+            0.0,
+            0.5714285714285714,
+            0.0,
+            0.42857142857142855,
+            0.0
+          ],
+          [
+            0.0,
+            0.7272727272727273,
+            0.0,
+            0.2727272727272727,
+            0.0
+          ],
+          [
+            0.0,
+            0.6857142857142857,
+            0.0,
+            0.3142857142857143,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.3157894736842105,
+            0.0,
+            0.6842105263157895,
+            0.0
+          ],
+          [
+            0.0,
+            0.8571428571428571,
+            0.0,
+            0.14285714285714285,
+            0.0
+          ],
+          [
+            0.0,
+            0.7741935483870968,
+            0.0,
+            0.22580645161290322,
+            0.0
+          ],
+          [
+            0.0,
+            0.782608695652174,
+            0.0,
+            0.21739130434782608,
+            0.0
+          ],
+          [
+            0.0,
+            0.6857142857142857,
+            0.0,
+            0.3142857142857143,
+            0.0
+          ],
+          [
+            0.0,
+            0.8780487804878049,
+            0.0,
+            0.12195121951219512,
+            0.0
+          ],
+          [
+            0.0,
+            0.6857142857142857,
+            0.0,
+            0.3142857142857143,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.35294117647058826,
+            0.0,
+            0.6470588235294118,
+            0.0
+          ],
+          [
+            0.0,
+            0.72,
+            0.0,
+            0.28,
+            0.0
+          ],
+          [
+            0.0,
+            0.48,
+            0.0,
+            0.52,
+            0.0
+          ],
+          [
+            0.0,
+            0.6666666666666666,
+            0.0,
+            0.3333333333333333,
+            0.0
+          ],
+          [
+            0.0,
+            0.72,
+            0.0,
+            0.28,
+            0.0
+          ],
+          [
+            0.0,
+            0.8571428571428571,
+            0.0,
+            0.14285714285714285,
+            0.0
+          ],
+          [
+            0.0,
+            0.6206896551724138,
+            0.0,
+            0.3793103448275862,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.72,
+            0.0,
+            0.28,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.3157894736842105,
+            0.0,
+            0.6842105263157895,
+            0.0
+          ]
+        ],
+        "first_repeat": null
+      },
+      "gate_results": {
+        "gate0_contract": true,
+        "gate1_transport": true,
+        "gate2_detector": true,
+        "gate3_isotropy_lorentz": true,
+        "gate4_chirality": true,
+        "gate5_clock_structure": false
+      },
+      "kernel_candidate_id": "K0_cube26_uniform_v1",
+      "lorentz_metrics": {
+        "lorentz_distance_set": [
+          13,
+          17
+        ],
+        "lorentz_fit_residual_summary": {
+          "x": 4.440892098500626e-16,
+          "y": 4.440892098500626e-16,
+          "z": 1.5700924586837752e-16
+        },
+        "lorentz_fit_slope_by_direction": {
+          "x": 0.04999999999999996,
+          "y": 0.04999999999999996,
+          "z": -6.827397543720652e-17
+        },
+        "lorentz_front_tensor_eigen_spread": 0.0,
+        "lorentz_scale_comparison": [
+          {
+            "arrival": 1.0,
+            "axis": "x",
+            "detector_exclusivity": 0.30000000000000004,
+            "distance": 3,
+            "size": 13
+          },
+          {
+            "arrival": 1.1,
+            "axis": "x",
+            "detector_exclusivity": 0.4,
+            "distance": 5,
+            "size": 17
+          },
+          {
+            "arrival": 1.0,
+            "axis": "y",
+            "detector_exclusivity": 0.5,
+            "distance": 3,
+            "size": 13
+          },
+          {
+            "arrival": 1.1,
+            "axis": "y",
+            "detector_exclusivity": 0.19999999999999996,
+            "distance": 5,
+            "size": 17
+          },
+          {
+            "arrival": 1.0,
+            "axis": "z",
+            "detector_exclusivity": 0.19999999999999996,
+            "distance": 3,
+            "size": 13
+          },
+          {
+            "arrival": 1.0,
+            "axis": "z",
+            "detector_exclusivity": 0.09999999999999998,
+            "distance": 5,
+            "size": 17
+          }
+        ]
+      },
+      "photon_probe": {
+        "backend": "numba_cpu",
+        "both_hit_fraction": 0.3333333333333333,
+        "detector_exclusivity": 0.6666666666666667,
+        "double_hit_rate": 0.3333333333333333,
+        "front_balance": 0.3333333333333333,
+        "left_hit_fraction": 0.3333333333333333,
+        "mean_first_arrival_tick": 1.0,
+        "mean_first_hit_delta_ticks": 0.0,
+        "neither_hit_fraction": 0.0,
+        "params": {
+          "axis": "x",
+          "channel_policy_id": "uniform_all",
+          "detector_margin": 2,
+          "global_seed": 9346,
+          "kick_id": 182,
+          "policy_seed": 8338,
+          "runs": 6,
+          "seed_state_id": 121,
+          "size_x": 17,
+          "size_y": 17,
+          "size_z": 17,
+          "ticks": 56,
+          "vacuum_noise_prob": 0.002
+        },
+        "right_hit_fraction": 0.6666666666666666,
+        "runs": [
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": null,
+            "run_id": 0
+          },
+          {
+            "left_first_tick": null,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 1
+          },
+          {
+            "left_first_tick": null,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 2
+          },
+          {
+            "left_first_tick": null,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 3
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 4
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 5
+          }
+        ],
+        "wave_transport_class": "one_front_dominant"
+      },
+      "probe_manifest": {
+        "axis": "x",
+        "channel_policy_id": "uniform_all",
+        "detector_margin": 2,
+        "global_seed": 9346,
+        "kick_id": 182,
+        "policy_seed": 8338,
+        "runs": 6,
+        "seed_state_id": 121,
+        "size_x": 17,
+        "size_y": 17,
+        "size_z": 17,
+        "ticks": 56,
+        "vacuum_noise_prob": 0.002
+      },
+      "scan_checks": {
+        "any_propagating": true,
+        "any_recurrence": false,
+        "best_score": 0.35,
+        "trial_count": 3
+      },
+      "scan_manifest": {
+        "channel_policy_id": "uniform_all",
+        "global_seed": 6340,
+        "max_trials": 3,
+        "policy_seed": 5436,
+        "size_x": 19,
+        "size_y": 9,
+        "size_z": 9,
+        "stencil_id": "cube26",
+        "thin_step": 4,
+        "ticks": 36
+      },
+      "scan_score": 0.35,
+      "score_total": 0.6847358493924326,
+      "stencil_id": "cube26"
+    },
+    {
+      "A_C": 0.6666666666666666,
+      "A_chi": -0.3333333333333333,
+      "anisotropy_metrics": {
+        "anisotropy_ratio_max_over_min": 1.0,
+        "axis_rows": [
+          {
+            "axis": "x",
+            "detector_exclusivity": 0.25,
+            "front_balance": 0.0,
+            "kick_id": 182,
+            "mean_first_arrival_tick": 1.0
+          },
+          {
+            "axis": "y",
+            "detector_exclusivity": 0.25,
+            "front_balance": 0.25,
+            "kick_id": 149,
+            "mean_first_arrival_tick": 1.0
+          },
+          {
+            "axis": "z",
+            "detector_exclusivity": 0.125,
+            "front_balance": 0.25,
+            "kick_id": 123,
+            "mean_first_arrival_tick": 1.0
+          }
+        ],
+        "speed_proxy": {
+          "x": 7.0,
+          "y": 7.0,
+          "z": 7.0
+        }
+      },
+      "best_candidate": {
+        "classification": "no_lock",
+        "kick_label": "-1/2*e000 + 1/2*e001 + -1/2*e010 + 1/2*e110",
+        "mean_support_match_ratio": 0.0,
+        "motion_class": "propagating",
+        "period_N": null,
+        "score": 0.35,
+        "seed_family": "sheet_x",
+        "seed_state_label": "-1/2*e011 + 1/2*e100 + 1/2*e101 + 1/2*e111",
+        "shift_dx": null,
+        "trial_id": "rand_10_sheet_x"
+      },
+      "channel_policy_id": "stochastic_gating_v1",
+      "clock_metrics": {
+        "clock_collapse_flag": false,
+        "clock_noise_plateau_flag": false,
+        "clock_quality": 0.7819624688579733,
+        "clock_signature_drift": 0.21803753114202676,
+        "clock_signature_series": [
+          [
+            0.0,
+            0.41931843827578424,
+            0.0,
+            0.5806815617242157,
+            0.0
+          ],
+          [
+            0.0,
+            0.46951888418743143,
+            0.0,
+            0.5304811158125685,
+            0.0
+          ],
+          [
+            0.0,
+            0.4170396154483673,
+            0.0,
+            0.5829603845516327,
+            0.0
+          ],
+          [
+            0.0,
+            0.41851919897115564,
+            0.0,
+            0.5814808010288444,
+            0.0
+          ],
+          [
+            0.0,
+            0.3514226231783484,
+            0.0,
+            0.6485773768216516,
+            0.0
+          ],
+          [
+            0.0,
+            0.4966630451652957,
+            0.0,
+            0.5033369548347043,
+            0.0
+          ],
+          [
+            0.0,
+            0.41072239890958656,
+            0.0,
+            0.5892776010904135,
+            0.0
+          ],
+          [
+            0.0,
+            0.5467863028749314,
+            0.0,
+            0.45321369712506865,
+            0.0
+          ],
+          [
+            0.0,
+            0.4559051057246003,
+            0.0,
+            0.5440948942753997,
+            0.0
+          ],
+          [
+            0.0,
+            0.5466126230457441,
+            0.0,
+            0.45338737695425596,
+            0.0
+          ],
+          [
+            0.0,
+            0.43162953254696373,
+            0.0,
+            0.5683704674530362,
+            0.0
+          ],
+          [
+            0.0,
+            0.4940239043824701,
+            0.0,
+            0.5059760956175299,
+            0.0
+          ],
+          [
+            0.0,
+            0.5721712008317449,
+            0.0,
+            0.42782879916825506,
+            0.0
+          ],
+          [
+            0.0,
+            0.8879221048270147,
+            0.0,
+            0.11207789517298529,
+            0.0
+          ],
+          [
+            0.0,
+            0.488453231433793,
+            0.0,
+            0.5115467685662071,
+            0.0
+          ],
+          [
+            0.0,
+            0.474773031701146,
+            0.0,
+            0.525226968298854,
+            0.0
+          ],
+          [
+            0.0,
+            0.4908616187989556,
+            0.0,
+            0.5091383812010444,
+            0.0
+          ],
+          [
+            0.0,
+            0.3865987339817817,
+            0.0,
+            0.6134012660182183,
+            0.0
+          ],
+          [
+            0.0,
+            0.6225941422594142,
+            0.0,
+            0.37740585774058577,
+            0.0
+          ],
+          [
+            0.0,
+            0.48032103719709834,
+            0.0,
+            0.5196789628029017,
+            0.0
+          ],
+          [
+            0.0,
+            0.43092561219775144,
+            0.0,
+            0.5690743878022486,
+            0.0
+          ],
+          [
+            0.0,
+            0.44475437780877114,
+            0.0,
+            0.5552456221912289,
+            0.0
+          ],
+          [
+            0.0,
+            0.32160804020100503,
+            0.0,
+            0.678391959798995,
+            0.0
+          ],
+          [
+            0.0,
+            0.35281414495883384,
+            0.0,
+            0.6471858550411661,
+            0.0
+          ],
+          [
+            0.0,
+            0.622383670645217,
+            0.0,
+            0.3776163293547829,
+            0.0
+          ],
+          [
+            0.0,
+            0.5147736976942784,
+            0.0,
+            0.4852263023057216,
+            0.0
+          ],
+          [
+            0.0,
+            0.5282211617574462,
+            0.0,
+            0.4717788382425539,
+            0.0
+          ],
+          [
+            0.0,
+            0.4146159582401193,
+            0.0,
+            0.5853840417598807,
+            0.0
+          ],
+          [
+            0.0,
+            0.4992978623810267,
+            0.0,
+            0.5007021376189733,
+            0.0
+          ],
+          [
+            0.0,
+            0.3712238302655613,
+            0.0,
+            0.6287761697344386,
+            0.0
+          ],
+          [
+            0.0,
+            0.35114729829755736,
+            0.0,
+            0.6488527017024426,
+            0.0
+          ],
+          [
+            0.0,
+            0.5180388529139686,
+            0.0,
+            0.48196114708603144,
+            0.0
+          ],
+          [
+            0.0,
+            0.3541054584815216,
+            0.0,
+            0.6458945415184785,
+            0.0
+          ]
+        ],
+        "first_repeat": null
+      },
+      "gate_results": {
+        "gate0_contract": true,
+        "gate1_transport": true,
+        "gate2_detector": true,
+        "gate3_isotropy_lorentz": true,
+        "gate4_chirality": true,
+        "gate5_clock_structure": false
+      },
+      "kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "lorentz_metrics": {
+        "lorentz_distance_set": [
+          13,
+          17
+        ],
+        "lorentz_fit_residual_summary": {
+          "x": 4.440892098500626e-16,
+          "y": 4.440892098500626e-16,
+          "z": 1.5700924586837752e-16
+        },
+        "lorentz_fit_slope_by_direction": {
+          "x": 0.04999999999999996,
+          "y": 0.04999999999999996,
+          "z": -6.827397543720652e-17
+        },
+        "lorentz_front_tensor_eigen_spread": 0.0,
+        "lorentz_scale_comparison": [
+          {
+            "arrival": 1.0,
+            "axis": "x",
+            "detector_exclusivity": 0.30000000000000004,
+            "distance": 3,
+            "size": 13
+          },
+          {
+            "arrival": 1.1,
+            "axis": "x",
+            "detector_exclusivity": 0.4,
+            "distance": 5,
+            "size": 17
+          },
+          {
+            "arrival": 1.0,
+            "axis": "y",
+            "detector_exclusivity": 0.5,
+            "distance": 3,
+            "size": 13
+          },
+          {
+            "arrival": 1.1,
+            "axis": "y",
+            "detector_exclusivity": 0.19999999999999996,
+            "distance": 5,
+            "size": 17
+          },
+          {
+            "arrival": 1.0,
+            "axis": "z",
+            "detector_exclusivity": 0.19999999999999996,
+            "distance": 3,
+            "size": 13
+          },
+          {
+            "arrival": 1.0,
+            "axis": "z",
+            "detector_exclusivity": 0.09999999999999998,
+            "distance": 5,
+            "size": 17
+          }
+        ]
+      },
+      "photon_probe": {
+        "backend": "numba_cpu",
+        "both_hit_fraction": 0.6666666666666666,
+        "detector_exclusivity": 0.33333333333333337,
+        "double_hit_rate": 0.6666666666666666,
+        "front_balance": 0.3333333333333333,
+        "left_hit_fraction": 0.3333333333333333,
+        "mean_first_arrival_tick": 1.0,
+        "mean_first_hit_delta_ticks": 0.0,
+        "neither_hit_fraction": 0.0,
+        "params": {
+          "axis": "x",
+          "channel_policy_id": "stochastic_gating_v1",
+          "detector_margin": 2,
+          "global_seed": 9380,
+          "kick_id": 182,
+          "policy_seed": 8372,
+          "runs": 6,
+          "seed_state_id": 121,
+          "size_x": 17,
+          "size_y": 17,
+          "size_z": 17,
+          "ticks": 56,
+          "vacuum_noise_prob": 0.002
+        },
+        "right_hit_fraction": 0.6666666666666666,
+        "runs": [
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 0
+          },
+          {
+            "left_first_tick": null,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 1
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 2
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 3
+          },
+          {
+            "left_first_tick": null,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 4
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 5
+          }
+        ],
+        "wave_transport_class": "one_front_dominant"
+      },
+      "probe_manifest": {
+        "axis": "x",
+        "channel_policy_id": "stochastic_gating_v1",
+        "detector_margin": 2,
+        "global_seed": 9380,
+        "kick_id": 182,
+        "policy_seed": 8372,
+        "runs": 6,
+        "seed_state_id": 121,
+        "size_x": 17,
+        "size_y": 17,
+        "size_z": 17,
+        "ticks": 56,
+        "vacuum_noise_prob": 0.002
+      },
+      "scan_checks": {
+        "any_propagating": true,
+        "any_recurrence": false,
+        "best_score": 0.35,
+        "trial_count": 3
+      },
+      "scan_manifest": {
+        "channel_policy_id": "stochastic_gating_v1",
+        "global_seed": 6374,
+        "max_trials": 3,
+        "policy_seed": 5470,
+        "size_x": 19,
+        "size_y": 9,
+        "size_z": 9,
+        "stencil_id": "cube26",
+        "thin_step": 4,
+        "ticks": 36
+      },
+      "scan_score": 0.35,
+      "score_total": 0.6481962468857972,
+      "stencil_id": "cube26"
+    },
+    {
+      "A_C": 0.6666666666666666,
+      "A_chi": 0.0,
+      "anisotropy_metrics": {
+        "anisotropy_ratio_max_over_min": 1.0,
+        "axis_rows": [
+          {
+            "axis": "x",
+            "detector_exclusivity": 0.125,
+            "front_balance": 0.0,
+            "kick_id": 182,
+            "mean_first_arrival_tick": 1.0
+          },
+          {
+            "axis": "y",
+            "detector_exclusivity": 0.25,
+            "front_balance": 0.25,
+            "kick_id": 149,
+            "mean_first_arrival_tick": 1.0
+          },
+          {
+            "axis": "z",
+            "detector_exclusivity": 0.25,
+            "front_balance": 0.0,
+            "kick_id": 123,
+            "mean_first_arrival_tick": 1.0
+          }
+        ],
+        "speed_proxy": {
+          "x": 7.0,
+          "y": 7.0,
+          "z": 7.0
+        }
+      },
+      "best_candidate": {
+        "classification": "no_lock",
+        "kick_label": "1*e010",
+        "mean_support_match_ratio": 0.0,
+        "motion_class": "propagating",
+        "period_N": null,
+        "score": 0.23739754098360658,
+        "seed_family": "sheet_y",
+        "seed_state_label": "1*e111",
+        "shift_dx": null,
+        "trial_id": "photon_sheet_y_e111_kick_e010"
+      },
+      "channel_policy_id": "deterministic_cycle_v1",
+      "clock_metrics": {
+        "clock_collapse_flag": false,
+        "clock_noise_plateau_flag": false,
+        "clock_quality": 0.7343910519782415,
+        "clock_signature_drift": 0.26560894802175844,
+        "clock_signature_series": [
+          [
+            0.0,
+            0.2989829207445788,
+            0.0,
+            0.7010170792554212,
+            0.0
+          ],
+          [
+            0.0,
+            0.2920830130668716,
+            0.0,
+            0.7079169869331283,
+            0.0
+          ],
+          [
+            0.0,
+            0.5156708352632392,
+            0.0,
+            0.48432916473676085,
+            0.0
+          ],
+          [
+            0.0,
+            0.42920447351761976,
+            0.0,
+            0.5707955264823803,
+            0.0
+          ],
+          [
+            0.0,
+            0.4506431117309778,
+            0.0,
+            0.5493568882690222,
+            0.0
+          ],
+          [
+            0.0,
+            0.6213953488372093,
+            0.0,
+            0.3786046511627907,
+            0.0
+          ],
+          [
+            0.0,
+            0.33765871354820703,
+            0.0,
+            0.6623412864517929,
+            0.0
+          ],
+          [
+            0.0,
+            0.47100446085217657,
+            0.0,
+            0.5289955391478234,
+            0.0
+          ],
+          [
+            0.0,
+            0.46757210437967345,
+            0.0,
+            0.5324278956203266,
+            0.0
+          ],
+          [
+            0.0,
+            0.36264896666163826,
+            0.0,
+            0.6373510333383617,
+            0.0
+          ],
+          [
+            0.0,
+            0.3358822680709854,
+            0.0,
+            0.6641177319290146,
+            0.0
+          ],
+          [
+            0.0,
+            0.39007645498517707,
+            0.0,
+            0.6099235450148229,
+            0.0
+          ],
+          [
+            0.0,
+            0.37258716145443666,
+            0.0,
+            0.6274128385455634,
+            0.0
+          ],
+          [
+            0.0,
+            0.45991242639287333,
+            0.0,
+            0.5400875736071267,
+            0.0
+          ],
+          [
+            0.0,
+            0.5138813282525857,
+            0.0,
+            0.48611867174741424,
+            0.0
+          ],
+          [
+            0.0,
+            0.8794652182995613,
+            0.0,
+            0.12053478170043869,
+            0.0
+          ],
+          [
+            0.0,
+            0.3152987710128549,
+            0.0,
+            0.684701228987145,
+            0.0
+          ],
+          [
+            0.0,
+            0.8562327458059036,
+            0.0,
+            0.14376725419409642,
+            0.0
+          ],
+          [
+            0.0,
+            0.38672931795528975,
+            0.0,
+            0.6132706820447102,
+            0.0
+          ],
+          [
+            0.0,
+            0.381657280772325,
+            0.0,
+            0.618342719227675,
+            0.0
+          ],
+          [
+            0.0,
+            0.34301299534734475,
+            0.0,
+            0.6569870046526552,
+            0.0
+          ],
+          [
+            0.0,
+            0.32885595182955074,
+            0.0,
+            0.6711440481704493,
+            0.0
+          ],
+          [
+            0.0,
+            0.36680715012352855,
+            0.0,
+            0.6331928498764714,
+            0.0
+          ],
+          [
+            0.0,
+            0.33026664587556526,
+            0.0,
+            0.6697333541244347,
+            0.0
+          ],
+          [
+            0.0,
+            0.3269762701994468,
+            0.0,
+            0.6730237298005532,
+            0.0
+          ],
+          [
+            0.0,
+            0.32863325422309086,
+            0.0,
+            0.6713667457769091,
+            0.0
+          ],
+          [
+            0.0,
+            0.5234530175706646,
+            0.0,
+            0.47654698242933535,
+            0.0
+          ],
+          [
+            0.0,
+            0.5265351932018598,
+            0.0,
+            0.4734648067981401,
+            0.0
+          ],
+          [
+            0.0,
+            0.384465437097016,
+            0.0,
+            0.6155345629029839,
+            0.0
+          ],
+          [
+            0.0,
+            0.606009736444519,
+            0.0,
+            0.39399026355548095,
+            0.0
+          ],
+          [
+            0.0,
+            0.3347576248710771,
+            0.0,
+            0.6652423751289229,
+            0.0
+          ],
+          [
+            0.0,
+            0.3871333427802182,
+            0.0,
+            0.6128666572197817,
+            0.0
+          ],
+          [
+            0.0,
+            0.3743613562470971,
+            0.0,
+            0.6256386437529029,
+            0.0
+          ]
+        ],
+        "first_repeat": null
+      },
+      "gate_results": {
+        "gate0_contract": true,
+        "gate1_transport": true,
+        "gate2_detector": true,
+        "gate3_isotropy_lorentz": true,
+        "gate4_chirality": false,
+        "gate5_clock_structure": false
+      },
+      "kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "lorentz_metrics": {
+        "lorentz_distance_set": [
+          13,
+          17
+        ],
+        "lorentz_fit_residual_summary": {
+          "x": 4.440892098500626e-16,
+          "y": 4.440892098500626e-16,
+          "z": 1.5700924586837752e-16
+        },
+        "lorentz_fit_slope_by_direction": {
+          "x": 0.04999999999999996,
+          "y": 0.04999999999999996,
+          "z": -6.827397543720652e-17
+        },
+        "lorentz_front_tensor_eigen_spread": 0.0,
+        "lorentz_scale_comparison": [
+          {
+            "arrival": 1.0,
+            "axis": "x",
+            "detector_exclusivity": 0.30000000000000004,
+            "distance": 3,
+            "size": 13
+          },
+          {
+            "arrival": 1.1,
+            "axis": "x",
+            "detector_exclusivity": 0.4,
+            "distance": 5,
+            "size": 17
+          },
+          {
+            "arrival": 1.0,
+            "axis": "y",
+            "detector_exclusivity": 0.5,
+            "distance": 3,
+            "size": 13
+          },
+          {
+            "arrival": 1.1,
+            "axis": "y",
+            "detector_exclusivity": 0.19999999999999996,
+            "distance": 5,
+            "size": 17
+          },
+          {
+            "arrival": 1.0,
+            "axis": "z",
+            "detector_exclusivity": 0.19999999999999996,
+            "distance": 3,
+            "size": 13
+          },
+          {
+            "arrival": 1.0,
+            "axis": "z",
+            "detector_exclusivity": 0.09999999999999998,
+            "distance": 5,
+            "size": 17
+          }
+        ]
+      },
+      "photon_probe": {
+        "backend": "numba_cpu",
+        "both_hit_fraction": 0.6666666666666666,
+        "detector_exclusivity": 0.33333333333333337,
+        "double_hit_rate": 0.6666666666666666,
+        "front_balance": 0.0,
+        "left_hit_fraction": 0.5,
+        "mean_first_arrival_tick": 1.0,
+        "mean_first_hit_delta_ticks": 0.0,
+        "neither_hit_fraction": 0.0,
+        "params": {
+          "axis": "x",
+          "channel_policy_id": "deterministic_cycle_v1",
+          "detector_margin": 2,
+          "global_seed": 9363,
+          "kick_id": 182,
+          "policy_seed": 8355,
+          "runs": 6,
+          "seed_state_id": 121,
+          "size_x": 17,
+          "size_y": 17,
+          "size_z": 17,
+          "ticks": 56,
+          "vacuum_noise_prob": 0.002
+        },
+        "right_hit_fraction": 0.5,
+        "runs": [
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 0
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 1
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": null,
+            "run_id": 2
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "left",
+            "right_first_tick": 1,
+            "run_id": 3
+          },
+          {
+            "left_first_tick": 1,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 4
+          },
+          {
+            "left_first_tick": null,
+            "outcome": "right",
+            "right_first_tick": 1,
+            "run_id": 5
+          }
+        ],
+        "wave_transport_class": "two_front_balanced"
+      },
+      "probe_manifest": {
+        "axis": "x",
+        "channel_policy_id": "deterministic_cycle_v1",
+        "detector_margin": 2,
+        "global_seed": 9363,
+        "kick_id": 182,
+        "policy_seed": 8355,
+        "runs": 6,
+        "seed_state_id": 121,
+        "size_x": 17,
+        "size_y": 17,
+        "size_z": 17,
+        "ticks": 56,
+        "vacuum_noise_prob": 0.002
+      },
+      "scan_checks": {
+        "any_propagating": true,
+        "any_recurrence": false,
+        "best_score": 0.23739754098360658,
+        "trial_count": 3
+      },
+      "scan_manifest": {
+        "channel_policy_id": "deterministic_cycle_v1",
+        "global_seed": 6357,
+        "max_trials": 3,
+        "policy_seed": 5453,
+        "size_x": 19,
+        "size_y": 9,
+        "size_z": 9,
+        "stencil_id": "cube26",
+        "thin_step": 4,
+        "ticks": 36
+      },
+      "scan_score": 0.23739754098360658,
+      "score_total": 0.5875852800612121,
+      "stencil_id": "cube26"
+    }
+  ],
+  "schema_version": "v3_fixed_manifest_kernel_gate_stack_v1",
+  "source_script": "cog_v3/calc/build_v3_fixed_manifest_kernel_gate_stack_v1.py",
+  "source_script_sha256": "6abdbbca13b285fd4d578ccd3ac6195b5a415aceb5657cd81c84398fa009e2fa"
+}

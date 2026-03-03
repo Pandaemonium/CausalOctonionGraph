@@ -1,0 +1,1120 @@
+{
+  "backend": "numba_cpu",
+  "candidate_rows": [
+    {
+      "channel_policy_id": "uniform_all",
+      "component_status": {
+        "clock_collapse_ok": true,
+        "clock_drift_ok": false,
+        "clock_noise_ok": true,
+        "fail_reasons": [
+          "scan_any_recurrence_false",
+          "clock_signature_drift_gt_0p35"
+        ],
+        "gate5_expected_from_components": false,
+        "scan_recurrence_ok": false
+      },
+      "kernel_candidate_id": "K0_cube26_uniform_v1",
+      "likely_bottlenecks": [
+        "primary:manifest_recurrence_absent_seed_sensitive",
+        "primary:clock_signature_drift_high"
+      ],
+      "manifest_clock_metrics": {
+        "clock_collapse_flag": false,
+        "clock_noise_plateau_flag": false,
+        "clock_quality": 0.4806918272576586,
+        "clock_signature_drift": 0.5193081727423414,
+        "clock_signature_series": [
+          [
+            0.0,
+            0.6666666666666666,
+            0.0,
+            0.3333333333333333,
+            0.0
+          ],
+          [
+            0.0,
+            0.7272727272727273,
+            0.0,
+            0.2727272727272727,
+            0.0
+          ],
+          [
+            0.0,
+            0.48,
+            0.0,
+            0.52,
+            0.0
+          ],
+          [
+            0.0,
+            0.782608695652174,
+            0.0,
+            0.21739130434782608,
+            0.0
+          ],
+          [
+            0.0,
+            0.7272727272727273,
+            0.0,
+            0.2727272727272727,
+            0.0
+          ],
+          [
+            0.0,
+            0.7741935483870968,
+            0.0,
+            0.22580645161290322,
+            0.0
+          ],
+          [
+            0.0,
+            0.4444444444444444,
+            0.0,
+            0.5555555555555556,
+            0.0
+          ],
+          [
+            0.0,
+            0.6666666666666666,
+            0.0,
+            0.3333333333333333,
+            0.0
+          ],
+          [
+            0.0,
+            0.5714285714285714,
+            0.0,
+            0.42857142857142855,
+            0.0
+          ],
+          [
+            0.0,
+            0.7272727272727273,
+            0.0,
+            0.2727272727272727,
+            0.0
+          ],
+          [
+            0.0,
+            0.6857142857142857,
+            0.0,
+            0.3142857142857143,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.3157894736842105,
+            0.0,
+            0.6842105263157895,
+            0.0
+          ],
+          [
+            0.0,
+            0.8571428571428571,
+            0.0,
+            0.14285714285714285,
+            0.0
+          ],
+          [
+            0.0,
+            0.7741935483870968,
+            0.0,
+            0.22580645161290322,
+            0.0
+          ],
+          [
+            0.0,
+            0.782608695652174,
+            0.0,
+            0.21739130434782608,
+            0.0
+          ],
+          [
+            0.0,
+            0.6857142857142857,
+            0.0,
+            0.3142857142857143,
+            0.0
+          ],
+          [
+            0.0,
+            0.8780487804878049,
+            0.0,
+            0.12195121951219512,
+            0.0
+          ],
+          [
+            0.0,
+            0.6857142857142857,
+            0.0,
+            0.3142857142857143,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.35294117647058826,
+            0.0,
+            0.6470588235294118,
+            0.0
+          ],
+          [
+            0.0,
+            0.72,
+            0.0,
+            0.28,
+            0.0
+          ],
+          [
+            0.0,
+            0.48,
+            0.0,
+            0.52,
+            0.0
+          ],
+          [
+            0.0,
+            0.6666666666666666,
+            0.0,
+            0.3333333333333333,
+            0.0
+          ],
+          [
+            0.0,
+            0.72,
+            0.0,
+            0.28,
+            0.0
+          ],
+          [
+            0.0,
+            0.8571428571428571,
+            0.0,
+            0.14285714285714285,
+            0.0
+          ],
+          [
+            0.0,
+            0.6206896551724138,
+            0.0,
+            0.3793103448275862,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.72,
+            0.0,
+            0.28,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.3157894736842105,
+            0.0,
+            0.6842105263157895,
+            0.0
+          ]
+        ],
+        "first_repeat": null
+      },
+      "manifest_gate5": false,
+      "manifest_scan_checks": {
+        "any_propagating": true,
+        "any_recurrence": false,
+        "best_score": 0.35,
+        "trial_count": 3
+      },
+      "manifest_score_total": 0.6847358493924326,
+      "repeat_probe": {
+        "horizon_summary": [
+          {
+            "collapse_rate": 0.0,
+            "horizon_ticks": 64,
+            "median_drift": 0.5397094383660784,
+            "median_repeat_period": null,
+            "noise_rate": 0.0,
+            "repeat_rate": 0.0,
+            "seed_count": 1
+          },
+          {
+            "collapse_rate": 0.0,
+            "horizon_ticks": 128,
+            "median_drift": 0.5196326001013469,
+            "median_repeat_period": null,
+            "noise_rate": 0.0,
+            "repeat_rate": 0.0,
+            "seed_count": 1
+          },
+          {
+            "collapse_rate": 0.0,
+            "horizon_ticks": 192,
+            "median_drift": 0.5210005158859494,
+            "median_repeat_period": 124.0,
+            "noise_rate": 0.0,
+            "repeat_rate": 1.0,
+            "seed_count": 1
+          }
+        ],
+        "rows": [
+          {
+            "clock_collapse_flag": false,
+            "clock_noise_plateau_flag": false,
+            "clock_quality": 0.46029056163392157,
+            "clock_signature_drift": 0.5397094383660784,
+            "horizon_ticks": 64,
+            "policy_seed": 7801,
+            "repeat_found": false,
+            "repeat_period": null,
+            "seed_idx": 0,
+            "warmup_ticks": 10
+          },
+          {
+            "clock_collapse_flag": false,
+            "clock_noise_plateau_flag": false,
+            "clock_quality": 0.48036739989865307,
+            "clock_signature_drift": 0.5196326001013469,
+            "horizon_ticks": 128,
+            "policy_seed": 14265,
+            "repeat_found": false,
+            "repeat_period": null,
+            "seed_idx": 0,
+            "warmup_ticks": 21
+          },
+          {
+            "clock_collapse_flag": false,
+            "clock_noise_plateau_flag": false,
+            "clock_quality": 0.4789994841140506,
+            "clock_signature_drift": 0.5210005158859494,
+            "horizon_ticks": 192,
+            "policy_seed": 20729,
+            "repeat_found": true,
+            "repeat_period": 124,
+            "seed_idx": 0,
+            "warmup_ticks": 32
+          }
+        ]
+      },
+      "scan_recurrence_probe": {
+        "rows": [
+          {
+            "any_propagating": false,
+            "any_recurrence": true,
+            "best_score": 0.03125,
+            "global_seed": 1337,
+            "policy_seed": 2340,
+            "scan_seed_idx": 0,
+            "trial_count": 3
+          },
+          {
+            "any_propagating": true,
+            "any_recurrence": true,
+            "best_score": 0.40801767676767675,
+            "global_seed": 1434,
+            "policy_seed": 2437,
+            "scan_seed_idx": 1,
+            "trial_count": 3
+          }
+        ],
+        "summary": {
+          "median_best_score": 0.40801767676767675,
+          "propagating_rate": 0.5,
+          "recurrence_rate": 1.0,
+          "scan_seed_count": 2
+        }
+      }
+    },
+    {
+      "channel_policy_id": "stochastic_gating_v1",
+      "component_status": {
+        "clock_collapse_ok": true,
+        "clock_drift_ok": true,
+        "clock_noise_ok": true,
+        "fail_reasons": [
+          "scan_any_recurrence_false"
+        ],
+        "gate5_expected_from_components": false,
+        "scan_recurrence_ok": false
+      },
+      "kernel_candidate_id": "K2_cube26_stochastic_v1",
+      "likely_bottlenecks": [
+        "primary:scan_recurrence_absent",
+        "secondary:no_world_state_repeat_within_horizon"
+      ],
+      "manifest_clock_metrics": {
+        "clock_collapse_flag": false,
+        "clock_noise_plateau_flag": false,
+        "clock_quality": 0.7819624688579733,
+        "clock_signature_drift": 0.21803753114202676,
+        "clock_signature_series": [
+          [
+            0.0,
+            0.41931843827578424,
+            0.0,
+            0.5806815617242157,
+            0.0
+          ],
+          [
+            0.0,
+            0.46951888418743143,
+            0.0,
+            0.5304811158125685,
+            0.0
+          ],
+          [
+            0.0,
+            0.4170396154483673,
+            0.0,
+            0.5829603845516327,
+            0.0
+          ],
+          [
+            0.0,
+            0.41851919897115564,
+            0.0,
+            0.5814808010288444,
+            0.0
+          ],
+          [
+            0.0,
+            0.3514226231783484,
+            0.0,
+            0.6485773768216516,
+            0.0
+          ],
+          [
+            0.0,
+            0.4966630451652957,
+            0.0,
+            0.5033369548347043,
+            0.0
+          ],
+          [
+            0.0,
+            0.41072239890958656,
+            0.0,
+            0.5892776010904135,
+            0.0
+          ],
+          [
+            0.0,
+            0.5467863028749314,
+            0.0,
+            0.45321369712506865,
+            0.0
+          ],
+          [
+            0.0,
+            0.4559051057246003,
+            0.0,
+            0.5440948942753997,
+            0.0
+          ],
+          [
+            0.0,
+            0.5466126230457441,
+            0.0,
+            0.45338737695425596,
+            0.0
+          ],
+          [
+            0.0,
+            0.43162953254696373,
+            0.0,
+            0.5683704674530362,
+            0.0
+          ],
+          [
+            0.0,
+            0.4940239043824701,
+            0.0,
+            0.5059760956175299,
+            0.0
+          ],
+          [
+            0.0,
+            0.5721712008317449,
+            0.0,
+            0.42782879916825506,
+            0.0
+          ],
+          [
+            0.0,
+            0.8879221048270147,
+            0.0,
+            0.11207789517298529,
+            0.0
+          ],
+          [
+            0.0,
+            0.488453231433793,
+            0.0,
+            0.5115467685662071,
+            0.0
+          ],
+          [
+            0.0,
+            0.474773031701146,
+            0.0,
+            0.525226968298854,
+            0.0
+          ],
+          [
+            0.0,
+            0.4908616187989556,
+            0.0,
+            0.5091383812010444,
+            0.0
+          ],
+          [
+            0.0,
+            0.3865987339817817,
+            0.0,
+            0.6134012660182183,
+            0.0
+          ],
+          [
+            0.0,
+            0.6225941422594142,
+            0.0,
+            0.37740585774058577,
+            0.0
+          ],
+          [
+            0.0,
+            0.48032103719709834,
+            0.0,
+            0.5196789628029017,
+            0.0
+          ],
+          [
+            0.0,
+            0.43092561219775144,
+            0.0,
+            0.5690743878022486,
+            0.0
+          ],
+          [
+            0.0,
+            0.44475437780877114,
+            0.0,
+            0.5552456221912289,
+            0.0
+          ],
+          [
+            0.0,
+            0.32160804020100503,
+            0.0,
+            0.678391959798995,
+            0.0
+          ],
+          [
+            0.0,
+            0.35281414495883384,
+            0.0,
+            0.6471858550411661,
+            0.0
+          ],
+          [
+            0.0,
+            0.622383670645217,
+            0.0,
+            0.3776163293547829,
+            0.0
+          ],
+          [
+            0.0,
+            0.5147736976942784,
+            0.0,
+            0.4852263023057216,
+            0.0
+          ],
+          [
+            0.0,
+            0.5282211617574462,
+            0.0,
+            0.4717788382425539,
+            0.0
+          ],
+          [
+            0.0,
+            0.4146159582401193,
+            0.0,
+            0.5853840417598807,
+            0.0
+          ],
+          [
+            0.0,
+            0.4992978623810267,
+            0.0,
+            0.5007021376189733,
+            0.0
+          ],
+          [
+            0.0,
+            0.3712238302655613,
+            0.0,
+            0.6287761697344386,
+            0.0
+          ],
+          [
+            0.0,
+            0.35114729829755736,
+            0.0,
+            0.6488527017024426,
+            0.0
+          ],
+          [
+            0.0,
+            0.5180388529139686,
+            0.0,
+            0.48196114708603144,
+            0.0
+          ],
+          [
+            0.0,
+            0.3541054584815216,
+            0.0,
+            0.6458945415184785,
+            0.0
+          ]
+        ],
+        "first_repeat": null
+      },
+      "manifest_gate5": false,
+      "manifest_scan_checks": {
+        "any_propagating": true,
+        "any_recurrence": false,
+        "best_score": 0.35,
+        "trial_count": 3
+      },
+      "manifest_score_total": 0.6481962468857972,
+      "repeat_probe": {
+        "horizon_summary": [
+          {
+            "collapse_rate": 0.0,
+            "horizon_ticks": 64,
+            "median_drift": 0.1501620086162782,
+            "median_repeat_period": null,
+            "noise_rate": 0.0,
+            "repeat_rate": 0.0,
+            "seed_count": 1
+          },
+          {
+            "collapse_rate": 0.0,
+            "horizon_ticks": 128,
+            "median_drift": 0.1755106247691318,
+            "median_repeat_period": null,
+            "noise_rate": 0.0,
+            "repeat_rate": 0.0,
+            "seed_count": 1
+          },
+          {
+            "collapse_rate": 0.0,
+            "horizon_ticks": 192,
+            "median_drift": 0.2665134296480408,
+            "median_repeat_period": null,
+            "noise_rate": 0.0,
+            "repeat_rate": 0.0,
+            "seed_count": 1
+          }
+        ],
+        "rows": [
+          {
+            "clock_collapse_flag": false,
+            "clock_noise_plateau_flag": false,
+            "clock_quality": 0.8498379913837217,
+            "clock_signature_drift": 0.1501620086162782,
+            "horizon_ticks": 64,
+            "policy_seed": 20808,
+            "repeat_found": false,
+            "repeat_period": null,
+            "seed_idx": 0,
+            "warmup_ticks": 10
+          },
+          {
+            "clock_collapse_flag": false,
+            "clock_noise_plateau_flag": false,
+            "clock_quality": 0.8244893752308682,
+            "clock_signature_drift": 0.1755106247691318,
+            "horizon_ticks": 128,
+            "policy_seed": 27272,
+            "repeat_found": false,
+            "repeat_period": null,
+            "seed_idx": 0,
+            "warmup_ticks": 21
+          },
+          {
+            "clock_collapse_flag": false,
+            "clock_noise_plateau_flag": false,
+            "clock_quality": 0.7334865703519592,
+            "clock_signature_drift": 0.2665134296480408,
+            "horizon_ticks": 192,
+            "policy_seed": 33736,
+            "repeat_found": false,
+            "repeat_period": null,
+            "seed_idx": 0,
+            "warmup_ticks": 32
+          }
+        ]
+      },
+      "scan_recurrence_probe": {
+        "rows": [
+          {
+            "any_propagating": true,
+            "any_recurrence": false,
+            "best_score": 0.35,
+            "global_seed": 18348,
+            "policy_seed": 19351,
+            "scan_seed_idx": 0,
+            "trial_count": 3
+          },
+          {
+            "any_propagating": true,
+            "any_recurrence": false,
+            "best_score": 0.25491723466407007,
+            "global_seed": 18445,
+            "policy_seed": 19448,
+            "scan_seed_idx": 1,
+            "trial_count": 3
+          }
+        ],
+        "summary": {
+          "median_best_score": 0.35,
+          "propagating_rate": 1.0,
+          "recurrence_rate": 0.0,
+          "scan_seed_count": 2
+        }
+      }
+    },
+    {
+      "channel_policy_id": "deterministic_cycle_v1",
+      "component_status": {
+        "clock_collapse_ok": true,
+        "clock_drift_ok": true,
+        "clock_noise_ok": true,
+        "fail_reasons": [
+          "scan_any_recurrence_false"
+        ],
+        "gate5_expected_from_components": false,
+        "scan_recurrence_ok": false
+      },
+      "kernel_candidate_id": "K1_cube26_det_cycle_v1",
+      "likely_bottlenecks": [
+        "primary:scan_recurrence_absent",
+        "secondary:no_world_state_repeat_within_horizon"
+      ],
+      "manifest_clock_metrics": {
+        "clock_collapse_flag": false,
+        "clock_noise_plateau_flag": false,
+        "clock_quality": 0.7343910519782415,
+        "clock_signature_drift": 0.26560894802175844,
+        "clock_signature_series": [
+          [
+            0.0,
+            0.2989829207445788,
+            0.0,
+            0.7010170792554212,
+            0.0
+          ],
+          [
+            0.0,
+            0.2920830130668716,
+            0.0,
+            0.7079169869331283,
+            0.0
+          ],
+          [
+            0.0,
+            0.5156708352632392,
+            0.0,
+            0.48432916473676085,
+            0.0
+          ],
+          [
+            0.0,
+            0.42920447351761976,
+            0.0,
+            0.5707955264823803,
+            0.0
+          ],
+          [
+            0.0,
+            0.4506431117309778,
+            0.0,
+            0.5493568882690222,
+            0.0
+          ],
+          [
+            0.0,
+            0.6213953488372093,
+            0.0,
+            0.3786046511627907,
+            0.0
+          ],
+          [
+            0.0,
+            0.33765871354820703,
+            0.0,
+            0.6623412864517929,
+            0.0
+          ],
+          [
+            0.0,
+            0.47100446085217657,
+            0.0,
+            0.5289955391478234,
+            0.0
+          ],
+          [
+            0.0,
+            0.46757210437967345,
+            0.0,
+            0.5324278956203266,
+            0.0
+          ],
+          [
+            0.0,
+            0.36264896666163826,
+            0.0,
+            0.6373510333383617,
+            0.0
+          ],
+          [
+            0.0,
+            0.3358822680709854,
+            0.0,
+            0.6641177319290146,
+            0.0
+          ],
+          [
+            0.0,
+            0.39007645498517707,
+            0.0,
+            0.6099235450148229,
+            0.0
+          ],
+          [
+            0.0,
+            0.37258716145443666,
+            0.0,
+            0.6274128385455634,
+            0.0
+          ],
+          [
+            0.0,
+            0.45991242639287333,
+            0.0,
+            0.5400875736071267,
+            0.0
+          ],
+          [
+            0.0,
+            0.5138813282525857,
+            0.0,
+            0.48611867174741424,
+            0.0
+          ],
+          [
+            0.0,
+            0.8794652182995613,
+            0.0,
+            0.12053478170043869,
+            0.0
+          ],
+          [
+            0.0,
+            0.3152987710128549,
+            0.0,
+            0.684701228987145,
+            0.0
+          ],
+          [
+            0.0,
+            0.8562327458059036,
+            0.0,
+            0.14376725419409642,
+            0.0
+          ],
+          [
+            0.0,
+            0.38672931795528975,
+            0.0,
+            0.6132706820447102,
+            0.0
+          ],
+          [
+            0.0,
+            0.381657280772325,
+            0.0,
+            0.618342719227675,
+            0.0
+          ],
+          [
+            0.0,
+            0.34301299534734475,
+            0.0,
+            0.6569870046526552,
+            0.0
+          ],
+          [
+            0.0,
+            0.32885595182955074,
+            0.0,
+            0.6711440481704493,
+            0.0
+          ],
+          [
+            0.0,
+            0.36680715012352855,
+            0.0,
+            0.6331928498764714,
+            0.0
+          ],
+          [
+            0.0,
+            0.33026664587556526,
+            0.0,
+            0.6697333541244347,
+            0.0
+          ],
+          [
+            0.0,
+            0.3269762701994468,
+            0.0,
+            0.6730237298005532,
+            0.0
+          ],
+          [
+            0.0,
+            0.32863325422309086,
+            0.0,
+            0.6713667457769091,
+            0.0
+          ],
+          [
+            0.0,
+            0.5234530175706646,
+            0.0,
+            0.47654698242933535,
+            0.0
+          ],
+          [
+            0.0,
+            0.5265351932018598,
+            0.0,
+            0.4734648067981401,
+            0.0
+          ],
+          [
+            0.0,
+            0.384465437097016,
+            0.0,
+            0.6155345629029839,
+            0.0
+          ],
+          [
+            0.0,
+            0.606009736444519,
+            0.0,
+            0.39399026355548095,
+            0.0
+          ],
+          [
+            0.0,
+            0.3347576248710771,
+            0.0,
+            0.6652423751289229,
+            0.0
+          ],
+          [
+            0.0,
+            0.3871333427802182,
+            0.0,
+            0.6128666572197817,
+            0.0
+          ],
+          [
+            0.0,
+            0.3743613562470971,
+            0.0,
+            0.6256386437529029,
+            0.0
+          ]
+        ],
+        "first_repeat": null
+      },
+      "manifest_gate5": false,
+      "manifest_scan_checks": {
+        "any_propagating": true,
+        "any_recurrence": false,
+        "best_score": 0.23739754098360658,
+        "trial_count": 3
+      },
+      "manifest_score_total": 0.5875852800612121,
+      "repeat_probe": {
+        "horizon_summary": [
+          {
+            "collapse_rate": 0.0,
+            "horizon_ticks": 64,
+            "median_drift": 0.24799973089214802,
+            "median_repeat_period": null,
+            "noise_rate": 0.0,
+            "repeat_rate": 0.0,
+            "seed_count": 1
+          },
+          {
+            "collapse_rate": 0.0,
+            "horizon_ticks": 128,
+            "median_drift": 0.26426891477657777,
+            "median_repeat_period": null,
+            "noise_rate": 0.0,
+            "repeat_rate": 0.0,
+            "seed_count": 1
+          },
+          {
+            "collapse_rate": 0.0,
+            "horizon_ticks": 192,
+            "median_drift": 0.24173192393156887,
+            "median_repeat_period": null,
+            "noise_rate": 0.0,
+            "repeat_rate": 0.0,
+            "seed_count": 1
+          }
+        ],
+        "rows": [
+          {
+            "clock_collapse_flag": false,
+            "clock_noise_plateau_flag": false,
+            "clock_quality": 0.752000269107852,
+            "clock_signature_drift": 0.24799973089214802,
+            "horizon_ticks": 64,
+            "policy_seed": 33815,
+            "repeat_found": false,
+            "repeat_period": null,
+            "seed_idx": 0,
+            "warmup_ticks": 10
+          },
+          {
+            "clock_collapse_flag": false,
+            "clock_noise_plateau_flag": false,
+            "clock_quality": 0.7357310852234222,
+            "clock_signature_drift": 0.26426891477657777,
+            "horizon_ticks": 128,
+            "policy_seed": 40279,
+            "repeat_found": false,
+            "repeat_period": null,
+            "seed_idx": 0,
+            "warmup_ticks": 21
+          },
+          {
+            "clock_collapse_flag": false,
+            "clock_noise_plateau_flag": false,
+            "clock_quality": 0.7582680760684312,
+            "clock_signature_drift": 0.24173192393156887,
+            "horizon_ticks": 192,
+            "policy_seed": 46743,
+            "repeat_found": false,
+            "repeat_period": null,
+            "seed_idx": 0,
+            "warmup_ticks": 32
+          }
+        ]
+      },
+      "scan_recurrence_probe": {
+        "rows": [
+          {
+            "any_propagating": true,
+            "any_recurrence": false,
+            "best_score": 0.35,
+            "global_seed": 35359,
+            "policy_seed": 36362,
+            "scan_seed_idx": 0,
+            "trial_count": 3
+          },
+          {
+            "any_propagating": true,
+            "any_recurrence": false,
+            "best_score": 0.22847817217462263,
+            "global_seed": 35456,
+            "policy_seed": 36459,
+            "scan_seed_idx": 1,
+            "trial_count": 3
+          }
+        ],
+        "summary": {
+          "median_best_score": 0.35,
+          "propagating_rate": 1.0,
+          "recurrence_rate": 0.0,
+          "scan_seed_count": 2
+        }
+      }
+    }
+  ],
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "gate_stack_artifact": "cog_v3\\sources\\v3_fixed_manifest_kernel_gate_stack_v1.json",
+  "gate_stack_artifact_sha256": "4f455af28ca7741b4c7d506a96999744ba12f8d7b94481dd164d7b0d8783d4c8",
+  "gate_stack_script": "cog_v3/calc/build_v3_fixed_manifest_kernel_gate_stack_v1.py",
+  "gate_stack_script_sha256": "6abdbbca13b285fd4d578ccd3ac6195b5a415aceb5657cd81c84398fa009e2fa",
+  "global_seed": 1337,
+  "kernel_module": "cog_v3/python/kernel_octavian240_multiplicative_v1.py",
+  "kernel_module_sha256": "4d49033d24dcd1b3ec3cc4367175dc027bfecb8e5afa8710f0dd9856c01155a6",
+  "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "replay_hash": "18e485cd7503d4c49ec9ff45dc9080a2aa1ae0cdbb11c805f857c05c878a2228",
+  "schema_version": "v3_gate5_clock_repeat_probe_v1",
+  "source_script": "cog_v3/calc/build_v3_gate5_clock_repeat_probe_v1.py",
+  "source_script_sha256": "0b6f5390bc445886867877a83134706819ab3061e1df2a3da8e43f94d5e21ab5",
+  "summary": {
+    "candidate_count": 3,
+    "horizons": [
+      64,
+      128,
+      192
+    ],
+    "manifest_gate5_pass_count": 0,
+    "scan_recurrence_lt_0p2_count": 2,
+    "scan_seed_count": 2,
+    "seeds_per_horizon": 1
+  }
+}

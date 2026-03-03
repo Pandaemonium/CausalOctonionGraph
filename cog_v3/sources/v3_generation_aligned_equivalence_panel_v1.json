@@ -1,0 +1,593 @@
+{
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "global_seed": 1337,
+  "kernel_module": "cog_v3/python/kernel_octavian240_multiplicative_v1.py",
+  "kernel_module_sha256": "4d49033d24dcd1b3ec3cc4367175dc027bfecb8e5afa8710f0dd9856c01155a6",
+  "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "pair_defs": [
+    {
+      "lhs": "S_A_e_uud_g0",
+      "pair_id": "P_baseline_e_uud_vs_mu_ccs",
+      "rhs": "S_B_mu_ccs_g1"
+    },
+    {
+      "lhs": "S_C_mu_uud_g1",
+      "pair_id": "P_desync_mu_uud_vs_tau_ccs",
+      "rhs": "S_D_tau_ccs_g2"
+    }
+  ],
+  "pair_rows": [
+    {
+      "Delta_max_pair": 0.7199337763677889,
+      "boundary_mode": "fixed_vacuum",
+      "delta_metrics": {
+        "Omega_hat": 0.7199337763677889,
+        "R_hat": 0.0016947413116193976,
+        "S_stab": 0.0,
+        "T_cycle": 0.0,
+        "V_hat": 0.3286479591319724
+      },
+      "lhs_system_id": "S_A_e_uud_g0",
+      "orientation": "x",
+      "pair_id": "P_baseline_e_uud_vs_mu_ccs",
+      "pass_flag_lt_1pct": false,
+      "rhs_system_id": "S_B_mu_ccs_g1",
+      "seed_id": 0,
+      "size_x": 15,
+      "size_y": 7,
+      "size_z": 7,
+      "window_id": "window_pre_mix"
+    },
+    {
+      "Delta_max_pair": 0.7199337763677889,
+      "boundary_mode": "fixed_vacuum",
+      "delta_metrics": {
+        "Omega_hat": 0.7199337763677889,
+        "R_hat": 0.0016947413116193976,
+        "S_stab": 0.0,
+        "T_cycle": 0.0,
+        "V_hat": 0.3286479591319724
+      },
+      "lhs_system_id": "S_A_e_uud_g0",
+      "orientation": "x",
+      "pair_id": "P_baseline_e_uud_vs_mu_ccs",
+      "pass_flag_lt_1pct": false,
+      "rhs_system_id": "S_B_mu_ccs_g1",
+      "seed_id": 1,
+      "size_x": 15,
+      "size_y": 7,
+      "size_z": 7,
+      "window_id": "window_pre_mix"
+    },
+    {
+      "Delta_max_pair": 0.0845207824792353,
+      "boundary_mode": "fixed_vacuum",
+      "delta_metrics": {
+        "Omega_hat": 0.0845207824792353,
+        "R_hat": 0.0012821228670902075,
+        "S_stab": 0.0,
+        "T_cycle": 0.0,
+        "V_hat": 0.017269949905241867
+      },
+      "lhs_system_id": "S_C_mu_uud_g1",
+      "orientation": "x",
+      "pair_id": "P_desync_mu_uud_vs_tau_ccs",
+      "pass_flag_lt_1pct": false,
+      "rhs_system_id": "S_D_tau_ccs_g2",
+      "seed_id": 0,
+      "size_x": 15,
+      "size_y": 7,
+      "size_z": 7,
+      "window_id": "window_pre_mix"
+    },
+    {
+      "Delta_max_pair": 0.0845207824792353,
+      "boundary_mode": "fixed_vacuum",
+      "delta_metrics": {
+        "Omega_hat": 0.0845207824792353,
+        "R_hat": 0.0012821228670902075,
+        "S_stab": 0.0,
+        "T_cycle": 0.0,
+        "V_hat": 0.017269949905241867
+      },
+      "lhs_system_id": "S_C_mu_uud_g1",
+      "orientation": "x",
+      "pair_id": "P_desync_mu_uud_vs_tau_ccs",
+      "pass_flag_lt_1pct": false,
+      "rhs_system_id": "S_D_tau_ccs_g2",
+      "seed_id": 1,
+      "size_x": 15,
+      "size_y": 7,
+      "size_z": 7,
+      "window_id": "window_pre_mix"
+    }
+  ],
+  "pair_summary": [
+    {
+      "median_Delta_max": 0.7199337763677889,
+      "pair_id": "P_baseline_e_uud_vs_mu_ccs",
+      "pass_rate_lt_1pct": 0.0,
+      "sample_count": 2,
+      "window_id": "window_pre_mix"
+    },
+    {
+      "median_Delta_max": 0.0845207824792353,
+      "pair_id": "P_desync_mu_uud_vs_tau_ccs",
+      "pass_rate_lt_1pct": 0.0,
+      "sample_count": 2,
+      "window_id": "window_pre_mix"
+    }
+  ],
+  "replay_hash": "1f2138f4b839a32656ec846d5ee97aa385bda25c6ccd130c24e0942df3f93d30",
+  "schema_version": "v3_generation_aligned_equivalence_panel_v1",
+  "source_script": "cog_v3/calc/build_v3_generation_aligned_equivalence_panel_v1.py",
+  "source_script_sha256": "7067505d5a227a0a99c253f44c1504efa2369f01fb7bf417109cac5524802cb6",
+  "system_rows": [
+    {
+      "H_phase_summary": "0:16356,8:928,4:828",
+      "Omega_hat": 0.051094197543574166,
+      "R_hat": 4.53239119889901,
+      "S_stab": 0.0,
+      "T_cycle": 0,
+      "V_hat": 0.03677404169119965,
+      "boundary_mode": "fixed_vacuum",
+      "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+      "generation_offset_signature": "g0",
+      "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+      "orientation": "x",
+      "phase_counts": [
+        16356,
+        106,
+        297,
+        140,
+        828,
+        131,
+        605,
+        78,
+        928,
+        200,
+        346,
+        95
+      ],
+      "run_config": {
+        "boundary_mode": "fixed_vacuum",
+        "channel_policy_id": "uniform_all",
+        "orientation": "x",
+        "perturb_tick": 30,
+        "seed_id": 0,
+        "size_x": 15,
+        "size_y": 7,
+        "size_z": 7,
+        "stencil_id": "cube26",
+        "ticks": 42,
+        "warmup_ticks": 8
+      },
+      "seed_id": 0,
+      "seed_meta": {
+        "baryon_kind": "uud",
+        "generation_offset": 0,
+        "lepton_kind": "electron",
+        "seeded_count": 4
+      },
+      "size": [
+        15,
+        7,
+        7
+      ],
+      "stencil_id": "cube26",
+      "system_id": "S_A_e_uud_g0",
+      "window_id": "window_pre_mix"
+    },
+    {
+      "H_phase_summary": "0:16356,8:928,4:828",
+      "Omega_hat": 0.051094197543574166,
+      "R_hat": 4.53239119889901,
+      "S_stab": 0.0,
+      "T_cycle": 0,
+      "V_hat": 0.03677404169119965,
+      "boundary_mode": "fixed_vacuum",
+      "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+      "generation_offset_signature": "g0",
+      "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+      "orientation": "x",
+      "phase_counts": [
+        16356,
+        106,
+        297,
+        140,
+        828,
+        131,
+        605,
+        78,
+        928,
+        200,
+        346,
+        95
+      ],
+      "run_config": {
+        "boundary_mode": "fixed_vacuum",
+        "channel_policy_id": "uniform_all",
+        "orientation": "x",
+        "perturb_tick": 30,
+        "seed_id": 1,
+        "size_x": 15,
+        "size_y": 7,
+        "size_z": 7,
+        "stencil_id": "cube26",
+        "ticks": 42,
+        "warmup_ticks": 8
+      },
+      "seed_id": 1,
+      "seed_meta": {
+        "baryon_kind": "uud",
+        "generation_offset": 0,
+        "lepton_kind": "electron",
+        "seeded_count": 4
+      },
+      "size": [
+        15,
+        7,
+        7
+      ],
+      "stencil_id": "cube26",
+      "system_id": "S_A_e_uud_g0",
+      "window_id": "window_pre_mix"
+    },
+    {
+      "H_phase_summary": "0:4827,4:4429,8:4407",
+      "Omega_hat": 0.18243612843036774,
+      "R_hat": 4.524709968293815,
+      "S_stab": 0.0,
+      "T_cycle": 0,
+      "V_hat": 0.02468832794035282,
+      "boundary_mode": "fixed_vacuum",
+      "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+      "generation_offset_signature": "g1",
+      "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+      "orientation": "x",
+      "phase_counts": [
+        4827,
+        701,
+        1699,
+        1056,
+        4429,
+        816,
+        2178,
+        720,
+        4407,
+        989,
+        1677,
+        708
+      ],
+      "run_config": {
+        "boundary_mode": "fixed_vacuum",
+        "channel_policy_id": "uniform_all",
+        "orientation": "x",
+        "perturb_tick": 30,
+        "seed_id": 0,
+        "size_x": 15,
+        "size_y": 7,
+        "size_z": 7,
+        "stencil_id": "cube26",
+        "ticks": 42,
+        "warmup_ticks": 8
+      },
+      "seed_id": 0,
+      "seed_meta": {
+        "baryon_kind": "ccs",
+        "generation_offset": 1,
+        "lepton_kind": "muon",
+        "seeded_count": 4
+      },
+      "size": [
+        15,
+        7,
+        7
+      ],
+      "stencil_id": "cube26",
+      "system_id": "S_B_mu_ccs_g1",
+      "window_id": "window_pre_mix"
+    },
+    {
+      "H_phase_summary": "0:4827,4:4429,8:4407",
+      "Omega_hat": 0.18243612843036774,
+      "R_hat": 4.524709968293815,
+      "S_stab": 0.0,
+      "T_cycle": 0,
+      "V_hat": 0.02468832794035282,
+      "boundary_mode": "fixed_vacuum",
+      "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+      "generation_offset_signature": "g1",
+      "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+      "orientation": "x",
+      "phase_counts": [
+        4827,
+        701,
+        1699,
+        1056,
+        4429,
+        816,
+        2178,
+        720,
+        4407,
+        989,
+        1677,
+        708
+      ],
+      "run_config": {
+        "boundary_mode": "fixed_vacuum",
+        "channel_policy_id": "uniform_all",
+        "orientation": "x",
+        "perturb_tick": 30,
+        "seed_id": 1,
+        "size_x": 15,
+        "size_y": 7,
+        "size_z": 7,
+        "stencil_id": "cube26",
+        "ticks": 42,
+        "warmup_ticks": 8
+      },
+      "seed_id": 1,
+      "seed_meta": {
+        "baryon_kind": "ccs",
+        "generation_offset": 1,
+        "lepton_kind": "muon",
+        "seeded_count": 4
+      },
+      "size": [
+        15,
+        7,
+        7
+      ],
+      "stencil_id": "cube26",
+      "system_id": "S_B_mu_ccs_g1",
+      "window_id": "window_pre_mix"
+    },
+    {
+      "H_phase_summary": "0:4755,4:4429,8:4407",
+      "Omega_hat": 0.18298037542630669,
+      "R_hat": 4.524709968293815,
+      "S_stab": 0.0,
+      "T_cycle": 0,
+      "V_hat": 0.02468832794035282,
+      "boundary_mode": "fixed_vacuum",
+      "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+      "generation_offset_signature": "g1",
+      "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+      "orientation": "x",
+      "phase_counts": [
+        4755,
+        701,
+        1699,
+        1056,
+        4429,
+        816,
+        2178,
+        720,
+        4407,
+        989,
+        1677,
+        708
+      ],
+      "run_config": {
+        "boundary_mode": "fixed_vacuum",
+        "channel_policy_id": "uniform_all",
+        "orientation": "x",
+        "perturb_tick": 30,
+        "seed_id": 0,
+        "size_x": 15,
+        "size_y": 7,
+        "size_z": 7,
+        "stencil_id": "cube26",
+        "ticks": 42,
+        "warmup_ticks": 8
+      },
+      "seed_id": 0,
+      "seed_meta": {
+        "baryon_kind": "uud",
+        "generation_offset": 1,
+        "lepton_kind": "muon",
+        "seeded_count": 4
+      },
+      "size": [
+        15,
+        7,
+        7
+      ],
+      "stencil_id": "cube26",
+      "system_id": "S_C_mu_uud_g1",
+      "window_id": "window_pre_mix"
+    },
+    {
+      "H_phase_summary": "0:4755,4:4429,8:4407",
+      "Omega_hat": 0.18298037542630669,
+      "R_hat": 4.524709968293815,
+      "S_stab": 0.0,
+      "T_cycle": 0,
+      "V_hat": 0.02468832794035282,
+      "boundary_mode": "fixed_vacuum",
+      "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+      "generation_offset_signature": "g1",
+      "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+      "orientation": "x",
+      "phase_counts": [
+        4755,
+        701,
+        1699,
+        1056,
+        4429,
+        816,
+        2178,
+        720,
+        4407,
+        989,
+        1677,
+        708
+      ],
+      "run_config": {
+        "boundary_mode": "fixed_vacuum",
+        "channel_policy_id": "uniform_all",
+        "orientation": "x",
+        "perturb_tick": 30,
+        "seed_id": 1,
+        "size_x": 15,
+        "size_y": 7,
+        "size_z": 7,
+        "stencil_id": "cube26",
+        "ticks": 42,
+        "warmup_ticks": 8
+      },
+      "seed_id": 1,
+      "seed_meta": {
+        "baryon_kind": "uud",
+        "generation_offset": 1,
+        "lepton_kind": "muon",
+        "seeded_count": 4
+      },
+      "size": [
+        15,
+        7,
+        7
+      ],
+      "stencil_id": "cube26",
+      "system_id": "S_C_mu_uud_g1",
+      "window_id": "window_pre_mix"
+    },
+    {
+      "H_phase_summary": "0:6206,4:5900,8:5900",
+      "Omega_hat": 0.167514730916931,
+      "R_hat": 4.530518649854573,
+      "S_stab": 0.0,
+      "T_cycle": 0,
+      "V_hat": 0.024261961753578743,
+      "boundary_mode": "fixed_vacuum",
+      "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+      "generation_offset_signature": "g2",
+      "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+      "orientation": "x",
+      "phase_counts": [
+        6206,
+        145,
+        1441,
+        144,
+        5900,
+        100,
+        2150,
+        92,
+        5900,
+        160,
+        1603,
+        109
+      ],
+      "run_config": {
+        "boundary_mode": "fixed_vacuum",
+        "channel_policy_id": "uniform_all",
+        "orientation": "x",
+        "perturb_tick": 30,
+        "seed_id": 0,
+        "size_x": 15,
+        "size_y": 7,
+        "size_z": 7,
+        "stencil_id": "cube26",
+        "ticks": 42,
+        "warmup_ticks": 8
+      },
+      "seed_id": 0,
+      "seed_meta": {
+        "baryon_kind": "ccs",
+        "generation_offset": 2,
+        "lepton_kind": "tau",
+        "seeded_count": 4
+      },
+      "size": [
+        15,
+        7,
+        7
+      ],
+      "stencil_id": "cube26",
+      "system_id": "S_D_tau_ccs_g2",
+      "window_id": "window_pre_mix"
+    },
+    {
+      "H_phase_summary": "0:6206,4:5900,8:5900",
+      "Omega_hat": 0.167514730916931,
+      "R_hat": 4.530518649854573,
+      "S_stab": 0.0,
+      "T_cycle": 0,
+      "V_hat": 0.024261961753578743,
+      "boundary_mode": "fixed_vacuum",
+      "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+      "generation_offset_signature": "g2",
+      "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+      "orientation": "x",
+      "phase_counts": [
+        6206,
+        145,
+        1441,
+        144,
+        5900,
+        100,
+        2150,
+        92,
+        5900,
+        160,
+        1603,
+        109
+      ],
+      "run_config": {
+        "boundary_mode": "fixed_vacuum",
+        "channel_policy_id": "uniform_all",
+        "orientation": "x",
+        "perturb_tick": 30,
+        "seed_id": 1,
+        "size_x": 15,
+        "size_y": 7,
+        "size_z": 7,
+        "stencil_id": "cube26",
+        "ticks": 42,
+        "warmup_ticks": 8
+      },
+      "seed_id": 1,
+      "seed_meta": {
+        "baryon_kind": "ccs",
+        "generation_offset": 2,
+        "lepton_kind": "tau",
+        "seeded_count": 4
+      },
+      "size": [
+        15,
+        7,
+        7
+      ],
+      "stencil_id": "cube26",
+      "system_id": "S_D_tau_ccs_g2",
+      "window_id": "window_pre_mix"
+    }
+  ],
+  "systems": [
+    {
+      "baryon_kind": "uud",
+      "generation_offset": 0,
+      "lepton_kind": "electron",
+      "system_id": "S_A_e_uud_g0"
+    },
+    {
+      "baryon_kind": "ccs",
+      "generation_offset": 1,
+      "lepton_kind": "muon",
+      "system_id": "S_B_mu_ccs_g1"
+    },
+    {
+      "baryon_kind": "uud",
+      "generation_offset": 1,
+      "lepton_kind": "muon",
+      "system_id": "S_C_mu_uud_g1"
+    },
+    {
+      "baryon_kind": "ccs",
+      "generation_offset": 2,
+      "lepton_kind": "tau",
+      "system_id": "S_D_tau_ccs_g2"
+    }
+  ]
+}
