@@ -3,6 +3,9 @@
 Status: partial formal proof, assumption-explicit.
 Date: 2026-03-03
 
+Superseded for external sharing by:
+- `sources/koide_proof_v2_kernel_v5_for_external_review.md`
+
 This note gives the cleanest currently defensible proof chain for Koide in this repo.
 
 ## 1) Target statement
@@ -129,3 +132,71 @@ Unsafe wording today:
 
 - "Kernel already proves Koide with no remaining assumptions."
 
+## 7) How to tie Koide to the algebra (must-use structure)
+
+To make Koide a consequence of the algebra (not a fitted overlay), use only these
+model-internal structures as inputs:
+
+1. **State algebra factorization**
+   - `S = Z3 (domain) x Q240 (octavian) x Z (energy) x Z4 (energy phase)`.
+2. **C12 embedding**
+   - `phase_idx = 4*domain + 3*energy_phase (mod 12)`.
+   - Domain is a 120-degree rotor; energy phase is a 90-degree rotor.
+3. **Coherent-lightcone kernel**
+   - Physical states are exactly path-independent fold products.
+4. **No-fit invariants**
+   - Triality symmetry (`Z3`) and energy-phase symmetry (`Z4`) are exact.
+   - Any derived mass relation must be invariant under allowed relabelings.
+
+If Koide is real in this model, it must be derivable from those four items alone.
+
+## 8) Concrete "algebra must be used" proof plan
+
+Define a lepton mass proxy from the kernel:
+
+- For a stable motif class `M_k` (k in {0,1,2}), define frequency
+  `f_k := 1 / period(M_k)` or an equivalent invariant tick-rate functional.
+
+Then prove this chain:
+
+1. **Z3-equivariant generation orbit**
+   - The three charged-lepton motifs form one `Z3` orbit:
+     `M_{k+1} = T(M_k)` with `T^3 = id`.
+2. **Mode decomposition forced by Z3**
+   - Any generation-indexed scalar observable decomposes in basis
+     `{1, omega^k, omega^{2k}}`, `omega = exp(2*pi*i/3)`.
+   - So `f_k` must take Brannen/circulant form:
+     `f_k = A * (1 + B*c_k)` with fixed `Z3` geometry for `c_k`.
+3. **Kernel-derived quadratic constraint**
+   - Show kernel conservation/equivariance implies the SOS identity
+     `S2 = 4*P2`, or equivalently `B^2 = 2`.
+4. **Apply existing algebraic theorem**
+   - From Section 2, conclude `K = 2/3`.
+
+This is the exact point where current work is blocked: Step 3.
+
+## 9) What to prove next in Lean (minimal set)
+
+Add these theorem targets (names suggested):
+
+1. `z3_orbit_of_lepton_motifs`
+   - Lepton candidates are one orbit under a `Z3` action induced by kernel symmetry.
+2. `observable_z3_fourier_form`
+   - Any generation observable pulled from kernel is in the 3-mode Fourier basis.
+3. `kernel_implies_sos_condition`
+   - From kernel axioms/invariants, derive `f_e^2+f_mu^2+f_tau^2 = 4*(...)`.
+4. `koide_from_kernel`
+   - Immediate corollary via `koide_ratio_is_two_thirds_of_sos`.
+
+Until (3) is formalized, "Koide from kernel" remains a partial result.
+
+## 10) Engineering constraints to prevent hidden fitting
+
+To keep the result legitimate:
+
+1. Do not choose `A,B,c_k` by fitting masses.
+2. Derive `f_k` only from motif dynamics and invariant functionals.
+3. Freeze convention choices before evaluation.
+4. Require replay hash reproducibility for every proof-supporting artifact.
+5. Reject any derivation that introduces continuous free parameters not already
+   present in the discrete algebra.

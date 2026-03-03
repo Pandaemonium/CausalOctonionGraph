@@ -110,11 +110,13 @@ mechanism:
 connections:
   - claim: koide_exactness
     relation: >
-      MASS-COUPLING-001 provides the mechanism behind koide_exactness.
-      The Koide K=2/3 arises because the three lepton masses lie on the
-      equispaced Z3 orbit in Z12 whose phases sum to zero, forcing the
-      Koide trace condition. The C4=0 constraint ensures all three are in
-      the same spin sector.
+      MASS-COUPLING-001 is the kernel-closure argument for koide_exactness bridge
+      assumption BA1. The Koide algebraic chain (brannen_koide_from_z3_and_b2,
+      Lean-verified) requires: (1) Z3 ansatz constraints c0+c1+c2=0 and
+      c0*c1+c1*c2+c2*c0=-3/4; (2) B^2=2.
+      MASS-COUPLING-001 P3 proves (1): the Z3 orbit phase sum = 0 is the same
+      identity. If MASS-COUPLING-001 (kernel -> Z3 orbit placement) is proved,
+      BA1 closes and only BA2 (B^2=2) remains between us and K=2/3 from the kernel.
 
   - claim: PHOTON-001
     relation: >

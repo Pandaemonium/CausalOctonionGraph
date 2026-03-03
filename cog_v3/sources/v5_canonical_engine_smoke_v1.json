@@ -1,0 +1,241 @@
+{
+  "engine_profile": "cog_v5_coherent_lightcone_fold_v1",
+  "physical": true,
+  "violation": null,
+  "points": [
+    {
+      "coords": [
+        0,
+        0,
+        0
+      ],
+      "t": 1,
+      "status": "NOT_IN_LIGHTCONE",
+      "state": null,
+      "n_paths": 0,
+      "n_disagreeing": 0
+    },
+    {
+      "coords": [
+        0,
+        0,
+        1
+      ],
+      "t": 1,
+      "status": "COHERENT",
+      "state": {
+        "g": 2,
+        "a": 2,
+        "e": 2,
+        "sign": -1,
+        "basis": 0
+      },
+      "n_paths": 1,
+      "n_disagreeing": 0
+    },
+    {
+      "coords": [
+        0,
+        1,
+        0
+      ],
+      "t": 1,
+      "status": "COHERENT",
+      "state": {
+        "g": 2,
+        "a": 2,
+        "e": 2,
+        "sign": -1,
+        "basis": 0
+      },
+      "n_paths": 1,
+      "n_disagreeing": 0
+    },
+    {
+      "coords": [
+        0,
+        1,
+        1
+      ],
+      "t": 1,
+      "status": "NOT_IN_LIGHTCONE",
+      "state": null,
+      "n_paths": 0,
+      "n_disagreeing": 0
+    },
+    {
+      "coords": [
+        1,
+        0,
+        0
+      ],
+      "t": 1,
+      "status": "COHERENT",
+      "state": {
+        "g": 2,
+        "a": 2,
+        "e": 2,
+        "sign": -1,
+        "basis": 0
+      },
+      "n_paths": 1,
+      "n_disagreeing": 0
+    },
+    {
+      "coords": [
+        1,
+        0,
+        1
+      ],
+      "t": 1,
+      "status": "NOT_IN_LIGHTCONE",
+      "state": null,
+      "n_paths": 0,
+      "n_disagreeing": 0
+    },
+    {
+      "coords": [
+        1,
+        1,
+        0
+      ],
+      "t": 1,
+      "status": "NOT_IN_LIGHTCONE",
+      "state": null,
+      "n_paths": 0,
+      "n_disagreeing": 0
+    },
+    {
+      "coords": [
+        1,
+        1,
+        1
+      ],
+      "t": 1,
+      "status": "NOT_IN_LIGHTCONE",
+      "state": null,
+      "n_paths": 0,
+      "n_disagreeing": 0
+    },
+    {
+      "coords": [
+        0,
+        0,
+        0
+      ],
+      "t": 2,
+      "status": "COHERENT",
+      "state": {
+        "g": 0,
+        "a": 3,
+        "e": 3,
+        "sign": -1,
+        "basis": 7
+      },
+      "n_paths": 3,
+      "n_disagreeing": 0
+    },
+    {
+      "coords": [
+        0,
+        0,
+        1
+      ],
+      "t": 2,
+      "status": "NOT_IN_LIGHTCONE",
+      "state": null,
+      "n_paths": 0,
+      "n_disagreeing": 0
+    },
+    {
+      "coords": [
+        0,
+        1,
+        0
+      ],
+      "t": 2,
+      "status": "NOT_IN_LIGHTCONE",
+      "state": null,
+      "n_paths": 0,
+      "n_disagreeing": 0
+    },
+    {
+      "coords": [
+        0,
+        1,
+        1
+      ],
+      "t": 2,
+      "status": "COHERENT",
+      "state": {
+        "g": 0,
+        "a": 3,
+        "e": 3,
+        "sign": -1,
+        "basis": 7
+      },
+      "n_paths": 2,
+      "n_disagreeing": 0
+    },
+    {
+      "coords": [
+        1,
+        0,
+        0
+      ],
+      "t": 2,
+      "status": "NOT_IN_LIGHTCONE",
+      "state": null,
+      "n_paths": 0,
+      "n_disagreeing": 0
+    },
+    {
+      "coords": [
+        1,
+        0,
+        1
+      ],
+      "t": 2,
+      "status": "COHERENT",
+      "state": {
+        "g": 0,
+        "a": 3,
+        "e": 3,
+        "sign": -1,
+        "basis": 7
+      },
+      "n_paths": 2,
+      "n_disagreeing": 0
+    },
+    {
+      "coords": [
+        1,
+        1,
+        0
+      ],
+      "t": 2,
+      "status": "COHERENT",
+      "state": {
+        "g": 0,
+        "a": 3,
+        "e": 3,
+        "sign": -1,
+        "basis": 7
+      },
+      "n_paths": 2,
+      "n_disagreeing": 0
+    },
+    {
+      "coords": [
+        1,
+        1,
+        1
+      ],
+      "t": 2,
+      "status": "NOT_IN_LIGHTCONE",
+      "state": null,
+      "n_paths": 0,
+      "n_disagreeing": 0
+    }
+  ]
+}

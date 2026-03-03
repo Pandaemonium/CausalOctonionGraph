@@ -1,0 +1,47 @@
+id: GRAVITY-ASSOCIATOR-001
+title: Gravity as Algebraic Associator/Holonomy Emergence (No Extra Field)
+status: active_hypothesis
+
+statement: >
+  In the v5 kernel, gravity-like behavior is not introduced as an independent field.
+  It emerges from algebra-native observables:
+  (1) local nonassociativity density (associator activity), and
+  (2) causal-loop transport structure (holonomy spread before coherence filtering).
+
+assumptions:
+  - Kernel contract is complete-causal-past deterministic fold/multiply.
+  - No external gravitational field variable is added.
+  - Causal backend may vary; observables must be backend-contract consistent.
+
+observables:
+  - A_local: >
+      A_local(x,t) = average of Assoc(a,b,c) over selected local triples,
+      where Assoc(a,b,c)=1 iff (a*b)*c != a*(b*c), else 0.
+  - A_shell: >
+      Shell-averaged A_local as function of graph radius r from motif core.
+  - H_spread: >
+      For a target (x,t), H_spread = (# distinct causal-path products) - 1.
+
+predictions:
+  - id: P1
+    statement: Vacuum baseline has near-minimal A_local and flat shell profile.
+    status: pending
+  - id: P2
+    statement: Motif seeds with nontrivial structure produce DeltaA_mean > 0 vs vacuum.
+    status: pending
+  - id: P3
+    statement: Physical coherent motifs satisfy H_spread = 0 on evaluated cone points.
+    status: pending
+  - id: P4
+    statement: Nonphysical seeds can show H_spread > 0.
+    status: pending
+
+falsification_condition: >
+  Reject if motif-vacuum associator separation is non-reproducible, shell profiles
+  are indistinguishable from flat control, or coherent candidates require nonzero H_spread.
+
+artifacts:
+  - cog_v3/rfc/RFC-031_Algebraic_Gravity_from_Associator_and_Causal_Holonomy_v5_Contract.md
+  - cog_v3/calc/build_v5_associator_holonomy_probe_v1.py
+  - cog_v3/sources/v5_associator_holonomy_probe_v1.json
+  - cog_v3/sources/v5_associator_holonomy_probe_v1.md

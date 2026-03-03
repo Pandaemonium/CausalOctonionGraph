@@ -1,28 +1,67 @@
-﻿id: KOIDE_EXACTNESS
-title: Koide Exactness Closure Ledger
-status: stub
+id: KOIDE_EXACTNESS
+title: Koide Exactness (Lean-checked algebra, kernel-conditional bridge)
+status: partial
+
 statement: >
-  Tracks exactness-specific closure gates for Koide derivation artifacts.
+  Koide exactness is established as a formally checked implication chain:
+  if the kernel yields the explicit Z3/Brannen constraints, then the
+  Koide equation follows exactly. Full dynamic closure (kernel forcing
+  those constraints) remains open.
+
 gates:
   - id: gate_1
-    description: Python Koide sum rule verification.
+    description: Algebraic Koide identity and SOS equivalence in Lean.
     status: proved
-    file: calc/koide.py
+    files:
+      - CausalGraphTheory/Koide.lean
+    theorems:
+      - koide_algebraic_iff
+      - koide_ratio_is_two_thirds_of_sos
+      - sos_of_koide_ratio_is_two_thirds
+
   - id: gate_2
-    description: Circulant B/A = sqrt(2) derivation.
+    description: Z3/Brannen bridge in Lean.
     status: proved
-    file: calc/koide_circulant_derivation.py
+    files:
+      - CausalGraphTheory/Koide.lean
+      - CausalGraphTheory/KoideGroupBridge.lean
+    theorems:
+      - brannen_b_squared
+      - brannen_sos_from_z3_and_b2
+      - brannen_koide_from_z3_and_b2
+
   - id: gate_3
-    description: Lean formalization of circulant Koide condition.
+    description: Kernel-v5 packaged conditional theorem in Lean.
     status: proved
-    lean_theorem: koide_circulant_iff
-    file: CausalGraphTheory/KoideCirculant.lean
+    files:
+      - CausalGraphTheory/KoideFromKernelV5.lean
+    theorems:
+      - sos_from_kernel_v5_axioms
+      - koide_equation_from_kernel_v5_axioms
+
   - id: gate_4
-    description: Lean formalization of rational Koide ratio from circulant constraints.
-    status: proved
-    lean_theorem: koide_q_equals_two_thirds
-    file: CausalGraphTheory/KoideGate4.lean
-derivation_status: untested
-bridge_assumptions: []
+    description: Dynamic closure from kernel motifs to bridge assumptions.
+    status: pending
+    note: >
+      Need to prove from v5 dynamics (not postulate) that charged-lepton
+      motifs satisfy the assumptions in KernelV5KoideAxioms.
+
+derivation_status: partial
+
+bridge_assumptions:
+  - id: BA1
+    statement: >
+      Charged-lepton sqrt-frequency triplet is representable in Brannen form
+      f_k = A(1 + B c_k) with Z3 identities c0+c1+c2=0 and
+      c0*c1+c1*c2+c2*c0=-3/4.
+  - id: BA2
+    statement: >
+      The same kernel dynamics force B^2 = 2 exactly (no fit parameter).
+
 falsification_condition: >
-  Claim is falsified if any listed exactness gate is not replayable or deterministic.
+  Claim is falsified if any proved gate is non-replayable in CI, or if
+  dynamic extraction from the v5 kernel shows charged-lepton motifs fail BA1/BA2.
+
+references:
+  - sources/koide_proof_v2_kernel_v5_for_external_review.md
+  - cog_v3/sources/v5_kernel_profile_v1.md

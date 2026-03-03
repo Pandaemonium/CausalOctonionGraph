@@ -1,0 +1,189 @@
+id: KOIDE-KERNEL-CONSTRAINTS-001
+title: "Kernel Constraint Checklist for Koide-from-Kernel Derivation"
+status: active_hypothesis
+
+statement: >
+  For Koide's formula K = 2/3 to be a consequence of the COG kernel (not a fitted
+  overlay), the kernel must satisfy all eight constraints listed below. These constraints
+  are necessary and jointly sufficient: if all hold, the existing Lean algebraic chain
+  (brannen_koide_from_z3_and_b2 in KoideGroupBridge.lean) closes the proof.
+
+  This file is a contract: any candidate kernel must be tested against every gate here
+  before Koide can be claimed as proved. Each gate corresponds to a concrete test or
+  Lean theorem target.
+
+gates:
+  - id: C1
+    name: Exact symmetry equivariance
+    statement: >
+      The kernel K commutes with both generation rotation T3 and energy-phase rotation T4:
+        K ∘ T3 = T3 ∘ K   where T3: p -> p + 4 (mod 12)
+        K ∘ T4 = T4 ∘ K   where T4: p -> p + 3 (mod 12)
+      T3^3 = id, T4^4 = id, and T3 ∘ T4 = T4 ∘ T3 (they commute).
+      If either symmetry is broken even approximately, BA1 and BA2 cannot be claimed
+      from algebra; they would require numerical fitting.
+    status: open
+    lean_target: kernel_t3_t4_equivariance
+    test_script: pending
+
+  - id: C2
+    name: Canonical phase embedding locked
+    statement: >
+      One and only one phase embedding is used across all scripts and kernels:
+        p = 4*g + 3*a  (mod 12)
+      where g = domain (Z3, generation) and a = energy_phase (C4, spin).
+      No convention mixing across scripts, kernel variants, or proof steps.
+      Convention ID must be frozen before evaluation: v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus
+    status: open
+    lean_target: phase_embedding_canonical
+    test_script: pending
+    note: >
+      The embedding forces domain to contribute 4 per step (120 deg in Z12) and
+      energy_phase to contribute 3 per step (90 deg in Z12). Together they generate
+      all of Z12 since gcd(3,4)=1.
+
+  - id: C3
+    name: Coherent-lightcone determinism
+    statement: >
+      Physical states are exactly path-independent fold products. Any path disagreement
+      (two computational paths giving different state values for the same state)
+      invalidates the state for use in the Koide derivation.
+      Formally: the fold product of any sequence of kernel applications depends only
+      on the endpoints, not the sequence.
+    status: open
+    lean_target: path_independence_of_fold
+    test_script: cog_v3/calc/test_v4_coherence_axiom_v1.py (partial)
+    connection: kernel_cog_v4_coherence.py (v4 coherence kernel implements this)
+
+  - id: C4
+    name: Lepton orbit requirement (BA1)
+    statement: >
+      The three charged-lepton motifs form exactly one Z3 orbit under the kernel:
+        M_{k+1} = T3(M_k)  for k in {0,1,2}, indices mod 3.
+      Their mass proxy values f_k must be sampled on that orbit — not manually assigned,
+      not fitted from experimental masses.
+      Concretely: f_k = phi(M_k) where phi is a kernel-native invariant functional
+      (period, winding number, or coupling rate of the motif under kernel evolution).
+    status: open
+    lean_target: z3_orbit_of_lepton_motifs
+    connection: MASS-COUPLING-001 (P3 is the algebraic identity c0+c1+c2=0; the kernel
+      derivation that forces motifs onto this orbit is the open step)
+    note: >
+      Once proved, the Brannen ansatz constraints c0+c1+c2=0 and c0*c1+c1*c2+c2*c0=-3/4
+      follow from the Z3 Fourier decomposition of any generation-indexed scalar observable
+      (proved by z3_sumprod_implies_sumsq in KoideGroupBridge.lean).
+
+  - id: C5
+    name: Kernel-implied amplitude constraint (BA2)
+    statement: >
+      Kernel dynamics imply B^2 = 2 (equivalently, the circulant condition b^2 = 2*a^2)
+      without assuming the Koide formula.
+      Candidate derivation: the kernel conserves two independent quantities,
+        Q1 = sum f_k  (Z3 sum = 3A, forces mean = A)
+        Q2 = sum f_k^2  (Z3 sum-of-squares)
+      and the ratio Q2/Q1^2 is determined by the phase embedding p = 4g + 3a to be
+      exactly 2/3 of the squared mean. This forces B^2 = 2 without free parameters.
+      Alternatively: B = |exp(i*pi/2) - 1| = sqrt(2), the Euclidean distance in the
+      complex plane from the vacuum (phi=0) to the first C4 excitation (phi=3).
+    status: open
+    lean_target: kernel_implies_sos_condition
+    note: >
+      Current Lean proves B^2=2 FROM Koide (brannen_b_squared) or as a biconditional
+      (koide_circulant_iff). Neither proves B^2=2 independently of Koide.
+      This gate is the last open mathematical step before the full Koide proof closes.
+      May follow from C1 alone: exact equivariance + canonical embedding may force
+      the ratio E[f^2] = 2*(E[f])^2, which is equivalent to B^2=2.
+
+  - id: C6
+    name: Mass observable must be kernel-native
+    statement: >
+      The mass proxy f_k must derive from invariant motif dynamics, not from
+      experimental mass values. Allowed functionals:
+        - Period of the motif orbit under kernel evolution: f_k = 1/period(M_k)
+        - Winding number of the C12 phase under one motif cycle
+        - Coupling rate: expected phase advance per Q240 hop for motif class k
+      Once f_k is defined, apply the existing algebra: S2=4*P2 <-> K=2/3.
+      (koide_algebraic_iff, brannen_koide_from_z3_and_b2 — both Lean-verified.)
+    status: open
+    lean_target: mass_proxy_kernel_native_definition
+    connection: MASS-COUPLING-001 (coupling rate as C12 winding per Q240 hop)
+
+  - id: C7
+    name: No hidden fit constants
+    statement: >
+      Exactly one overall scale constant is permitted: the electron mass / tick-rate
+      conversion (or equivalently, one physical unit calibration).
+      All mass RATIOS (m_mu/m_e, m_tau/m_e) and the Koide ratio K must be fixed
+      by symmetry and kernel invariants alone.
+      No continuous free parameters may enter the derivation that are not already
+      present in the discrete algebra (Z3, C4, Q240 structure).
+    status: open
+    note: >
+      The tilt parameter delta in the Brannen ansatz f_k = A*(1+B*cos(2*pi*k/3+delta))
+      is the one remaining free parameter beyond the overall scale A and the amplitude B.
+      If delta cannot be derived from the kernel, the mass RATIOS (not just K) are not
+      fully determined. The COG claim is that delta is fixed by the Witt-pair Q240
+      structure, but this has not been formalized.
+
+  - id: C8
+    name: Reproducibility gate
+    statement: >
+      Every artifact supporting the Koide derivation must be reproducible:
+        - Same replay hash under fixed convention ID
+        - Result must not depend on: random seed tricks, boundary artifacts,
+          kernel variant toggles, or untracked convention changes
+        - Each proof-supporting file must have a provenance hash in its claim entry
+      Failure mode: if the Koide result changes when the random seed or boundary
+      conditions change, it is a numerical coincidence, not a proof.
+    status: open
+    note: >
+      The convention_id v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus must be
+      locked and all scripts must verify against it before computing mass proxies.
+
+algebraic_chain_already_proved:
+  note: >
+    The following Lean theorems are already proved and do NOT need to be re-proved.
+    They activate automatically once C4 and C5 are closed.
+  theorems:
+    - name: koide_algebraic_iff
+      file: CausalGraphTheory/Koide.lean
+      content: K=2/3 <-> S2=4*P2 over Q
+    - name: brannen_b_squared
+      file: CausalGraphTheory/Koide.lean
+      content: (Z3 ansatz) + (Koide eq) -> B^2=2  [NOTE: circular until C5 closed independently]
+    - name: z3_sumprod_implies_sumsq
+      file: CausalGraphTheory/KoideGroupBridge.lean
+      content: Z3 constraints -> c0^2+c1^2+c2^2 = 3/2
+    - name: brannen_sos_from_z3_and_b2
+      file: CausalGraphTheory/KoideGroupBridge.lean
+      content: (Z3 constraints) + (B^2=2) -> SOS condition
+    - name: brannen_koide_from_z3_and_b2
+      file: CausalGraphTheory/KoideGroupBridge.lean
+      content: (Z3 constraints) + (B^2=2) -> K=2/3  [ACTIVATION TARGET: close C4+C5]
+    - name: koide_circulant_iff
+      file: CausalGraphTheory/KoideCirculant.lean
+      content: Circ(b,a,a) Koide condition <-> b^2=2*a^2
+
+proof_closure_logic: >
+  The Koide proof closes as follows once all gates are satisfied:
+    1. C1 + C2 + C3 establish the kernel satisfies the right symmetry group.
+    2. C6 defines f_k as a kernel-native observable.
+    3. C4 (BA1): the three motifs form a Z3 orbit -> Brannen ansatz applies with Z3 constraints.
+    4. C5 (BA2): kernel forces B^2=2 (possibly as corollary of C1 alone).
+    5. Apply brannen_koide_from_z3_and_b2 -> K=2/3.
+    6. C7 + C8 certify the result is not fitted and is reproducible.
+
+open_question: >
+  Is C5 (BA2, B^2=2) a corollary of C1 (exact equivariance) alone?
+  Argument: if the kernel is exactly equivariant under both T3 and T4, then the
+  mass observable (which must be T4-invariant and T3-covariant) has its Fourier
+  decomposition fully determined by the phase embedding p=4g+3a. The ratio of
+  the zeroth to first Z3 Fourier mode is then fixed at B/2 = 1/sqrt(2), giving B=sqrt(2).
+  If this argument holds, C5 reduces to C1 and BA2 is not an independent assumption.
+
+derivation_status: checklist_only
+notes: >
+  Created 2026-03-03 from Codex framework + session analysis.
+  All gates C1-C8 are currently open (none have Lean proofs).
+  The algebraic chain that activates on gate closure is complete.
+  Priority order: C4 (BA1, lepton orbit) > C5 (BA2, B^2=2) > C1 (equivariance) > rest.
