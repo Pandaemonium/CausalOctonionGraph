@@ -10,305 +10,127 @@
         "boundary_mode": "fixed_vacuum",
         "channel_policy_id": "uniform_all",
         "event_order_policy": "synchronous_parallel_v1",
-        "panel_id": "P0_fixed_sync_cube26",
-        "runs_per_trial": 3,
-        "size_x": 23,
-        "size_y": 9,
-        "size_z": 9,
-        "stencil_id": "cube26",
-        "ticks": 84,
-        "warmup_ticks": 18
-      },
-      "metrics": {
-        "A1": 0.0,
-        "A2": -0.00425607377194538,
-        "C3": 0.6095119118219876,
-        "L3": 2.5623559454623384,
-        "L3_null_baseline": 2.6673550230428718,
-        "R3": 0.0,
-        "T_counts": [
-          [
-            0,
-            80049,
-            79407
-          ],
-          [
-            79311,
-            0,
-            8067
-          ],
-          [
-            79140,
-            7857,
-            0
-          ]
-        ],
-        "T_probs": [
-          [
-            0.0,
-            0.5020130945213727,
-            0.49798690547862734
-          ],
-          [
-            0.9076769896312573,
-            0.0,
-            0.0923230103687427
-          ],
-          [
-            0.909686540915204,
-            0.09031345908479603,
-            0.0
-          ]
-        ],
-        "boundary_mode": "fixed_vacuum",
-        "channel_policy_id": "uniform_all",
-        "delta_counts": {
-          "0": 453588,
-          "1": 0,
-          "10": 16989,
-          "11": 0,
-          "2": 16845,
-          "3": 0,
-          "4": 150267,
-          "5": 0,
-          "6": 67488,
-          "7": 0,
-          "8": 149730,
-          "9": 0
-        },
-        "event_order_policy": "synchronous_parallel_v1",
-        "gate_results": {
-          "gate1_dominance": false,
-          "gate2_sector_conservation": false,
-          "gate3_mixing_structure": true,
-          "gate4_signed_asymmetry": false
-        },
-        "mag_counts": {
-          "0": 453588,
-          "1": 0,
-          "2": 33834,
-          "3": 0,
-          "4": 299997,
-          "5": 0,
-          "6": 67488
-        },
-        "panel_id": "P0_fixed_sync_cube26",
-        "runs_per_trial": 3,
-        "size": [
-          23,
-          9,
-          9
-        ],
-        "stencil_id": "cube26",
-        "ticks": 84,
-        "total_events": 854907,
-        "warmup_ticks": 18
-      }
-    },
-    {
-      "config": {
-        "boundary_mode": "fixed_vacuum",
-        "channel_policy_id": "deterministic_cycle_v1",
-        "event_order_policy": "seeded_async_v1",
-        "panel_id": "P1_fixed_async_cube26",
-        "runs_per_trial": 2,
-        "size_x": 19,
-        "size_y": 9,
-        "size_z": 9,
-        "stencil_id": "cube26",
-        "ticks": 70,
-        "warmup_ticks": 16
-      },
-      "metrics": {
-        "A1": 0.0,
-        "A2": 0.00044212254915229767,
-        "C3": 0.5871253542815059,
-        "L3": 2.403801678508416,
-        "L3_null_baseline": 1.7555884580018388,
-        "R3": 0.0,
-        "T_counts": [
-          [
-            0,
-            55437,
-            55480
-          ],
-          [
-            55483,
-            0,
-            55582
-          ],
-          [
-            55378,
-            55649,
-            0
-          ]
-        ],
-        "T_probs": [
-          [
-            0.0,
-            0.4998061613639027,
-            0.5001938386360972
-          ],
-          [
-            0.4995543150407419,
-            0.0,
-            0.5004456849592581
-          ],
-          [
-            0.4987795761391373,
-            0.5012204238608626,
-            0.0
-          ]
-        ],
-        "boundary_mode": "fixed_vacuum",
-        "channel_policy_id": "deterministic_cycle_v1",
-        "delta_counts": {
-          "0": 418496,
-          "1": 0,
-          "10": 55390,
-          "11": 0,
-          "2": 55439,
-          "3": 0,
-          "4": 111007,
-          "5": 0,
-          "6": 55057,
-          "7": 0,
-          "8": 111173,
-          "9": 0
-        },
-        "event_order_policy": "seeded_async_v1",
-        "gate_results": {
-          "gate1_dominance": false,
-          "gate2_sector_conservation": true,
-          "gate3_mixing_structure": false,
-          "gate4_signed_asymmetry": false
-        },
-        "mag_counts": {
-          "0": 418496,
-          "1": 0,
-          "2": 110829,
-          "3": 0,
-          "4": 222180,
-          "5": 0,
-          "6": 55057
-        },
-        "panel_id": "P1_fixed_async_cube26",
-        "runs_per_trial": 2,
-        "size": [
-          19,
-          9,
-          9
-        ],
-        "stencil_id": "cube26",
-        "ticks": 70,
-        "total_events": 806562,
-        "warmup_ticks": 16
-      }
-    },
-    {
-      "config": {
-        "boundary_mode": "periodic",
-        "channel_policy_id": "uniform_all",
-        "event_order_policy": "synchronous_parallel_v1",
-        "panel_id": "P2_periodic_sync_axial6",
-        "runs_per_trial": 2,
-        "size_x": 19,
-        "size_y": 9,
-        "size_z": 9,
+        "panel_id": "P0_quick_fixed_sync_axial6",
+        "runs_per_trial": 1,
+        "size_x": 11,
+        "size_y": 7,
+        "size_z": 7,
         "stencil_id": "axial6",
-        "ticks": 64,
-        "warmup_ticks": 14
+        "ticks": 24,
+        "warmup_ticks": 6
       },
       "metrics": {
         "A1": 0.0,
-        "A2": 0.006081081081081081,
-        "C3": 0.7109678028642162,
-        "L3": 3.394813076086334,
-        "L3_null_baseline": 2.8939211585487272,
+        "A2": -0.028992176714219973,
+        "C3": 0.576372349278315,
+        "L3": 2.3013273459684345,
+        "L3_null_baseline": 1.9740245800497311,
         "R3": 0.0,
         "T_counts": [
           [
             0,
-            35280,
-            35602
+            3062,
+            3036
           ],
           [
-            36550,
+            2826,
             0,
-            13496
+            1506
           ],
           [
-            37008,
-            13452,
+            2904,
+            1429,
             0
           ]
         ],
         "T_probs": [
           [
             0.0,
-            0.49772861939561525,
-            0.5022713806043847
+            0.5021318465070514,
+            0.4978681534929485
           ],
           [
-            0.7303280981497022,
+            0.6523545706371191,
             0.0,
-            0.2696719018502977
+            0.3476454293628809
           ],
           [
-            0.7334126040428062,
-            0.26658739595719383,
+            0.6702054004154165,
+            0.3297945995845834,
             0.0
           ]
         ],
-        "boundary_mode": "periodic",
+        "boundary_mode": "fixed_vacuum",
         "channel_policy_id": "uniform_all",
         "delta_counts": {
-          "0": 365752,
+          "0": 18504,
           "1": 0,
-          "10": 17652,
+          "10": 1118,
           "11": 0,
-          "2": 17868,
+          "2": 1055,
           "3": 0,
-          "4": 68132,
+          "4": 6354,
           "5": 0,
-          "6": 55832,
+          "6": 1582,
           "7": 0,
-          "8": 67736,
+          "8": 6236,
           "9": 0
         },
         "event_order_policy": "synchronous_parallel_v1",
         "gate_results": {
           "gate1_dominance": false,
           "gate2_sector_conservation": true,
-          "gate3_mixing_structure": true,
-          "gate4_signed_asymmetry": false
+          "gate3_mixing_structure": false,
+          "gate4_signed_asymmetry": true
         },
         "mag_counts": {
-          "0": 365752,
+          "0": 18504,
           "1": 0,
-          "2": 35520,
+          "2": 2173,
           "3": 0,
-          "4": 135868,
+          "4": 12590,
           "5": 0,
-          "6": 55832
+          "6": 1582
         },
-        "panel_id": "P2_periodic_sync_axial6",
-        "runs_per_trial": 2,
+        "panel_id": "P0_quick_fixed_sync_axial6",
+        "runs_per_trial": 1,
         "size": [
-          19,
-          9,
-          9
+          11,
+          7,
+          7
         ],
         "stencil_id": "axial6",
-        "ticks": 64,
-        "total_events": 592972,
-        "warmup_ticks": 14
+        "ticks": 24,
+        "total_events": 34849,
+        "triality_audit": {
+          "expected_exact_for_conservative_pair_kernel": {
+            "global": "all ticks dGamma_mod3 == 0",
+            "interior": "all ticks dGamma_mod3 == 0"
+          },
+          "gamma_global_dmod3_counts": {
+            "0": 65,
+            "1": 13,
+            "2": 12
+          },
+          "gamma_global_nonzero_tick_count": 25,
+          "gamma_global_nonzero_tick_rate": 0.2777777777777778,
+          "gamma_interior_dmod3_counts": {
+            "0": 62,
+            "1": 12,
+            "2": 16
+          },
+          "gamma_interior_nonzero_tick_count": 28,
+          "gamma_interior_nonzero_tick_rate": 0.3111111111111111,
+          "gamma_tick_total": 90,
+          "interior_cell_count": 225
+        },
+        "warmup_ticks": 6
       }
     }
   ],
   "phase_count": 12,
-  "replay_hash": "9be13442283aff8cfb0c0ee40e4fd48db2dafbed0cd13829aa6db66e795e5021",
+  "replay_hash": "5025156ae7f4076b8180293eb44e090f0aafe6a81e6dca6326079a4c7a09809c",
   "schema_version": "v3_c12_phase_sector_metrics_v1",
   "source_script": "cog_v3/calc/build_v3_c12_phase_sector_metrics_v1.py",
-  "source_script_sha256": "7a7ffeeb97226582995041154e2b7ca885e90a61bb74689d623430425bc26e6f"
+  "source_script_sha256": "53165556adc87618d26eebe9f880f4bf1b6b2bd64aa7e695727bf4bd77e2e414"
 }

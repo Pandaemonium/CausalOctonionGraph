@@ -51,6 +51,12 @@ def _trim_label(label: str, max_len: int = 120) -> str:
     return s[: int(max_len - 3)] + "..."
 
 
+def _bucket01(v: float, *, step: float = 0.1) -> str:
+    x = max(0.0, min(1.0, float(v)))
+    b = int(round(x / float(step)))
+    return f"{b * step:.1f}"
+
+
 def _unique_count(rows: Sequence[Dict[str, Any]], col: str) -> int:
     vals = set()
     for r in rows:
@@ -62,6 +68,8 @@ def _recommend_columns(
     rows: Sequence[Dict[str, Any]],
     *,
     exclude: Sequence[str],
+    force_group: Sequence[str] = (),
+    force_color: Sequence[str] = (),
     max_unique_group: int = 24,
     max_unique_color: int = 48,
 ) -> Dict[str, List[str]]:
@@ -78,6 +86,10 @@ def _recommend_columns(
             color_cols.append(str(c))
     group_cols.sort()
     color_cols.sort()
+    force_g = [str(c) for c in force_group if str(c) in cols]
+    force_c = [str(c) for c in force_color if str(c) in cols]
+    group_cols = sorted(set(group_cols).union(force_g))
+    color_cols = sorted(set(color_cols).union(force_c))
     return {"group": group_cols, "color": color_cols}
 
 
@@ -90,6 +102,10 @@ def _build_q240_dataset() -> Dict[str, Any]:
                 "id": int(r["id"]),
                 "label": _trim_label(r["label"]),
                 "order": int(r["order"]),
+                "orbit_rep_id": int(r["orbit_rep_id"]),
+                "orbit_family": str(r["orbit_group"]),
+                "orbit_family_order_class": str(r["orbit_group_order_class"]),
+                "orbit_family_q_family_class": str(r["orbit_group_family_class"]),
                 "family_tag": str(r["family_tag"]),
                 "g2_proxy_tag": str(r["g2_proxy_tag"]),
                 "support_size": int(r["support_size"]),
@@ -99,9 +115,18 @@ def _build_q240_dataset() -> Dict[str, Any]:
                 "inner_conj_r_orbit_size": int(r["inner_conj_r_orbit_size"]),
                 "q_order_class_size": len(str(r["orbit_group_order_class"]).split("|")),
                 "q_family_class_size": len(str(r["orbit_group_family_class"]).split("|")),
+                "loop_template_id": (
+                    f"ord={int(r['order'])}|fam={str(r['family_tag'])}|supp={int(r['support_size'])}|"
+                    f"ol={int(r['inner_conj_l_orbit_size'])}|or={int(r['inner_conj_r_orbit_size'])}"
+                ),
+                "loop_anchor_id": str(r["orbit_rep_id"]),
             }
         )
-    rec = _recommend_columns(rows, exclude=("id", "label"))
+    rec = _recommend_columns(
+        rows,
+        exclude=("id", "label"),
+        force_group=("orbit_family", "orbit_rep_id", "orbit_size"),
+    )
     return {
         "dataset_id": "Q240",
         "title": "Q240",
@@ -110,8 +135,12 @@ def _build_q240_dataset() -> Dict[str, Any]:
         "rows": rows,
         "group_columns": rec["group"],
         "color_columns": rec["color"],
-        "default_group_column": "family_tag" if "family_tag" in rec["group"] else (rec["group"][0] if rec["group"] else ""),
+        "default_group_column": "orbit_family" if "orbit_family" in rec["group"] else ("family_tag" if "family_tag" in rec["group"] else (rec["group"][0] if rec["group"] else "")),
         "default_color_column": "order" if "order" in rec["color"] else (rec["color"][0] if rec["color"] else ""),
+        "template_columns": ["loop_template_id"],
+        "anchor_columns": ["loop_anchor_id", "orbit_family", "family_tag"],
+        "default_template_column": "loop_template_id",
+        "default_anchor_column": "loop_anchor_id",
     }
 
 
@@ -132,12 +161,25 @@ def _build_s960_dataset() -> Dict[str, Any]:
                 "q_g2_proxy_tag": str(r["q_g2_proxy_tag"]),
                 "order": int(r["order"]),
                 "support_size": int(r["support_size"]),
+                "orbit_rep_id": int(r["orbit_rep_id"]),
+                "orbit_family": str(r["orbit_group"]),
+                "orbit_family_phase_class": str(r["orbit_group_phase_class"]),
+                "orbit_family_q_class": str(r["orbit_group_q_class"]),
                 "inner_conj_l_orbit_size": int(r["inner_conj_l_orbit_size"]),
                 "inner_conj_r_orbit_size": int(r["inner_conj_r_orbit_size"]),
                 "orbit_size": int(r["orbit_size"]),
+                "loop_template_id": (
+                    f"ord={int(r['order'])}|phord={int(r['phase_order'])}|qord={int(r['q_order'])}|"
+                    f"qfam={str(r['q_family_tag'])}|ol={int(r['inner_conj_l_orbit_size'])}|or={int(r['inner_conj_r_orbit_size'])}"
+                ),
+                "loop_anchor_id": str(r["orbit_rep_id"]),
             }
         )
-    rec = _recommend_columns(rows, exclude=("id", "label"))
+    rec = _recommend_columns(
+        rows,
+        exclude=("id", "label"),
+        force_group=("orbit_family", "orbit_rep_id", "orbit_size"),
+    )
     return {
         "dataset_id": "S960",
         "title": "S960 (C4 x Q240)",
@@ -146,8 +188,12 @@ def _build_s960_dataset() -> Dict[str, Any]:
         "rows": rows,
         "group_columns": rec["group"],
         "color_columns": rec["color"],
-        "default_group_column": "q_family_tag" if "q_family_tag" in rec["group"] else (rec["group"][0] if rec["group"] else ""),
+        "default_group_column": "orbit_family" if "orbit_family" in rec["group"] else ("q_family_tag" if "q_family_tag" in rec["group"] else (rec["group"][0] if rec["group"] else "")),
         "default_color_column": "phase_label" if "phase_label" in rec["color"] else (rec["color"][0] if rec["color"] else ""),
+        "template_columns": ["loop_template_id"],
+        "anchor_columns": ["loop_anchor_id", "orbit_family", "q_family_tag", "phase_label"],
+        "default_template_column": "loop_template_id",
+        "default_anchor_column": "loop_anchor_id",
     }
 
 
@@ -180,6 +226,8 @@ def _build_s2880_dataset() -> Dict[str, Any]:
                 "q_order": int(r["q_order"]),
                 "q_family_tag": str(r["q_family_tag"]),
                 "q_g2_proxy_tag": str(r["q_g2_proxy_tag"]),
+                "orbit_family_l": str(r.get("conj_class_id_l", "")),
+                "orbit_family_r": str(r.get("conj_class_id_r", "")),
                 "inner_conj_l_orbit_size": int(r["inner_conj_l_orbit_size"]),
                 "inner_conj_r_orbit_size": int(r["inner_conj_r_orbit_size"]),
                 "q_centralizer_size": int(r["q_centralizer_size"]),
@@ -193,10 +241,21 @@ def _build_s2880_dataset() -> Dict[str, Any]:
                 "top_role_1_score": float(rlr["top_role_1_score"]) if str(rlr.get("top_role_1_score", "")).strip() != "" else 0.0,
                 "top_role_2": str(rlr.get("top_role_2", "")),
                 "top_role_3": str(rlr.get("top_role_3", "")),
+                "loop_template_id": (
+                    f"ord={int(r['order'])}|dp={int(fpr.get('dominant_dp_left', -1))}|dg={int(fpr.get('dominant_dg_left', -1))}|"
+                    f"qfam={str(r['q_family_tag'])}|ol={int(r['inner_conj_l_orbit_size'])}|or={int(r['inner_conj_r_orbit_size'])}|"
+                    f"assoc={_bucket01(float(fpr.get('assoc_nonzero_rate', 0.0)))}|"
+                    f"comm={_bucket01(float(fpr.get('commute_rate_probe', 0.0)))}"
+                ),
+                "loop_anchor_id": str(r["q_id"]),
             }
         )
 
-    rec = _recommend_columns(rows, exclude=("id", "label"))
+    rec = _recommend_columns(
+        rows,
+        exclude=("id", "label"),
+        force_group=("class_id", "orbit_family_l", "orbit_family_r", "q_family_tag", "phase_sector_mod3", "loop_template_id"),
+    )
     return {
         "dataset_id": "S2880",
         "title": "S2880 (C12 x Q240)",
@@ -205,8 +264,12 @@ def _build_s2880_dataset() -> Dict[str, Any]:
         "rows": rows,
         "group_columns": rec["group"],
         "color_columns": rec["color"],
-        "default_group_column": "class_id" if "class_id" in rec["group"] else ("q_family_tag" if "q_family_tag" in rec["group"] else (rec["group"][0] if rec["group"] else "")),
+        "default_group_column": "orbit_family_l" if "orbit_family_l" in rec["group"] else ("class_id" if "class_id" in rec["group"] else ("q_family_tag" if "q_family_tag" in rec["group"] else (rec["group"][0] if rec["group"] else ""))),
         "default_color_column": "top_role_1" if "top_role_1" in rec["color"] else ("phase_label" if "phase_label" in rec["color"] else (rec["color"][0] if rec["color"] else "")),
+        "template_columns": ["loop_template_id", "class_id"],
+        "anchor_columns": ["loop_anchor_id", "orbit_family_l", "orbit_family_r", "q_family_tag", "phase_sector_mod3"],
+        "default_template_column": "loop_template_id",
+        "default_anchor_column": "orbit_family_l",
     }
 
 
@@ -326,6 +389,17 @@ def _build_html(payload: Dict[str, Any]) -> str:
       <select id="groupSel"></select>
       <label>Color</label>
       <select id="colorSel"></select>
+      <label>View Mode</label>
+      <select id="viewSel">
+        <option value="points">Point Cloud</option>
+        <option value="atlas">Orbit Atlas</option>
+      </select>
+      <label>Template Column (Atlas)</label>
+      <select id="templateSel"></select>
+      <label>Anchor Column (Atlas)</label>
+      <select id="anchorSel"></select>
+      <label>Atlas Top-N (per axis)</label>
+      <input id="atlasTopN" type="range" min="8" max="40" value="24" />
       <div class="row">
         <input id="groupToggle" type="checkbox" checked />
         <span style="font-size:13px;color:#cbd5e1;">Enable Group Boxes</span>
@@ -334,7 +408,8 @@ def _build_html(payload: Dict[str, Any]) -> str:
       <input id="sizeRange" type="range" min="1" max="7" value="3" />
       <div id="stats" class="stats"></div>
       <div class="hint">
-        Hover points for details. Group mode pulls each category into a separate box.
+        Point Cloud: structural grouping and coloring. Orbit Atlas: template x anchor heatmap
+        to show repeated loop structure across different octonion anchors.
       </div>
     </div>
     <div class="canvas-wrap">
@@ -348,6 +423,10 @@ def _build_html(payload: Dict[str, Any]) -> str:
   const datasetSel = document.getElementById('datasetSel');
   const groupSel = document.getElementById('groupSel');
   const colorSel = document.getElementById('colorSel');
+  const viewSel = document.getElementById('viewSel');
+  const templateSel = document.getElementById('templateSel');
+  const anchorSel = document.getElementById('anchorSel');
+  const atlasTopN = document.getElementById('atlasTopN');
   const groupToggle = document.getElementById('groupToggle');
   const sizeRange = document.getElementById('sizeRange');
   const statsEl = document.getElementById('stats');
@@ -365,6 +444,10 @@ def _build_html(payload: Dict[str, Any]) -> str:
     datasetId: datasets[0].dataset_id,
     groupCol: '',
     colorCol: '',
+    viewMode: 'points',
+    templateCol: '',
+    anchorCol: '',
+    atlasTopN: 24,
     groupEnabled: true,
     pointSize: 3
   }};
@@ -418,8 +501,12 @@ def _build_html(payload: Dict[str, Any]) -> str:
     const ds = getDataset();
     fillSelect(groupSel, ds.group_columns || [], ds.default_group_column || '');
     fillSelect(colorSel, ds.color_columns || [], ds.default_color_column || '');
+    fillSelect(templateSel, ds.template_columns || [], ds.default_template_column || '');
+    fillSelect(anchorSel, ds.anchor_columns || [], ds.default_anchor_column || '');
     current.groupCol = groupSel.value;
     current.colorCol = colorSel.value;
+    current.templateCol = templateSel.value;
+    current.anchorCol = anchorSel.value;
   }}
 
   function colorFor(value, idx) {{
@@ -504,12 +591,79 @@ def _build_html(payload: Dict[str, Any]) -> str:
     return {{points, boxes, colorValues, colorIdx}};
   }}
 
-  function render() {{
-    const ds = getDataset();
+  function layoutAtlas(ds) {{
+    const rows = ds.rows || [];
+    const tplCol = current.templateCol;
+    const ancCol = current.anchorCol;
+    const W = canvas.width, H = canvas.height;
+    const leftPad = 210, topPad = 120, rightPad = 30, bottomPad = 30;
+    const maxN = Math.max(8, Number(current.atlasTopN) || 24);
+
+    const tplCounts = new Map();
+    const ancCounts = new Map();
+    const pairCounts = new Map();
+
+    rows.forEach(r => {{
+      const t = tplCol ? String(r[tplCol] ?? '') : '';
+      const a = ancCol ? String(r[ancCol] ?? '') : '';
+      if (!t || !a) return;
+      tplCounts.set(t, (tplCounts.get(t) || 0) + 1);
+      ancCounts.set(a, (ancCounts.get(a) || 0) + 1);
+      const k = t + '\\t' + a;
+      pairCounts.set(k, (pairCounts.get(k) || 0) + 1);
+    }});
+
+    const tplVals = Array.from(tplCounts.entries()).sort((x, y) => y[1] - x[1]).slice(0, maxN).map(x => x[0]);
+    const ancVals = Array.from(ancCounts.entries()).sort((x, y) => y[1] - x[1]).slice(0, maxN).map(x => x[0]);
+    const tplIdx = new Map(tplVals.map((v, i) => [v, i]));
+    const ancIdx = new Map(ancVals.map((v, i) => [v, i]));
+
+    const R = tplVals.length || 1;
+    const C = ancVals.length || 1;
+    const gridW = Math.max(120, W - leftPad - rightPad);
+    const gridH = Math.max(120, H - topPad - bottomPad);
+    const cw = gridW / C;
+    const ch = gridH / R;
+
+    let maxCount = 0;
+    pairCounts.forEach((v, k) => {{
+      const parts = k.split('\\t');
+      if (parts.length !== 2) return;
+      if (!tplIdx.has(parts[0]) || !ancIdx.has(parts[1])) return;
+      if (v > maxCount) maxCount = v;
+    }});
+    maxCount = Math.max(1, maxCount);
+
+    const cells = [];
+    pairCounts.forEach((v, k) => {{
+      const parts = k.split('\\t');
+      if (parts.length !== 2) return;
+      const t = parts[0], a = parts[1];
+      const ri = tplIdx.get(t), ci = ancIdx.get(a);
+      if (ri === undefined || ci === undefined) return;
+      const x = leftPad + ci * cw;
+      const y = topPad + ri * ch;
+      const inten = Math.log1p(v) / Math.log1p(maxCount);
+      const hue = 210 - Math.round(180 * inten);
+      const col = `hsl(${{hue}},85%,${{22 + Math.round(38 * inten)}}%)`;
+      cells.push({{
+        x, y, w: cw, h: ch, count: v, template: t, anchor: a, color: col
+      }});
+    }});
+
+    return {{
+      tplVals, ancVals, cells, maxCount,
+      leftPad, topPad, rightPad, bottomPad, cw, ch,
+      totalRows: rows.length
+    }};
+  }}
+
+
+  function renderPoints(ds) {{
     const W = canvas.width, H = canvas.height;
     ctx.clearRect(0, 0, W, H);
 
-    world.boxes.forEach((b, i) => {{
+    world.boxes.forEach((b) => {{
       ctx.save();
       ctx.strokeStyle = 'rgba(148,163,184,0.35)';
       ctx.lineWidth = 1;
@@ -520,14 +674,14 @@ def _build_html(payload: Dict[str, Any]) -> str:
       ctx.font = '11px ui-sans-serif,system-ui';
       const gname = b.group === '__all__' ? '(all)' : b.group;
       const txt = `${{gname}} [${{b.count}}]`;
-      ctx.fillText(txt.length > 42 ? txt.slice(0,42)+'…' : txt, b.x0 + 4, b.y0 + 13);
+      ctx.fillText(txt.length > 42 ? txt.slice(0, 42) + '?' : txt, b.x0 + 4, b.y0 + 13);
       ctx.restore();
     }});
 
     const pr = Number(current.pointSize) || 3;
     world.points.forEach(p => {{
       ctx.beginPath();
-      ctx.arc(p.x, p.y, pr, 0, Math.PI*2);
+      ctx.arc(p.x, p.y, pr, 0, Math.PI * 2);
       ctx.fillStyle = p.color;
       ctx.globalAlpha = 0.90;
       ctx.fill();
@@ -538,7 +692,8 @@ def _build_html(payload: Dict[str, Any]) -> str:
     const ccol = current.colorCol || '(none)';
     statsEl.textContent =
 `dataset: ${{ds.title}}
-rows: ${{(ds.rows||[]).length}}
+view: Point Cloud
+rows: ${{(ds.rows || []).length}}
 group column: ${{gcol}}
 group count: ${{world.boxes.length}}
 color column: ${{ccol}}
@@ -546,9 +701,74 @@ color values: ${{world.colorValues.length}}
 point size: ${{current.pointSize}}`;
   }}
 
+  function renderAtlas(ds) {{
+    const W = canvas.width, H = canvas.height;
+    ctx.clearRect(0, 0, W, H);
+    const A = world.atlas;
+    if (!A) return;
+
+    A.cells.forEach(c => {{
+      ctx.fillStyle = c.color;
+      ctx.fillRect(c.x + 0.5, c.y + 0.5, Math.max(1, c.w - 1), Math.max(1, c.h - 1));
+    }});
+
+    ctx.strokeStyle = 'rgba(148,163,184,0.35)';
+    ctx.lineWidth = 1;
+    ctx.strokeRect(
+      A.leftPad + 0.5,
+      A.topPad + 0.5,
+      Math.max(1, A.cw * Math.max(1, A.ancVals.length) - 1),
+      Math.max(1, A.ch * Math.max(1, A.tplVals.length) - 1)
+    );
+
+    ctx.fillStyle = '#cbd5e1';
+    ctx.font = '11px ui-sans-serif,system-ui';
+    A.ancVals.forEach((v, i) => {{
+      const x = A.leftPad + (i + 0.5) * A.cw;
+      const txt = String(v);
+      ctx.save();
+      ctx.translate(x, A.topPad - 6);
+      ctx.rotate(-0.6);
+      ctx.fillText(txt.length > 26 ? txt.slice(0, 26) + '...' : txt, 0, 0);
+      ctx.restore();
+    }});
+    A.tplVals.forEach((v, i) => {{
+      const y = A.topPad + (i + 0.5) * A.ch + 4;
+      const txt = String(v);
+      ctx.fillText(txt.length > 32 ? txt.slice(0, 32) + '...' : txt, 6, y);
+    }});
+
+    ctx.fillStyle = '#93c5fd';
+    ctx.font = '12px ui-sans-serif,system-ui';
+    ctx.fillText(`template: ${{current.templateCol || '(none)'}}`, A.leftPad, 18);
+    ctx.fillText(`anchor: ${{current.anchorCol || '(none)'}}`, A.leftPad, 34);
+    ctx.fillText(`max cell count: ${{A.maxCount}}`, A.leftPad, 50);
+
+    statsEl.textContent =
+`dataset: ${{ds.title}}
+view: Orbit Atlas
+rows: ${{A.totalRows}}
+template column: ${{current.templateCol || '(none)'}}
+template values shown: ${{A.tplVals.length}}
+anchor column: ${{current.anchorCol || '(none)'}}
+anchor values shown: ${{A.ancVals.length}}
+filled cells: ${{A.cells.length}}
+atlas top-N: ${{current.atlasTopN}}`;
+  }}
+
+  function render() {{
+    const ds = getDataset();
+    if (current.viewMode === 'atlas') {{
+      renderAtlas(ds);
+    }} else {{
+      renderPoints(ds);
+    }}
+  }}
+
   function layoutAndRender() {{
     const ds = getDataset();
     world = layoutPoints(ds);
+    world.atlas = layoutAtlas(ds);
     render();
   }}
 
@@ -566,6 +786,8 @@ point size: ${{current.pointSize}}`;
       datasetSel.appendChild(opt);
     }});
     datasetSel.value = current.datasetId;
+    viewSel.value = current.viewMode;
+    atlasTopN.value = String(current.atlasTopN);
     updateSelectors();
 
     datasetSel.addEventListener('change', updateDataset);
@@ -575,6 +797,22 @@ point size: ${{current.pointSize}}`;
     }});
     colorSel.addEventListener('change', () => {{
       current.colorCol = colorSel.value;
+      layoutAndRender();
+    }});
+    viewSel.addEventListener('change', () => {{
+      current.viewMode = viewSel.value || 'points';
+      layoutAndRender();
+    }});
+    templateSel.addEventListener('change', () => {{
+      current.templateCol = templateSel.value;
+      layoutAndRender();
+    }});
+    anchorSel.addEventListener('change', () => {{
+      current.anchorCol = anchorSel.value;
+      layoutAndRender();
+    }});
+    atlasTopN.addEventListener('input', () => {{
+      current.atlasTopN = Number(atlasTopN.value) || 24;
       layoutAndRender();
     }});
     groupToggle.addEventListener('change', () => {{
@@ -590,6 +828,32 @@ point size: ${{current.pointSize}}`;
       const rect = canvas.getBoundingClientRect();
       const mx = ev.clientX - rect.left;
       const my = ev.clientY - rect.top;
+      if (current.viewMode === 'atlas') {{
+        const A = world.atlas;
+        if (!A) {{
+          tip.style.display = 'none';
+          return;
+        }}
+        let hit = null;
+        for (const c of A.cells) {{
+          if (mx >= c.x && mx <= (c.x + c.w) && my >= c.y && my <= (c.y + c.h)) {{
+            hit = c;
+            break;
+          }}
+        }}
+        if (!hit) {{
+          tip.style.display = 'none';
+          return;
+        }}
+        tip.textContent =
+`template: ${{hit.template}}
+anchor: ${{hit.anchor}}
+count: ${{hit.count}}`;
+        tip.style.left = `${{mx}}px`;
+        tip.style.top = `${{my}}px`;
+        tip.style.display = 'block';
+        return;
+      }}
       let best = null;
       let bestD2 = 80;
       for (const p of world.points) {{
@@ -660,4 +924,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

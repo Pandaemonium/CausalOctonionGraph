@@ -1,20 +1,22 @@
 {
   "last_launch_utc": {
-    "generation_equivalence_full": "2026-03-03T08:37:22Z",
-    "kernel_phase_boundary_ext": "2026-03-03T08:27:18Z",
-    "s2880_clue_hypotheses_refresh": "2026-03-03T08:37:24Z",
-    "s2880_clue_report_refresh": "2026-03-03T08:37:23Z",
-    "stable_motif_scan_cube26_long": "2026-03-03T08:37:23Z"
+    "generation_equivalence_full": "2026-03-03T10:02:57Z",
+    "kernel_gate_stack_seed_sweep_ext": "2026-03-03T10:18:03Z",
+    "kernel_phase_boundary_ext": "2026-03-03T09:32:44Z",
+    "s2880_clue_hypotheses_refresh": "2026-03-03T10:18:05Z",
+    "s2880_clue_report_refresh": "2026-03-03T10:18:04Z",
+    "stable_motif_scan_cube26_long": "2026-03-03T10:18:04Z"
   },
-  "last_message_utc": "2026-03-03T08:37:24Z",
+  "last_message_utc": "2026-03-03T10:18:05Z",
   "launch_counts": {
-    "generation_equivalence_full": 5,
-    "kernel_phase_boundary_ext": 2,
-    "s2880_clue_hypotheses_refresh": 30,
-    "s2880_clue_report_refresh": 30,
-    "stable_motif_scan_cube26_long": 30
+    "generation_equivalence_full": 8,
+    "kernel_gate_stack_seed_sweep_ext": 1,
+    "kernel_phase_boundary_ext": 3,
+    "s2880_clue_hypotheses_refresh": 50,
+    "s2880_clue_report_refresh": 50,
+    "stable_motif_scan_cube26_long": 50
   },
   "schema_version": "v3_mark_autopilot_state_v1",
-  "ticks": 31,
-  "updated_utc": "2026-03-03T08:37:24Z"
+  "ticks": 51,
+  "updated_utc": "2026-03-03T10:18:05Z"
 }

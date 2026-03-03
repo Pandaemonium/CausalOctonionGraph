@@ -22,6 +22,7 @@ from typing import Any, Dict, List, Sequence, Tuple
 import numpy as np
 
 from cog_v3.calc import build_v3_c12_singlet_doublet_clock_shift_sparse_v1 as c12
+from cog_v3.python import kernel_s2880_pair_conservative_v1 as kpair
 from cog_v3.python import kernel_octavian240_multiplicative_v1 as k
 
 
@@ -42,7 +43,7 @@ PHASE_COUNT = 12
 class PanelConfig:
     panel_id: str
     boundary_mode: str  # fixed_vacuum | periodic
-    event_order_policy: str  # synchronous_parallel_v1 | seeded_async_v1
+    event_order_policy: str  # synchronous_parallel_v1 | seeded_async_v1 | pair_conservative_v1
     stencil_id: str  # axial6 | cube26
     ticks: int
     warmup_ticks: int
@@ -338,6 +339,17 @@ def _run_panel(config: PanelConfig, *, global_seed: int) -> Dict[str, Any]:
         str(config.boundary_mode),
     )
     neighbors_default = policy_neighbors["all"]
+    pair_rounds = None
+    if str(config.event_order_policy) == "pair_conservative_v1":
+        pair_rounds = kpair.build_pair_rounds(
+            int(config.size_x),
+            int(config.size_y),
+            int(config.size_z),
+            stencil_id=str(config.stencil_id),
+            boundary_mode=str(config.boundary_mode),
+        )
+    interior_mask = np.all(neighbors_default >= 0, axis=1)
+    interior_count = int(np.count_nonzero(interior_mask))
 
     n_cells = int(config.size_x) * int(config.size_y) * int(config.size_z)
     prev_g = np.full((n_cells,), -1, dtype=np.int8)
@@ -352,6 +364,10 @@ def _run_panel(config: PanelConfig, *, global_seed: int) -> Dict[str, Any]:
     signed_m2 = 0
     run_lengths: List[int] = []
     total_events = 0
+
+    gamma_tick_total = 0
+    gamma_global_dmod3_counts = np.zeros((3,), dtype=np.int64)
+    gamma_interior_dmod3_counts = np.zeros((3,), dtype=np.int64)
 
     hist_rows: List[Dict[str, Any]] = []
 
@@ -374,7 +390,18 @@ def _run_panel(config: PanelConfig, *, global_seed: int) -> Dict[str, Any]:
                 combo = _policy_combo(str(config.channel_policy_id), int(t), int(global_seed) + r + ti)
                 neighbors = policy_neighbors.get(combo, neighbors_default)
                 old = world
-                if str(config.event_order_policy) == "seeded_async_v1":
+                if str(config.event_order_policy) == "pair_conservative_v1":
+                    assert pair_rounds is not None
+                    world = kpair.step_pair_conservative(
+                        old,
+                        pair_rounds,
+                        qmul=qmul,
+                        phase_count=PHASE_COUNT,
+                        global_seed=int(global_seed) + 10007 * (ti + 1) + 7919 * (r + 1),
+                        tick=int(t),
+                        shuffle_round_order=False,
+                    )
+                elif str(config.event_order_policy) == "seeded_async_v1":
                     world = _step_async(old, neighbors, mul, vac_id=vac_id, rng=rr)
                 else:
                     world = _step_sync(old, neighbors, mul, vac_id=vac_id)
@@ -385,6 +412,19 @@ def _run_panel(config: PanelConfig, *, global_seed: int) -> Dict[str, Any]:
                 old_phase = (old.astype(np.int32) // int(qn)).astype(np.int16)
                 new_phase = (world.astype(np.int32) // int(qn)).astype(np.int16)
                 d = ((new_phase - old_phase) % PHASE_COUNT).astype(np.int16)
+
+                # Triality audit (Gamma = phase mod 3): tick-level conservation probes.
+                gamma_tick_total += 1
+                old_g_sum = int(np.sum(old_phase % 3))
+                new_g_sum = int(np.sum(new_phase % 3))
+                dg_global = int((new_g_sum - old_g_sum) % 3)
+                gamma_global_dmod3_counts[dg_global] += 1
+                if interior_count > 0:
+                    old_gi_sum = int(np.sum(old_phase[interior_mask] % 3))
+                    new_gi_sum = int(np.sum(new_phase[interior_mask] % 3))
+                    dg_interior = int((new_gi_sum - old_gi_sum) % 3)
+                    gamma_interior_dmod3_counts[dg_interior] += 1
+
                 support = (old != np.uint16(vac_id)) | (world != np.uint16(vac_id))
                 if not bool(np.any(support)):
                     continue
@@ -475,6 +515,25 @@ def _run_panel(config: PanelConfig, *, global_seed: int) -> Dict[str, Any]:
     gate3 = bool(np.max(tmat) >= 0.45 and np.count_nonzero(tmat > 0.34) <= 4)
     gate4 = bool(abs(a1) >= 0.02 or abs(a2) >= 0.02)
 
+    g_global_total = int(np.sum(gamma_global_dmod3_counts))
+    g_interior_total = int(np.sum(gamma_interior_dmod3_counts))
+    gamma_global_nonzero = int(gamma_global_dmod3_counts[1] + gamma_global_dmod3_counts[2])
+    gamma_interior_nonzero = int(gamma_interior_dmod3_counts[1] + gamma_interior_dmod3_counts[2])
+    triality_audit = {
+        "gamma_tick_total": int(gamma_tick_total),
+        "interior_cell_count": int(interior_count),
+        "gamma_global_dmod3_counts": {str(i): int(gamma_global_dmod3_counts[i]) for i in range(3)},
+        "gamma_global_nonzero_tick_count": int(gamma_global_nonzero),
+        "gamma_global_nonzero_tick_rate": float(_safe_div(float(gamma_global_nonzero), float(max(1, g_global_total)))),
+        "gamma_interior_dmod3_counts": {str(i): int(gamma_interior_dmod3_counts[i]) for i in range(3)},
+        "gamma_interior_nonzero_tick_count": int(gamma_interior_nonzero),
+        "gamma_interior_nonzero_tick_rate": float(_safe_div(float(gamma_interior_nonzero), float(max(1, g_interior_total)))),
+        "expected_exact_for_conservative_pair_kernel": {
+            "global": "all ticks dGamma_mod3 == 0",
+            "interior": "all ticks dGamma_mod3 == 0",
+        },
+    }
+
     metrics = {
         "panel_id": str(config.panel_id),
         "boundary_mode": str(config.boundary_mode),
@@ -502,6 +561,7 @@ def _run_panel(config: PanelConfig, *, global_seed: int) -> Dict[str, Any]:
             "gate3_mixing_structure": bool(gate3),
             "gate4_signed_asymmetry": bool(gate4),
         },
+        "triality_audit": triality_audit,
     }
     return {"metrics": metrics, "hist_rows": hist_rows}
 
@@ -526,6 +586,7 @@ def _render_metrics_md(payload: Dict[str, Any]) -> str:
         f"- A1: `{m0.get('A1')}`",
         f"- A2: `{m0.get('A2')}`",
         f"- gate_results: `{m0.get('gate_results')}`",
+        f"- triality_audit: `{m0.get('triality_audit')}`",
         "",
         "## Notes",
         "",
@@ -539,15 +600,22 @@ def _render_panel_md(payload: Dict[str, Any]) -> str:
     lines = [
         "# v3 C12 Phase-Sector Panel Report (v1)",
         "",
-        "| panel_id | boundary | event_order | stencil | R3 | C3 | L3 | A1 | A2 | g1 | g2 | g3 | g4 |",
-        "|---|---|---|---|---:|---:|---:|---:|---:|---|---|---|---|",
+        "| panel_id | boundary | event_order | stencil | R3 | C3 | L3 | A1 | A2 | dG0_global | dG0_interior | g1 | g2 | g3 | g4 |",
+        "|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---|---|---|---|",
     ]
     for p in payload["panels"]:
         m = p["metrics"]
         g = m["gate_results"]
+        ta = m.get("triality_audit", {})
+        gg = ta.get("gamma_global_dmod3_counts", {"0": 0, "1": 0, "2": 0})
+        gi = ta.get("gamma_interior_dmod3_counts", {"0": 0, "1": 0, "2": 0})
+        gg0 = _safe_div(float(gg.get("0", 0)), float(max(1, int(ta.get("gamma_tick_total", 0)))))
+        gi_total = int(gi.get("0", 0)) + int(gi.get("1", 0)) + int(gi.get("2", 0))
+        gi0 = _safe_div(float(gi.get("0", 0)), float(max(1, gi_total)))
         lines.append(
             f"| `{m['panel_id']}` | `{m['boundary_mode']}` | `{m['event_order_policy']}` | `{m['stencil_id']}` | "
             f"{float(m['R3']):.4f} | {float(m['C3']):.4f} | {float(m['L3']):.4f} | {float(m['A1']):.4f} | {float(m['A2']):.4f} | "
+            f"{float(gg0):.4f} | {float(gi0):.4f} | "
             f"{g['gate1_dominance']} | {g['gate2_sector_conservation']} | {g['gate3_mixing_structure']} | {g['gate4_signed_asymmetry']} |"
         )
     return "\n".join(lines)
@@ -560,6 +628,19 @@ def build_payload(*, global_seed: int = 1337, quick: bool = False) -> Dict[str, 
                 panel_id="P0_quick_fixed_sync_axial6",
                 boundary_mode="fixed_vacuum",
                 event_order_policy="synchronous_parallel_v1",
+                stencil_id="axial6",
+                ticks=24,
+                warmup_ticks=6,
+                runs_per_trial=1,
+                size_x=11,
+                size_y=7,
+                size_z=7,
+                channel_policy_id="uniform_all",
+            ),
+            PanelConfig(
+                panel_id="P1_quick_fixed_paircon_axial6",
+                boundary_mode="fixed_vacuum",
+                event_order_policy="pair_conservative_v1",
                 stencil_id="axial6",
                 ticks=24,
                 warmup_ticks=6,

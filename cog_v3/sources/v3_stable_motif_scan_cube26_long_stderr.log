@@ -298,3 +298,203 @@ usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
        [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
        [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
 python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum
+usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
+       [-h] [--ticks TICKS] [--size-x SIZE_X] [--size-y SIZE_Y]
+       [--size-z SIZE_Z] [--stencil-id {axial6,cube26,cube124}]
+       [--warmup WARMUP] [--min-period MIN_PERIOD] [--max-period MAX_PERIOD]
+       [--max-shift-x MAX_SHIFT_X] [--repeat-checks REPEAT_CHECKS]
+       [--min-support-cells MIN_SUPPORT_CELLS]
+       [--min-support-match-ratio MIN_SUPPORT_MATCH_RATIO]
+       [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
+       [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
+python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum
+usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
+       [-h] [--ticks TICKS] [--size-x SIZE_X] [--size-y SIZE_Y]
+       [--size-z SIZE_Z] [--stencil-id {axial6,cube26,cube124}]
+       [--warmup WARMUP] [--min-period MIN_PERIOD] [--max-period MAX_PERIOD]
+       [--max-shift-x MAX_SHIFT_X] [--repeat-checks REPEAT_CHECKS]
+       [--min-support-cells MIN_SUPPORT_CELLS]
+       [--min-support-match-ratio MIN_SUPPORT_MATCH_RATIO]
+       [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
+       [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
+python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum
+usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
+       [-h] [--ticks TICKS] [--size-x SIZE_X] [--size-y SIZE_Y]
+       [--size-z SIZE_Z] [--stencil-id {axial6,cube26,cube124}]
+       [--warmup WARMUP] [--min-period MIN_PERIOD] [--max-period MAX_PERIOD]
+       [--max-shift-x MAX_SHIFT_X] [--repeat-checks REPEAT_CHECKS]
+       [--min-support-cells MIN_SUPPORT_CELLS]
+       [--min-support-match-ratio MIN_SUPPORT_MATCH_RATIO]
+       [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
+       [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
+python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum
+usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
+       [-h] [--ticks TICKS] [--size-x SIZE_X] [--size-y SIZE_Y]
+       [--size-z SIZE_Z] [--stencil-id {axial6,cube26,cube124}]
+       [--warmup WARMUP] [--min-period MIN_PERIOD] [--max-period MAX_PERIOD]
+       [--max-shift-x MAX_SHIFT_X] [--repeat-checks REPEAT_CHECKS]
+       [--min-support-cells MIN_SUPPORT_CELLS]
+       [--min-support-match-ratio MIN_SUPPORT_MATCH_RATIO]
+       [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
+       [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
+python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum
+usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
+       [-h] [--ticks TICKS] [--size-x SIZE_X] [--size-y SIZE_Y]
+       [--size-z SIZE_Z] [--stencil-id {axial6,cube26,cube124}]
+       [--warmup WARMUP] [--min-period MIN_PERIOD] [--max-period MAX_PERIOD]
+       [--max-shift-x MAX_SHIFT_X] [--repeat-checks REPEAT_CHECKS]
+       [--min-support-cells MIN_SUPPORT_CELLS]
+       [--min-support-match-ratio MIN_SUPPORT_MATCH_RATIO]
+       [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
+       [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
+python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum
+usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
+       [-h] [--ticks TICKS] [--size-x SIZE_X] [--size-y SIZE_Y]
+       [--size-z SIZE_Z] [--stencil-id {axial6,cube26,cube124}]
+       [--warmup WARMUP] [--min-period MIN_PERIOD] [--max-period MAX_PERIOD]
+       [--max-shift-x MAX_SHIFT_X] [--repeat-checks REPEAT_CHECKS]
+       [--min-support-cells MIN_SUPPORT_CELLS]
+       [--min-support-match-ratio MIN_SUPPORT_MATCH_RATIO]
+       [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
+       [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
+python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum
+usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
+       [-h] [--ticks TICKS] [--size-x SIZE_X] [--size-y SIZE_Y]
+       [--size-z SIZE_Z] [--stencil-id {axial6,cube26,cube124}]
+       [--warmup WARMUP] [--min-period MIN_PERIOD] [--max-period MAX_PERIOD]
+       [--max-shift-x MAX_SHIFT_X] [--repeat-checks REPEAT_CHECKS]
+       [--min-support-cells MIN_SUPPORT_CELLS]
+       [--min-support-match-ratio MIN_SUPPORT_MATCH_RATIO]
+       [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
+       [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
+python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum
+usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
+       [-h] [--ticks TICKS] [--size-x SIZE_X] [--size-y SIZE_Y]
+       [--size-z SIZE_Z] [--stencil-id {axial6,cube26,cube124}]
+       [--warmup WARMUP] [--min-period MIN_PERIOD] [--max-period MAX_PERIOD]
+       [--max-shift-x MAX_SHIFT_X] [--repeat-checks REPEAT_CHECKS]
+       [--min-support-cells MIN_SUPPORT_CELLS]
+       [--min-support-match-ratio MIN_SUPPORT_MATCH_RATIO]
+       [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
+       [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
+python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum
+usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
+       [-h] [--ticks TICKS] [--size-x SIZE_X] [--size-y SIZE_Y]
+       [--size-z SIZE_Z] [--stencil-id {axial6,cube26,cube124}]
+       [--warmup WARMUP] [--min-period MIN_PERIOD] [--max-period MAX_PERIOD]
+       [--max-shift-x MAX_SHIFT_X] [--repeat-checks REPEAT_CHECKS]
+       [--min-support-cells MIN_SUPPORT_CELLS]
+       [--min-support-match-ratio MIN_SUPPORT_MATCH_RATIO]
+       [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
+       [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
+python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum
+usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
+       [-h] [--ticks TICKS] [--size-x SIZE_X] [--size-y SIZE_Y]
+       [--size-z SIZE_Z] [--stencil-id {axial6,cube26,cube124}]
+       [--warmup WARMUP] [--min-period MIN_PERIOD] [--max-period MAX_PERIOD]
+       [--max-shift-x MAX_SHIFT_X] [--repeat-checks REPEAT_CHECKS]
+       [--min-support-cells MIN_SUPPORT_CELLS]
+       [--min-support-match-ratio MIN_SUPPORT_MATCH_RATIO]
+       [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
+       [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
+python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum
+usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
+       [-h] [--ticks TICKS] [--size-x SIZE_X] [--size-y SIZE_Y]
+       [--size-z SIZE_Z] [--stencil-id {axial6,cube26,cube124}]
+       [--warmup WARMUP] [--min-period MIN_PERIOD] [--max-period MAX_PERIOD]
+       [--max-shift-x MAX_SHIFT_X] [--repeat-checks REPEAT_CHECKS]
+       [--min-support-cells MIN_SUPPORT_CELLS]
+       [--min-support-match-ratio MIN_SUPPORT_MATCH_RATIO]
+       [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
+       [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
+python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum
+usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
+       [-h] [--ticks TICKS] [--size-x SIZE_X] [--size-y SIZE_Y]
+       [--size-z SIZE_Z] [--stencil-id {axial6,cube26,cube124}]
+       [--warmup WARMUP] [--min-period MIN_PERIOD] [--max-period MAX_PERIOD]
+       [--max-shift-x MAX_SHIFT_X] [--repeat-checks REPEAT_CHECKS]
+       [--min-support-cells MIN_SUPPORT_CELLS]
+       [--min-support-match-ratio MIN_SUPPORT_MATCH_RATIO]
+       [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
+       [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
+python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum
+usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
+       [-h] [--ticks TICKS] [--size-x SIZE_X] [--size-y SIZE_Y]
+       [--size-z SIZE_Z] [--stencil-id {axial6,cube26,cube124}]
+       [--warmup WARMUP] [--min-period MIN_PERIOD] [--max-period MAX_PERIOD]
+       [--max-shift-x MAX_SHIFT_X] [--repeat-checks REPEAT_CHECKS]
+       [--min-support-cells MIN_SUPPORT_CELLS]
+       [--min-support-match-ratio MIN_SUPPORT_MATCH_RATIO]
+       [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
+       [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
+python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum
+usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
+       [-h] [--ticks TICKS] [--size-x SIZE_X] [--size-y SIZE_Y]
+       [--size-z SIZE_Z] [--stencil-id {axial6,cube26,cube124}]
+       [--warmup WARMUP] [--min-period MIN_PERIOD] [--max-period MAX_PERIOD]
+       [--max-shift-x MAX_SHIFT_X] [--repeat-checks REPEAT_CHECKS]
+       [--min-support-cells MIN_SUPPORT_CELLS]
+       [--min-support-match-ratio MIN_SUPPORT_MATCH_RATIO]
+       [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
+       [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
+python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum
+usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
+       [-h] [--ticks TICKS] [--size-x SIZE_X] [--size-y SIZE_Y]
+       [--size-z SIZE_Z] [--stencil-id {axial6,cube26,cube124}]
+       [--warmup WARMUP] [--min-period MIN_PERIOD] [--max-period MAX_PERIOD]
+       [--max-shift-x MAX_SHIFT_X] [--repeat-checks REPEAT_CHECKS]
+       [--min-support-cells MIN_SUPPORT_CELLS]
+       [--min-support-match-ratio MIN_SUPPORT_MATCH_RATIO]
+       [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
+       [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
+python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum
+usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
+       [-h] [--ticks TICKS] [--size-x SIZE_X] [--size-y SIZE_Y]
+       [--size-z SIZE_Z] [--stencil-id {axial6,cube26,cube124}]
+       [--warmup WARMUP] [--min-period MIN_PERIOD] [--max-period MAX_PERIOD]
+       [--max-shift-x MAX_SHIFT_X] [--repeat-checks REPEAT_CHECKS]
+       [--min-support-cells MIN_SUPPORT_CELLS]
+       [--min-support-match-ratio MIN_SUPPORT_MATCH_RATIO]
+       [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
+       [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
+python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum
+usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
+       [-h] [--ticks TICKS] [--size-x SIZE_X] [--size-y SIZE_Y]
+       [--size-z SIZE_Z] [--stencil-id {axial6,cube26,cube124}]
+       [--warmup WARMUP] [--min-period MIN_PERIOD] [--max-period MAX_PERIOD]
+       [--max-shift-x MAX_SHIFT_X] [--repeat-checks REPEAT_CHECKS]
+       [--min-support-cells MIN_SUPPORT_CELLS]
+       [--min-support-match-ratio MIN_SUPPORT_MATCH_RATIO]
+       [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
+       [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
+python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum
+usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
+       [-h] [--ticks TICKS] [--size-x SIZE_X] [--size-y SIZE_Y]
+       [--size-z SIZE_Z] [--stencil-id {axial6,cube26,cube124}]
+       [--warmup WARMUP] [--min-period MIN_PERIOD] [--max-period MAX_PERIOD]
+       [--max-shift-x MAX_SHIFT_X] [--repeat-checks REPEAT_CHECKS]
+       [--min-support-cells MIN_SUPPORT_CELLS]
+       [--min-support-match-ratio MIN_SUPPORT_MATCH_RATIO]
+       [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
+       [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
+python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum
+usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
+       [-h] [--ticks TICKS] [--size-x SIZE_X] [--size-y SIZE_Y]
+       [--size-z SIZE_Z] [--stencil-id {axial6,cube26,cube124}]
+       [--warmup WARMUP] [--min-period MIN_PERIOD] [--max-period MAX_PERIOD]
+       [--max-shift-x MAX_SHIFT_X] [--repeat-checks REPEAT_CHECKS]
+       [--min-support-cells MIN_SUPPORT_CELLS]
+       [--min-support-match-ratio MIN_SUPPORT_MATCH_RATIO]
+       [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
+       [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
+python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum
+usage: python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1
+       [-h] [--ticks TICKS] [--size-x SIZE_X] [--size-y SIZE_Y]
+       [--size-z SIZE_Z] [--stencil-id {axial6,cube26,cube124}]
+       [--warmup WARMUP] [--min-period MIN_PERIOD] [--max-period MAX_PERIOD]
+       [--max-shift-x MAX_SHIFT_X] [--repeat-checks REPEAT_CHECKS]
+       [--min-support-cells MIN_SUPPORT_CELLS]
+       [--min-support-match-ratio MIN_SUPPORT_MATCH_RATIO]
+       [--min-global-match-ratio MIN_GLOBAL_MATCH_RATIO]
+       [--max-trials MAX_TRIALS] [--thin-output-step THIN_OUTPUT_STEP]
+python.exe -m cog_v3.calc.build_v3_stable_motif_scan_v1: error: unrecognized arguments: --boundary fixed_vacuum

@@ -28,6 +28,17 @@ The central prediction:
 
 ## 2. Generation Assignment (from RFC-010 and RFC-016)
 
+### 2.0 Label-convention lock (explicit)
+
+The names Gen1/Gen2/Gen3 are a basis convention. The physically meaningful objects in this
+RFC are relative hop statistics and transition probabilities. Under global relabel
+`p -> p + 4k (mod 12)` applied to the full system, the measured hop histogram over `Delta p`
+is unchanged up to index relabeling.
+
+Implication:
+1. CKM extraction uses relative channels (`Delta g`, `Delta p` classes), not absolute generation names.
+2. "Gen1 -> Gen2" should be read as "current sector -> next sector in chosen basis."
+
 In C12, generation is assigned by g = p mod 3:
 - Gen1 (g=0): phases {0, 3, 6, 9}  — up-type first generation
 - Gen2 (g=1): phases {1, 4, 7, 10} — charm-type second generation

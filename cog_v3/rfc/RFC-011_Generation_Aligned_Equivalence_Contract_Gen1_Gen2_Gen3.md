@@ -26,6 +26,12 @@ Operational convention for current testing:
 3. Gen2 label: `p+1 (mod 12)` (one tick advanced).
 4. Gen3 label: `p+2 (mod 12)` (two ticks advanced).
 
+Convention lock:
+1. Gen1/Gen2/Gen3 labels above are basis names, not absolute ontology.
+2. Global relabel `p -> p + 4k (mod 12)` is symmetry-equivalent when applied to the full closed system.
+3. This RFC evaluates equivalence using relative offsets/signatures; it does not depend on absolute generation names.
+4. Label symmetry alone does not imply full state identity when `(a = p mod 4, q)` differs.
+
 Important caveat:
 1. this RFC does not lock the microscopic operator class that implements `30/60` degree shifts.
 2. operator-level mapping is deferred; dynamics-level predictions are tested first.
