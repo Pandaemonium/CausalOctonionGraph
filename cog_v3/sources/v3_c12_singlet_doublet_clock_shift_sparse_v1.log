@@ -1,0 +1,18 @@
+rows=600000/8294400 rate=8,065.9 rows/s eta=15.9 min
+rows=1200000/8294400 rate=8,404.5 rows/s eta=14.1 min
+rows=1800000/8294400 rate=8,528.2 rows/s eta=12.7 min
+rows=2400000/8294400 rate=8,586.3 rows/s eta=11.4 min
+rows=3000000/8294400 rate=8,626.6 rows/s eta=10.2 min
+rows=3600000/8294400 rate=8,645.6 rows/s eta=9.0 min
+rows=4200000/8294400 rate=8,670.3 rows/s eta=7.9 min
+rows=4800000/8294400 rate=8,692.9 rows/s eta=6.7 min
+rows=5400000/8294400 rate=8,710.4 rows/s eta=5.5 min
+rows=6000000/8294400 rate=8,725.5 rows/s eta=4.4 min
+rows=6600000/8294400 rate=8,501.4 rows/s eta=3.3 min
+rows=7200000/8294400 rate=8,048.5 rows/s eta=2.3 min
+rows=7800000/8294400 rate=7,736.0 rows/s eta=1.1 min
+Wrote table: C:\Projects\CausalGraphTheory\cog_v3\sources\v3_c12_singlet_doublet_clock_shift_sparse_v1.csv.gz
+Wrote clock metadata: C:\Projects\CausalGraphTheory\cog_v3\sources\v3_c12_clock_meta_v1.csv
+Wrote element metadata: C:\Projects\CausalGraphTheory\cog_v3\sources\v3_c12_element_meta_v1.csv
+rows=8294400, elapsed=1104.6s, rate=7,508.7 rows/s
+state_size=2880, phase_count=12, non_identity_clocks=1019, identity_id=239
