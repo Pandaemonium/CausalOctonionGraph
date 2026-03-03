@@ -27767,3 +27767,10458 @@ Started: 2026-03-02T13:05:31Z
 - gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
 - no_improve_streak: `587`
 
+### Batch 838 @ 2026-03-03T10:18:54Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T101854Z_batch_000838.json`
+- best_score: `0.474681`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `588`
+
+### Batch 839 @ 2026-03-03T10:19:32Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T101932Z_batch_000839.json`
+- best_score: `0.475353`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `589`
+
+### Batch 840 @ 2026-03-03T10:20:09Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T102009Z_batch_000840.json`
+- best_score: `0.475201`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `590`
+
+### Batch 841 @ 2026-03-03T10:20:47Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T102047Z_batch_000841.json`
+- best_score: `0.475650`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `591`
+
+### Batch 842 @ 2026-03-03T10:21:24Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T102124Z_batch_000842.json`
+- best_score: `0.506816`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `-0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `592`
+
+### Batch 843 @ 2026-03-03T10:22:03Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T102203Z_batch_000843.json`
+- best_score: `0.475172`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `593`
+
+### Batch 844 @ 2026-03-03T10:22:41Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T102241Z_batch_000844.json`
+- best_score: `0.474074`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `594`
+
+### Batch 845 @ 2026-03-03T10:23:20Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T102320Z_batch_000845.json`
+- best_score: `0.475200`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `595`
+
+### Batch 846 @ 2026-03-03T10:23:58Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T102358Z_batch_000846.json`
+- best_score: `0.475298`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `596`
+
+### Batch 847 @ 2026-03-03T10:24:38Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T102438Z_batch_000847.json`
+- best_score: `0.473105`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `597`
+
+### Batch 848 @ 2026-03-03T10:25:20Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T102520Z_batch_000848.json`
+- best_score: `0.472527`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `598`
+
+### Batch 849 @ 2026-03-03T10:26:01Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T102601Z_batch_000849.json`
+- best_score: `0.474151`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `599`
+
+#### Stall pivot @ 2026-03-03T10:26:41Z
+- reason: `no_improve_streak=600`
+- action: `seed_offset += 1000003 -> 19000057`
+- action: keep K1/K2 prioritized in selection matrix
+
+### Batch 850 @ 2026-03-03T10:26:41Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T102641Z_batch_000850.json`
+- best_score: `0.486293`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `600`
+
+### Batch 851 @ 2026-03-03T10:27:22Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T102722Z_batch_000851.json`
+- best_score: `0.474493`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `601`
+
+### Batch 852 @ 2026-03-03T10:27:57Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T102757Z_batch_000852.json`
+- best_score: `0.481251`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `602`
+
+### Batch 853 @ 2026-03-03T10:28:23Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T102823Z_batch_000853.json`
+- best_score: `0.512811`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `603`
+
+### Batch 854 @ 2026-03-03T10:28:49Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T102849Z_batch_000854.json`
+- best_score: `0.482603`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `604`
+
+### Batch 855 @ 2026-03-03T10:29:15Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T102915Z_batch_000855.json`
+- best_score: `0.438875`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `605`
+
+### Batch 856 @ 2026-03-03T10:29:41Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T102941Z_batch_000856.json`
+- best_score: `0.439369`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `606`
+
+### Batch 857 @ 2026-03-03T10:30:07Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103007Z_batch_000857.json`
+- best_score: `0.480302`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `607`
+
+### Batch 858 @ 2026-03-03T10:30:33Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103033Z_batch_000858.json`
+- best_score: `0.480883`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `608`
+
+### Batch 859 @ 2026-03-03T10:30:59Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103059Z_batch_000859.json`
+- best_score: `0.481216`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `609`
+
+### Batch 860 @ 2026-03-03T10:31:25Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103125Z_batch_000860.json`
+- best_score: `0.481996`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `610`
+
+### Batch 861 @ 2026-03-03T10:31:52Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103152Z_batch_000861.json`
+- best_score: `0.511757`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `611`
+
+### Batch 862 @ 2026-03-03T10:32:18Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103218Z_batch_000862.json`
+- best_score: `0.480149`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `612`
+
+### Batch 863 @ 2026-03-03T10:32:44Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103244Z_batch_000863.json`
+- best_score: `0.482099`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `613`
+
+### Batch 864 @ 2026-03-03T10:33:10Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103310Z_batch_000864.json`
+- best_score: `0.481292`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `614`
+
+### Batch 865 @ 2026-03-03T10:33:37Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103337Z_batch_000865.json`
+- best_score: `0.482451`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `615`
+
+### Batch 866 @ 2026-03-03T10:34:04Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103404Z_batch_000866.json`
+- best_score: `0.481450`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `616`
+
+### Batch 867 @ 2026-03-03T10:34:31Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103431Z_batch_000867.json`
+- best_score: `0.479118`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `617`
+
+### Batch 868 @ 2026-03-03T10:34:57Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103457Z_batch_000868.json`
+- best_score: `0.481656`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `618`
+
+### Batch 869 @ 2026-03-03T10:35:25Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103525Z_batch_000869.json`
+- best_score: `0.372253`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `619`
+
+### Batch 870 @ 2026-03-03T10:35:52Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103552Z_batch_000870.json`
+- best_score: `0.480279`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `620`
+
+### Batch 871 @ 2026-03-03T10:36:19Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103619Z_batch_000871.json`
+- best_score: `0.480576`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `621`
+
+### Batch 872 @ 2026-03-03T10:36:46Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103646Z_batch_000872.json`
+- best_score: `0.518591`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `622`
+
+### Batch 873 @ 2026-03-03T10:37:12Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103712Z_batch_000873.json`
+- best_score: `0.512877`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `623`
+
+### Batch 874 @ 2026-03-03T10:37:40Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103740Z_batch_000874.json`
+- best_score: `0.481841`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `624`
+
+### Batch 875 @ 2026-03-03T10:38:07Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103807Z_batch_000875.json`
+- best_score: `0.479783`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `625`
+
+### Batch 876 @ 2026-03-03T10:38:34Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103834Z_batch_000876.json`
+- best_score: `0.437672`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `626`
+
+### Batch 877 @ 2026-03-03T10:39:02Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103902Z_batch_000877.json`
+- best_score: `0.479907`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `627`
+
+### Batch 878 @ 2026-03-03T10:39:28Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103928Z_batch_000878.json`
+- best_score: `0.464988`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `-0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `628`
+
+### Batch 879 @ 2026-03-03T10:39:55Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T103955Z_batch_000879.json`
+- best_score: `0.518344`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `629`
+
+### Batch 880 @ 2026-03-03T10:40:21Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T104021Z_batch_000880.json`
+- best_score: `0.480867`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `630`
+
+### Batch 881 @ 2026-03-03T10:40:48Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T104048Z_batch_000881.json`
+- best_score: `0.480124`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `631`
+
+### Batch 882 @ 2026-03-03T10:41:15Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T104115Z_batch_000882.json`
+- best_score: `0.480667`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `632`
+
+### Batch 883 @ 2026-03-03T10:41:43Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T104143Z_batch_000883.json`
+- best_score: `0.478025`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `633`
+
+### Batch 884 @ 2026-03-03T10:42:12Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T104212Z_batch_000884.json`
+- best_score: `0.479854`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `634`
+
+### Batch 885 @ 2026-03-03T10:42:41Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T104241Z_batch_000885.json`
+- best_score: `0.477447`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `635`
+
+### Batch 886 @ 2026-03-03T10:43:09Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T104309Z_batch_000886.json`
+- best_score: `0.509722`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `-0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `636`
+
+### Batch 887 @ 2026-03-03T10:43:37Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T104337Z_batch_000887.json`
+- best_score: `0.437979`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `637`
+
+### Batch 888 @ 2026-03-03T10:44:05Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T104405Z_batch_000888.json`
+- best_score: `0.479488`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `638`
+
+### Batch 889 @ 2026-03-03T10:44:32Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T104432Z_batch_000889.json`
+- best_score: `0.493324`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `639`
+
+#### Stall pivot @ 2026-03-03T10:44:59Z
+- reason: `no_improve_streak=640`
+- action: `seed_offset += 1000003 -> 20000060`
+- action: keep K1/K2 prioritized in selection matrix
+
+### Batch 890 @ 2026-03-03T10:44:59Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T104459Z_batch_000890.json`
+- best_score: `0.511552`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `640`
+
+### Batch 891 @ 2026-03-03T10:45:27Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T104527Z_batch_000891.json`
+- best_score: `0.480467`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `641`
+
+### Batch 892 @ 2026-03-03T10:45:54Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T104554Z_batch_000892.json`
+- best_score: `0.496341`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `642`
+
+### Batch 893 @ 2026-03-03T10:46:21Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T104621Z_batch_000893.json`
+- best_score: `0.480958`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `643`
+
+### Batch 894 @ 2026-03-03T10:46:53Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T104653Z_batch_000894.json`
+- best_score: `0.512650`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `-0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `644`
+
+### Batch 895 @ 2026-03-03T10:47:31Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T104731Z_batch_000895.json`
+- best_score: `0.478206`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `645`
+
+### Batch 896 @ 2026-03-03T10:48:12Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T104812Z_batch_000896.json`
+- best_score: `0.473076`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `646`
+
+### Batch 897 @ 2026-03-03T10:48:52Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T104852Z_batch_000897.json`
+- best_score: `0.474523`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `647`
+
+### Batch 898 @ 2026-03-03T10:49:32Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T104932Z_batch_000898.json`
+- best_score: `0.474838`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `648`
+
+### Batch 899 @ 2026-03-03T10:50:12Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T105012Z_batch_000899.json`
+- best_score: `0.474120`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `649`
+
+### Batch 900 @ 2026-03-03T10:50:53Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T105053Z_batch_000900.json`
+- best_score: `0.474478`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `650`
+
+### Batch 901 @ 2026-03-03T10:51:33Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T105133Z_batch_000901.json`
+- best_score: `0.474446`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `651`
+
+### Batch 902 @ 2026-03-03T10:52:12Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T105212Z_batch_000902.json`
+- best_score: `0.474727`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `652`
+
+### Batch 903 @ 2026-03-03T10:52:53Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T105253Z_batch_000903.json`
+- best_score: `0.472993`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `653`
+
+### Batch 904 @ 2026-03-03T10:53:20Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T105320Z_batch_000904.json`
+- best_score: `0.480597`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `654`
+
+### Batch 905 @ 2026-03-03T10:53:48Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T105348Z_batch_000905.json`
+- best_score: `0.433342`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `655`
+
+### Batch 906 @ 2026-03-03T10:54:13Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T105413Z_batch_000906.json`
+- best_score: `0.481871`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `656`
+
+### Batch 907 @ 2026-03-03T10:54:41Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T105441Z_batch_000907.json`
+- best_score: `0.480359`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `657`
+
+### Batch 908 @ 2026-03-03T10:55:07Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T105507Z_batch_000908.json`
+- best_score: `0.481879`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `658`
+
+### Batch 909 @ 2026-03-03T10:55:36Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T105536Z_batch_000909.json`
+- best_score: `0.481075`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `659`
+
+### Batch 910 @ 2026-03-03T10:56:03Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T105603Z_batch_000910.json`
+- best_score: `0.481397`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `660`
+
+### Batch 911 @ 2026-03-03T10:56:36Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T105636Z_batch_000911.json`
+- best_score: `0.434404`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `661`
+
+### Batch 912 @ 2026-03-03T10:57:07Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T105707Z_batch_000912.json`
+- best_score: `0.479353`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `662`
+
+### Batch 913 @ 2026-03-03T10:57:34Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T105734Z_batch_000913.json`
+- best_score: `0.437927`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `663`
+
+### Batch 914 @ 2026-03-03T10:58:01Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T105801Z_batch_000914.json`
+- best_score: `0.481684`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `664`
+
+### Batch 915 @ 2026-03-03T10:58:28Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T105828Z_batch_000915.json`
+- best_score: `0.481012`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `665`
+
+### Batch 916 @ 2026-03-03T10:58:55Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T105855Z_batch_000916.json`
+- best_score: `0.481710`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `666`
+
+### Batch 917 @ 2026-03-03T10:59:22Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T105922Z_batch_000917.json`
+- best_score: `0.480505`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `667`
+
+### Batch 918 @ 2026-03-03T10:59:49Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T105949Z_batch_000918.json`
+- best_score: `0.479756`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `668`
+
+### Batch 919 @ 2026-03-03T11:00:15Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110015Z_batch_000919.json`
+- best_score: `0.480356`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `669`
+
+### Batch 920 @ 2026-03-03T11:00:41Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110041Z_batch_000920.json`
+- best_score: `0.479626`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `670`
+
+### Batch 921 @ 2026-03-03T11:01:07Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110107Z_batch_000921.json`
+- best_score: `0.481878`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `671`
+
+### Batch 922 @ 2026-03-03T11:01:33Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110133Z_batch_000922.json`
+- best_score: `0.482046`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `672`
+
+### Batch 923 @ 2026-03-03T11:02:00Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110200Z_batch_000923.json`
+- best_score: `0.480885`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `673`
+
+### Batch 924 @ 2026-03-03T11:02:26Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110226Z_batch_000924.json`
+- best_score: `0.481674`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `674`
+
+### Batch 925 @ 2026-03-03T11:02:52Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110252Z_batch_000925.json`
+- best_score: `0.470960`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `-0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `675`
+
+### Batch 926 @ 2026-03-03T11:03:18Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110318Z_batch_000926.json`
+- best_score: `0.510935`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `676`
+
+### Batch 927 @ 2026-03-03T11:03:44Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110344Z_batch_000927.json`
+- best_score: `0.494659`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `677`
+
+### Batch 928 @ 2026-03-03T11:04:12Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110412Z_batch_000928.json`
+- best_score: `0.479889`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `678`
+
+### Batch 929 @ 2026-03-03T11:04:38Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110438Z_batch_000929.json`
+- best_score: `0.484556`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `679`
+
+#### Stall pivot @ 2026-03-03T11:05:05Z
+- reason: `no_improve_streak=680`
+- action: `seed_offset += 1000003 -> 21000063`
+- action: keep K1/K2 prioritized in selection matrix
+
+### Batch 930 @ 2026-03-03T11:05:05Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110505Z_batch_000930.json`
+- best_score: `0.479728`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `680`
+
+### Batch 931 @ 2026-03-03T11:05:33Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110533Z_batch_000931.json`
+- best_score: `0.480596`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `681`
+
+### Batch 932 @ 2026-03-03T11:06:00Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110600Z_batch_000932.json`
+- best_score: `0.480777`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `682`
+
+### Batch 933 @ 2026-03-03T11:06:28Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110628Z_batch_000933.json`
+- best_score: `0.517098`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `683`
+
+### Batch 934 @ 2026-03-03T11:06:55Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110655Z_batch_000934.json`
+- best_score: `0.479603`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `684`
+
+### Batch 935 @ 2026-03-03T11:07:23Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110723Z_batch_000935.json`
+- best_score: `0.480910`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `685`
+
+### Batch 936 @ 2026-03-03T11:07:51Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110751Z_batch_000936.json`
+- best_score: `0.479495`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `686`
+
+### Batch 937 @ 2026-03-03T11:08:17Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110817Z_batch_000937.json`
+- best_score: `0.479600`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `687`
+
+### Batch 938 @ 2026-03-03T11:08:44Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110844Z_batch_000938.json`
+- best_score: `0.480891`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `688`
+
+### Batch 939 @ 2026-03-03T11:09:11Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110911Z_batch_000939.json`
+- best_score: `0.484181`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `689`
+
+### Batch 940 @ 2026-03-03T11:09:37Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T110937Z_batch_000940.json`
+- best_score: `0.482026`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `690`
+
+### Batch 941 @ 2026-03-03T11:10:04Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111004Z_batch_000941.json`
+- best_score: `0.482059`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `691`
+
+### Batch 942 @ 2026-03-03T11:10:30Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111030Z_batch_000942.json`
+- best_score: `0.513405`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `-0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `692`
+
+### Batch 943 @ 2026-03-03T11:10:57Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111057Z_batch_000943.json`
+- best_score: `0.481647`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `693`
+
+### Batch 944 @ 2026-03-03T11:11:24Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111124Z_batch_000944.json`
+- best_score: `0.481448`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `694`
+
+### Batch 945 @ 2026-03-03T11:11:51Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111151Z_batch_000945.json`
+- best_score: `0.401646`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `695`
+
+### Batch 946 @ 2026-03-03T11:12:18Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111218Z_batch_000946.json`
+- best_score: `0.479784`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `696`
+
+### Batch 947 @ 2026-03-03T11:12:44Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111244Z_batch_000947.json`
+- best_score: `0.481056`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `697`
+
+### Batch 948 @ 2026-03-03T11:13:12Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111312Z_batch_000948.json`
+- best_score: `0.481753`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `698`
+
+### Batch 949 @ 2026-03-03T11:13:39Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111339Z_batch_000949.json`
+- best_score: `0.482340`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `699`
+
+### Batch 950 @ 2026-03-03T11:14:05Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111405Z_batch_000950.json`
+- best_score: `0.479983`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `700`
+
+### Batch 951 @ 2026-03-03T11:14:31Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111431Z_batch_000951.json`
+- best_score: `0.479735`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `701`
+
+### Batch 952 @ 2026-03-03T11:14:58Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111458Z_batch_000952.json`
+- best_score: `0.479804`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `702`
+
+### Batch 953 @ 2026-03-03T11:15:24Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111524Z_batch_000953.json`
+- best_score: `0.482310`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `703`
+
+### Batch 954 @ 2026-03-03T11:15:51Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111551Z_batch_000954.json`
+- best_score: `0.438801`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `704`
+
+### Batch 955 @ 2026-03-03T11:16:17Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111617Z_batch_000955.json`
+- best_score: `0.492800`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `705`
+
+### Batch 956 @ 2026-03-03T11:16:43Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111643Z_batch_000956.json`
+- best_score: `0.481724`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `706`
+
+### Batch 957 @ 2026-03-03T11:17:10Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111710Z_batch_000957.json`
+- best_score: `0.481113`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `707`
+
+### Batch 958 @ 2026-03-03T11:17:35Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111735Z_batch_000958.json`
+- best_score: `0.481922`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `708`
+
+### Batch 959 @ 2026-03-03T11:18:02Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111802Z_batch_000959.json`
+- best_score: `0.481592`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `709`
+
+### Batch 960 @ 2026-03-03T11:18:27Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111827Z_batch_000960.json`
+- best_score: `0.482351`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `710`
+
+### Batch 961 @ 2026-03-03T11:18:54Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111854Z_batch_000961.json`
+- best_score: `0.482245`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `711`
+
+### Batch 962 @ 2026-03-03T11:19:20Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111920Z_batch_000962.json`
+- best_score: `0.482545`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `712`
+
+### Batch 963 @ 2026-03-03T11:19:46Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T111946Z_batch_000963.json`
+- best_score: `0.481458`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `713`
+
+### Batch 964 @ 2026-03-03T11:20:11Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T112011Z_batch_000964.json`
+- best_score: `0.482303`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `714`
+
+### Batch 965 @ 2026-03-03T11:20:37Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T112037Z_batch_000965.json`
+- best_score: `0.480236`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `715`
+
+### Batch 966 @ 2026-03-03T11:21:03Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T112103Z_batch_000966.json`
+- best_score: `0.481957`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `716`
+
+### Batch 967 @ 2026-03-03T11:21:29Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T112129Z_batch_000967.json`
+- best_score: `0.480814`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `717`
+
+### Batch 968 @ 2026-03-03T11:22:04Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T112204Z_batch_000968.json`
+- best_score: `0.475658`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `718`
+
+### Batch 969 @ 2026-03-03T11:22:43Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T112243Z_batch_000969.json`
+- best_score: `0.475222`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `719`
+
+#### Stall pivot @ 2026-03-03T11:23:21Z
+- reason: `no_improve_streak=720`
+- action: `seed_offset += 1000003 -> 22000066`
+- action: keep K1/K2 prioritized in selection matrix
+
+### Batch 970 @ 2026-03-03T11:23:21Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T112321Z_batch_000970.json`
+- best_score: `0.472656`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `720`
+
+### Batch 971 @ 2026-03-03T11:23:53Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T112353Z_batch_000971.json`
+- best_score: `0.481370`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `721`
+
+### Batch 972 @ 2026-03-03T11:24:20Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T112420Z_batch_000972.json`
+- best_score: `0.480259`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `722`
+
+### Batch 973 @ 2026-03-03T11:24:52Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T112452Z_batch_000973.json`
+- best_score: `0.480146`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `723`
+
+### Batch 974 @ 2026-03-03T11:25:29Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T112529Z_batch_000974.json`
+- best_score: `0.475500`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `724`
+
+### Batch 975 @ 2026-03-03T11:25:57Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T112557Z_batch_000975.json`
+- best_score: `0.480669`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `725`
+
+### Batch 976 @ 2026-03-03T11:26:24Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T112624Z_batch_000976.json`
+- best_score: `0.481928`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `726`
+
+### Batch 977 @ 2026-03-03T11:26:51Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T112651Z_batch_000977.json`
+- best_score: `0.481247`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `727`
+
+### Batch 978 @ 2026-03-03T11:27:18Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T112718Z_batch_000978.json`
+- best_score: `0.481861`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `728`
+
+### Batch 979 @ 2026-03-03T11:27:45Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T112745Z_batch_000979.json`
+- best_score: `0.480192`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `729`
+
+### Batch 980 @ 2026-03-03T11:28:12Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T112812Z_batch_000980.json`
+- best_score: `0.480598`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `730`
+
+### Batch 981 @ 2026-03-03T11:28:39Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T112839Z_batch_000981.json`
+- best_score: `0.481394`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `731`
+
+### Batch 982 @ 2026-03-03T11:29:07Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T112907Z_batch_000982.json`
+- best_score: `0.479844`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `732`
+
+### Batch 983 @ 2026-03-03T11:29:33Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T112933Z_batch_000983.json`
+- best_score: `0.482331`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `733`
+
+### Batch 984 @ 2026-03-03T11:30:00Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113000Z_batch_000984.json`
+- best_score: `0.481386`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `734`
+
+### Batch 985 @ 2026-03-03T11:30:26Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113026Z_batch_000985.json`
+- best_score: `0.481868`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `735`
+
+### Batch 986 @ 2026-03-03T11:30:52Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113052Z_batch_000986.json`
+- best_score: `0.479607`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `736`
+
+### Batch 987 @ 2026-03-03T11:31:19Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113119Z_batch_000987.json`
+- best_score: `0.481903`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `737`
+
+### Batch 988 @ 2026-03-03T11:31:45Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113145Z_batch_000988.json`
+- best_score: `0.481857`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `738`
+
+### Batch 989 @ 2026-03-03T11:32:12Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113212Z_batch_000989.json`
+- best_score: `0.481632`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `739`
+
+### Batch 990 @ 2026-03-03T11:32:37Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113237Z_batch_000990.json`
+- best_score: `0.482557`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `740`
+
+### Batch 991 @ 2026-03-03T11:33:03Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113303Z_batch_000991.json`
+- best_score: `0.482321`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `741`
+
+### Batch 992 @ 2026-03-03T11:33:29Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113329Z_batch_000992.json`
+- best_score: `0.482337`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `742`
+
+### Batch 993 @ 2026-03-03T11:33:55Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113355Z_batch_000993.json`
+- best_score: `0.480051`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `743`
+
+### Batch 994 @ 2026-03-03T11:34:22Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113422Z_batch_000994.json`
+- best_score: `0.480699`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `744`
+
+### Batch 995 @ 2026-03-03T11:34:49Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113449Z_batch_000995.json`
+- best_score: `0.479700`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `745`
+
+### Batch 996 @ 2026-03-03T11:35:15Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113515Z_batch_000996.json`
+- best_score: `0.482295`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `746`
+
+### Batch 997 @ 2026-03-03T11:35:41Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113541Z_batch_000997.json`
+- best_score: `0.480306`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `747`
+
+### Batch 998 @ 2026-03-03T11:36:08Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113608Z_batch_000998.json`
+- best_score: `0.481589`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `748`
+
+### Batch 999 @ 2026-03-03T11:36:34Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113634Z_batch_000999.json`
+- best_score: `0.481911`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `749`
+
+### Batch 1000 @ 2026-03-03T11:37:01Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113701Z_batch_001000.json`
+- best_score: `0.480643`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `750`
+
+### Batch 1001 @ 2026-03-03T11:37:27Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113727Z_batch_001001.json`
+- best_score: `0.494202`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `751`
+
+### Batch 1002 @ 2026-03-03T11:37:53Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113753Z_batch_001002.json`
+- best_score: `0.481057`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `752`
+
+### Batch 1003 @ 2026-03-03T11:38:20Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113820Z_batch_001003.json`
+- best_score: `0.481212`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `753`
+
+### Batch 1004 @ 2026-03-03T11:38:54Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113854Z_batch_001004.json`
+- best_score: `0.480743`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `754`
+
+### Batch 1005 @ 2026-03-03T11:39:21Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113921Z_batch_001005.json`
+- best_score: `0.481127`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `755`
+
+### Batch 1006 @ 2026-03-03T11:39:47Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T113947Z_batch_001006.json`
+- best_score: `0.438570`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `756`
+
+### Batch 1007 @ 2026-03-03T11:40:13Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T114013Z_batch_001007.json`
+- best_score: `0.481776`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `757`
+
+### Batch 1008 @ 2026-03-03T11:40:41Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T114041Z_batch_001008.json`
+- best_score: `0.480403`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `758`
+
+### Batch 1009 @ 2026-03-03T11:41:07Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T114107Z_batch_001009.json`
+- best_score: `0.494543`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `759`
+
+#### Stall pivot @ 2026-03-03T11:41:34Z
+- reason: `no_improve_streak=760`
+- action: `seed_offset += 1000003 -> 23000069`
+- action: keep K1/K2 prioritized in selection matrix
+
+### Batch 1010 @ 2026-03-03T11:41:34Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T114134Z_batch_001010.json`
+- best_score: `0.480000`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `760`
+
+### Batch 1011 @ 2026-03-03T11:42:00Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T114200Z_batch_001011.json`
+- best_score: `0.481662`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `761`
+
+### Batch 1012 @ 2026-03-03T11:42:27Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T114227Z_batch_001012.json`
+- best_score: `0.481593`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `762`
+
+### Batch 1013 @ 2026-03-03T11:42:53Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T114253Z_batch_001013.json`
+- best_score: `0.481337`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `763`
+
+### Batch 1014 @ 2026-03-03T11:43:20Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T114320Z_batch_001014.json`
+- best_score: `0.479978`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `764`
+
+### Batch 1015 @ 2026-03-03T11:43:47Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T114347Z_batch_001015.json`
+- best_score: `0.479944`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `765`
+
+### Batch 1016 @ 2026-03-03T11:44:15Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T114415Z_batch_001016.json`
+- best_score: `0.479010`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `766`
+
+### Batch 1017 @ 2026-03-03T11:44:51Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T114451Z_batch_001017.json`
+- best_score: `0.478454`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `767`
+
+### Batch 1018 @ 2026-03-03T11:45:31Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T114531Z_batch_001018.json`
+- best_score: `0.473336`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `768`
+
+### Batch 1019 @ 2026-03-03T11:46:11Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T114611Z_batch_001019.json`
+- best_score: `0.475320`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `769`
+
+### Batch 1020 @ 2026-03-03T11:46:50Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T114650Z_batch_001020.json`
+- best_score: `0.462948`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `-0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `770`
+
+### Batch 1021 @ 2026-03-03T11:47:30Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T114730Z_batch_001021.json`
+- best_score: `0.473222`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `771`
+
+### Batch 1022 @ 2026-03-03T11:48:09Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T114809Z_batch_001022.json`
+- best_score: `0.474948`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `772`
+
+### Batch 1023 @ 2026-03-03T11:48:49Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T114849Z_batch_001023.json`
+- best_score: `0.475116`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `773`
+
+### Batch 1024 @ 2026-03-03T11:49:27Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T114927Z_batch_001024.json`
+- best_score: `0.486821`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `774`
+
+### Batch 1025 @ 2026-03-03T11:50:07Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115007Z_batch_001025.json`
+- best_score: `0.475106`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `775`
+
+### Batch 1026 @ 2026-03-03T11:50:45Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115045Z_batch_001026.json`
+- best_score: `0.473954`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `776`
+
+### Batch 1027 @ 2026-03-03T11:51:24Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115124Z_batch_001027.json`
+- best_score: `0.475400`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `777`
+
+### Batch 1028 @ 2026-03-03T11:51:52Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115152Z_batch_001028.json`
+- best_score: `0.481705`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `778`
+
+### Batch 1029 @ 2026-03-03T11:52:19Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115219Z_batch_001029.json`
+- best_score: `0.481686`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `779`
+
+### Batch 1030 @ 2026-03-03T11:52:45Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115245Z_batch_001030.json`
+- best_score: `0.481323`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `780`
+
+### Batch 1031 @ 2026-03-03T11:53:12Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115312Z_batch_001031.json`
+- best_score: `0.481291`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `781`
+
+### Batch 1032 @ 2026-03-03T11:53:39Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115339Z_batch_001032.json`
+- best_score: `0.479725`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `782`
+
+### Batch 1033 @ 2026-03-03T11:54:06Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115406Z_batch_001033.json`
+- best_score: `0.481359`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `783`
+
+### Batch 1034 @ 2026-03-03T11:54:32Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115432Z_batch_001034.json`
+- best_score: `0.481775`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `784`
+
+### Batch 1035 @ 2026-03-03T11:54:58Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115458Z_batch_001035.json`
+- best_score: `0.482378`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `785`
+
+### Batch 1036 @ 2026-03-03T11:55:25Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115525Z_batch_001036.json`
+- best_score: `0.481205`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `786`
+
+### Batch 1037 @ 2026-03-03T11:55:50Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115550Z_batch_001037.json`
+- best_score: `0.482708`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `787`
+
+### Batch 1038 @ 2026-03-03T11:56:16Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115616Z_batch_001038.json`
+- best_score: `0.481681`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `788`
+
+### Batch 1039 @ 2026-03-03T11:56:42Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115642Z_batch_001039.json`
+- best_score: `0.480669`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `789`
+
+### Batch 1040 @ 2026-03-03T11:57:08Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115708Z_batch_001040.json`
+- best_score: `0.480034`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `790`
+
+### Batch 1041 @ 2026-03-03T11:57:34Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115734Z_batch_001041.json`
+- best_score: `0.482171`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `791`
+
+### Batch 1042 @ 2026-03-03T11:58:00Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115800Z_batch_001042.json`
+- best_score: `0.482601`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `792`
+
+### Batch 1043 @ 2026-03-03T11:58:26Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115826Z_batch_001043.json`
+- best_score: `0.482270`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `793`
+
+### Batch 1044 @ 2026-03-03T11:58:52Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115852Z_batch_001044.json`
+- best_score: `0.481773`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `794`
+
+### Batch 1045 @ 2026-03-03T11:59:18Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115918Z_batch_001045.json`
+- best_score: `0.481653`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `795`
+
+### Batch 1046 @ 2026-03-03T11:59:44Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T115944Z_batch_001046.json`
+- best_score: `0.481916`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `796`
+
+### Batch 1047 @ 2026-03-03T12:00:10Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T120010Z_batch_001047.json`
+- best_score: `0.481948`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `797`
+
+### Batch 1048 @ 2026-03-03T12:00:36Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T120036Z_batch_001048.json`
+- best_score: `0.479345`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `798`
+
+### Batch 1049 @ 2026-03-03T12:01:06Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T120106Z_batch_001049.json`
+- best_score: `0.480698`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `799`
+
+#### Stall pivot @ 2026-03-03T12:01:36Z
+- reason: `no_improve_streak=800`
+- action: `seed_offset += 1000003 -> 24000072`
+- action: keep K1/K2 prioritized in selection matrix
+
+### Batch 1050 @ 2026-03-03T12:01:36Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T120136Z_batch_001050.json`
+- best_score: `0.481356`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `800`
+
+### Batch 1051 @ 2026-03-03T12:02:03Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T120203Z_batch_001051.json`
+- best_score: `0.480259`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `801`
+
+### Batch 1052 @ 2026-03-03T12:02:35Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T120235Z_batch_001052.json`
+- best_score: `0.479763`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `802`
+
+### Batch 1053 @ 2026-03-03T12:03:02Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T120302Z_batch_001053.json`
+- best_score: `0.479755`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `803`
+
+### Batch 1054 @ 2026-03-03T12:03:29Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T120329Z_batch_001054.json`
+- best_score: `0.481209`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `804`
+
+### Batch 1055 @ 2026-03-03T12:03:57Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T120357Z_batch_001055.json`
+- best_score: `0.478981`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `805`
+
+### Batch 1056 @ 2026-03-03T12:04:37Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T120437Z_batch_001056.json`
+- best_score: `0.474982`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `806`
+
+### Batch 1057 @ 2026-03-03T12:05:16Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T120516Z_batch_001057.json`
+- best_score: `0.462784`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `807`
+
+### Batch 1058 @ 2026-03-03T12:05:55Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T120555Z_batch_001058.json`
+- best_score: `0.505894`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `808`
+
+### Batch 1059 @ 2026-03-03T12:06:34Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T120634Z_batch_001059.json`
+- best_score: `0.475208`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `809`
+
+### Batch 1060 @ 2026-03-03T12:07:09Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T120709Z_batch_001060.json`
+- best_score: `0.480188`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `810`
+
+### Batch 1061 @ 2026-03-03T12:07:36Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T120736Z_batch_001061.json`
+- best_score: `0.479427`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `811`
+
+### Batch 1062 @ 2026-03-03T12:08:02Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T120802Z_batch_001062.json`
+- best_score: `0.480852`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `812`
+
+### Batch 1063 @ 2026-03-03T12:08:29Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T120829Z_batch_001063.json`
+- best_score: `0.481007`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `813`
+
+### Batch 1064 @ 2026-03-03T12:08:58Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T120858Z_batch_001064.json`
+- best_score: `0.436374`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `814`
+
+### Batch 1065 @ 2026-03-03T12:09:25Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T120925Z_batch_001065.json`
+- best_score: `0.481408`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `815`
+
+### Batch 1066 @ 2026-03-03T12:09:51Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T120951Z_batch_001066.json`
+- best_score: `0.480809`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `816`
+
+### Batch 1067 @ 2026-03-03T12:10:18Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121018Z_batch_001067.json`
+- best_score: `0.481829`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `817`
+
+### Batch 1068 @ 2026-03-03T12:10:45Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121045Z_batch_001068.json`
+- best_score: `0.490910`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `818`
+
+### Batch 1069 @ 2026-03-03T12:11:12Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121112Z_batch_001069.json`
+- best_score: `0.480321`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `819`
+
+### Batch 1070 @ 2026-03-03T12:11:39Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121139Z_batch_001070.json`
+- best_score: `0.510718`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `-0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `820`
+
+### Batch 1071 @ 2026-03-03T12:12:06Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121206Z_batch_001071.json`
+- best_score: `0.481312`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `821`
+
+### Batch 1072 @ 2026-03-03T12:12:34Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121234Z_batch_001072.json`
+- best_score: `0.481330`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `822`
+
+### Batch 1073 @ 2026-03-03T12:13:01Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121301Z_batch_001073.json`
+- best_score: `0.480753`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `823`
+
+### Batch 1074 @ 2026-03-03T12:13:27Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121327Z_batch_001074.json`
+- best_score: `0.479747`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `824`
+
+### Batch 1075 @ 2026-03-03T12:13:55Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121355Z_batch_001075.json`
+- best_score: `0.479572`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `825`
+
+### Batch 1076 @ 2026-03-03T12:14:22Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121422Z_batch_001076.json`
+- best_score: `0.481245`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `826`
+
+### Batch 1077 @ 2026-03-03T12:14:49Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121449Z_batch_001077.json`
+- best_score: `0.481902`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `827`
+
+### Batch 1078 @ 2026-03-03T12:15:15Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121515Z_batch_001078.json`
+- best_score: `0.480950`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `828`
+
+### Batch 1079 @ 2026-03-03T12:15:42Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121542Z_batch_001079.json`
+- best_score: `0.481560`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `829`
+
+### Batch 1080 @ 2026-03-03T12:16:09Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121609Z_batch_001080.json`
+- best_score: `0.481845`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `830`
+
+### Batch 1081 @ 2026-03-03T12:16:36Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121636Z_batch_001081.json`
+- best_score: `0.481245`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `831`
+
+### Batch 1082 @ 2026-03-03T12:17:02Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121702Z_batch_001082.json`
+- best_score: `0.479918`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `832`
+
+### Batch 1083 @ 2026-03-03T12:17:30Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121730Z_batch_001083.json`
+- best_score: `0.517663`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `833`
+
+### Batch 1084 @ 2026-03-03T12:17:56Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121756Z_batch_001084.json`
+- best_score: `0.450656`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `834`
+
+### Batch 1085 @ 2026-03-03T12:18:24Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121824Z_batch_001085.json`
+- best_score: `0.481227`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `835`
+
+### Batch 1086 @ 2026-03-03T12:18:56Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121856Z_batch_001086.json`
+- best_score: `0.480085`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `836`
+
+### Batch 1087 @ 2026-03-03T12:19:31Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121931Z_batch_001087.json`
+- best_score: `0.475049`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `837`
+
+### Batch 1088 @ 2026-03-03T12:19:59Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T121959Z_batch_001088.json`
+- best_score: `0.479490`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `838`
+
+### Batch 1089 @ 2026-03-03T12:20:25Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122025Z_batch_001089.json`
+- best_score: `0.481467`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `839`
+
+#### Stall pivot @ 2026-03-03T12:21:02Z
+- reason: `no_improve_streak=840`
+- action: `seed_offset += 1000003 -> 25000075`
+- action: keep K1/K2 prioritized in selection matrix
+
+### Batch 1090 @ 2026-03-03T12:21:02Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122102Z_batch_001090.json`
+- best_score: `0.475553`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `840`
+
+### Batch 1091 @ 2026-03-03T12:21:39Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122139Z_batch_001091.json`
+- best_score: `0.475723`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `841`
+
+### Batch 1092 @ 2026-03-03T12:22:14Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122214Z_batch_001092.json`
+- best_score: `0.479386`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `842`
+
+### Batch 1093 @ 2026-03-03T12:22:41Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122241Z_batch_001093.json`
+- best_score: `0.481565`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `843`
+
+### Batch 1094 @ 2026-03-03T12:23:08Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122308Z_batch_001094.json`
+- best_score: `0.480296`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `844`
+
+### Batch 1095 @ 2026-03-03T12:23:36Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122336Z_batch_001095.json`
+- best_score: `0.480121`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `845`
+
+### Batch 1096 @ 2026-03-03T12:24:03Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122403Z_batch_001096.json`
+- best_score: `0.479717`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `846`
+
+### Batch 1097 @ 2026-03-03T12:24:29Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122429Z_batch_001097.json`
+- best_score: `0.482289`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `847`
+
+### Batch 1098 @ 2026-03-03T12:24:55Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122455Z_batch_001098.json`
+- best_score: `0.482622`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `848`
+
+### Batch 1099 @ 2026-03-03T12:25:20Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122520Z_batch_001099.json`
+- best_score: `0.482034`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `849`
+
+### Batch 1100 @ 2026-03-03T12:25:46Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122546Z_batch_001100.json`
+- best_score: `0.482244`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `850`
+
+### Batch 1101 @ 2026-03-03T12:26:12Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122612Z_batch_001101.json`
+- best_score: `0.480810`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `851`
+
+### Batch 1102 @ 2026-03-03T12:26:38Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122638Z_batch_001102.json`
+- best_score: `0.492634`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `852`
+
+### Batch 1103 @ 2026-03-03T12:27:04Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122704Z_batch_001103.json`
+- best_score: `0.451305`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `853`
+
+### Batch 1104 @ 2026-03-03T12:27:30Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122730Z_batch_001104.json`
+- best_score: `0.481979`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `854`
+
+### Batch 1105 @ 2026-03-03T12:27:56Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122756Z_batch_001105.json`
+- best_score: `0.480529`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `855`
+
+### Batch 1106 @ 2026-03-03T12:28:22Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122822Z_batch_001106.json`
+- best_score: `0.482209`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `856`
+
+### Batch 1107 @ 2026-03-03T12:28:48Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122848Z_batch_001107.json`
+- best_score: `0.481572`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `857`
+
+### Batch 1108 @ 2026-03-03T12:29:14Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122914Z_batch_001108.json`
+- best_score: `0.439069`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `858`
+
+### Batch 1109 @ 2026-03-03T12:29:40Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T122940Z_batch_001109.json`
+- best_score: `0.481673`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `859`
+
+### Batch 1110 @ 2026-03-03T12:30:07Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T123007Z_batch_001110.json`
+- best_score: `0.481521`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `860`
+
+### Batch 1111 @ 2026-03-03T12:30:33Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T123033Z_batch_001111.json`
+- best_score: `0.482197`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `861`
+
+### Batch 1112 @ 2026-03-03T12:30:59Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T123059Z_batch_001112.json`
+- best_score: `0.480246`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `862`
+
+### Batch 1113 @ 2026-03-03T12:31:27Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T123127Z_batch_001113.json`
+- best_score: `0.481541`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `863`
+
+### Batch 1114 @ 2026-03-03T12:31:59Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T123159Z_batch_001114.json`
+- best_score: `0.479745`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `864`
+
+### Batch 1115 @ 2026-03-03T12:32:30Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T123230Z_batch_001115.json`
+- best_score: `0.481695`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `865`
+
+### Batch 1116 @ 2026-03-03T12:32:56Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T123256Z_batch_001116.json`
+- best_score: `0.479917`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `866`
+
+### Batch 1117 @ 2026-03-03T12:33:23Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T123323Z_batch_001117.json`
+- best_score: `0.479994`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `867`
+
+### Batch 1118 @ 2026-03-03T12:33:49Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T123349Z_batch_001118.json`
+- best_score: `0.482109`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `868`
+
+### Batch 1119 @ 2026-03-03T12:34:22Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T123422Z_batch_001119.json`
+- best_score: `0.480631`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `869`
+
+### Batch 1120 @ 2026-03-03T12:35:00Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T123500Z_batch_001120.json`
+- best_score: `0.474862`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `870`
+
+### Batch 1121 @ 2026-03-03T12:35:39Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T123539Z_batch_001121.json`
+- best_score: `0.431943`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `871`
+
+### Batch 1122 @ 2026-03-03T12:36:18Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T123618Z_batch_001122.json`
+- best_score: `0.473276`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `872`
+
+### Batch 1123 @ 2026-03-03T12:36:57Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T123657Z_batch_001123.json`
+- best_score: `0.504544`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `873`
+
+### Batch 1124 @ 2026-03-03T12:37:37Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T123737Z_batch_001124.json`
+- best_score: `0.474739`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `874`
+
+### Batch 1125 @ 2026-03-03T12:38:15Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T123815Z_batch_001125.json`
+- best_score: `0.475125`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `875`
+
+### Batch 1126 @ 2026-03-03T12:38:55Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T123855Z_batch_001126.json`
+- best_score: `0.474722`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `876`
+
+### Batch 1127 @ 2026-03-03T12:39:34Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T123934Z_batch_001127.json`
+- best_score: `0.511977`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `877`
+
+### Batch 1128 @ 2026-03-03T12:40:13Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T124013Z_batch_001128.json`
+- best_score: `0.473116`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `878`
+
+### Batch 1129 @ 2026-03-03T12:40:46Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T124046Z_batch_001129.json`
+- best_score: `0.481644`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `879`
+
+#### Stall pivot @ 2026-03-03T12:41:12Z
+- reason: `no_improve_streak=880`
+- action: `seed_offset += 1000003 -> 26000078`
+- action: keep K1/K2 prioritized in selection matrix
+
+### Batch 1130 @ 2026-03-03T12:41:12Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T124112Z_batch_001130.json`
+- best_score: `0.481683`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `880`
+
+### Batch 1131 @ 2026-03-03T12:41:39Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T124139Z_batch_001131.json`
+- best_score: `0.480630`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `881`
+
+### Batch 1132 @ 2026-03-03T12:42:05Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T124205Z_batch_001132.json`
+- best_score: `0.481432`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `882`
+
+### Batch 1133 @ 2026-03-03T12:42:31Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T124231Z_batch_001133.json`
+- best_score: `0.482270`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `883`
+
+### Batch 1134 @ 2026-03-03T12:42:57Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T124257Z_batch_001134.json`
+- best_score: `0.482050`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `884`
+
+### Batch 1135 @ 2026-03-03T12:43:24Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T124324Z_batch_001135.json`
+- best_score: `0.479813`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `885`
+
+### Batch 1136 @ 2026-03-03T12:43:51Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T124351Z_batch_001136.json`
+- best_score: `0.480789`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `886`
+
+### Batch 1137 @ 2026-03-03T12:44:24Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T124424Z_batch_001137.json`
+- best_score: `0.478549`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `887`
+
+### Batch 1138 @ 2026-03-03T12:45:02Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T124502Z_batch_001138.json`
+- best_score: `0.474962`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `888`
+
+### Batch 1139 @ 2026-03-03T12:45:41Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T124541Z_batch_001139.json`
+- best_score: `0.475176`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `889`
+
+### Batch 1140 @ 2026-03-03T12:46:20Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T124620Z_batch_001140.json`
+- best_score: `0.474704`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `890`
+
+### Batch 1141 @ 2026-03-03T12:46:59Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T124659Z_batch_001141.json`
+- best_score: `0.475245`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `891`
+
+### Batch 1142 @ 2026-03-03T12:47:37Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T124737Z_batch_001142.json`
+- best_score: `0.444201`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `892`
+
+### Batch 1143 @ 2026-03-03T12:48:17Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T124817Z_batch_001143.json`
+- best_score: `0.474744`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `893`
+
+### Batch 1144 @ 2026-03-03T12:48:56Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T124856Z_batch_001144.json`
+- best_score: `0.474689`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `894`
+
+### Batch 1145 @ 2026-03-03T12:49:35Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T124935Z_batch_001145.json`
+- best_score: `0.474483`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `895`
+
+### Batch 1146 @ 2026-03-03T12:50:15Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T125015Z_batch_001146.json`
+- best_score: `0.474880`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `896`
+
+### Batch 1147 @ 2026-03-03T12:50:53Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T125053Z_batch_001147.json`
+- best_score: `0.475211`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `897`
+
+### Batch 1148 @ 2026-03-03T12:51:32Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T125132Z_batch_001148.json`
+- best_score: `0.474845`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `898`
+
+### Batch 1149 @ 2026-03-03T12:52:11Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T125211Z_batch_001149.json`
+- best_score: `0.474994`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `899`
+
+### Batch 1150 @ 2026-03-03T12:52:51Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T125251Z_batch_001150.json`
+- best_score: `0.475299`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `900`
+
+### Batch 1151 @ 2026-03-03T12:53:30Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T125330Z_batch_001151.json`
+- best_score: `0.431936`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `901`
+
+### Batch 1152 @ 2026-03-03T12:54:09Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T125409Z_batch_001152.json`
+- best_score: `0.474725`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `902`
+
+### Batch 1153 @ 2026-03-03T12:54:48Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T125448Z_batch_001153.json`
+- best_score: `0.474982`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `903`
+
+### Batch 1154 @ 2026-03-03T12:55:21Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T125521Z_batch_001154.json`
+- best_score: `0.479034`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `904`
+
+### Batch 1155 @ 2026-03-03T12:55:47Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T125547Z_batch_001155.json`
+- best_score: `0.481547`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `905`
+
+### Batch 1156 @ 2026-03-03T12:56:13Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T125613Z_batch_001156.json`
+- best_score: `0.480231`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `906`
+
+### Batch 1157 @ 2026-03-03T12:56:40Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T125640Z_batch_001157.json`
+- best_score: `0.482129`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `907`
+
+### Batch 1158 @ 2026-03-03T12:57:06Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T125706Z_batch_001158.json`
+- best_score: `0.481841`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `908`
+
+### Batch 1159 @ 2026-03-03T12:57:32Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T125732Z_batch_001159.json`
+- best_score: `0.481758`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `909`
+
+### Batch 1160 @ 2026-03-03T12:57:58Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T125758Z_batch_001160.json`
+- best_score: `0.481475`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `910`
+
+### Batch 1161 @ 2026-03-03T12:58:25Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T125825Z_batch_001161.json`
+- best_score: `0.481024`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `911`
+
+### Batch 1162 @ 2026-03-03T12:58:51Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T125851Z_batch_001162.json`
+- best_score: `0.481645`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `912`
+
+### Batch 1163 @ 2026-03-03T12:59:18Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T125918Z_batch_001163.json`
+- best_score: `0.481011`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `913`
+
+### Batch 1164 @ 2026-03-03T12:59:45Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T125945Z_batch_001164.json`
+- best_score: `0.481070`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `914`
+
+### Batch 1165 @ 2026-03-03T13:00:18Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T130018Z_batch_001165.json`
+- best_score: `0.481018`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `915`
+
+### Batch 1166 @ 2026-03-03T13:00:55Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T130055Z_batch_001166.json`
+- best_score: `0.475281`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `916`
+
+### Batch 1167 @ 2026-03-03T13:01:33Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T130133Z_batch_001167.json`
+- best_score: `0.476493`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `917`
+
+### Batch 1168 @ 2026-03-03T13:02:09Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T130209Z_batch_001168.json`
+- best_score: `0.476020`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `918`
+
+### Batch 1169 @ 2026-03-03T13:02:48Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T130248Z_batch_001169.json`
+- best_score: `0.431637`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `919`
+
+#### Stall pivot @ 2026-03-03T13:03:27Z
+- reason: `no_improve_streak=920`
+- action: `seed_offset += 1000003 -> 27000081`
+- action: keep K1/K2 prioritized in selection matrix
+
+### Batch 1170 @ 2026-03-03T13:03:27Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T130327Z_batch_001170.json`
+- best_score: `0.475058`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `920`
+
+### Batch 1171 @ 2026-03-03T13:04:04Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T130404Z_batch_001171.json`
+- best_score: `0.473192`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `921`
+
+### Batch 1172 @ 2026-03-03T13:04:30Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T130430Z_batch_001172.json`
+- best_score: `0.480706`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `922`
+
+### Batch 1173 @ 2026-03-03T13:04:57Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T130457Z_batch_001173.json`
+- best_score: `0.482236`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `923`
+
+### Batch 1174 @ 2026-03-03T13:05:23Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T130523Z_batch_001174.json`
+- best_score: `0.481843`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `924`
+
+### Batch 1175 @ 2026-03-03T13:05:49Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T130549Z_batch_001175.json`
+- best_score: `0.481480`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `925`
+
+### Batch 1176 @ 2026-03-03T13:06:16Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T130616Z_batch_001176.json`
+- best_score: `0.481759`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `926`
+
+### Batch 1177 @ 2026-03-03T13:06:42Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T130642Z_batch_001177.json`
+- best_score: `0.480080`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `927`
+
+### Batch 1178 @ 2026-03-03T13:07:08Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T130708Z_batch_001178.json`
+- best_score: `0.481348`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `928`
+
+### Batch 1179 @ 2026-03-03T13:07:34Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T130734Z_batch_001179.json`
+- best_score: `0.481370`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `929`
+
+### Batch 1180 @ 2026-03-03T13:08:01Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T130801Z_batch_001180.json`
+- best_score: `0.481661`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `930`
+
+### Batch 1181 @ 2026-03-03T13:08:28Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T130828Z_batch_001181.json`
+- best_score: `0.484594`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `931`
+
+### Batch 1182 @ 2026-03-03T13:08:54Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T130854Z_batch_001182.json`
+- best_score: `0.482047`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `932`
+
+### Batch 1183 @ 2026-03-03T13:09:20Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T130920Z_batch_001183.json`
+- best_score: `0.438612`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `933`
+
+### Batch 1184 @ 2026-03-03T13:09:47Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T130947Z_batch_001184.json`
+- best_score: `0.480729`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `934`
+
+### Batch 1185 @ 2026-03-03T13:10:13Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131013Z_batch_001185.json`
+- best_score: `0.481326`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `935`
+
+### Batch 1186 @ 2026-03-03T13:10:40Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131040Z_batch_001186.json`
+- best_score: `0.480133`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `936`
+
+### Batch 1187 @ 2026-03-03T13:11:06Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131105Z_batch_001187.json`
+- best_score: `0.482389`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `937`
+
+### Batch 1188 @ 2026-03-03T13:11:32Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131132Z_batch_001188.json`
+- best_score: `0.481532`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `938`
+
+### Batch 1189 @ 2026-03-03T13:11:58Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131158Z_batch_001189.json`
+- best_score: `0.481622`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `939`
+
+### Batch 1190 @ 2026-03-03T13:12:25Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131225Z_batch_001190.json`
+- best_score: `0.482044`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `940`
+
+### Batch 1191 @ 2026-03-03T13:12:51Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131251Z_batch_001191.json`
+- best_score: `0.482006`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `941`
+
+### Batch 1192 @ 2026-03-03T13:13:18Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131318Z_batch_001192.json`
+- best_score: `0.479980`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `942`
+
+### Batch 1193 @ 2026-03-03T13:13:45Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131345Z_batch_001193.json`
+- best_score: `0.492872`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `943`
+
+### Batch 1194 @ 2026-03-03T13:14:20Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131420Z_batch_001194.json`
+- best_score: `0.475132`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `944`
+
+### Batch 1195 @ 2026-03-03T13:14:53Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131453Z_batch_001195.json`
+- best_score: `0.480785`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `945`
+
+### Batch 1196 @ 2026-03-03T13:15:19Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131519Z_batch_001196.json`
+- best_score: `0.481600`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `946`
+
+### Batch 1197 @ 2026-03-03T13:15:47Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131547Z_batch_001197.json`
+- best_score: `0.438067`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `947`
+
+### Batch 1198 @ 2026-03-03T13:16:15Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131615Z_batch_001198.json`
+- best_score: `0.480670`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `948`
+
+### Batch 1199 @ 2026-03-03T13:16:53Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131653Z_batch_001199.json`
+- best_score: `0.474850`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `949`
+
+### Batch 1200 @ 2026-03-03T13:17:30Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131730Z_batch_001200.json`
+- best_score: `0.475474`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `950`
+
+### Batch 1201 @ 2026-03-03T13:18:06Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131806Z_batch_001201.json`
+- best_score: `0.479139`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `951`
+
+### Batch 1202 @ 2026-03-03T13:18:33Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131833Z_batch_001202.json`
+- best_score: `0.480113`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `952`
+
+### Batch 1203 @ 2026-03-03T13:19:00Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131900Z_batch_001203.json`
+- best_score: `0.480978`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `953`
+
+### Batch 1204 @ 2026-03-03T13:19:29Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131929Z_batch_001204.json`
+- best_score: `0.479304`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `954`
+
+### Batch 1205 @ 2026-03-03T13:19:56Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T131956Z_batch_001205.json`
+- best_score: `0.480987`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `955`
+
+### Batch 1206 @ 2026-03-03T13:20:24Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T132024Z_batch_001206.json`
+- best_score: `0.479848`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `956`
+
+### Batch 1207 @ 2026-03-03T13:20:54Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T132054Z_batch_001207.json`
+- best_score: `0.479615`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `957`
+
+### Batch 1208 @ 2026-03-03T13:21:31Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T132131Z_batch_001208.json`
+- best_score: `0.488175`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `958`
+
+### Batch 1209 @ 2026-03-03T13:22:08Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T132208Z_batch_001209.json`
+- best_score: `0.432373`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `959`
+
+#### Stall pivot @ 2026-03-03T13:22:45Z
+- reason: `no_improve_streak=960`
+- action: `seed_offset += 1000003 -> 28000084`
+- action: keep K1/K2 prioritized in selection matrix
+
+### Batch 1210 @ 2026-03-03T13:22:45Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T132245Z_batch_001210.json`
+- best_score: `0.524471`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `960`
+
+### Batch 1211 @ 2026-03-03T13:23:23Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T132323Z_batch_001211.json`
+- best_score: `0.475638`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `961`
+
+### Batch 1212 @ 2026-03-03T13:24:01Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T132401Z_batch_001212.json`
+- best_score: `0.475059`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `962`
+
+### Batch 1213 @ 2026-03-03T13:24:33Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T132433Z_batch_001213.json`
+- best_score: `0.438356`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `963`
+
+### Batch 1214 @ 2026-03-03T13:25:00Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T132500Z_batch_001214.json`
+- best_score: `0.479812`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `964`
+
+### Batch 1215 @ 2026-03-03T13:25:26Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T132526Z_batch_001215.json`
+- best_score: `0.481788`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `965`
+
+### Batch 1216 @ 2026-03-03T13:25:53Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T132553Z_batch_001216.json`
+- best_score: `0.493803`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `966`
+
+### Batch 1217 @ 2026-03-03T13:26:18Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T132618Z_batch_001217.json`
+- best_score: `0.522341`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.125000`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `967`
+
+### Batch 1218 @ 2026-03-03T13:26:45Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T132645Z_batch_001218.json`
+- best_score: `0.438987`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `968`
+
+### Batch 1219 @ 2026-03-03T13:27:11Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T132711Z_batch_001219.json`
+- best_score: `0.480154`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `969`
+
+### Batch 1220 @ 2026-03-03T13:27:45Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T132745Z_batch_001220.json`
+- best_score: `0.433289`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `970`
+
+### Batch 1221 @ 2026-03-03T13:28:19Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T132819Z_batch_001221.json`
+- best_score: `0.507194`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `971`
+
+### Batch 1222 @ 2026-03-03T13:28:52Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T132852Z_batch_001222.json`
+- best_score: `0.434307`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `972`
+
+### Batch 1223 @ 2026-03-03T13:29:25Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T132925Z_batch_001223.json`
+- best_score: `0.476941`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `973`
+
+### Batch 1224 @ 2026-03-03T13:30:03Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T133003Z_batch_001224.json`
+- best_score: `0.475026`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `974`
+
+### Batch 1225 @ 2026-03-03T13:30:44Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T133043Z_batch_001225.json`
+- best_score: `0.472980`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `975`
+
+### Batch 1226 @ 2026-03-03T13:31:23Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T133123Z_batch_001226.json`
+- best_score: `0.511639`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `976`
+
+### Batch 1227 @ 2026-03-03T13:32:02Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T133202Z_batch_001227.json`
+- best_score: `0.473108`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `977`
+
+### Batch 1228 @ 2026-03-03T13:32:42Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T133242Z_batch_001228.json`
+- best_score: `0.474664`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `978`
+
+### Batch 1229 @ 2026-03-03T13:33:22Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T133322Z_batch_001229.json`
+- best_score: `0.474922`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `979`
+
+### Batch 1230 @ 2026-03-03T13:34:01Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T133401Z_batch_001230.json`
+- best_score: `0.474806`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `980`
+
+### Batch 1231 @ 2026-03-03T13:34:40Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T133440Z_batch_001231.json`
+- best_score: `0.474807`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `981`
+
+### Batch 1232 @ 2026-03-03T13:35:20Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T133520Z_batch_001232.json`
+- best_score: `0.475005`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `982`
+
+### Batch 1233 @ 2026-03-03T13:35:59Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T133559Z_batch_001233.json`
+- best_score: `0.444070`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `983`
+
+### Batch 1234 @ 2026-03-03T13:36:25Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T133625Z_batch_001234.json`
+- best_score: `0.482222`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `984`
+
+### Batch 1235 @ 2026-03-03T13:36:52Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T133652Z_batch_001235.json`
+- best_score: `0.481042`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `985`
+
+### Batch 1236 @ 2026-03-03T13:37:18Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T133718Z_batch_001236.json`
+- best_score: `0.481705`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `986`
+
+### Batch 1237 @ 2026-03-03T13:37:57Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T133757Z_batch_001237.json`
+- best_score: `0.475118`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `987`
+
+### Batch 1238 @ 2026-03-03T13:38:36Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T133836Z_batch_001238.json`
+- best_score: `0.472986`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `988`
+
+### Batch 1239 @ 2026-03-03T13:39:11Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T133911Z_batch_001239.json`
+- best_score: `0.481525`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `989`
+
+### Batch 1240 @ 2026-03-03T13:39:40Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T133940Z_batch_001240.json`
+- best_score: `0.481238`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `990`
+
+### Batch 1241 @ 2026-03-03T13:40:06Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T134006Z_batch_001241.json`
+- best_score: `0.481569`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `991`
+
+### Batch 1242 @ 2026-03-03T13:40:34Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T134034Z_batch_001242.json`
+- best_score: `0.481374`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `992`
+
+### Batch 1243 @ 2026-03-03T13:41:02Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T134102Z_batch_001243.json`
+- best_score: `0.479145`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `993`
+
+### Batch 1244 @ 2026-03-03T13:41:30Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T134130Z_batch_001244.json`
+- best_score: `0.480918`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `994`
+
+### Batch 1245 @ 2026-03-03T13:41:56Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T134156Z_batch_001245.json`
+- best_score: `0.493098`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `995`
+
+### Batch 1246 @ 2026-03-03T13:42:21Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T134221Z_batch_001246.json`
+- best_score: `0.482176`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `996`
+
+### Batch 1247 @ 2026-03-03T13:42:48Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T134248Z_batch_001247.json`
+- best_score: `0.481732`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `997`
+
+### Batch 1248 @ 2026-03-03T13:43:15Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T134315Z_batch_001248.json`
+- best_score: `0.481433`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `998`
+
+### Batch 1249 @ 2026-03-03T13:43:51Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T134351Z_batch_001249.json`
+- best_score: `0.476471`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `999`
+
+#### Stall pivot @ 2026-03-03T13:44:25Z
+- reason: `no_improve_streak=1000`
+- action: `seed_offset += 1000003 -> 29000087`
+- action: keep K1/K2 prioritized in selection matrix
+
+### Batch 1250 @ 2026-03-03T13:44:25Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T134425Z_batch_001250.json`
+- best_score: `0.476842`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1000`
+
+### Batch 1251 @ 2026-03-03T13:45:02Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T134502Z_batch_001251.json`
+- best_score: `0.476597`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1001`
+
+### Batch 1252 @ 2026-03-03T13:45:39Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T134539Z_batch_001252.json`
+- best_score: `0.475617`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1002`
+
+### Batch 1253 @ 2026-03-03T13:46:17Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T134617Z_batch_001253.json`
+- best_score: `0.473892`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1003`
+
+### Batch 1254 @ 2026-03-03T13:46:54Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T134654Z_batch_001254.json`
+- best_score: `0.487936`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1004`
+
+### Batch 1255 @ 2026-03-03T13:47:31Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T134731Z_batch_001255.json`
+- best_score: `0.431797`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1005`
+
+### Batch 1256 @ 2026-03-03T13:48:09Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T134809Z_batch_001256.json`
+- best_score: `0.488065`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1006`
+
+### Batch 1257 @ 2026-03-03T13:48:48Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T134848Z_batch_001257.json`
+- best_score: `0.431744`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1007`
+
+### Batch 1258 @ 2026-03-03T13:49:29Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T134929Z_batch_001258.json`
+- best_score: `0.486851`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1008`
+
+### Batch 1259 @ 2026-03-03T13:50:10Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135010Z_batch_001259.json`
+- best_score: `0.474396`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1009`
+
+### Batch 1260 @ 2026-03-03T13:50:44Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135044Z_batch_001260.json`
+- best_score: `0.481182`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1010`
+
+### Batch 1261 @ 2026-03-03T13:51:11Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135111Z_batch_001261.json`
+- best_score: `0.481765`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1011`
+
+### Batch 1262 @ 2026-03-03T13:51:37Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135137Z_batch_001262.json`
+- best_score: `0.481486`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1012`
+
+### Batch 1263 @ 2026-03-03T13:52:04Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135204Z_batch_001263.json`
+- best_score: `0.480844`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1013`
+
+### Batch 1264 @ 2026-03-03T13:52:30Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135230Z_batch_001264.json`
+- best_score: `0.480902`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1014`
+
+### Batch 1265 @ 2026-03-03T13:52:57Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135257Z_batch_001265.json`
+- best_score: `0.479725`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1015`
+
+### Batch 1266 @ 2026-03-03T13:53:23Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135323Z_batch_001266.json`
+- best_score: `0.482502`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1016`
+
+### Batch 1267 @ 2026-03-03T13:53:49Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135349Z_batch_001267.json`
+- best_score: `0.512754`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `1017`
+
+### Batch 1268 @ 2026-03-03T13:54:16Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135416Z_batch_001268.json`
+- best_score: `0.481262`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1018`
+
+### Batch 1269 @ 2026-03-03T13:54:42Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135442Z_batch_001269.json`
+- best_score: `0.481817`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1019`
+
+### Batch 1270 @ 2026-03-03T13:55:09Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135509Z_batch_001270.json`
+- best_score: `0.436498`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1020`
+
+### Batch 1271 @ 2026-03-03T13:55:42Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135542Z_batch_001271.json`
+- best_score: `0.480645`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1021`
+
+### Batch 1272 @ 2026-03-03T13:56:12Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135612Z_batch_001272.json`
+- best_score: `0.481118`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1022`
+
+### Batch 1273 @ 2026-03-03T13:56:40Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135640Z_batch_001273.json`
+- best_score: `0.481770`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1023`
+
+### Batch 1274 @ 2026-03-03T13:57:07Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135707Z_batch_001274.json`
+- best_score: `0.481552`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1024`
+
+### Batch 1275 @ 2026-03-03T13:57:34Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135734Z_batch_001275.json`
+- best_score: `0.484105`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.125`
+- A_chi_proxy: `-0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `1025`
+
+### Batch 1276 @ 2026-03-03T13:58:00Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135800Z_batch_001276.json`
+- best_score: `0.481871`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1026`
+
+### Batch 1277 @ 2026-03-03T13:58:27Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135827Z_batch_001277.json`
+- best_score: `0.479018`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1027`
+
+### Batch 1278 @ 2026-03-03T13:58:52Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135852Z_batch_001278.json`
+- best_score: `0.481628`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1028`
+
+### Batch 1279 @ 2026-03-03T13:59:22Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T135922Z_batch_001279.json`
+- best_score: `0.478303`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1029`
+
+### Batch 1280 @ 2026-03-03T14:00:00Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T140000Z_batch_001280.json`
+- best_score: `0.475271`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1030`
+
+### Batch 1281 @ 2026-03-03T14:00:40Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T140040Z_batch_001281.json`
+- best_score: `0.474517`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1031`
+
+### Batch 1282 @ 2026-03-03T14:01:20Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T140120Z_batch_001282.json`
+- best_score: `0.474171`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1032`
+
+### Batch 1283 @ 2026-03-03T14:01:58Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T140158Z_batch_001283.json`
+- best_score: `0.474945`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1033`
+
+### Batch 1284 @ 2026-03-03T14:02:42Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T140242Z_batch_001284.json`
+- best_score: `0.471882`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1034`
+
+### Batch 1285 @ 2026-03-03T14:03:17Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T140317Z_batch_001285.json`
+- best_score: `0.478822`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1035`
+
+### Batch 1286 @ 2026-03-03T14:03:50Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T140350Z_batch_001286.json`
+- best_score: `0.479131`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1036`
+
+### Batch 1287 @ 2026-03-03T14:04:29Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T140429Z_batch_001287.json`
+- best_score: `0.475163`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1037`
+
+### Batch 1288 @ 2026-03-03T14:05:02Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T140502Z_batch_001288.json`
+- best_score: `0.480882`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1038`
+
+### Batch 1289 @ 2026-03-03T14:05:29Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T140529Z_batch_001289.json`
+- best_score: `0.480863`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1039`
+
+#### Stall pivot @ 2026-03-03T14:05:56Z
+- reason: `no_improve_streak=1040`
+- action: `seed_offset += 1000003 -> 30000090`
+- action: keep K1/K2 prioritized in selection matrix
+
+### Batch 1290 @ 2026-03-03T14:05:56Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T140556Z_batch_001290.json`
+- best_score: `0.513688`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `-0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `1040`
+
+### Batch 1291 @ 2026-03-03T14:06:23Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T140623Z_batch_001291.json`
+- best_score: `0.480718`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1041`
+
+### Batch 1292 @ 2026-03-03T14:06:50Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T140650Z_batch_001292.json`
+- best_score: `0.438194`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1042`
+
+### Batch 1293 @ 2026-03-03T14:07:16Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T140716Z_batch_001293.json`
+- best_score: `0.481149`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1043`
+
+### Batch 1294 @ 2026-03-03T14:07:43Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T140743Z_batch_001294.json`
+- best_score: `0.481707`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1044`
+
+### Batch 1295 @ 2026-03-03T14:08:09Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T140809Z_batch_001295.json`
+- best_score: `0.479899`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1045`
+
+### Batch 1296 @ 2026-03-03T14:08:44Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T140844Z_batch_001296.json`
+- best_score: `0.524903`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1046`
+
+### Batch 1297 @ 2026-03-03T14:09:22Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T140922Z_batch_001297.json`
+- best_score: `0.475713`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1047`
+
+### Batch 1298 @ 2026-03-03T14:10:00Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141000Z_batch_001298.json`
+- best_score: `0.473337`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1048`
+
+### Batch 1299 @ 2026-03-03T14:10:32Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141032Z_batch_001299.json`
+- best_score: `0.481514`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1049`
+
+### Batch 1300 @ 2026-03-03T14:10:59Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141059Z_batch_001300.json`
+- best_score: `0.481344`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1050`
+
+### Batch 1301 @ 2026-03-03T14:11:25Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141125Z_batch_001301.json`
+- best_score: `0.479941`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1051`
+
+### Batch 1302 @ 2026-03-03T14:11:52Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141152Z_batch_001302.json`
+- best_score: `0.512729`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `1052`
+
+### Batch 1303 @ 2026-03-03T14:12:19Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141219Z_batch_001303.json`
+- best_score: `0.481332`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1053`
+
+### Batch 1304 @ 2026-03-03T14:12:46Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141246Z_batch_001304.json`
+- best_score: `0.493936`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1054`
+
+### Batch 1305 @ 2026-03-03T14:13:13Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141313Z_batch_001305.json`
+- best_score: `0.481215`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1055`
+
+### Batch 1306 @ 2026-03-03T14:13:41Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141341Z_batch_001306.json`
+- best_score: `0.517946`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1056`
+
+### Batch 1307 @ 2026-03-03T14:14:08Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141408Z_batch_001307.json`
+- best_score: `0.480643`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1057`
+
+### Batch 1308 @ 2026-03-03T14:14:35Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141435Z_batch_001308.json`
+- best_score: `0.479563`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1058`
+
+### Batch 1309 @ 2026-03-03T14:15:02Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141502Z_batch_001309.json`
+- best_score: `0.481495`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1059`
+
+### Batch 1310 @ 2026-03-03T14:15:29Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141529Z_batch_001310.json`
+- best_score: `0.481134`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1060`
+
+### Batch 1311 @ 2026-03-03T14:15:55Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141555Z_batch_001311.json`
+- best_score: `0.481700`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1061`
+
+### Batch 1312 @ 2026-03-03T14:16:21Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141621Z_batch_001312.json`
+- best_score: `0.481878`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1062`
+
+### Batch 1313 @ 2026-03-03T14:16:48Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141648Z_batch_001313.json`
+- best_score: `0.480007`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1063`
+
+### Batch 1314 @ 2026-03-03T14:17:15Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141715Z_batch_001314.json`
+- best_score: `0.481143`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1064`
+
+### Batch 1315 @ 2026-03-03T14:17:42Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141742Z_batch_001315.json`
+- best_score: `0.479114`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1065`
+
+### Batch 1316 @ 2026-03-03T14:18:08Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141808Z_batch_001316.json`
+- best_score: `0.480701`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1066`
+
+### Batch 1317 @ 2026-03-03T14:18:33Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141833Z_batch_001317.json`
+- best_score: `0.480924`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1067`
+
+### Batch 1318 @ 2026-03-03T14:18:57Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141857Z_batch_001318.json`
+- best_score: `0.483094`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1068`
+
+### Batch 1319 @ 2026-03-03T14:19:22Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141922Z_batch_001319.json`
+- best_score: `0.482616`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1069`
+
+### Batch 1320 @ 2026-03-03T14:19:46Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T141946Z_batch_001320.json`
+- best_score: `0.439101`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1070`
+
+### Batch 1321 @ 2026-03-03T14:20:18Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142018Z_batch_001321.json`
+- best_score: `0.480951`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1071`
+
+### Batch 1322 @ 2026-03-03T14:20:45Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142045Z_batch_001322.json`
+- best_score: `0.481434`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1072`
+
+### Batch 1323 @ 2026-03-03T14:21:11Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142111Z_batch_001323.json`
+- best_score: `0.481800`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1073`
+
+### Batch 1324 @ 2026-03-03T14:21:37Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142137Z_batch_001324.json`
+- best_score: `0.481100`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1074`
+
+### Batch 1325 @ 2026-03-03T14:22:03Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142203Z_batch_001325.json`
+- best_score: `0.480180`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1075`
+
+### Batch 1326 @ 2026-03-03T14:22:30Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142230Z_batch_001326.json`
+- best_score: `0.509541`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `-0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `1076`
+
+### Batch 1327 @ 2026-03-03T14:22:56Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142256Z_batch_001327.json`
+- best_score: `0.481617`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1077`
+
+### Batch 1328 @ 2026-03-03T14:23:23Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142323Z_batch_001328.json`
+- best_score: `0.480821`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1078`
+
+### Batch 1329 @ 2026-03-03T14:23:50Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142350Z_batch_001329.json`
+- best_score: `0.481663`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1079`
+
+#### Stall pivot @ 2026-03-03T14:24:18Z
+- reason: `no_improve_streak=1080`
+- action: `seed_offset += 1000003 -> 31000093`
+- action: keep K1/K2 prioritized in selection matrix
+
+### Batch 1330 @ 2026-03-03T14:24:18Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142418Z_batch_001330.json`
+- best_score: `0.481514`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1080`
+
+### Batch 1331 @ 2026-03-03T14:24:45Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142445Z_batch_001331.json`
+- best_score: `0.479802`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1081`
+
+### Batch 1332 @ 2026-03-03T14:25:12Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142512Z_batch_001332.json`
+- best_score: `0.480950`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1082`
+
+### Batch 1333 @ 2026-03-03T14:25:39Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142539Z_batch_001333.json`
+- best_score: `0.479508`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1083`
+
+### Batch 1334 @ 2026-03-03T14:26:06Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142606Z_batch_001334.json`
+- best_score: `0.481415`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1084`
+
+### Batch 1335 @ 2026-03-03T14:26:33Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142633Z_batch_001335.json`
+- best_score: `0.481525`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1085`
+
+### Batch 1336 @ 2026-03-03T14:26:59Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142659Z_batch_001336.json`
+- best_score: `0.482170`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1086`
+
+### Batch 1337 @ 2026-03-03T14:27:25Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142725Z_batch_001337.json`
+- best_score: `0.482199`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1087`
+
+### Batch 1338 @ 2026-03-03T14:27:51Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142751Z_batch_001338.json`
+- best_score: `0.480286`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1088`
+
+### Batch 1339 @ 2026-03-03T14:28:17Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142817Z_batch_001339.json`
+- best_score: `0.482588`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1089`
+
+### Batch 1340 @ 2026-03-03T14:28:43Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142843Z_batch_001340.json`
+- best_score: `0.480172`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1090`
+
+### Batch 1341 @ 2026-03-03T14:29:09Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142909Z_batch_001341.json`
+- best_score: `0.482221`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1091`
+
+### Batch 1342 @ 2026-03-03T14:29:35Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T142935Z_batch_001342.json`
+- best_score: `0.482105`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1092`
+
+### Batch 1343 @ 2026-03-03T14:30:01Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143001Z_batch_001343.json`
+- best_score: `0.481851`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1093`
+
+### Batch 1344 @ 2026-03-03T14:30:28Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143028Z_batch_001344.json`
+- best_score: `0.479621`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1094`
+
+### Batch 1345 @ 2026-03-03T14:30:55Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143055Z_batch_001345.json`
+- best_score: `0.479875`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1095`
+
+### Batch 1346 @ 2026-03-03T14:31:21Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143121Z_batch_001346.json`
+- best_score: `0.482115`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1096`
+
+### Batch 1347 @ 2026-03-03T14:31:48Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143148Z_batch_001347.json`
+- best_score: `0.480318`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1097`
+
+### Batch 1348 @ 2026-03-03T14:32:15Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143215Z_batch_001348.json`
+- best_score: `0.481976`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1098`
+
+### Batch 1349 @ 2026-03-03T14:32:43Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143243Z_batch_001349.json`
+- best_score: `0.480515`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1099`
+
+### Batch 1350 @ 2026-03-03T14:33:09Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143309Z_batch_001350.json`
+- best_score: `0.481267`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1100`
+
+### Batch 1351 @ 2026-03-03T14:33:38Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143338Z_batch_001351.json`
+- best_score: `0.478858`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1101`
+
+### Batch 1352 @ 2026-03-03T14:34:05Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143405Z_batch_001352.json`
+- best_score: `0.479021`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1102`
+
+### Batch 1353 @ 2026-03-03T14:34:33Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143433Z_batch_001353.json`
+- best_score: `0.481057`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1103`
+
+### Batch 1354 @ 2026-03-03T14:35:00Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143500Z_batch_001354.json`
+- best_score: `0.480120`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1104`
+
+### Batch 1355 @ 2026-03-03T14:35:28Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143528Z_batch_001355.json`
+- best_score: `0.479914`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1105`
+
+### Batch 1356 @ 2026-03-03T14:36:00Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143600Z_batch_001356.json`
+- best_score: `0.480918`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1106`
+
+### Batch 1357 @ 2026-03-03T14:36:37Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143637Z_batch_001357.json`
+- best_score: `0.475773`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1107`
+
+### Batch 1358 @ 2026-03-03T14:37:13Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143713Z_batch_001358.json`
+- best_score: `0.476168`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1108`
+
+### Batch 1359 @ 2026-03-03T14:37:51Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143751Z_batch_001359.json`
+- best_score: `0.475416`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1109`
+
+### Batch 1360 @ 2026-03-03T14:38:30Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143830Z_batch_001360.json`
+- best_score: `0.488124`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1110`
+
+### Batch 1361 @ 2026-03-03T14:39:00Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143900Z_batch_001361.json`
+- best_score: `0.482274`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1111`
+
+### Batch 1362 @ 2026-03-03T14:39:27Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143927Z_batch_001362.json`
+- best_score: `0.518484`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1112`
+
+### Batch 1363 @ 2026-03-03T14:39:54Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T143954Z_batch_001363.json`
+- best_score: `0.481705`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1113`
+
+### Batch 1364 @ 2026-03-03T14:40:21Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144021Z_batch_001364.json`
+- best_score: `0.479692`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1114`
+
+### Batch 1365 @ 2026-03-03T14:40:47Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144047Z_batch_001365.json`
+- best_score: `0.482073`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1115`
+
+### Batch 1366 @ 2026-03-03T14:41:14Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144114Z_batch_001366.json`
+- best_score: `0.481366`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1116`
+
+### Batch 1367 @ 2026-03-03T14:41:40Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144140Z_batch_001367.json`
+- best_score: `0.481592`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1117`
+
+### Batch 1368 @ 2026-03-03T14:42:06Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144206Z_batch_001368.json`
+- best_score: `0.480378`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1118`
+
+### Batch 1369 @ 2026-03-03T14:42:33Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144233Z_batch_001369.json`
+- best_score: `0.481929`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1119`
+
+#### Stall pivot @ 2026-03-03T14:43:00Z
+- reason: `no_improve_streak=1120`
+- action: `seed_offset += 1000003 -> 32000096`
+- action: keep K1/K2 prioritized in selection matrix
+
+### Batch 1370 @ 2026-03-03T14:43:00Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144300Z_batch_001370.json`
+- best_score: `0.482001`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1120`
+
+### Batch 1371 @ 2026-03-03T14:43:26Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144326Z_batch_001371.json`
+- best_score: `0.482011`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1121`
+
+### Batch 1372 @ 2026-03-03T14:43:54Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144354Z_batch_001372.json`
+- best_score: `0.481313`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1122`
+
+### Batch 1373 @ 2026-03-03T14:44:20Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144420Z_batch_001373.json`
+- best_score: `0.481565`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1123`
+
+### Batch 1374 @ 2026-03-03T14:44:47Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144447Z_batch_001374.json`
+- best_score: `0.481108`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1124`
+
+### Batch 1375 @ 2026-03-03T14:45:14Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144514Z_batch_001375.json`
+- best_score: `0.480183`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1125`
+
+### Batch 1376 @ 2026-03-03T14:45:41Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144541Z_batch_001376.json`
+- best_score: `0.481860`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1126`
+
+### Batch 1377 @ 2026-03-03T14:46:07Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144607Z_batch_001377.json`
+- best_score: `0.480405`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1127`
+
+### Batch 1378 @ 2026-03-03T14:46:33Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144633Z_batch_001378.json`
+- best_score: `0.482145`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1128`
+
+### Batch 1379 @ 2026-03-03T14:47:13Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144713Z_batch_001379.json`
+- best_score: `0.474883`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1129`
+
+### Batch 1380 @ 2026-03-03T14:47:43Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144743Z_batch_001380.json`
+- best_score: `0.482065`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1130`
+
+### Batch 1381 @ 2026-03-03T14:48:09Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144809Z_batch_001381.json`
+- best_score: `0.480521`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1131`
+
+### Batch 1382 @ 2026-03-03T14:48:36Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144836Z_batch_001382.json`
+- best_score: `0.371465`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1132`
+
+### Batch 1383 @ 2026-03-03T14:49:02Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144902Z_batch_001383.json`
+- best_score: `0.481421`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1133`
+
+### Batch 1384 @ 2026-03-03T14:49:34Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T144934Z_batch_001384.json`
+- best_score: `0.512209`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `-0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `1134`
+
+### Batch 1385 @ 2026-03-03T14:50:15Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145015Z_batch_001385.json`
+- best_score: `0.503691`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `1135`
+
+### Batch 1386 @ 2026-03-03T14:50:51Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145051Z_batch_001386.json`
+- best_score: `0.476040`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1136`
+
+### Batch 1387 @ 2026-03-03T14:51:19Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145119Z_batch_001387.json`
+- best_score: `0.479971`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1137`
+
+### Batch 1388 @ 2026-03-03T14:51:46Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145146Z_batch_001388.json`
+- best_score: `0.481274`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1138`
+
+### Batch 1389 @ 2026-03-03T14:52:13Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145213Z_batch_001389.json`
+- best_score: `0.432688`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `1139`
+
+### Batch 1390 @ 2026-03-03T14:52:38Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145238Z_batch_001390.json`
+- best_score: `0.482303`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1140`
+
+### Batch 1391 @ 2026-03-03T14:53:05Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145305Z_batch_001391.json`
+- best_score: `0.480614`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1141`
+
+### Batch 1392 @ 2026-03-03T14:53:31Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145331Z_batch_001392.json`
+- best_score: `0.481939`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1142`
+
+### Batch 1393 @ 2026-03-03T14:53:58Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145358Z_batch_001393.json`
+- best_score: `0.481369`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1143`
+
+### Batch 1394 @ 2026-03-03T14:54:23Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145423Z_batch_001394.json`
+- best_score: `0.480690`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1144`
+
+### Batch 1395 @ 2026-03-03T14:54:50Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145450Z_batch_001395.json`
+- best_score: `0.481654`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1145`
+
+### Batch 1396 @ 2026-03-03T14:55:16Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145516Z_batch_001396.json`
+- best_score: `0.481367`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1146`
+
+### Batch 1397 @ 2026-03-03T14:55:42Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145542Z_batch_001397.json`
+- best_score: `0.480176`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1147`
+
+### Batch 1398 @ 2026-03-03T14:56:09Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145609Z_batch_001398.json`
+- best_score: `0.492603`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1148`
+
+### Batch 1399 @ 2026-03-03T14:56:35Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145635Z_batch_001399.json`
+- best_score: `0.481664`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1149`
+
+### Batch 1400 @ 2026-03-03T14:57:02Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145702Z_batch_001400.json`
+- best_score: `0.481212`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1150`
+
+### Batch 1401 @ 2026-03-03T14:57:28Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145728Z_batch_001401.json`
+- best_score: `0.481250`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1151`
+
+### Batch 1402 @ 2026-03-03T14:57:55Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145755Z_batch_001402.json`
+- best_score: `0.480558`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1152`
+
+### Batch 1403 @ 2026-03-03T14:58:20Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145820Z_batch_001403.json`
+- best_score: `0.481976`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1153`
+
+### Batch 1404 @ 2026-03-03T14:58:48Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145847Z_batch_001404.json`
+- best_score: `0.481323`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1154`
+
+### Batch 1405 @ 2026-03-03T14:59:14Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145914Z_batch_001405.json`
+- best_score: `0.438719`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1155`
+
+### Batch 1406 @ 2026-03-03T14:59:40Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T145940Z_batch_001406.json`
+- best_score: `0.481294`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1156`
+
+### Batch 1407 @ 2026-03-03T15:00:08Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T150008Z_batch_001407.json`
+- best_score: `0.478014`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1157`
+
+### Batch 1408 @ 2026-03-03T15:00:36Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T150036Z_batch_001408.json`
+- best_score: `0.437296`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1158`
+
+### Batch 1409 @ 2026-03-03T15:01:03Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T150103Z_batch_001409.json`
+- best_score: `0.480565`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1159`
+
+#### Stall pivot @ 2026-03-03T15:01:30Z
+- reason: `no_improve_streak=1160`
+- action: `seed_offset += 1000003 -> 33000099`
+- action: keep K1/K2 prioritized in selection matrix
+
+### Batch 1410 @ 2026-03-03T15:01:30Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T150130Z_batch_001410.json`
+- best_score: `0.435782`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1160`
+
+### Batch 1411 @ 2026-03-03T15:01:58Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T150158Z_batch_001411.json`
+- best_score: `0.479366`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1161`
+
+### Batch 1412 @ 2026-03-03T15:02:27Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T150227Z_batch_001412.json`
+- best_score: `0.479842`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1162`
+
+### Batch 1413 @ 2026-03-03T15:03:04Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T150304Z_batch_001413.json`
+- best_score: `0.475851`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1163`
+
+### Batch 1414 @ 2026-03-03T15:03:36Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T150336Z_batch_001414.json`
+- best_score: `0.481759`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1164`
+
+### Batch 1415 @ 2026-03-03T15:04:02Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T150402Z_batch_001415.json`
+- best_score: `0.481812`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1165`
+
+### Batch 1416 @ 2026-03-03T15:04:28Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T150428Z_batch_001416.json`
+- best_score: `0.479664`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1166`
+
+### Batch 1417 @ 2026-03-03T15:04:56Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T150456Z_batch_001417.json`
+- best_score: `0.479477`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1167`
+
+### Batch 1418 @ 2026-03-03T15:05:31Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T150531Z_batch_001418.json`
+- best_score: `0.480401`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1168`
+
+### Batch 1419 @ 2026-03-03T15:06:11Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T150611Z_batch_001419.json`
+- best_score: `0.474658`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1169`
+
+### Batch 1420 @ 2026-03-03T15:06:50Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T150650Z_batch_001420.json`
+- best_score: `0.473247`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1170`
+
+### Batch 1421 @ 2026-03-03T15:07:29Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T150729Z_batch_001421.json`
+- best_score: `0.475428`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1171`
+
+### Batch 1422 @ 2026-03-03T15:08:11Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T150811Z_batch_001422.json`
+- best_score: `0.485963`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1172`
+
+### Batch 1423 @ 2026-03-03T15:08:54Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T150854Z_batch_001423.json`
+- best_score: `0.474047`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1173`
+
+### Batch 1424 @ 2026-03-03T15:09:34Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T150934Z_batch_001424.json`
+- best_score: `0.474552`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1174`
+
+### Batch 1425 @ 2026-03-03T15:10:16Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T151016Z_batch_001425.json`
+- best_score: `0.473434`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1175`
+
+### Batch 1426 @ 2026-03-03T15:10:55Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T151055Z_batch_001426.json`
+- best_score: `0.462882`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `-0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `1176`
+
+### Batch 1427 @ 2026-03-03T15:11:33Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T151133Z_batch_001427.json`
+- best_score: `0.475110`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1177`
+
+### Batch 1428 @ 2026-03-03T15:12:12Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T151212Z_batch_001428.json`
+- best_score: `0.474840`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1178`
+
+### Batch 1429 @ 2026-03-03T15:12:50Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T151250Z_batch_001429.json`
+- best_score: `0.512376`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1179`
+
+### Batch 1430 @ 2026-03-03T15:13:29Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T151329Z_batch_001430.json`
+- best_score: `0.473661`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1180`
+
+### Batch 1431 @ 2026-03-03T15:14:06Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T151406Z_batch_001431.json`
+- best_score: `0.475401`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1181`
+
+### Batch 1432 @ 2026-03-03T15:14:46Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T151446Z_batch_001432.json`
+- best_score: `0.474345`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1182`
+
+### Batch 1433 @ 2026-03-03T15:15:26Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T151526Z_batch_001433.json`
+- best_score: `0.474579`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1183`
+
+### Batch 1434 @ 2026-03-03T15:16:05Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T151605Z_batch_001434.json`
+- best_score: `0.474582`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1184`
+
+### Batch 1435 @ 2026-03-03T15:16:47Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T151647Z_batch_001435.json`
+- best_score: `0.474420`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1185`
+
+### Batch 1436 @ 2026-03-03T15:17:28Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T151728Z_batch_001436.json`
+- best_score: `0.474725`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1186`
+
+### Batch 1437 @ 2026-03-03T15:18:08Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T151808Z_batch_001437.json`
+- best_score: `0.474824`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1187`
+
+### Batch 1438 @ 2026-03-03T15:18:48Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T151848Z_batch_001438.json`
+- best_score: `0.475583`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1188`
+
+### Batch 1439 @ 2026-03-03T15:19:28Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T151928Z_batch_001439.json`
+- best_score: `0.475007`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1189`
+
+### Batch 1440 @ 2026-03-03T15:20:10Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T152010Z_batch_001440.json`
+- best_score: `0.474840`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1190`
+
+### Batch 1441 @ 2026-03-03T15:20:50Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T152050Z_batch_001441.json`
+- best_score: `0.474604`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1191`
+
+### Batch 1442 @ 2026-03-03T15:21:31Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T152131Z_batch_001442.json`
+- best_score: `0.474455`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1192`
+
+### Batch 1443 @ 2026-03-03T15:22:08Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T152208Z_batch_001443.json`
+- best_score: `0.478261`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1193`
+
+### Batch 1444 @ 2026-03-03T15:22:35Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T152235Z_batch_001444.json`
+- best_score: `0.511102`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `1194`
+
+### Batch 1445 @ 2026-03-03T15:23:13Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T152313Z_batch_001445.json`
+- best_score: `0.475414`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1195`
+
+### Batch 1446 @ 2026-03-03T15:23:51Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T152351Z_batch_001446.json`
+- best_score: `0.475378`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1196`
+
+### Batch 1447 @ 2026-03-03T15:24:27Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T152427Z_batch_001447.json`
+- best_score: `0.476743`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1197`
+
+### Batch 1448 @ 2026-03-03T15:25:05Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T152505Z_batch_001448.json`
+- best_score: `0.474799`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1198`
+
+### Batch 1449 @ 2026-03-03T15:25:44Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T152544Z_batch_001449.json`
+- best_score: `0.474800`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1199`
+
+#### Stall pivot @ 2026-03-03T15:26:11Z
+- reason: `no_improve_streak=1200`
+- action: `seed_offset += 1000003 -> 34000102`
+- action: keep K1/K2 prioritized in selection matrix
+
+### Batch 1450 @ 2026-03-03T15:26:11Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T152611Z_batch_001450.json`
+- best_score: `0.480908`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1200`
+
+### Batch 1451 @ 2026-03-03T15:26:42Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T152642Z_batch_001451.json`
+- best_score: `0.479996`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1201`
+
+### Batch 1452 @ 2026-03-03T15:27:17Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T152717Z_batch_001452.json`
+- best_score: `0.476446`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1202`
+
+### Batch 1453 @ 2026-03-03T15:27:50Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T152750Z_batch_001453.json`
+- best_score: `0.477174`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1203`
+
+### Batch 1454 @ 2026-03-03T15:28:24Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T152824Z_batch_001454.json`
+- best_score: `0.476122`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1204`
+
+### Batch 1455 @ 2026-03-03T15:28:58Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T152858Z_batch_001455.json`
+- best_score: `0.476617`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1205`
+
+### Batch 1456 @ 2026-03-03T15:29:31Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T152931Z_batch_001456.json`
+- best_score: `0.477145`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1206`
+
+### Batch 1457 @ 2026-03-03T15:30:04Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T153004Z_batch_001457.json`
+- best_score: `0.477545`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1207`
+
+### Batch 1458 @ 2026-03-03T15:30:38Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T153038Z_batch_001458.json`
+- best_score: `0.477328`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1208`
+
+### Batch 1459 @ 2026-03-03T15:31:18Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T153118Z_batch_001459.json`
+- best_score: `0.474593`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1209`
+
+### Batch 1460 @ 2026-03-03T15:31:58Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T153158Z_batch_001460.json`
+- best_score: `0.486971`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1210`
+
+### Batch 1461 @ 2026-03-03T15:32:38Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T153238Z_batch_001461.json`
+- best_score: `0.474476`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1211`
+
+### Batch 1462 @ 2026-03-03T15:33:19Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T153318Z_batch_001462.json`
+- best_score: `0.474648`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1212`
+
+### Batch 1463 @ 2026-03-03T15:33:58Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T153358Z_batch_001463.json`
+- best_score: `0.473051`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1213`
+
+### Batch 1464 @ 2026-03-03T15:34:38Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T153438Z_batch_001464.json`
+- best_score: `0.431673`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1214`
+
+### Batch 1465 @ 2026-03-03T15:35:18Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T153518Z_batch_001465.json`
+- best_score: `0.431791`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1215`
+
+### Batch 1466 @ 2026-03-03T15:35:58Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T153558Z_batch_001466.json`
+- best_score: `0.474337`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1216`
+
+### Batch 1467 @ 2026-03-03T15:36:38Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T153638Z_batch_001467.json`
+- best_score: `0.505692`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `1217`
+
+### Batch 1468 @ 2026-03-03T15:37:18Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T153718Z_batch_001468.json`
+- best_score: `0.474827`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1218`
+
+### Batch 1469 @ 2026-03-03T15:37:58Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T153758Z_batch_001469.json`
+- best_score: `0.505816`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `1219`
+
+### Batch 1470 @ 2026-03-03T15:38:38Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T153838Z_batch_001470.json`
+- best_score: `0.476278`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1220`
+
+### Batch 1471 @ 2026-03-03T15:39:23Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T153923Z_batch_001471.json`
+- best_score: `0.473382`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1221`
+
+### Batch 1472 @ 2026-03-03T15:40:08Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T154008Z_batch_001472.json`
+- best_score: `0.446147`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.125`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1222`
+
+### Batch 1473 @ 2026-03-03T15:40:45Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T154045Z_batch_001473.json`
+- best_score: `0.481196`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1223`
+
+### Batch 1474 @ 2026-03-03T15:41:13Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T154113Z_batch_001474.json`
+- best_score: `0.437481`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1224`
+
+### Batch 1475 @ 2026-03-03T15:41:41Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T154141Z_batch_001475.json`
+- best_score: `0.480755`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1225`
+
+### Batch 1476 @ 2026-03-03T15:42:08Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T154208Z_batch_001476.json`
+- best_score: `0.480689`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1226`
+
+### Batch 1477 @ 2026-03-03T15:42:36Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T154236Z_batch_001477.json`
+- best_score: `0.480210`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1227`
+
+### Batch 1478 @ 2026-03-03T15:43:02Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T154302Z_batch_001478.json`
+- best_score: `0.481417`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1228`
+
+### Batch 1479 @ 2026-03-03T15:43:29Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T154329Z_batch_001479.json`
+- best_score: `0.482447`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1229`
+
+### Batch 1480 @ 2026-03-03T15:43:55Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T154355Z_batch_001480.json`
+- best_score: `0.481798`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1230`
+
+### Batch 1481 @ 2026-03-03T15:44:22Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T154422Z_batch_001481.json`
+- best_score: `0.481532`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1231`
+
+### Batch 1482 @ 2026-03-03T15:44:48Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T154448Z_batch_001482.json`
+- best_score: `0.438521`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1232`
+
+### Batch 1483 @ 2026-03-03T15:45:15Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T154515Z_batch_001483.json`
+- best_score: `0.481366`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1233`
+
+### Batch 1484 @ 2026-03-03T15:45:41Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T154541Z_batch_001484.json`
+- best_score: `0.480604`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1234`
+
+### Batch 1485 @ 2026-03-03T15:46:08Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T154608Z_batch_001485.json`
+- best_score: `0.478518`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1235`
+
+### Batch 1486 @ 2026-03-03T15:46:34Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T154634Z_batch_001486.json`
+- best_score: `0.481501`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1236`
+
+### Batch 1487 @ 2026-03-03T15:47:00Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T154700Z_batch_001487.json`
+- best_score: `0.480373`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1237`
+
+### Batch 1488 @ 2026-03-03T15:47:26Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T154726Z_batch_001488.json`
+- best_score: `0.482169`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1238`
+
+### Batch 1489 @ 2026-03-03T15:48:01Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T154801Z_batch_001489.json`
+- best_score: `0.481968`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1239`
+
+#### Stall pivot @ 2026-03-03T15:48:45Z
+- reason: `no_improve_streak=1240`
+- action: `seed_offset += 1000003 -> 35000105`
+- action: keep K1/K2 prioritized in selection matrix
+
+### Batch 1490 @ 2026-03-03T15:48:45Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T154845Z_batch_001490.json`
+- best_score: `0.474223`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1240`
+
+### Batch 1491 @ 2026-03-03T15:49:28Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T154928Z_batch_001491.json`
+- best_score: `0.473804`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1241`
+
+### Batch 1492 @ 2026-03-03T15:50:14Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T155014Z_batch_001492.json`
+- best_score: `0.471543`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1242`
+
+### Batch 1493 @ 2026-03-03T15:50:58Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T155058Z_batch_001493.json`
+- best_score: `0.430515`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1243`
+
+### Batch 1494 @ 2026-03-03T15:51:43Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T155143Z_batch_001494.json`
+- best_score: `0.503038`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `-0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `1244`
+
+### Batch 1495 @ 2026-03-03T15:52:27Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T155227Z_batch_001495.json`
+- best_score: `0.510550`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1245`
+
+### Batch 1496 @ 2026-03-03T15:53:11Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T155311Z_batch_001496.json`
+- best_score: `0.473704`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1246`
+
+### Batch 1497 @ 2026-03-03T15:53:56Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T155356Z_batch_001497.json`
+- best_score: `0.473469`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1247`
+
+### Batch 1498 @ 2026-03-03T15:54:40Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T155440Z_batch_001498.json`
+- best_score: `0.473443`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1248`
+
+### Batch 1499 @ 2026-03-03T15:55:24Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T155524Z_batch_001499.json`
+- best_score: `0.515394`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.125000`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `-0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `1249`
+
+### Batch 1500 @ 2026-03-03T15:56:09Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T155609Z_batch_001500.json`
+- best_score: `0.473751`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1250`
+
+### Batch 1501 @ 2026-03-03T15:56:50Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T155649Z_batch_001501.json`
+- best_score: `0.485337`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1251`
+
+### Batch 1502 @ 2026-03-03T15:57:24Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T155724Z_batch_001502.json`
+- best_score: `0.477884`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1252`
+
+### Batch 1503 @ 2026-03-03T15:58:03Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T155803Z_batch_001503.json`
+- best_score: `0.475194`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1253`
+
+### Batch 1504 @ 2026-03-03T15:58:41Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T155841Z_batch_001504.json`
+- best_score: `0.475424`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1254`
+
+### Batch 1505 @ 2026-03-03T15:59:18Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T155918Z_batch_001505.json`
+- best_score: `0.476817`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1255`
+
+### Batch 1506 @ 2026-03-03T15:59:55Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T155955Z_batch_001506.json`
+- best_score: `0.475167`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1256`
+
+### Batch 1507 @ 2026-03-03T16:00:31Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T160031Z_batch_001507.json`
+- best_score: `0.476893`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1257`
+
+### Batch 1508 @ 2026-03-03T16:01:13Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T160113Z_batch_001508.json`
+- best_score: `0.474777`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1258`
+
+### Batch 1509 @ 2026-03-03T16:01:55Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T160155Z_batch_001509.json`
+- best_score: `0.504848`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `-0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `1259`
+
+### Batch 1510 @ 2026-03-03T16:02:36Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T160236Z_batch_001510.json`
+- best_score: `0.431495`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1260`
+
+### Batch 1511 @ 2026-03-03T16:03:13Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T160313Z_batch_001511.json`
+- best_score: `0.476591`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1261`
+
+### Batch 1512 @ 2026-03-03T16:03:49Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T160349Z_batch_001512.json`
+- best_score: `0.476500`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1262`
+
+### Batch 1513 @ 2026-03-03T16:04:24Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T160424Z_batch_001513.json`
+- best_score: `0.435986`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1263`
+
+### Batch 1514 @ 2026-03-03T16:04:59Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T160459Z_batch_001514.json`
+- best_score: `0.434048`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1264`
+
+### Batch 1515 @ 2026-03-03T16:05:35Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T160535Z_batch_001515.json`
+- best_score: `0.474770`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1265`
+
+### Batch 1516 @ 2026-03-03T16:06:12Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T160612Z_batch_001516.json`
+- best_score: `0.475194`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1266`
+
+### Batch 1517 @ 2026-03-03T16:06:53Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T160653Z_batch_001517.json`
+- best_score: `0.474631`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1267`
+
+### Batch 1518 @ 2026-03-03T16:07:34Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T160734Z_batch_001518.json`
+- best_score: `0.474371`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1268`
+
+### Batch 1519 @ 2026-03-03T16:08:14Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T160814Z_batch_001519.json`
+- best_score: `0.472911`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1269`
+
+### Batch 1520 @ 2026-03-03T16:08:56Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T160856Z_batch_001520.json`
+- best_score: `0.472977`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1270`
+
+### Batch 1521 @ 2026-03-03T16:09:36Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T160936Z_batch_001521.json`
+- best_score: `0.504427`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `1271`
+
+### Batch 1522 @ 2026-03-03T16:10:17Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T161017Z_batch_001522.json`
+- best_score: `0.473164`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1272`
+
+### Batch 1523 @ 2026-03-03T16:10:58Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T161058Z_batch_001523.json`
+- best_score: `0.474199`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1273`
+
+### Batch 1524 @ 2026-03-03T16:11:38Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T161138Z_batch_001524.json`
+- best_score: `0.431645`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1274`
+
+### Batch 1525 @ 2026-03-03T16:12:19Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T161219Z_batch_001525.json`
+- best_score: `0.475099`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1275`
+
+### Batch 1526 @ 2026-03-03T16:12:58Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T161258Z_batch_001526.json`
+- best_score: `0.432009`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1276`
+
+### Batch 1527 @ 2026-03-03T16:13:40Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T161340Z_batch_001527.json`
+- best_score: `0.473788`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1277`
+
+### Batch 1528 @ 2026-03-03T16:14:20Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T161420Z_batch_001528.json`
+- best_score: `0.474359`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1278`
+
+### Batch 1529 @ 2026-03-03T16:15:01Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T161501Z_batch_001529.json`
+- best_score: `0.474384`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1279`
+
+#### Stall pivot @ 2026-03-03T16:15:42Z
+- reason: `no_improve_streak=1280`
+- action: `seed_offset += 1000003 -> 36000108`
+- action: keep K1/K2 prioritized in selection matrix
+
+### Batch 1530 @ 2026-03-03T16:15:42Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T161542Z_batch_001530.json`
+- best_score: `0.474120`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1280`
+
+### Batch 1531 @ 2026-03-03T16:16:24Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T161624Z_batch_001531.json`
+- best_score: `0.473971`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1281`
+
+### Batch 1532 @ 2026-03-03T16:17:04Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T161704Z_batch_001532.json`
+- best_score: `0.475080`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1282`
+
+### Batch 1533 @ 2026-03-03T16:17:44Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T161744Z_batch_001533.json`
+- best_score: `0.511871`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1283`
+
+### Batch 1534 @ 2026-03-03T16:18:23Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T161823Z_batch_001534.json`
+- best_score: `0.486860`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1284`
+
+### Batch 1535 @ 2026-03-03T16:19:03Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T161903Z_batch_001535.json`
+- best_score: `0.484744`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1285`
+
+### Batch 1536 @ 2026-03-03T16:19:34Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T161934Z_batch_001536.json`
+- best_score: `0.479892`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1286`
+
+### Batch 1537 @ 2026-03-03T16:20:01Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162001Z_batch_001537.json`
+- best_score: `0.509151`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `-0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `1287`
+
+### Batch 1538 @ 2026-03-03T16:20:27Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162027Z_batch_001538.json`
+- best_score: `0.481727`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1288`
+
+### Batch 1539 @ 2026-03-03T16:20:54Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162054Z_batch_001539.json`
+- best_score: `0.480563`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1289`
+
+### Batch 1540 @ 2026-03-03T16:21:20Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162120Z_batch_001540.json`
+- best_score: `0.481657`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1290`
+
+### Batch 1541 @ 2026-03-03T16:21:47Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162147Z_batch_001541.json`
+- best_score: `0.481774`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1291`
+
+### Batch 1542 @ 2026-03-03T16:22:15Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162215Z_batch_001542.json`
+- best_score: `0.481365`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1292`
+
+### Batch 1543 @ 2026-03-03T16:22:42Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162242Z_batch_001543.json`
+- best_score: `0.481541`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1293`
+
+### Batch 1544 @ 2026-03-03T16:23:09Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162309Z_batch_001544.json`
+- best_score: `0.438055`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1294`
+
+### Batch 1545 @ 2026-03-03T16:23:38Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162338Z_batch_001545.json`
+- best_score: `0.480571`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1295`
+
+### Batch 1546 @ 2026-03-03T16:24:05Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162405Z_batch_001546.json`
+- best_score: `0.491393`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1296`
+
+### Batch 1547 @ 2026-03-03T16:24:32Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162432Z_batch_001547.json`
+- best_score: `0.481245`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1297`
+
+### Batch 1548 @ 2026-03-03T16:24:59Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162459Z_batch_001548.json`
+- best_score: `0.479931`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1298`
+
+### Batch 1549 @ 2026-03-03T16:25:25Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162525Z_batch_001549.json`
+- best_score: `0.511263`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `-0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `1299`
+
+### Batch 1550 @ 2026-03-03T16:25:52Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162552Z_batch_001550.json`
+- best_score: `0.484596`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.062500`
+- front_balance: `0.125000`
+- anisotropy_ratio_max_over_min: `1.125`
+- A_chi_proxy: `-0.125000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': True}`
+- no_improve_streak: `1300`
+
+### Batch 1551 @ 2026-03-03T16:26:19Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162619Z_batch_001551.json`
+- best_score: `0.480629`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1301`
+
+### Batch 1552 @ 2026-03-03T16:26:46Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162646Z_batch_001552.json`
+- best_score: `0.478863`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1302`
+
+### Batch 1553 @ 2026-03-03T16:27:14Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162713Z_batch_001553.json`
+- best_score: `0.481559`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1303`
+
+### Batch 1554 @ 2026-03-03T16:27:40Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162740Z_batch_001554.json`
+- best_score: `0.480967`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1304`
+
+### Batch 1555 @ 2026-03-03T16:28:07Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162807Z_batch_001555.json`
+- best_score: `0.481182`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1305`
+
+### Batch 1556 @ 2026-03-03T16:28:34Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162834Z_batch_001556.json`
+- best_score: `0.481507`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1306`
+
+### Batch 1557 @ 2026-03-03T16:29:00Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162900Z_batch_001557.json`
+- best_score: `0.482278`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1307`
+
+### Batch 1558 @ 2026-03-03T16:29:27Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162927Z_batch_001558.json`
+- best_score: `0.481731`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1308`
+
+### Batch 1559 @ 2026-03-03T16:29:54Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T162954Z_batch_001559.json`
+- best_score: `0.481309`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1309`
+
+### Batch 1560 @ 2026-03-03T16:30:21Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T163021Z_batch_001560.json`
+- best_score: `0.481393`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1310`
+
+### Batch 1561 @ 2026-03-03T16:30:47Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T163047Z_batch_001561.json`
+- best_score: `0.481129`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1311`
+
+### Batch 1562 @ 2026-03-03T16:31:15Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T163115Z_batch_001562.json`
+- best_score: `0.480021`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1312`
+
+### Batch 1563 @ 2026-03-03T16:31:42Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T163142Z_batch_001563.json`
+- best_score: `0.479998`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1313`
+
+### Batch 1564 @ 2026-03-03T16:32:09Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T163209Z_batch_001564.json`
+- best_score: `0.481543`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1314`
+
+### Batch 1565 @ 2026-03-03T16:32:36Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T163236Z_batch_001565.json`
+- best_score: `0.478082`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1315`
+
+### Batch 1566 @ 2026-03-03T16:33:01Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T163301Z_batch_001566.json`
+- best_score: `0.482511`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1316`
+
+### Batch 1567 @ 2026-03-03T16:33:30Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T163330Z_batch_001567.json`
+- best_score: `0.479962`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1317`
+
+### Batch 1568 @ 2026-03-03T16:33:57Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T163357Z_batch_001568.json`
+- best_score: `0.480163`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1318`
+
+### Batch 1569 @ 2026-03-03T16:34:25Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T163425Z_batch_001569.json`
+- best_score: `0.481266`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1319`
+
+#### Stall pivot @ 2026-03-03T16:34:51Z
+- reason: `no_improve_streak=1320`
+- action: `seed_offset += 1000003 -> 37000111`
+- action: keep K1/K2 prioritized in selection matrix
+
+### Batch 1570 @ 2026-03-03T16:34:51Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T163451Z_batch_001570.json`
+- best_score: `0.481249`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1320`
+
+### Batch 1571 @ 2026-03-03T16:35:19Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T163519Z_batch_001571.json`
+- best_score: `0.480940`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1321`
+
+### Batch 1572 @ 2026-03-03T16:35:46Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T163546Z_batch_001572.json`
+- best_score: `0.481662`
+- improved: `False`
+- kernel_candidate_id: `K2_cube26_stochastic_v1`
+- channel_policy_id: `stochastic_gating_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1322`
+
+### Batch 1573 @ 2026-03-03T16:36:12Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T163612Z_batch_001573.json`
+- best_score: `0.479832`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1323`
+
+### Batch 1574 @ 2026-03-03T16:36:42Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T163642Z_batch_001574.json`
+- best_score: `0.478213`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1324`
+
+### Batch 1575 @ 2026-03-03T16:37:09Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T163709Z_batch_001575.json`
+- best_score: `0.481950`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1325`
+
+### Batch 1576 @ 2026-03-03T16:37:35Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T163735Z_batch_001576.json`
+- best_score: `0.481779`
+- improved: `False`
+- kernel_candidate_id: `K1_cube26_det_cycle_v1`
+- channel_policy_id: `deterministic_cycle_v1`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1326`
+
+### Batch 1577 @ 2026-03-03T16:38:02Z
+- output: `cog_v3/sources/v3_overnight_runs_v1/20260303T163802Z_batch_001577.json`
+- best_score: `0.482208`
+- improved: `False`
+- kernel_candidate_id: `K0_cube26_uniform_v1`
+- channel_policy_id: `uniform_all`
+- wave_transport_class: `two_front_balanced`
+- detector_exclusivity: `0.000000`
+- front_balance: `0.000000`
+- anisotropy_ratio_max_over_min: `1.0`
+- A_chi_proxy: `0.000000`
+- gates: `{'gate0_contract': True, 'gate1_transport': True, 'gate2_detector': False, 'gate3_isotropy': True, 'gate4_chirality': False}`
+- no_improve_streak: `1327`
+

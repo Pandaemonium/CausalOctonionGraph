@@ -46,6 +46,7 @@ import CausalGraphTheory.DAGProof
 
 -- Phase 3: Kernel v2 and locked update rule (RFC-028)
 import CausalGraphTheory.KernelV2
+import CausalGraphTheory.KernelV4Lightcone
 import CausalGraphTheory.UpdateRule
 import CausalGraphTheory.XorGate
 

@@ -2,137 +2,242 @@
   "control_deltas": [
     {
       "case_id": "in_phase",
-      "delta_odd_non3_rate_local": 0.0,
-      "delta_swap_to_seed_g_rate_local": 0.0
+      "delta_odd_non3_rate_local": -0.013333333333333308,
+      "delta_swap_to_seed_g_rate_local": 0.02710465272799556
     },
     {
       "case_id": "same_gen_diff_subphase",
-      "delta_odd_non3_rate_local": 0.0,
-      "delta_swap_to_seed_g_rate_local": 0.0
+      "delta_odd_non3_rate_local": -0.013333333333333308,
+      "delta_swap_to_seed_g_rate_local": 0.02710465272799556
     },
     {
       "case_id": "off_phase_g0",
-      "delta_odd_non3_rate_local": 0.0,
-      "delta_swap_to_seed_g_rate_local": 0.0
+      "delta_odd_non3_rate_local": -0.013333333333333308,
+      "delta_swap_to_seed_g_rate_local": -0.018068749238825954
     },
     {
       "case_id": "off_phase_g2",
-      "delta_odd_non3_rate_local": 0.0,
-      "delta_swap_to_seed_g_rate_local": 0.0
+      "delta_odd_non3_rate_local": -0.013333333333333308,
+      "delta_swap_to_seed_g_rate_local": -0.010483662863433107
     }
   ],
   "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
-  "kernel_module": "cog_v3/python/kernel_octavian240_multiplicative_v1.py",
-  "kernel_module_sha256": "4d49033d24dcd1b3ec3cc4367175dc027bfecb8e5afa8710f0dd9856c01155a6",
-  "kernel_profile": "cog_v3_octavian240_multiplicative_v1",
+  "event_order_policy": "pair_conservative_v1",
+  "kernel_module": "cog_v3/python/kernel_s2880_pair_conservative_v1.py",
+  "kernel_module_sha256": "c81b6384419c895eead7be9244edda1e6e5e93c9f7a3c9675a8fe48206974c46",
+  "kernel_profile": "cog_v3_s2880_pair_conservative_v1",
   "phase_metrics_script": "cog_v3/calc/build_v3_c12_phase_sector_metrics_v1.py",
-  "phase_metrics_script_sha256": "7a7ffeeb97226582995041154e2b7ca885e90a61bb74689d623430425bc26e6f",
-  "replay_hash": "25229805f4b4af57536ea3285ea84004ab898576778d50ebd9fe8b19ea8ca384",
+  "phase_metrics_script_sha256": "b53e2e8f68c30c8e8e21a948d8b81c561092feb234297ca8652d0cd68e9d5351",
+  "replay_hash": "9ee8ec4f1a04cdc3233e77888036e6f75588656590e1cbb8afded99848e9c335",
   "rows": [
     {
       "bg_phase": 1,
       "case_id": "in_phase",
-      "odd_non3_rate_global": 0.4162962962962963,
-      "odd_non3_rate_local": 0.316,
+      "gamma_global_dmod3_counts": {
+        "0": 48,
+        "1": 0,
+        "2": 0
+      },
+      "gamma_global_nonzero_tick_rate": 0.0,
+      "gamma_local_dmod3_counts": {
+        "0": 15,
+        "1": 18,
+        "2": 15
+      },
+      "gamma_local_nonzero_tick_rate": 0.6875,
+      "gamma_local_subset_size": 25,
+      "odd_non3_rate_global": 0.5297782350251486,
+      "odd_non3_rate_local": 0.645,
       "seed_label": "neutrino_like_identity",
       "seed_phase": 1,
       "seed_q_label": "1*e000",
       "seed_qid": 239,
-      "swap_to_seed_g_rate_global": 0.13285842383182225,
-      "swap_to_seed_g_rate_local": 0.05605381165919283
+      "swap_to_seed_g_rate_global": 0.259899462033689,
+      "swap_to_seed_g_rate_local": 0.31841432225063937
     },
     {
       "bg_phase": 4,
       "case_id": "same_gen_diff_subphase",
-      "odd_non3_rate_global": 0.4162962962962963,
-      "odd_non3_rate_local": 0.316,
+      "gamma_global_dmod3_counts": {
+        "0": 48,
+        "1": 0,
+        "2": 0
+      },
+      "gamma_global_nonzero_tick_rate": 0.0,
+      "gamma_local_dmod3_counts": {
+        "0": 15,
+        "1": 18,
+        "2": 15
+      },
+      "gamma_local_nonzero_tick_rate": 0.6875,
+      "gamma_local_subset_size": 25,
+      "odd_non3_rate_global": 0.5297782350251486,
+      "odd_non3_rate_local": 0.645,
       "seed_label": "neutrino_like_identity",
       "seed_phase": 1,
       "seed_q_label": "1*e000",
       "seed_qid": 239,
-      "swap_to_seed_g_rate_global": 0.13285842383182225,
-      "swap_to_seed_g_rate_local": 0.05605381165919283
+      "swap_to_seed_g_rate_global": 0.259899462033689,
+      "swap_to_seed_g_rate_local": 0.31841432225063937
     },
     {
       "bg_phase": 0,
       "case_id": "off_phase_g0",
-      "odd_non3_rate_global": 0.3539506172839506,
-      "odd_non3_rate_local": 0.534,
+      "gamma_global_dmod3_counts": {
+        "0": 48,
+        "1": 0,
+        "2": 0
+      },
+      "gamma_global_nonzero_tick_rate": 0.0,
+      "gamma_local_dmod3_counts": {
+        "0": 15,
+        "1": 18,
+        "2": 15
+      },
+      "gamma_local_nonzero_tick_rate": 0.6875,
+      "gamma_local_subset_size": 25,
+      "odd_non3_rate_global": 0.5297782350251486,
+      "odd_non3_rate_local": 0.645,
       "seed_label": "neutrino_like_identity",
       "seed_phase": 1,
       "seed_q_label": "1*e000",
       "seed_qid": 239,
-      "swap_to_seed_g_rate_global": 0.13254876219054765,
-      "swap_to_seed_g_rate_local": 0.23366834170854273
+      "swap_to_seed_g_rate_global": 0.2640399882387533,
+      "swap_to_seed_g_rate_local": 0.32230392156862747
     },
     {
       "bg_phase": 2,
       "case_id": "off_phase_g2",
-      "odd_non3_rate_global": 0.5669135802469136,
-      "odd_non3_rate_local": 0.5,
+      "gamma_global_dmod3_counts": {
+        "0": 48,
+        "1": 0,
+        "2": 0
+      },
+      "gamma_global_nonzero_tick_rate": 0.0,
+      "gamma_local_dmod3_counts": {
+        "0": 15,
+        "1": 18,
+        "2": 15
+      },
+      "gamma_local_nonzero_tick_rate": 0.6875,
+      "gamma_local_subset_size": 25,
+      "odd_non3_rate_global": 0.5297782350251486,
+      "odd_non3_rate_local": 0.645,
       "seed_label": "neutrino_like_identity",
       "seed_phase": 1,
       "seed_q_label": "1*e000",
       "seed_qid": 239,
-      "swap_to_seed_g_rate_global": 0.16436409954928474,
-      "swap_to_seed_g_rate_local": 0.11556603773584906
+      "swap_to_seed_g_rate_global": 0.27133367399080227,
+      "swap_to_seed_g_rate_local": 0.35069885641677256
     },
     {
       "bg_phase": 1,
       "case_id": "in_phase",
-      "odd_non3_rate_global": 0.4162962962962963,
-      "odd_non3_rate_local": 0.316,
+      "gamma_global_dmod3_counts": {
+        "0": 48,
+        "1": 0,
+        "2": 0
+      },
+      "gamma_global_nonzero_tick_rate": 0.0,
+      "gamma_local_dmod3_counts": {
+        "0": 12,
+        "1": 15,
+        "2": 21
+      },
+      "gamma_local_nonzero_tick_rate": 0.75,
+      "gamma_local_subset_size": 25,
+      "odd_non3_rate_global": 0.528177869227252,
+      "odd_non3_rate_local": 0.6583333333333333,
       "seed_label": "control_e111",
       "seed_phase": 1,
       "seed_q_label": "1*e111",
       "seed_qid": 121,
-      "swap_to_seed_g_rate_global": 0.13285842383182225,
-      "swap_to_seed_g_rate_local": 0.05605381165919283
+      "swap_to_seed_g_rate_global": 0.258622962344567,
+      "swap_to_seed_g_rate_local": 0.2913096695226438
     },
     {
       "bg_phase": 4,
       "case_id": "same_gen_diff_subphase",
-      "odd_non3_rate_global": 0.4162962962962963,
-      "odd_non3_rate_local": 0.316,
+      "gamma_global_dmod3_counts": {
+        "0": 48,
+        "1": 0,
+        "2": 0
+      },
+      "gamma_global_nonzero_tick_rate": 0.0,
+      "gamma_local_dmod3_counts": {
+        "0": 12,
+        "1": 15,
+        "2": 21
+      },
+      "gamma_local_nonzero_tick_rate": 0.75,
+      "gamma_local_subset_size": 25,
+      "odd_non3_rate_global": 0.528177869227252,
+      "odd_non3_rate_local": 0.6583333333333333,
       "seed_label": "control_e111",
       "seed_phase": 1,
       "seed_q_label": "1*e111",
       "seed_qid": 121,
-      "swap_to_seed_g_rate_global": 0.13285842383182225,
-      "swap_to_seed_g_rate_local": 0.05605381165919283
+      "swap_to_seed_g_rate_global": 0.258622962344567,
+      "swap_to_seed_g_rate_local": 0.2913096695226438
     },
     {
       "bg_phase": 0,
       "case_id": "off_phase_g0",
-      "odd_non3_rate_global": 0.3539506172839506,
-      "odd_non3_rate_local": 0.534,
+      "gamma_global_dmod3_counts": {
+        "0": 48,
+        "1": 0,
+        "2": 0
+      },
+      "gamma_global_nonzero_tick_rate": 0.0,
+      "gamma_local_dmod3_counts": {
+        "0": 12,
+        "1": 15,
+        "2": 21
+      },
+      "gamma_local_nonzero_tick_rate": 0.75,
+      "gamma_local_subset_size": 25,
+      "odd_non3_rate_global": 0.528177869227252,
+      "odd_non3_rate_local": 0.6583333333333333,
       "seed_label": "control_e111",
       "seed_phase": 1,
       "seed_q_label": "1*e111",
       "seed_qid": 121,
-      "swap_to_seed_g_rate_global": 0.13254876219054765,
-      "swap_to_seed_g_rate_local": 0.23366834170854273
+      "swap_to_seed_g_rate_global": 0.2646213657876944,
+      "swap_to_seed_g_rate_local": 0.3403726708074534
     },
     {
       "bg_phase": 2,
       "case_id": "off_phase_g2",
-      "odd_non3_rate_global": 0.5669135802469136,
-      "odd_non3_rate_local": 0.5,
+      "gamma_global_dmod3_counts": {
+        "0": 48,
+        "1": 0,
+        "2": 0
+      },
+      "gamma_global_nonzero_tick_rate": 0.0,
+      "gamma_local_dmod3_counts": {
+        "0": 12,
+        "1": 15,
+        "2": 21
+      },
+      "gamma_local_nonzero_tick_rate": 0.75,
+      "gamma_local_subset_size": 25,
+      "odd_non3_rate_global": 0.528177869227252,
+      "odd_non3_rate_local": 0.6583333333333333,
       "seed_label": "control_e111",
       "seed_phase": 1,
       "seed_q_label": "1*e111",
       "seed_qid": 121,
-      "swap_to_seed_g_rate_global": 0.16436409954928474,
-      "swap_to_seed_g_rate_local": 0.11556603773584906
+      "swap_to_seed_g_rate_global": 0.268961419294597,
+      "swap_to_seed_g_rate_local": 0.36118251928020567
     }
   ],
   "schema_version": "v3_neutrino_phase_swap_probe_v1",
   "size": [
-    15,
+    9,
     9,
     9
   ],
   "source_script": "cog_v3/calc/build_v3_neutrino_phase_swap_probe_v1.py",
-  "source_script_sha256": "47535918f98e561b1829d0c27bdc73ea774f8b74b4d695ee3810528fab096f07",
-  "ticks": 20
+  "source_script_sha256": "667eedcc59bdd3bb1d852efd746c13b2efe8cabd37f1b97ccd35c4cf7dbad9f1",
+  "ticks": 48
 }

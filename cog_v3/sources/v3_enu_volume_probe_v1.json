@@ -1,0 +1,182 @@
+{
+  "cases": [
+    {
+      "resolved_seed": {
+        "phase_idx_z12": 7,
+        "q_id_q240": 239,
+        "q_label": "1*e000",
+        "sid_label": "zeta12^7*(1*e000)",
+        "sid_s2880": 1919
+      },
+      "seed_request": {
+        "E_z_energy_recorded": 4,
+        "a_z4_energy_phase": 1,
+        "g_domain_z3": 1,
+        "q_oct_spin_coeffs": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "seeded_cells": 123,
+      "series": [
+        {
+          "active_count": 123.0,
+          "com_x": 7.0,
+          "com_y": 7.0,
+          "com_z": 7.0,
+          "tick": 0.0
+        },
+        {
+          "active_count": 3374.0,
+          "com_x": 6.9979253112033195,
+          "com_y": 6.9979253112033195,
+          "com_z": 6.998814463544754,
+          "tick": 1.0
+        },
+        {
+          "active_count": 3374.0,
+          "com_x": 6.9979253112033195,
+          "com_y": 6.9979253112033195,
+          "com_z": 6.998814463544754,
+          "tick": 2.0
+        },
+        {
+          "active_count": 3374.0,
+          "com_x": 6.9979253112033195,
+          "com_y": 6.9979253112033195,
+          "com_z": 6.998814463544754,
+          "tick": 3.0
+        },
+        {
+          "active_count": 2457.0,
+          "com_x": 7.04965404965405,
+          "com_y": 6.585266585266585,
+          "com_z": 6.536833536833536,
+          "tick": 4.0
+        },
+        {
+          "active_count": 2665.0,
+          "com_x": 7.35234521575985,
+          "com_y": 7.1767354596622885,
+          "com_z": 7.016885553470919,
+          "tick": 5.0
+        },
+        {
+          "active_count": 2665.0,
+          "com_x": 7.35234521575985,
+          "com_y": 7.1767354596622885,
+          "com_z": 7.016885553470919,
+          "tick": 6.0
+        },
+        {
+          "active_count": 3346.0,
+          "com_x": 6.951583980872684,
+          "com_y": 6.996413628212792,
+          "com_z": 6.992528392109982,
+          "tick": 7.0
+        },
+        {
+          "active_count": 3338.0,
+          "com_x": 6.9565608148591975,
+          "com_y": 6.9805272618334335,
+          "com_z": 6.999101258238466,
+          "tick": 8.0
+        },
+        {
+          "active_count": 3338.0,
+          "com_x": 6.9565608148591975,
+          "com_y": 6.9805272618334335,
+          "com_z": 6.999101258238466,
+          "tick": 9.0
+        },
+        {
+          "active_count": 2659.0,
+          "com_x": 6.852576156449794,
+          "com_y": 6.90898834148176,
+          "com_z": 6.899210229409553,
+          "tick": 10.0
+        },
+        {
+          "active_count": 2806.0,
+          "com_x": 6.8000712758374915,
+          "com_y": 6.799714896650036,
+          "com_z": 7.048467569493941,
+          "tick": 11.0
+        },
+        {
+          "active_count": 2806.0,
+          "com_x": 6.8000712758374915,
+          "com_y": 6.799714896650036,
+          "com_z": 7.048467569493941,
+          "tick": 12.0
+        },
+        {
+          "active_count": 3309.0,
+          "com_x": 6.998791175581747,
+          "com_y": 6.9860985191900875,
+          "com_z": 6.957993351465699,
+          "tick": 13.0
+        },
+        {
+          "active_count": 3313.0,
+          "com_x": 6.993661334138244,
+          "com_y": 6.992453969212194,
+          "com_z": 6.966495623302143,
+          "tick": 14.0
+        },
+        {
+          "active_count": 3313.0,
+          "com_x": 6.993661334138244,
+          "com_y": 6.992453969212194,
+          "com_z": 6.966495623302143,
+          "tick": 15.0
+        },
+        {
+          "active_count": 2969.0,
+          "com_x": 6.9622768608959245,
+          "com_y": 6.873358033007746,
+          "com_z": 7.004715392388009,
+          "tick": 16.0
+        }
+      ],
+      "summary": {
+        "final_active_count": 2969.0,
+        "final_com_displacement": 0.1322250277099815,
+        "initial_active_count": 123.0,
+        "max_com_displacement": 0.6236926346732151
+      }
+    }
+  ],
+  "convention_id": "v3_octavian240_perm_0-1-2-3-4-7-5-6_sign_all_plus",
+  "grid": [
+    15,
+    15,
+    15
+  ],
+  "kernel_profile": "cog_v3_s2880_pair_conservative_v1",
+  "notes": [
+    "This run uses S2880 pair-conservative kernel (sid = phase_idx x q_id).",
+    "Integer Z energy E is not yet a dynamical state lane here; E is metadata only.",
+    "Movement is measured by center-of-mass drift of non-vacuum support."
+  ],
+  "oct_module": "cog_v3/python/kernel_octavian240_multiplicative_v1.py",
+  "oct_module_sha256": "4d49033d24dcd1b3ec3cc4367175dc027bfecb8e5afa8710f0dd9856c01155a6",
+  "pair_kernel_module": "cog_v3/python/kernel_s2880_pair_conservative_v1.py",
+  "pair_kernel_module_sha256": "650e94fa56df2363524bc32455b42f08ad6abeb4a07890bc102272f18e04c20a",
+  "radius": 3,
+  "replay_hash": "2a122580d067435a16fca7931d74ad89532d769ffe19529515938034abf62ca5",
+  "requested_E": 4,
+  "requested_a": 1,
+  "requested_g": 1,
+  "schema_version": "v3_enu_volume_probe_v1",
+  "source_script": "cog_v3/calc/build_v3_enu_volume_probe_v1.py",
+  "source_script_sha256": "887646119831f3ea3be5b247ce59fe0f58a9f3deda06f3a248595977d2ae82f2",
+  "sweep_c4": false,
+  "ticks": 16
+}

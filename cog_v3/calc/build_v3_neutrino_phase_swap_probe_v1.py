@@ -22,6 +22,7 @@ import numpy as np
 
 from cog_v3.calc import build_v3_c12_phase_sector_metrics_v1 as psec
 from cog_v3.calc import build_v3_c12_singlet_doublet_clock_shift_sparse_v1 as c12
+from cog_v3.python import kernel_s2880_pair_conservative_v1 as kpair
 from cog_v3.python import kernel_octavian240_multiplicative_v1 as k
 
 
@@ -31,7 +32,8 @@ OUT_JSON = ROOT / "cog_v3" / "sources" / "v3_neutrino_phase_swap_probe_v1.json"
 OUT_MD = ROOT / "cog_v3" / "sources" / "v3_neutrino_phase_swap_probe_v1.md"
 
 SCRIPT_REPO_PATH = "cog_v3/calc/build_v3_neutrino_phase_swap_probe_v1.py"
-KERNEL_REPO_PATH = "cog_v3/python/kernel_octavian240_multiplicative_v1.py"
+KERNEL_REPO_PATH_BASE = "cog_v3/python/kernel_octavian240_multiplicative_v1.py"
+KERNEL_REPO_PATH_PAIR = "cog_v3/python/kernel_s2880_pair_conservative_v1.py"
 PHASE_SCRIPT_REPO_PATH = "cog_v3/calc/build_v3_c12_phase_sector_metrics_v1.py"
 
 PHASE_COUNT = 12
@@ -70,12 +72,22 @@ def _run_case(
     nx: int,
     ny: int,
     nz: int,
+    event_order_policy: str,
 ) -> Dict[str, float]:
     qmul = c12.build_qmul_table()
     mul = c12.build_mul_table(phase_count=PHASE_COUNT, qmul=qmul)
     qn = int(qmul.shape[0])
     vac_id = int(c12.s_identity_id())
     neighbors = psec._prepare_policy_neighbors(nx, ny, nz, "cube26", "fixed_vacuum")["all"]  # noqa: SLF001
+    pair_rounds = None
+    if str(event_order_policy) == "pair_conservative_v1":
+        pair_rounds = kpair.build_pair_rounds(
+            int(nx),
+            int(ny),
+            int(nz),
+            stencil_id="cube26",
+            boundary_mode="fixed_vacuum",
+        )
 
     bg_sid = _s_id(int(bg_phase), int(mat_qid), qn)
     seed_sid = _s_id(int(seed_phase), int(seed_qid), qn)
@@ -104,13 +116,37 @@ def _run_case(
     swap_den_local = 0
     swap_num_global = 0
     swap_den_global = 0
+    gamma_global_dmod3_counts = np.zeros((3,), dtype=np.int64)
+    gamma_local_dmod3_counts = np.zeros((3,), dtype=np.int64)
+    local_n = int(np.count_nonzero(local_mask))
 
-    for _ in range(int(ticks)):
+    for t in range(int(ticks)):
         old = world
-        world = psec._step_sync(old, neighbors, mul, vac_id=vac_id)  # noqa: SLF001
+        if str(event_order_policy) == "pair_conservative_v1":
+            assert pair_rounds is not None
+            world = kpair.step_pair_conservative(
+                old,
+                pair_rounds,
+                qmul=qmul,
+                phase_count=PHASE_COUNT,
+                global_seed=1337,
+                tick=int(t),
+                shuffle_round_order=False,
+            )
+        else:
+            world = psec._step_sync(old, neighbors, mul, vac_id=vac_id)  # noqa: SLF001
 
         old_phase = (old.astype(np.int32) // int(qn)).astype(np.int16)
         new_phase = (world.astype(np.int32) // int(qn)).astype(np.int16)
+        old_g_sum = int(np.sum(old_phase % 3))
+        new_g_sum = int(np.sum(new_phase % 3))
+        dg_global = int((new_g_sum - old_g_sum) % 3)
+        gamma_global_dmod3_counts[dg_global] += 1
+        old_gl_sum = int(np.sum(old_phase[local_mask] % 3))
+        new_gl_sum = int(np.sum(new_phase[local_mask] % 3))
+        dg_local = int((new_gl_sum - old_gl_sum) % 3)
+        gamma_local_dmod3_counts[dg_local] += 1
+
         d = ((new_phase - old_phase) % PHASE_COUNT).astype(np.int16)
         non3 = (d % 3) != 0
 
@@ -135,10 +171,19 @@ def _run_case(
         "odd_non3_rate_local": float(total_non3_local) / float(max(1, total_all_local)),
         "swap_to_seed_g_rate_global": float(swap_num_global) / float(max(1, swap_den_global)),
         "swap_to_seed_g_rate_local": float(swap_num_local) / float(max(1, swap_den_local)),
+        "gamma_global_dmod3_counts": {str(i): int(gamma_global_dmod3_counts[i]) for i in range(3)},
+        "gamma_global_nonzero_tick_rate": float(
+            (int(gamma_global_dmod3_counts[1]) + int(gamma_global_dmod3_counts[2])) / float(max(1, int(ticks)))
+        ),
+        "gamma_local_dmod3_counts": {str(i): int(gamma_local_dmod3_counts[i]) for i in range(3)},
+        "gamma_local_nonzero_tick_rate": float(
+            (int(gamma_local_dmod3_counts[1]) + int(gamma_local_dmod3_counts[2])) / float(max(1, int(ticks)))
+        ),
+        "gamma_local_subset_size": int(local_n),
     }
 
 
-def build_payload(*, ticks: int, nx: int, ny: int, nz: int) -> Dict[str, Any]:
+def build_payload(*, ticks: int, nx: int, ny: int, nz: int, event_order_policy: str) -> Dict[str, Any]:
     neutrino_qid = int(k.IDENTITY_ID)
     control_qid = int(_q_basis_id(7, +1))  # +e111
     mat_qid = int(_q_basis_id(7, +1))
@@ -165,6 +210,7 @@ def build_payload(*, ticks: int, nx: int, ny: int, nz: int) -> Dict[str, Any]:
                 nx=int(nx),
                 ny=int(ny),
                 nz=int(nz),
+                event_order_policy=str(event_order_policy),
             )
             rows.append(
                 {
@@ -191,16 +237,24 @@ def build_payload(*, ticks: int, nx: int, ny: int, nz: int) -> Dict[str, Any]:
             }
         )
 
+    if str(event_order_policy) == "pair_conservative_v1":
+        kernel_profile = str(kpair.KERNEL_PROFILE)
+        kernel_repo_path = KERNEL_REPO_PATH_PAIR
+    else:
+        kernel_profile = str(k.KERNEL_PROFILE)
+        kernel_repo_path = KERNEL_REPO_PATH_BASE
+
     payload: Dict[str, Any] = {
         "schema_version": "v3_neutrino_phase_swap_probe_v1",
-        "kernel_profile": str(k.KERNEL_PROFILE),
+        "kernel_profile": kernel_profile,
         "convention_id": str(k.CONVENTION_ID),
         "ticks": int(ticks),
         "size": [int(nx), int(ny), int(nz)],
+        "event_order_policy": str(event_order_policy),
         "source_script": SCRIPT_REPO_PATH,
         "source_script_sha256": _sha_file(ROOT / SCRIPT_REPO_PATH),
-        "kernel_module": KERNEL_REPO_PATH,
-        "kernel_module_sha256": _sha_file(ROOT / KERNEL_REPO_PATH),
+        "kernel_module": kernel_repo_path,
+        "kernel_module_sha256": _sha_file(ROOT / kernel_repo_path),
         "phase_metrics_script": PHASE_SCRIPT_REPO_PATH,
         "phase_metrics_script_sha256": _sha_file(ROOT / PHASE_SCRIPT_REPO_PATH),
         "rows": rows,
@@ -226,6 +280,21 @@ def _render_md(payload: Dict[str, Any]) -> str:
         lines.append(
             f"| `{r['seed_label']}` | `{r['case_id']}` | "
             f"{float(r['odd_non3_rate_local']):.6f} | {float(r['swap_to_seed_g_rate_local']):.6f} |"
+        )
+
+    lines.extend(
+        [
+            "",
+            "## Triality Audit",
+            "",
+            "| seed_label | case_id | gamma_global_nonzero_tick_rate | gamma_local_nonzero_tick_rate |",
+            "|---|---|---:|---:|",
+        ]
+    )
+    for r in payload["rows"]:
+        lines.append(
+            f"| `{r['seed_label']}` | `{r['case_id']}` | "
+            f"{float(r['gamma_global_nonzero_tick_rate']):.6f} | {float(r['gamma_local_nonzero_tick_rate']):.6f} |"
         )
 
     lines.extend(
@@ -267,6 +336,12 @@ def main() -> int:
     ap.add_argument("--size-x", type=int, default=15)
     ap.add_argument("--size-y", type=int, default=9)
     ap.add_argument("--size-z", type=int, default=9)
+    ap.add_argument(
+        "--event-order-policy",
+        type=str,
+        default="synchronous_parallel_v1",
+        choices=["synchronous_parallel_v1", "pair_conservative_v1"],
+    )
     args = ap.parse_args()
 
     payload = build_payload(
@@ -274,6 +349,7 @@ def main() -> int:
         nx=int(args.size_x),
         ny=int(args.size_y),
         nz=int(args.size_z),
+        event_order_policy=str(args.event_order_policy),
     )
     write_artifacts(payload)
     print("v3_neutrino_phase_swap_probe_v1: wrote JSON+MD")
@@ -282,4 +358,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

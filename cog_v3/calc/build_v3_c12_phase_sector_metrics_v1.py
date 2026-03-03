@@ -530,7 +530,7 @@ def _run_panel(config: PanelConfig, *, global_seed: int) -> Dict[str, Any]:
         "gamma_interior_nonzero_tick_rate": float(_safe_div(float(gamma_interior_nonzero), float(max(1, g_interior_total)))),
         "expected_exact_for_conservative_pair_kernel": {
             "global": "all ticks dGamma_mod3 == 0",
-            "interior": "all ticks dGamma_mod3 == 0",
+            "interior": "not required unless interior subset is closed; nonzero can arise from boundary flux",
         },
     }
 

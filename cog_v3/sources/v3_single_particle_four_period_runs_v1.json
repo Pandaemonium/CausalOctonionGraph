@@ -1,0 +1,147 @@
+{
+  "full_round_sweep": true,
+  "grid": [
+    7,
+    7,
+    7
+  ],
+  "kernel_module": "cog_v3/python/kernel_s2880_pair_conservative_v1.py",
+  "kernel_module_sha256": "fd0554e45c0f776baeb595b5f7d51b1b15da745ce06c71cd407dadbc6c96880b",
+  "kernel_profile": "cog_v3_s2880_pair_conservative_v1",
+  "notes": [
+    "One particle seeded at center, all other sites vacuum.",
+    "Each run is deterministic in this configuration.",
+    "energy_n is metadata only in current kernel lane (non-dynamical)."
+  ],
+  "period_search_max": 600,
+  "replay_hash": "972dac6b460159471a5a6001c7371d106f1517766d69facba385a4c216513479",
+  "runs": [
+    {
+      "all_four_period_checks_pass": true,
+      "checkpoints": [
+        {
+          "cycle_k": 1,
+          "matches_initial": true,
+          "tick": 12
+        },
+        {
+          "cycle_k": 2,
+          "matches_initial": true,
+          "tick": 24
+        },
+        {
+          "cycle_k": 3,
+          "matches_initial": true,
+          "tick": 36
+        },
+        {
+          "cycle_k": 4,
+          "matches_initial": true,
+          "tick": 48
+        }
+      ],
+      "period": 12,
+      "period_found": true,
+      "run_id": 1,
+      "ticks_run": 48
+    },
+    {
+      "all_four_period_checks_pass": true,
+      "checkpoints": [
+        {
+          "cycle_k": 1,
+          "matches_initial": true,
+          "tick": 12
+        },
+        {
+          "cycle_k": 2,
+          "matches_initial": true,
+          "tick": 24
+        },
+        {
+          "cycle_k": 3,
+          "matches_initial": true,
+          "tick": 36
+        },
+        {
+          "cycle_k": 4,
+          "matches_initial": true,
+          "tick": 48
+        }
+      ],
+      "period": 12,
+      "period_found": true,
+      "run_id": 2,
+      "ticks_run": 48
+    },
+    {
+      "all_four_period_checks_pass": true,
+      "checkpoints": [
+        {
+          "cycle_k": 1,
+          "matches_initial": true,
+          "tick": 12
+        },
+        {
+          "cycle_k": 2,
+          "matches_initial": true,
+          "tick": 24
+        },
+        {
+          "cycle_k": 3,
+          "matches_initial": true,
+          "tick": 36
+        },
+        {
+          "cycle_k": 4,
+          "matches_initial": true,
+          "tick": 48
+        }
+      ],
+      "period": 12,
+      "period_found": true,
+      "run_id": 3,
+      "ticks_run": 48
+    },
+    {
+      "all_four_period_checks_pass": true,
+      "checkpoints": [
+        {
+          "cycle_k": 1,
+          "matches_initial": true,
+          "tick": 12
+        },
+        {
+          "cycle_k": 2,
+          "matches_initial": true,
+          "tick": 24
+        },
+        {
+          "cycle_k": 3,
+          "matches_initial": true,
+          "tick": 36
+        },
+        {
+          "cycle_k": 4,
+          "matches_initial": true,
+          "tick": 48
+        }
+      ],
+      "period": 12,
+      "period_found": true,
+      "run_id": 4,
+      "ticks_run": 48
+    }
+  ],
+  "runs_requested": 4,
+  "schema_version": "v3_single_particle_four_period_runs_v1",
+  "seed": {
+    "domain": 1,
+    "energy_n": 4,
+    "energy_phase": 1,
+    "octavian_id": 239,
+    "sid": 1199
+  },
+  "source_script": "cog_v3/calc/build_v3_single_particle_four_period_runs_v1.py",
+  "source_script_sha256": "9ced578019644178c969c90bef76eb4e0d52fcc53e35bfb3ff18c269c9348d38"
+}

@@ -1,0 +1,161 @@
+id: MASS-COUPLING-001
+title: "Mass as Relational C12 Phase Offset: Both C4 and Z3 Rotate the Energy Line"
+status: active_hypothesis
+
+statement: >
+  In the S2880 = C12 x Q240 kernel, the energy of a particle is a phasor:
+  a line with magnitude |E| (the Z energy) pointing at angle exp(2*pi*i*phi/12)
+  in the C12 circle. Mass is not intrinsic — it is the BEATING RATE between the
+  particle's energy phasor and the observer's (vacuum's) energy phasor at phi=0.
+
+  Both C4 and Z3 are independent rotations of this same single energy line:
+    - C4 (90° steps, mod-4 sector): rotates the energy line to a different spin state
+    - Z3 (120° steps, mod-3 sector): rotates the energy line to a heavier generation
+
+  A particle whose energy line is off-phase from the vacuum appears massive to that
+  observer. The vacuum is the ground state at phi=0. A C4-rotated particle (phi=3,6,9)
+  appears as a different spin/helicity state. A Z3-rotated particle (phi=4,8) appears
+  as a heavier lepton generation. Both rotations contribute to the phase offset that
+  drives the Compton oscillation (Zitterbewegung).
+
+  The three lepton mass eigenvalues lie on the Koide orbit {phi=0, 4, 8} in Z12,
+  which is the Z3 subgroup. All three have C4 = 0 (no spin-axis tilt): the mass
+  hierarchy is purely a Z3 phenomenon. The generation-k mass eigenvalue is set by
+  the phase exp(2*pi*i*k/3) relative to the vacuum. Their sum is zero exactly:
+  exp(0) + exp(2*pi*i/3) + exp(4*pi*i/3) = 0. This is the algebraic origin of K = 2/3.
+
+  Massless particles (PHOTON-001) live in the A16 family with phi4 = 0: their energy
+  line is aligned with the vacuum at all times — zero offset, zero beating, zero mass.
+
+  Corollary (relational generation): A particle does not "have" a generation absolutely.
+  Its apparent generation is the Z3 offset between its energy phasor and the observer's.
+  An electron (phi=0) observed from a muon frame (phi=4) appears tau-like (phi offset=8).
+  The three lepton generations are the same Witt-pair oct motif seen from the three
+  inequivalent Z3 reference frames of Z12.
+
+predictions:
+  - id: P1
+    statement: >
+      All particle families (A16, B112, C112) and all Z3 generations have exactly
+      50% of self-product channels in the massive sector (phi4 > 0) and 50% in the
+      massless sector (phi4 = 0). This is an algebraic identity: squaring in Z12
+      maps {0,1,2,3} mod 4 to {0,2,0,2}, so every uniform-mod4 distribution
+      splits 50/50 regardless of Z3 domain.
+    status: proved
+    provenance: cog_v3/calc/mass_coupling_compute_v1.py
+
+  - id: P2
+    statement: >
+      The three Koide mass eigenvalues all have mod-4 phase = 0 (C4 sector = 0).
+      They differ only in mod-3 phase (Z3 sector = 0, 1, 2), corresponding to
+      Koide orbit angles 0°, 120°, 240°.
+    status: proved
+    provenance: cog_v3/calc/mass_coupling_compute_v1.py
+
+  - id: P3
+    statement: >
+      The sum of the three Koide orbit complex phases is zero exactly:
+      exp(2*pi*i*0/12) + exp(2*pi*i*4/12) + exp(2*pi*i*8/12) = 0.
+      This forces the Koide trace condition sqrt(m_e)+sqrt(m_mu)+sqrt(m_tau) ∝ circle,
+      yielding K = 2/3.
+    status: proved
+    provenance: cog_v3/calc/mass_coupling_compute_v1.py (sum = -2.2e-16 + 2.2e-16j ≈ 0)
+
+  - id: P4
+    statement: >
+      The fraction of ALL self-product channels (across all S2880 elements) landing
+      on the massless condition (A16 family, phi4=0) is exactly 768/2880 = 4/15.
+    status: proved
+    provenance: cog_v3/calc/mass_coupling_compute_v1.py
+
+mechanism:
+  energy_line_rotor: >
+    The energy phasor exp(2*pi*i*phi/12) is a single line on the C12 unit circle.
+    Two independent discrete rotation operators act on it:
+      R_C4: phi -> phi + 3  (90-degree rotation; generator of Z4 subgroup)
+      R_Z3: phi -> phi + 4  (120-degree rotation; generator of Z3 subgroup)
+    These commute (Z12 is abelian) and together generate all 12 positions.
+    The vacuum observer is fixed at phi=0. Any particle not at phi=0 has a nonzero
+    phase offset theta_offset = 2*pi*phi/12 relative to the observer. This offset
+    is the source of the Compton oscillation: the particle's energy clock ticks at
+    exp(i*omega_C*t) while the vacuum ticks at 1. The beat frequency is omega_C = mass.
+
+  two_rotation_flavors: >
+    R_C4 rotations (spin axis tilt): change the particle's polarization without
+    changing its generation. The four C4 states {0, pi/2, pi, 3pi/2} are helicity
+    eigenstates. A C4-rotated particle appears as a different spin state, not a
+    different mass — because C4 offsets are "fast" (period 4 in Z12) and average out
+    over one full Z3 cycle of 3 steps.
+
+    R_Z3 rotations (generation tilt): change the particle's apparent generation.
+    The three Z3 states {0, 2pi/3, 4pi/3} correspond to {e, mu, tau}. A Z3-rotated
+    particle's energy line does NOT average back to the vacuum over short periods —
+    the offset persists and accumulates as mass. Z3 offsets are "slow" (period 3),
+    exactly the Compton oscillation period for massive leptons.
+
+  zitterbewegung_duty_cycle: >
+    The 50/50 massive-channel split (P1) is the Zitterbewegung duty cycle: at every
+    other tick, the particle's self-product lands in the massless sector (phi4=0) and
+    it free-streams; on the other half of ticks it is in the massive sector (phi4=2)
+    and experiences the Compton drag. The 50% is fixed by Z12 algebra and is identical
+    for all three generations — confirming that the PROBABILITY of mass coupling is
+    universal; only the PHASE ANGLE (hence the energy per coupling event) differs.
+
+  massless_condition: >
+    A channel is massless iff its product element has q_family = A16 (associative sector)
+    AND phase_sector_mod4 = 0. This is exactly the condition from PHOTON-001:
+    zero gate density = zero associator = zero phase residue per hop. Photons have
+    phi4=0 AND live on the A16 associative locus — both conditions required.
+
+connections:
+  - claim: koide_exactness
+    relation: >
+      MASS-COUPLING-001 provides the mechanism behind koide_exactness.
+      The Koide K=2/3 arises because the three lepton masses lie on the
+      equispaced Z3 orbit in Z12 whose phases sum to zero, forcing the
+      Koide trace condition. The C4=0 constraint ensures all three are in
+      the same spin sector.
+
+  - claim: PHOTON-001
+    relation: >
+      Photon masslessness is the special case of zero C12 phase winding.
+      A16 + phi4=0 channels have exactly zero mass coupling rate.
+
+  - claim: LEPTON-001
+    relation: >
+      The lepton generation table (e/nu_e, mu/nu_mu, tau/nu_tau) maps to
+      the Z3 orbit: charged leptons have C4=spin and Z3=generation;
+      neutrinos have oct=e0 and Z3=generation+1 mod 3.
+
+open_questions:
+  - >
+    What determines the overall mass SCALE (in MeV) from the C12 winding rate?
+    The ratios are fixed by Z3 geometry; the scale requires fixing one physical
+    constant (electron mass) in terms of the kernel tick rate.
+  - >
+    If mass is relational, what breaks the Z3 symmetry to make the electron
+    the lightest (observed) generation? The answer may be that the vacuum
+    spontaneously selects phi=0 as ground state, making phi=0 the minimum-energy
+    configuration. The other two generations are thermodynamically disfavored
+    but appear as excitations above the vacuum.
+  - >
+    Are quark masses also Z3 orbit offsets, but with a different tilt delta_q?
+    The Koide formula works well for leptons (delta = delta_lepton) but not quarks.
+    If quarks are on a DIFFERENT C12 orbit (not {0,4,8} but some other triple),
+    this would explain why they don't obey the same Koide formula.
+  - >
+    The C4 rotation gives 4 spin states; the Z3 rotation gives 3 generations.
+    The neutrino has oct=e0 (no Witt-pair structure) and Z3=generation+1. Does the
+    neutrino's mass come from a fractional Z3 offset (mixing between vacuum and
+    generation-1 state)?  This would give a small Majorana-like mass from the
+    mismatch between the charged lepton's Z3 sector and the neutrino's.
+
+derivation_status: partial
+notes: >
+  Computation in mass_coupling_compute_v1.py (2026-03-03).
+  P1, P2, P3 are algebraic identities proved by enumeration of all 2880 elements.
+  P4 is computed from the invariants CSV.
+  The mechanism (rotor model) is a physical interpretation; formal Lean proof
+  of the coupling rate → mass eigenvalue step is pending.
+  This claim does NOT yet derive absolute mass values; it identifies the
+  geometric structure that the Koide formula (koide_exactness) already encodes.

@@ -105,7 +105,7 @@
         "triality_audit": {
           "expected_exact_for_conservative_pair_kernel": {
             "global": "all ticks dGamma_mod3 == 0",
-            "interior": "all ticks dGamma_mod3 == 0"
+            "interior": "not required unless interior subset is closed; nonzero can arise from boundary flux"
           },
           "gamma_global_dmod3_counts": {
             "0": 65,
@@ -126,11 +126,133 @@
         },
         "warmup_ticks": 6
       }
+    },
+    {
+      "config": {
+        "boundary_mode": "fixed_vacuum",
+        "channel_policy_id": "uniform_all",
+        "event_order_policy": "pair_conservative_v1",
+        "panel_id": "P1_quick_fixed_paircon_axial6",
+        "runs_per_trial": 1,
+        "size_x": 11,
+        "size_y": 7,
+        "size_z": 7,
+        "stencil_id": "axial6",
+        "ticks": 24,
+        "warmup_ticks": 6
+      },
+      "metrics": {
+        "A1": 0.0,
+        "A2": 0.0,
+        "C3": 0.4161784921222375,
+        "L3": 1.6319803962172983,
+        "L3_null_baseline": 1.5004086493624906,
+        "R3": 0.0,
+        "T_counts": [
+          [
+            0,
+            4679,
+            4397
+          ],
+          [
+            4671,
+            0,
+            4760
+          ],
+          [
+            4364,
+            4735,
+            0
+          ]
+        ],
+        "T_probs": [
+          [
+            0.0,
+            0.5155354781842221,
+            0.48446452181577787
+          ],
+          [
+            0.4952815183967766,
+            0.0,
+            0.5047184816032234
+          ],
+          [
+            0.4796131443015716,
+            0.5203868556984284,
+            0.0
+          ]
+        ],
+        "boundary_mode": "fixed_vacuum",
+        "channel_policy_id": "uniform_all",
+        "delta_counts": {
+          "0": 19679,
+          "1": 7142,
+          "10": 6661,
+          "11": 7142,
+          "2": 6661,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "event_order_policy": "pair_conservative_v1",
+        "gate_results": {
+          "gate1_dominance": false,
+          "gate2_sector_conservation": true,
+          "gate3_mixing_structure": false,
+          "gate4_signed_asymmetry": false
+        },
+        "mag_counts": {
+          "0": 19679,
+          "1": 14284,
+          "2": 13322,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0
+        },
+        "panel_id": "P1_quick_fixed_paircon_axial6",
+        "runs_per_trial": 1,
+        "size": [
+          11,
+          7,
+          7
+        ],
+        "stencil_id": "axial6",
+        "ticks": 24,
+        "total_events": 47285,
+        "triality_audit": {
+          "expected_exact_for_conservative_pair_kernel": {
+            "global": "all ticks dGamma_mod3 == 0",
+            "interior": "not required unless interior subset is closed; nonzero can arise from boundary flux"
+          },
+          "gamma_global_dmod3_counts": {
+            "0": 90,
+            "1": 0,
+            "2": 0
+          },
+          "gamma_global_nonzero_tick_count": 0,
+          "gamma_global_nonzero_tick_rate": 0.0,
+          "gamma_interior_dmod3_counts": {
+            "0": 35,
+            "1": 20,
+            "2": 35
+          },
+          "gamma_interior_nonzero_tick_count": 55,
+          "gamma_interior_nonzero_tick_rate": 0.6111111111111112,
+          "gamma_tick_total": 90,
+          "interior_cell_count": 225
+        },
+        "warmup_ticks": 6
+      }
     }
   ],
   "phase_count": 12,
-  "replay_hash": "5025156ae7f4076b8180293eb44e090f0aafe6a81e6dca6326079a4c7a09809c",
+  "replay_hash": "e68bebb7edc7a142529833f2b90e5c4845cd02bc1748839f11bfc37653c1f9a0",
   "schema_version": "v3_c12_phase_sector_metrics_v1",
   "source_script": "cog_v3/calc/build_v3_c12_phase_sector_metrics_v1.py",
-  "source_script_sha256": "53165556adc87618d26eebe9f880f4bf1b6b2bd64aa7e695727bf4bd77e2e414"
+  "source_script_sha256": "b53e2e8f68c30c8e8e21a948d8b81c561092feb234297ca8652d0cd68e9d5351"
 }

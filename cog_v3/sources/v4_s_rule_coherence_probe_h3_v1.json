@@ -1,0 +1,74 @@
+{
+  "horizon": 3,
+  "rows": [
+    {
+      "rule_name": "no_s_rule_baseline",
+      "physical": false,
+      "violation_t": 3,
+      "violation_coords": [
+        0,
+        0,
+        1
+      ],
+      "n_paths": 7,
+      "n_disagreeing": 4
+    },
+    {
+      "rule_name": "s_rule_basis_order",
+      "physical": false,
+      "violation_t": 3,
+      "violation_coords": [
+        0,
+        0,
+        1
+      ],
+      "n_paths": 7,
+      "n_disagreeing": 4
+    },
+    {
+      "rule_name": "s_rule_energy_gradient",
+      "physical": false,
+      "violation_t": 3,
+      "violation_coords": [
+        0,
+        0,
+        1
+      ],
+      "n_paths": 7,
+      "n_disagreeing": 4
+    },
+    {
+      "rule_name": "s_rule_fano_sign",
+      "physical": false,
+      "violation_t": 3,
+      "violation_coords": [
+        0,
+        0,
+        1
+      ],
+      "n_paths": 7,
+      "n_disagreeing": 4
+    },
+    {
+      "rule_name": "s_rule_zero",
+      "physical": false,
+      "violation_t": 3,
+      "violation_coords": [
+        0,
+        0,
+        1
+      ],
+      "n_paths": 7,
+      "n_disagreeing": 4
+    }
+  ],
+  "selected_rule_name": "s_rule_zero",
+  "selected_rule_physical": false,
+  "seed": {
+    "g": 0,
+    "a": 1,
+    "basis": 7,
+    "e7_energy": 1,
+    "e0_energy": 0
+  }
+}
